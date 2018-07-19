@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TasksWidgetViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ty2-TX-Y11">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aQa-ag-JuP">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-Rh-Dl5">
+                                            <rect key="frame" x="12" y="12" width="296" height="29"/>
+                                            <segments>
+                                                <segment title="ASAP"/>
+                                                <segment title="Today"/>
+                                                <segment title="Eventually"/>
+                                            </segments>
+                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="segmentPressed:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="abF-V9-ASC"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Kg5-Rh-Dl5" firstAttribute="leading" secondItem="aQa-ag-JuP" secondAttribute="leading" constant="12" id="98H-t9-92r"/>
+                                        <constraint firstItem="Kg5-Rh-Dl5" firstAttribute="top" secondItem="aQa-ag-JuP" secondAttribute="top" constant="12" id="Tul-Jb-Mbe"/>
+                                        <constraint firstAttribute="trailing" secondItem="Kg5-Rh-Dl5" secondAttribute="trailing" constant="12" id="fMj-yp-kYM"/>
+                                        <constraint firstAttribute="bottom" secondItem="Kg5-Rh-Dl5" secondAttribute="bottom" constant="12" id="rwc-ab-Eti"/>
+                                    </constraints>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="regular"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGH-KJ-m8q" customClass="RowView" customModule="Tasks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="52" width="320" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="XJP-PZ-EKN"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="L8n-Np-UFe"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ty2-TX-Y11" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="NeB-as-SUL"/>
+                            <constraint firstItem="ty2-TX-Y11" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" id="Tcg-ON-yLs"/>
+                            <constraint firstItem="JGH-KJ-m8q" firstAttribute="top" secondItem="ty2-TX-Y11" secondAttribute="bottom" id="XnN-Ik-Kq8"/>
+                            <constraint firstItem="ty2-TX-Y11" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="b1B-SE-IMz"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="JGH-KJ-m8q" secondAttribute="bottom" priority="750" id="cMK-ZG-BkS"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="JGH-KJ-m8q" secondAttribute="trailing" id="hX8-KD-Fgg"/>
+                            <constraint firstItem="JGH-KJ-m8q" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="kVr-a7-QKo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="320"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Kg5-Rh-Dl5" id="WgZ-jI-K5P"/>
+                        <outlet property="tasksRowView" destination="JGH-KJ-m8q" id="Wos-gy-Fv4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.600000000000001" y="32.383808095952027"/>
+        </scene>
+    </scenes>
+</document>

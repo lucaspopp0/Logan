@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Task Preview View Controller-->
+        <scene sceneID="ofj-iu-Wt3">
+            <objects>
+                <viewController storyboardIdentifier="Task Preview" id="kac-iF-lJ5" customClass="TaskPreviewViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H08-1i-Ghl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqs-XJ-c9N" customClass="UICheckbox" customModule="iOS_Todo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="50" width="24" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="2qw-3p-Z0t"/>
+                                    <constraint firstAttribute="height" constant="24" id="cKg-hy-qeV"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JRT-cS-TEh">
+                                <rect key="frame" x="52" y="16" width="307" height="161"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="997" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh0-IS-WYp">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cBC-Cq-2eI">
+                                        <rect key="frame" x="0.0" y="26" width="307" height="82"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Afb-ta-Oxu">
+                                                <rect key="frame" x="0.0" y="0.0" width="307" height="40"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nck-oh-CKx" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="1" width="307" height="39"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Title"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="nck-oh-CKx" firstAttribute="centerY" secondItem="Afb-ta-Oxu" secondAttribute="centerY" id="C7Z-fe-2ab"/>
+                                                    <constraint firstItem="nck-oh-CKx" firstAttribute="leading" secondItem="Afb-ta-Oxu" secondAttribute="leading" id="CzL-Mv-tuT"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nck-oh-CKx" secondAttribute="bottom" id="EGi-rO-MH1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nck-oh-CKx" secondAttribute="trailing" id="Q6b-WL-fse"/>
+                                                    <constraint firstAttribute="height" constant="40" placeholder="YES" id="hcC-ZG-Zf6"/>
+                                                    <constraint firstItem="nck-oh-CKx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Afb-ta-Oxu" secondAttribute="top" id="nLV-Z3-FL3"/>
+                                                </constraints>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccT-Vz-gJ4" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44" width="307" height="38"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Description"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" tag="3" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="YeC-Dy-SJ0">
+                                <rect key="frame" x="46" y="193" width="307" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do: Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esM-d9-SZX">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority: High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzv-QR-iJ7">
+                                        <rect key="frame" x="0.0" y="24.5" width="99.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u6F-G4-J72" firstAttribute="trailing" secondItem="JRT-cS-TEh" secondAttribute="trailing" constant="16" id="AAW-YP-uRM"/>
+                            <constraint firstItem="JRT-cS-TEh" firstAttribute="leading" secondItem="eqs-XJ-c9N" secondAttribute="trailing" constant="12" id="KIJ-wK-wdG"/>
+                            <constraint firstItem="eqs-XJ-c9N" firstAttribute="leading" secondItem="H08-1i-Ghl" secondAttribute="leading" constant="16" id="XbM-Pc-c6Q"/>
+                            <constraint firstItem="JRT-cS-TEh" firstAttribute="top" secondItem="u6F-G4-J72" secondAttribute="top" constant="16" id="dpy-5z-OZ7"/>
+                            <constraint firstItem="Afb-ta-Oxu" firstAttribute="centerY" secondItem="eqs-XJ-c9N" secondAttribute="centerY" id="duf-SA-P4i"/>
+                            <constraint firstItem="YeC-Dy-SJ0" firstAttribute="top" secondItem="JRT-cS-TEh" secondAttribute="bottom" constant="24" id="i3i-U9-T7y"/>
+                            <constraint firstItem="YeC-Dy-SJ0" firstAttribute="trailing" secondItem="JRT-cS-TEh" secondAttribute="trailing" id="lXG-VB-3dG"/>
+                            <constraint firstItem="YeC-Dy-SJ0" firstAttribute="leading" secondItem="JRT-cS-TEh" secondAttribute="leading" id="prt-Ih-Jbe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u6F-G4-J72"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="300"/>
+                    <connections>
+                        <outlet property="checkbox" destination="eqs-XJ-c9N" id="D1s-br-VVR"/>
+                        <outlet property="commitmentLabel" destination="Zh0-IS-WYp" id="5l2-Wm-8uf"/>
+                        <outlet property="descriptionView" destination="ccT-Vz-gJ4" id="wGH-dy-RJv"/>
+                        <outlet property="dueDateLabel" destination="esM-d9-SZX" id="RJz-pG-cYk"/>
+                        <outlet property="priorityLabel" destination="tzv-QR-iJ7" id="7AY-hn-FWG"/>
+                        <outlet property="titleView" destination="nck-oh-CKx" id="EcU-GL-Qax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCl-fx-IhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-37"/>
+        </scene>
+    </scenes>
+</document>

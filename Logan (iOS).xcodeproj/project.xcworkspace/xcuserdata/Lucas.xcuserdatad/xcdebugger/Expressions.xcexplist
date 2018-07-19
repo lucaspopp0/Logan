@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "TaskTableViewCell.configureCell():TaskTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "priorityIndicator.priority">
+            </PersistentString>
+            <PersistentString
+               value = "task.priority">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CommitmentPickerTableViewController.tableView(_:cellForRowAt:):CommitmentPickerTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "&quot;\(indexPath.section)-\(indexPath.row)&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "commitment.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ScheduleView.reloadData():ScheduleView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "potentialClass.title">
+            </PersistentString>
+            <PersistentString
+               value = "course.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

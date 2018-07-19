@@ -1,0 +1,469 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RepeatingEventTableViewCell"
+provides-nominal:
+- "11Logan__iOS_27RepeatingEventTableViewCellC"
+provides-member:
+- ["11Logan__iOS_27RepeatingEventTableViewCellC", ""]
+provides-dynamic-lookup:
+- "dateLabel"
+- "nameLabel"
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "BetterDateFormatter"
+- "RepeatingEvent"
+- "RepeatingEventTableViewCell"
+- !private "String"
+- !private "StringLiteralType"
+- "UILabel"
+- "UITableViewCell"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "joined"]
+- !private ["11Logan__iOS_19BetterDateFormatterC", "init"]
+- !private ["11Logan__iOS_19BetterDateFormatterC", "shortFormatDate"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "joined"]
+- !private ["So15CALayerDelegateP", "BetterDateFormatter"]
+- ["So15CALayerDelegateP", ""]
+- !private ["So15CALayerDelegateP", "configureCell"]
+- !private ["So15CALayerDelegateP", "dateLabel"]
+- !private ["So15CALayerDelegateP", "event"]
+- !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "nameLabel"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["11Logan__iOS_9CKEnabledC", "daysOfWeek"]
+- !private ["11Logan__iOS_9CKEnabledC", "endDate"]
+- !private ["11Logan__iOS_9CKEnabledC", "name"]
+- !private ["11Logan__iOS_9CKEnabledC", "startDate"]
+- !private ["s7CVarArgP", "BetterDateFormatter"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "configureCell"]
+- !private ["s7CVarArgP", "dateLabel"]
+- !private ["s7CVarArgP", "daysOfWeek"]
+- !private ["s7CVarArgP", "endDate"]
+- !private ["s7CVarArgP", "event"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "joined"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "nameLabel"]
+- !private ["s7CVarArgP", "shortFormatDate"]
+- !private ["s7CVarArgP", "startDate"]
+- !private ["s7CVarArgP", "text"]
+- !private ["11Logan__iOS_11CalendarDayC", "dateValue"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "joined"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "BetterDateFormatter"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "configureCell"]
+- !private ["s28CustomDebugStringConvertibleP", "dateLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "daysOfWeek"]
+- !private ["s28CustomDebugStringConvertibleP", "endDate"]
+- !private ["s28CustomDebugStringConvertibleP", "event"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "nameLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "shortFormatDate"]
+- !private ["s28CustomDebugStringConvertibleP", "startDate"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "joined"]
+- !private ["s23CustomStringConvertibleP", "BetterDateFormatter"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "configureCell"]
+- !private ["s23CustomStringConvertibleP", "dateLabel"]
+- !private ["s23CustomStringConvertibleP", "daysOfWeek"]
+- !private ["s23CustomStringConvertibleP", "endDate"]
+- !private ["s23CustomStringConvertibleP", "event"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "joined"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "nameLabel"]
+- !private ["s23CustomStringConvertibleP", "shortFormatDate"]
+- !private ["s23CustomStringConvertibleP", "startDate"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["So13DateFormatterC", "init"]
+- !private ["So13DateFormatterC", "shortFormatDate"]
+- !private ["11Logan__iOS_9DayOfWeekO", "shortName"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "joined"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "joined"]
+- !private ["s9EquatableP", "BetterDateFormatter"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "configureCell"]
+- !private ["s9EquatableP", "dateLabel"]
+- !private ["s9EquatableP", "daysOfWeek"]
+- !private ["s9EquatableP", "endDate"]
+- !private ["s9EquatableP", "event"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "joined"]
+- !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "nameLabel"]
+- !private ["s9EquatableP", "shortFormatDate"]
+- !private ["s9EquatableP", "shortName"]
+- !private ["s9EquatableP", "startDate"]
+- !private ["s9EquatableP", "text"]
+- !private ["11Logan__iOS_5EventC", "daysOfWeek"]
+- !private ["11Logan__iOS_5EventC", "endDate"]
+- !private ["11Logan__iOS_5EventC", "name"]
+- !private ["11Logan__iOS_5EventC", "startDate"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "joined"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So9FormatterC", "init"]
+- !private ["So9FormatterC", "shortFormatDate"]
+- !private ["s8HashableP", "BetterDateFormatter"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "configureCell"]
+- !private ["s8HashableP", "dateLabel"]
+- !private ["s8HashableP", "daysOfWeek"]
+- !private ["s8HashableP", "endDate"]
+- !private ["s8HashableP", "event"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "name"]
+- !private ["s8HashableP", "nameLabel"]
+- !private ["s8HashableP", "shortFormatDate"]
+- !private ["s8HashableP", "shortName"]
+- !private ["s8HashableP", "startDate"]
+- !private ["s8HashableP", "text"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "joined"]
+- !private ["So8NSCodingP", "BetterDateFormatter"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "configureCell"]
+- !private ["So8NSCodingP", "dateLabel"]
+- !private ["So8NSCodingP", "event"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "nameLabel"]
+- !private ["So8NSCodingP", "shortFormatDate"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "shortFormatDate"]
+- !private ["So8NSObjectC", "BetterDateFormatter"]
+- ["So8NSObjectC", "RepeatingEvent"]
+- !private ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "configureCell"]
+- ["So8NSObjectC", "dateLabel"]
+- !private ["So8NSObjectC", "daysOfWeek"]
+- !private ["So8NSObjectC", "endDate"]
+- ["So8NSObjectC", "event"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "name"]
+- ["So8NSObjectC", "nameLabel"]
+- !private ["So8NSObjectC", "shortFormatDate"]
+- !private ["So8NSObjectC", "startDate"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So16NSObjectProtocolP", "BetterDateFormatter"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "configureCell"]
+- !private ["So16NSObjectProtocolP", "dateLabel"]
+- !private ["So16NSObjectProtocolP", "daysOfWeek"]
+- !private ["So16NSObjectProtocolP", "endDate"]
+- !private ["So16NSObjectProtocolP", "event"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "name"]
+- !private ["So16NSObjectProtocolP", "nameLabel"]
+- !private ["So16NSObjectProtocolP", "shortFormatDate"]
+- !private ["So16NSObjectProtocolP", "startDate"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "joined"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "joined"]
+- !private ["s16RawRepresentableP", "shortName"]
+- !private ["11Logan__iOS_14RepeatingEventC", "daysOfWeek"]
+- !private ["11Logan__iOS_14RepeatingEventC", "endDate"]
+- !private ["11Logan__iOS_14RepeatingEventC", "name"]
+- !private ["11Logan__iOS_14RepeatingEventC", "startDate"]
+- !private ["11Logan__iOS_27RepeatingEventTableViewCellC", "BetterDateFormatter"]
+- ["11Logan__iOS_27RepeatingEventTableViewCellC", "RepeatingEvent"]
+- !private ["11Logan__iOS_27RepeatingEventTableViewCellC", "String"]
+- ["11Logan__iOS_27RepeatingEventTableViewCellC", "UILabel"]
+- ["11Logan__iOS_27RepeatingEventTableViewCellC", "configureCell"]
+- ["11Logan__iOS_27RepeatingEventTableViewCellC", "dateLabel"]
+- ["11Logan__iOS_27RepeatingEventTableViewCellC", "deinit"]
+- ["11Logan__iOS_27RepeatingEventTableViewCellC", "event"]
+- ["11Logan__iOS_27RepeatingEventTableViewCellC", "init"]
+- ["11Logan__iOS_27RepeatingEventTableViewCellC", "nameLabel"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "joined"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "BetterDateFormatter"]
+- ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "configureCell"]
+- !private ["So29UIAccessibilityIdentificationP", "dateLabel"]
+- !private ["So29UIAccessibilityIdentificationP", "event"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "nameLabel"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "BetterDateFormatter"]
+- ["So12UIAppearanceP", ""]
+- !private ["So12UIAppearanceP", "configureCell"]
+- !private ["So12UIAppearanceP", "dateLabel"]
+- !private ["So12UIAppearanceP", "event"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "nameLabel"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "BetterDateFormatter"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "configureCell"]
+- !private ["So21UIAppearanceContainerP", "dateLabel"]
+- !private ["So21UIAppearanceContainerP", "event"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "nameLabel"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So17UICoordinateSpaceP", "BetterDateFormatter"]
+- ["So17UICoordinateSpaceP", ""]
+- !private ["So17UICoordinateSpaceP", "configureCell"]
+- !private ["So17UICoordinateSpaceP", "dateLabel"]
+- !private ["So17UICoordinateSpaceP", "event"]
+- !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "nameLabel"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "BetterDateFormatter"]
+- ["So13UIDynamicItemP", ""]
+- !private ["So13UIDynamicItemP", "configureCell"]
+- !private ["So13UIDynamicItemP", "dateLabel"]
+- !private ["So13UIDynamicItemP", "event"]
+- !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "nameLabel"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "BetterDateFormatter"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "configureCell"]
+- !private ["So18UIFocusEnvironmentP", "dateLabel"]
+- !private ["So18UIFocusEnvironmentP", "event"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "nameLabel"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So11UIFocusItemP", "BetterDateFormatter"]
+- ["So11UIFocusItemP", ""]
+- !private ["So11UIFocusItemP", "configureCell"]
+- !private ["So11UIFocusItemP", "dateLabel"]
+- !private ["So11UIFocusItemP", "event"]
+- !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "nameLabel"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So27UIGestureRecognizerDelegateP", "BetterDateFormatter"]
+- ["So27UIGestureRecognizerDelegateP", ""]
+- !private ["So27UIGestureRecognizerDelegateP", "configureCell"]
+- !private ["So27UIGestureRecognizerDelegateP", "dateLabel"]
+- !private ["So27UIGestureRecognizerDelegateP", "event"]
+- !private ["So27UIGestureRecognizerDelegateP", "init"]
+- !private ["So27UIGestureRecognizerDelegateP", "nameLabel"]
+- !private ["So7UILabelC", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "BetterDateFormatter"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "configureCell"]
+- !private ["So30UIPasteConfigurationSupportingP", "dateLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "event"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "nameLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So11UIResponderC", "BetterDateFormatter"]
+- ["So11UIResponderC", "RepeatingEvent"]
+- !private ["So11UIResponderC", "String"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "configureCell"]
+- ["So11UIResponderC", "dateLabel"]
+- ["So11UIResponderC", "event"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "nameLabel"]
+- !private ["So11UIResponderC", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "BetterDateFormatter"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "configureCell"]
+- !private ["So30UIResponderStandardEditActionsP", "dateLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "event"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "nameLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So15UITableViewCellC", "BetterDateFormatter"]
+- ["So15UITableViewCellC", "RepeatingEvent"]
+- !private ["So15UITableViewCellC", "String"]
+- ["So15UITableViewCellC", "UILabel"]
+- ["So15UITableViewCellC", ""]
+- ["So15UITableViewCellC", "configureCell"]
+- ["So15UITableViewCellC", "dateLabel"]
+- ["So15UITableViewCellC", "event"]
+- ["So15UITableViewCellC", "init"]
+- ["So15UITableViewCellC", "nameLabel"]
+- !private ["So18UITraitEnvironmentP", "BetterDateFormatter"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "configureCell"]
+- !private ["So18UITraitEnvironmentP", "dateLabel"]
+- !private ["So18UITraitEnvironmentP", "event"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "nameLabel"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So6UIViewC", "BetterDateFormatter"]
+- ["So6UIViewC", "RepeatingEvent"]
+- !private ["So6UIViewC", "String"]
+- ["So6UIViewC", "UILabel"]
+- ["So6UIViewC", "configureCell"]
+- ["So6UIViewC", "dateLabel"]
+- ["So6UIViewC", "event"]
+- ["So6UIViewC", "init"]
+- ["So6UIViewC", "nameLabel"]
+- !private ["So6UIViewC", "text"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "joined"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "BetterDateFormatter"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "configureCell"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dateLabel"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "event"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "nameLabel"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "joined"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "BetterDateFormatter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "configureCell"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "daysOfWeek"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "event"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nameLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shortFormatDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "11Logan__iOS_19BetterDateFormatterC"
+- !private "s23BidirectionalCollectionP"
+- "So15CALayerDelegateP"
+- !private "11Logan__iOS_9CKEnabledC"
+- "s7CVarArgP"
+- !private "11Logan__iOS_11CalendarDayC"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "So13DateFormatterC"
+- !private "11Logan__iOS_9DayOfWeekO"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "11Logan__iOS_5EventC"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So9FormatterC"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "11Logan__iOS_14RepeatingEventC"
+- "11Logan__iOS_27RepeatingEventTableViewCellC"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So27UIGestureRecognizerDelegateP"
+- !private "So7UILabelC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So15UITableViewCellC"
+- "So18UITraitEnvironmentP"
+- "So6UIViewC"
+- !private "s14_ArrayProtocolP"
+- "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CloudKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "bad5d237905086c813b54efb440aa089"

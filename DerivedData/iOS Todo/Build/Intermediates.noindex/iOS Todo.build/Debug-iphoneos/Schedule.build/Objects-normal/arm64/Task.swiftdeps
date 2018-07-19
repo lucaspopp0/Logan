@@ -1,0 +1,617 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Task"
+provides-nominal:
+- "8Schedule4TaskC"
+provides-member:
+- ["8Schedule4TaskC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "+"
+- !private "=="
+- !private "??"
+- "Assignment"
+- "AssignmentPrecedence"
+- !private "BetterDate"
+- "Bool"
+- "BooleanLiteralType"
+- "CKEnabled"
+- "CKRecord"
+- !private "CKRecordValue"
+- !private "CKReference"
+- !private "CKReferenceAction"
+- "CalendarDay"
+- "CastingPrecedence"
+- "Commitment"
+- !private "DataManager"
+- !private "Date"
+- "DueDate"
+- "Int"
+- "Priority"
+- "String"
+- "StringLiteralType"
+- "Task"
+- "TernaryPrecedence"
+- !private "max"
+- !private "~="
+depends-member:
+- !private ["8Schedule10AssignmentC", "deinit"]
+- !private ["8Schedule10AssignmentC", "record"]
+- !private ["8Schedule10BetterDateC", "init"]
+- !private ["8Schedule10BetterDateC", "stringValue"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "isEmpty"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["8Schedule9CKEnabledC", "Assignment"]
+- !private ["8Schedule9CKEnabledC", "BetterDate"]
+- ["8Schedule9CKEnabledC", "Bool"]
+- ["8Schedule9CKEnabledC", "CKEnabled"]
+- ["8Schedule9CKEnabledC", "CKRecord"]
+- !private ["8Schedule9CKEnabledC", "CKRecordValue"]
+- !private ["8Schedule9CKEnabledC", "CKReference"]
+- !private ["8Schedule9CKEnabledC", "CKReferenceAction"]
+- ["8Schedule9CKEnabledC", "CalendarDay"]
+- ["8Schedule9CKEnabledC", "Commitment"]
+- !private ["8Schedule9CKEnabledC", "DataManager"]
+- !private ["8Schedule9CKEnabledC", "Date"]
+- ["8Schedule9CKEnabledC", "DueDate"]
+- ["8Schedule9CKEnabledC", "ID"]
+- ["8Schedule9CKEnabledC", "Int"]
+- ["8Schedule9CKEnabledC", "NEXT_SAVE_ID"]
+- ["8Schedule9CKEnabledC", "Priority"]
+- ["8Schedule9CKEnabledC", "String"]
+- !private ["8Schedule9CKEnabledC", "Task"]
+- ["8Schedule9CKEnabledC", ""]
+- ["8Schedule9CKEnabledC", "commitment"]
+- ["8Schedule9CKEnabledC", "completed"]
+- ["8Schedule9CKEnabledC", "completionDate"]
+- !private ["8Schedule9CKEnabledC", "courses"]
+- ["8Schedule9CKEnabledC", "dueDate"]
+- ["8Schedule9CKEnabledC", "init"]
+- !private ["8Schedule9CKEnabledC", "max"]
+- ["8Schedule9CKEnabledC", "priority"]
+- !private ["8Schedule9CKEnabledC", "record"]
+- ["8Schedule9CKEnabledC", "relatedAssignment"]
+- ["8Schedule9CKEnabledC", "tags"]
+- ["8Schedule9CKEnabledC", "title"]
+- ["8Schedule9CKEnabledC", "userDescription"]
+- !private ["So8CKRecordC", "init"]
+- !private ["So8CKRecordC", "modificationDate"]
+- !private ["So8CKRecordC", "recordID"]
+- !private ["So8CKRecordC", "subscript"]
+- !private ["So10CKRecordIDC", "isEqual"]
+- !private ["So13CKRecordValueP", "init"]
+- !private ["So13CKRecordValueP", "isEmpty"]
+- !private ["So13CKRecordValueP", "recordID"]
+- !private ["So11CKReferenceC", "init"]
+- !private ["So11CKReferenceC", "recordID"]
+- !private ["SC17CKReferenceActionO", "none"]
+- !private ["So15CNKeyDescriptorP", "isEmpty"]
+- !private ["s7CVarArgP", "BetterDate"]
+- !private ["s7CVarArgP", "CKRecord"]
+- !private ["s7CVarArgP", "CKReference"]
+- !private ["s7CVarArgP", "CKReferenceAction"]
+- !private ["s7CVarArgP", "CalendarDay"]
+- !private ["s7CVarArgP", "DataManager"]
+- !private ["s7CVarArgP", "Date"]
+- ["s7CVarArgP", "DueDate"]
+- !private ["s7CVarArgP", "ID"]
+- !private ["s7CVarArgP", "NEXT_SAVE_ID"]
+- ["s7CVarArgP", "Priority"]
+- !private ["s7CVarArgP", "Task"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "assignments"]
+- !private ["s7CVarArgP", "commitment"]
+- !private ["s7CVarArgP", "completed"]
+- !private ["s7CVarArgP", "completionDate"]
+- !private ["s7CVarArgP", "courses"]
+- !private ["s7CVarArgP", "dueDate"]
+- !private ["s7CVarArgP", "extracurriculars"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "isEqual"]
+- !private ["s7CVarArgP", "max"]
+- !private ["s7CVarArgP", "modificationDate"]
+- !private ["s7CVarArgP", "priority"]
+- !private ["s7CVarArgP", "record"]
+- !private ["s7CVarArgP", "recordID"]
+- !private ["s7CVarArgP", "relatedAssignment"]
+- !private ["s7CVarArgP", "semesters"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "userDescription"]
+- !private ["8Schedule11CalendarDayC", "init"]
+- !private ["8Schedule11CalendarDayC", "stringValue"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "isEmpty"]
+- !private ["8Schedule10CommitmentP", "record"]
+- ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "isEmpty"]
+- !private ["8Schedule6CourseC", "deinit"]
+- !private ["8Schedule6CourseC", "record"]
+- !private ["s28CustomDebugStringConvertibleP", "BetterDate"]
+- !private ["s28CustomDebugStringConvertibleP", "CKRecord"]
+- !private ["s28CustomDebugStringConvertibleP", "CKReference"]
+- !private ["s28CustomDebugStringConvertibleP", "CKReferenceAction"]
+- !private ["s28CustomDebugStringConvertibleP", "CalendarDay"]
+- !private ["s28CustomDebugStringConvertibleP", "DataManager"]
+- !private ["s28CustomDebugStringConvertibleP", "Date"]
+- ["s28CustomDebugStringConvertibleP", "DueDate"]
+- !private ["s28CustomDebugStringConvertibleP", "ID"]
+- !private ["s28CustomDebugStringConvertibleP", "NEXT_SAVE_ID"]
+- ["s28CustomDebugStringConvertibleP", "Priority"]
+- !private ["s28CustomDebugStringConvertibleP", "Task"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "assignments"]
+- !private ["s28CustomDebugStringConvertibleP", "commitment"]
+- !private ["s28CustomDebugStringConvertibleP", "completed"]
+- !private ["s28CustomDebugStringConvertibleP", "completionDate"]
+- !private ["s28CustomDebugStringConvertibleP", "courses"]
+- !private ["s28CustomDebugStringConvertibleP", "dueDate"]
+- !private ["s28CustomDebugStringConvertibleP", "extracurriculars"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "isEqual"]
+- !private ["s28CustomDebugStringConvertibleP", "max"]
+- !private ["s28CustomDebugStringConvertibleP", "modificationDate"]
+- !private ["s28CustomDebugStringConvertibleP", "priority"]
+- !private ["s28CustomDebugStringConvertibleP", "record"]
+- !private ["s28CustomDebugStringConvertibleP", "recordID"]
+- !private ["s28CustomDebugStringConvertibleP", "relatedAssignment"]
+- !private ["s28CustomDebugStringConvertibleP", "semesters"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "userDescription"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "BetterDate"]
+- !private ["s23CustomStringConvertibleP", "CKRecord"]
+- !private ["s23CustomStringConvertibleP", "CKReference"]
+- !private ["s23CustomStringConvertibleP", "CKReferenceAction"]
+- !private ["s23CustomStringConvertibleP", "CalendarDay"]
+- !private ["s23CustomStringConvertibleP", "DataManager"]
+- !private ["s23CustomStringConvertibleP", "Date"]
+- ["s23CustomStringConvertibleP", "DueDate"]
+- !private ["s23CustomStringConvertibleP", "ID"]
+- !private ["s23CustomStringConvertibleP", "NEXT_SAVE_ID"]
+- ["s23CustomStringConvertibleP", "Priority"]
+- !private ["s23CustomStringConvertibleP", "Task"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "assignments"]
+- !private ["s23CustomStringConvertibleP", "commitment"]
+- !private ["s23CustomStringConvertibleP", "completed"]
+- !private ["s23CustomStringConvertibleP", "completionDate"]
+- !private ["s23CustomStringConvertibleP", "courses"]
+- !private ["s23CustomStringConvertibleP", "dueDate"]
+- !private ["s23CustomStringConvertibleP", "extracurriculars"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "isEqual"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- !private ["s23CustomStringConvertibleP", "modificationDate"]
+- !private ["s23CustomStringConvertibleP", "priority"]
+- !private ["s23CustomStringConvertibleP", "record"]
+- !private ["s23CustomStringConvertibleP", "recordID"]
+- !private ["s23CustomStringConvertibleP", "relatedAssignment"]
+- !private ["s23CustomStringConvertibleP", "semesters"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "userDescription"]
+- !private ["8Schedule11DataManagerC", "assignments"]
+- !private ["8Schedule11DataManagerC", "extracurriculars"]
+- !private ["8Schedule11DataManagerC", "semesters"]
+- !private ["8Schedule11DataManagerC", "shared"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "isEmpty"]
+- !private ["8Schedule7DueDateO", "asap"]
+- ["8Schedule7DueDateO", "eventually"]
+- !private ["8Schedule7DueDateO", "intValue"]
+- ["8Schedule7DueDateO", "specificDay"]
+- ["8Schedule7DueDateO", "specificDeadline"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "isEmpty"]
+- !private ["s9EquatableP", "BetterDate"]
+- !private ["s9EquatableP", "CKRecord"]
+- !private ["s9EquatableP", "CKReference"]
+- !private ["s9EquatableP", "CKReferenceAction"]
+- !private ["s9EquatableP", "CalendarDay"]
+- !private ["s9EquatableP", "DataManager"]
+- !private ["s9EquatableP", "Date"]
+- ["s9EquatableP", "DueDate"]
+- !private ["s9EquatableP", "ID"]
+- !private ["s9EquatableP", "NEXT_SAVE_ID"]
+- ["s9EquatableP", "Priority"]
+- !private ["s9EquatableP", "Task"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "assignments"]
+- !private ["s9EquatableP", "commitment"]
+- !private ["s9EquatableP", "completed"]
+- !private ["s9EquatableP", "completionDate"]
+- !private ["s9EquatableP", "courses"]
+- !private ["s9EquatableP", "dueDate"]
+- !private ["s9EquatableP", "extracurriculars"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isEmpty"]
+- !private ["s9EquatableP", "isEqual"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "modificationDate"]
+- !private ["s9EquatableP", "none"]
+- ["s9EquatableP", "normal"]
+- !private ["s9EquatableP", "priority"]
+- !private ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "record"]
+- !private ["s9EquatableP", "recordID"]
+- !private ["s9EquatableP", "relatedAssignment"]
+- !private ["s9EquatableP", "semesters"]
+- !private ["s9EquatableP", "shared"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "title"]
+- !private ["s9EquatableP", "userDescription"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
+- !private ["8Schedule15ExtracurricularC", "deinit"]
+- !private ["8Schedule15ExtracurricularC", "record"]
+- !private ["s8HashableP", "BetterDate"]
+- !private ["s8HashableP", "CKRecord"]
+- !private ["s8HashableP", "CKReference"]
+- !private ["s8HashableP", "CKReferenceAction"]
+- !private ["s8HashableP", "CalendarDay"]
+- !private ["s8HashableP", "DataManager"]
+- !private ["s8HashableP", "Date"]
+- ["s8HashableP", "DueDate"]
+- !private ["s8HashableP", "ID"]
+- !private ["s8HashableP", "NEXT_SAVE_ID"]
+- ["s8HashableP", "Priority"]
+- !private ["s8HashableP", "Task"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "assignments"]
+- !private ["s8HashableP", "commitment"]
+- !private ["s8HashableP", "completed"]
+- !private ["s8HashableP", "completionDate"]
+- !private ["s8HashableP", "courses"]
+- !private ["s8HashableP", "dueDate"]
+- !private ["s8HashableP", "extracurriculars"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "isEmpty"]
+- !private ["s8HashableP", "isEqual"]
+- !private ["s8HashableP", "max"]
+- !private ["s8HashableP", "modificationDate"]
+- !private ["s8HashableP", "none"]
+- ["s8HashableP", "normal"]
+- !private ["s8HashableP", "priority"]
+- !private ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "record"]
+- !private ["s8HashableP", "recordID"]
+- !private ["s8HashableP", "relatedAssignment"]
+- !private ["s8HashableP", "semesters"]
+- !private ["s8HashableP", "shared"]
+- !private ["s8HashableP", "subscript"]
+- !private ["s8HashableP", "title"]
+- !private ["s8HashableP", "userDescription"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "isEmpty"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isEmpty"]
+- !private ["So8NSCodingP", "isEqual"]
+- !private ["So8NSCodingP", "modificationDate"]
+- !private ["So8NSCodingP", "recordID"]
+- !private ["So8NSCodingP", "subscript"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isEmpty"]
+- !private ["So9NSCopyingP", "isEqual"]
+- !private ["So9NSCopyingP", "modificationDate"]
+- !private ["So9NSCopyingP", "recordID"]
+- !private ["So9NSCopyingP", "subscript"]
+- !private ["So21NSItemProviderReadingP", "isEmpty"]
+- !private ["So21NSItemProviderWritingP", "isEmpty"]
+- !private ["So16NSMutableCopyingP", "isEmpty"]
+- ["So8NSObjectC", "Assignment"]
+- !private ["So8NSObjectC", "BetterDate"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CKEnabled"]
+- ["So8NSObjectC", "CKRecord"]
+- !private ["So8NSObjectC", "CKRecordValue"]
+- !private ["So8NSObjectC", "CKReference"]
+- !private ["So8NSObjectC", "CKReferenceAction"]
+- ["So8NSObjectC", "CalendarDay"]
+- ["So8NSObjectC", "Commitment"]
+- !private ["So8NSObjectC", "DataManager"]
+- !private ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "DueDate"]
+- ["So8NSObjectC", "ID"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NEXT_SAVE_ID"]
+- ["So8NSObjectC", "Priority"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "Task"]
+- !private ["So8NSObjectC", "assignments"]
+- ["So8NSObjectC", "commitment"]
+- ["So8NSObjectC", "completed"]
+- ["So8NSObjectC", "completionDate"]
+- !private ["So8NSObjectC", "courses"]
+- ["So8NSObjectC", "dueDate"]
+- !private ["So8NSObjectC", "extracurriculars"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isEmpty"]
+- !private ["So8NSObjectC", "isEqual"]
+- !private ["So8NSObjectC", "max"]
+- !private ["So8NSObjectC", "modificationDate"]
+- ["So8NSObjectC", "priority"]
+- !private ["So8NSObjectC", "record"]
+- !private ["So8NSObjectC", "recordID"]
+- ["So8NSObjectC", "relatedAssignment"]
+- !private ["So8NSObjectC", "semesters"]
+- !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "subscript"]
+- ["So8NSObjectC", "tags"]
+- ["So8NSObjectC", "title"]
+- ["So8NSObjectC", "userDescription"]
+- !private ["So16NSObjectProtocolP", "BetterDate"]
+- !private ["So16NSObjectProtocolP", "CKRecord"]
+- !private ["So16NSObjectProtocolP", "CKReference"]
+- !private ["So16NSObjectProtocolP", "CKReferenceAction"]
+- !private ["So16NSObjectProtocolP", "CalendarDay"]
+- !private ["So16NSObjectProtocolP", "DataManager"]
+- !private ["So16NSObjectProtocolP", "Date"]
+- ["So16NSObjectProtocolP", "DueDate"]
+- !private ["So16NSObjectProtocolP", "ID"]
+- !private ["So16NSObjectProtocolP", "NEXT_SAVE_ID"]
+- ["So16NSObjectProtocolP", "Priority"]
+- !private ["So16NSObjectProtocolP", "Task"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "assignments"]
+- !private ["So16NSObjectProtocolP", "commitment"]
+- !private ["So16NSObjectProtocolP", "completed"]
+- !private ["So16NSObjectProtocolP", "completionDate"]
+- !private ["So16NSObjectProtocolP", "courses"]
+- !private ["So16NSObjectProtocolP", "dueDate"]
+- !private ["So16NSObjectProtocolP", "extracurriculars"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isEmpty"]
+- !private ["So16NSObjectProtocolP", "isEqual"]
+- !private ["So16NSObjectProtocolP", "max"]
+- !private ["So16NSObjectProtocolP", "modificationDate"]
+- !private ["So16NSObjectProtocolP", "priority"]
+- !private ["So16NSObjectProtocolP", "record"]
+- !private ["So16NSObjectProtocolP", "recordID"]
+- !private ["So16NSObjectProtocolP", "relatedAssignment"]
+- !private ["So16NSObjectProtocolP", "semesters"]
+- !private ["So16NSObjectProtocolP", "shared"]
+- !private ["So16NSObjectProtocolP", "subscript"]
+- !private ["So16NSObjectProtocolP", "title"]
+- !private ["So16NSObjectProtocolP", "userDescription"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isEmpty"]
+- !private ["So14NSSecureCodingP", "isEqual"]
+- !private ["So14NSSecureCodingP", "modificationDate"]
+- !private ["So14NSSecureCodingP", "recordID"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["So8NSStringC", "isEmpty"]
+- !private ["8Schedule8PriorityO", "deinit"]
+- !private ["8Schedule8PriorityO", "init"]
+- ["8Schedule8PriorityO", "normal"]
+- !private ["8Schedule8PriorityO", "rawValue"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
+- !private ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "none"]
+- ["s16RawRepresentableP", "normal"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["8Schedule8SemesterC", "courses"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "isEmpty"]
+- ["SS", "init"]
+- !private ["SS", "isEmpty"]
+- ["s14StringProtocolP", "init"]
+- !private ["s14StringProtocolP", "isEmpty"]
+- ["8Schedule4TaskC", "Assignment"]
+- !private ["8Schedule4TaskC", "BetterDate"]
+- ["8Schedule4TaskC", "Bool"]
+- ["8Schedule4TaskC", "CKEnabled"]
+- ["8Schedule4TaskC", "CKRecord"]
+- !private ["8Schedule4TaskC", "CKRecordValue"]
+- !private ["8Schedule4TaskC", "CKReference"]
+- !private ["8Schedule4TaskC", "CKReferenceAction"]
+- ["8Schedule4TaskC", "CalendarDay"]
+- ["8Schedule4TaskC", "Commitment"]
+- !private ["8Schedule4TaskC", "DataManager"]
+- !private ["8Schedule4TaskC", "Date"]
+- ["8Schedule4TaskC", "DueDate"]
+- ["8Schedule4TaskC", "ID"]
+- ["8Schedule4TaskC", "Int"]
+- ["8Schedule4TaskC", "NEXT_SAVE_ID"]
+- ["8Schedule4TaskC", "Priority"]
+- ["8Schedule4TaskC", "String"]
+- !private ["8Schedule4TaskC", "Task"]
+- ["8Schedule4TaskC", "commitment"]
+- ["8Schedule4TaskC", "completed"]
+- ["8Schedule4TaskC", "completionDate"]
+- ["8Schedule4TaskC", "deinit"]
+- ["8Schedule4TaskC", "dueDate"]
+- ["8Schedule4TaskC", "init"]
+- !private ["8Schedule4TaskC", "max"]
+- ["8Schedule4TaskC", "priority"]
+- !private ["8Schedule4TaskC", "record"]
+- ["8Schedule4TaskC", "relatedAssignment"]
+- ["8Schedule4TaskC", "tags"]
+- ["8Schedule4TaskC", "title"]
+- ["8Schedule4TaskC", "userDescription"]
+- ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "isEmpty"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "isEmpty"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "isEmpty"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "BetterDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKRecord"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKReference"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKReferenceAction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CalendarDay"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DataManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "DueDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NEXT_SAVE_ID"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Priority"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Task"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "assignments"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "commitment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "completed"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "completionDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "courses"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dueDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "extracurriculars"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEqual"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "max"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "modificationDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "priority"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "record"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "recordID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "relatedAssignment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "semesters"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userDescription"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "isEmpty"]
+depends-nominal:
+- !private "8Schedule10AssignmentC"
+- !private "8Schedule10BetterDateC"
+- "s23BidirectionalCollectionP"
+- !private "Sb"
+- "8Schedule9CKEnabledC"
+- !private "So8CKRecordC"
+- !private "So10CKRecordIDC"
+- !private "So13CKRecordValueP"
+- !private "So11CKReferenceC"
+- !private "SC17CKReferenceActionO"
+- !private "So15CNKeyDescriptorP"
+- "s7CVarArgP"
+- !private "8Schedule11CalendarDayC"
+- "s10CollectionP"
+- !private "8Schedule10CommitmentP"
+- "s10ComparableP"
+- !private "8Schedule6CourseC"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "8Schedule11DataManagerC"
+- !private "10Foundation4DateV"
+- "s9DecodableP"
+- "8Schedule7DueDateO"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "8Schedule15ExtracurricularC"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "8Schedule8PriorityO"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "8Schedule8SemesterC"
+- "s8SequenceP"
+- "SS"
+- "s14StringProtocolP"
+- "8Schedule4TaskC"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "edda17c1fe81561ecc3a99af8d8d7415"

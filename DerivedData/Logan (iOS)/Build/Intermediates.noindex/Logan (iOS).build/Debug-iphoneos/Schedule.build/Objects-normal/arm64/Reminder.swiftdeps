@@ -1,0 +1,529 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Reminder"
+provides-nominal:
+- "8Schedule8ReminderC"
+provides-member:
+- ["8Schedule8ReminderC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "*"
+- !private "+"
+- !private "Array"
+- "Assignment"
+- "AssignmentPrecedence"
+- "BetterDate"
+- !private "BooleanLiteralType"
+- "CKEnabled"
+- "CKRecord"
+- !private "CKRecordValue"
+- !private "Calendar"
+- "CastingPrecedence"
+- "Date"
+- !private "Dictionary"
+- "Int"
+- "Reminder"
+- "String"
+- "StringLiteralType"
+- "Task"
+- !private "UNCalendarNotificationTrigger"
+- !private "UNMutableNotificationContent"
+- "UNNotificationRequest"
+- !private "UNNotificationSound"
+- !private "max"
+depends-member:
+- !private ["8Schedule10AssignmentC", "record"]
+- !private ["8Schedule10AssignmentC", "title"]
+- !private ["8Schedule10BetterDateC", "dateValue"]
+- ["8Schedule10BetterDateC", "init"]
+- !private ["8Schedule10BetterDateC", "stringValue"]
+- ["s23BidirectionalCollectionP", "init"]
+- ["8Schedule9CKEnabledC", "Assignment"]
+- ["8Schedule9CKEnabledC", "BetterDate"]
+- ["8Schedule9CKEnabledC", "CKRecord"]
+- !private ["8Schedule9CKEnabledC", "CKRecordValue"]
+- !private ["8Schedule9CKEnabledC", "Calendar"]
+- ["8Schedule9CKEnabledC", "Date"]
+- ["8Schedule9CKEnabledC", "ID"]
+- ["8Schedule9CKEnabledC", "Int"]
+- ["8Schedule9CKEnabledC", "NEXT_SAVE_ID"]
+- !private ["8Schedule9CKEnabledC", "Reminder"]
+- ["8Schedule9CKEnabledC", "String"]
+- ["8Schedule9CKEnabledC", "Task"]
+- !private ["8Schedule9CKEnabledC", "UNCalendarNotificationTrigger"]
+- !private ["8Schedule9CKEnabledC", "UNMutableNotificationContent"]
+- ["8Schedule9CKEnabledC", "UNNotificationRequest"]
+- !private ["8Schedule9CKEnabledC", "UNNotificationSound"]
+- ["8Schedule9CKEnabledC", ""]
+- ["8Schedule9CKEnabledC", "assignment"]
+- ["8Schedule9CKEnabledC", "identifier"]
+- ["8Schedule9CKEnabledC", "init"]
+- !private ["8Schedule9CKEnabledC", "max"]
+- ["8Schedule9CKEnabledC", "message"]
+- ["8Schedule9CKEnabledC", "notificationRequest"]
+- !private ["8Schedule9CKEnabledC", "record"]
+- ["8Schedule9CKEnabledC", "task"]
+- !private ["8Schedule9CKEnabledC", "title"]
+- ["8Schedule9CKEnabledC", "triggerDate"]
+- !private ["So8CKRecordC", "init"]
+- !private ["So8CKRecordC", "recordID"]
+- !private ["So8CKRecordC", "subscript"]
+- !private ["So10CKRecordIDC", "recordName"]
+- ["s7CVarArgP", "BetterDate"]
+- !private ["s7CVarArgP", "CKRecord"]
+- !private ["s7CVarArgP", "Calendar"]
+- ["s7CVarArgP", "Date"]
+- !private ["s7CVarArgP", "ID"]
+- !private ["s7CVarArgP", "NEXT_SAVE_ID"]
+- !private ["s7CVarArgP", "Reminder"]
+- !private ["s7CVarArgP", "UNCalendarNotificationTrigger"]
+- !private ["s7CVarArgP", "UNMutableNotificationContent"]
+- !private ["s7CVarArgP", "UNNotificationRequest"]
+- !private ["s7CVarArgP", "UNNotificationSound"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "assignment"]
+- !private ["s7CVarArgP", "body"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "identifier"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "max"]
+- !private ["s7CVarArgP", "message"]
+- !private ["s7CVarArgP", "record"]
+- !private ["s7CVarArgP", "recordID"]
+- !private ["s7CVarArgP", "recordName"]
+- !private ["s7CVarArgP", "sound"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "task"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "triggerDate"]
+- !private ["s7CVarArgP", "userInfo"]
+- !private ["10Foundation8CalendarV", "current"]
+- !private ["10Foundation8CalendarV", "dateComponents"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- !private ["10Foundation8CalendarV9ComponentO", "day"]
+- !private ["10Foundation8CalendarV9ComponentO", "hour"]
+- !private ["10Foundation8CalendarV9ComponentO", "minute"]
+- !private ["10Foundation8CalendarV9ComponentO", "month"]
+- !private ["10Foundation8CalendarV9ComponentO", "second"]
+- !private ["10Foundation8CalendarV9ComponentO", "year"]
+- ["s28CustomDebugStringConvertibleP", "BetterDate"]
+- !private ["s28CustomDebugStringConvertibleP", "CKRecord"]
+- !private ["s28CustomDebugStringConvertibleP", "Calendar"]
+- ["s28CustomDebugStringConvertibleP", "Date"]
+- !private ["s28CustomDebugStringConvertibleP", "ID"]
+- !private ["s28CustomDebugStringConvertibleP", "NEXT_SAVE_ID"]
+- !private ["s28CustomDebugStringConvertibleP", "Reminder"]
+- !private ["s28CustomDebugStringConvertibleP", "UNCalendarNotificationTrigger"]
+- !private ["s28CustomDebugStringConvertibleP", "UNMutableNotificationContent"]
+- !private ["s28CustomDebugStringConvertibleP", "UNNotificationRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "UNNotificationSound"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "assignment"]
+- !private ["s28CustomDebugStringConvertibleP", "body"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "dateComponents"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "identifier"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "max"]
+- !private ["s28CustomDebugStringConvertibleP", "message"]
+- !private ["s28CustomDebugStringConvertibleP", "record"]
+- !private ["s28CustomDebugStringConvertibleP", "recordID"]
+- !private ["s28CustomDebugStringConvertibleP", "recordName"]
+- !private ["s28CustomDebugStringConvertibleP", "sound"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "task"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "triggerDate"]
+- !private ["s28CustomDebugStringConvertibleP", "userInfo"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "current"]
+- !private ["s17CustomReflectableP", "dateComponents"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "BetterDate"]
+- !private ["s23CustomStringConvertibleP", "CKRecord"]
+- !private ["s23CustomStringConvertibleP", "Calendar"]
+- ["s23CustomStringConvertibleP", "Date"]
+- !private ["s23CustomStringConvertibleP", "ID"]
+- !private ["s23CustomStringConvertibleP", "NEXT_SAVE_ID"]
+- !private ["s23CustomStringConvertibleP", "Reminder"]
+- !private ["s23CustomStringConvertibleP", "UNCalendarNotificationTrigger"]
+- !private ["s23CustomStringConvertibleP", "UNMutableNotificationContent"]
+- !private ["s23CustomStringConvertibleP", "UNNotificationRequest"]
+- !private ["s23CustomStringConvertibleP", "UNNotificationSound"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "assignment"]
+- !private ["s23CustomStringConvertibleP", "body"]
+- !private ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "dateComponents"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "identifier"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- !private ["s23CustomStringConvertibleP", "message"]
+- !private ["s23CustomStringConvertibleP", "record"]
+- !private ["s23CustomStringConvertibleP", "recordID"]
+- !private ["s23CustomStringConvertibleP", "recordName"]
+- !private ["s23CustomStringConvertibleP", "sound"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "task"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "triggerDate"]
+- !private ["s23CustomStringConvertibleP", "userInfo"]
+- ["10Foundation4DateV", "init"]
+- !private ["s9DecodableP", "current"]
+- !private ["s9DecodableP", "dateComponents"]
+- ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "current"]
+- !private ["s9EncodableP", "dateComponents"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "BetterDate"]
+- !private ["s9EquatableP", "CKRecord"]
+- !private ["s9EquatableP", "Calendar"]
+- ["s9EquatableP", "Date"]
+- !private ["s9EquatableP", "ID"]
+- !private ["s9EquatableP", "NEXT_SAVE_ID"]
+- !private ["s9EquatableP", "Reminder"]
+- !private ["s9EquatableP", "UNCalendarNotificationTrigger"]
+- !private ["s9EquatableP", "UNMutableNotificationContent"]
+- !private ["s9EquatableP", "UNNotificationRequest"]
+- !private ["s9EquatableP", "UNNotificationSound"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "assignment"]
+- !private ["s9EquatableP", "body"]
+- !private ["s9EquatableP", "current"]
+- !private ["s9EquatableP", "dateComponents"]
+- !private ["s9EquatableP", "day"]
+- !private ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "hour"]
+- !private ["s9EquatableP", "identifier"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "message"]
+- !private ["s9EquatableP", "minute"]
+- !private ["s9EquatableP", "month"]
+- !private ["s9EquatableP", "record"]
+- !private ["s9EquatableP", "recordID"]
+- !private ["s9EquatableP", "recordName"]
+- !private ["s9EquatableP", "second"]
+- !private ["s9EquatableP", "sound"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "task"]
+- !private ["s9EquatableP", "title"]
+- !private ["s9EquatableP", "triggerDate"]
+- !private ["s9EquatableP", "userInfo"]
+- !private ["s9EquatableP", "year"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s8HashableP", "BetterDate"]
+- !private ["s8HashableP", "CKRecord"]
+- !private ["s8HashableP", "Calendar"]
+- ["s8HashableP", "Date"]
+- !private ["s8HashableP", "ID"]
+- !private ["s8HashableP", "NEXT_SAVE_ID"]
+- !private ["s8HashableP", "Reminder"]
+- !private ["s8HashableP", "UNCalendarNotificationTrigger"]
+- !private ["s8HashableP", "UNMutableNotificationContent"]
+- !private ["s8HashableP", "UNNotificationRequest"]
+- !private ["s8HashableP", "UNNotificationSound"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "assignment"]
+- !private ["s8HashableP", "body"]
+- !private ["s8HashableP", "current"]
+- !private ["s8HashableP", "dateComponents"]
+- !private ["s8HashableP", "day"]
+- !private ["s8HashableP", "default"]
+- !private ["s8HashableP", "hour"]
+- !private ["s8HashableP", "identifier"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "max"]
+- !private ["s8HashableP", "message"]
+- !private ["s8HashableP", "minute"]
+- !private ["s8HashableP", "month"]
+- !private ["s8HashableP", "record"]
+- !private ["s8HashableP", "recordID"]
+- !private ["s8HashableP", "recordName"]
+- !private ["s8HashableP", "second"]
+- !private ["s8HashableP", "sound"]
+- !private ["s8HashableP", "subscript"]
+- !private ["s8HashableP", "task"]
+- !private ["s8HashableP", "title"]
+- !private ["s8HashableP", "triggerDate"]
+- !private ["s8HashableP", "userInfo"]
+- !private ["s8HashableP", "year"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "body"]
+- !private ["So8NSCodingP", "default"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "recordID"]
+- !private ["So8NSCodingP", "recordName"]
+- !private ["So8NSCodingP", "sound"]
+- !private ["So8NSCodingP", "subscript"]
+- !private ["So8NSCodingP", "title"]
+- !private ["So8NSCodingP", "userInfo"]
+- !private ["So9NSCopyingP", "body"]
+- !private ["So9NSCopyingP", "default"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "recordID"]
+- !private ["So9NSCopyingP", "recordName"]
+- !private ["So9NSCopyingP", "sound"]
+- !private ["So9NSCopyingP", "subscript"]
+- !private ["So9NSCopyingP", "title"]
+- !private ["So9NSCopyingP", "userInfo"]
+- !private ["So16NSMutableCopyingP", "body"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "sound"]
+- !private ["So16NSMutableCopyingP", "title"]
+- !private ["So16NSMutableCopyingP", "userInfo"]
+- ["So8NSObjectC", "Assignment"]
+- ["So8NSObjectC", "BetterDate"]
+- ["So8NSObjectC", "CKRecord"]
+- !private ["So8NSObjectC", "CKRecordValue"]
+- !private ["So8NSObjectC", "Calendar"]
+- ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "ID"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NEXT_SAVE_ID"]
+- !private ["So8NSObjectC", "Reminder"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "Task"]
+- !private ["So8NSObjectC", "UNCalendarNotificationTrigger"]
+- !private ["So8NSObjectC", "UNMutableNotificationContent"]
+- ["So8NSObjectC", "UNNotificationRequest"]
+- !private ["So8NSObjectC", "UNNotificationSound"]
+- ["So8NSObjectC", "assignment"]
+- !private ["So8NSObjectC", "body"]
+- !private ["So8NSObjectC", "default"]
+- ["So8NSObjectC", "identifier"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "max"]
+- ["So8NSObjectC", "message"]
+- ["So8NSObjectC", "notificationRequest"]
+- !private ["So8NSObjectC", "record"]
+- !private ["So8NSObjectC", "recordID"]
+- !private ["So8NSObjectC", "recordName"]
+- !private ["So8NSObjectC", "sound"]
+- !private ["So8NSObjectC", "subscript"]
+- ["So8NSObjectC", "task"]
+- !private ["So8NSObjectC", "title"]
+- ["So8NSObjectC", "triggerDate"]
+- !private ["So8NSObjectC", "userInfo"]
+- ["So16NSObjectProtocolP", "BetterDate"]
+- !private ["So16NSObjectProtocolP", "CKRecord"]
+- !private ["So16NSObjectProtocolP", "Calendar"]
+- ["So16NSObjectProtocolP", "Date"]
+- !private ["So16NSObjectProtocolP", "ID"]
+- !private ["So16NSObjectProtocolP", "NEXT_SAVE_ID"]
+- !private ["So16NSObjectProtocolP", "Reminder"]
+- !private ["So16NSObjectProtocolP", "UNCalendarNotificationTrigger"]
+- !private ["So16NSObjectProtocolP", "UNMutableNotificationContent"]
+- !private ["So16NSObjectProtocolP", "UNNotificationRequest"]
+- !private ["So16NSObjectProtocolP", "UNNotificationSound"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "assignment"]
+- !private ["So16NSObjectProtocolP", "body"]
+- !private ["So16NSObjectProtocolP", "default"]
+- !private ["So16NSObjectProtocolP", "identifier"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "max"]
+- !private ["So16NSObjectProtocolP", "message"]
+- !private ["So16NSObjectProtocolP", "record"]
+- !private ["So16NSObjectProtocolP", "recordID"]
+- !private ["So16NSObjectProtocolP", "recordName"]
+- !private ["So16NSObjectProtocolP", "sound"]
+- !private ["So16NSObjectProtocolP", "subscript"]
+- !private ["So16NSObjectProtocolP", "task"]
+- !private ["So16NSObjectProtocolP", "title"]
+- !private ["So16NSObjectProtocolP", "triggerDate"]
+- !private ["So16NSObjectProtocolP", "userInfo"]
+- !private ["So14NSSecureCodingP", "body"]
+- !private ["So14NSSecureCodingP", "default"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "recordID"]
+- !private ["So14NSSecureCodingP", "recordName"]
+- !private ["So14NSSecureCodingP", "sound"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["So14NSSecureCodingP", "title"]
+- !private ["So14NSSecureCodingP", "userInfo"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "current"]
+- !private ["10Foundation20ReferenceConvertibleP", "dateComponents"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- ["8Schedule8ReminderC", "Assignment"]
+- ["8Schedule8ReminderC", "BetterDate"]
+- ["8Schedule8ReminderC", "CKRecord"]
+- !private ["8Schedule8ReminderC", "CKRecordValue"]
+- !private ["8Schedule8ReminderC", "Calendar"]
+- ["8Schedule8ReminderC", "Date"]
+- ["8Schedule8ReminderC", "ID"]
+- ["8Schedule8ReminderC", "Int"]
+- ["8Schedule8ReminderC", "NEXT_SAVE_ID"]
+- !private ["8Schedule8ReminderC", "Reminder"]
+- ["8Schedule8ReminderC", "String"]
+- ["8Schedule8ReminderC", "Task"]
+- !private ["8Schedule8ReminderC", "UNCalendarNotificationTrigger"]
+- !private ["8Schedule8ReminderC", "UNMutableNotificationContent"]
+- ["8Schedule8ReminderC", "UNNotificationRequest"]
+- !private ["8Schedule8ReminderC", "UNNotificationSound"]
+- ["8Schedule8ReminderC", "assignment"]
+- ["8Schedule8ReminderC", "deinit"]
+- ["8Schedule8ReminderC", "identifier"]
+- ["8Schedule8ReminderC", "init"]
+- !private ["8Schedule8ReminderC", "max"]
+- ["8Schedule8ReminderC", "message"]
+- ["8Schedule8ReminderC", "notificationRequest"]
+- !private ["8Schedule8ReminderC", "record"]
+- ["8Schedule8ReminderC", "task"]
+- ["8Schedule8ReminderC", "triggerDate"]
+- ["s8SequenceP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- !private ["8Schedule4TaskC", "record"]
+- !private ["8Schedule4TaskC", "title"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So29UNCalendarNotificationTriggerC", "init"]
+- !private ["So28UNMutableNotificationContentC", "body"]
+- !private ["So28UNMutableNotificationContentC", "init"]
+- !private ["So28UNMutableNotificationContentC", "sound"]
+- !private ["So28UNMutableNotificationContentC", "title"]
+- !private ["So28UNMutableNotificationContentC", "userInfo"]
+- !private ["So21UNNotificationContentC", "body"]
+- !private ["So21UNNotificationContentC", "init"]
+- !private ["So21UNNotificationContentC", "sound"]
+- !private ["So21UNNotificationContentC", "title"]
+- !private ["So21UNNotificationContentC", "userInfo"]
+- !private ["So21UNNotificationRequestC", "init"]
+- !private ["So19UNNotificationSoundC", "default"]
+- !private ["So21UNNotificationTriggerC", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "BetterDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKRecord"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Calendar"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NEXT_SAVE_ID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Reminder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UNCalendarNotificationTrigger"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UNMutableNotificationContent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UNNotificationRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UNNotificationSound"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "assignment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "body"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "max"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "message"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "record"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "recordID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "recordName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sound"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "task"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "triggerDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
+- !private ["10Foundation14_MutableBoxingP", "current"]
+- !private ["10Foundation14_MutableBoxingP", "dateComponents"]
+- !private ["s21_ObjectiveCBridgeableP", "current"]
+- !private ["s21_ObjectiveCBridgeableP", "dateComponents"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "8Schedule10AssignmentC"
+- "8Schedule10BetterDateC"
+- "s23BidirectionalCollectionP"
+- "8Schedule9CKEnabledC"
+- !private "So8CKRecordC"
+- !private "So10CKRecordIDC"
+- "s7CVarArgP"
+- !private "10Foundation8CalendarV"
+- "s10CollectionP"
+- "s10ComparableP"
+- !private "10Foundation8CalendarV9ComponentO"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation4DateV"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- "s26RangeReplaceableCollectionP"
+- "10Foundation20ReferenceConvertibleP"
+- "8Schedule8ReminderC"
+- "s8SequenceP"
+- "SS"
+- "s14StringProtocolP"
+- !private "8Schedule4TaskC"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "So29UNCalendarNotificationTriggerC"
+- !private "So28UNMutableNotificationContentC"
+- !private "So21UNNotificationContentC"
+- !private "So21UNNotificationRequestC"
+- !private "So19UNNotificationSoundC"
+- !private "So21UNNotificationTriggerC"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation14_MutableBoxingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "7e99a88ece27b8694d37af88debb1783"

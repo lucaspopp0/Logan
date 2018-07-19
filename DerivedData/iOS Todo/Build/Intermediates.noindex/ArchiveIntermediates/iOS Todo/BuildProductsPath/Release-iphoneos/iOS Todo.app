@@ -1,0 +1,1 @@
+/Users/Lucas/Box/Box Sync/Xcode Workspace/iOS Todo/DerivedData/iOS Todo/Build/Intermediates.noindex/ArchiveIntermediates/iOS Todo/InstallationBuildProductsLocation/Applications/iOS Todo.app

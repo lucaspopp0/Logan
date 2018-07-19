@@ -1,0 +1,571 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Assignment"
+provides-nominal:
+- "8iOS_Todo10AssignmentC"
+provides-member:
+- ["8iOS_Todo10AssignmentC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "+"
+- !private "=="
+- !private ">"
+- "Assignment"
+- "AssignmentPrecedence"
+- "BetterDate"
+- !private "Bool"
+- !private "BooleanLiteralType"
+- "CKEnabled"
+- "CKRecord"
+- !private "CKRecordValue"
+- !private "CKReference"
+- !private "CKReferenceAction"
+- !private "CalendarDay"
+- "CastingPrecedence"
+- "Commitment"
+- !private "DataManager"
+- "Date"
+- "DueDate"
+- "File"
+- "Int"
+- "Reminder"
+- "String"
+- "StringLiteralType"
+- !private "max"
+- !private "~="
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "sorted"]
+- !private ["8iOS_Todo10AssignmentC", "Assignment"]
+- ["8iOS_Todo10AssignmentC", "BetterDate"]
+- !private ["8iOS_Todo10AssignmentC", "Bool"]
+- ["8iOS_Todo10AssignmentC", "CKEnabled"]
+- ["8iOS_Todo10AssignmentC", "CKRecord"]
+- !private ["8iOS_Todo10AssignmentC", "CKRecordValue"]
+- !private ["8iOS_Todo10AssignmentC", "CKReference"]
+- !private ["8iOS_Todo10AssignmentC", "CKReferenceAction"]
+- !private ["8iOS_Todo10AssignmentC", "CalendarDay"]
+- ["8iOS_Todo10AssignmentC", "Commitment"]
+- !private ["8iOS_Todo10AssignmentC", "DataManager"]
+- ["8iOS_Todo10AssignmentC", "Date"]
+- ["8iOS_Todo10AssignmentC", "DueDate"]
+- ["8iOS_Todo10AssignmentC", "File"]
+- ["8iOS_Todo10AssignmentC", "ID"]
+- ["8iOS_Todo10AssignmentC", "Int"]
+- ["8iOS_Todo10AssignmentC", "NEXT_SAVE_ID"]
+- ["8iOS_Todo10AssignmentC", "Reminder"]
+- ["8iOS_Todo10AssignmentC", "String"]
+- ["8iOS_Todo10AssignmentC", "commitment"]
+- ["8iOS_Todo10AssignmentC", "deinit"]
+- ["8iOS_Todo10AssignmentC", "dueDate"]
+- ["8iOS_Todo10AssignmentC", "files"]
+- ["8iOS_Todo10AssignmentC", "init"]
+- !private ["8iOS_Todo10AssignmentC", "max"]
+- !private ["8iOS_Todo10AssignmentC", "record"]
+- ["8iOS_Todo10AssignmentC", "reminders"]
+- ["8iOS_Todo10AssignmentC", "sortReminders"]
+- ["8iOS_Todo10AssignmentC", "title"]
+- ["8iOS_Todo10AssignmentC", "userDescription"]
+- !private ["8iOS_Todo10BetterDateC", "dateValue"]
+- ["8iOS_Todo10BetterDateC", "init"]
+- !private ["8iOS_Todo10BetterDateC", "stringValue"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "sorted"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["8iOS_Todo9CKEnabledC", "Assignment"]
+- ["8iOS_Todo9CKEnabledC", "BetterDate"]
+- !private ["8iOS_Todo9CKEnabledC", "Bool"]
+- ["8iOS_Todo9CKEnabledC", "CKEnabled"]
+- ["8iOS_Todo9CKEnabledC", "CKRecord"]
+- !private ["8iOS_Todo9CKEnabledC", "CKRecordValue"]
+- !private ["8iOS_Todo9CKEnabledC", "CKReference"]
+- !private ["8iOS_Todo9CKEnabledC", "CKReferenceAction"]
+- !private ["8iOS_Todo9CKEnabledC", "CalendarDay"]
+- ["8iOS_Todo9CKEnabledC", "Commitment"]
+- !private ["8iOS_Todo9CKEnabledC", "DataManager"]
+- ["8iOS_Todo9CKEnabledC", "Date"]
+- ["8iOS_Todo9CKEnabledC", "DueDate"]
+- ["8iOS_Todo9CKEnabledC", "File"]
+- ["8iOS_Todo9CKEnabledC", "ID"]
+- ["8iOS_Todo9CKEnabledC", "Int"]
+- ["8iOS_Todo9CKEnabledC", "NEXT_SAVE_ID"]
+- ["8iOS_Todo9CKEnabledC", "Reminder"]
+- ["8iOS_Todo9CKEnabledC", "String"]
+- ["8iOS_Todo9CKEnabledC", ""]
+- !private ["8iOS_Todo9CKEnabledC", "assignment"]
+- ["8iOS_Todo9CKEnabledC", "commitment"]
+- !private ["8iOS_Todo9CKEnabledC", "courses"]
+- ["8iOS_Todo9CKEnabledC", "dueDate"]
+- ["8iOS_Todo9CKEnabledC", "files"]
+- ["8iOS_Todo9CKEnabledC", "init"]
+- !private ["8iOS_Todo9CKEnabledC", "max"]
+- !private ["8iOS_Todo9CKEnabledC", "record"]
+- ["8iOS_Todo9CKEnabledC", "reminders"]
+- ["8iOS_Todo9CKEnabledC", "sortReminders"]
+- ["8iOS_Todo9CKEnabledC", "title"]
+- !private ["8iOS_Todo9CKEnabledC", "triggerDate"]
+- ["8iOS_Todo9CKEnabledC", "userDescription"]
+- !private ["So8CKRecordC", "init"]
+- !private ["So8CKRecordC", "recordID"]
+- !private ["So8CKRecordC", "subscript"]
+- !private ["So10CKRecordIDC", "isEqual"]
+- !private ["So13CKRecordValueP", "init"]
+- !private ["So13CKRecordValueP", "recordID"]
+- !private ["So11CKReferenceC", "init"]
+- !private ["So11CKReferenceC", "recordID"]
+- !private ["SC17CKReferenceActionO", "none"]
+- !private ["s7CVarArgP", "Assignment"]
+- ["s7CVarArgP", "BetterDate"]
+- !private ["s7CVarArgP", "CKRecord"]
+- !private ["s7CVarArgP", "CKReference"]
+- !private ["s7CVarArgP", "CKReferenceAction"]
+- !private ["s7CVarArgP", "CalendarDay"]
+- !private ["s7CVarArgP", "DataManager"]
+- ["s7CVarArgP", "Date"]
+- ["s7CVarArgP", "DueDate"]
+- !private ["s7CVarArgP", "ID"]
+- !private ["s7CVarArgP", "NEXT_SAVE_ID"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "assignment"]
+- !private ["s7CVarArgP", "commitment"]
+- !private ["s7CVarArgP", "courses"]
+- !private ["s7CVarArgP", "dueDate"]
+- !private ["s7CVarArgP", "extracurriculars"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEqual"]
+- !private ["s7CVarArgP", "max"]
+- !private ["s7CVarArgP", "record"]
+- !private ["s7CVarArgP", "recordID"]
+- !private ["s7CVarArgP", "reminders"]
+- !private ["s7CVarArgP", "semesters"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "sortReminders"]
+- !private ["s7CVarArgP", "sorted"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "triggerDate"]
+- !private ["s7CVarArgP", "userDescription"]
+- !private ["8iOS_Todo11CalendarDayC", "init"]
+- !private ["8iOS_Todo11CalendarDayC", "stringValue"]
+- !private ["s10CollectionP", "append"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "sorted"]
+- !private ["8iOS_Todo10CommitmentP", "record"]
+- ["s10ComparableP", "init"]
+- !private ["8iOS_Todo6CourseC", "deinit"]
+- !private ["8iOS_Todo6CourseC", "record"]
+- !private ["s28CustomDebugStringConvertibleP", "Assignment"]
+- ["s28CustomDebugStringConvertibleP", "BetterDate"]
+- !private ["s28CustomDebugStringConvertibleP", "CKRecord"]
+- !private ["s28CustomDebugStringConvertibleP", "CKReference"]
+- !private ["s28CustomDebugStringConvertibleP", "CKReferenceAction"]
+- !private ["s28CustomDebugStringConvertibleP", "CalendarDay"]
+- !private ["s28CustomDebugStringConvertibleP", "DataManager"]
+- ["s28CustomDebugStringConvertibleP", "Date"]
+- ["s28CustomDebugStringConvertibleP", "DueDate"]
+- !private ["s28CustomDebugStringConvertibleP", "ID"]
+- !private ["s28CustomDebugStringConvertibleP", "NEXT_SAVE_ID"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "assignment"]
+- !private ["s28CustomDebugStringConvertibleP", "commitment"]
+- !private ["s28CustomDebugStringConvertibleP", "courses"]
+- !private ["s28CustomDebugStringConvertibleP", "dueDate"]
+- !private ["s28CustomDebugStringConvertibleP", "extracurriculars"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEqual"]
+- !private ["s28CustomDebugStringConvertibleP", "max"]
+- !private ["s28CustomDebugStringConvertibleP", "record"]
+- !private ["s28CustomDebugStringConvertibleP", "recordID"]
+- !private ["s28CustomDebugStringConvertibleP", "reminders"]
+- !private ["s28CustomDebugStringConvertibleP", "semesters"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "sortReminders"]
+- !private ["s28CustomDebugStringConvertibleP", "sorted"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "triggerDate"]
+- !private ["s28CustomDebugStringConvertibleP", "userDescription"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "sorted"]
+- !private ["s23CustomStringConvertibleP", "Assignment"]
+- ["s23CustomStringConvertibleP", "BetterDate"]
+- !private ["s23CustomStringConvertibleP", "CKRecord"]
+- !private ["s23CustomStringConvertibleP", "CKReference"]
+- !private ["s23CustomStringConvertibleP", "CKReferenceAction"]
+- !private ["s23CustomStringConvertibleP", "CalendarDay"]
+- !private ["s23CustomStringConvertibleP", "DataManager"]
+- ["s23CustomStringConvertibleP", "Date"]
+- ["s23CustomStringConvertibleP", "DueDate"]
+- !private ["s23CustomStringConvertibleP", "ID"]
+- !private ["s23CustomStringConvertibleP", "NEXT_SAVE_ID"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "assignment"]
+- !private ["s23CustomStringConvertibleP", "commitment"]
+- !private ["s23CustomStringConvertibleP", "courses"]
+- !private ["s23CustomStringConvertibleP", "dueDate"]
+- !private ["s23CustomStringConvertibleP", "extracurriculars"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEqual"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- !private ["s23CustomStringConvertibleP", "record"]
+- !private ["s23CustomStringConvertibleP", "recordID"]
+- !private ["s23CustomStringConvertibleP", "reminders"]
+- !private ["s23CustomStringConvertibleP", "semesters"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "sortReminders"]
+- !private ["s23CustomStringConvertibleP", "sorted"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "triggerDate"]
+- !private ["s23CustomStringConvertibleP", "userDescription"]
+- !private ["8iOS_Todo11DataManagerC", "extracurriculars"]
+- !private ["8iOS_Todo11DataManagerC", "semesters"]
+- !private ["8iOS_Todo11DataManagerC", "shared"]
+- ["10Foundation4DateV", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "sorted"]
+- !private ["8iOS_Todo7DueDateO", "asap"]
+- !private ["8iOS_Todo7DueDateO", "eventually"]
+- !private ["8iOS_Todo7DueDateO", "intValue"]
+- ["8iOS_Todo7DueDateO", "specificDay"]
+- ["8iOS_Todo7DueDateO", "specificDeadline"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "sorted"]
+- !private ["s9EquatableP", "Assignment"]
+- ["s9EquatableP", "BetterDate"]
+- !private ["s9EquatableP", "CKRecord"]
+- !private ["s9EquatableP", "CKReference"]
+- !private ["s9EquatableP", "CKReferenceAction"]
+- !private ["s9EquatableP", "CalendarDay"]
+- !private ["s9EquatableP", "DataManager"]
+- ["s9EquatableP", "Date"]
+- ["s9EquatableP", "DueDate"]
+- !private ["s9EquatableP", "ID"]
+- !private ["s9EquatableP", "NEXT_SAVE_ID"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "assignment"]
+- !private ["s9EquatableP", "commitment"]
+- !private ["s9EquatableP", "courses"]
+- !private ["s9EquatableP", "dueDate"]
+- !private ["s9EquatableP", "extracurriculars"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isEqual"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "none"]
+- !private ["s9EquatableP", "record"]
+- !private ["s9EquatableP", "recordID"]
+- !private ["s9EquatableP", "reminders"]
+- !private ["s9EquatableP", "semesters"]
+- !private ["s9EquatableP", "shared"]
+- !private ["s9EquatableP", "sortReminders"]
+- !private ["s9EquatableP", "sorted"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "title"]
+- !private ["s9EquatableP", "triggerDate"]
+- !private ["s9EquatableP", "userDescription"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "sorted"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["8iOS_Todo15ExtracurricularC", "deinit"]
+- !private ["8iOS_Todo15ExtracurricularC", "record"]
+- !private ["s8HashableP", "Assignment"]
+- ["s8HashableP", "BetterDate"]
+- !private ["s8HashableP", "CKRecord"]
+- !private ["s8HashableP", "CKReference"]
+- !private ["s8HashableP", "CKReferenceAction"]
+- !private ["s8HashableP", "CalendarDay"]
+- !private ["s8HashableP", "DataManager"]
+- ["s8HashableP", "Date"]
+- ["s8HashableP", "DueDate"]
+- !private ["s8HashableP", "ID"]
+- !private ["s8HashableP", "NEXT_SAVE_ID"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "assignment"]
+- !private ["s8HashableP", "commitment"]
+- !private ["s8HashableP", "courses"]
+- !private ["s8HashableP", "dueDate"]
+- !private ["s8HashableP", "extracurriculars"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "isEqual"]
+- !private ["s8HashableP", "max"]
+- !private ["s8HashableP", "none"]
+- !private ["s8HashableP", "record"]
+- !private ["s8HashableP", "recordID"]
+- !private ["s8HashableP", "reminders"]
+- !private ["s8HashableP", "semesters"]
+- !private ["s8HashableP", "shared"]
+- !private ["s8HashableP", "sortReminders"]
+- !private ["s8HashableP", "subscript"]
+- !private ["s8HashableP", "title"]
+- !private ["s8HashableP", "triggerDate"]
+- !private ["s8HashableP", "userDescription"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "sorted"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isEqual"]
+- !private ["So8NSCodingP", "recordID"]
+- !private ["So8NSCodingP", "subscript"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isEqual"]
+- !private ["So9NSCopyingP", "recordID"]
+- !private ["So9NSCopyingP", "subscript"]
+- !private ["So8NSObjectC", "Assignment"]
+- ["So8NSObjectC", "BetterDate"]
+- !private ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CKEnabled"]
+- ["So8NSObjectC", "CKRecord"]
+- !private ["So8NSObjectC", "CKRecordValue"]
+- !private ["So8NSObjectC", "CKReference"]
+- !private ["So8NSObjectC", "CKReferenceAction"]
+- !private ["So8NSObjectC", "CalendarDay"]
+- ["So8NSObjectC", "Commitment"]
+- !private ["So8NSObjectC", "DataManager"]
+- ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "DueDate"]
+- ["So8NSObjectC", "File"]
+- ["So8NSObjectC", "ID"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NEXT_SAVE_ID"]
+- ["So8NSObjectC", "Reminder"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "assignment"]
+- ["So8NSObjectC", "commitment"]
+- !private ["So8NSObjectC", "courses"]
+- ["So8NSObjectC", "dueDate"]
+- !private ["So8NSObjectC", "extracurriculars"]
+- ["So8NSObjectC", "files"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isEqual"]
+- !private ["So8NSObjectC", "max"]
+- !private ["So8NSObjectC", "record"]
+- !private ["So8NSObjectC", "recordID"]
+- ["So8NSObjectC", "reminders"]
+- !private ["So8NSObjectC", "semesters"]
+- !private ["So8NSObjectC", "shared"]
+- ["So8NSObjectC", "sortReminders"]
+- !private ["So8NSObjectC", "subscript"]
+- ["So8NSObjectC", "title"]
+- !private ["So8NSObjectC", "triggerDate"]
+- ["So8NSObjectC", "userDescription"]
+- !private ["So16NSObjectProtocolP", "Assignment"]
+- ["So16NSObjectProtocolP", "BetterDate"]
+- !private ["So16NSObjectProtocolP", "CKRecord"]
+- !private ["So16NSObjectProtocolP", "CKReference"]
+- !private ["So16NSObjectProtocolP", "CKReferenceAction"]
+- !private ["So16NSObjectProtocolP", "CalendarDay"]
+- !private ["So16NSObjectProtocolP", "DataManager"]
+- ["So16NSObjectProtocolP", "Date"]
+- ["So16NSObjectProtocolP", "DueDate"]
+- !private ["So16NSObjectProtocolP", "ID"]
+- !private ["So16NSObjectProtocolP", "NEXT_SAVE_ID"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "assignment"]
+- !private ["So16NSObjectProtocolP", "commitment"]
+- !private ["So16NSObjectProtocolP", "courses"]
+- !private ["So16NSObjectProtocolP", "dueDate"]
+- !private ["So16NSObjectProtocolP", "extracurriculars"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isEqual"]
+- !private ["So16NSObjectProtocolP", "max"]
+- !private ["So16NSObjectProtocolP", "record"]
+- !private ["So16NSObjectProtocolP", "recordID"]
+- !private ["So16NSObjectProtocolP", "reminders"]
+- !private ["So16NSObjectProtocolP", "semesters"]
+- !private ["So16NSObjectProtocolP", "shared"]
+- !private ["So16NSObjectProtocolP", "sortReminders"]
+- !private ["So16NSObjectProtocolP", "subscript"]
+- !private ["So16NSObjectProtocolP", "title"]
+- !private ["So16NSObjectProtocolP", "triggerDate"]
+- !private ["So16NSObjectProtocolP", "userDescription"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isEqual"]
+- !private ["So14NSSecureCodingP", "recordID"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "sorted"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "sorted"]
+- !private ["s16RawRepresentableP", "none"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["8iOS_Todo8ReminderC", "assignment"]
+- !private ["8iOS_Todo8ReminderC", "record"]
+- !private ["8iOS_Todo8ReminderC", "triggerDate"]
+- !private ["8iOS_Todo8SemesterC", "courses"]
+- !private ["s8SequenceP", "append"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "sorted"]
+- !private ["s12StaticStringV", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "sorted"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "sorted"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Assignment"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "BetterDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKRecord"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKReference"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKReferenceAction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CalendarDay"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DataManager"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "DueDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NEXT_SAVE_ID"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "assignment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "commitment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "courses"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dueDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "extracurriculars"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEqual"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "max"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "record"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "recordID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reminders"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "semesters"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sortReminders"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "triggerDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userDescription"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "sorted"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- "8iOS_Todo10AssignmentC"
+- "8iOS_Todo10BetterDateC"
+- "s23BidirectionalCollectionP"
+- !private "Sb"
+- "8iOS_Todo9CKEnabledC"
+- !private "So8CKRecordC"
+- !private "So10CKRecordIDC"
+- !private "So13CKRecordValueP"
+- !private "So11CKReferenceC"
+- !private "SC17CKReferenceActionO"
+- "s7CVarArgP"
+- !private "8iOS_Todo11CalendarDayC"
+- "s10CollectionP"
+- !private "8iOS_Todo10CommitmentP"
+- "s10ComparableP"
+- !private "8iOS_Todo6CourseC"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "8iOS_Todo11DataManagerC"
+- "10Foundation4DateV"
+- "s9DecodableP"
+- "8iOS_Todo7DueDateO"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "8iOS_Todo15ExtracurricularC"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- "10Foundation20ReferenceConvertibleP"
+- !private "8iOS_Todo8ReminderC"
+- !private "8iOS_Todo8SemesterC"
+- "s8SequenceP"
+- !private "s12StaticStringV"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CloudKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "23bcf6f2729c5e07f5f7d3932bf6c9a3"

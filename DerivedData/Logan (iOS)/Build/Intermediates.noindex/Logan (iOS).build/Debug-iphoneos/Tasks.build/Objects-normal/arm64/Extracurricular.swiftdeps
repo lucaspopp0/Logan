@@ -1,0 +1,516 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Extracurricular"
+provides-nominal:
+- "5Tasks15ExtracurricularC"
+provides-member:
+- ["5Tasks15ExtracurricularC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+"
+- !private "??"
+- "AssignmentPrecedence"
+- "CKEnabled"
+- "CKRecord"
+- !private "CKRecordValue"
+- !private "CKReference"
+- !private "CKReferenceAction"
+- "CastingPrecedence"
+- "Commitment"
+- "Event"
+- "Extracurricular"
+- "Int"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- "UIColor"
+- !private "max"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "isEmpty"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["5Tasks9CKEnabledC", "CKRecord"]
+- !private ["5Tasks9CKEnabledC", "CKRecordValue"]
+- !private ["5Tasks9CKEnabledC", "CKReference"]
+- !private ["5Tasks9CKEnabledC", "CKReferenceAction"]
+- ["5Tasks9CKEnabledC", "Event"]
+- !private ["5Tasks9CKEnabledC", "Extracurricular"]
+- ["5Tasks9CKEnabledC", "ID"]
+- ["5Tasks9CKEnabledC", "Int"]
+- ["5Tasks9CKEnabledC", "NEXT_SAVE_ID"]
+- ["5Tasks9CKEnabledC", "String"]
+- ["5Tasks9CKEnabledC", "UIColor"]
+- ["5Tasks9CKEnabledC", ""]
+- ["5Tasks9CKEnabledC", "color"]
+- ["5Tasks9CKEnabledC", "events"]
+- !private ["5Tasks9CKEnabledC", "extracurricular"]
+- ["5Tasks9CKEnabledC", "init"]
+- ["5Tasks9CKEnabledC", "longerName"]
+- !private ["5Tasks9CKEnabledC", "max"]
+- ["5Tasks9CKEnabledC", "name"]
+- ["5Tasks9CKEnabledC", "nickname"]
+- !private ["5Tasks9CKEnabledC", "record"]
+- ["5Tasks9CKEnabledC", "shorterName"]
+- !private ["So8CKRecordC", "init"]
+- !private ["So8CKRecordC", "recordID"]
+- !private ["So8CKRecordC", "subscript"]
+- !private ["So10CKRecordIDC", "isEqual"]
+- !private ["So13CKRecordValueP", "init"]
+- !private ["So13CKRecordValueP", "isEmpty"]
+- !private ["So13CKRecordValueP", "recordID"]
+- !private ["So11CKReferenceC", "init"]
+- !private ["So11CKReferenceC", "recordID"]
+- !private ["SC17CKReferenceActionO", "none"]
+- !private ["So15CNKeyDescriptorP", "isEmpty"]
+- !private ["s7CVarArgP", "CKRecord"]
+- !private ["s7CVarArgP", "CKReference"]
+- !private ["s7CVarArgP", "CKReferenceAction"]
+- !private ["s7CVarArgP", "Extracurricular"]
+- !private ["s7CVarArgP", "ID"]
+- !private ["s7CVarArgP", "NEXT_SAVE_ID"]
+- ["s7CVarArgP", "UIColor"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "append"]
+- ["s7CVarArgP", "black"]
+- ["s7CVarArgP", "color"]
+- !private ["s7CVarArgP", "events"]
+- !private ["s7CVarArgP", "extracurricular"]
+- !private ["s7CVarArgP", "hexString"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "isEqual"]
+- ["s7CVarArgP", "longerName"]
+- !private ["s7CVarArgP", "max"]
+- ["s7CVarArgP", "name"]
+- ["s7CVarArgP", "nickname"]
+- !private ["s7CVarArgP", "record"]
+- !private ["s7CVarArgP", "recordID"]
+- ["s7CVarArgP", "shorterName"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s10CollectionP", "append"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "isEmpty"]
+- !private ["5Tasks10CommitmentP", "CKRecord"]
+- !private ["5Tasks10CommitmentP", "CKReference"]
+- !private ["5Tasks10CommitmentP", "CKReferenceAction"]
+- !private ["5Tasks10CommitmentP", "Extracurricular"]
+- !private ["5Tasks10CommitmentP", "ID"]
+- !private ["5Tasks10CommitmentP", "NEXT_SAVE_ID"]
+- ["5Tasks10CommitmentP", "UIColor"]
+- ["5Tasks10CommitmentP", ""]
+- ["5Tasks10CommitmentP", "color"]
+- !private ["5Tasks10CommitmentP", "events"]
+- ["5Tasks10CommitmentP", "longerName"]
+- !private ["5Tasks10CommitmentP", "max"]
+- ["5Tasks10CommitmentP", "name"]
+- ["5Tasks10CommitmentP", "nickname"]
+- !private ["5Tasks10CommitmentP", "record"]
+- ["5Tasks10CommitmentP", "shorterName"]
+- ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "CKRecord"]
+- !private ["s28CustomDebugStringConvertibleP", "CKReference"]
+- !private ["s28CustomDebugStringConvertibleP", "CKReferenceAction"]
+- !private ["s28CustomDebugStringConvertibleP", "Extracurricular"]
+- !private ["s28CustomDebugStringConvertibleP", "ID"]
+- !private ["s28CustomDebugStringConvertibleP", "NEXT_SAVE_ID"]
+- ["s28CustomDebugStringConvertibleP", "UIColor"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- ["s28CustomDebugStringConvertibleP", "black"]
+- ["s28CustomDebugStringConvertibleP", "color"]
+- !private ["s28CustomDebugStringConvertibleP", "events"]
+- !private ["s28CustomDebugStringConvertibleP", "extracurricular"]
+- !private ["s28CustomDebugStringConvertibleP", "hexString"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "isEqual"]
+- ["s28CustomDebugStringConvertibleP", "longerName"]
+- !private ["s28CustomDebugStringConvertibleP", "max"]
+- ["s28CustomDebugStringConvertibleP", "name"]
+- ["s28CustomDebugStringConvertibleP", "nickname"]
+- !private ["s28CustomDebugStringConvertibleP", "record"]
+- !private ["s28CustomDebugStringConvertibleP", "recordID"]
+- ["s28CustomDebugStringConvertibleP", "shorterName"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "CKRecord"]
+- !private ["s23CustomStringConvertibleP", "CKReference"]
+- !private ["s23CustomStringConvertibleP", "CKReferenceAction"]
+- !private ["s23CustomStringConvertibleP", "Extracurricular"]
+- !private ["s23CustomStringConvertibleP", "ID"]
+- !private ["s23CustomStringConvertibleP", "NEXT_SAVE_ID"]
+- ["s23CustomStringConvertibleP", "UIColor"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- ["s23CustomStringConvertibleP", "black"]
+- ["s23CustomStringConvertibleP", "color"]
+- !private ["s23CustomStringConvertibleP", "events"]
+- !private ["s23CustomStringConvertibleP", "extracurricular"]
+- !private ["s23CustomStringConvertibleP", "hexString"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "isEqual"]
+- ["s23CustomStringConvertibleP", "longerName"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- ["s23CustomStringConvertibleP", "name"]
+- ["s23CustomStringConvertibleP", "nickname"]
+- !private ["s23CustomStringConvertibleP", "record"]
+- !private ["s23CustomStringConvertibleP", "recordID"]
+- ["s23CustomStringConvertibleP", "shorterName"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "isEmpty"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "isEmpty"]
+- !private ["s9EquatableP", "CKRecord"]
+- !private ["s9EquatableP", "CKReference"]
+- !private ["s9EquatableP", "CKReferenceAction"]
+- !private ["s9EquatableP", "Extracurricular"]
+- !private ["s9EquatableP", "ID"]
+- !private ["s9EquatableP", "NEXT_SAVE_ID"]
+- ["s9EquatableP", "UIColor"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "append"]
+- ["s9EquatableP", "black"]
+- ["s9EquatableP", "color"]
+- !private ["s9EquatableP", "events"]
+- !private ["s9EquatableP", "extracurricular"]
+- !private ["s9EquatableP", "hexString"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isEmpty"]
+- !private ["s9EquatableP", "isEqual"]
+- ["s9EquatableP", "longerName"]
+- !private ["s9EquatableP", "max"]
+- ["s9EquatableP", "name"]
+- ["s9EquatableP", "nickname"]
+- !private ["s9EquatableP", "none"]
+- !private ["s9EquatableP", "record"]
+- !private ["s9EquatableP", "recordID"]
+- ["s9EquatableP", "shorterName"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["5Tasks5EventC", "extracurricular"]
+- !private ["5Tasks5EventC", "record"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
+- ["5Tasks15ExtracurricularC", "CKRecord"]
+- !private ["5Tasks15ExtracurricularC", "CKRecordValue"]
+- !private ["5Tasks15ExtracurricularC", "CKReference"]
+- !private ["5Tasks15ExtracurricularC", "CKReferenceAction"]
+- ["5Tasks15ExtracurricularC", "Event"]
+- !private ["5Tasks15ExtracurricularC", "Extracurricular"]
+- ["5Tasks15ExtracurricularC", "ID"]
+- ["5Tasks15ExtracurricularC", "Int"]
+- ["5Tasks15ExtracurricularC", "NEXT_SAVE_ID"]
+- ["5Tasks15ExtracurricularC", "String"]
+- ["5Tasks15ExtracurricularC", "UIColor"]
+- ["5Tasks15ExtracurricularC", "color"]
+- ["5Tasks15ExtracurricularC", "deinit"]
+- ["5Tasks15ExtracurricularC", "events"]
+- ["5Tasks15ExtracurricularC", "init"]
+- ["5Tasks15ExtracurricularC", "longerName"]
+- !private ["5Tasks15ExtracurricularC", "max"]
+- ["5Tasks15ExtracurricularC", "name"]
+- ["5Tasks15ExtracurricularC", "nickname"]
+- !private ["5Tasks15ExtracurricularC", "record"]
+- ["5Tasks15ExtracurricularC", "shorterName"]
+- !private ["s8HashableP", "CKRecord"]
+- !private ["s8HashableP", "CKReference"]
+- !private ["s8HashableP", "CKReferenceAction"]
+- !private ["s8HashableP", "Extracurricular"]
+- !private ["s8HashableP", "ID"]
+- !private ["s8HashableP", "NEXT_SAVE_ID"]
+- ["s8HashableP", "UIColor"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "black"]
+- ["s8HashableP", "color"]
+- !private ["s8HashableP", "events"]
+- !private ["s8HashableP", "extracurricular"]
+- !private ["s8HashableP", "hexString"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "isEmpty"]
+- !private ["s8HashableP", "isEqual"]
+- ["s8HashableP", "longerName"]
+- !private ["s8HashableP", "max"]
+- ["s8HashableP", "name"]
+- ["s8HashableP", "nickname"]
+- !private ["s8HashableP", "none"]
+- !private ["s8HashableP", "record"]
+- !private ["s8HashableP", "recordID"]
+- ["s8HashableP", "shorterName"]
+- !private ["s8HashableP", "subscript"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "isEmpty"]
+- !private ["s17MutableCollectionP", "append"]
+- ["So8NSCodingP", "black"]
+- !private ["So8NSCodingP", "hexString"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isEmpty"]
+- !private ["So8NSCodingP", "isEqual"]
+- !private ["So8NSCodingP", "recordID"]
+- !private ["So8NSCodingP", "subscript"]
+- ["So9NSCopyingP", "black"]
+- !private ["So9NSCopyingP", "hexString"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isEmpty"]
+- !private ["So9NSCopyingP", "isEqual"]
+- !private ["So9NSCopyingP", "recordID"]
+- !private ["So9NSCopyingP", "subscript"]
+- ["So21NSItemProviderReadingP", "black"]
+- !private ["So21NSItemProviderReadingP", "hexString"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "isEmpty"]
+- ["So21NSItemProviderWritingP", "black"]
+- !private ["So21NSItemProviderWritingP", "hexString"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "isEmpty"]
+- !private ["So16NSMutableCopyingP", "isEmpty"]
+- ["So8NSObjectC", "CKRecord"]
+- !private ["So8NSObjectC", "CKRecordValue"]
+- !private ["So8NSObjectC", "CKReference"]
+- !private ["So8NSObjectC", "CKReferenceAction"]
+- ["So8NSObjectC", "Event"]
+- !private ["So8NSObjectC", "Extracurricular"]
+- ["So8NSObjectC", "ID"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NEXT_SAVE_ID"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UIColor"]
+- ["So8NSObjectC", "black"]
+- ["So8NSObjectC", "color"]
+- ["So8NSObjectC", "events"]
+- !private ["So8NSObjectC", "extracurricular"]
+- !private ["So8NSObjectC", "hexString"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isEmpty"]
+- !private ["So8NSObjectC", "isEqual"]
+- ["So8NSObjectC", "longerName"]
+- !private ["So8NSObjectC", "max"]
+- ["So8NSObjectC", "name"]
+- ["So8NSObjectC", "nickname"]
+- !private ["So8NSObjectC", "record"]
+- !private ["So8NSObjectC", "recordID"]
+- ["So8NSObjectC", "shorterName"]
+- !private ["So8NSObjectC", "subscript"]
+- !private ["So16NSObjectProtocolP", "CKRecord"]
+- !private ["So16NSObjectProtocolP", "CKReference"]
+- !private ["So16NSObjectProtocolP", "CKReferenceAction"]
+- !private ["So16NSObjectProtocolP", "Extracurricular"]
+- !private ["So16NSObjectProtocolP", "ID"]
+- !private ["So16NSObjectProtocolP", "NEXT_SAVE_ID"]
+- ["So16NSObjectProtocolP", "UIColor"]
+- ["So16NSObjectProtocolP", ""]
+- ["So16NSObjectProtocolP", "black"]
+- ["So16NSObjectProtocolP", "color"]
+- !private ["So16NSObjectProtocolP", "events"]
+- !private ["So16NSObjectProtocolP", "extracurricular"]
+- !private ["So16NSObjectProtocolP", "hexString"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isEmpty"]
+- !private ["So16NSObjectProtocolP", "isEqual"]
+- ["So16NSObjectProtocolP", "longerName"]
+- !private ["So16NSObjectProtocolP", "max"]
+- ["So16NSObjectProtocolP", "name"]
+- ["So16NSObjectProtocolP", "nickname"]
+- !private ["So16NSObjectProtocolP", "record"]
+- !private ["So16NSObjectProtocolP", "recordID"]
+- ["So16NSObjectProtocolP", "shorterName"]
+- !private ["So16NSObjectProtocolP", "subscript"]
+- ["So14NSSecureCodingP", "black"]
+- !private ["So14NSSecureCodingP", "hexString"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isEmpty"]
+- !private ["So14NSSecureCodingP", "isEqual"]
+- !private ["So14NSSecureCodingP", "recordID"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["So8NSStringC", "isEmpty"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
+- !private ["s16RawRepresentableP", "none"]
+- !private ["s8SequenceP", "append"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "isEmpty"]
+- !private ["s12StaticStringV", "init"]
+- ["SS", "init"]
+- !private ["SS", "isEmpty"]
+- ["s14StringProtocolP", "init"]
+- !private ["s14StringProtocolP", "isEmpty"]
+- ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "isEmpty"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "isEmpty"]
+- ["So7UIColorC", "black"]
+- !private ["So7UIColorC", "hexString"]
+- !private ["So7UIColorC", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "isEmpty"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
+- ["s26_ExpressibleByColorLiteralP", "black"]
+- !private ["s26_ExpressibleByColorLiteralP", "hexString"]
+- !private ["s26_ExpressibleByColorLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKRecord"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKReference"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKReferenceAction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Extracurricular"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NEXT_SAVE_ID"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["10Foundation27_KeyValueCodingAndObservingP", "black"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "color"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "events"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "extracurricular"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hexString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEqual"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "longerName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "max"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "nickname"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "record"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "recordID"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "shorterName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "isEmpty"]
+depends-nominal:
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- !private "Sb"
+- "5Tasks9CKEnabledC"
+- !private "So8CKRecordC"
+- !private "So10CKRecordIDC"
+- !private "So13CKRecordValueP"
+- !private "So11CKReferenceC"
+- !private "SC17CKReferenceActionO"
+- !private "So15CNKeyDescriptorP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "5Tasks10CommitmentP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "5Tasks5EventC"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "5Tasks15ExtracurricularC"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s12StaticStringV"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So7UIColorC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s26_ExpressibleByColorLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "d2c99597d0cb5b0ed36ca0e06796513e"

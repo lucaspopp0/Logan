@@ -1,0 +1,462 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Class"
+provides-nominal:
+- "8Schedule5ClassC"
+provides-member:
+- ["8Schedule5ClassC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "+"
+- !private "??"
+- "AssignmentPrecedence"
+- "CKEnabled"
+- "CKRecord"
+- !private "CKRecordValue"
+- "CalendarDay"
+- "CastingPrecedence"
+- "Class"
+- "ClockTime"
+- "Course"
+- !private "Date"
+- "DayOfWeek"
+- "Int"
+- "String"
+- "StringLiteralType"
+- !private "max"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "init"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["8Schedule9CKEnabledC", "CKRecord"]
+- !private ["8Schedule9CKEnabledC", "CKRecordValue"]
+- ["8Schedule9CKEnabledC", "CalendarDay"]
+- !private ["8Schedule9CKEnabledC", "Class"]
+- ["8Schedule9CKEnabledC", "ClockTime"]
+- ["8Schedule9CKEnabledC", "Course"]
+- !private ["8Schedule9CKEnabledC", "Date"]
+- ["8Schedule9CKEnabledC", "DayOfWeek"]
+- ["8Schedule9CKEnabledC", "ID"]
+- ["8Schedule9CKEnabledC", "Int"]
+- ["8Schedule9CKEnabledC", "NEXT_SAVE_ID"]
+- ["8Schedule9CKEnabledC", "String"]
+- ["8Schedule9CKEnabledC", "course"]
+- ["8Schedule9CKEnabledC", "daysOfWeek"]
+- ["8Schedule9CKEnabledC", "endDate"]
+- ["8Schedule9CKEnabledC", "endTime"]
+- ["8Schedule9CKEnabledC", "getValueForStorage"]
+- ["8Schedule9CKEnabledC", "init"]
+- ["8Schedule9CKEnabledC", "location"]
+- !private ["8Schedule9CKEnabledC", "max"]
+- !private ["8Schedule9CKEnabledC", "record"]
+- ["8Schedule9CKEnabledC", "startDate"]
+- ["8Schedule9CKEnabledC", "startTime"]
+- ["8Schedule9CKEnabledC", "title"]
+- ["8Schedule9CKEnabledC", "weeklyRepeat"]
+- ["8Schedule9CKEnabledC", ""]
+- !private ["So8CKRecordC", "init"]
+- !private ["So8CKRecordC", "subscript"]
+- ["So13CKRecordValueP", "init"]
+- ["So15CNKeyDescriptorP", "init"]
+- !private ["s7CVarArgP", "CKRecord"]
+- !private ["s7CVarArgP", "CalendarDay"]
+- !private ["s7CVarArgP", "Class"]
+- !private ["s7CVarArgP", "ClockTime"]
+- !private ["s7CVarArgP", "Date"]
+- !private ["s7CVarArgP", "DayOfWeek"]
+- !private ["s7CVarArgP", "ID"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "NEXT_SAVE_ID"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "daysOfWeek"]
+- !private ["s7CVarArgP", "endDate"]
+- !private ["s7CVarArgP", "endTime"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "location"]
+- !private ["s7CVarArgP", "max"]
+- !private ["s7CVarArgP", "record"]
+- !private ["s7CVarArgP", "startDate"]
+- !private ["s7CVarArgP", "startTime"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "weeklyRepeat"]
+- ["s7CVarArgP", ""]
+- !private ["8Schedule11CalendarDayC", "dateValue"]
+- !private ["8Schedule11CalendarDayC", "init"]
+- !private ["8Schedule11CalendarDayC", "stringValue"]
+- ["8Schedule5ClassC", "CKRecord"]
+- !private ["8Schedule5ClassC", "CKRecordValue"]
+- ["8Schedule5ClassC", "CalendarDay"]
+- !private ["8Schedule5ClassC", "Class"]
+- ["8Schedule5ClassC", "ClockTime"]
+- ["8Schedule5ClassC", "Course"]
+- !private ["8Schedule5ClassC", "Date"]
+- ["8Schedule5ClassC", "DayOfWeek"]
+- ["8Schedule5ClassC", "ID"]
+- ["8Schedule5ClassC", "Int"]
+- ["8Schedule5ClassC", "NEXT_SAVE_ID"]
+- ["8Schedule5ClassC", "String"]
+- ["8Schedule5ClassC", "course"]
+- ["8Schedule5ClassC", "daysOfWeek"]
+- ["8Schedule5ClassC", "deinit"]
+- ["8Schedule5ClassC", "endDate"]
+- ["8Schedule5ClassC", "endTime"]
+- ["8Schedule5ClassC", "getValueForStorage"]
+- ["8Schedule5ClassC", "init"]
+- ["8Schedule5ClassC", "location"]
+- !private ["8Schedule5ClassC", "max"]
+- !private ["8Schedule5ClassC", "record"]
+- ["8Schedule5ClassC", "startDate"]
+- ["8Schedule5ClassC", "startTime"]
+- ["8Schedule5ClassC", "title"]
+- ["8Schedule5ClassC", "weeklyRepeat"]
+- !private ["8Schedule9ClockTimeC", "dateValue"]
+- !private ["8Schedule9ClockTimeC", "init"]
+- !private ["8Schedule9ClockTimeC", "stringValue"]
+- !private ["s10CollectionP", "append"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CKRecord"]
+- !private ["s28CustomDebugStringConvertibleP", "CalendarDay"]
+- !private ["s28CustomDebugStringConvertibleP", "Class"]
+- !private ["s28CustomDebugStringConvertibleP", "ClockTime"]
+- !private ["s28CustomDebugStringConvertibleP", "Date"]
+- !private ["s28CustomDebugStringConvertibleP", "DayOfWeek"]
+- !private ["s28CustomDebugStringConvertibleP", "ID"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "NEXT_SAVE_ID"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "daysOfWeek"]
+- !private ["s28CustomDebugStringConvertibleP", "endDate"]
+- !private ["s28CustomDebugStringConvertibleP", "endTime"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "location"]
+- !private ["s28CustomDebugStringConvertibleP", "max"]
+- !private ["s28CustomDebugStringConvertibleP", "record"]
+- !private ["s28CustomDebugStringConvertibleP", "startDate"]
+- !private ["s28CustomDebugStringConvertibleP", "startTime"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "weeklyRepeat"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "CKRecord"]
+- !private ["s23CustomStringConvertibleP", "CalendarDay"]
+- !private ["s23CustomStringConvertibleP", "Class"]
+- !private ["s23CustomStringConvertibleP", "ClockTime"]
+- !private ["s23CustomStringConvertibleP", "Date"]
+- !private ["s23CustomStringConvertibleP", "DayOfWeek"]
+- !private ["s23CustomStringConvertibleP", "ID"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "NEXT_SAVE_ID"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "daysOfWeek"]
+- !private ["s23CustomStringConvertibleP", "endDate"]
+- !private ["s23CustomStringConvertibleP", "endTime"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "location"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- !private ["s23CustomStringConvertibleP", "record"]
+- !private ["s23CustomStringConvertibleP", "startDate"]
+- !private ["s23CustomStringConvertibleP", "startTime"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "weeklyRepeat"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["10Foundation4DateV", "init"]
+- !private ["8Schedule9DayOfWeekO", "deinit"]
+- !private ["8Schedule9DayOfWeekO", "init"]
+- !private ["8Schedule9DayOfWeekO", "rawValue"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "CKRecord"]
+- !private ["s9EquatableP", "CalendarDay"]
+- !private ["s9EquatableP", "Class"]
+- !private ["s9EquatableP", "ClockTime"]
+- !private ["s9EquatableP", "Date"]
+- !private ["s9EquatableP", "DayOfWeek"]
+- !private ["s9EquatableP", "ID"]
+- !private ["s9EquatableP", "Int"]
+- !private ["s9EquatableP", "NEXT_SAVE_ID"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "daysOfWeek"]
+- !private ["s9EquatableP", "endDate"]
+- !private ["s9EquatableP", "endTime"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "location"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "record"]
+- !private ["s9EquatableP", "startDate"]
+- !private ["s9EquatableP", "startTime"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "title"]
+- !private ["s9EquatableP", "weeklyRepeat"]
+- ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "CKRecord"]
+- !private ["s8HashableP", "CalendarDay"]
+- !private ["s8HashableP", "Class"]
+- !private ["s8HashableP", "ClockTime"]
+- !private ["s8HashableP", "Date"]
+- !private ["s8HashableP", "DayOfWeek"]
+- !private ["s8HashableP", "ID"]
+- !private ["s8HashableP", "Int"]
+- !private ["s8HashableP", "NEXT_SAVE_ID"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "daysOfWeek"]
+- !private ["s8HashableP", "endDate"]
+- !private ["s8HashableP", "endTime"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "location"]
+- !private ["s8HashableP", "max"]
+- !private ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "record"]
+- !private ["s8HashableP", "startDate"]
+- !private ["s8HashableP", "startTime"]
+- !private ["s8HashableP", "subscript"]
+- !private ["s8HashableP", "title"]
+- !private ["s8HashableP", "weeklyRepeat"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "init"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "subscript"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "subscript"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "CKRecord"]
+- !private ["So8NSObjectC", "CKRecordValue"]
+- ["So8NSObjectC", "CalendarDay"]
+- !private ["So8NSObjectC", "Class"]
+- ["So8NSObjectC", "ClockTime"]
+- ["So8NSObjectC", "Course"]
+- !private ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "DayOfWeek"]
+- ["So8NSObjectC", "ID"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NEXT_SAVE_ID"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "course"]
+- ["So8NSObjectC", "daysOfWeek"]
+- ["So8NSObjectC", "endDate"]
+- ["So8NSObjectC", "endTime"]
+- ["So8NSObjectC", "getValueForStorage"]
+- !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "location"]
+- !private ["So8NSObjectC", "max"]
+- !private ["So8NSObjectC", "record"]
+- ["So8NSObjectC", "startDate"]
+- ["So8NSObjectC", "startTime"]
+- !private ["So8NSObjectC", "subscript"]
+- ["So8NSObjectC", "title"]
+- ["So8NSObjectC", "weeklyRepeat"]
+- !private ["So16NSObjectProtocolP", "CKRecord"]
+- !private ["So16NSObjectProtocolP", "CalendarDay"]
+- !private ["So16NSObjectProtocolP", "Class"]
+- !private ["So16NSObjectProtocolP", "ClockTime"]
+- !private ["So16NSObjectProtocolP", "Date"]
+- !private ["So16NSObjectProtocolP", "DayOfWeek"]
+- !private ["So16NSObjectProtocolP", "ID"]
+- !private ["So16NSObjectProtocolP", "Int"]
+- !private ["So16NSObjectProtocolP", "NEXT_SAVE_ID"]
+- !private ["So16NSObjectProtocolP", "daysOfWeek"]
+- !private ["So16NSObjectProtocolP", "endDate"]
+- !private ["So16NSObjectProtocolP", "endTime"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "location"]
+- !private ["So16NSObjectProtocolP", "max"]
+- !private ["So16NSObjectProtocolP", "record"]
+- !private ["So16NSObjectProtocolP", "startDate"]
+- !private ["So16NSObjectProtocolP", "startTime"]
+- !private ["So16NSObjectProtocolP", "subscript"]
+- !private ["So16NSObjectProtocolP", "title"]
+- !private ["So16NSObjectProtocolP", "weeklyRepeat"]
+- ["So16NSObjectProtocolP", ""]
+- ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- ["So8NSStringC", "init"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "append"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "append"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CKRecord"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CalendarDay"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Class"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ClockTime"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DayOfWeek"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NEXT_SAVE_ID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "daysOfWeek"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endTime"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "location"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "max"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "record"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startTime"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "weeklyRepeat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "append"]
+- !private ["s17_MutableIndexableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- !private ["s22_RandomAccessIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- !private "Sb"
+- "8Schedule9CKEnabledC"
+- !private "So8CKRecordC"
+- "So13CKRecordValueP"
+- "So15CNKeyDescriptorP"
+- "s7CVarArgP"
+- !private "8Schedule11CalendarDayC"
+- "8Schedule5ClassC"
+- !private "8Schedule9ClockTimeC"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DateV"
+- !private "8Schedule9DayOfWeekO"
+- "s9DecodableP"
+- !private "s10DictionaryV"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- "s8SequenceP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- "s23_BidirectionalIndexableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- "s26_RangeReplaceableIndexableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/NotificationCenter.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CloudKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "74abd351aea05549011cc95467c49992"

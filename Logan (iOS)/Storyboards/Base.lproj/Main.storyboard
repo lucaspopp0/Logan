@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3MG-q4-H6W">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="aeT-N1-nZn">
+            <objects>
+                <viewController id="3MG-q4-H6W" customClass="InitialViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lA4-d7-6Uu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="znG-rO-h9C"/>
+                    </view>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="showDetail" identifier="Show Main Interface" animates="NO" action="showViewController:sender:" id="nMO-0v-Eog"/>
+                        <segue destination="XC3-us-qba" kind="presentation" identifier="Welcome User" modalTransitionStyle="crossDissolve" id="D6B-ub-Mth"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0P-H0-sA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1201" y="-593"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.58823531870000001" blue="0.53333336109999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="WE4-6B-JU0" kind="relationship" relationship="viewControllers" id="hf5-9c-9oC"/>
+                        <segue destination="HCn-sJ-8Xu" kind="relationship" relationship="viewControllers" id="Mrw-zf-kAX"/>
+                        <segue destination="73q-Hu-oap" kind="relationship" relationship="viewControllers" id="l7F-xv-RJi"/>
+                        <segue destination="0LZ-wD-eLB" kind="relationship" relationship="viewControllers" id="g7h-jv-h0D"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="-592"/>
+        </scene>
+        <!--Commitment Picker Table View Controller-->
+        <scene sceneID="SyB-MH-zqo">
+            <objects>
+                <tableViewController storyboardIdentifier="Commitment Picker" id="B1F-t5-64D" customClass="CommitmentPickerTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fxA-69-fg7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Course" rowHeight="67" id="x0P-lQ-NvE" customClass="CourseTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x0P-lQ-NvE" id="irj-yj-ZfF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Z7-y4-lnJ">
+                                            <rect key="frame" x="16" y="23" width="343" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8Z7-y4-lnJ" secondAttribute="trailing" id="9rb-rX-RgQ"/>
+                                        <constraint firstItem="8Z7-y4-lnJ" firstAttribute="leading" secondItem="irj-yj-ZfF" secondAttribute="leadingMargin" id="U06-NC-NPD"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="8Z7-y4-lnJ" secondAttribute="bottom" constant="4" id="d3s-YS-ecm"/>
+                                        <constraint firstItem="8Z7-y4-lnJ" firstAttribute="centerY" secondItem="irj-yj-ZfF" secondAttribute="centerY" id="uSH-75-gEN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="8Z7-y4-lnJ" id="rRp-7Z-PjS"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Extracurricular" rowHeight="67" id="SuV-82-nvG" customClass="ExtracurricularTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="122.5" width="375" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SuV-82-nvG" id="npE-oe-pkH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qij-ro-ClD">
+                                            <rect key="frame" x="16" y="23" width="343" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Qij-ro-ClD" secondAttribute="trailing" id="BWa-Cp-w9i"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Qij-ro-ClD" secondAttribute="bottom" constant="4" id="cI5-Xr-ojc"/>
+                                        <constraint firstItem="Qij-ro-ClD" firstAttribute="centerY" secondItem="npE-oe-pkH" secondAttribute="centerY" id="iwJ-w6-OvZ"/>
+                                        <constraint firstItem="Qij-ro-ClD" firstAttribute="leading" secondItem="npE-oe-pkH" secondAttribute="leadingMargin" id="jbP-7I-zbR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nicknameLabel" destination="Qij-ro-ClD" id="Lj2-eE-hAQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B1F-t5-64D" id="iOU-vM-rTa"/>
+                            <outlet property="delegate" destination="B1F-t5-64D" id="tf5-0l-mFa"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysf-63-8EO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1495" y="-592"/>
+        </scene>
+        <!--Day Of Week Picker Table View Controller-->
+        <scene sceneID="ME9-eg-eBc">
+            <objects>
+                <tableViewController storyboardIdentifier="Days of Week Picker" id="h34-AN-gbV" customClass="DayOfWeekPickerTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ixH-vu-uJu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Day" id="zM2-gR-dgY">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zM2-gR-dgY" id="Y9R-Cr-5BO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="h34-AN-gbV" id="oY6-YX-920"/>
+                            <outlet property="delegate" destination="h34-AN-gbV" id="Pey-gF-JLO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69i-FG-oCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2450" y="-593"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="GSV-pS-LP5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Welcome" id="XC3-us-qba" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FzM-Pf-W3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="-799"/>
+        </scene>
+        <!--Overview-->
+        <scene sceneID="PBH-pn-qcz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Overview" id="WE4-6B-JU0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="2LH-MH-RKv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6Q-z4-UIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-687"/>
+        </scene>
+        <!--Tasks-->
+        <scene sceneID="Ycp-tq-6UQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" id="HCn-sJ-8Xu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8R9-KQ-Ry9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivt-NM-de2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="-608"/>
+        </scene>
+        <!--Assignments-->
+        <scene sceneID="8Yp-aF-qL3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Assignments" id="73q-Hu-oap" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Yz2-Mz-Ejz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txX-7i-5ky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-534"/>
+        </scene>
+        <!--Commitments-->
+        <scene sceneID="8W5-43-thW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Commitments" id="0LZ-wD-eLB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Mnc-dR-0zX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySC-Q4-faa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="-465"/>
+        </scene>
+    </scenes>
+</document>

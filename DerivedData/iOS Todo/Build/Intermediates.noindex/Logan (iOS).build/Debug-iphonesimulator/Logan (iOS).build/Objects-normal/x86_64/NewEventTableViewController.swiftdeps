@@ -1,0 +1,828 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NewEventTableViewController"
+provides-nominal:
+- "11Logan__iOS_27NewEventTableViewControllerC"
+provides-member:
+- ["11Logan__iOS_27NewEventTableViewControllerC", ""]
+provides-dynamic-lookup:
+- "cancel"
+- "dateUpdated"
+- "done"
+- "endTimeLabel"
+- "endTimePicker"
+- "locationField"
+- "nameField"
+- "startTimeLabel"
+- "startTimePicker"
+- "tableView"
+- "textUpdated"
+depends-top-level:
+- !private "=="
+- !private "??"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CGFloat"
+- "CastingPrecedence"
+- !private "DataManager"
+- "Event"
+- "Extracurricular"
+- "IndexPath"
+- "NewEventTableViewController"
+- !private "PickerTableViewCell"
+- !private "StringLiteralType"
+- "UIDatePicker"
+- "UILabel"
+- "UITableView"
+- !private "UITableViewAutomaticDimension"
+- "UITableViewController"
+- "UITextField"
+- !private "||"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "section"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "beginUpdates"]
+- !private ["So15CALayerDelegateP", "cellForRow"]
+- !private ["So15CALayerDelegateP", "endEditing"]
+- !private ["So15CALayerDelegateP", "endUpdates"]
+- !private ["So15CALayerDelegateP", "fittingHeight"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["11Logan__iOS_9CKEnabledC", "events"]
+- !private ["11Logan__iOS_9CKEnabledC", "location"]
+- !private ["11Logan__iOS_9CKEnabledC", "name"]
+- !private ["11Logan__iOS_9CKEnabledC", "record"]
+- !private ["s7CVarArgP", "DataManager"]
+- !private ["s7CVarArgP", "UITableViewAutomaticDimension"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "beginUpdates"]
+- !private ["s7CVarArgP", "cellForRow"]
+- !private ["s7CVarArgP", "correspondingExtracurricular"]
+- !private ["s7CVarArgP", "dismiss"]
+- !private ["s7CVarArgP", "endEditing"]
+- !private ["s7CVarArgP", "endUpdates"]
+- !private ["s7CVarArgP", "events"]
+- !private ["s7CVarArgP", "fittingHeight"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "introduce"]
+- !private ["s7CVarArgP", "location"]
+- !private ["s7CVarArgP", "locationField"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "nameField"]
+- !private ["s7CVarArgP", "navigationController"]
+- !private ["s7CVarArgP", "newEvent"]
+- !private ["s7CVarArgP", "record"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "update"]
+- !private ["s7CVarArgP", "view"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "section"]
+- !private ["11Logan__iOS_10CommitmentP", "events"]
+- !private ["11Logan__iOS_10CommitmentP", "record"]
+- !private ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "section"]
+- !private ["s28CustomDebugStringConvertibleP", "DataManager"]
+- !private ["s28CustomDebugStringConvertibleP", "UITableViewAutomaticDimension"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "beginUpdates"]
+- !private ["s28CustomDebugStringConvertibleP", "cellForRow"]
+- !private ["s28CustomDebugStringConvertibleP", "correspondingExtracurricular"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
+- !private ["s28CustomDebugStringConvertibleP", "endEditing"]
+- !private ["s28CustomDebugStringConvertibleP", "endUpdates"]
+- !private ["s28CustomDebugStringConvertibleP", "events"]
+- !private ["s28CustomDebugStringConvertibleP", "fittingHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "introduce"]
+- !private ["s28CustomDebugStringConvertibleP", "location"]
+- !private ["s28CustomDebugStringConvertibleP", "locationField"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "nameField"]
+- !private ["s28CustomDebugStringConvertibleP", "navigationController"]
+- !private ["s28CustomDebugStringConvertibleP", "newEvent"]
+- !private ["s28CustomDebugStringConvertibleP", "record"]
+- !private ["s28CustomDebugStringConvertibleP", "section"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "update"]
+- !private ["s28CustomDebugStringConvertibleP", "view"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "section"]
+- !private ["s23CustomStringConvertibleP", "DataManager"]
+- !private ["s23CustomStringConvertibleP", "UITableViewAutomaticDimension"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "beginUpdates"]
+- !private ["s23CustomStringConvertibleP", "cellForRow"]
+- !private ["s23CustomStringConvertibleP", "correspondingExtracurricular"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
+- !private ["s23CustomStringConvertibleP", "endEditing"]
+- !private ["s23CustomStringConvertibleP", "endUpdates"]
+- !private ["s23CustomStringConvertibleP", "events"]
+- !private ["s23CustomStringConvertibleP", "fittingHeight"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "introduce"]
+- !private ["s23CustomStringConvertibleP", "location"]
+- !private ["s23CustomStringConvertibleP", "locationField"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "nameField"]
+- !private ["s23CustomStringConvertibleP", "navigationController"]
+- !private ["s23CustomStringConvertibleP", "newEvent"]
+- !private ["s23CustomStringConvertibleP", "record"]
+- !private ["s23CustomStringConvertibleP", "section"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "update"]
+- !private ["s23CustomStringConvertibleP", "view"]
+- !private ["11Logan__iOS_11DataManagerC", "introduce"]
+- !private ["11Logan__iOS_11DataManagerC", "shared"]
+- !private ["11Logan__iOS_11DataManagerC", "update"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "section"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "section"]
+- !private ["s9EquatableP", "DataManager"]
+- !private ["s9EquatableP", "UITableViewAutomaticDimension"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "beginUpdates"]
+- !private ["s9EquatableP", "cellForRow"]
+- !private ["s9EquatableP", "correspondingExtracurricular"]
+- !private ["s9EquatableP", "dismiss"]
+- !private ["s9EquatableP", "endEditing"]
+- !private ["s9EquatableP", "endUpdates"]
+- !private ["s9EquatableP", "events"]
+- !private ["s9EquatableP", "fittingHeight"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "introduce"]
+- !private ["s9EquatableP", "location"]
+- !private ["s9EquatableP", "locationField"]
+- !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "nameField"]
+- !private ["s9EquatableP", "navigationController"]
+- !private ["s9EquatableP", "newEvent"]
+- !private ["s9EquatableP", "record"]
+- !private ["s9EquatableP", "section"]
+- !private ["s9EquatableP", "shared"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "update"]
+- !private ["s9EquatableP", "view"]
+- !private ["11Logan__iOS_5EventC", "location"]
+- !private ["11Logan__iOS_5EventC", "name"]
+- !private ["11Logan__iOS_5EventC", "record"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "section"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["11Logan__iOS_15ExtracurricularC", "events"]
+- !private ["11Logan__iOS_15ExtracurricularC", "record"]
+- !private ["s8HashableP", "DataManager"]
+- !private ["s8HashableP", "UITableViewAutomaticDimension"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "beginUpdates"]
+- !private ["s8HashableP", "cellForRow"]
+- !private ["s8HashableP", "correspondingExtracurricular"]
+- !private ["s8HashableP", "dismiss"]
+- !private ["s8HashableP", "endEditing"]
+- !private ["s8HashableP", "endUpdates"]
+- !private ["s8HashableP", "events"]
+- !private ["s8HashableP", "fittingHeight"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "introduce"]
+- !private ["s8HashableP", "location"]
+- !private ["s8HashableP", "locationField"]
+- !private ["s8HashableP", "name"]
+- !private ["s8HashableP", "nameField"]
+- !private ["s8HashableP", "navigationController"]
+- !private ["s8HashableP", "newEvent"]
+- !private ["s8HashableP", "record"]
+- !private ["s8HashableP", "section"]
+- !private ["s8HashableP", "shared"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "update"]
+- !private ["s8HashableP", "view"]
+- !private ["10Foundation9IndexPathV", "section"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "section"]
+- !private ["So8NSCodingP", "DataManager"]
+- !private ["So8NSCodingP", "UITableViewAutomaticDimension"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "beginUpdates"]
+- !private ["So8NSCodingP", "cellForRow"]
+- !private ["So8NSCodingP", "correspondingExtracurricular"]
+- !private ["So8NSCodingP", "dismiss"]
+- !private ["So8NSCodingP", "endEditing"]
+- !private ["So8NSCodingP", "endUpdates"]
+- !private ["So8NSCodingP", "fittingHeight"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "locationField"]
+- !private ["So8NSCodingP", "nameField"]
+- !private ["So8NSCodingP", "navigationController"]
+- !private ["So8NSCodingP", "newEvent"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "view"]
+- !private ["So26NSExtensionRequestHandlingP", "DataManager"]
+- !private ["So26NSExtensionRequestHandlingP", "UITableViewAutomaticDimension"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "correspondingExtracurricular"]
+- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "locationField"]
+- !private ["So26NSExtensionRequestHandlingP", "nameField"]
+- !private ["So26NSExtensionRequestHandlingP", "navigationController"]
+- !private ["So26NSExtensionRequestHandlingP", "newEvent"]
+- !private ["So26NSExtensionRequestHandlingP", "view"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CGFloat"]
+- !private ["So8NSObjectC", "DataManager"]
+- ["So8NSObjectC", "Event"]
+- ["So8NSObjectC", "Extracurricular"]
+- ["So8NSObjectC", "IndexPath"]
+- !private ["So8NSObjectC", "PickerTableViewCell"]
+- ["So8NSObjectC", "UIDatePicker"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "UITableView"]
+- !private ["So8NSObjectC", "UITableViewAutomaticDimension"]
+- ["So8NSObjectC", "UITextField"]
+- ["So8NSObjectC", "alreadyOpened"]
+- !private ["So8NSObjectC", "beginUpdates"]
+- ["So8NSObjectC", "cancel"]
+- !private ["So8NSObjectC", "cellForRow"]
+- ["So8NSObjectC", "correspondingExtracurricular"]
+- ["So8NSObjectC", "dateUpdated"]
+- !private ["So8NSObjectC", "dismiss"]
+- ["So8NSObjectC", "done"]
+- !private ["So8NSObjectC", "endEditing"]
+- ["So8NSObjectC", "endTimeLabel"]
+- ["So8NSObjectC", "endTimePicker"]
+- !private ["So8NSObjectC", "endUpdates"]
+- !private ["So8NSObjectC", "events"]
+- !private ["So8NSObjectC", "fittingHeight"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "introduce"]
+- !private ["So8NSObjectC", "location"]
+- ["So8NSObjectC", "locationField"]
+- !private ["So8NSObjectC", "name"]
+- ["So8NSObjectC", "nameField"]
+- !private ["So8NSObjectC", "navigationController"]
+- ["So8NSObjectC", "newEvent"]
+- !private ["So8NSObjectC", "record"]
+- !private ["So8NSObjectC", "shared"]
+- ["So8NSObjectC", "startTimeLabel"]
+- ["So8NSObjectC", "startTimePicker"]
+- ["So8NSObjectC", "tableView"]
+- !private ["So8NSObjectC", "text"]
+- ["So8NSObjectC", "textUpdated"]
+- !private ["So8NSObjectC", "update"]
+- !private ["So8NSObjectC", "view"]
+- !private ["So16NSObjectProtocolP", "DataManager"]
+- !private ["So16NSObjectProtocolP", "UITableViewAutomaticDimension"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "beginUpdates"]
+- !private ["So16NSObjectProtocolP", "cellForRow"]
+- !private ["So16NSObjectProtocolP", "correspondingExtracurricular"]
+- !private ["So16NSObjectProtocolP", "dismiss"]
+- !private ["So16NSObjectProtocolP", "endEditing"]
+- !private ["So16NSObjectProtocolP", "endUpdates"]
+- !private ["So16NSObjectProtocolP", "events"]
+- !private ["So16NSObjectProtocolP", "fittingHeight"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "introduce"]
+- !private ["So16NSObjectProtocolP", "location"]
+- !private ["So16NSObjectProtocolP", "locationField"]
+- !private ["So16NSObjectProtocolP", "name"]
+- !private ["So16NSObjectProtocolP", "nameField"]
+- !private ["So16NSObjectProtocolP", "navigationController"]
+- !private ["So16NSObjectProtocolP", "newEvent"]
+- !private ["So16NSObjectProtocolP", "record"]
+- !private ["So16NSObjectProtocolP", "shared"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "update"]
+- !private ["So16NSObjectProtocolP", "view"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "Bool"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "CGFloat"]
+- !private ["11Logan__iOS_27NewEventTableViewControllerC", "DataManager"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "Event"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "Extracurricular"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "IndexPath"]
+- !private ["11Logan__iOS_27NewEventTableViewControllerC", "PickerTableViewCell"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "UIDatePicker"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "UILabel"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "UITableView"]
+- !private ["11Logan__iOS_27NewEventTableViewControllerC", "UITableViewAutomaticDimension"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "UITextField"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "alreadyOpened"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "cancel"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "correspondingExtracurricular"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "dateUpdated"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "deinit"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "done"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "endTimeLabel"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "endTimePicker"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "init"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "locationField"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "nameField"]
+- !private ["11Logan__iOS_27NewEventTableViewControllerC", "navigationController"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "newEvent"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "startTimeLabel"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "startTimePicker"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "tableView"]
+- ["11Logan__iOS_27NewEventTableViewControllerC", "textUpdated"]
+- !private ["11Logan__iOS_27NewEventTableViewControllerC", "view"]
+- !private ["11Logan__iOS_19PickerTableViewCellC", "fittingHeight"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "section"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "section"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "section"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "beginUpdates"]
+- !private ["So29UIAccessibilityIdentificationP", "cellForRow"]
+- !private ["So29UIAccessibilityIdentificationP", "endEditing"]
+- !private ["So29UIAccessibilityIdentificationP", "endUpdates"]
+- !private ["So29UIAccessibilityIdentificationP", "fittingHeight"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "beginUpdates"]
+- !private ["So12UIAppearanceP", "cellForRow"]
+- !private ["So12UIAppearanceP", "endEditing"]
+- !private ["So12UIAppearanceP", "endUpdates"]
+- !private ["So12UIAppearanceP", "fittingHeight"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "DataManager"]
+- !private ["So21UIAppearanceContainerP", "UITableViewAutomaticDimension"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "beginUpdates"]
+- !private ["So21UIAppearanceContainerP", "cellForRow"]
+- !private ["So21UIAppearanceContainerP", "correspondingExtracurricular"]
+- !private ["So21UIAppearanceContainerP", "dismiss"]
+- !private ["So21UIAppearanceContainerP", "endEditing"]
+- !private ["So21UIAppearanceContainerP", "endUpdates"]
+- !private ["So21UIAppearanceContainerP", "fittingHeight"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "locationField"]
+- !private ["So21UIAppearanceContainerP", "nameField"]
+- !private ["So21UIAppearanceContainerP", "navigationController"]
+- !private ["So21UIAppearanceContainerP", "newEvent"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "view"]
+- !private ["So18UIContentContainerP", "DataManager"]
+- !private ["So18UIContentContainerP", "UITableViewAutomaticDimension"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "correspondingExtracurricular"]
+- !private ["So18UIContentContainerP", "dismiss"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "locationField"]
+- !private ["So18UIContentContainerP", "nameField"]
+- !private ["So18UIContentContainerP", "navigationController"]
+- !private ["So18UIContentContainerP", "newEvent"]
+- !private ["So18UIContentContainerP", "view"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "text"]
+- !private ["So17UICoordinateSpaceP", "beginUpdates"]
+- !private ["So17UICoordinateSpaceP", "cellForRow"]
+- !private ["So17UICoordinateSpaceP", "endEditing"]
+- !private ["So17UICoordinateSpaceP", "endUpdates"]
+- !private ["So17UICoordinateSpaceP", "fittingHeight"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So23UIDataSourceTranslatingP", "beginUpdates"]
+- !private ["So23UIDataSourceTranslatingP", "cellForRow"]
+- !private ["So23UIDataSourceTranslatingP", "endUpdates"]
+- !private ["So13UIDynamicItemP", "beginUpdates"]
+- !private ["So13UIDynamicItemP", "cellForRow"]
+- !private ["So13UIDynamicItemP", "endEditing"]
+- !private ["So13UIDynamicItemP", "endUpdates"]
+- !private ["So13UIDynamicItemP", "fittingHeight"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "DataManager"]
+- !private ["So18UIFocusEnvironmentP", "UITableViewAutomaticDimension"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "beginUpdates"]
+- !private ["So18UIFocusEnvironmentP", "cellForRow"]
+- !private ["So18UIFocusEnvironmentP", "correspondingExtracurricular"]
+- !private ["So18UIFocusEnvironmentP", "dismiss"]
+- !private ["So18UIFocusEnvironmentP", "endEditing"]
+- !private ["So18UIFocusEnvironmentP", "endUpdates"]
+- !private ["So18UIFocusEnvironmentP", "fittingHeight"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "locationField"]
+- !private ["So18UIFocusEnvironmentP", "nameField"]
+- !private ["So18UIFocusEnvironmentP", "navigationController"]
+- !private ["So18UIFocusEnvironmentP", "newEvent"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "view"]
+- !private ["So11UIFocusItemP", "beginUpdates"]
+- !private ["So11UIFocusItemP", "cellForRow"]
+- !private ["So11UIFocusItemP", "endEditing"]
+- !private ["So11UIFocusItemP", "endUpdates"]
+- !private ["So11UIFocusItemP", "fittingHeight"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So27UIGestureRecognizerDelegateP", "fittingHeight"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So22UINavigationControllerC", "dismiss"]
+- !private ["So30UIPasteConfigurationSupportingP", "DataManager"]
+- !private ["So30UIPasteConfigurationSupportingP", "UITableViewAutomaticDimension"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "beginUpdates"]
+- !private ["So30UIPasteConfigurationSupportingP", "cellForRow"]
+- !private ["So30UIPasteConfigurationSupportingP", "correspondingExtracurricular"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
+- !private ["So30UIPasteConfigurationSupportingP", "endEditing"]
+- !private ["So30UIPasteConfigurationSupportingP", "endUpdates"]
+- !private ["So30UIPasteConfigurationSupportingP", "fittingHeight"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "locationField"]
+- !private ["So30UIPasteConfigurationSupportingP", "nameField"]
+- !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
+- !private ["So30UIPasteConfigurationSupportingP", "newEvent"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "view"]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "CGFloat"]
+- !private ["So11UIResponderC", "DataManager"]
+- ["So11UIResponderC", "Event"]
+- ["So11UIResponderC", "Extracurricular"]
+- ["So11UIResponderC", "IndexPath"]
+- !private ["So11UIResponderC", "PickerTableViewCell"]
+- ["So11UIResponderC", "UIDatePicker"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "UITableView"]
+- !private ["So11UIResponderC", "UITableViewAutomaticDimension"]
+- ["So11UIResponderC", "UITextField"]
+- ["So11UIResponderC", "alreadyOpened"]
+- !private ["So11UIResponderC", "beginUpdates"]
+- ["So11UIResponderC", "cancel"]
+- !private ["So11UIResponderC", "cellForRow"]
+- ["So11UIResponderC", "correspondingExtracurricular"]
+- ["So11UIResponderC", "dateUpdated"]
+- !private ["So11UIResponderC", "dismiss"]
+- ["So11UIResponderC", "done"]
+- !private ["So11UIResponderC", "endEditing"]
+- ["So11UIResponderC", "endTimeLabel"]
+- ["So11UIResponderC", "endTimePicker"]
+- !private ["So11UIResponderC", "endUpdates"]
+- !private ["So11UIResponderC", "fittingHeight"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "locationField"]
+- ["So11UIResponderC", "nameField"]
+- !private ["So11UIResponderC", "navigationController"]
+- ["So11UIResponderC", "newEvent"]
+- ["So11UIResponderC", "startTimeLabel"]
+- ["So11UIResponderC", "startTimePicker"]
+- ["So11UIResponderC", "tableView"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "textUpdated"]
+- !private ["So11UIResponderC", "view"]
+- !private ["So30UIResponderStandardEditActionsP", "DataManager"]
+- !private ["So30UIResponderStandardEditActionsP", "UITableViewAutomaticDimension"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "beginUpdates"]
+- !private ["So30UIResponderStandardEditActionsP", "cellForRow"]
+- !private ["So30UIResponderStandardEditActionsP", "correspondingExtracurricular"]
+- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
+- !private ["So30UIResponderStandardEditActionsP", "endEditing"]
+- !private ["So30UIResponderStandardEditActionsP", "endUpdates"]
+- !private ["So30UIResponderStandardEditActionsP", "fittingHeight"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "locationField"]
+- !private ["So30UIResponderStandardEditActionsP", "nameField"]
+- !private ["So30UIResponderStandardEditActionsP", "navigationController"]
+- !private ["So30UIResponderStandardEditActionsP", "newEvent"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "view"]
+- !private ["So12UIScrollViewC", "beginUpdates"]
+- !private ["So12UIScrollViewC", "cellForRow"]
+- !private ["So12UIScrollViewC", "endUpdates"]
+- !private ["So20UIScrollViewDelegateP", "DataManager"]
+- !private ["So20UIScrollViewDelegateP", "UITableViewAutomaticDimension"]
+- ["So20UIScrollViewDelegateP", ""]
+- !private ["So20UIScrollViewDelegateP", "correspondingExtracurricular"]
+- !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "locationField"]
+- !private ["So20UIScrollViewDelegateP", "nameField"]
+- !private ["So20UIScrollViewDelegateP", "navigationController"]
+- !private ["So20UIScrollViewDelegateP", "newEvent"]
+- !private ["So20UIScrollViewDelegateP", "view"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "beginUpdates"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "cellForRow"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "endUpdates"]
+- !private ["So16UIStateRestoringP", "DataManager"]
+- !private ["So16UIStateRestoringP", "UITableViewAutomaticDimension"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "correspondingExtracurricular"]
+- !private ["So16UIStateRestoringP", "dismiss"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "locationField"]
+- !private ["So16UIStateRestoringP", "nameField"]
+- !private ["So16UIStateRestoringP", "navigationController"]
+- !private ["So16UIStateRestoringP", "newEvent"]
+- !private ["So16UIStateRestoringP", "view"]
+- !private ["So11UITableViewC", "beginUpdates"]
+- !private ["So11UITableViewC", "cellForRow"]
+- !private ["So11UITableViewC", "endUpdates"]
+- !private ["So15UITableViewCellC", "fittingHeight"]
+- ["So21UITableViewControllerC", "Bool"]
+- ["So21UITableViewControllerC", "CGFloat"]
+- !private ["So21UITableViewControllerC", "DataManager"]
+- ["So21UITableViewControllerC", "Event"]
+- ["So21UITableViewControllerC", "Extracurricular"]
+- ["So21UITableViewControllerC", "IndexPath"]
+- !private ["So21UITableViewControllerC", "PickerTableViewCell"]
+- ["So21UITableViewControllerC", "UIDatePicker"]
+- ["So21UITableViewControllerC", "UILabel"]
+- ["So21UITableViewControllerC", "UITableView"]
+- !private ["So21UITableViewControllerC", "UITableViewAutomaticDimension"]
+- ["So21UITableViewControllerC", "UITextField"]
+- ["So21UITableViewControllerC", ""]
+- ["So21UITableViewControllerC", "alreadyOpened"]
+- ["So21UITableViewControllerC", "cancel"]
+- ["So21UITableViewControllerC", "correspondingExtracurricular"]
+- ["So21UITableViewControllerC", "dateUpdated"]
+- ["So21UITableViewControllerC", "done"]
+- ["So21UITableViewControllerC", "endTimeLabel"]
+- ["So21UITableViewControllerC", "endTimePicker"]
+- ["So21UITableViewControllerC", "init"]
+- ["So21UITableViewControllerC", "locationField"]
+- ["So21UITableViewControllerC", "nameField"]
+- !private ["So21UITableViewControllerC", "navigationController"]
+- ["So21UITableViewControllerC", "newEvent"]
+- ["So21UITableViewControllerC", "startTimeLabel"]
+- ["So21UITableViewControllerC", "startTimePicker"]
+- ["So21UITableViewControllerC", "tableView"]
+- ["So21UITableViewControllerC", "textUpdated"]
+- !private ["So21UITableViewControllerC", "view"]
+- !private ["So21UITableViewDataSourceP", "DataManager"]
+- !private ["So21UITableViewDataSourceP", "UITableViewAutomaticDimension"]
+- ["So21UITableViewDataSourceP", ""]
+- !private ["So21UITableViewDataSourceP", "correspondingExtracurricular"]
+- !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "locationField"]
+- !private ["So21UITableViewDataSourceP", "nameField"]
+- !private ["So21UITableViewDataSourceP", "navigationController"]
+- !private ["So21UITableViewDataSourceP", "newEvent"]
+- !private ["So21UITableViewDataSourceP", "view"]
+- !private ["So19UITableViewDelegateP", "DataManager"]
+- !private ["So19UITableViewDelegateP", "UITableViewAutomaticDimension"]
+- ["So19UITableViewDelegateP", ""]
+- !private ["So19UITableViewDelegateP", "correspondingExtracurricular"]
+- !private ["So19UITableViewDelegateP", "init"]
+- !private ["So19UITableViewDelegateP", "locationField"]
+- !private ["So19UITableViewDelegateP", "nameField"]
+- !private ["So19UITableViewDelegateP", "navigationController"]
+- !private ["So19UITableViewDelegateP", "newEvent"]
+- !private ["So19UITableViewDelegateP", "view"]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextFieldC", "text"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So18UITraitEnvironmentP", "DataManager"]
+- !private ["So18UITraitEnvironmentP", "UITableViewAutomaticDimension"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "beginUpdates"]
+- !private ["So18UITraitEnvironmentP", "cellForRow"]
+- !private ["So18UITraitEnvironmentP", "correspondingExtracurricular"]
+- !private ["So18UITraitEnvironmentP", "dismiss"]
+- !private ["So18UITraitEnvironmentP", "endEditing"]
+- !private ["So18UITraitEnvironmentP", "endUpdates"]
+- !private ["So18UITraitEnvironmentP", "fittingHeight"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "locationField"]
+- !private ["So18UITraitEnvironmentP", "nameField"]
+- !private ["So18UITraitEnvironmentP", "navigationController"]
+- !private ["So18UITraitEnvironmentP", "newEvent"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "view"]
+- !private ["So6UIViewC", "beginUpdates"]
+- !private ["So6UIViewC", "cellForRow"]
+- !private ["So6UIViewC", "endEditing"]
+- !private ["So6UIViewC", "endUpdates"]
+- !private ["So6UIViewC", "fittingHeight"]
+- !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "Bool"]
+- ["So16UIViewControllerC", "CGFloat"]
+- !private ["So16UIViewControllerC", "DataManager"]
+- ["So16UIViewControllerC", "Event"]
+- ["So16UIViewControllerC", "Extracurricular"]
+- ["So16UIViewControllerC", "IndexPath"]
+- !private ["So16UIViewControllerC", "PickerTableViewCell"]
+- ["So16UIViewControllerC", "UIDatePicker"]
+- ["So16UIViewControllerC", "UILabel"]
+- ["So16UIViewControllerC", "UITableView"]
+- !private ["So16UIViewControllerC", "UITableViewAutomaticDimension"]
+- ["So16UIViewControllerC", "UITextField"]
+- ["So16UIViewControllerC", "alreadyOpened"]
+- ["So16UIViewControllerC", "cancel"]
+- ["So16UIViewControllerC", "correspondingExtracurricular"]
+- ["So16UIViewControllerC", "dateUpdated"]
+- !private ["So16UIViewControllerC", "dismiss"]
+- ["So16UIViewControllerC", "done"]
+- ["So16UIViewControllerC", "endTimeLabel"]
+- ["So16UIViewControllerC", "endTimePicker"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "locationField"]
+- ["So16UIViewControllerC", "nameField"]
+- !private ["So16UIViewControllerC", "navigationController"]
+- ["So16UIViewControllerC", "newEvent"]
+- ["So16UIViewControllerC", "startTimeLabel"]
+- ["So16UIViewControllerC", "startTimePicker"]
+- ["So16UIViewControllerC", "tableView"]
+- ["So16UIViewControllerC", "textUpdated"]
+- !private ["So16UIViewControllerC", "view"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "beginUpdates"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "cellForRow"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "endEditing"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "endUpdates"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fittingHeight"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DataManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UITableViewAutomaticDimension"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "beginUpdates"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cellForRow"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "correspondingExtracurricular"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endEditing"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endUpdates"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "events"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fittingHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "introduce"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "location"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "locationField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nameField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "newEvent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "record"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "update"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "section"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "So15CALayerDelegateP"
+- !private "11Logan__iOS_9CKEnabledC"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "11Logan__iOS_10CommitmentP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "11Logan__iOS_11DataManagerC"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "11Logan__iOS_5EventC"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "11Logan__iOS_15ExtracurricularC"
+- "s8HashableP"
+- !private "10Foundation9IndexPathV"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "11Logan__iOS_27NewEventTableViewControllerC"
+- !private "11Logan__iOS_19PickerTableViewCellC"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So23UIDataSourceTranslatingP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So27UIGestureRecognizerDelegateP"
+- !private "So10UIKeyInputP"
+- !private "So22UINavigationControllerC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So12UIScrollViewC"
+- "So20UIScrollViewDelegateP"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- "So16UIStateRestoringP"
+- !private "So11UITableViewC"
+- !private "So15UITableViewCellC"
+- "So21UITableViewControllerC"
+- "So21UITableViewDataSourceP"
+- "So19UITableViewDelegateP"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextFieldC"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "s14_ArrayProtocolP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CloudKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "df48f27d87a60e3778b02362bb968870"

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zdY-HK-b5y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Commitments-->
+        <scene sceneID="6CU-RF-aKb">
+            <objects>
+                <tableViewController storyboardIdentifier="Commitments List" id="cWG-NT-utd" customClass="CommitmentsTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4TL-e1-e9D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Semester" rowHeight="67" id="C79-sY-9Mj" customClass="SemesterTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C79-sY-9Mj" id="2MV-w5-9Ku">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="66.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="999" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rW4-b1-LYH">
+                                            <rect key="frame" x="291" y="23" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sO-Bd-R0A">
+                                            <rect key="frame" x="16" y="23" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4sO-Bd-R0A" firstAttribute="centerY" secondItem="2MV-w5-9Ku" secondAttribute="centerY" id="5mT-3U-aml"/>
+                                        <constraint firstItem="rW4-b1-LYH" firstAttribute="centerY" secondItem="2MV-w5-9Ku" secondAttribute="centerY" id="FvO-W9-xuf"/>
+                                        <constraint firstItem="4sO-Bd-R0A" firstAttribute="leading" secondItem="2MV-w5-9Ku" secondAttribute="leadingMargin" id="TDL-Li-hbP"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rW4-b1-LYH" secondAttribute="trailing" id="c0V-vw-1QJ"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="4sO-Bd-R0A" secondAttribute="bottom" constant="4" id="rPF-fU-tNg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coursesLabel" destination="rW4-b1-LYH" id="1ws-72-aat"/>
+                                    <outlet property="nameLabel" destination="4sO-Bd-R0A" id="ome-MF-YW7"/>
+                                    <segue destination="aSf-zx-2hV" kind="show" id="k6o-JD-uxA"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Extracurricular" rowHeight="67" id="cqG-RY-DO2" customClass="ExtracurricularTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="95" width="375" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cqG-RY-DO2" id="lkO-2L-piS">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="66.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="999" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcS-QZ-LLm">
+                                            <rect key="frame" x="16" y="23" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hcS-QZ-LLm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lkO-2L-piS" secondAttribute="topMargin" constant="4" id="79f-Vt-1bm"/>
+                                        <constraint firstItem="hcS-QZ-LLm" firstAttribute="centerY" secondItem="lkO-2L-piS" secondAttribute="centerY" id="TbM-Cx-2xE"/>
+                                        <constraint firstItem="hcS-QZ-LLm" firstAttribute="leading" secondItem="lkO-2L-piS" secondAttribute="leadingMargin" id="lS3-Ow-vOS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nicknameLabel" destination="hcS-QZ-LLm" id="krV-Oc-ycS"/>
+                                    <segue destination="8xP-QJ-QUR" kind="show" id="FyQ-wE-JZZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cWG-NT-utd" id="0yQ-4k-9w0"/>
+                            <outlet property="delegate" destination="cWG-NT-utd" id="Vx5-OE-OgF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Commitments" id="hLg-IJ-GKp">
+                        <barButtonItem key="leftBarButtonItem" image="Settings" id="nSv-PS-99V"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pue-Ts-KAg">
+                            <connections>
+                                <action selector="newCommitment:" destination="cWG-NT-utd" id="Yqd-nm-Vbk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="zc1-kV-kwy" kind="presentation" identifier="New Semester" id="UC4-Y8-6xZ"/>
+                        <segue destination="2Af-ut-VRO" kind="presentation" identifier="New Extracurricular" id="AVx-Jo-s6i"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V9R-ad-qXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917.5999999999999" y="163.26836581709148"/>
+        </scene>
+        <!--Semester Detail-->
+        <scene sceneID="dhx-9m-YG6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Academic Commitments" referencedIdentifier="Semester Detail" id="aSf-zx-2hV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohH-8F-JoN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="106"/>
+        </scene>
+        <!--Extracurricular Detail-->
+        <scene sceneID="2pu-4U-I8n">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Extracurricular Commitments" referencedIdentifier="Extracurricular Detail" id="8xP-QJ-QUR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5E5-cj-Wu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="215"/>
+        </scene>
+        <!--Commitments-->
+        <scene sceneID="B5w-zd-GEO">
+            <objects>
+                <navigationController storyboardIdentifier="Initial Navigation Controller" id="zdY-HK-b5y" customClass="BetterNavigationController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Commitments" image="Semesters" selectedImage="Semesters (Filled)" id="8SI-KM-r0R"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="h2l-pR-ehc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cWG-NT-utd" kind="relationship" relationship="rootViewController" id="itr-JR-TsG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXo-Wm-X9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="162"/>
+        </scene>
+        <!--New Semester Navigation Controller-->
+        <scene sceneID="ExK-Oj-kdz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Academic Commitments" referencedIdentifier="New Semester Navigation Controller" id="zc1-kV-kwy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVj-51-3MJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="658"/>
+        </scene>
+        <!--New Extracurricular Navigation Controller-->
+        <scene sceneID="ELi-ZU-eGV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Extracurricular Commitments" referencedIdentifier="New Extracurricular Navigation Controller" id="2Af-ut-VRO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zL-g0-CrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2133" y="658"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Semesters" width="24" height="24"/>
+        <image name="Semesters (Filled)" width="24" height="24"/>
+        <image name="Settings" width="22" height="22"/>
+    </resources>
+</document>
