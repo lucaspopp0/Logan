@@ -33,8 +33,10 @@ depends-top-level:
 - !private "DataManager"
 - !private "Extracurricular"
 - !private "ExtracurricularTableViewCell"
+- !private "FloatLiteralType"
 - "IndexPath"
 - "Int"
+- !private "IntegerLiteralType"
 - "String"
 - !private "StringLiteralType"
 - "UITableView"
@@ -43,19 +45,27 @@ depends-top-level:
 - !private "UITableViewCellAccessoryType"
 - "UITableViewController"
 depends-member:
+- !private ["So28UITableViewCellAccessoryTypeV", "checkmark"]
+- !private ["So28UITableViewCellAccessoryTypeV", "none"]
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "append"]
+- !private ["s13ArrayProtocolP", "commitments"]
+- !private ["s13ArrayProtocolP", "count"]
+- !private ["s13ArrayProtocolP", "subscript"]
+- !private ["s13ArrayProtocolP", "title"]
 - !private ["s10ArraySliceV", "commitments"]
 - !private ["s10ArraySliceV", "title"]
-- !private ["s23BidirectionalCollectionP", "append"]
-- !private ["s23BidirectionalCollectionP", "commitments"]
-- !private ["s23BidirectionalCollectionP", "count"]
-- !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "row"]
-- !private ["s23BidirectionalCollectionP", "section"]
-- !private ["s23BidirectionalCollectionP", "subscript"]
-- !private ["s23BidirectionalCollectionP", "title"]
+- !private ["SK", "append"]
+- !private ["SK", "commitments"]
+- !private ["SK", "count"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "row"]
+- !private ["SK", "section"]
+- !private ["SK", "subscript"]
+- !private ["SK", "title"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "accessoryType"]
 - !private ["So15CALayerDelegateP", "cellForRow"]
@@ -72,6 +82,12 @@ depends-member:
 - !private ["11Logan__iOS_9CKEnabledC", "courses"]
 - !private ["11Logan__iOS_9CKEnabledC", "isEqual"]
 - !private ["11Logan__iOS_9CKEnabledC", "name"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "append"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "subscript"]
 - !private ["s7CVarArgP", "DataManager"]
 - !private ["s7CVarArgP", "IndexPath"]
 - !private ["s7CVarArgP", "UITableViewAutomaticDimension"]
@@ -95,6 +111,7 @@ depends-member:
 - !private ["s7CVarArgP", "extracurricular"]
 - !private ["s7CVarArgP", "extracurriculars"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEqual"]
 - !private ["s7CVarArgP", "name"]
 - !private ["s7CVarArgP", "numberOfRows"]
@@ -104,14 +121,15 @@ depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "textLabel"]
-- !private ["s10CollectionP", "append"]
-- !private ["s10CollectionP", "commitments"]
-- !private ["s10CollectionP", "count"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "row"]
-- !private ["s10CollectionP", "section"]
-- !private ["s10CollectionP", "subscript"]
-- !private ["s10CollectionP", "title"]
+- !private ["Sl", "append"]
+- !private ["Sl", "commitments"]
+- !private ["Sl", "count"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "row"]
+- !private ["Sl", "section"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "title"]
 - !private ["11Logan__iOS_10CommitmentP", "isEqual"]
 - ["11Logan__iOS_24CommitmentPickerDelegateP", "Commitment"]
 - ["11Logan__iOS_24CommitmentPickerDelegateP", "CommitmentPickerTableViewController"]
@@ -135,15 +153,15 @@ depends-member:
 - !private ["11Logan__iOS_35CommitmentPickerTableViewControllerC", "UITableViewCellAccessoryType"]
 - ["11Logan__iOS_35CommitmentPickerTableViewControllerC", "commitment"]
 - !private ["11Logan__iOS_35CommitmentPickerTableViewControllerC", "dataSections"]
-- ["11Logan__iOS_35CommitmentPickerTableViewControllerC", "deinit"]
 - ["11Logan__iOS_35CommitmentPickerTableViewControllerC", "delegate"]
 - ["11Logan__iOS_35CommitmentPickerTableViewControllerC", "init"]
 - ["11Logan__iOS_35CommitmentPickerTableViewControllerC", "numberOfSections"]
 - ["11Logan__iOS_35CommitmentPickerTableViewControllerC", "tableView"]
 - ["11Logan__iOS_35CommitmentPickerTableViewControllerC", "updateData"]
-- !private ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "row"]
-- !private ["s10ComparableP", "section"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "row"]
+- !private ["SL", "section"]
 - !private ["11Logan__iOS_6CourseC", "deinit"]
 - !private ["11Logan__iOS_6CourseC", "isEqual"]
 - !private ["11Logan__iOS_19CourseTableViewCellC", "accessoryType"]
@@ -172,6 +190,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "extracurricular"]
 - !private ["s28CustomDebugStringConvertibleP", "extracurriculars"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEqual"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
 - !private ["s28CustomDebugStringConvertibleP", "numberOfRows"]
@@ -186,10 +205,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "commitments"]
 - !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "row"]
 - !private ["s17CustomReflectableP", "section"]
@@ -219,6 +240,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "extracurricular"]
 - !private ["s23CustomStringConvertibleP", "extracurriculars"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEqual"]
 - !private ["s23CustomStringConvertibleP", "name"]
 - !private ["s23CustomStringConvertibleP", "numberOfRows"]
@@ -235,58 +257,61 @@ depends-member:
 - !private ["11Logan__iOS_11DataManagerC", "extracurriculars"]
 - !private ["11Logan__iOS_11DataManagerC", "semesters"]
 - !private ["11Logan__iOS_11DataManagerC", "shared"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "append"]
-- !private ["s9DecodableP", "count"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "row"]
-- !private ["s9DecodableP", "section"]
-- !private ["s9DecodableP", "subscript"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "append"]
-- !private ["s9EncodableP", "count"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "row"]
-- !private ["s9EncodableP", "section"]
-- !private ["s9EncodableP", "subscript"]
-- !private ["s9EquatableP", "DataManager"]
-- !private ["s9EquatableP", "IndexPath"]
-- !private ["s9EquatableP", "UITableViewAutomaticDimension"]
-- !private ["s9EquatableP", "UITableViewCell"]
-- !private ["s9EquatableP", "UITableViewCellAccessoryType"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "accessoryType"]
-- !private ["s9EquatableP", "append"]
-- !private ["s9EquatableP", "cellForRow"]
-- !private ["s9EquatableP", "checkmark"]
-- !private ["s9EquatableP", "commitment"]
-- !private ["s9EquatableP", "commitments"]
-- !private ["s9EquatableP", "configureCell"]
-- !private ["s9EquatableP", "count"]
-- !private ["s9EquatableP", "course"]
-- !private ["s9EquatableP", "courses"]
-- !private ["s9EquatableP", "currentSemester"]
-- !private ["s9EquatableP", "dataSections"]
-- !private ["s9EquatableP", "delegate"]
-- !private ["s9EquatableP", "dequeueReusableCell"]
-- !private ["s9EquatableP", "deselectRow"]
-- !private ["s9EquatableP", "extracurricular"]
-- !private ["s9EquatableP", "extracurriculars"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "isEqual"]
-- !private ["s9EquatableP", "name"]
-- !private ["s9EquatableP", "none"]
-- !private ["s9EquatableP", "numberOfRows"]
-- !private ["s9EquatableP", "numberOfSections"]
-- !private ["s9EquatableP", "row"]
-- !private ["s9EquatableP", "section"]
-- !private ["s9EquatableP", "semesters"]
-- !private ["s9EquatableP", "shared"]
-- !private ["s9EquatableP", "subscript"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "textLabel"]
-- !private ["s9EquatableP", "title"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "row"]
+- !private ["Se", "section"]
+- !private ["Se", "subscript"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "row"]
+- !private ["SE", "section"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "DataManager"]
+- !private ["SQ", "IndexPath"]
+- !private ["SQ", "UITableViewAutomaticDimension"]
+- !private ["SQ", "UITableViewCell"]
+- !private ["SQ", "UITableViewCellAccessoryType"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "accessoryType"]
+- !private ["SQ", "append"]
+- !private ["SQ", "cellForRow"]
+- !private ["SQ", "checkmark"]
+- !private ["SQ", "commitment"]
+- !private ["SQ", "commitments"]
+- !private ["SQ", "configureCell"]
+- !private ["SQ", "count"]
+- !private ["SQ", "course"]
+- !private ["SQ", "courses"]
+- !private ["SQ", "currentSemester"]
+- !private ["SQ", "dataSections"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "dequeueReusableCell"]
+- !private ["SQ", "deselectRow"]
+- !private ["SQ", "extracurricular"]
+- !private ["SQ", "extracurriculars"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isEqual"]
+- !private ["SQ", "name"]
+- !private ["SQ", "none"]
+- !private ["SQ", "numberOfRows"]
+- !private ["SQ", "numberOfSections"]
+- !private ["SQ", "row"]
+- !private ["SQ", "section"]
+- !private ["SQ", "semesters"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "text"]
+- !private ["SQ", "textLabel"]
+- !private ["SQ", "title"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "commitments"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
@@ -297,60 +322,71 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "title"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["11Logan__iOS_15ExtracurricularC", "deinit"]
 - !private ["11Logan__iOS_15ExtracurricularC", "isEqual"]
 - !private ["11Logan__iOS_28ExtracurricularTableViewCellC", "accessoryType"]
 - !private ["11Logan__iOS_28ExtracurricularTableViewCellC", "configureCell"]
 - !private ["11Logan__iOS_28ExtracurricularTableViewCellC", "extracurricular"]
-- !private ["s8HashableP", "DataManager"]
-- !private ["s8HashableP", "IndexPath"]
-- !private ["s8HashableP", "UITableViewAutomaticDimension"]
-- !private ["s8HashableP", "UITableViewCell"]
-- !private ["s8HashableP", "UITableViewCellAccessoryType"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "accessoryType"]
-- !private ["s8HashableP", "cellForRow"]
-- !private ["s8HashableP", "checkmark"]
-- !private ["s8HashableP", "commitment"]
-- !private ["s8HashableP", "configureCell"]
-- !private ["s8HashableP", "course"]
-- !private ["s8HashableP", "courses"]
-- !private ["s8HashableP", "currentSemester"]
-- !private ["s8HashableP", "dataSections"]
-- !private ["s8HashableP", "delegate"]
-- !private ["s8HashableP", "dequeueReusableCell"]
-- !private ["s8HashableP", "deselectRow"]
-- !private ["s8HashableP", "extracurricular"]
-- !private ["s8HashableP", "extracurriculars"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "isEqual"]
-- !private ["s8HashableP", "name"]
-- !private ["s8HashableP", "none"]
-- !private ["s8HashableP", "numberOfRows"]
-- !private ["s8HashableP", "numberOfSections"]
-- !private ["s8HashableP", "row"]
-- !private ["s8HashableP", "section"]
-- !private ["s8HashableP", "semesters"]
-- !private ["s8HashableP", "shared"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "textLabel"]
+- !private ["SH", "DataManager"]
+- !private ["SH", "IndexPath"]
+- !private ["SH", "UITableViewAutomaticDimension"]
+- !private ["SH", "UITableViewCell"]
+- !private ["SH", "UITableViewCellAccessoryType"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "accessoryType"]
+- !private ["SH", "append"]
+- !private ["SH", "cellForRow"]
+- !private ["SH", "checkmark"]
+- !private ["SH", "commitment"]
+- !private ["SH", "commitments"]
+- !private ["SH", "configureCell"]
+- !private ["SH", "count"]
+- !private ["SH", "course"]
+- !private ["SH", "courses"]
+- !private ["SH", "currentSemester"]
+- !private ["SH", "dataSections"]
+- !private ["SH", "delegate"]
+- !private ["SH", "dequeueReusableCell"]
+- !private ["SH", "deselectRow"]
+- !private ["SH", "extracurricular"]
+- !private ["SH", "extracurriculars"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "isEqual"]
+- !private ["SH", "name"]
+- !private ["SH", "none"]
+- !private ["SH", "numberOfRows"]
+- !private ["SH", "numberOfSections"]
+- !private ["SH", "row"]
+- !private ["SH", "section"]
+- !private ["SH", "semesters"]
+- !private ["SH", "shared"]
+- !private ["SH", "subscript"]
+- !private ["SH", "text"]
+- !private ["SH", "textLabel"]
+- !private ["SH", "title"]
 - !private ["10Foundation9IndexPathV", "init"]
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["10Foundation9IndexPathV", "section"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["s17MutableCollectionP", "append"]
-- !private ["s17MutableCollectionP", "commitments"]
-- !private ["s17MutableCollectionP", "count"]
-- !private ["s17MutableCollectionP", "init"]
-- !private ["s17MutableCollectionP", "row"]
-- !private ["s17MutableCollectionP", "section"]
-- !private ["s17MutableCollectionP", "subscript"]
-- !private ["s17MutableCollectionP", "title"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
+- !private ["SM", "commitments"]
+- !private ["SM", "count"]
+- !private ["SM", "init"]
+- !private ["SM", "row"]
+- !private ["SM", "section"]
+- !private ["SM", "subscript"]
+- !private ["SM", "title"]
 - !private ["So8NSCodingP", "DataManager"]
 - !private ["So8NSCodingP", "IndexPath"]
 - !private ["So8NSCodingP", "UITableViewAutomaticDimension"]
@@ -368,6 +404,7 @@ depends-member:
 - !private ["So8NSCodingP", "deselectRow"]
 - !private ["So8NSCodingP", "extracurricular"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "numberOfRows"]
 - !private ["So8NSCodingP", "numberOfSections"]
 - !private ["So8NSCodingP", "text"]
@@ -381,6 +418,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "commitment"]
 - !private ["So26NSExtensionRequestHandlingP", "dataSections"]
 - !private ["So26NSExtensionRequestHandlingP", "delegate"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - ["So8NSObjectC", "AnyObject"]
 - !private ["So8NSObjectC", "Bool"]
@@ -413,6 +451,7 @@ depends-member:
 - !private ["So8NSObjectC", "extracurricular"]
 - !private ["So8NSObjectC", "extracurriculars"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isEqual"]
 - !private ["So8NSObjectC", "name"]
 - !private ["So8NSObjectC", "numberOfRows"]
@@ -423,50 +462,52 @@ depends-member:
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textLabel"]
 - ["So8NSObjectC", "updateData"]
-- !private ["So16NSObjectProtocolP", "DataManager"]
-- !private ["So16NSObjectProtocolP", "IndexPath"]
-- !private ["So16NSObjectProtocolP", "UITableViewAutomaticDimension"]
-- !private ["So16NSObjectProtocolP", "UITableViewCell"]
-- !private ["So16NSObjectProtocolP", "UITableViewCellAccessoryType"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "accessoryType"]
-- !private ["So16NSObjectProtocolP", "cellForRow"]
-- !private ["So16NSObjectProtocolP", "commitment"]
-- !private ["So16NSObjectProtocolP", "configureCell"]
-- !private ["So16NSObjectProtocolP", "course"]
-- !private ["So16NSObjectProtocolP", "courses"]
-- !private ["So16NSObjectProtocolP", "currentSemester"]
-- !private ["So16NSObjectProtocolP", "dataSections"]
-- !private ["So16NSObjectProtocolP", "delegate"]
-- !private ["So16NSObjectProtocolP", "dequeueReusableCell"]
-- !private ["So16NSObjectProtocolP", "deselectRow"]
-- !private ["So16NSObjectProtocolP", "extracurricular"]
-- !private ["So16NSObjectProtocolP", "extracurriculars"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "isEqual"]
-- !private ["So16NSObjectProtocolP", "name"]
-- !private ["So16NSObjectProtocolP", "numberOfRows"]
-- !private ["So16NSObjectProtocolP", "numberOfSections"]
-- !private ["So16NSObjectProtocolP", "semesters"]
-- !private ["So16NSObjectProtocolP", "shared"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "textLabel"]
-- !private ["s22RandomAccessCollectionP", "append"]
-- !private ["s22RandomAccessCollectionP", "commitments"]
-- !private ["s22RandomAccessCollectionP", "count"]
-- !private ["s22RandomAccessCollectionP", "init"]
-- !private ["s22RandomAccessCollectionP", "row"]
-- !private ["s22RandomAccessCollectionP", "section"]
-- !private ["s22RandomAccessCollectionP", "subscript"]
-- !private ["s22RandomAccessCollectionP", "title"]
-- !private ["s26RangeReplaceableCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "commitments"]
-- !private ["s26RangeReplaceableCollectionP", "count"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "subscript"]
-- !private ["s26RangeReplaceableCollectionP", "title"]
-- !private ["s16RawRepresentableP", "checkmark"]
-- !private ["s16RawRepresentableP", "none"]
+- !private ["So8NSObjectP", "DataManager"]
+- !private ["So8NSObjectP", "IndexPath"]
+- !private ["So8NSObjectP", "UITableViewAutomaticDimension"]
+- !private ["So8NSObjectP", "UITableViewCell"]
+- !private ["So8NSObjectP", "UITableViewCellAccessoryType"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "accessoryType"]
+- !private ["So8NSObjectP", "cellForRow"]
+- !private ["So8NSObjectP", "commitment"]
+- !private ["So8NSObjectP", "configureCell"]
+- !private ["So8NSObjectP", "course"]
+- !private ["So8NSObjectP", "courses"]
+- !private ["So8NSObjectP", "currentSemester"]
+- !private ["So8NSObjectP", "dataSections"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "dequeueReusableCell"]
+- !private ["So8NSObjectP", "deselectRow"]
+- !private ["So8NSObjectP", "extracurricular"]
+- !private ["So8NSObjectP", "extracurriculars"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isEqual"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "numberOfRows"]
+- !private ["So8NSObjectP", "numberOfSections"]
+- !private ["So8NSObjectP", "semesters"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "textLabel"]
+- !private ["Sk", "append"]
+- !private ["Sk", "commitments"]
+- !private ["Sk", "count"]
+- !private ["Sk", "init"]
+- !private ["Sk", "row"]
+- !private ["Sk", "section"]
+- !private ["Sk", "subscript"]
+- !private ["Sk", "title"]
+- !private ["Sm", "append"]
+- !private ["Sm", "commitments"]
+- !private ["Sm", "count"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "subscript"]
+- !private ["Sm", "title"]
+- !private ["SY", "checkmark"]
+- !private ["SY", "none"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
 - !private ["10Foundation20ReferenceConvertibleP", "section"]
@@ -474,17 +515,22 @@ depends-member:
 - !private ["11Logan__iOS_8SemesterC", "deinit"]
 - !private ["11Logan__iOS_8SemesterC", "isEqual"]
 - !private ["11Logan__iOS_8SemesterC", "name"]
-- !private ["s8SequenceP", "append"]
-- !private ["s8SequenceP", "commitments"]
-- !private ["s8SequenceP", "count"]
-- !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "row"]
-- !private ["s8SequenceP", "section"]
-- !private ["s8SequenceP", "subscript"]
-- !private ["s8SequenceP", "title"]
+- !private ["ST", "append"]
+- !private ["ST", "commitments"]
+- !private ["ST", "count"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "row"]
+- !private ["ST", "section"]
+- !private ["ST", "subscript"]
+- !private ["ST", "title"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "accessoryType"]
 - !private ["So29UIAccessibilityIdentificationP", "cellForRow"]
@@ -527,6 +573,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "deselectRow"]
 - !private ["So21UIAppearanceContainerP", "extracurricular"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "numberOfRows"]
 - !private ["So21UIAppearanceContainerP", "numberOfSections"]
 - !private ["So21UIAppearanceContainerP", "text"]
@@ -540,6 +587,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "commitment"]
 - !private ["So18UIContentContainerP", "dataSections"]
 - !private ["So18UIContentContainerP", "delegate"]
+- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So17UICoordinateSpaceP", "accessoryType"]
@@ -588,6 +636,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "deselectRow"]
 - !private ["So18UIFocusEnvironmentP", "extracurricular"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "numberOfRows"]
 - !private ["So18UIFocusEnvironmentP", "numberOfSections"]
 - !private ["So18UIFocusEnvironmentP", "text"]
@@ -604,6 +653,23 @@ depends-member:
 - !private ["So11UIFocusItemP", "numberOfSections"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "textLabel"]
+- !private ["So20UIFocusItemContainerP", "accessoryType"]
+- !private ["So20UIFocusItemContainerP", "cellForRow"]
+- !private ["So20UIFocusItemContainerP", "configureCell"]
+- !private ["So20UIFocusItemContainerP", "course"]
+- !private ["So20UIFocusItemContainerP", "dequeueReusableCell"]
+- !private ["So20UIFocusItemContainerP", "deselectRow"]
+- !private ["So20UIFocusItemContainerP", "extracurricular"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "numberOfRows"]
+- !private ["So20UIFocusItemContainerP", "numberOfSections"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "textLabel"]
+- !private ["So30UIFocusItemScrollableContainerP", "cellForRow"]
+- !private ["So30UIFocusItemScrollableContainerP", "dequeueReusableCell"]
+- !private ["So30UIFocusItemScrollableContainerP", "deselectRow"]
+- !private ["So30UIFocusItemScrollableContainerP", "numberOfRows"]
+- !private ["So30UIFocusItemScrollableContainerP", "numberOfSections"]
 - !private ["So27UIGestureRecognizerDelegateP", "accessoryType"]
 - !private ["So27UIGestureRecognizerDelegateP", "configureCell"]
 - !private ["So27UIGestureRecognizerDelegateP", "course"]
@@ -627,6 +693,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "deselectRow"]
 - !private ["So30UIPasteConfigurationSupportingP", "extracurricular"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "numberOfRows"]
 - !private ["So30UIPasteConfigurationSupportingP", "numberOfSections"]
@@ -660,6 +727,7 @@ depends-member:
 - !private ["So11UIResponderC", "deselectRow"]
 - !private ["So11UIResponderC", "extracurricular"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "numberOfRows"]
 - ["So11UIResponderC", "numberOfSections"]
 - ["So11UIResponderC", "tableView"]
@@ -683,6 +751,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "deselectRow"]
 - !private ["So30UIResponderStandardEditActionsP", "extracurricular"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "numberOfRows"]
 - !private ["So30UIResponderStandardEditActionsP", "numberOfSections"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
@@ -702,6 +771,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "dataSections"]
 - !private ["So20UIScrollViewDelegateP", "delegate"]
 - !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "cellForRow"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "dequeueReusableCell"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "deselectRow"]
@@ -717,6 +787,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "dataSections"]
 - !private ["So16UIStateRestoringP", "delegate"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "init"]
 - !private ["So11UITableViewC", "cellForRow"]
 - !private ["So11UITableViewC", "dequeueReusableCell"]
 - !private ["So11UITableViewC", "deselectRow"]
@@ -728,8 +799,6 @@ depends-member:
 - !private ["So15UITableViewCellC", "extracurricular"]
 - !private ["So15UITableViewCellC", "init"]
 - !private ["So15UITableViewCellC", "textLabel"]
-- !private ["SC28UITableViewCellAccessoryTypeO", "checkmark"]
-- !private ["SC28UITableViewCellAccessoryTypeO", "none"]
 - ["So21UITableViewControllerC", "AnyObject"]
 - !private ["So21UITableViewControllerC", "Bool"]
 - ["So21UITableViewControllerC", "CGFloat"]
@@ -752,6 +821,7 @@ depends-member:
 - ["So21UITableViewControllerC", "dataSections"]
 - ["So21UITableViewControllerC", "delegate"]
 - ["So21UITableViewControllerC", "init"]
+- !private ["So21UITableViewControllerC", "init"]
 - ["So21UITableViewControllerC", "numberOfSections"]
 - ["So21UITableViewControllerC", "tableView"]
 - ["So21UITableViewControllerC", "updateData"]
@@ -765,6 +835,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "dataSections"]
 - !private ["So21UITableViewDataSourceP", "delegate"]
 - !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So19UITableViewDelegateP", "DataManager"]
 - !private ["So19UITableViewDelegateP", "IndexPath"]
 - !private ["So19UITableViewDelegateP", "UITableViewAutomaticDimension"]
@@ -774,6 +845,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "commitment"]
 - !private ["So19UITableViewDelegateP", "dataSections"]
 - !private ["So19UITableViewDelegateP", "delegate"]
+- !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "DataManager"]
 - !private ["So18UITraitEnvironmentP", "IndexPath"]
@@ -792,10 +864,33 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "deselectRow"]
 - !private ["So18UITraitEnvironmentP", "extracurricular"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "numberOfRows"]
 - !private ["So18UITraitEnvironmentP", "numberOfSections"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "textLabel"]
+- !private ["So23UIUserActivityRestoringP", "DataManager"]
+- !private ["So23UIUserActivityRestoringP", "IndexPath"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewAutomaticDimension"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewCell"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewCellAccessoryType"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "accessoryType"]
+- !private ["So23UIUserActivityRestoringP", "cellForRow"]
+- !private ["So23UIUserActivityRestoringP", "commitment"]
+- !private ["So23UIUserActivityRestoringP", "configureCell"]
+- !private ["So23UIUserActivityRestoringP", "course"]
+- !private ["So23UIUserActivityRestoringP", "dataSections"]
+- !private ["So23UIUserActivityRestoringP", "delegate"]
+- !private ["So23UIUserActivityRestoringP", "dequeueReusableCell"]
+- !private ["So23UIUserActivityRestoringP", "deselectRow"]
+- !private ["So23UIUserActivityRestoringP", "extracurricular"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "numberOfRows"]
+- !private ["So23UIUserActivityRestoringP", "numberOfSections"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "textLabel"]
 - !private ["So6UIViewC", "accessoryType"]
 - !private ["So6UIViewC", "cellForRow"]
 - !private ["So6UIViewC", "configureCell"]
@@ -829,14 +924,10 @@ depends-member:
 - ["So16UIViewControllerC", "dataSections"]
 - ["So16UIViewControllerC", "delegate"]
 - ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "numberOfSections"]
 - ["So16UIViewControllerC", "tableView"]
 - ["So16UIViewControllerC", "updateData"]
-- !private ["s14_ArrayProtocolP", "append"]
-- !private ["s14_ArrayProtocolP", "commitments"]
-- !private ["s14_ArrayProtocolP", "count"]
-- !private ["s14_ArrayProtocolP", "subscript"]
-- !private ["s14_ArrayProtocolP", "title"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "accessoryType"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "cellForRow"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "configureCell"]
@@ -856,10 +947,18 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "title"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IndexPath"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITableViewAutomaticDimension"]
@@ -880,6 +979,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "extracurricular"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "extracurriculars"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isEqual"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "numberOfRows"]
@@ -892,23 +992,28 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "row"]
 - !private ["s21_ObjectiveCBridgeableP", "section"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "So28UITableViewCellAccessoryTypeV"
 - !private "Sa"
+- !private "s13ArrayProtocolP"
 - !private "s10ArraySliceV"
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
 - !private "So15CALayerDelegateP"
 - !private "11Logan__iOS_9CKEnabledC"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
+- !private "Sl"
 - !private "11Logan__iOS_10CommitmentP"
 - "11Logan__iOS_24CommitmentPickerDelegateP"
 - "11Logan__iOS_35CommitmentPickerTableViewControllerC"
-- !private "s10ComparableP"
+- !private "SL"
 - !private "11Logan__iOS_6CourseC"
 - !private "11Logan__iOS_19CourseTableViewCellC"
 - "s28CustomDebugStringConvertibleP"
@@ -916,9 +1021,9 @@ depends-nominal:
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "11Logan__iOS_11DataManagerC"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
@@ -926,23 +1031,23 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "11Logan__iOS_15ExtracurricularC"
 - !private "11Logan__iOS_28ExtracurricularTableViewCellC"
-- "s8HashableP"
+- "SH"
 - !private "10Foundation9IndexPathV"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s16RawRepresentableP"
+- "So8NSObjectP"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "11Logan__iOS_8SemesterC"
-- !private "s8SequenceP"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
@@ -955,6 +1060,8 @@ depends-nominal:
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
 - !private "So27UIGestureRecognizerDelegateP"
 - !private "So7UILabelC"
 - "So30UIPasteConfigurationSupportingP"
@@ -966,14 +1073,13 @@ depends-nominal:
 - "So16UIStateRestoringP"
 - !private "So11UITableViewC"
 - !private "So15UITableViewCellC"
-- !private "SC28UITableViewCellAccessoryTypeO"
 - "So21UITableViewControllerC"
 - "So21UITableViewDataSourceP"
 - "So19UITableViewDelegateP"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "s14_ArrayProtocolP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -982,6 +1088,7 @@ depends-nominal:
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
@@ -1003,18 +1110,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "566d8cd864c8a6c9b796d4e47edca8d9"

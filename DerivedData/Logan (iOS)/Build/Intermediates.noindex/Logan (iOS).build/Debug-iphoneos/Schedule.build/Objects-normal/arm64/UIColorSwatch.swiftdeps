@@ -14,6 +14,8 @@ depends-top-level:
 - "CAShapeLayer"
 - !private "CGPath"
 - "CGRect"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "NSCoder"
 - "UIColor"
 - "UIColorSwatch"
@@ -53,8 +55,8 @@ depends-member:
 - !private ["So12CAShapeLayerC", "lineWidth"]
 - !private ["So12CAShapeLayerC", "path"]
 - !private ["So12CAShapeLayerC", "strokeColor"]
-- !private ["So6CGPathC", "init"]
-- !private ["SC6CGRectV", "insetBy"]
+- !private ["So9CGPathRefa", "init"]
+- !private ["So6CGRectV", "insetBy"]
 - ["s7CVarArgP", "CAShapeLayer"]
 - !private ["s7CVarArgP", "CGPath"]
 - ["s7CVarArgP", "UIColor"]
@@ -133,59 +135,59 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "strokeColor"]
 - !private ["s23CustomStringConvertibleP", "unifiedInit"]
 - !private ["s23CustomStringConvertibleP", "withAlphaComponent"]
-- !private ["s9DecodableP", "insetBy"]
-- !private ["s9EncodableP", "insetBy"]
-- ["s9EquatableP", "CAShapeLayer"]
-- !private ["s9EquatableP", "CGPath"]
-- ["s9EquatableP", "UIColor"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "addSublayer"]
-- !private ["s9EquatableP", "backgroundColor"]
-- ["s9EquatableP", "black"]
-- !private ["s9EquatableP", "borderLayer"]
-- !private ["s9EquatableP", "bounds"]
-- !private ["s9EquatableP", "cgColor"]
-- !private ["s9EquatableP", "clear"]
-- !private ["s9EquatableP", "clipsToBounds"]
-- !private ["s9EquatableP", "colorValue"]
-- !private ["s9EquatableP", "fillColor"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "insetBy"]
-- !private ["s9EquatableP", "layer"]
-- !private ["s9EquatableP", "layoutSubviews"]
-- !private ["s9EquatableP", "lineWidth"]
-- !private ["s9EquatableP", "masksToBounds"]
-- !private ["s9EquatableP", "organize"]
-- !private ["s9EquatableP", "path"]
-- !private ["s9EquatableP", "shapeLayer"]
-- !private ["s9EquatableP", "strokeColor"]
-- !private ["s9EquatableP", "unifiedInit"]
-- !private ["s9EquatableP", "withAlphaComponent"]
-- ["s8HashableP", "CAShapeLayer"]
-- !private ["s8HashableP", "CGPath"]
-- ["s8HashableP", "UIColor"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "addSublayer"]
-- !private ["s8HashableP", "backgroundColor"]
-- ["s8HashableP", "black"]
-- !private ["s8HashableP", "borderLayer"]
-- !private ["s8HashableP", "bounds"]
-- !private ["s8HashableP", "cgColor"]
-- !private ["s8HashableP", "clear"]
-- !private ["s8HashableP", "clipsToBounds"]
-- !private ["s8HashableP", "colorValue"]
-- !private ["s8HashableP", "fillColor"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "layer"]
-- !private ["s8HashableP", "layoutSubviews"]
-- !private ["s8HashableP", "lineWidth"]
-- !private ["s8HashableP", "masksToBounds"]
-- !private ["s8HashableP", "organize"]
-- !private ["s8HashableP", "path"]
-- !private ["s8HashableP", "shapeLayer"]
-- !private ["s8HashableP", "strokeColor"]
-- !private ["s8HashableP", "unifiedInit"]
-- !private ["s8HashableP", "withAlphaComponent"]
+- !private ["Se", "insetBy"]
+- !private ["SE", "insetBy"]
+- ["SQ", "CAShapeLayer"]
+- !private ["SQ", "CGPath"]
+- ["SQ", "UIColor"]
+- ["SQ", ""]
+- !private ["SQ", "addSublayer"]
+- !private ["SQ", "backgroundColor"]
+- ["SQ", "black"]
+- !private ["SQ", "borderLayer"]
+- !private ["SQ", "bounds"]
+- !private ["SQ", "cgColor"]
+- !private ["SQ", "clear"]
+- !private ["SQ", "clipsToBounds"]
+- !private ["SQ", "colorValue"]
+- !private ["SQ", "fillColor"]
+- ["SQ", "init"]
+- !private ["SQ", "insetBy"]
+- !private ["SQ", "layer"]
+- !private ["SQ", "layoutSubviews"]
+- !private ["SQ", "lineWidth"]
+- !private ["SQ", "masksToBounds"]
+- !private ["SQ", "organize"]
+- !private ["SQ", "path"]
+- !private ["SQ", "shapeLayer"]
+- !private ["SQ", "strokeColor"]
+- !private ["SQ", "unifiedInit"]
+- !private ["SQ", "withAlphaComponent"]
+- ["SH", "CAShapeLayer"]
+- !private ["SH", "CGPath"]
+- ["SH", "UIColor"]
+- ["SH", ""]
+- !private ["SH", "addSublayer"]
+- !private ["SH", "backgroundColor"]
+- ["SH", "black"]
+- !private ["SH", "borderLayer"]
+- !private ["SH", "bounds"]
+- !private ["SH", "cgColor"]
+- !private ["SH", "clear"]
+- !private ["SH", "clipsToBounds"]
+- !private ["SH", "colorValue"]
+- !private ["SH", "fillColor"]
+- ["SH", "init"]
+- !private ["SH", "layer"]
+- !private ["SH", "layoutSubviews"]
+- !private ["SH", "lineWidth"]
+- !private ["SH", "masksToBounds"]
+- !private ["SH", "organize"]
+- !private ["SH", "path"]
+- !private ["SH", "shapeLayer"]
+- !private ["SH", "strokeColor"]
+- !private ["SH", "unifiedInit"]
+- !private ["SH", "withAlphaComponent"]
 - ["So8NSCodingP", "CAShapeLayer"]
 - !private ["So8NSCodingP", "CGPath"]
 - ["So8NSCodingP", "UIColor"]
@@ -249,31 +251,31 @@ depends-member:
 - !private ["So8NSObjectC", "strokeColor"]
 - ["So8NSObjectC", "unifiedInit"]
 - !private ["So8NSObjectC", "withAlphaComponent"]
-- ["So16NSObjectProtocolP", "CAShapeLayer"]
-- !private ["So16NSObjectProtocolP", "CGPath"]
-- ["So16NSObjectProtocolP", "UIColor"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "addSublayer"]
-- !private ["So16NSObjectProtocolP", "backgroundColor"]
-- ["So16NSObjectProtocolP", "black"]
-- !private ["So16NSObjectProtocolP", "borderLayer"]
-- !private ["So16NSObjectProtocolP", "bounds"]
-- !private ["So16NSObjectProtocolP", "cgColor"]
-- !private ["So16NSObjectProtocolP", "clear"]
-- !private ["So16NSObjectProtocolP", "clipsToBounds"]
-- !private ["So16NSObjectProtocolP", "colorValue"]
-- !private ["So16NSObjectProtocolP", "fillColor"]
-- ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "layer"]
-- !private ["So16NSObjectProtocolP", "layoutSubviews"]
-- !private ["So16NSObjectProtocolP", "lineWidth"]
-- !private ["So16NSObjectProtocolP", "masksToBounds"]
-- !private ["So16NSObjectProtocolP", "organize"]
-- !private ["So16NSObjectProtocolP", "path"]
-- !private ["So16NSObjectProtocolP", "shapeLayer"]
-- !private ["So16NSObjectProtocolP", "strokeColor"]
-- !private ["So16NSObjectProtocolP", "unifiedInit"]
-- !private ["So16NSObjectProtocolP", "withAlphaComponent"]
+- ["So8NSObjectP", "CAShapeLayer"]
+- !private ["So8NSObjectP", "CGPath"]
+- ["So8NSObjectP", "UIColor"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addSublayer"]
+- !private ["So8NSObjectP", "backgroundColor"]
+- ["So8NSObjectP", "black"]
+- !private ["So8NSObjectP", "borderLayer"]
+- !private ["So8NSObjectP", "bounds"]
+- !private ["So8NSObjectP", "cgColor"]
+- !private ["So8NSObjectP", "clear"]
+- !private ["So8NSObjectP", "clipsToBounds"]
+- !private ["So8NSObjectP", "colorValue"]
+- !private ["So8NSObjectP", "fillColor"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "layer"]
+- !private ["So8NSObjectP", "layoutSubviews"]
+- !private ["So8NSObjectP", "lineWidth"]
+- !private ["So8NSObjectP", "masksToBounds"]
+- !private ["So8NSObjectP", "organize"]
+- !private ["So8NSObjectP", "path"]
+- !private ["So8NSObjectP", "shapeLayer"]
+- !private ["So8NSObjectP", "strokeColor"]
+- !private ["So8NSObjectP", "unifiedInit"]
+- !private ["So8NSObjectP", "withAlphaComponent"]
 - !private ["So14NSSecureCodingP", "addSublayer"]
 - ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "cgColor"]
@@ -344,7 +346,7 @@ depends-member:
 - !private ["8Schedule13UIColorSwatchC", "bounds"]
 - !private ["8Schedule13UIColorSwatchC", "clipsToBounds"]
 - ["8Schedule13UIColorSwatchC", "colorValue"]
-- ["8Schedule13UIColorSwatchC", "deinit"]
+- !private ["8Schedule13UIColorSwatchC", "deinit"]
 - ["8Schedule13UIColorSwatchC", "init"]
 - !private ["8Schedule13UIColorSwatchC", "layer"]
 - ["8Schedule13UIColorSwatchC", "layoutSubviews"]
@@ -428,6 +430,21 @@ depends-member:
 - !private ["So11UIFocusItemP", "organize"]
 - !private ["So11UIFocusItemP", "shapeLayer"]
 - !private ["So11UIFocusItemP", "unifiedInit"]
+- ["So20UIFocusItemContainerP", "CAShapeLayer"]
+- !private ["So20UIFocusItemContainerP", "CGPath"]
+- ["So20UIFocusItemContainerP", "UIColor"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "backgroundColor"]
+- !private ["So20UIFocusItemContainerP", "borderLayer"]
+- !private ["So20UIFocusItemContainerP", "bounds"]
+- !private ["So20UIFocusItemContainerP", "clipsToBounds"]
+- !private ["So20UIFocusItemContainerP", "colorValue"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "layer"]
+- !private ["So20UIFocusItemContainerP", "layoutSubviews"]
+- !private ["So20UIFocusItemContainerP", "organize"]
+- !private ["So20UIFocusItemContainerP", "shapeLayer"]
+- !private ["So20UIFocusItemContainerP", "unifiedInit"]
 - ["So30UIPasteConfigurationSupportingP", "CAShapeLayer"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGPath"]
 - ["So30UIPasteConfigurationSupportingP", "UIColor"]
@@ -489,6 +506,21 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "organize"]
 - !private ["So18UITraitEnvironmentP", "shapeLayer"]
 - !private ["So18UITraitEnvironmentP", "unifiedInit"]
+- ["So23UIUserActivityRestoringP", "CAShapeLayer"]
+- !private ["So23UIUserActivityRestoringP", "CGPath"]
+- ["So23UIUserActivityRestoringP", "UIColor"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "backgroundColor"]
+- !private ["So23UIUserActivityRestoringP", "borderLayer"]
+- !private ["So23UIUserActivityRestoringP", "bounds"]
+- !private ["So23UIUserActivityRestoringP", "clipsToBounds"]
+- !private ["So23UIUserActivityRestoringP", "colorValue"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "layer"]
+- !private ["So23UIUserActivityRestoringP", "layoutSubviews"]
+- !private ["So23UIUserActivityRestoringP", "organize"]
+- !private ["So23UIUserActivityRestoringP", "shapeLayer"]
+- !private ["So23UIUserActivityRestoringP", "unifiedInit"]
 - ["So6UIViewC", "CAShapeLayer"]
 - !private ["So6UIViewC", "CGPath"]
 - ["So6UIViewC", "CGRect"]
@@ -556,23 +588,23 @@ depends-nominal:
 - "So15CALayerDelegateP"
 - "So13CAMediaTimingP"
 - "So12CAShapeLayerC"
-- !private "So6CGPathC"
-- !private "SC6CGRectV"
+- !private "So9CGPathRefa"
+- !private "So6CGRectV"
 - "s7CVarArgP"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
-- "s8HashableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- "SH"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - "So21NSItemProviderReadingP"
 - "So21NSItemProviderWritingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - "So14NSSecureCodingP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
@@ -584,10 +616,12 @@ depends-nominal:
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - !private "14CoreFoundation9_CFObjectP"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
@@ -612,18 +646,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "b5dd261867b8fb029984b97cd7ba9c1d"

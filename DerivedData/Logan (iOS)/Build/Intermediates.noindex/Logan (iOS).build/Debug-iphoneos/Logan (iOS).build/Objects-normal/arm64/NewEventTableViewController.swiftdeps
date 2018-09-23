@@ -28,7 +28,9 @@ depends-top-level:
 - !private "DataManager"
 - "Event"
 - "Extracurricular"
+- !private "FloatLiteralType"
 - "IndexPath"
+- !private "IntegerLiteralType"
 - "NewEventTableViewController"
 - !private "PickerTableViewCell"
 - !private "StringLiteralType"
@@ -41,9 +43,11 @@ depends-top-level:
 - !private "||"
 depends-member:
 - !private ["Sa", "append"]
-- !private ["s23BidirectionalCollectionP", "append"]
-- !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "section"]
+- !private ["s13ArrayProtocolP", "append"]
+- !private ["SK", "append"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "section"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "beginUpdates"]
 - !private ["So15CALayerDelegateP", "cellForRow"]
@@ -55,6 +59,10 @@ depends-member:
 - !private ["11Logan__iOS_9CKEnabledC", "location"]
 - !private ["11Logan__iOS_9CKEnabledC", "name"]
 - !private ["11Logan__iOS_9CKEnabledC", "record"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "append"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["s7CVarArgP", "DataManager"]
 - !private ["s7CVarArgP", "UITableViewAutomaticDimension"]
 - ["s7CVarArgP", ""]
@@ -69,6 +77,7 @@ depends-member:
 - !private ["s7CVarArgP", "events"]
 - !private ["s7CVarArgP", "fittingHeight"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "introduce"]
 - !private ["s7CVarArgP", "location"]
 - !private ["s7CVarArgP", "locationField"]
@@ -81,13 +90,15 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "update"]
 - !private ["s7CVarArgP", "view"]
-- !private ["s10CollectionP", "append"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "section"]
+- !private ["Sl", "append"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "section"]
 - !private ["11Logan__iOS_10CommitmentP", "events"]
 - !private ["11Logan__iOS_10CommitmentP", "record"]
-- !private ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "section"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "section"]
 - !private ["s28CustomDebugStringConvertibleP", "DataManager"]
 - !private ["s28CustomDebugStringConvertibleP", "UITableViewAutomaticDimension"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -100,6 +111,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "endUpdates"]
 - !private ["s28CustomDebugStringConvertibleP", "events"]
 - !private ["s28CustomDebugStringConvertibleP", "fittingHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "introduce"]
 - !private ["s28CustomDebugStringConvertibleP", "location"]
@@ -116,10 +128,18 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "view"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "endEditing"]
+- !private ["s17CustomReflectableP", "events"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "location"]
+- !private ["s17CustomReflectableP", "name"]
+- !private ["s17CustomReflectableP", "record"]
 - !private ["s17CustomReflectableP", "section"]
+- !private ["s17CustomReflectableP", "text"]
 - !private ["s23CustomStringConvertibleP", "DataManager"]
 - !private ["s23CustomStringConvertibleP", "UITableViewAutomaticDimension"]
 - ["s23CustomStringConvertibleP", ""]
@@ -133,6 +153,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "endUpdates"]
 - !private ["s23CustomStringConvertibleP", "events"]
 - !private ["s23CustomStringConvertibleP", "fittingHeight"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "introduce"]
 - !private ["s23CustomStringConvertibleP", "location"]
@@ -150,41 +171,56 @@ depends-member:
 - !private ["11Logan__iOS_11DataManagerC", "introduce"]
 - !private ["11Logan__iOS_11DataManagerC", "shared"]
 - !private ["11Logan__iOS_11DataManagerC", "update"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "append"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "section"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "append"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "section"]
-- !private ["s9EquatableP", "DataManager"]
-- !private ["s9EquatableP", "UITableViewAutomaticDimension"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "append"]
-- !private ["s9EquatableP", "beginUpdates"]
-- !private ["s9EquatableP", "cellForRow"]
-- !private ["s9EquatableP", "correspondingExtracurricular"]
-- !private ["s9EquatableP", "dismiss"]
-- !private ["s9EquatableP", "endEditing"]
-- !private ["s9EquatableP", "endUpdates"]
-- !private ["s9EquatableP", "events"]
-- !private ["s9EquatableP", "fittingHeight"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "introduce"]
-- !private ["s9EquatableP", "location"]
-- !private ["s9EquatableP", "locationField"]
-- !private ["s9EquatableP", "name"]
-- !private ["s9EquatableP", "nameField"]
-- !private ["s9EquatableP", "navigationController"]
-- !private ["s9EquatableP", "newEvent"]
-- !private ["s9EquatableP", "record"]
-- !private ["s9EquatableP", "section"]
-- !private ["s9EquatableP", "shared"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "update"]
-- !private ["s9EquatableP", "view"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "append"]
+- !private ["Se", "endEditing"]
+- !private ["Se", "events"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "location"]
+- !private ["Se", "name"]
+- !private ["Se", "record"]
+- !private ["Se", "section"]
+- !private ["Se", "text"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "append"]
+- !private ["SE", "endEditing"]
+- !private ["SE", "events"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "location"]
+- !private ["SE", "name"]
+- !private ["SE", "record"]
+- !private ["SE", "section"]
+- !private ["SE", "text"]
+- !private ["SQ", "DataManager"]
+- !private ["SQ", "UITableViewAutomaticDimension"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "append"]
+- !private ["SQ", "beginUpdates"]
+- !private ["SQ", "cellForRow"]
+- !private ["SQ", "correspondingExtracurricular"]
+- !private ["SQ", "dismiss"]
+- !private ["SQ", "endEditing"]
+- !private ["SQ", "endUpdates"]
+- !private ["SQ", "events"]
+- !private ["SQ", "fittingHeight"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "introduce"]
+- !private ["SQ", "location"]
+- !private ["SQ", "locationField"]
+- !private ["SQ", "name"]
+- !private ["SQ", "nameField"]
+- !private ["SQ", "navigationController"]
+- !private ["SQ", "newEvent"]
+- !private ["SQ", "record"]
+- !private ["SQ", "section"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "text"]
+- !private ["SQ", "update"]
+- !private ["SQ", "view"]
 - !private ["11Logan__iOS_5EventC", "location"]
 - !private ["11Logan__iOS_5EventC", "name"]
 - !private ["11Logan__iOS_5EventC", "record"]
@@ -192,42 +228,55 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "section"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "endEditing"]
+- !private ["s23ExpressibleByNilLiteralP", "events"]
+- !private ["s23ExpressibleByNilLiteralP", "location"]
+- !private ["s23ExpressibleByNilLiteralP", "name"]
+- !private ["s23ExpressibleByNilLiteralP", "record"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["11Logan__iOS_15ExtracurricularC", "events"]
 - !private ["11Logan__iOS_15ExtracurricularC", "record"]
-- !private ["s8HashableP", "DataManager"]
-- !private ["s8HashableP", "UITableViewAutomaticDimension"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "beginUpdates"]
-- !private ["s8HashableP", "cellForRow"]
-- !private ["s8HashableP", "correspondingExtracurricular"]
-- !private ["s8HashableP", "dismiss"]
-- !private ["s8HashableP", "endEditing"]
-- !private ["s8HashableP", "endUpdates"]
-- !private ["s8HashableP", "events"]
-- !private ["s8HashableP", "fittingHeight"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "introduce"]
-- !private ["s8HashableP", "location"]
-- !private ["s8HashableP", "locationField"]
-- !private ["s8HashableP", "name"]
-- !private ["s8HashableP", "nameField"]
-- !private ["s8HashableP", "navigationController"]
-- !private ["s8HashableP", "newEvent"]
-- !private ["s8HashableP", "record"]
-- !private ["s8HashableP", "section"]
-- !private ["s8HashableP", "shared"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "update"]
-- !private ["s8HashableP", "view"]
+- !private ["SH", "DataManager"]
+- !private ["SH", "UITableViewAutomaticDimension"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "append"]
+- !private ["SH", "beginUpdates"]
+- !private ["SH", "cellForRow"]
+- !private ["SH", "correspondingExtracurricular"]
+- !private ["SH", "dismiss"]
+- !private ["SH", "endEditing"]
+- !private ["SH", "endUpdates"]
+- !private ["SH", "events"]
+- !private ["SH", "fittingHeight"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "introduce"]
+- !private ["SH", "location"]
+- !private ["SH", "locationField"]
+- !private ["SH", "name"]
+- !private ["SH", "nameField"]
+- !private ["SH", "navigationController"]
+- !private ["SH", "newEvent"]
+- !private ["SH", "record"]
+- !private ["SH", "section"]
+- !private ["SH", "shared"]
+- !private ["SH", "text"]
+- !private ["SH", "update"]
+- !private ["SH", "view"]
 - !private ["10Foundation9IndexPathV", "section"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["s17MutableCollectionP", "append"]
-- !private ["s17MutableCollectionP", "section"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
+- !private ["SM", "section"]
 - !private ["So8NSCodingP", "DataManager"]
 - !private ["So8NSCodingP", "UITableViewAutomaticDimension"]
 - ["So8NSCodingP", ""]
@@ -238,6 +287,7 @@ depends-member:
 - !private ["So8NSCodingP", "endEditing"]
 - !private ["So8NSCodingP", "endUpdates"]
 - !private ["So8NSCodingP", "fittingHeight"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "locationField"]
 - !private ["So8NSCodingP", "nameField"]
@@ -250,6 +300,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "correspondingExtracurricular"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "locationField"]
 - !private ["So26NSExtensionRequestHandlingP", "nameField"]
@@ -283,6 +334,7 @@ depends-member:
 - !private ["So8NSObjectC", "events"]
 - !private ["So8NSObjectC", "fittingHeight"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "introduce"]
 - !private ["So8NSObjectC", "location"]
 - ["So8NSObjectC", "locationField"]
@@ -299,30 +351,31 @@ depends-member:
 - ["So8NSObjectC", "textUpdated"]
 - !private ["So8NSObjectC", "update"]
 - !private ["So8NSObjectC", "view"]
-- !private ["So16NSObjectProtocolP", "DataManager"]
-- !private ["So16NSObjectProtocolP", "UITableViewAutomaticDimension"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "beginUpdates"]
-- !private ["So16NSObjectProtocolP", "cellForRow"]
-- !private ["So16NSObjectProtocolP", "correspondingExtracurricular"]
-- !private ["So16NSObjectProtocolP", "dismiss"]
-- !private ["So16NSObjectProtocolP", "endEditing"]
-- !private ["So16NSObjectProtocolP", "endUpdates"]
-- !private ["So16NSObjectProtocolP", "events"]
-- !private ["So16NSObjectProtocolP", "fittingHeight"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "introduce"]
-- !private ["So16NSObjectProtocolP", "location"]
-- !private ["So16NSObjectProtocolP", "locationField"]
-- !private ["So16NSObjectProtocolP", "name"]
-- !private ["So16NSObjectProtocolP", "nameField"]
-- !private ["So16NSObjectProtocolP", "navigationController"]
-- !private ["So16NSObjectProtocolP", "newEvent"]
-- !private ["So16NSObjectProtocolP", "record"]
-- !private ["So16NSObjectProtocolP", "shared"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "update"]
-- !private ["So16NSObjectProtocolP", "view"]
+- !private ["So8NSObjectP", "DataManager"]
+- !private ["So8NSObjectP", "UITableViewAutomaticDimension"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "beginUpdates"]
+- !private ["So8NSObjectP", "cellForRow"]
+- !private ["So8NSObjectP", "correspondingExtracurricular"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "endEditing"]
+- !private ["So8NSObjectP", "endUpdates"]
+- !private ["So8NSObjectP", "events"]
+- !private ["So8NSObjectP", "fittingHeight"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "introduce"]
+- !private ["So8NSObjectP", "location"]
+- !private ["So8NSObjectP", "locationField"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "nameField"]
+- !private ["So8NSObjectP", "navigationController"]
+- !private ["So8NSObjectP", "newEvent"]
+- !private ["So8NSObjectP", "record"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "update"]
+- !private ["So8NSObjectP", "view"]
 - ["11Logan__iOS_27NewEventTableViewControllerC", "Bool"]
 - ["11Logan__iOS_27NewEventTableViewControllerC", "CGFloat"]
 - !private ["11Logan__iOS_27NewEventTableViewControllerC", "DataManager"]
@@ -339,7 +392,6 @@ depends-member:
 - ["11Logan__iOS_27NewEventTableViewControllerC", "cancel"]
 - ["11Logan__iOS_27NewEventTableViewControllerC", "correspondingExtracurricular"]
 - ["11Logan__iOS_27NewEventTableViewControllerC", "dateUpdated"]
-- ["11Logan__iOS_27NewEventTableViewControllerC", "deinit"]
 - ["11Logan__iOS_27NewEventTableViewControllerC", "done"]
 - ["11Logan__iOS_27NewEventTableViewControllerC", "endTimeLabel"]
 - ["11Logan__iOS_27NewEventTableViewControllerC", "endTimePicker"]
@@ -353,18 +405,30 @@ depends-member:
 - ["11Logan__iOS_27NewEventTableViewControllerC", "tableView"]
 - ["11Logan__iOS_27NewEventTableViewControllerC", "textUpdated"]
 - !private ["11Logan__iOS_27NewEventTableViewControllerC", "view"]
+- !private ["Sq", "endEditing"]
+- !private ["Sq", "events"]
+- !private ["Sq", "location"]
+- !private ["Sq", "name"]
+- !private ["Sq", "record"]
+- !private ["Sq", "text"]
 - !private ["11Logan__iOS_19PickerTableViewCellC", "fittingHeight"]
-- !private ["s22RandomAccessCollectionP", "append"]
-- !private ["s22RandomAccessCollectionP", "section"]
-- !private ["s26RangeReplaceableCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["Sk", "append"]
+- !private ["Sk", "section"]
+- !private ["Sm", "append"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "section"]
-- !private ["s8SequenceP", "append"]
-- !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "section"]
+- !private ["ST", "append"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "section"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "beginUpdates"]
 - !private ["So29UIAccessibilityIdentificationP", "cellForRow"]
@@ -389,6 +453,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "endUpdates"]
 - !private ["So21UIAppearanceContainerP", "fittingHeight"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "locationField"]
 - !private ["So21UIAppearanceContainerP", "nameField"]
 - !private ["So21UIAppearanceContainerP", "navigationController"]
@@ -400,6 +465,7 @@ depends-member:
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "correspondingExtracurricular"]
 - !private ["So18UIContentContainerP", "dismiss"]
+- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "locationField"]
 - !private ["So18UIContentContainerP", "nameField"]
@@ -434,6 +500,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "endUpdates"]
 - !private ["So18UIFocusEnvironmentP", "fittingHeight"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "locationField"]
 - !private ["So18UIFocusEnvironmentP", "nameField"]
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
@@ -446,6 +513,15 @@ depends-member:
 - !private ["So11UIFocusItemP", "endUpdates"]
 - !private ["So11UIFocusItemP", "fittingHeight"]
 - !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", "beginUpdates"]
+- !private ["So20UIFocusItemContainerP", "cellForRow"]
+- !private ["So20UIFocusItemContainerP", "endEditing"]
+- !private ["So20UIFocusItemContainerP", "endUpdates"]
+- !private ["So20UIFocusItemContainerP", "fittingHeight"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So30UIFocusItemScrollableContainerP", "beginUpdates"]
+- !private ["So30UIFocusItemScrollableContainerP", "cellForRow"]
+- !private ["So30UIFocusItemScrollableContainerP", "endUpdates"]
 - !private ["So27UIGestureRecognizerDelegateP", "fittingHeight"]
 - !private ["So10UIKeyInputP", "text"]
 - !private ["So22UINavigationControllerC", "dismiss"]
@@ -459,6 +535,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "endEditing"]
 - !private ["So30UIPasteConfigurationSupportingP", "endUpdates"]
 - !private ["So30UIPasteConfigurationSupportingP", "fittingHeight"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "locationField"]
 - !private ["So30UIPasteConfigurationSupportingP", "nameField"]
@@ -492,6 +569,7 @@ depends-member:
 - !private ["So11UIResponderC", "endUpdates"]
 - !private ["So11UIResponderC", "fittingHeight"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "locationField"]
 - ["So11UIResponderC", "nameField"]
 - !private ["So11UIResponderC", "navigationController"]
@@ -513,6 +591,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "endUpdates"]
 - !private ["So30UIResponderStandardEditActionsP", "fittingHeight"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "locationField"]
 - !private ["So30UIResponderStandardEditActionsP", "nameField"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationController"]
@@ -527,6 +606,7 @@ depends-member:
 - ["So20UIScrollViewDelegateP", ""]
 - !private ["So20UIScrollViewDelegateP", "correspondingExtracurricular"]
 - !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "locationField"]
 - !private ["So20UIScrollViewDelegateP", "nameField"]
 - !private ["So20UIScrollViewDelegateP", "navigationController"]
@@ -540,6 +620,7 @@ depends-member:
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "correspondingExtracurricular"]
 - !private ["So16UIStateRestoringP", "dismiss"]
+- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "locationField"]
 - !private ["So16UIStateRestoringP", "nameField"]
@@ -571,6 +652,7 @@ depends-member:
 - ["So21UITableViewControllerC", "endTimeLabel"]
 - ["So21UITableViewControllerC", "endTimePicker"]
 - ["So21UITableViewControllerC", "init"]
+- !private ["So21UITableViewControllerC", "init"]
 - ["So21UITableViewControllerC", "locationField"]
 - ["So21UITableViewControllerC", "nameField"]
 - !private ["So21UITableViewControllerC", "navigationController"]
@@ -585,6 +667,7 @@ depends-member:
 - ["So21UITableViewDataSourceP", ""]
 - !private ["So21UITableViewDataSourceP", "correspondingExtracurricular"]
 - !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So21UITableViewDataSourceP", "locationField"]
 - !private ["So21UITableViewDataSourceP", "nameField"]
 - !private ["So21UITableViewDataSourceP", "navigationController"]
@@ -594,6 +677,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "UITableViewAutomaticDimension"]
 - ["So19UITableViewDelegateP", ""]
 - !private ["So19UITableViewDelegateP", "correspondingExtracurricular"]
+- !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "locationField"]
 - !private ["So19UITableViewDelegateP", "nameField"]
@@ -617,12 +701,31 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "endUpdates"]
 - !private ["So18UITraitEnvironmentP", "fittingHeight"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "locationField"]
 - !private ["So18UITraitEnvironmentP", "nameField"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
 - !private ["So18UITraitEnvironmentP", "newEvent"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "view"]
+- !private ["So23UIUserActivityRestoringP", "DataManager"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewAutomaticDimension"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "beginUpdates"]
+- !private ["So23UIUserActivityRestoringP", "cellForRow"]
+- !private ["So23UIUserActivityRestoringP", "correspondingExtracurricular"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
+- !private ["So23UIUserActivityRestoringP", "endEditing"]
+- !private ["So23UIUserActivityRestoringP", "endUpdates"]
+- !private ["So23UIUserActivityRestoringP", "fittingHeight"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "locationField"]
+- !private ["So23UIUserActivityRestoringP", "nameField"]
+- !private ["So23UIUserActivityRestoringP", "navigationController"]
+- !private ["So23UIUserActivityRestoringP", "newEvent"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "view"]
 - !private ["So6UIViewC", "beginUpdates"]
 - !private ["So6UIViewC", "cellForRow"]
 - !private ["So6UIViewC", "endEditing"]
@@ -650,6 +753,7 @@ depends-member:
 - ["So16UIViewControllerC", "endTimeLabel"]
 - ["So16UIViewControllerC", "endTimePicker"]
 - ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "locationField"]
 - ["So16UIViewControllerC", "nameField"]
 - !private ["So16UIViewControllerC", "navigationController"]
@@ -659,7 +763,6 @@ depends-member:
 - ["So16UIViewControllerC", "tableView"]
 - ["So16UIViewControllerC", "textUpdated"]
 - !private ["So16UIViewControllerC", "view"]
-- !private ["s14_ArrayProtocolP", "append"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "beginUpdates"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "cellForRow"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "endEditing"]
@@ -669,10 +772,16 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITableViewAutomaticDimension"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -684,6 +793,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endUpdates"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "events"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fittingHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "introduce"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "location"]
@@ -699,51 +809,63 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "endEditing"]
+- !private ["s21_ObjectiveCBridgeableP", "events"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "location"]
+- !private ["s21_ObjectiveCBridgeableP", "name"]
+- !private ["s21_ObjectiveCBridgeableP", "record"]
 - !private ["s21_ObjectiveCBridgeableP", "section"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "Sa"
-- !private "s23BidirectionalCollectionP"
+- !private "s13ArrayProtocolP"
+- !private "SK"
 - !private "Sb"
 - !private "So15CALayerDelegateP"
 - !private "11Logan__iOS_9CKEnabledC"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
+- !private "Sl"
 - !private "11Logan__iOS_10CommitmentP"
-- !private "s10ComparableP"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "11Logan__iOS_11DataManagerC"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - !private "11Logan__iOS_5EventC"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "11Logan__iOS_15ExtracurricularC"
-- "s8HashableP"
+- "SH"
 - !private "10Foundation9IndexPathV"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - "11Logan__iOS_27NewEventTableViewControllerC"
+- !private "Sq"
 - !private "11Logan__iOS_19PickerTableViewCellC"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
+- !private "Sk"
+- !private "Sm"
 - !private "10Foundation20ReferenceConvertibleP"
-- !private "s8SequenceP"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
@@ -757,6 +879,8 @@ depends-nominal:
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
 - !private "So27UIGestureRecognizerDelegateP"
 - !private "So10UIKeyInputP"
 - !private "So22UINavigationControllerC"
@@ -779,9 +903,9 @@ depends-nominal:
 - !private "So17UITextInputTraitsP"
 - !private "So34UITextPasteConfigurationSupportingP"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "s14_ArrayProtocolP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -790,6 +914,7 @@ depends-nominal:
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
@@ -811,18 +936,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "df48f27d87a60e3778b02362bb968870"

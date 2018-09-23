@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		BivG82ywKe5KouL6ry2h218JQJs=
+		Qo64cByDM93oAqOz4RKSjxWtVdQ=
 		</data>
 		<key>Base.lproj/ScheduleWidgetInterface.storyboardc/Info.plist</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Base.lproj/ScheduleWidgetInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<data>
-		R0RetD4eYBzfKKNQDd/Swlw3ufY=
+		tP20BAo8nxModr/K2l39a0o+wgM=
 		</data>
 		<key>Base.lproj/ScheduleWidgetInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<data>
-		jensl1prrGc0Vr0FmP//DC6/lok=
+		pHgAFQb/yVzQhvxkG6Tq/lCA54Q=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/Zc993WJgVXRhAFWJKHsC2lR60s=
+		wH+/zQo81LcBnwiPsrzQ6bWIykM=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -33,21 +33,13 @@
 	<dict>
 		<key>Assets.car</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			BivG82ywKe5KouL6ry2h218JQJs=
-			</data>
 			<key>hash2</key>
 			<data>
-			Kr0WGKdiASM9pWYbtnble5ZiGxVxwP1tZ71bPccjCtg=
+			78emKQEd7NvWsLBSay0byaybfrNEt6T3X97pd24tVDs=
 			</data>
 		</dict>
 		<key>Base.lproj/ScheduleWidgetInterface.storyboardc/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			0MIPa0qiDjReRwwobTsnJ01z+l0=
-			</data>
 			<key>hash2</key>
 			<data>
 			sOic6ugSKWwGvBSX5ZyYEUE+pFecCWW0YXAo5CNbmCQ=
@@ -55,32 +47,20 @@
 		</dict>
 		<key>Base.lproj/ScheduleWidgetInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			R0RetD4eYBzfKKNQDd/Swlw3ufY=
-			</data>
 			<key>hash2</key>
 			<data>
-			vy0kY/GcXNuVbIOyxKIRhYA7t2Wue+U8lN7zmwE2zWA=
+			T8aKJoluLIqRdsETeHK/EhQ5HqYR6cjCaXck3rF44KA=
 			</data>
 		</dict>
 		<key>Base.lproj/ScheduleWidgetInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			jensl1prrGc0Vr0FmP//DC6/lok=
-			</data>
 			<key>hash2</key>
 			<data>
-			s0G/I8oRE4uULouTvbMiIF2hnWVnazoPDpTm+zVLHzc=
+			//bs7fWh7FBkLiPWVpDal2068drId+rv1W+wyXnRlO8=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6uXzxpvcqscIe6CAEyFhqnhSwSE=
-			</data>
 			<key>hash2</key>
 			<data>
 			+svFNZW/F+oUwqeK14oxk28OtiKoswgau0POXQp5j2E=

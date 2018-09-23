@@ -10,6 +10,11 @@ import UIKit
 
 class BetterDatePicker: UIControl {
     
+    enum Style: Int {
+        case dark = 0
+        case light = 1
+    }
+    
     var dateValue: Date {
         get {
             return selectedDay.dateValue!
@@ -29,6 +34,12 @@ class BetterDatePicker: UIControl {
                 
                 updateMonth()
             }
+        }
+    }
+    
+    var style: Style = Style.dark {
+        didSet {
+            adjustStyle()
         }
     }
     
@@ -83,14 +94,11 @@ class BetterDatePicker: UIControl {
             label.font = UIFont.systemFont(ofSize: UIFont.smallSystemFontSize, weight: UIFont.Weight.semibold)
             label.textAlignment = NSTextAlignment.center
             
-            label.textColor = UIColor.black.withAlphaComponent(text == "S" ? 0.6 : 1)
-            
             addSubview(label)
         }
         
         monthLabel.text = dateFormatter.string(from: currentDay.dateValue!)
         monthLabel.textAlignment = NSTextAlignment.center
-        monthLabel.textColor = UIColor.black.withAlphaComponent(0.5)
         monthLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
         
         addSubview(monthLabel)
@@ -100,9 +108,6 @@ class BetterDatePicker: UIControl {
         
         lastMonthButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.leading
         nextMonthButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.trailing
-        
-        lastMonthButton.tintColor = UIColor.black.withAlphaComponent(0.5)
-        nextMonthButton.tintColor = UIColor.black.withAlphaComponent(0.5)
         
         lastMonthButton.addTarget(self, action: #selector(self.lastMonth), for: UIControlEvents.touchUpInside)
         nextMonthButton.addTarget(self, action: #selector(self.nextMonth), for: UIControlEvents.touchUpInside)
@@ -125,6 +130,8 @@ class BetterDatePicker: UIControl {
         }
         
         updateMonth()
+        
+        adjustStyle()
     }
     
     override init(frame: CGRect) {
@@ -135,6 +142,25 @@ class BetterDatePicker: UIControl {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         unifiedInit()
+    }
+    
+    private func adjustStyle() {
+        let styleColor = style == Style.dark ? UIColor.black : UIColor.white
+        
+        for label in dotwLabels {
+            label.textColor = styleColor.withAlphaComponent(label.text! == "S" ? 0.6 : 1)
+        }
+        
+        monthLabel.textColor = styleColor.withAlphaComponent(0.5)
+        
+        lastMonthButton.tintColor = styleColor.withAlphaComponent(0.5)
+        nextMonthButton.tintColor = styleColor.withAlphaComponent(0.5)
+        
+        for row in dayButtons {
+            for button in row {
+                button.style = style
+            }
+        }
     }
     
     private func organize() {
@@ -248,6 +274,12 @@ class BetterDatePicker: UIControl {
 
 fileprivate class DayButton: UIButton {
     
+    var style: BetterDatePicker.Style = BetterDatePicker.Style.dark {
+        didSet {
+            updateAppearance()
+        }
+    }
+    
     var day: CalendarDay!
     private let shapeLayer = CAShapeLayer()
     
@@ -291,13 +323,16 @@ fileprivate class DayButton: UIButton {
     }
     
     private func updateAppearance() {
+        let primaryColor = (style == BetterDatePicker.Style.dark ? UIColor.black : UIColor.white)
+        let secondaryColor = (style == BetterDatePicker.Style.dark ? UIColor.white : UIColor.black)
+        
         setTitle("\(day.day)", for: UIControlState.normal)
         
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
         
         if isCurrent {
-            setTitleColor(UIColor.white, for: UIControlState.normal)
+            setTitleColor(secondaryColor, for: UIControlState.normal)
             
             if isInBackground {
                 shapeLayer.fillColor = tintColor.withAlphaComponent(0.2).cgColor
@@ -308,7 +343,7 @@ fileprivate class DayButton: UIButton {
             if day == CalendarDay(date: Date()) {
                 setTitleColor(tintColor.withAlphaComponent(isInBackground ? 0.3 : 1), for: UIControlState.normal)
             } else {
-                setTitleColor(UIColor.black.withAlphaComponent((isInBackground ? 0.4 : 1) * (isWeekend ? 0.6 : 1)), for: UIControlState.normal)
+                setTitleColor(primaryColor.withAlphaComponent((isInBackground ? 0.4 : 1) * (isWeekend ? 0.6 : 1)), for: UIControlState.normal)
             }
             
             shapeLayer.fillColor = nil

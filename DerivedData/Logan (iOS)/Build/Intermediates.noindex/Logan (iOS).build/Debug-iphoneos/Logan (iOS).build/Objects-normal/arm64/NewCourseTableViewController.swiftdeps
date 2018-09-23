@@ -38,8 +38,10 @@ depends-top-level:
 - "UITextView"
 depends-member:
 - !private ["Sa", "append"]
-- !private ["s23BidirectionalCollectionP", "append"]
-- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s13ArrayProtocolP", "append"]
+- !private ["SK", "append"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["So15CALayerDelegateP", "barTintColor"]
 - !private ["So15CALayerDelegateP", "becomeFirstResponder"]
 - !private ["So15CALayerDelegateP", "beginUpdates"]
@@ -53,6 +55,9 @@ depends-member:
 - !private ["11Logan__iOS_9CKEnabledC", "name"]
 - !private ["11Logan__iOS_9CKEnabledC", "nickname"]
 - !private ["11Logan__iOS_9CKEnabledC", "record"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "append"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - ["s7CVarArgP", "Course"]
 - !private ["s7CVarArgP", "DataManager"]
 - !private ["s7CVarArgP", "UIColor"]
@@ -74,6 +79,7 @@ depends-member:
 - !private ["s7CVarArgP", "endEditing"]
 - !private ["s7CVarArgP", "endUpdates"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "introduce"]
 - !private ["s7CVarArgP", "name"]
 - !private ["s7CVarArgP", "nameView"]
@@ -92,15 +98,17 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "viewWillAppear"]
 - !private ["s7CVarArgP", "viewWillDisappear"]
-- !private ["s10CollectionP", "append"]
-- !private ["s10CollectionP", "init"]
+- !private ["Sl", "append"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
 - !private ["11Logan__iOS_10CommitmentP", "color"]
 - !private ["11Logan__iOS_10CommitmentP", "descriptor"]
 - ["11Logan__iOS_10CommitmentP", "init"]
 - !private ["11Logan__iOS_10CommitmentP", "name"]
 - !private ["11Logan__iOS_10CommitmentP", "nickname"]
 - !private ["11Logan__iOS_10CommitmentP", "record"]
-- !private ["s10ComparableP", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
 - !private ["11Logan__iOS_6CourseC", "color"]
 - !private ["11Logan__iOS_6CourseC", "deinit"]
 - !private ["11Logan__iOS_6CourseC", "descriptor"]
@@ -129,6 +137,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "endEditing"]
 - !private ["s28CustomDebugStringConvertibleP", "endUpdates"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "introduce"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
 - !private ["s28CustomDebugStringConvertibleP", "nameView"]
@@ -148,8 +157,18 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "viewWillAppear"]
 - !private ["s28CustomDebugStringConvertibleP", "viewWillDisappear"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "becomeFirstResponder"]
+- !private ["s17CustomReflectableP", "beginUpdates"]
+- !private ["s17CustomReflectableP", "colorValue"]
+- !private ["s17CustomReflectableP", "courses"]
+- !private ["s17CustomReflectableP", "endEditing"]
+- !private ["s17CustomReflectableP", "endUpdates"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "record"]
+- !private ["s17CustomReflectableP", "text"]
 - ["s23CustomStringConvertibleP", "Course"]
 - !private ["s23CustomStringConvertibleP", "DataManager"]
 - !private ["s23CustomStringConvertibleP", "UIColor"]
@@ -171,6 +190,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "endEditing"]
 - !private ["s23CustomStringConvertibleP", "endUpdates"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "introduce"]
 - !private ["s23CustomStringConvertibleP", "name"]
 - !private ["s23CustomStringConvertibleP", "nameView"]
@@ -192,94 +212,128 @@ depends-member:
 - !private ["11Logan__iOS_11DataManagerC", "introduce"]
 - !private ["11Logan__iOS_11DataManagerC", "shared"]
 - !private ["11Logan__iOS_11DataManagerC", "update"]
-- !private ["s9DecodableP", "append"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9EncodableP", "append"]
-- !private ["s9EncodableP", "init"]
-- ["s9EquatableP", "Course"]
-- !private ["s9EquatableP", "DataManager"]
-- !private ["s9EquatableP", "UIColor"]
-- !private ["s9EquatableP", "UITableViewAutomaticDimension"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "append"]
-- !private ["s9EquatableP", "barTintColor"]
-- !private ["s9EquatableP", "becomeFirstResponder"]
-- !private ["s9EquatableP", "beginUpdates"]
-- !private ["s9EquatableP", "color"]
-- !private ["s9EquatableP", "colorPicker"]
-- !private ["s9EquatableP", "colorValue"]
-- !private ["s9EquatableP", "correspondingSemester"]
-- !private ["s9EquatableP", "course"]
-- !private ["s9EquatableP", "courses"]
-- !private ["s9EquatableP", "descriptor"]
-- !private ["s9EquatableP", "descriptorField"]
-- !private ["s9EquatableP", "dismiss"]
-- !private ["s9EquatableP", "endEditing"]
-- !private ["s9EquatableP", "endUpdates"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "introduce"]
-- !private ["s9EquatableP", "name"]
-- !private ["s9EquatableP", "nameView"]
-- !private ["s9EquatableP", "navigationBar"]
-- !private ["s9EquatableP", "navigationController"]
-- !private ["s9EquatableP", "nickname"]
-- !private ["s9EquatableP", "nicknameView"]
-- !private ["s9EquatableP", "record"]
-- !private ["s9EquatableP", "red500"]
-- !private ["s9EquatableP", "shared"]
-- !private ["s9EquatableP", "tableView"]
-- !private ["s9EquatableP", "teal500"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "update"]
-- !private ["s9EquatableP", "view"]
-- !private ["s9EquatableP", "viewDidLoad"]
-- !private ["s9EquatableP", "viewWillAppear"]
-- !private ["s9EquatableP", "viewWillDisappear"]
+- !private ["Se", "append"]
+- !private ["Se", "becomeFirstResponder"]
+- !private ["Se", "beginUpdates"]
+- !private ["Se", "colorValue"]
+- !private ["Se", "courses"]
+- !private ["Se", "endEditing"]
+- !private ["Se", "endUpdates"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "record"]
+- !private ["Se", "text"]
+- !private ["SE", "append"]
+- !private ["SE", "becomeFirstResponder"]
+- !private ["SE", "beginUpdates"]
+- !private ["SE", "colorValue"]
+- !private ["SE", "courses"]
+- !private ["SE", "endEditing"]
+- !private ["SE", "endUpdates"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "record"]
+- !private ["SE", "text"]
+- ["SQ", "Course"]
+- !private ["SQ", "DataManager"]
+- !private ["SQ", "UIColor"]
+- !private ["SQ", "UITableViewAutomaticDimension"]
+- ["SQ", ""]
+- !private ["SQ", "append"]
+- !private ["SQ", "barTintColor"]
+- !private ["SQ", "becomeFirstResponder"]
+- !private ["SQ", "beginUpdates"]
+- !private ["SQ", "color"]
+- !private ["SQ", "colorPicker"]
+- !private ["SQ", "colorValue"]
+- !private ["SQ", "correspondingSemester"]
+- !private ["SQ", "course"]
+- !private ["SQ", "courses"]
+- !private ["SQ", "descriptor"]
+- !private ["SQ", "descriptorField"]
+- !private ["SQ", "dismiss"]
+- !private ["SQ", "endEditing"]
+- !private ["SQ", "endUpdates"]
+- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "introduce"]
+- !private ["SQ", "name"]
+- !private ["SQ", "nameView"]
+- !private ["SQ", "navigationBar"]
+- !private ["SQ", "navigationController"]
+- !private ["SQ", "nickname"]
+- !private ["SQ", "nicknameView"]
+- !private ["SQ", "record"]
+- !private ["SQ", "red500"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "tableView"]
+- !private ["SQ", "teal500"]
+- !private ["SQ", "text"]
+- !private ["SQ", "update"]
+- !private ["SQ", "view"]
+- !private ["SQ", "viewDidLoad"]
+- !private ["SQ", "viewWillAppear"]
+- !private ["SQ", "viewWillDisappear"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "becomeFirstResponder"]
+- !private ["s23ExpressibleByNilLiteralP", "beginUpdates"]
+- !private ["s23ExpressibleByNilLiteralP", "colorValue"]
+- !private ["s23ExpressibleByNilLiteralP", "courses"]
+- !private ["s23ExpressibleByNilLiteralP", "endEditing"]
+- !private ["s23ExpressibleByNilLiteralP", "endUpdates"]
+- !private ["s23ExpressibleByNilLiteralP", "record"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s8HashableP", "Course"]
-- !private ["s8HashableP", "DataManager"]
-- !private ["s8HashableP", "UIColor"]
-- !private ["s8HashableP", "UITableViewAutomaticDimension"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "barTintColor"]
-- !private ["s8HashableP", "becomeFirstResponder"]
-- !private ["s8HashableP", "beginUpdates"]
-- !private ["s8HashableP", "color"]
-- !private ["s8HashableP", "colorPicker"]
-- !private ["s8HashableP", "colorValue"]
-- !private ["s8HashableP", "correspondingSemester"]
-- !private ["s8HashableP", "course"]
-- !private ["s8HashableP", "courses"]
-- !private ["s8HashableP", "descriptor"]
-- !private ["s8HashableP", "descriptorField"]
-- !private ["s8HashableP", "dismiss"]
-- !private ["s8HashableP", "endEditing"]
-- !private ["s8HashableP", "endUpdates"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "introduce"]
-- !private ["s8HashableP", "name"]
-- !private ["s8HashableP", "nameView"]
-- !private ["s8HashableP", "navigationBar"]
-- !private ["s8HashableP", "navigationController"]
-- !private ["s8HashableP", "nickname"]
-- !private ["s8HashableP", "nicknameView"]
-- !private ["s8HashableP", "record"]
-- !private ["s8HashableP", "red500"]
-- !private ["s8HashableP", "shared"]
-- !private ["s8HashableP", "tableView"]
-- !private ["s8HashableP", "teal500"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "update"]
-- !private ["s8HashableP", "view"]
-- !private ["s8HashableP", "viewDidLoad"]
-- !private ["s8HashableP", "viewWillAppear"]
-- !private ["s8HashableP", "viewWillDisappear"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["SH", "Course"]
+- !private ["SH", "DataManager"]
+- !private ["SH", "UIColor"]
+- !private ["SH", "UITableViewAutomaticDimension"]
+- ["SH", ""]
+- !private ["SH", "append"]
+- !private ["SH", "barTintColor"]
+- !private ["SH", "becomeFirstResponder"]
+- !private ["SH", "beginUpdates"]
+- !private ["SH", "color"]
+- !private ["SH", "colorPicker"]
+- !private ["SH", "colorValue"]
+- !private ["SH", "correspondingSemester"]
+- !private ["SH", "course"]
+- !private ["SH", "courses"]
+- !private ["SH", "descriptor"]
+- !private ["SH", "descriptorField"]
+- !private ["SH", "dismiss"]
+- !private ["SH", "endEditing"]
+- !private ["SH", "endUpdates"]
+- ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "introduce"]
+- !private ["SH", "name"]
+- !private ["SH", "nameView"]
+- !private ["SH", "navigationBar"]
+- !private ["SH", "navigationController"]
+- !private ["SH", "nickname"]
+- !private ["SH", "nicknameView"]
+- !private ["SH", "record"]
+- !private ["SH", "red500"]
+- !private ["SH", "shared"]
+- !private ["SH", "tableView"]
+- !private ["SH", "teal500"]
+- !private ["SH", "text"]
+- !private ["SH", "update"]
+- !private ["SH", "view"]
+- !private ["SH", "viewDidLoad"]
+- !private ["SH", "viewWillAppear"]
+- !private ["SH", "viewWillDisappear"]
+- !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["s17MutableCollectionP", "append"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
 - ["So8NSCodingP", "Course"]
 - !private ["So8NSCodingP", "DataManager"]
 - !private ["So8NSCodingP", "UIColor"]
@@ -296,6 +350,7 @@ depends-member:
 - !private ["So8NSCodingP", "dismiss"]
 - !private ["So8NSCodingP", "endEditing"]
 - !private ["So8NSCodingP", "endUpdates"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "nameView"]
 - !private ["So8NSCodingP", "navigationBar"]
@@ -321,6 +376,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "course"]
 - !private ["So26NSExtensionRequestHandlingP", "descriptorField"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "nameView"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationBar"]
@@ -365,6 +421,7 @@ depends-member:
 - !private ["So8NSObjectC", "endEditing"]
 - !private ["So8NSObjectC", "endUpdates"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "introduce"]
 - !private ["So8NSObjectC", "name"]
 - ["So8NSObjectC", "nameView"]
@@ -384,44 +441,45 @@ depends-member:
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewWillAppear"]
 - ["So8NSObjectC", "viewWillDisappear"]
-- ["So16NSObjectProtocolP", "Course"]
-- !private ["So16NSObjectProtocolP", "DataManager"]
-- !private ["So16NSObjectProtocolP", "UIColor"]
-- !private ["So16NSObjectProtocolP", "UITableViewAutomaticDimension"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "barTintColor"]
-- !private ["So16NSObjectProtocolP", "becomeFirstResponder"]
-- !private ["So16NSObjectProtocolP", "beginUpdates"]
-- !private ["So16NSObjectProtocolP", "color"]
-- !private ["So16NSObjectProtocolP", "colorPicker"]
-- !private ["So16NSObjectProtocolP", "colorValue"]
-- !private ["So16NSObjectProtocolP", "correspondingSemester"]
-- !private ["So16NSObjectProtocolP", "course"]
-- !private ["So16NSObjectProtocolP", "courses"]
-- !private ["So16NSObjectProtocolP", "descriptor"]
-- !private ["So16NSObjectProtocolP", "descriptorField"]
-- !private ["So16NSObjectProtocolP", "dismiss"]
-- !private ["So16NSObjectProtocolP", "endEditing"]
-- !private ["So16NSObjectProtocolP", "endUpdates"]
-- ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "introduce"]
-- !private ["So16NSObjectProtocolP", "name"]
-- !private ["So16NSObjectProtocolP", "nameView"]
-- !private ["So16NSObjectProtocolP", "navigationBar"]
-- !private ["So16NSObjectProtocolP", "navigationController"]
-- !private ["So16NSObjectProtocolP", "nickname"]
-- !private ["So16NSObjectProtocolP", "nicknameView"]
-- !private ["So16NSObjectProtocolP", "record"]
-- !private ["So16NSObjectProtocolP", "red500"]
-- !private ["So16NSObjectProtocolP", "shared"]
-- !private ["So16NSObjectProtocolP", "tableView"]
-- !private ["So16NSObjectProtocolP", "teal500"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "update"]
-- !private ["So16NSObjectProtocolP", "view"]
-- !private ["So16NSObjectProtocolP", "viewDidLoad"]
-- !private ["So16NSObjectProtocolP", "viewWillAppear"]
-- !private ["So16NSObjectProtocolP", "viewWillDisappear"]
+- ["So8NSObjectP", "Course"]
+- !private ["So8NSObjectP", "DataManager"]
+- !private ["So8NSObjectP", "UIColor"]
+- !private ["So8NSObjectP", "UITableViewAutomaticDimension"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "barTintColor"]
+- !private ["So8NSObjectP", "becomeFirstResponder"]
+- !private ["So8NSObjectP", "beginUpdates"]
+- !private ["So8NSObjectP", "color"]
+- !private ["So8NSObjectP", "colorPicker"]
+- !private ["So8NSObjectP", "colorValue"]
+- !private ["So8NSObjectP", "correspondingSemester"]
+- !private ["So8NSObjectP", "course"]
+- !private ["So8NSObjectP", "courses"]
+- !private ["So8NSObjectP", "descriptor"]
+- !private ["So8NSObjectP", "descriptorField"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "endEditing"]
+- !private ["So8NSObjectP", "endUpdates"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "introduce"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "nameView"]
+- !private ["So8NSObjectP", "navigationBar"]
+- !private ["So8NSObjectP", "navigationController"]
+- !private ["So8NSObjectP", "nickname"]
+- !private ["So8NSObjectP", "nicknameView"]
+- !private ["So8NSObjectP", "record"]
+- !private ["So8NSObjectP", "red500"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "tableView"]
+- !private ["So8NSObjectP", "teal500"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "update"]
+- !private ["So8NSObjectP", "view"]
+- !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So8NSObjectP", "viewWillAppear"]
+- !private ["So8NSObjectP", "viewWillDisappear"]
 - !private ["So14NSSecureCodingP", "red500"]
 - !private ["So14NSSecureCodingP", "teal500"]
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "Bool"]
@@ -441,7 +499,7 @@ depends-member:
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "colorPicker"]
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "correspondingSemester"]
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "course"]
-- ["11Logan__iOS_28NewCourseTableViewControllerC", "deinit"]
+- !private ["11Logan__iOS_28NewCourseTableViewControllerC", "deinit"]
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "descriptorField"]
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "done"]
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "init"]
@@ -454,16 +512,30 @@ depends-member:
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "viewDidLoad"]
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "viewWillAppear"]
 - ["11Logan__iOS_28NewCourseTableViewControllerC", "viewWillDisappear"]
-- !private ["s22RandomAccessCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["Sq", "becomeFirstResponder"]
+- !private ["Sq", "beginUpdates"]
+- !private ["Sq", "colorValue"]
+- !private ["Sq", "courses"]
+- !private ["Sq", "endEditing"]
+- !private ["Sq", "endUpdates"]
+- !private ["Sq", "record"]
+- !private ["Sq", "text"]
+- !private ["Sk", "append"]
+- !private ["Sm", "append"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
 - !private ["11Logan__iOS_8SemesterC", "courses"]
 - !private ["11Logan__iOS_8SemesterC", "record"]
-- !private ["s8SequenceP", "append"]
-- !private ["s8SequenceP", "init"]
+- !private ["ST", "append"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "barTintColor"]
 - !private ["So29UIAccessibilityIdentificationP", "becomeFirstResponder"]
@@ -496,6 +568,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "endEditing"]
 - !private ["So21UIAppearanceContainerP", "endUpdates"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "nameView"]
 - !private ["So21UIAppearanceContainerP", "navigationBar"]
 - !private ["So21UIAppearanceContainerP", "navigationController"]
@@ -520,6 +593,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "course"]
 - !private ["So18UIContentContainerP", "descriptorField"]
 - !private ["So18UIContentContainerP", "dismiss"]
+- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "nameView"]
 - !private ["So18UIContentContainerP", "navigationBar"]
@@ -567,6 +641,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "endEditing"]
 - !private ["So18UIFocusEnvironmentP", "endUpdates"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "nameView"]
 - !private ["So18UIFocusEnvironmentP", "navigationBar"]
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
@@ -584,6 +659,17 @@ depends-member:
 - !private ["So11UIFocusItemP", "endEditing"]
 - !private ["So11UIFocusItemP", "endUpdates"]
 - !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", "barTintColor"]
+- !private ["So20UIFocusItemContainerP", "becomeFirstResponder"]
+- !private ["So20UIFocusItemContainerP", "beginUpdates"]
+- !private ["So20UIFocusItemContainerP", "colorValue"]
+- !private ["So20UIFocusItemContainerP", "endEditing"]
+- !private ["So20UIFocusItemContainerP", "endUpdates"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So30UIFocusItemScrollableContainerP", "becomeFirstResponder"]
+- !private ["So30UIFocusItemScrollableContainerP", "beginUpdates"]
+- !private ["So30UIFocusItemScrollableContainerP", "endUpdates"]
+- !private ["So30UIFocusItemScrollableContainerP", "text"]
 - !private ["So10UIKeyInputP", "becomeFirstResponder"]
 - !private ["So10UIKeyInputP", "text"]
 - !private ["So15UINavigationBarC", "barTintColor"]
@@ -605,6 +691,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - !private ["So30UIPasteConfigurationSupportingP", "endEditing"]
 - !private ["So30UIPasteConfigurationSupportingP", "endUpdates"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "nameView"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationBar"]
@@ -643,6 +730,7 @@ depends-member:
 - !private ["So11UIResponderC", "endEditing"]
 - !private ["So11UIResponderC", "endUpdates"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "nameView"]
 - !private ["So11UIResponderC", "navigationBar"]
 - !private ["So11UIResponderC", "navigationController"]
@@ -671,6 +759,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "endEditing"]
 - !private ["So30UIResponderStandardEditActionsP", "endUpdates"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "nameView"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationBar"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationController"]
@@ -695,6 +784,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "course"]
 - !private ["So20UIScrollViewDelegateP", "descriptorField"]
 - !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "nameView"]
 - !private ["So20UIScrollViewDelegateP", "navigationController"]
 - !private ["So20UIScrollViewDelegateP", "nicknameView"]
@@ -715,6 +805,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "course"]
 - !private ["So16UIStateRestoringP", "descriptorField"]
 - !private ["So16UIStateRestoringP", "dismiss"]
+- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "nameView"]
 - !private ["So16UIStateRestoringP", "navigationBar"]
@@ -748,6 +839,7 @@ depends-member:
 - ["So21UITableViewControllerC", "descriptorField"]
 - ["So21UITableViewControllerC", "done"]
 - ["So21UITableViewControllerC", "init"]
+- !private ["So21UITableViewControllerC", "init"]
 - ["So21UITableViewControllerC", "nameView"]
 - !private ["So21UITableViewControllerC", "navigationController"]
 - ["So21UITableViewControllerC", "nicknameView"]
@@ -767,6 +859,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "course"]
 - !private ["So21UITableViewDataSourceP", "descriptorField"]
 - !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So21UITableViewDataSourceP", "nameView"]
 - !private ["So21UITableViewDataSourceP", "navigationController"]
 - !private ["So21UITableViewDataSourceP", "nicknameView"]
@@ -784,6 +877,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "correspondingSemester"]
 - !private ["So19UITableViewDelegateP", "course"]
 - !private ["So19UITableViewDelegateP", "descriptorField"]
+- !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "nameView"]
 - !private ["So19UITableViewDelegateP", "navigationController"]
@@ -823,6 +917,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "endEditing"]
 - !private ["So18UITraitEnvironmentP", "endUpdates"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "nameView"]
 - !private ["So18UITraitEnvironmentP", "navigationBar"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
@@ -833,6 +928,34 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "viewWillAppear"]
 - !private ["So18UITraitEnvironmentP", "viewWillDisappear"]
+- ["So23UIUserActivityRestoringP", "Course"]
+- !private ["So23UIUserActivityRestoringP", "DataManager"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewAutomaticDimension"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "barTintColor"]
+- !private ["So23UIUserActivityRestoringP", "becomeFirstResponder"]
+- !private ["So23UIUserActivityRestoringP", "beginUpdates"]
+- !private ["So23UIUserActivityRestoringP", "colorPicker"]
+- !private ["So23UIUserActivityRestoringP", "colorValue"]
+- !private ["So23UIUserActivityRestoringP", "correspondingSemester"]
+- !private ["So23UIUserActivityRestoringP", "course"]
+- !private ["So23UIUserActivityRestoringP", "descriptorField"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
+- !private ["So23UIUserActivityRestoringP", "endEditing"]
+- !private ["So23UIUserActivityRestoringP", "endUpdates"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "nameView"]
+- !private ["So23UIUserActivityRestoringP", "navigationBar"]
+- !private ["So23UIUserActivityRestoringP", "navigationController"]
+- !private ["So23UIUserActivityRestoringP", "nicknameView"]
+- !private ["So23UIUserActivityRestoringP", "tableView"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "view"]
+- !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So23UIUserActivityRestoringP", "viewWillAppear"]
+- !private ["So23UIUserActivityRestoringP", "viewWillDisappear"]
 - !private ["So6UIViewC", "barTintColor"]
 - !private ["So6UIViewC", "becomeFirstResponder"]
 - !private ["So6UIViewC", "beginUpdates"]
@@ -861,6 +984,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "dismiss"]
 - ["So16UIViewControllerC", "done"]
 - ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "nameView"]
 - !private ["So16UIViewControllerC", "navigationBar"]
 - !private ["So16UIViewControllerC", "navigationController"]
@@ -871,7 +995,6 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewWillAppear"]
 - ["So16UIViewControllerC", "viewWillDisappear"]
-- !private ["s14_ArrayProtocolP", "append"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "barTintColor"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "becomeFirstResponder"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "beginUpdates"]
@@ -881,12 +1004,18 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "red500"]
 - !private ["s26_ExpressibleByColorLiteralP", "teal500"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Course"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
@@ -907,6 +1036,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endEditing"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endUpdates"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "introduce"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "nameView"]
@@ -926,49 +1056,63 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewWillAppear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewWillDisappear"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "becomeFirstResponder"]
+- !private ["s21_ObjectiveCBridgeableP", "beginUpdates"]
+- !private ["s21_ObjectiveCBridgeableP", "colorValue"]
+- !private ["s21_ObjectiveCBridgeableP", "courses"]
+- !private ["s21_ObjectiveCBridgeableP", "endEditing"]
+- !private ["s21_ObjectiveCBridgeableP", "endUpdates"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "record"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "Sa"
-- !private "s23BidirectionalCollectionP"
+- !private "s13ArrayProtocolP"
+- !private "SK"
 - !private "So15CALayerDelegateP"
 - !private "11Logan__iOS_9CKEnabledC"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
+- !private "Sl"
 - "11Logan__iOS_10CommitmentP"
-- !private "s10ComparableP"
+- !private "SL"
 - "11Logan__iOS_6CourseC"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "11Logan__iOS_11DataManagerC"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
 - !private "So21NSItemProviderReadingP"
 - !private "So21NSItemProviderWritingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - "11Logan__iOS_28NewCourseTableViewControllerC"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
 - !private "11Logan__iOS_8SemesterC"
-- !private "s8SequenceP"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
@@ -985,6 +1129,8 @@ depends-nominal:
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
 - !private "So10UIKeyInputP"
 - !private "So15UINavigationBarC"
 - !private "So22UINavigationControllerC"
@@ -1007,9 +1153,9 @@ depends-nominal:
 - !private "So34UITextPasteConfigurationSupportingP"
 - !private "So10UITextViewC"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "s14_ArrayProtocolP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
@@ -1018,6 +1164,7 @@ depends-nominal:
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
@@ -1039,18 +1186,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "c9f6593ee9e0db9ee859dd4c454116bf"

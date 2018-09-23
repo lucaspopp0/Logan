@@ -8,6 +8,7 @@
 
 import Foundation
 import CloudKit
+import EventKit
 import UIKit.UIColor
 
 // An enum describing the type of event sent by a data manager
@@ -83,6 +84,12 @@ class DataManager: NSObject {
     var assignments: [Assignment] = []
     var tasks: [Task] = []
     
+    var apiSemesters: [APISemester] = []
+    var apiTags: [APITag] = []
+    var apiAssessments: [APIAssessment] = []
+    var apiAssignments: [APIAssignment] = []
+    var apiTasks: [APITask] = []
+    
     private var nextFileNumber: Int = 0
     var filePairings: [(number: Int, name: String)] = []
     
@@ -124,8 +131,41 @@ class DataManager: NSObject {
     
     private var dataCompiled: Bool = false
     
+    // Calendar variables
+    
+    let eventStore = EKEventStore()
+    var calendarIdsToDisplay: Set<String> {
+        get {
+            return Set<String>(UserDefaults.standard.stringArray(forKey: "Selected Calendars") ?? eventStore.calendars(for: EKEntityType.event).map({ (calendar) -> String in
+                return calendar.calendarIdentifier
+            }))
+        }
+        
+        set {
+            UserDefaults.standard.set([String](newValue), forKey: "Selected Calendars")
+        }
+    }
+    var selectedCalendars: [EKCalendar] {
+        get {
+            let all = eventStore.calendars(for: EKEntityType.event)
+            var selected: [EKCalendar] = []
+            let idsToDisplay = calendarIdsToDisplay
+            
+            for calendar in all {
+                if idsToDisplay.contains(calendar.calendarIdentifier) {
+                    selected.append(calendar)
+                }
+            }
+            
+            return selected
+        }
+    }
+    
     override init() {
         super.init()
+        
+        // MARK: - EventKit stuff
+        checkCalendarAuthorization()
         
         updateTimer = UpdateTimer(timeInterval: 60, completionBlock: { (info) in
             self.fetchDataFromCloud()
@@ -451,7 +491,7 @@ class DataManager: NSObject {
         
         let newAssignment = Assignment()
         newAssignment.title = "A12"
-        newAssignment.dueDate = DueDate.specificDeadline(deadline: BetterDate(month: 4, day: 19, year: 2018, hour: 5, minute: 0, ampm: ClockTime.AmPm.pm)!)
+        newAssignment.dueDate = DueDate.specificDeadline(deadline: BetterDate(day: CalendarDay(date: Date(timeIntervalSinceNow: 7 * 24 * 60 * 60)), time: ClockTime(hour: 5, minute: 0, ampm: ClockTime.AmPm.pm)!))
         newAssignment.commitment = course1
         
         assignments.append(newAssignment)
@@ -476,6 +516,24 @@ class DataManager: NSObject {
     }
     
     @objc func fetchDataFromCloud() {
+        if UIDevice.current.isSimulator {
+            updateTimer.reset()
+            
+            sendEventToListeners(DMLoadingEventType.end)
+            
+            return
+        }
+        
+        API.shared.fetchData { (completed, errors) in
+            if errors.count == 0 {
+                self.apiSemesters = API.shared.semesters
+                self.apiTags = API.shared.tags
+                self.apiAssessments = API.shared.assessments
+                self.apiAssignments = API.shared.assignments
+                self.apiTasks = API.shared.tasks
+            }
+        }
+        
         currentCloudStatus = DMCloudConnectionStatus.fetching
         sendEventToListeners(DMLoadingEventType.start)
         
@@ -500,7 +558,19 @@ class DataManager: NSObject {
                     let userReference = CKReference(recordID: fetchedUserRecordID, action: CKReferenceAction.none)
                     
                     for fetcher in self.fetchers {
-                        fetcher.makeQuery(createdBy: userReference, dataManager: self)
+                        fetcher.makeQuery(createdBy: userReference, dataManager: self, errorHandler: { (error) in
+                            if let cloudError = error as? CKError {
+                                if cloudError.errorCode == 3 {
+                                    Console.shared.print("CKError 3: Network error.")
+                                } else {
+                                    Console.shared.print(cloudError.localizedDescription)
+                                }
+                            }
+                            
+                            for fetcher in self.fetchers {
+                                fetcher.cancelQuery()
+                            }
+                        })
                     }
                 }
             }
@@ -508,6 +578,8 @@ class DataManager: NSObject {
     }
     
     func attemptToCompileFetchedRecords() {
+        let isInitialLoad = (semesters.count == 0)
+        
         if !dataCompiled {
             if fetchFailed {
                 dataCompiled = true
@@ -640,6 +712,56 @@ class DataManager: NSObject {
         }
         
         self.privateContainer.privateCloudDatabase.add(operation)
+    }
+    
+    // MARK: EventKit stuff
+    
+    func checkCalendarAuthorization() {
+        let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
+        
+        switch status {
+            
+        case EKAuthorizationStatus.notDetermined:
+            requestCalendarAccess()
+            Swift.print("Requesting calendar access")
+            break
+            
+        case EKAuthorizationStatus.authorized:
+            Swift.print("Access granted")
+            
+            let calendars = eventStore.calendars(for: EKEntityType.event)
+            
+            let events = eventStore.events(matching: eventStore.predicateForEvents(withStart: CalendarDay.today.dateValue!, end: CalendarDay(date: Date().addingTimeInterval(24*60*60)).dateValue!, calendars: nil))
+//            Swift.print(events)
+            
+            break
+            
+        case EKAuthorizationStatus.restricted, EKAuthorizationStatus.denied:
+            Swift.print("Access denied")
+            break
+            
+        }
+    }
+    
+    private func requestCalendarAccess() {
+        eventStore.requestAccess(to: EKEntityType.event) { (accessGranted, error) in
+            if accessGranted {
+                DispatchQueue.main.async {
+                    Swift.print("Access granted")
+                }
+            } else {
+                DispatchQueue.main.async {
+                    Swift.print("Access denied")
+                }
+            }
+        }
+    }
+    
+    func events(for day: CalendarDay) -> [EKEvent] {
+        let start = day.dateValue!
+        let end = day.dateValue!.addingTimeInterval(24 * 60 * 60)
+        let events = eventStore.events(matching: eventStore.predicateForEvents(withStart: start, end: end, calendars: selectedCalendars))
+        return events
     }
     
 }

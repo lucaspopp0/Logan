@@ -27,7 +27,9 @@ depends-top-level:
 - !private "ClockTime"
 - !private "Date"
 - !private "Double"
+- !private "FloatLiteralType"
 - !private "Int"
+- !private "IntegerLiteralType"
 - "ScheduleTableViewCell"
 - !private "StringLiteralType"
 - "UIColorSwatch"
@@ -36,10 +38,11 @@ depends-top-level:
 - !private "UnicodeScalarType"
 - !private "floor"
 depends-member:
-- !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "isEmpty"]
-- !private ["s19BinaryFloatingPointP", "init"]
-- !private ["s13BinaryIntegerP", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "isEmpty"]
+- !private ["SB", "init"]
+- !private ["Sz", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "ClockTime"]
 - !private ["So15CALayerDelegateP", "Date"]
@@ -54,6 +57,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "courseNameLabel"]
 - !private ["So15CALayerDelegateP", "floor"]
 - !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "isHidden"]
 - !private ["So15CALayerDelegateP", "locationLabel"]
 - !private ["So15CALayerDelegateP", "text"]
@@ -67,7 +71,12 @@ depends-member:
 - !private ["11Logan__iOS_9CKEnabledC", "nickname"]
 - !private ["11Logan__iOS_9CKEnabledC", "startTime"]
 - !private ["11Logan__iOS_9CKEnabledC", "title"]
-- !private ["So13CKRecordValueP", "isEmpty"]
+- !private ["8CloudKit24CKRecordValueConvertibleP", "isEmpty"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "isEmpty"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "timeIntervalSince"]
 - !private ["So15CNKeyDescriptorP", "isEmpty"]
 - !private ["s7CVarArgP", "ClockTime"]
 - !private ["s7CVarArgP", "Date"]
@@ -85,6 +94,7 @@ depends-member:
 - !private ["s7CVarArgP", "courseNameLabel"]
 - !private ["s7CVarArgP", "endTime"]
 - !private ["s7CVarArgP", "floor"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "isHidden"]
@@ -105,14 +115,16 @@ depends-member:
 - !private ["11Logan__iOS_9ClockTimeC", "fixedToDate"]
 - !private ["11Logan__iOS_9ClockTimeC", "init"]
 - !private ["11Logan__iOS_9ClockTimeC", "stringValue"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "isEmpty"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "isEmpty"]
 - !private ["11Logan__iOS_10CommitmentP", "color"]
 - !private ["11Logan__iOS_10CommitmentP", "name"]
 - !private ["11Logan__iOS_10CommitmentP", "nickname"]
-- !private ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "isEmpty"]
-- !private ["s10ComparableP", "timeIntervalSince"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "isEmpty"]
+- !private ["SL", "timeIntervalSince"]
 - !private ["11Logan__iOS_6CourseC", "color"]
 - !private ["11Logan__iOS_6CourseC", "deinit"]
 - !private ["11Logan__iOS_6CourseC", "name"]
@@ -133,6 +145,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "endTime"]
 - !private ["s28CustomDebugStringConvertibleP", "floor"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "location"]
@@ -147,11 +160,18 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "isEmpty"]
 - !private ["s29CustomPlaygroundQuickLookableP", "timeIntervalSince"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "color"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "isHidden"]
+- !private ["s17CustomReflectableP", "name"]
+- !private ["s17CustomReflectableP", "nickname"]
+- !private ["s17CustomReflectableP", "text"]
 - !private ["s17CustomReflectableP", "timeIntervalSince"]
 - !private ["s23CustomStringConvertibleP", "ClockTime"]
 - !private ["s23CustomStringConvertibleP", "Date"]
@@ -170,6 +190,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "endTime"]
 - !private ["s23CustomStringConvertibleP", "floor"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
 - !private ["s23CustomStringConvertibleP", "location"]
@@ -184,88 +205,112 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "title"]
 - !private ["10Foundation4DateV", "init"]
 - !private ["10Foundation4DateV", "timeIntervalSince"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "isEmpty"]
-- !private ["s9DecodableP", "timeIntervalSince"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "color"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "isHidden"]
+- !private ["Se", "name"]
+- !private ["Se", "nickname"]
+- !private ["Se", "text"]
+- !private ["Se", "timeIntervalSince"]
 - !private ["Sd", "init"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "isEmpty"]
-- !private ["s9EncodableP", "timeIntervalSince"]
-- !private ["s9EquatableP", "ClockTime"]
-- !private ["s9EquatableP", "Date"]
-- !private ["s9EquatableP", "Double"]
-- !private ["s9EquatableP", "Int"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "classTitleLabel"]
-- !private ["s9EquatableP", "classToDisplay"]
-- !private ["s9EquatableP", "color"]
-- !private ["s9EquatableP", "colorSwatch"]
-- !private ["s9EquatableP", "colorValue"]
-- !private ["s9EquatableP", "configureCell"]
-- !private ["s9EquatableP", "course"]
-- !private ["s9EquatableP", "courseNameLabel"]
-- !private ["s9EquatableP", "endTime"]
-- !private ["s9EquatableP", "floor"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "isEmpty"]
-- !private ["s9EquatableP", "isHidden"]
-- !private ["s9EquatableP", "location"]
-- !private ["s9EquatableP", "locationLabel"]
-- !private ["s9EquatableP", "name"]
-- !private ["s9EquatableP", "nickname"]
-- !private ["s9EquatableP", "startTime"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "timeIntervalSince"]
-- !private ["s9EquatableP", "timeLabel"]
-- !private ["s9EquatableP", "timeRemainingLabel"]
-- !private ["s9EquatableP", "title"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "color"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "isHidden"]
+- !private ["SE", "name"]
+- !private ["SE", "nickname"]
+- !private ["SE", "text"]
+- !private ["SE", "timeIntervalSince"]
+- !private ["SQ", "ClockTime"]
+- !private ["SQ", "Date"]
+- !private ["SQ", "Double"]
+- !private ["SQ", "Int"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "classTitleLabel"]
+- !private ["SQ", "classToDisplay"]
+- !private ["SQ", "color"]
+- !private ["SQ", "colorSwatch"]
+- !private ["SQ", "colorValue"]
+- !private ["SQ", "configureCell"]
+- !private ["SQ", "course"]
+- !private ["SQ", "courseNameLabel"]
+- !private ["SQ", "endTime"]
+- !private ["SQ", "floor"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isEmpty"]
+- !private ["SQ", "isHidden"]
+- !private ["SQ", "location"]
+- !private ["SQ", "locationLabel"]
+- !private ["SQ", "name"]
+- !private ["SQ", "nickname"]
+- !private ["SQ", "startTime"]
+- !private ["SQ", "text"]
+- !private ["SQ", "timeIntervalSince"]
+- !private ["SQ", "timeLabel"]
+- !private ["SQ", "timeRemainingLabel"]
+- !private ["SQ", "title"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "color"]
+- !private ["s23ExpressibleByNilLiteralP", "isHidden"]
+- !private ["s23ExpressibleByNilLiteralP", "name"]
+- !private ["s23ExpressibleByNilLiteralP", "nickname"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
 - !private ["s17FixedWidthIntegerP", "init"]
-- !private ["s13FloatingPointP", "init"]
-- !private ["s8HashableP", "ClockTime"]
-- !private ["s8HashableP", "Date"]
-- !private ["s8HashableP", "Double"]
-- !private ["s8HashableP", "Int"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "classTitleLabel"]
-- !private ["s8HashableP", "classToDisplay"]
-- !private ["s8HashableP", "color"]
-- !private ["s8HashableP", "colorSwatch"]
-- !private ["s8HashableP", "colorValue"]
-- !private ["s8HashableP", "configureCell"]
-- !private ["s8HashableP", "course"]
-- !private ["s8HashableP", "courseNameLabel"]
-- !private ["s8HashableP", "endTime"]
-- !private ["s8HashableP", "floor"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "isEmpty"]
-- !private ["s8HashableP", "isHidden"]
-- !private ["s8HashableP", "location"]
-- !private ["s8HashableP", "locationLabel"]
-- !private ["s8HashableP", "name"]
-- !private ["s8HashableP", "nickname"]
-- !private ["s8HashableP", "startTime"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "timeIntervalSince"]
-- !private ["s8HashableP", "timeLabel"]
-- !private ["s8HashableP", "timeRemainingLabel"]
-- !private ["s8HashableP", "title"]
+- !private ["SF", "init"]
+- !private ["SH", "ClockTime"]
+- !private ["SH", "Date"]
+- !private ["SH", "Double"]
+- !private ["SH", "Int"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "classTitleLabel"]
+- !private ["SH", "classToDisplay"]
+- !private ["SH", "color"]
+- !private ["SH", "colorSwatch"]
+- !private ["SH", "colorValue"]
+- !private ["SH", "configureCell"]
+- !private ["SH", "course"]
+- !private ["SH", "courseNameLabel"]
+- !private ["SH", "endTime"]
+- !private ["SH", "floor"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "isEmpty"]
+- !private ["SH", "isHidden"]
+- !private ["SH", "location"]
+- !private ["SH", "locationLabel"]
+- !private ["SH", "name"]
+- !private ["SH", "nickname"]
+- !private ["SH", "startTime"]
+- !private ["SH", "text"]
+- !private ["SH", "timeIntervalSince"]
+- !private ["SH", "timeLabel"]
+- !private ["SH", "timeRemainingLabel"]
+- !private ["SH", "title"]
 - !private ["Si", "init"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "isEmpty"]
 - !private ["So8NSCodingP", "ClockTime"]
@@ -280,6 +325,7 @@ depends-member:
 - !private ["So8NSCodingP", "configureCell"]
 - !private ["So8NSCodingP", "courseNameLabel"]
 - !private ["So8NSCodingP", "floor"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isEmpty"]
 - !private ["So8NSCodingP", "isHidden"]
@@ -309,6 +355,7 @@ depends-member:
 - !private ["So8NSObjectC", "endTime"]
 - !private ["So8NSObjectC", "floor"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isEmpty"]
 - !private ["So8NSObjectC", "isHidden"]
 - !private ["So8NSObjectC", "location"]
@@ -320,38 +367,45 @@ depends-member:
 - ["So8NSObjectC", "timeLabel"]
 - ["So8NSObjectC", "timeRemainingLabel"]
 - !private ["So8NSObjectC", "title"]
-- !private ["So16NSObjectProtocolP", "ClockTime"]
-- !private ["So16NSObjectProtocolP", "Date"]
-- !private ["So16NSObjectProtocolP", "Double"]
-- !private ["So16NSObjectProtocolP", "Int"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "classTitleLabel"]
-- !private ["So16NSObjectProtocolP", "classToDisplay"]
-- !private ["So16NSObjectProtocolP", "color"]
-- !private ["So16NSObjectProtocolP", "colorSwatch"]
-- !private ["So16NSObjectProtocolP", "colorValue"]
-- !private ["So16NSObjectProtocolP", "configureCell"]
-- !private ["So16NSObjectProtocolP", "course"]
-- !private ["So16NSObjectProtocolP", "courseNameLabel"]
-- !private ["So16NSObjectProtocolP", "endTime"]
-- !private ["So16NSObjectProtocolP", "floor"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "isEmpty"]
-- !private ["So16NSObjectProtocolP", "isHidden"]
-- !private ["So16NSObjectProtocolP", "location"]
-- !private ["So16NSObjectProtocolP", "locationLabel"]
-- !private ["So16NSObjectProtocolP", "name"]
-- !private ["So16NSObjectProtocolP", "nickname"]
-- !private ["So16NSObjectProtocolP", "startTime"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "timeLabel"]
-- !private ["So16NSObjectProtocolP", "timeRemainingLabel"]
-- !private ["So16NSObjectProtocolP", "title"]
+- !private ["So8NSObjectP", "ClockTime"]
+- !private ["So8NSObjectP", "Date"]
+- !private ["So8NSObjectP", "Double"]
+- !private ["So8NSObjectP", "Int"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "classTitleLabel"]
+- !private ["So8NSObjectP", "classToDisplay"]
+- !private ["So8NSObjectP", "color"]
+- !private ["So8NSObjectP", "colorSwatch"]
+- !private ["So8NSObjectP", "colorValue"]
+- !private ["So8NSObjectP", "configureCell"]
+- !private ["So8NSObjectP", "course"]
+- !private ["So8NSObjectP", "courseNameLabel"]
+- !private ["So8NSObjectP", "endTime"]
+- !private ["So8NSObjectP", "floor"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isEmpty"]
+- !private ["So8NSObjectP", "isHidden"]
+- !private ["So8NSObjectP", "location"]
+- !private ["So8NSObjectP", "locationLabel"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "nickname"]
+- !private ["So8NSObjectP", "startTime"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "timeLabel"]
+- !private ["So8NSObjectP", "timeRemainingLabel"]
+- !private ["So8NSObjectP", "title"]
 - !private ["So14NSSecureCodingP", "isEmpty"]
 - !private ["So8NSStringC", "isEmpty"]
-- !private ["s7NumericP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
+- !private ["Sj", "init"]
+- !private ["Sq", "color"]
+- !private ["Sq", "isHidden"]
+- !private ["Sq", "name"]
+- !private ["Sq", "nickname"]
+- !private ["Sq", "text"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "isEmpty"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "timeIntervalSince"]
 - ["11Logan__iOS_21ScheduleTableViewCellC", "Class"]
@@ -366,23 +420,27 @@ depends-member:
 - ["11Logan__iOS_21ScheduleTableViewCellC", "colorSwatch"]
 - ["11Logan__iOS_21ScheduleTableViewCellC", "configureCell"]
 - ["11Logan__iOS_21ScheduleTableViewCellC", "courseNameLabel"]
-- ["11Logan__iOS_21ScheduleTableViewCellC", "deinit"]
 - !private ["11Logan__iOS_21ScheduleTableViewCellC", "floor"]
 - ["11Logan__iOS_21ScheduleTableViewCellC", "init"]
 - ["11Logan__iOS_21ScheduleTableViewCellC", "locationLabel"]
 - ["11Logan__iOS_21ScheduleTableViewCellC", "timeLabel"]
 - ["11Logan__iOS_21ScheduleTableViewCellC", "timeRemainingLabel"]
-- !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "isEmpty"]
-- !private ["s13SignedIntegerP", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "isEmpty"]
+- !private ["SZ", "init"]
 - !private ["s13SignedNumericP", "init"]
-- !private ["s10StrideableP", "init"]
+- !private ["Sx", "init"]
+- !private ["SS", "init"]
 - !private ["SS", "init"]
 - !private ["SS", "isEmpty"]
-- !private ["s14StringProtocolP", "init"]
-- !private ["s14StringProtocolP", "isEmpty"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "isEmpty"]
+- !private ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "isEmpty"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "isEmpty"]
 - !private ["So29UIAccessibilityIdentificationP", "ClockTime"]
@@ -397,6 +455,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "configureCell"]
 - !private ["So29UIAccessibilityIdentificationP", "courseNameLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "floor"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "isHidden"]
 - !private ["So29UIAccessibilityIdentificationP", "locationLabel"]
@@ -416,6 +475,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "courseNameLabel"]
 - !private ["So12UIAppearanceP", "floor"]
 - !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "isHidden"]
 - !private ["So12UIAppearanceP", "locationLabel"]
 - !private ["So12UIAppearanceP", "text"]
@@ -433,6 +493,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "configureCell"]
 - !private ["So21UIAppearanceContainerP", "courseNameLabel"]
 - !private ["So21UIAppearanceContainerP", "floor"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
 - !private ["So21UIAppearanceContainerP", "locationLabel"]
@@ -456,6 +517,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "courseNameLabel"]
 - !private ["So17UICoordinateSpaceP", "floor"]
 - !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "isHidden"]
 - !private ["So17UICoordinateSpaceP", "locationLabel"]
 - !private ["So17UICoordinateSpaceP", "text"]
@@ -473,6 +535,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "configureCell"]
 - !private ["So13UIDynamicItemP", "courseNameLabel"]
 - !private ["So13UIDynamicItemP", "floor"]
+- !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "isHidden"]
 - !private ["So13UIDynamicItemP", "locationLabel"]
@@ -492,6 +555,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "courseNameLabel"]
 - !private ["So18UIFocusEnvironmentP", "floor"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
 - !private ["So18UIFocusEnvironmentP", "locationLabel"]
 - !private ["So18UIFocusEnvironmentP", "text"]
@@ -510,11 +574,31 @@ depends-member:
 - !private ["So11UIFocusItemP", "courseNameLabel"]
 - !private ["So11UIFocusItemP", "floor"]
 - !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "isHidden"]
 - !private ["So11UIFocusItemP", "locationLabel"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "timeLabel"]
 - !private ["So11UIFocusItemP", "timeRemainingLabel"]
+- !private ["So20UIFocusItemContainerP", "ClockTime"]
+- !private ["So20UIFocusItemContainerP", "Date"]
+- !private ["So20UIFocusItemContainerP", "Double"]
+- !private ["So20UIFocusItemContainerP", "Int"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "classTitleLabel"]
+- !private ["So20UIFocusItemContainerP", "classToDisplay"]
+- !private ["So20UIFocusItemContainerP", "colorSwatch"]
+- !private ["So20UIFocusItemContainerP", "colorValue"]
+- !private ["So20UIFocusItemContainerP", "configureCell"]
+- !private ["So20UIFocusItemContainerP", "courseNameLabel"]
+- !private ["So20UIFocusItemContainerP", "floor"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "isHidden"]
+- !private ["So20UIFocusItemContainerP", "locationLabel"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "timeLabel"]
+- !private ["So20UIFocusItemContainerP", "timeRemainingLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "ClockTime"]
 - !private ["So27UIGestureRecognizerDelegateP", "Date"]
 - !private ["So27UIGestureRecognizerDelegateP", "Double"]
@@ -526,6 +610,7 @@ depends-member:
 - !private ["So27UIGestureRecognizerDelegateP", "configureCell"]
 - !private ["So27UIGestureRecognizerDelegateP", "courseNameLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "floor"]
+- !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "locationLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "timeLabel"]
@@ -544,6 +629,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "configureCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "courseNameLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "floor"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "locationLabel"]
@@ -565,6 +651,7 @@ depends-member:
 - ["So11UIResponderC", "courseNameLabel"]
 - !private ["So11UIResponderC", "floor"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isHidden"]
 - ["So11UIResponderC", "locationLabel"]
 - !private ["So11UIResponderC", "text"]
@@ -582,6 +669,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "configureCell"]
 - !private ["So30UIResponderStandardEditActionsP", "courseNameLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "floor"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "locationLabel"]
@@ -603,6 +691,7 @@ depends-member:
 - ["So15UITableViewCellC", "courseNameLabel"]
 - !private ["So15UITableViewCellC", "floor"]
 - ["So15UITableViewCellC", "init"]
+- !private ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "locationLabel"]
 - ["So15UITableViewCellC", "timeLabel"]
 - ["So15UITableViewCellC", "timeRemainingLabel"]
@@ -619,11 +708,31 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "courseNameLabel"]
 - !private ["So18UITraitEnvironmentP", "floor"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
 - !private ["So18UITraitEnvironmentP", "locationLabel"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "timeLabel"]
 - !private ["So18UITraitEnvironmentP", "timeRemainingLabel"]
+- !private ["So23UIUserActivityRestoringP", "ClockTime"]
+- !private ["So23UIUserActivityRestoringP", "Date"]
+- !private ["So23UIUserActivityRestoringP", "Double"]
+- !private ["So23UIUserActivityRestoringP", "Int"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "classTitleLabel"]
+- !private ["So23UIUserActivityRestoringP", "classToDisplay"]
+- !private ["So23UIUserActivityRestoringP", "colorSwatch"]
+- !private ["So23UIUserActivityRestoringP", "colorValue"]
+- !private ["So23UIUserActivityRestoringP", "configureCell"]
+- !private ["So23UIUserActivityRestoringP", "courseNameLabel"]
+- !private ["So23UIUserActivityRestoringP", "floor"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "isHidden"]
+- !private ["So23UIUserActivityRestoringP", "locationLabel"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "timeLabel"]
+- !private ["So23UIUserActivityRestoringP", "timeRemainingLabel"]
 - ["So6UIViewC", "Class"]
 - !private ["So6UIViewC", "ClockTime"]
 - !private ["So6UIViewC", "Date"]
@@ -639,6 +748,7 @@ depends-member:
 - ["So6UIViewC", "courseNameLabel"]
 - !private ["So6UIViewC", "floor"]
 - ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "isHidden"]
 - ["So6UIViewC", "locationLabel"]
 - !private ["So6UIViewC", "text"]
@@ -660,6 +770,7 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "courseNameLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "floor"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isHidden"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "locationLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
@@ -667,17 +778,23 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "timeRemainingLabel"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "isEmpty"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ClockTime"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
@@ -695,6 +812,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endTime"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "floor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "location"]
@@ -707,45 +825,55 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "timeRemainingLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "color"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "isHidden"]
+- !private ["s21_ObjectiveCBridgeableP", "name"]
+- !private ["s21_ObjectiveCBridgeableP", "nickname"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
 - !private ["s21_ObjectiveCBridgeableP", "timeIntervalSince"]
 - !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "isEmpty"]
+- !private ["So13CKRecordValueP", "isEmpty"]
 depends-nominal:
-- !private "s23BidirectionalCollectionP"
-- !private "s19BinaryFloatingPointP"
-- !private "s13BinaryIntegerP"
+- !private "SK"
+- !private "SB"
+- !private "Sz"
 - !private "Sb"
 - "So15CALayerDelegateP"
 - !private "11Logan__iOS_9CKEnabledC"
-- !private "So13CKRecordValueP"
+- !private "8CloudKit24CKRecordValueConvertibleP"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
 - !private "11Logan__iOS_5ClassC"
 - !private "11Logan__iOS_9ClockTimeC"
-- !private "s10CollectionP"
+- !private "Sl"
 - !private "11Logan__iOS_10CommitmentP"
-- !private "s10ComparableP"
+- !private "SL"
 - !private "11Logan__iOS_6CourseC"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "10Foundation4DateV"
-- !private "s9DecodableP"
+- !private "Se"
 - !private "Sd"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "SE"
+- "SQ"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
-- !private "s13FloatingPointP"
-- "s8HashableP"
+- !private "SF"
+- "SH"
 - !private "Si"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
@@ -755,19 +883,20 @@ depends-nominal:
 - !private "So21NSItemProviderWritingP"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
-- !private "s7NumericP"
-- !private "s26RangeReplaceableCollectionP"
+- !private "Sj"
+- !private "Sq"
+- !private "Sm"
 - !private "10Foundation20ReferenceConvertibleP"
 - "11Logan__iOS_21ScheduleTableViewCellC"
-- !private "s8SequenceP"
-- !private "s13SignedIntegerP"
+- !private "ST"
+- !private "SZ"
 - !private "s13SignedNumericP"
-- !private "s10StrideableP"
+- !private "Sx"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
@@ -780,6 +909,7 @@ depends-nominal:
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - "So27UIGestureRecognizerDelegateP"
 - !private "So7UILabelC"
 - "So30UIPasteConfigurationSupportingP"
@@ -787,6 +917,7 @@ depends-nominal:
 - "So30UIResponderStandardEditActionsP"
 - "So15UITableViewCellC"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - !private "s18_BitwiseOperationsP"
 - !private "s15_CVarArgAlignedP"
@@ -804,6 +935,7 @@ depends-nominal:
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
+- !private "So13CKRecordValueP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
@@ -822,18 +954,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "75c32647bf72fba3a808f110ec6d8ca6"

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1kt-VS-kif">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1kt-VS-kif">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--Semester-->
         <scene sceneID="DVi-gh-khx">
             <objects>
-                <tableViewController storyboardIdentifier="Semester Detail" title="Semester" hidesBottomBarWhenPushed="YES" id="1kt-VS-kif" customClass="SemesterTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Semester Detail" title="Semester" hidesBottomBarWhenPushed="YES" id="1kt-VS-kif" customClass="SemesterTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="eJw-5Y-43L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Boundary" rowHeight="157" id="qCu-sl-obP" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Boundary" rowHeight="157" id="qCu-sl-obP" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="99.5" width="375" height="157"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qCu-sl-obP" id="Ah2-81-UKl">
@@ -64,7 +64,7 @@
                                             <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pp-EZ-NPW" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                        <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pp-EZ-NPW" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="16" y="49" width="343" height="60"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -91,7 +91,7 @@
                                     <outlet property="picker" destination="3Pp-EZ-NPW" id="ftV-zS-8B5"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Course" rowHeight="67" id="iwr-pW-Los" customClass="CourseTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Course" rowHeight="67" id="iwr-pW-Los" customClass="CourseTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="256.5" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iwr-pW-Los" id="oDW-Md-9NF">
@@ -115,7 +115,7 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="age-mi-A1i" customClass="UIColorSwatch" customModule="iOS_Todo" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="age-mi-A1i" customClass="UIColorSwatch" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="16" y="21.5" width="24" height="24"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -137,9 +137,7 @@
                                     <outlet property="colorSwatch" destination="age-mi-A1i" id="L2P-9J-FYt"/>
                                     <outlet property="descriptorLabel" destination="HnT-Zj-hDB" id="B1y-Qh-4vG"/>
                                     <outlet property="nameLabel" destination="YMH-4W-p1v" id="cBJ-5o-p9o"/>
-                                    <segue destination="7Kx-m2-hwT" kind="show" id="lSP-Xh-nPR">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <segue destination="7Kx-m2-hwT" kind="show" id="lSP-Xh-nPR"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Course" textLabel="aqU-WY-SPV" style="IBUITableViewCellStyleDefault" id="lcr-Os-kNL">
@@ -195,7 +193,7 @@
         <!--Better Navigation Controller-->
         <scene sceneID="ni0-T6-9l8">
             <objects>
-                <navigationController storyboardIdentifier="New Semester Navigation Controller" id="faT-9p-fuf" customClass="BetterNavigationController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="New Semester Navigation Controller" id="faT-9p-fuf" customClass="BetterNavigationController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="TFS-8p-NXr">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -212,7 +210,7 @@
         <!--Course-->
         <scene sceneID="8qy-LB-CUr">
             <objects>
-                <tableViewController storyboardIdentifier="Course Detail" title="Course" id="7Kx-m2-hwT" customClass="CourseTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Course Detail" title="Course" id="7Kx-m2-hwT" customClass="CourseTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="da2-ya-ikg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,7 +226,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QW5-pE-FsR">
                                             <rect key="frame" x="16" y="15" width="343" height="39"/>
                                             <subviews>
-                                                <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cza-2Y-y3L" customClass="UIColorSwatch" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cza-2Y-y3L" customClass="UIColorSwatch" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="2" width="35" height="35"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -239,7 +237,7 @@
                                                         <action selector="toggleColorPicker:" destination="7Kx-m2-hwT" eventType="touchUpInside" id="BtZ-Mr-nnf"/>
                                                     </connections>
                                                 </view>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RYL-Lf-Vn9" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RYL-Lf-Vn9" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="47" y="0.0" width="296" height="39"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -253,7 +251,7 @@
                                                 </textView>
                                             </subviews>
                                         </stackView>
-                                        <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6n2-qz-7Po" customClass="UIColorPicker" customModule="iOS_Todo" customModuleProvider="target">
+                                        <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6n2-qz-7Po" customClass="UIColorPicker" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="16" y="70" width="343" height="60"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -281,7 +279,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWP-BJ-XHx" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWP-BJ-XHx" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="134" y="15" width="225" height="23"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -343,7 +341,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Class" rowHeight="86" id="6nI-30-89u" customClass="ClassTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Class" rowHeight="86" id="6nI-30-89u" customClass="ClassTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="330.5" width="375" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6nI-30-89u" id="8xf-PX-6Be">
@@ -359,7 +357,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Bfc-Ts-h7y" customClass="DayOfWeekIndicator" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Bfc-Ts-h7y" customClass="DayOfWeekIndicator" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="20.5" width="240" height="20"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -378,9 +376,7 @@
                                 <connections>
                                     <outlet property="dayOfWeekIndicator" destination="Bfc-Ts-h7y" id="mZG-yk-ykg"/>
                                     <outlet property="titleLabel" destination="o5q-Pk-oiQ" id="JBe-D2-fTO"/>
-                                    <segue destination="luV-qa-uYZ" kind="show" id="0sZ-g6-vBs">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <segue destination="luV-qa-uYZ" kind="show" id="0sZ-g6-vBs"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Class" textLabel="VUb-sX-xy4" style="IBUITableViewCellStyleDefault" id="ktl-UZ-jhk">
@@ -403,7 +399,7 @@
                                     <segue destination="dqx-87-JSr" kind="presentation" id="wpW-Aq-YAB"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Exam" rowHeight="104" id="5Xk-Xi-58k" customClass="ExamTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Exam" rowHeight="104" id="5Xk-Xi-58k" customClass="ExamTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="460.5" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Xk-Xi-58k" id="UzV-mC-fo6">
@@ -445,9 +441,7 @@
                                     <outlet property="dateLabel" destination="RfH-TY-Wbe" id="z8t-S2-Py4"/>
                                     <outlet property="locationLabel" destination="doD-Ub-fgl" id="cMl-R1-Ieu"/>
                                     <outlet property="titleLabel" destination="f7s-ER-TmT" id="CIG-mW-dYi"/>
-                                    <segue destination="Hqv-Xu-kgq" kind="show" id="iqP-q8-3tp">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <segue destination="Hqv-Xu-kgq" kind="show" id="iqP-q8-3tp"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Exam" textLabel="4lS-7U-HKK" style="IBUITableViewCellStyleDefault" id="toY-kO-ZiU">
@@ -484,7 +478,7 @@
         <!--Class-->
         <scene sceneID="Hzj-w6-GHk">
             <objects>
-                <tableViewController id="luV-qa-uYZ" customClass="ClassTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="luV-qa-uYZ" customClass="ClassTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PAX-1z-Shh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -506,6 +500,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
                                                         <action selector="titleUpdated:" destination="luV-qa-uYZ" eventType="valueChanged" id="8Gq-rw-7hZ"/>
+                                                        <action selector="titleUpdated:" destination="luV-qa-uYZ" eventType="editingChanged" id="ZZ8-7Q-ueH"/>
                                                         <outlet property="delegate" destination="luV-qa-uYZ" id="YRz-J9-XHj"/>
                                                     </connections>
                                                 </textField>
@@ -532,6 +527,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                                     <connections>
                                                         <action selector="locationUpdated:" destination="luV-qa-uYZ" eventType="valueChanged" id="k7T-E2-pSc"/>
+                                                        <action selector="locationUpdated:" destination="luV-qa-uYZ" eventType="editingChanged" id="wcn-gD-aq8"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -547,7 +543,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Date" id="leB-jU-fdM">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="BLL-q7-o7b" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="BLL-q7-o7b" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="188" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BLL-q7-o7b" id="nPv-WX-zdK">
@@ -566,7 +562,7 @@
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osq-Dl-ZOa" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osq-Dl-ZOa" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="49" width="343" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -593,7 +589,7 @@
                                             <outlet property="picker" destination="Osq-Dl-ZOa" id="BYZ-Bv-S14"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="WRC-Go-mQ2" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="WRC-Go-mQ2" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="302" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WRC-Go-mQ2" id="KfD-Zt-PgG">
@@ -612,7 +608,7 @@
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXR-cC-cq9" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXR-cC-cq9" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="49" width="343" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -643,7 +639,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Time" id="E08-KA-UIZ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="zhD-UN-SeB" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="zhD-UN-SeB" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="472" width="375" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zhD-UN-SeB" id="65A-KS-I4V">
@@ -688,7 +684,7 @@
                                             <outlet property="picker" destination="61J-ep-Mjt" id="EI8-58-5rF"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="x34-5s-MYg" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="x34-5s-MYg" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="748" width="375" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x34-5s-MYg" id="IAG-ym-KJm">
@@ -696,19 +692,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpE-gl-P2l">
-                                                    <rect key="frame" x="8" y="15" width="38" height="21"/>
+                                                    <rect key="frame" x="8" y="12" width="38" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j0-Ic-DpR">
-                                                    <rect key="frame" x="325" y="15" width="42" height="21"/>
+                                                    <rect key="frame" x="325" y="12" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <datePicker tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="q3o-xO-BWs">
-                                                    <rect key="frame" x="0.0" y="48" width="375" height="216"/>
+                                                    <rect key="frame" x="0.0" y="45" width="375" height="216"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="537340583.38071406">
                                                         <!--2018-01-11 05:16:23 +0000-->
                                                     </date>
@@ -745,13 +741,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeats every" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zor-qv-V3G">
-                                                    <rect key="frame" x="8" y="15" width="109" height="14"/>
+                                                    <rect key="frame" x="8" y="12" width="109" height="19.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz2-re-A6z">
-                                                    <rect key="frame" x="223" y="15" width="42" height="14"/>
+                                                    <rect key="frame" x="223" y="12" width="42" height="19.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -779,17 +775,17 @@
                                         <rect key="frame" x="0.0" y="1124" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="is7-wa-MJ4" id="Wbw-aH-9zd">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="349" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmO-9a-PcA">
-                                                    <rect key="frame" x="8" y="15" width="22.5" height="14"/>
+                                                    <rect key="frame" x="8" y="12" width="22.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf7-ZF-bNu">
-                                                    <rect key="frame" x="292" y="15" width="42" height="14"/>
+                                                    <rect key="frame" x="299" y="12" width="42" height="19.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -805,9 +801,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="xTg-Fg-L6K" kind="show" id="bdC-Zz-Yqr">
-                                                <nil key="action"/>
-                                            </segue>
+                                            <segue destination="xTg-Fg-L6K" kind="show" id="bdC-Zz-Yqr"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -850,7 +844,7 @@
         <!--Commitments-->
         <scene sceneID="FHW-hq-h7k">
             <objects>
-                <navigationController storyboardIdentifier="Initial Navigation Controller" id="9N4-iu-ilc" customClass="BetterNavigationController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Initial Navigation Controller" id="9N4-iu-ilc" customClass="BetterNavigationController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Commitments" image="Semesters" selectedImage="Semesters (Filled)" id="rJg-bw-0yk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="awN-8b-wWR">
@@ -868,7 +862,7 @@
         <!--New Semester-->
         <scene sceneID="Sn8-q6-Szh">
             <objects>
-                <tableViewController storyboardIdentifier="New Semester Detail" title="New Semester" id="Ji7-cI-lB5" customClass="NewSemesterTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="New Semester Detail" title="New Semester" id="Ji7-cI-lB5" customClass="NewSemesterTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="aIJ-kv-WCl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -898,7 +892,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Boundary" rowHeight="116" id="sO7-m9-VFB" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Boundary" rowHeight="116" id="sO7-m9-VFB" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="79" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sO7-m9-VFB" id="5Eq-Yo-rDj">
@@ -917,7 +911,7 @@
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yo-Qf-gNy" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yo-Qf-gNy" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="49" width="343" height="60"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -944,7 +938,7 @@
                                             <outlet property="picker" destination="9yo-Qf-gNy" id="t62-82-nof"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Boundary" rowHeight="129" id="WGA-Ij-GFJ" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Boundary" rowHeight="129" id="WGA-Ij-GFJ" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="195" width="375" height="129"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WGA-Ij-GFJ" id="bI4-of-R8f">
@@ -963,7 +957,7 @@
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJf-mn-0y5" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJf-mn-0y5" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="49" width="343" height="60"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -1025,7 +1019,7 @@
         <!--Better Navigation Controller-->
         <scene sceneID="2mH-Md-Bk7">
             <objects>
-                <navigationController id="cAr-Vi-Nlk" customClass="BetterNavigationController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="cAr-Vi-Nlk" customClass="BetterNavigationController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="BZa-B4-Ak4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1042,7 +1036,7 @@
         <!--Course-->
         <scene sceneID="6PZ-ln-Fdv">
             <objects>
-                <tableViewController storyboardIdentifier="New Course Detail" title="Course" id="cZd-8X-NND" customClass="NewCourseTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="New Course Detail" title="Course" id="cZd-8X-NND" customClass="NewCourseTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Wfn-F0-qRV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1057,7 +1051,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ubw-fw-CZ2" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ubw-fw-CZ2" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="15" width="343" height="25"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -1085,7 +1079,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUe-48-3tc" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUe-48-3tc" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="134" y="15" width="225" height="23"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -1151,7 +1145,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="104.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIf-vN-cqY" customClass="UIColorPicker" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIf-vN-cqY" customClass="UIColorPicker" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="15" width="343" height="75"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <connections>
@@ -1201,7 +1195,7 @@
         <!--Better Navigation Controller-->
         <scene sceneID="TGY-jk-0Na">
             <objects>
-                <navigationController id="dqx-87-JSr" customClass="BetterNavigationController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="dqx-87-JSr" customClass="BetterNavigationController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="2GD-ZF-fGs">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1218,7 +1212,7 @@
         <!--New Class-->
         <scene sceneID="kC1-h2-NdV">
             <objects>
-                <tableViewController storyboardIdentifier="New Class Detail" id="3x8-vw-HNN" customClass="NewClassTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="New Class Detail" id="3x8-vw-HNN" customClass="NewClassTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="jcF-V7-qYt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1278,7 +1272,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Date" id="b2u-iT-Xm6">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="oFu-Ti-c1b" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="oFu-Ti-c1b" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="188" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oFu-Ti-c1b" id="GuP-vq-DIV">
@@ -1297,7 +1291,7 @@
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esu-Nt-oK8" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esu-Nt-oK8" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="49" width="343" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -1324,7 +1318,7 @@
                                             <outlet property="picker" destination="esu-Nt-oK8" id="CQ8-hW-UjV"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="sEL-1V-U6t" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="sEL-1V-U6t" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="302" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sEL-1V-U6t" id="aPB-vS-rqm">
@@ -1343,7 +1337,7 @@
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49H-fM-Q14" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49H-fM-Q14" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="49" width="343" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -1374,7 +1368,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Time" id="Pyu-7i-bZg">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="YaA-Bc-vq4" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="YaA-Bc-vq4" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="472" width="375" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YaA-Bc-vq4" id="XBn-kG-qdW">
@@ -1419,7 +1413,7 @@
                                             <outlet property="picker" destination="5xc-Rj-WbG" id="uoE-qS-cwT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="Gad-be-VtM" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="Gad-be-VtM" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="748" width="375" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gad-be-VtM" id="dvJ-KW-tyN">
@@ -1427,19 +1421,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov4-oS-3kK">
-                                                    <rect key="frame" x="8" y="15" width="38" height="21"/>
+                                                    <rect key="frame" x="8" y="12" width="38" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nip-eT-lmi">
-                                                    <rect key="frame" x="325" y="15" width="42" height="21"/>
+                                                    <rect key="frame" x="325" y="12" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <datePicker tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="hf9-da-9FK">
-                                                    <rect key="frame" x="0.0" y="48" width="375" height="216"/>
+                                                    <rect key="frame" x="0.0" y="45" width="375" height="216"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="537340583.38071406">
                                                         <!--2018-01-11 05:16:23 +0000-->
                                                     </date>
@@ -1476,13 +1470,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeats every" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPr-It-5TB">
-                                                    <rect key="frame" x="8" y="15" width="109" height="14"/>
+                                                    <rect key="frame" x="8" y="12" width="109" height="19.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLT-Pw-kja">
-                                                    <rect key="frame" x="223" y="15" width="42" height="14"/>
+                                                    <rect key="frame" x="223" y="12" width="42" height="19.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1510,17 +1504,17 @@
                                         <rect key="frame" x="0.0" y="1124" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NZz-D9-0am" id="PSx-Kz-djS">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="349" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ns-pB-Fj1">
-                                                    <rect key="frame" x="8" y="15" width="22.5" height="14"/>
+                                                    <rect key="frame" x="8" y="12" width="22.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUA-px-gYY">
-                                                    <rect key="frame" x="292" y="15" width="42" height="14"/>
+                                                    <rect key="frame" x="299" y="12" width="42" height="19.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1536,9 +1530,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="xTg-Fg-L6K" kind="show" id="W87-sc-xJ7">
-                                                <nil key="action"/>
-                                            </segue>
+                                            <segue destination="xTg-Fg-L6K" kind="show" id="W87-sc-xJ7"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1584,7 +1576,7 @@
         <!--Exam-->
         <scene sceneID="rjA-fe-JDo">
             <objects>
-                <tableViewController id="Hqv-Xu-kgq" customClass="ExamTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Hqv-Xu-kgq" customClass="ExamTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="JeI-Ph-b7r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1647,7 +1639,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="yT5-b3-yP6">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="hdR-KT-AKD" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="hdR-KT-AKD" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="168" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hdR-KT-AKD" id="34c-7s-dit">
@@ -1666,7 +1658,7 @@
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVP-dh-2gi" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVP-dh-2gi" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="49" width="343" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -1697,7 +1689,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="diC-DU-f0P">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="8g9-vp-eQ0" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="8g9-vp-eQ0" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="318" width="375" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8g9-vp-eQ0" id="CNV-mb-I1t">
@@ -1742,7 +1734,7 @@
                                             <outlet property="picker" destination="Oew-i9-5kg" id="NDo-dL-LRI"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="JJ7-Au-Dp6" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="JJ7-Au-Dp6" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="594" width="375" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JJ7-Au-Dp6" id="0Za-mR-T4d">
@@ -1814,7 +1806,7 @@
         <!--Better Navigation Controller-->
         <scene sceneID="eOQ-p4-0U1">
             <objects>
-                <navigationController id="mrb-qT-Img" customClass="BetterNavigationController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="mrb-qT-Img" customClass="BetterNavigationController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="eSZ-ZC-4q9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1831,7 +1823,7 @@
         <!--New Exam-->
         <scene sceneID="czE-eX-ezC">
             <objects>
-                <tableViewController storyboardIdentifier="New Exam Detail" id="ADq-DL-AbW" customClass="NewExamTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="New Exam Detail" id="ADq-DL-AbW" customClass="NewExamTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="OqT-vG-Jy9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1891,7 +1883,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="R3A-Vd-uba">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="L6i-Xd-K8h" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="114" id="L6i-Xd-K8h" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="168" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L6i-Xd-K8h" id="rab-Te-pAf">
@@ -1910,7 +1902,7 @@
                                                     <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaT-h3-m36" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaT-h3-m36" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="49" width="343" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -1941,7 +1933,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="92o-3S-m6t">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="gCs-j0-KJj" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="gCs-j0-KJj" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="318" width="375" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gCs-j0-KJj" id="Og6-OW-1cc">
@@ -1986,7 +1978,7 @@
                                             <outlet property="picker" destination="UoA-NN-Gub" id="80U-Uc-jhX"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="nYZ-jU-ta7" customClass="PickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Date Picker" rowHeight="276" id="nYZ-jU-ta7" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="594" width="375" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nYZ-jU-ta7" id="eHt-wj-KAN">
@@ -2072,6 +2064,6 @@
         <image name="Semesters (Filled)" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W87-sc-xJ7"/>
+        <segue reference="bdC-Zz-Yqr"/>
     </inferredMetricsTieBreakers>
 </document>

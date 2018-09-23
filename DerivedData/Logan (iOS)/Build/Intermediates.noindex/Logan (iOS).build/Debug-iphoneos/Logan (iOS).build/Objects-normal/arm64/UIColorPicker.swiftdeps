@@ -21,6 +21,8 @@ depends-top-level:
 - "CGFloat"
 - "CGRect"
 - "CGSize"
+- "FloatLiteralType"
+- "IntegerLiteralType"
 - "NSCoder"
 - "UIColor"
 - "UIColorPicker"
@@ -31,10 +33,13 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - !private ["Sa", "enumerated"]
-- !private ["s23BidirectionalCollectionP", "append"]
-- !private ["s23BidirectionalCollectionP", "count"]
-- !private ["s23BidirectionalCollectionP", "enumerated"]
-- !private ["s19BinaryFloatingPointP", "init"]
+- !private ["s13ArrayProtocolP", "append"]
+- !private ["s13ArrayProtocolP", "count"]
+- !private ["s13ArrayProtocolP", "enumerated"]
+- !private ["SK", "append"]
+- !private ["SK", "count"]
+- !private ["SK", "enumerated"]
+- !private ["SB", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "CGFloat"]
 - !private ["So15CALayerDelegateP", "CGRect"]
@@ -57,10 +62,14 @@ depends-member:
 - !private ["So15CALayerDelegateP", "swatches"]
 - !private ["So15CALayerDelegateP", "unifiedInit"]
 - !private ["12CoreGraphics7CGFloatV", "init"]
-- !private ["SC6CGRectV", "init"]
-- !private ["SC6CGRectV", "size"]
-- !private ["SC6CGSizeV", "init"]
-- !private ["SC6CGSizeV", "width"]
+- !private ["So6CGRectV", "init"]
+- !private ["So6CGRectV", "size"]
+- !private ["So6CGSizeV", "init"]
+- !private ["So6CGSizeV", "width"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "append"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "enumerated"]
 - !private ["s7CVarArgP", "CGFloat"]
 - !private ["s7CVarArgP", "CGRect"]
 - !private ["s7CVarArgP", "CGSize"]
@@ -99,10 +108,10 @@ depends-member:
 - !private ["s7CVarArgP", "swatches"]
 - !private ["s7CVarArgP", "unifiedInit"]
 - !private ["s7CVarArgP", "yellow500"]
-- !private ["s10CollectionP", "append"]
-- !private ["s10CollectionP", "count"]
-- !private ["s10CollectionP", "enumerated"]
-- !private ["s10ComparableP", "init"]
+- !private ["Sl", "append"]
+- !private ["Sl", "count"]
+- !private ["Sl", "enumerated"]
+- !private ["SL", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
 - !private ["s28CustomDebugStringConvertibleP", "CGRect"]
 - !private ["s28CustomDebugStringConvertibleP", "CGSize"]
@@ -191,62 +200,64 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "swatches"]
 - !private ["s23CustomStringConvertibleP", "unifiedInit"]
 - !private ["s23CustomStringConvertibleP", "yellow500"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "append"]
-- !private ["s9DecodableP", "count"]
-- !private ["s9DecodableP", "enumerated"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "size"]
-- !private ["s9DecodableP", "width"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "append"]
-- !private ["s9EncodableP", "count"]
-- !private ["s9EncodableP", "enumerated"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "size"]
-- !private ["s9EncodableP", "width"]
-- !private ["s9EquatableP", "CGFloat"]
-- !private ["s9EquatableP", "CGRect"]
-- !private ["s9EquatableP", "CGSize"]
-- ["s9EquatableP", "UIColor"]
-- !private ["s9EquatableP", "UIColorPicker"]
-- !private ["s9EquatableP", "UIColorSwatch"]
-- !private ["s9EquatableP", "UIControlEvents"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "addSubview"]
-- !private ["s9EquatableP", "addTarget"]
-- !private ["s9EquatableP", "append"]
-- ["s9EquatableP", "black"]
-- !private ["s9EquatableP", "blue500"]
-- !private ["s9EquatableP", "brown500"]
-- !private ["s9EquatableP", "colorValue"]
-- !private ["s9EquatableP", "count"]
-- !private ["s9EquatableP", "cyan500"]
-- !private ["s9EquatableP", "deepOrange500"]
-- !private ["s9EquatableP", "enumerated"]
-- !private ["s9EquatableP", "frame"]
-- !private ["s9EquatableP", "green500"]
-- !private ["s9EquatableP", "indigo500"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "layoutSubviews"]
-- !private ["s9EquatableP", "lime500"]
-- !private ["s9EquatableP", "orange500"]
-- !private ["s9EquatableP", "organize"]
-- !private ["s9EquatableP", "pink500"]
-- !private ["s9EquatableP", "purple500"]
-- !private ["s9EquatableP", "red500"]
-- !private ["s9EquatableP", "red900"]
-- !private ["s9EquatableP", "sendActions"]
-- !private ["s9EquatableP", "size"]
-- !private ["s9EquatableP", "swatchPressed"]
-- !private ["s9EquatableP", "swatchSpacing"]
-- !private ["s9EquatableP", "swatches"]
-- !private ["s9EquatableP", "touchUpInside"]
-- !private ["s9EquatableP", "unifiedInit"]
-- !private ["s9EquatableP", "valueChanged"]
-- !private ["s9EquatableP", "width"]
-- !private ["s9EquatableP", "yellow500"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- !private ["Se", "enumerated"]
+- !private ["Se", "init"]
+- !private ["Se", "size"]
+- !private ["Se", "width"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- !private ["SE", "enumerated"]
+- !private ["SE", "init"]
+- !private ["SE", "size"]
+- !private ["SE", "width"]
+- !private ["SQ", "CGFloat"]
+- !private ["SQ", "CGRect"]
+- !private ["SQ", "CGSize"]
+- ["SQ", "UIColor"]
+- !private ["SQ", "UIColorPicker"]
+- !private ["SQ", "UIColorSwatch"]
+- !private ["SQ", "UIControlEvents"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "addSubview"]
+- !private ["SQ", "addTarget"]
+- !private ["SQ", "append"]
+- ["SQ", "black"]
+- !private ["SQ", "blue500"]
+- !private ["SQ", "brown500"]
+- !private ["SQ", "colorValue"]
+- !private ["SQ", "count"]
+- !private ["SQ", "cyan500"]
+- !private ["SQ", "deepOrange500"]
+- !private ["SQ", "enumerated"]
+- !private ["SQ", "frame"]
+- !private ["SQ", "green500"]
+- !private ["SQ", "indigo500"]
+- !private ["SQ", "init"]
+- !private ["SQ", "layoutSubviews"]
+- !private ["SQ", "lime500"]
+- !private ["SQ", "orange500"]
+- !private ["SQ", "organize"]
+- !private ["SQ", "pink500"]
+- !private ["SQ", "purple500"]
+- !private ["SQ", "red500"]
+- !private ["SQ", "red900"]
+- !private ["SQ", "sendActions"]
+- !private ["SQ", "size"]
+- !private ["SQ", "swatchPressed"]
+- !private ["SQ", "swatchSpacing"]
+- !private ["SQ", "swatches"]
+- !private ["SQ", "touchUpInside"]
+- !private ["SQ", "unifiedInit"]
+- !private ["SQ", "valueChanged"]
+- !private ["SQ", "width"]
+- !private ["SQ", "yellow500"]
+- !private ["So15UIControlEventsV", "touchUpInside"]
+- !private ["So15UIControlEventsV", "valueChanged"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "enumerated"]
@@ -255,46 +266,49 @@ depends-member:
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
-- !private ["s13FloatingPointP", "init"]
-- !private ["s8HashableP", "CGFloat"]
-- !private ["s8HashableP", "CGRect"]
-- !private ["s8HashableP", "CGSize"]
-- ["s8HashableP", "UIColor"]
-- !private ["s8HashableP", "UIColorPicker"]
-- !private ["s8HashableP", "UIColorSwatch"]
-- !private ["s8HashableP", "UIControlEvents"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "addSubview"]
-- !private ["s8HashableP", "addTarget"]
-- ["s8HashableP", "black"]
-- !private ["s8HashableP", "blue500"]
-- !private ["s8HashableP", "brown500"]
-- !private ["s8HashableP", "colorValue"]
-- !private ["s8HashableP", "cyan500"]
-- !private ["s8HashableP", "deepOrange500"]
-- !private ["s8HashableP", "frame"]
-- !private ["s8HashableP", "green500"]
-- !private ["s8HashableP", "indigo500"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "layoutSubviews"]
-- !private ["s8HashableP", "lime500"]
-- !private ["s8HashableP", "orange500"]
-- !private ["s8HashableP", "organize"]
-- !private ["s8HashableP", "pink500"]
-- !private ["s8HashableP", "purple500"]
-- !private ["s8HashableP", "red500"]
-- !private ["s8HashableP", "red900"]
-- !private ["s8HashableP", "sendActions"]
-- !private ["s8HashableP", "swatchPressed"]
-- !private ["s8HashableP", "swatchSpacing"]
-- !private ["s8HashableP", "swatches"]
-- !private ["s8HashableP", "unifiedInit"]
-- !private ["s8HashableP", "yellow500"]
+- !private ["SF", "init"]
+- !private ["SH", "CGFloat"]
+- !private ["SH", "CGRect"]
+- !private ["SH", "CGSize"]
+- ["SH", "UIColor"]
+- !private ["SH", "UIColorPicker"]
+- !private ["SH", "UIColorSwatch"]
+- !private ["SH", "UIControlEvents"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "addSubview"]
+- !private ["SH", "addTarget"]
+- !private ["SH", "append"]
+- ["SH", "black"]
+- !private ["SH", "blue500"]
+- !private ["SH", "brown500"]
+- !private ["SH", "colorValue"]
+- !private ["SH", "count"]
+- !private ["SH", "cyan500"]
+- !private ["SH", "deepOrange500"]
+- !private ["SH", "enumerated"]
+- !private ["SH", "frame"]
+- !private ["SH", "green500"]
+- !private ["SH", "indigo500"]
+- !private ["SH", "init"]
+- !private ["SH", "layoutSubviews"]
+- !private ["SH", "lime500"]
+- !private ["SH", "orange500"]
+- !private ["SH", "organize"]
+- !private ["SH", "pink500"]
+- !private ["SH", "purple500"]
+- !private ["SH", "red500"]
+- !private ["SH", "red900"]
+- !private ["SH", "sendActions"]
+- !private ["SH", "swatchPressed"]
+- !private ["SH", "swatchSpacing"]
+- !private ["SH", "swatches"]
+- !private ["SH", "unifiedInit"]
+- !private ["SH", "yellow500"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s17MutableCollectionP", "append"]
-- !private ["s17MutableCollectionP", "count"]
-- !private ["s17MutableCollectionP", "enumerated"]
+- !private ["SM", "append"]
+- !private ["SM", "count"]
+- !private ["SM", "enumerated"]
 - !private ["So8NSCodingP", "CGFloat"]
 - !private ["So8NSCodingP", "CGRect"]
 - !private ["So8NSCodingP", "CGSize"]
@@ -406,40 +420,40 @@ depends-member:
 - ["So8NSObjectC", "swatches"]
 - ["So8NSObjectC", "unifiedInit"]
 - !private ["So8NSObjectC", "yellow500"]
-- !private ["So16NSObjectProtocolP", "CGFloat"]
-- !private ["So16NSObjectProtocolP", "CGRect"]
-- !private ["So16NSObjectProtocolP", "CGSize"]
-- ["So16NSObjectProtocolP", "UIColor"]
-- !private ["So16NSObjectProtocolP", "UIColorPicker"]
-- !private ["So16NSObjectProtocolP", "UIColorSwatch"]
-- !private ["So16NSObjectProtocolP", "UIControlEvents"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "addSubview"]
-- !private ["So16NSObjectProtocolP", "addTarget"]
-- ["So16NSObjectProtocolP", "black"]
-- !private ["So16NSObjectProtocolP", "blue500"]
-- !private ["So16NSObjectProtocolP", "brown500"]
-- !private ["So16NSObjectProtocolP", "colorValue"]
-- !private ["So16NSObjectProtocolP", "cyan500"]
-- !private ["So16NSObjectProtocolP", "deepOrange500"]
-- !private ["So16NSObjectProtocolP", "frame"]
-- !private ["So16NSObjectProtocolP", "green500"]
-- !private ["So16NSObjectProtocolP", "indigo500"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "layoutSubviews"]
-- !private ["So16NSObjectProtocolP", "lime500"]
-- !private ["So16NSObjectProtocolP", "orange500"]
-- !private ["So16NSObjectProtocolP", "organize"]
-- !private ["So16NSObjectProtocolP", "pink500"]
-- !private ["So16NSObjectProtocolP", "purple500"]
-- !private ["So16NSObjectProtocolP", "red500"]
-- !private ["So16NSObjectProtocolP", "red900"]
-- !private ["So16NSObjectProtocolP", "sendActions"]
-- !private ["So16NSObjectProtocolP", "swatchPressed"]
-- !private ["So16NSObjectProtocolP", "swatchSpacing"]
-- !private ["So16NSObjectProtocolP", "swatches"]
-- !private ["So16NSObjectProtocolP", "unifiedInit"]
-- !private ["So16NSObjectProtocolP", "yellow500"]
+- !private ["So8NSObjectP", "CGFloat"]
+- !private ["So8NSObjectP", "CGRect"]
+- !private ["So8NSObjectP", "CGSize"]
+- ["So8NSObjectP", "UIColor"]
+- !private ["So8NSObjectP", "UIColorPicker"]
+- !private ["So8NSObjectP", "UIColorSwatch"]
+- !private ["So8NSObjectP", "UIControlEvents"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addSubview"]
+- !private ["So8NSObjectP", "addTarget"]
+- ["So8NSObjectP", "black"]
+- !private ["So8NSObjectP", "blue500"]
+- !private ["So8NSObjectP", "brown500"]
+- !private ["So8NSObjectP", "colorValue"]
+- !private ["So8NSObjectP", "cyan500"]
+- !private ["So8NSObjectP", "deepOrange500"]
+- !private ["So8NSObjectP", "frame"]
+- !private ["So8NSObjectP", "green500"]
+- !private ["So8NSObjectP", "indigo500"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "layoutSubviews"]
+- !private ["So8NSObjectP", "lime500"]
+- !private ["So8NSObjectP", "orange500"]
+- !private ["So8NSObjectP", "organize"]
+- !private ["So8NSObjectP", "pink500"]
+- !private ["So8NSObjectP", "purple500"]
+- !private ["So8NSObjectP", "red500"]
+- !private ["So8NSObjectP", "red900"]
+- !private ["So8NSObjectP", "sendActions"]
+- !private ["So8NSObjectP", "swatchPressed"]
+- !private ["So8NSObjectP", "swatchSpacing"]
+- !private ["So8NSObjectP", "swatches"]
+- !private ["So8NSObjectP", "unifiedInit"]
+- !private ["So8NSObjectP", "yellow500"]
 - ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "blue500"]
 - !private ["So14NSSecureCodingP", "brown500"]
@@ -454,24 +468,24 @@ depends-member:
 - !private ["So14NSSecureCodingP", "red500"]
 - !private ["So14NSSecureCodingP", "red900"]
 - !private ["So14NSSecureCodingP", "yellow500"]
-- !private ["s7NumericP", "init"]
+- !private ["Sj", "init"]
 - !private ["s9OptionSetP", "touchUpInside"]
 - !private ["s9OptionSetP", "valueChanged"]
-- !private ["s22RandomAccessCollectionP", "append"]
-- !private ["s22RandomAccessCollectionP", "count"]
-- !private ["s22RandomAccessCollectionP", "enumerated"]
-- !private ["s26RangeReplaceableCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "count"]
-- !private ["s26RangeReplaceableCollectionP", "enumerated"]
-- !private ["s16RawRepresentableP", "touchUpInside"]
-- !private ["s16RawRepresentableP", "valueChanged"]
-- !private ["s8SequenceP", "append"]
-- !private ["s8SequenceP", "count"]
-- !private ["s8SequenceP", "enumerated"]
+- !private ["Sk", "append"]
+- !private ["Sk", "count"]
+- !private ["Sk", "enumerated"]
+- !private ["Sm", "append"]
+- !private ["Sm", "count"]
+- !private ["Sm", "enumerated"]
+- !private ["SY", "touchUpInside"]
+- !private ["SY", "valueChanged"]
+- !private ["ST", "append"]
+- !private ["ST", "count"]
+- !private ["ST", "enumerated"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
 - !private ["s10SetAlgebraP", "valueChanged"]
 - !private ["s13SignedNumericP", "init"]
-- !private ["s10StrideableP", "init"]
+- !private ["Sx", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "CGFloat"]
 - !private ["So29UIAccessibilityIdentificationP", "CGRect"]
 - !private ["So29UIAccessibilityIdentificationP", "CGSize"]
@@ -556,7 +570,7 @@ depends-member:
 - !private ["11Logan__iOS_13UIColorPickerC", "UIControlEvents"]
 - !private ["11Logan__iOS_13UIColorPickerC", "addSubview"]
 - ["11Logan__iOS_13UIColorPickerC", "colorValue"]
-- ["11Logan__iOS_13UIColorPickerC", "deinit"]
+- !private ["11Logan__iOS_13UIColorPickerC", "deinit"]
 - !private ["11Logan__iOS_13UIColorPickerC", "frame"]
 - ["11Logan__iOS_13UIColorPickerC", "init"]
 - ["11Logan__iOS_13UIColorPickerC", "intrinsicContentSize"]
@@ -569,6 +583,7 @@ depends-member:
 - !private ["11Logan__iOS_13UIColorPickerC", "unifiedInit"]
 - !private ["11Logan__iOS_13UIColorSwatchC", "addTarget"]
 - !private ["11Logan__iOS_13UIColorSwatchC", "colorValue"]
+- !private ["11Logan__iOS_13UIColorSwatchC", "deinit"]
 - !private ["11Logan__iOS_13UIColorSwatchC", "frame"]
 - !private ["11Logan__iOS_13UIColorSwatchC", "init"]
 - ["So9UIControlC", "CGFloat"]
@@ -593,8 +608,6 @@ depends-member:
 - ["So9UIControlC", "swatchSpacing"]
 - ["So9UIControlC", "swatches"]
 - ["So9UIControlC", "unifiedInit"]
-- !private ["SC15UIControlEventsV", "touchUpInside"]
-- !private ["SC15UIControlEventsV", "valueChanged"]
 - !private ["So17UICoordinateSpaceP", "CGFloat"]
 - !private ["So17UICoordinateSpaceP", "CGRect"]
 - !private ["So17UICoordinateSpaceP", "CGSize"]
@@ -675,6 +688,26 @@ depends-member:
 - !private ["So11UIFocusItemP", "swatchSpacing"]
 - !private ["So11UIFocusItemP", "swatches"]
 - !private ["So11UIFocusItemP", "unifiedInit"]
+- !private ["So20UIFocusItemContainerP", "CGFloat"]
+- !private ["So20UIFocusItemContainerP", "CGRect"]
+- !private ["So20UIFocusItemContainerP", "CGSize"]
+- ["So20UIFocusItemContainerP", "UIColor"]
+- !private ["So20UIFocusItemContainerP", "UIColorPicker"]
+- !private ["So20UIFocusItemContainerP", "UIColorSwatch"]
+- !private ["So20UIFocusItemContainerP", "UIControlEvents"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "addSubview"]
+- !private ["So20UIFocusItemContainerP", "addTarget"]
+- !private ["So20UIFocusItemContainerP", "colorValue"]
+- !private ["So20UIFocusItemContainerP", "frame"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "layoutSubviews"]
+- !private ["So20UIFocusItemContainerP", "organize"]
+- !private ["So20UIFocusItemContainerP", "sendActions"]
+- !private ["So20UIFocusItemContainerP", "swatchPressed"]
+- !private ["So20UIFocusItemContainerP", "swatchSpacing"]
+- !private ["So20UIFocusItemContainerP", "swatches"]
+- !private ["So20UIFocusItemContainerP", "unifiedInit"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGFloat"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGRect"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGSize"]
@@ -756,6 +789,26 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "swatchSpacing"]
 - !private ["So18UITraitEnvironmentP", "swatches"]
 - !private ["So18UITraitEnvironmentP", "unifiedInit"]
+- !private ["So23UIUserActivityRestoringP", "CGFloat"]
+- !private ["So23UIUserActivityRestoringP", "CGRect"]
+- !private ["So23UIUserActivityRestoringP", "CGSize"]
+- ["So23UIUserActivityRestoringP", "UIColor"]
+- !private ["So23UIUserActivityRestoringP", "UIColorPicker"]
+- !private ["So23UIUserActivityRestoringP", "UIColorSwatch"]
+- !private ["So23UIUserActivityRestoringP", "UIControlEvents"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addSubview"]
+- !private ["So23UIUserActivityRestoringP", "addTarget"]
+- !private ["So23UIUserActivityRestoringP", "colorValue"]
+- !private ["So23UIUserActivityRestoringP", "frame"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "layoutSubviews"]
+- !private ["So23UIUserActivityRestoringP", "organize"]
+- !private ["So23UIUserActivityRestoringP", "sendActions"]
+- !private ["So23UIUserActivityRestoringP", "swatchPressed"]
+- !private ["So23UIUserActivityRestoringP", "swatchSpacing"]
+- !private ["So23UIUserActivityRestoringP", "swatches"]
+- !private ["So23UIUserActivityRestoringP", "unifiedInit"]
 - ["So6UIViewC", "CGFloat"]
 - ["So6UIViewC", "CGRect"]
 - ["So6UIViewC", "CGSize"]
@@ -777,9 +830,6 @@ depends-member:
 - ["So6UIViewC", "swatchSpacing"]
 - ["So6UIViewC", "swatches"]
 - ["So6UIViewC", "unifiedInit"]
-- !private ["s14_ArrayProtocolP", "append"]
-- !private ["s14_ArrayProtocolP", "count"]
-- !private ["s14_ArrayProtocolP", "enumerated"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CGFloat"]
@@ -820,6 +870,9 @@ depends-member:
 - !private ["s26_ExpressibleByColorLiteralP", "red500"]
 - !private ["s26_ExpressibleByColorLiteralP", "red900"]
 - !private ["s26_ExpressibleByColorLiteralP", "yellow500"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "enumerated"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGRect"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGSize"]
@@ -863,47 +916,50 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "width"]
 depends-nominal:
 - !private "Sa"
-- !private "s23BidirectionalCollectionP"
-- !private "s19BinaryFloatingPointP"
+- !private "s13ArrayProtocolP"
+- !private "SK"
+- !private "SB"
 - !private "Sb"
 - "So15CALayerDelegateP"
 - !private "12CoreGraphics7CGFloatV"
-- !private "SC6CGRectV"
-- !private "SC6CGSizeV"
+- !private "So6CGRectV"
+- !private "So6CGSizeV"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
+- !private "Sl"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
-- !private "s13FloatingPointP"
-- "s8HashableP"
+- !private "SF"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - "So21NSItemProviderReadingP"
 - "So21NSItemProviderWritingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - "So14NSSecureCodingP"
-- !private "s7NumericP"
+- !private "Sj"
 - !private "s9OptionSetP"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s16RawRepresentableP"
-- !private "s8SequenceP"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
 - !private "s10SetAlgebraP"
 - !private "s13SignedNumericP"
-- !private "s10StrideableP"
+- !private "Sx"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -911,23 +967,24 @@ depends-nominal:
 - "11Logan__iOS_13UIColorPickerC"
 - !private "11Logan__iOS_13UIColorSwatchC"
 - "So9UIControlC"
-- !private "SC15UIControlEventsV"
 - "So17UICoordinateSpaceP"
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
-- !private "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s26_ExpressibleByColorLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 depends-dynamic-lookup:
@@ -948,18 +1005,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "118c06b008087d74604dc2d662d447fc"

@@ -25,6 +25,8 @@ depends-top-level:
 - "BetterTextView"
 - "CGFloat"
 - "CGRect"
+- "FloatLiteralType"
+- "IntegerLiteralType"
 - "NSCoder"
 - !private "NSNotification"
 - "NSTextContainer"
@@ -53,7 +55,7 @@ depends-member:
 - ["8Schedule14BetterTextViewC", "UILabel"]
 - !private ["8Schedule14BetterTextViewC", "UIScreen"]
 - !private ["8Schedule14BetterTextViewC", "addSubview"]
-- ["8Schedule14BetterTextViewC", "deinit"]
+- !private ["8Schedule14BetterTextViewC", "deinit"]
 - ["8Schedule14BetterTextViewC", "font"]
 - ["8Schedule14BetterTextViewC", "init"]
 - ["8Schedule14BetterTextViewC", "layoutSubviews"]
@@ -71,8 +73,9 @@ depends-member:
 - !private ["8Schedule14BetterTextViewC", "textContainer"]
 - !private ["8Schedule14BetterTextViewC", "textContainerInset"]
 - !private ["8Schedule14BetterTextViewC", "unifiedInit"]
-- ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "isEmpty"]
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["SK", "isEmpty"]
 - !private ["So15CALayerDelegateP", "NSNotification"]
 - !private ["So15CALayerDelegateP", "NotificationCenter"]
 - !private ["So15CALayerDelegateP", "UIColor"]
@@ -103,10 +106,13 @@ depends-member:
 - !private ["So15CALayerDelegateP", "textContainer"]
 - !private ["So15CALayerDelegateP", "textContainerInset"]
 - !private ["So15CALayerDelegateP", "unifiedInit"]
-- !private ["SC7CGPointV", "x"]
-- !private ["SC7CGPointV", "y"]
-- !private ["SC6CGRectV", "origin"]
-- !private ["So13CKRecordValueP", "isEmpty"]
+- !private ["So7CGPointV", "x"]
+- !private ["So7CGPointV", "y"]
+- !private ["So6CGRectV", "origin"]
+- !private ["8CloudKit24CKRecordValueConvertibleP", "isEmpty"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "isEmpty"]
 - !private ["So15CNKeyDescriptorP", "isEmpty"]
 - !private ["s7CVarArgP", "NSNotification"]
 - !private ["s7CVarArgP", "Name"]
@@ -124,6 +130,7 @@ depends-member:
 - !private ["s7CVarArgP", "default"]
 - !private ["s7CVarArgP", "font"]
 - !private ["s7CVarArgP", "frame"]
+- ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "isHidden"]
@@ -148,10 +155,12 @@ depends-member:
 - !private ["s7CVarArgP", "textContainerInset"]
 - !private ["s7CVarArgP", "unifiedInit"]
 - !private ["s7CVarArgP", "withAlphaComponent"]
-- ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "isEmpty"]
-- ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "isEmpty"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- !private ["Sl", "isEmpty"]
+- ["SL", "init"]
+- ["SL", "init"]
+- !private ["SL", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "NSNotification"]
 - !private ["s28CustomDebugStringConvertibleP", "Name"]
 - !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
@@ -168,6 +177,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "font"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
+- ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
@@ -196,10 +206,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "x"]
 - !private ["s28CustomDebugStringConvertibleP", "y"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "isEmpty"]
 - !private ["s29CustomPlaygroundQuickLookableP", "origin"]
 - !private ["s29CustomPlaygroundQuickLookableP", "x"]
 - !private ["s29CustomPlaygroundQuickLookableP", "y"]
+- ["s17CustomReflectableP", "init"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "origin"]
@@ -221,6 +233,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "default"]
 - !private ["s23CustomStringConvertibleP", "font"]
 - !private ["s23CustomStringConvertibleP", "frame"]
+- ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
@@ -245,113 +258,123 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "textContainerInset"]
 - !private ["s23CustomStringConvertibleP", "unifiedInit"]
 - !private ["s23CustomStringConvertibleP", "withAlphaComponent"]
-- ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "isEmpty"]
-- !private ["s9DecodableP", "origin"]
-- !private ["s9DecodableP", "x"]
-- !private ["s9DecodableP", "y"]
-- ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "isEmpty"]
-- !private ["s9EncodableP", "origin"]
-- !private ["s9EncodableP", "x"]
-- !private ["s9EncodableP", "y"]
-- !private ["s9EquatableP", "NSNotification"]
-- !private ["s9EquatableP", "Name"]
-- !private ["s9EquatableP", "NotificationCenter"]
-- !private ["s9EquatableP", "UIColor"]
-- !private ["s9EquatableP", "UIEdgeInsets"]
-- !private ["s9EquatableP", "UIFont"]
-- !private ["s9EquatableP", "UIFontTextStyle"]
-- ["s9EquatableP", "UILabel"]
-- !private ["s9EquatableP", "UIScreen"]
-- !private ["s9EquatableP", "UITextViewTextDidChange"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "addObserver"]
-- !private ["s9EquatableP", "addSubview"]
-- !private ["s9EquatableP", "black"]
-- !private ["s9EquatableP", "body"]
-- !private ["s9EquatableP", "default"]
-- !private ["s9EquatableP", "font"]
-- !private ["s9EquatableP", "frame"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "isEmpty"]
-- !private ["s9EquatableP", "isHidden"]
-- !private ["s9EquatableP", "layoutSubviews"]
-- !private ["s9EquatableP", "left"]
-- !private ["s9EquatableP", "lineFragmentPadding"]
-- !private ["s9EquatableP", "main"]
-- !private ["s9EquatableP", "origin"]
-- !private ["s9EquatableP", "padding"]
-- !private ["s9EquatableP", "paddingBottom"]
-- !private ["s9EquatableP", "paddingLeft"]
-- !private ["s9EquatableP", "paddingRight"]
-- !private ["s9EquatableP", "paddingTop"]
-- !private ["s9EquatableP", "placeholderLabel"]
-- !private ["s9EquatableP", "placeholderText"]
-- !private ["s9EquatableP", "preferredFont"]
-- !private ["s9EquatableP", "scale"]
-- !private ["s9EquatableP", "sendSubview"]
-- !private ["s9EquatableP", "sizeToFit"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "textChanged"]
-- !private ["s9EquatableP", "textColor"]
-- !private ["s9EquatableP", "textContainer"]
-- !private ["s9EquatableP", "textContainerInset"]
-- !private ["s9EquatableP", "top"]
-- !private ["s9EquatableP", "unifiedInit"]
-- !private ["s9EquatableP", "withAlphaComponent"]
-- !private ["s9EquatableP", "x"]
-- !private ["s9EquatableP", "y"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "origin"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "origin"]
+- !private ["SE", "x"]
+- !private ["SE", "y"]
+- !private ["SQ", "NSNotification"]
+- !private ["SQ", "Name"]
+- !private ["SQ", "NotificationCenter"]
+- !private ["SQ", "UIColor"]
+- !private ["SQ", "UIEdgeInsets"]
+- !private ["SQ", "UIFont"]
+- !private ["SQ", "UIFontTextStyle"]
+- ["SQ", "UILabel"]
+- !private ["SQ", "UIScreen"]
+- !private ["SQ", "UITextViewTextDidChange"]
+- ["SQ", ""]
+- !private ["SQ", "addObserver"]
+- !private ["SQ", "addSubview"]
+- !private ["SQ", "black"]
+- !private ["SQ", "body"]
+- !private ["SQ", "default"]
+- !private ["SQ", "font"]
+- !private ["SQ", "frame"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "isEmpty"]
+- !private ["SQ", "isHidden"]
+- !private ["SQ", "layoutSubviews"]
+- !private ["SQ", "left"]
+- !private ["SQ", "lineFragmentPadding"]
+- !private ["SQ", "main"]
+- !private ["SQ", "origin"]
+- !private ["SQ", "padding"]
+- !private ["SQ", "paddingBottom"]
+- !private ["SQ", "paddingLeft"]
+- !private ["SQ", "paddingRight"]
+- !private ["SQ", "paddingTop"]
+- !private ["SQ", "placeholderLabel"]
+- !private ["SQ", "placeholderText"]
+- !private ["SQ", "preferredFont"]
+- !private ["SQ", "scale"]
+- !private ["SQ", "sendSubview"]
+- !private ["SQ", "sizeToFit"]
+- !private ["SQ", "text"]
+- !private ["SQ", "textChanged"]
+- !private ["SQ", "textColor"]
+- !private ["SQ", "textContainer"]
+- !private ["SQ", "textContainerInset"]
+- !private ["SQ", "top"]
+- !private ["SQ", "unifiedInit"]
+- !private ["SQ", "withAlphaComponent"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s23ExpressibleByNilLiteralP", "isEmpty"]
+- ["s26ExpressibleByStringLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
-- !private ["s8HashableP", "NSNotification"]
-- !private ["s8HashableP", "Name"]
-- !private ["s8HashableP", "NotificationCenter"]
-- !private ["s8HashableP", "UIColor"]
-- !private ["s8HashableP", "UIEdgeInsets"]
-- !private ["s8HashableP", "UIFont"]
-- !private ["s8HashableP", "UIFontTextStyle"]
-- ["s8HashableP", "UILabel"]
-- !private ["s8HashableP", "UIScreen"]
-- !private ["s8HashableP", "UITextViewTextDidChange"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "addObserver"]
-- !private ["s8HashableP", "addSubview"]
-- !private ["s8HashableP", "black"]
-- !private ["s8HashableP", "body"]
-- !private ["s8HashableP", "default"]
-- !private ["s8HashableP", "font"]
-- !private ["s8HashableP", "frame"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "isEmpty"]
-- !private ["s8HashableP", "isHidden"]
-- !private ["s8HashableP", "layoutSubviews"]
-- !private ["s8HashableP", "lineFragmentPadding"]
-- !private ["s8HashableP", "main"]
-- !private ["s8HashableP", "padding"]
-- !private ["s8HashableP", "paddingBottom"]
-- !private ["s8HashableP", "paddingLeft"]
-- !private ["s8HashableP", "paddingRight"]
-- !private ["s8HashableP", "paddingTop"]
-- !private ["s8HashableP", "placeholderLabel"]
-- !private ["s8HashableP", "placeholderText"]
-- !private ["s8HashableP", "preferredFont"]
-- !private ["s8HashableP", "scale"]
-- !private ["s8HashableP", "sendSubview"]
-- !private ["s8HashableP", "sizeToFit"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "textChanged"]
-- !private ["s8HashableP", "textColor"]
-- !private ["s8HashableP", "textContainer"]
-- !private ["s8HashableP", "textContainerInset"]
-- !private ["s8HashableP", "unifiedInit"]
-- !private ["s8HashableP", "withAlphaComponent"]
+- !private ["SH", "NSNotification"]
+- !private ["SH", "Name"]
+- !private ["SH", "NotificationCenter"]
+- !private ["SH", "UIColor"]
+- !private ["SH", "UIEdgeInsets"]
+- !private ["SH", "UIFont"]
+- !private ["SH", "UIFontTextStyle"]
+- ["SH", "UILabel"]
+- !private ["SH", "UIScreen"]
+- !private ["SH", "UITextViewTextDidChange"]
+- ["SH", ""]
+- !private ["SH", "addObserver"]
+- !private ["SH", "addSubview"]
+- !private ["SH", "black"]
+- !private ["SH", "body"]
+- !private ["SH", "default"]
+- !private ["SH", "font"]
+- !private ["SH", "frame"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "isEmpty"]
+- !private ["SH", "isHidden"]
+- !private ["SH", "layoutSubviews"]
+- !private ["SH", "lineFragmentPadding"]
+- !private ["SH", "main"]
+- !private ["SH", "padding"]
+- !private ["SH", "paddingBottom"]
+- !private ["SH", "paddingLeft"]
+- !private ["SH", "paddingRight"]
+- !private ["SH", "paddingTop"]
+- !private ["SH", "placeholderLabel"]
+- !private ["SH", "placeholderText"]
+- !private ["SH", "preferredFont"]
+- !private ["SH", "scale"]
+- !private ["SH", "sendSubview"]
+- !private ["SH", "sizeToFit"]
+- !private ["SH", "text"]
+- !private ["SH", "textChanged"]
+- !private ["SH", "textColor"]
+- !private ["SH", "textContainer"]
+- !private ["SH", "textContainerInset"]
+- !private ["SH", "unifiedInit"]
+- !private ["SH", "withAlphaComponent"]
+- ["s25LosslessStringConvertibleP", "init"]
 - ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- ["s10MirrorPathP", "init"]
 - ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "isEmpty"]
 - !private ["So8NSCodingP", "NSNotification"]
@@ -447,69 +470,77 @@ depends-member:
 - !private ["So8NSObjectC", "textContainerInset"]
 - ["So8NSObjectC", "unifiedInit"]
 - !private ["So8NSObjectC", "withAlphaComponent"]
-- !private ["So16NSObjectProtocolP", "NSNotification"]
-- !private ["So16NSObjectProtocolP", "Name"]
-- !private ["So16NSObjectProtocolP", "NotificationCenter"]
-- !private ["So16NSObjectProtocolP", "UIColor"]
-- !private ["So16NSObjectProtocolP", "UIEdgeInsets"]
-- !private ["So16NSObjectProtocolP", "UIFont"]
-- !private ["So16NSObjectProtocolP", "UIFontTextStyle"]
-- ["So16NSObjectProtocolP", "UILabel"]
-- !private ["So16NSObjectProtocolP", "UIScreen"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "addObserver"]
-- !private ["So16NSObjectProtocolP", "addSubview"]
-- !private ["So16NSObjectProtocolP", "black"]
-- !private ["So16NSObjectProtocolP", "default"]
-- !private ["So16NSObjectProtocolP", "font"]
-- !private ["So16NSObjectProtocolP", "frame"]
-- ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "isEmpty"]
-- !private ["So16NSObjectProtocolP", "isHidden"]
-- !private ["So16NSObjectProtocolP", "layoutSubviews"]
-- !private ["So16NSObjectProtocolP", "lineFragmentPadding"]
-- !private ["So16NSObjectProtocolP", "main"]
-- !private ["So16NSObjectProtocolP", "padding"]
-- !private ["So16NSObjectProtocolP", "paddingBottom"]
-- !private ["So16NSObjectProtocolP", "paddingLeft"]
-- !private ["So16NSObjectProtocolP", "paddingRight"]
-- !private ["So16NSObjectProtocolP", "paddingTop"]
-- !private ["So16NSObjectProtocolP", "placeholderLabel"]
-- !private ["So16NSObjectProtocolP", "placeholderText"]
-- !private ["So16NSObjectProtocolP", "preferredFont"]
-- !private ["So16NSObjectProtocolP", "scale"]
-- !private ["So16NSObjectProtocolP", "sendSubview"]
-- !private ["So16NSObjectProtocolP", "sizeToFit"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "textChanged"]
-- !private ["So16NSObjectProtocolP", "textColor"]
-- !private ["So16NSObjectProtocolP", "textContainer"]
-- !private ["So16NSObjectProtocolP", "textContainerInset"]
-- !private ["So16NSObjectProtocolP", "unifiedInit"]
-- !private ["So16NSObjectProtocolP", "withAlphaComponent"]
+- !private ["So8NSObjectP", "NSNotification"]
+- !private ["So8NSObjectP", "Name"]
+- !private ["So8NSObjectP", "NotificationCenter"]
+- !private ["So8NSObjectP", "UIColor"]
+- !private ["So8NSObjectP", "UIEdgeInsets"]
+- !private ["So8NSObjectP", "UIFont"]
+- !private ["So8NSObjectP", "UIFontTextStyle"]
+- ["So8NSObjectP", "UILabel"]
+- !private ["So8NSObjectP", "UIScreen"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addObserver"]
+- !private ["So8NSObjectP", "addSubview"]
+- !private ["So8NSObjectP", "black"]
+- !private ["So8NSObjectP", "default"]
+- !private ["So8NSObjectP", "font"]
+- !private ["So8NSObjectP", "frame"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isEmpty"]
+- !private ["So8NSObjectP", "isHidden"]
+- !private ["So8NSObjectP", "layoutSubviews"]
+- !private ["So8NSObjectP", "lineFragmentPadding"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "padding"]
+- !private ["So8NSObjectP", "paddingBottom"]
+- !private ["So8NSObjectP", "paddingLeft"]
+- !private ["So8NSObjectP", "paddingRight"]
+- !private ["So8NSObjectP", "paddingTop"]
+- !private ["So8NSObjectP", "placeholderLabel"]
+- !private ["So8NSObjectP", "placeholderText"]
+- !private ["So8NSObjectP", "preferredFont"]
+- !private ["So8NSObjectP", "scale"]
+- !private ["So8NSObjectP", "sendSubview"]
+- !private ["So8NSObjectP", "sizeToFit"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "textChanged"]
+- !private ["So8NSObjectP", "textColor"]
+- !private ["So8NSObjectP", "textContainer"]
+- !private ["So8NSObjectP", "textContainerInset"]
+- !private ["So8NSObjectP", "unifiedInit"]
+- !private ["So8NSObjectP", "withAlphaComponent"]
 - !private ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "isEmpty"]
 - !private ["So14NSSecureCodingP", "withAlphaComponent"]
 - !private ["So8NSStringC", "isEmpty"]
 - !private ["So15NSTextContainerC", "lineFragmentPadding"]
 - !private ["So31NSTextLayoutOrientationProviderP", "lineFragmentPadding"]
-- !private ["So14NSNotificationC4NameV", "UITextViewTextDidChange"]
-- !private ["So18NotificationCenterC", "addObserver"]
-- !private ["So18NotificationCenterC", "default"]
-- ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
-- !private ["s16RawRepresentableP", "UITextViewTextDidChange"]
-- !private ["s16RawRepresentableP", "body"]
-- ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "isEmpty"]
+- !private ["So18NSNotificationNamea", "UITextViewTextDidChange"]
+- !private ["So20NSNotificationCenterC", "addObserver"]
+- !private ["So20NSNotificationCenterC", "default"]
+- !private ["Sq", "isEmpty"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["Sm", "isEmpty"]
+- !private ["SY", "UITextViewTextDidChange"]
+- !private ["SY", "body"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["ST", "isEmpty"]
+- ["SS", "init"]
 - ["SS", "init"]
 - !private ["SS", "isEmpty"]
-- ["s14StringProtocolP", "init"]
-- !private ["s14StringProtocolP", "isEmpty"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- !private ["Sy", "isEmpty"]
+- ["s16TextOutputStreamP", "init"]
 - ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "isEmpty"]
 - ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "isEmpty"]
+- !private ["So15UIFontTextStylea", "body"]
 - !private ["So29UIAccessibilityIdentificationP", "NSNotification"]
 - !private ["So29UIAccessibilityIdentificationP", "NotificationCenter"]
 - !private ["So29UIAccessibilityIdentificationP", "UIColor"]
@@ -692,9 +723,9 @@ depends-member:
 - !private ["So13UIDynamicItemP", "textContainer"]
 - !private ["So13UIDynamicItemP", "textContainerInset"]
 - !private ["So13UIDynamicItemP", "unifiedInit"]
-- !private ["SC12UIEdgeInsetsV", "init"]
-- !private ["SC12UIEdgeInsetsV", "left"]
-- !private ["SC12UIEdgeInsetsV", "top"]
+- !private ["So12UIEdgeInsetsV", "init"]
+- !private ["So12UIEdgeInsetsV", "left"]
+- !private ["So12UIEdgeInsetsV", "top"]
 - !private ["So18UIFocusEnvironmentP", "NSNotification"]
 - !private ["So18UIFocusEnvironmentP", "NotificationCenter"]
 - !private ["So18UIFocusEnvironmentP", "UIColor"]
@@ -755,8 +786,63 @@ depends-member:
 - !private ["So11UIFocusItemP", "textContainer"]
 - !private ["So11UIFocusItemP", "textContainerInset"]
 - !private ["So11UIFocusItemP", "unifiedInit"]
+- !private ["So20UIFocusItemContainerP", "NSNotification"]
+- !private ["So20UIFocusItemContainerP", "NotificationCenter"]
+- !private ["So20UIFocusItemContainerP", "UIColor"]
+- !private ["So20UIFocusItemContainerP", "UIEdgeInsets"]
+- !private ["So20UIFocusItemContainerP", "UIFont"]
+- !private ["So20UIFocusItemContainerP", "UIFontTextStyle"]
+- ["So20UIFocusItemContainerP", "UILabel"]
+- !private ["So20UIFocusItemContainerP", "UIScreen"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "addSubview"]
+- !private ["So20UIFocusItemContainerP", "font"]
+- !private ["So20UIFocusItemContainerP", "frame"]
+- ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "isHidden"]
+- !private ["So20UIFocusItemContainerP", "layoutSubviews"]
+- !private ["So20UIFocusItemContainerP", "padding"]
+- !private ["So20UIFocusItemContainerP", "paddingBottom"]
+- !private ["So20UIFocusItemContainerP", "paddingLeft"]
+- !private ["So20UIFocusItemContainerP", "paddingRight"]
+- !private ["So20UIFocusItemContainerP", "paddingTop"]
+- !private ["So20UIFocusItemContainerP", "placeholderLabel"]
+- !private ["So20UIFocusItemContainerP", "placeholderText"]
+- !private ["So20UIFocusItemContainerP", "sendSubview"]
+- !private ["So20UIFocusItemContainerP", "sizeToFit"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "textChanged"]
+- !private ["So20UIFocusItemContainerP", "textColor"]
+- !private ["So20UIFocusItemContainerP", "textContainer"]
+- !private ["So20UIFocusItemContainerP", "textContainerInset"]
+- !private ["So20UIFocusItemContainerP", "unifiedInit"]
+- !private ["So30UIFocusItemScrollableContainerP", "NSNotification"]
+- !private ["So30UIFocusItemScrollableContainerP", "NotificationCenter"]
+- !private ["So30UIFocusItemScrollableContainerP", "UIColor"]
+- !private ["So30UIFocusItemScrollableContainerP", "UIEdgeInsets"]
+- !private ["So30UIFocusItemScrollableContainerP", "UIFont"]
+- !private ["So30UIFocusItemScrollableContainerP", "UIFontTextStyle"]
+- ["So30UIFocusItemScrollableContainerP", "UILabel"]
+- !private ["So30UIFocusItemScrollableContainerP", "UIScreen"]
+- ["So30UIFocusItemScrollableContainerP", ""]
+- !private ["So30UIFocusItemScrollableContainerP", "addSubview"]
+- !private ["So30UIFocusItemScrollableContainerP", "font"]
+- !private ["So30UIFocusItemScrollableContainerP", "init"]
+- !private ["So30UIFocusItemScrollableContainerP", "layoutSubviews"]
+- !private ["So30UIFocusItemScrollableContainerP", "padding"]
+- !private ["So30UIFocusItemScrollableContainerP", "paddingBottom"]
+- !private ["So30UIFocusItemScrollableContainerP", "paddingLeft"]
+- !private ["So30UIFocusItemScrollableContainerP", "paddingRight"]
+- !private ["So30UIFocusItemScrollableContainerP", "paddingTop"]
+- !private ["So30UIFocusItemScrollableContainerP", "placeholderLabel"]
+- !private ["So30UIFocusItemScrollableContainerP", "placeholderText"]
+- !private ["So30UIFocusItemScrollableContainerP", "sendSubview"]
+- !private ["So30UIFocusItemScrollableContainerP", "text"]
+- !private ["So30UIFocusItemScrollableContainerP", "textChanged"]
+- !private ["So30UIFocusItemScrollableContainerP", "textContainer"]
+- !private ["So30UIFocusItemScrollableContainerP", "textContainerInset"]
+- !private ["So30UIFocusItemScrollableContainerP", "unifiedInit"]
 - !private ["So6UIFontC", "preferredFont"]
-- !private ["SC15UIFontTextStyleV", "body"]
 - !private ["So10UIKeyInputP", "NSNotification"]
 - !private ["So10UIKeyInputP", "NotificationCenter"]
 - !private ["So10UIKeyInputP", "UIColor"]
@@ -1112,6 +1198,36 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "textContainer"]
 - !private ["So18UITraitEnvironmentP", "textContainerInset"]
 - !private ["So18UITraitEnvironmentP", "unifiedInit"]
+- !private ["So23UIUserActivityRestoringP", "NSNotification"]
+- !private ["So23UIUserActivityRestoringP", "NotificationCenter"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
+- !private ["So23UIUserActivityRestoringP", "UIEdgeInsets"]
+- !private ["So23UIUserActivityRestoringP", "UIFont"]
+- !private ["So23UIUserActivityRestoringP", "UIFontTextStyle"]
+- ["So23UIUserActivityRestoringP", "UILabel"]
+- !private ["So23UIUserActivityRestoringP", "UIScreen"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addSubview"]
+- !private ["So23UIUserActivityRestoringP", "font"]
+- !private ["So23UIUserActivityRestoringP", "frame"]
+- ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "isHidden"]
+- !private ["So23UIUserActivityRestoringP", "layoutSubviews"]
+- !private ["So23UIUserActivityRestoringP", "padding"]
+- !private ["So23UIUserActivityRestoringP", "paddingBottom"]
+- !private ["So23UIUserActivityRestoringP", "paddingLeft"]
+- !private ["So23UIUserActivityRestoringP", "paddingRight"]
+- !private ["So23UIUserActivityRestoringP", "paddingTop"]
+- !private ["So23UIUserActivityRestoringP", "placeholderLabel"]
+- !private ["So23UIUserActivityRestoringP", "placeholderText"]
+- !private ["So23UIUserActivityRestoringP", "sendSubview"]
+- !private ["So23UIUserActivityRestoringP", "sizeToFit"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "textChanged"]
+- !private ["So23UIUserActivityRestoringP", "textColor"]
+- !private ["So23UIUserActivityRestoringP", "textContainer"]
+- !private ["So23UIUserActivityRestoringP", "textContainerInset"]
+- !private ["So23UIUserActivityRestoringP", "unifiedInit"]
 - ["So6UIViewC", "CGFloat"]
 - ["So6UIViewC", "CGRect"]
 - ["So6UIViewC", "NSCoder"]
@@ -1178,18 +1294,25 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textContainerInset"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "unifiedInit"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "isEmpty"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "withAlphaComponent"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "isEmpty"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "Name"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "UITextViewTextDidChange"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "body"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNotification"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Name"]
@@ -1234,6 +1357,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "UITextViewTextDidChange"]
 - !private ["s21_ObjectiveCBridgeableP", "body"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "left"]
 - !private ["s21_ObjectiveCBridgeableP", "origin"]
@@ -1243,29 +1367,33 @@ depends-member:
 - !private ["s20_SwiftNewtypeWrapperP", "UITextViewTextDidChange"]
 - !private ["s20_SwiftNewtypeWrapperP", "body"]
 - ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "isEmpty"]
+- !private ["So13CKRecordValueP", "isEmpty"]
 depends-nominal:
 - "8Schedule14BetterTextViewC"
-- "s23BidirectionalCollectionP"
+- "SK"
 - "So15CALayerDelegateP"
-- !private "SC7CGPointV"
-- !private "SC6CGRectV"
-- !private "So13CKRecordValueP"
+- !private "So7CGPointV"
+- !private "So6CGRectV"
+- !private "8CloudKit24CKRecordValueConvertibleP"
+- "8CloudKit21CKRecordValueProtocolP"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
-- "s10CollectionP"
-- "s10ComparableP"
+- "Sl"
+- "SL"
 - "s28CustomDebugStringConvertibleP"
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- "s9DecodableP"
-- "s9EncodableP"
-- "s9EquatableP"
+- "Se"
+- "SE"
+- "SQ"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - "So8NSCodingP"
@@ -1275,20 +1403,22 @@ depends-nominal:
 - !private "So16NSMutableCopyingP"
 - !private "So14NSNotificationC"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - !private "So15NSTextContainerC"
 - !private "So31NSTextLayoutOrientationProviderP"
-- !private "So14NSNotificationC4NameV"
-- !private "So18NotificationCenterC"
-- "s26RangeReplaceableCollectionP"
-- !private "s16RawRepresentableP"
-- "s8SequenceP"
+- !private "So18NSNotificationNamea"
+- !private "So20NSNotificationCenterC"
+- !private "Sq"
+- "Sm"
+- !private "SY"
+- "ST"
 - "SS"
-- "s14StringProtocolP"
+- "Sy"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
+- !private "So15UIFontTextStylea"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -1296,11 +1426,12 @@ depends-nominal:
 - "So30UIContentSizeCategoryAdjustingP"
 - "So17UICoordinateSpaceP"
 - "So13UIDynamicItemP"
-- !private "SC12UIEdgeInsetsV"
+- !private "So12UIEdgeInsetsV"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
+- "So30UIFocusItemScrollableContainerP"
 - !private "So6UIFontC"
-- !private "SC15UIFontTextStyleV"
 - "So10UIKeyInputP"
 - "So7UILabelC"
 - "So30UIPasteConfigurationSupportingP"
@@ -1315,6 +1446,7 @@ depends-nominal:
 - "So34UITextPasteConfigurationSupportingP"
 - "So10UITextViewC"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
@@ -1328,6 +1460,7 @@ depends-nominal:
 - "s21_ObjectiveCBridgeableP"
 - !private "s20_SwiftNewtypeWrapperP"
 - "s16_SwiftStringViewP"
+- !private "So13CKRecordValueP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
@@ -1346,18 +1479,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "614d7c997da4b0d445df5f393a8c963a"

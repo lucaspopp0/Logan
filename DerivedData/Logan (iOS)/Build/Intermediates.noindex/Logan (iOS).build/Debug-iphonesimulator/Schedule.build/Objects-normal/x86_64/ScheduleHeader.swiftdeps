@@ -14,6 +14,8 @@ depends-top-level:
 - !private "/"
 - "AssignmentPrecedence"
 - "CGRect"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "NSCoder"
 - "ScheduleHeader"
 - "String"
@@ -27,8 +29,9 @@ depends-top-level:
 - "UIView"
 - "UIVisualEffectView"
 depends-member:
-- ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "uppercased"]
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["SK", "uppercased"]
 - ["So15CALayerDelegateP", "UIBlurEffect"]
 - ["So15CALayerDelegateP", "UIBlurEffectStyle"]
 - !private ["So15CALayerDelegateP", "UIColor"]
@@ -52,12 +55,15 @@ depends-member:
 - !private ["So15CALayerDelegateP", "title"]
 - !private ["So15CALayerDelegateP", "unifiedInit"]
 - !private ["So15CALayerDelegateP", "vibrancyView"]
-- !private ["SC7CGPointV", "x"]
-- !private ["SC7CGPointV", "y"]
-- !private ["SC6CGRectV", "origin"]
-- !private ["SC6CGRectV", "size"]
-- !private ["SC6CGSizeV", "height"]
-- !private ["So13CKRecordValueP", "uppercased"]
+- !private ["So7CGPointV", "x"]
+- !private ["So7CGPointV", "y"]
+- !private ["So6CGRectV", "origin"]
+- !private ["So6CGRectV", "size"]
+- !private ["So6CGSizeV", "height"]
+- !private ["8CloudKit24CKRecordValueConvertibleP", "uppercased"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "uppercased"]
 - !private ["So15CNKeyDescriptorP", "uppercased"]
 - ["s7CVarArgP", "UIBlurEffect"]
 - ["s7CVarArgP", "UIBlurEffectStyle"]
@@ -75,6 +81,7 @@ depends-member:
 - !private ["s7CVarArgP", "font"]
 - !private ["s7CVarArgP", "frame"]
 - ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "label"]
 - !private ["s7CVarArgP", "layoutSubviews"]
 - !private ["s7CVarArgP", "sizeToFit"]
@@ -86,11 +93,13 @@ depends-member:
 - !private ["s7CVarArgP", "uppercased"]
 - !private ["s7CVarArgP", "vibrancyView"]
 - !private ["s7CVarArgP", "white"]
-- ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "uppercased"]
-- ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "thin"]
-- !private ["s10ComparableP", "uppercased"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- !private ["Sl", "uppercased"]
+- ["SL", "init"]
+- ["SL", "init"]
+- !private ["SL", "thin"]
+- !private ["SL", "uppercased"]
 - ["s28CustomDebugStringConvertibleP", "UIBlurEffect"]
 - ["s28CustomDebugStringConvertibleP", "UIBlurEffectStyle"]
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
@@ -107,6 +116,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "font"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
 - !private ["s28CustomDebugStringConvertibleP", "height"]
+- ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "label"]
 - !private ["s28CustomDebugStringConvertibleP", "layoutSubviews"]
@@ -125,12 +135,14 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "y"]
 - !private ["s29CustomPlaygroundQuickLookableP", "height"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "origin"]
 - !private ["s29CustomPlaygroundQuickLookableP", "size"]
 - !private ["s29CustomPlaygroundQuickLookableP", "uppercased"]
 - !private ["s29CustomPlaygroundQuickLookableP", "x"]
 - !private ["s29CustomPlaygroundQuickLookableP", "y"]
 - !private ["s17CustomReflectableP", "height"]
+- ["s17CustomReflectableP", "init"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "origin"]
 - !private ["s17CustomReflectableP", "size"]
@@ -153,6 +165,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "font"]
 - !private ["s23CustomStringConvertibleP", "frame"]
 - ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "label"]
 - !private ["s23CustomStringConvertibleP", "layoutSubviews"]
 - !private ["s23CustomStringConvertibleP", "sizeToFit"]
@@ -164,91 +177,100 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "uppercased"]
 - !private ["s23CustomStringConvertibleP", "vibrancyView"]
 - !private ["s23CustomStringConvertibleP", "white"]
-- !private ["s9DecodableP", "height"]
-- ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "origin"]
-- !private ["s9DecodableP", "size"]
-- !private ["s9DecodableP", "uppercased"]
-- !private ["s9DecodableP", "x"]
-- !private ["s9DecodableP", "y"]
-- !private ["s9EncodableP", "height"]
-- ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "origin"]
-- !private ["s9EncodableP", "size"]
-- !private ["s9EncodableP", "uppercased"]
-- !private ["s9EncodableP", "x"]
-- !private ["s9EncodableP", "y"]
-- ["s9EquatableP", "UIBlurEffect"]
-- ["s9EquatableP", "UIBlurEffectStyle"]
-- !private ["s9EquatableP", "UIColor"]
-- !private ["s9EquatableP", "UIFont"]
-- ["s9EquatableP", "UILabel"]
-- ["s9EquatableP", "UIVibrancyEffect"]
-- ["s9EquatableP", "UIVisualEffectView"]
-- !private ["s9EquatableP", "Weight"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "addSubview"]
-- !private ["s9EquatableP", "backgroundColor"]
-- !private ["s9EquatableP", "bounds"]
-- !private ["s9EquatableP", "contentView"]
-- !private ["s9EquatableP", "font"]
-- !private ["s9EquatableP", "frame"]
-- !private ["s9EquatableP", "height"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "label"]
-- !private ["s9EquatableP", "layoutSubviews"]
-- !private ["s9EquatableP", "origin"]
-- ["s9EquatableP", "prominent"]
-- !private ["s9EquatableP", "size"]
-- !private ["s9EquatableP", "sizeToFit"]
-- !private ["s9EquatableP", "systemFont"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "textColor"]
-- !private ["s9EquatableP", "thin"]
-- !private ["s9EquatableP", "title"]
-- !private ["s9EquatableP", "unifiedInit"]
-- !private ["s9EquatableP", "uppercased"]
-- !private ["s9EquatableP", "vibrancyView"]
-- !private ["s9EquatableP", "white"]
-- !private ["s9EquatableP", "x"]
-- !private ["s9EquatableP", "y"]
+- !private ["Se", "height"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["Se", "origin"]
+- !private ["Se", "size"]
+- !private ["Se", "uppercased"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- !private ["SE", "height"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SE", "origin"]
+- !private ["SE", "size"]
+- !private ["SE", "uppercased"]
+- !private ["SE", "x"]
+- !private ["SE", "y"]
+- ["SQ", "UIBlurEffect"]
+- ["SQ", "UIBlurEffectStyle"]
+- !private ["SQ", "UIColor"]
+- !private ["SQ", "UIFont"]
+- ["SQ", "UILabel"]
+- ["SQ", "UIVibrancyEffect"]
+- ["SQ", "UIVisualEffectView"]
+- !private ["SQ", "Weight"]
+- ["SQ", ""]
+- !private ["SQ", "addSubview"]
+- !private ["SQ", "backgroundColor"]
+- !private ["SQ", "bounds"]
+- !private ["SQ", "contentView"]
+- !private ["SQ", "font"]
+- !private ["SQ", "frame"]
+- !private ["SQ", "height"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "label"]
+- !private ["SQ", "layoutSubviews"]
+- !private ["SQ", "origin"]
+- ["SQ", "prominent"]
+- !private ["SQ", "size"]
+- !private ["SQ", "sizeToFit"]
+- !private ["SQ", "systemFont"]
+- !private ["SQ", "text"]
+- !private ["SQ", "textColor"]
+- !private ["SQ", "thin"]
+- !private ["SQ", "title"]
+- !private ["SQ", "unifiedInit"]
+- !private ["SQ", "uppercased"]
+- !private ["SQ", "vibrancyView"]
+- !private ["SQ", "white"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "uppercased"]
 - ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "uppercased"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "uppercased"]
-- ["s8HashableP", "UIBlurEffect"]
-- ["s8HashableP", "UIBlurEffectStyle"]
-- !private ["s8HashableP", "UIColor"]
-- !private ["s8HashableP", "UIFont"]
-- ["s8HashableP", "UILabel"]
-- ["s8HashableP", "UIVibrancyEffect"]
-- ["s8HashableP", "UIVisualEffectView"]
-- !private ["s8HashableP", "Weight"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "addSubview"]
-- !private ["s8HashableP", "backgroundColor"]
-- !private ["s8HashableP", "bounds"]
-- !private ["s8HashableP", "contentView"]
-- !private ["s8HashableP", "font"]
-- !private ["s8HashableP", "frame"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "label"]
-- !private ["s8HashableP", "layoutSubviews"]
-- ["s8HashableP", "prominent"]
-- !private ["s8HashableP", "sizeToFit"]
-- !private ["s8HashableP", "systemFont"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "textColor"]
-- !private ["s8HashableP", "thin"]
-- !private ["s8HashableP", "title"]
-- !private ["s8HashableP", "unifiedInit"]
-- !private ["s8HashableP", "uppercased"]
-- !private ["s8HashableP", "vibrancyView"]
-- !private ["s8HashableP", "white"]
+- ["SH", "UIBlurEffect"]
+- ["SH", "UIBlurEffectStyle"]
+- !private ["SH", "UIColor"]
+- !private ["SH", "UIFont"]
+- ["SH", "UILabel"]
+- ["SH", "UIVibrancyEffect"]
+- ["SH", "UIVisualEffectView"]
+- !private ["SH", "Weight"]
+- ["SH", ""]
+- !private ["SH", "addSubview"]
+- !private ["SH", "backgroundColor"]
+- !private ["SH", "bounds"]
+- !private ["SH", "contentView"]
+- !private ["SH", "font"]
+- !private ["SH", "frame"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "label"]
+- !private ["SH", "layoutSubviews"]
+- ["SH", "prominent"]
+- !private ["SH", "sizeToFit"]
+- !private ["SH", "systemFont"]
+- !private ["SH", "text"]
+- !private ["SH", "textColor"]
+- !private ["SH", "thin"]
+- !private ["SH", "title"]
+- !private ["SH", "unifiedInit"]
+- !private ["SH", "uppercased"]
+- !private ["SH", "vibrancyView"]
+- !private ["SH", "white"]
+- ["s25LosslessStringConvertibleP", "init"]
 - ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "uppercased"]
+- ["s10MirrorPathP", "init"]
 - ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "uppercased"]
 - ["So8NSCodingP", "UIBlurEffect"]
@@ -317,43 +339,44 @@ depends-member:
 - !private ["So8NSObjectC", "uppercased"]
 - ["So8NSObjectC", "vibrancyView"]
 - !private ["So8NSObjectC", "white"]
-- ["So16NSObjectProtocolP", "UIBlurEffect"]
-- ["So16NSObjectProtocolP", "UIBlurEffectStyle"]
-- !private ["So16NSObjectProtocolP", "UIColor"]
-- !private ["So16NSObjectProtocolP", "UIFont"]
-- ["So16NSObjectProtocolP", "UILabel"]
-- ["So16NSObjectProtocolP", "UIVibrancyEffect"]
-- ["So16NSObjectProtocolP", "UIVisualEffectView"]
-- !private ["So16NSObjectProtocolP", "Weight"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "addSubview"]
-- !private ["So16NSObjectProtocolP", "backgroundColor"]
-- !private ["So16NSObjectProtocolP", "bounds"]
-- !private ["So16NSObjectProtocolP", "contentView"]
-- !private ["So16NSObjectProtocolP", "font"]
-- !private ["So16NSObjectProtocolP", "frame"]
-- ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "label"]
-- !private ["So16NSObjectProtocolP", "layoutSubviews"]
-- !private ["So16NSObjectProtocolP", "sizeToFit"]
-- !private ["So16NSObjectProtocolP", "systemFont"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "textColor"]
-- !private ["So16NSObjectProtocolP", "title"]
-- !private ["So16NSObjectProtocolP", "unifiedInit"]
-- !private ["So16NSObjectProtocolP", "uppercased"]
-- !private ["So16NSObjectProtocolP", "vibrancyView"]
-- !private ["So16NSObjectProtocolP", "white"]
+- ["So8NSObjectP", "UIBlurEffect"]
+- ["So8NSObjectP", "UIBlurEffectStyle"]
+- !private ["So8NSObjectP", "UIColor"]
+- !private ["So8NSObjectP", "UIFont"]
+- ["So8NSObjectP", "UILabel"]
+- ["So8NSObjectP", "UIVibrancyEffect"]
+- ["So8NSObjectP", "UIVisualEffectView"]
+- !private ["So8NSObjectP", "Weight"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addSubview"]
+- !private ["So8NSObjectP", "backgroundColor"]
+- !private ["So8NSObjectP", "bounds"]
+- !private ["So8NSObjectP", "contentView"]
+- !private ["So8NSObjectP", "font"]
+- !private ["So8NSObjectP", "frame"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "label"]
+- !private ["So8NSObjectP", "layoutSubviews"]
+- !private ["So8NSObjectP", "sizeToFit"]
+- !private ["So8NSObjectP", "systemFont"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "textColor"]
+- !private ["So8NSObjectP", "title"]
+- !private ["So8NSObjectP", "unifiedInit"]
+- !private ["So8NSObjectP", "uppercased"]
+- !private ["So8NSObjectP", "vibrancyView"]
+- !private ["So8NSObjectP", "white"]
 - !private ["So14NSSecureCodingP", "contentView"]
 - !private ["So14NSSecureCodingP", "frame"]
 - ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "uppercased"]
 - !private ["So14NSSecureCodingP", "white"]
 - !private ["So8NSStringC", "uppercased"]
-- ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "uppercased"]
-- ["s16RawRepresentableP", "prominent"]
-- !private ["s16RawRepresentableP", "thin"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["Sm", "uppercased"]
+- ["SY", "prominent"]
+- !private ["SY", "thin"]
 - ["8Schedule0A6HeaderC", "CGRect"]
 - ["8Schedule0A6HeaderC", "NSCoder"]
 - ["8Schedule0A6HeaderC", "String"]
@@ -367,7 +390,7 @@ depends-member:
 - !private ["8Schedule0A6HeaderC", "addSubview"]
 - !private ["8Schedule0A6HeaderC", "backgroundColor"]
 - !private ["8Schedule0A6HeaderC", "bounds"]
-- ["8Schedule0A6HeaderC", "deinit"]
+- !private ["8Schedule0A6HeaderC", "deinit"]
 - !private ["8Schedule0A6HeaderC", "frame"]
 - ["8Schedule0A6HeaderC", "init"]
 - !private ["8Schedule0A6HeaderC", "label"]
@@ -376,14 +399,20 @@ depends-member:
 - ["8Schedule0A6HeaderC", "title"]
 - !private ["8Schedule0A6HeaderC", "unifiedInit"]
 - !private ["8Schedule0A6HeaderC", "vibrancyView"]
-- ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "uppercased"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["ST", "uppercased"]
+- ["SS", "init"]
 - ["SS", "init"]
 - !private ["SS", "uppercased"]
-- ["s14StringProtocolP", "init"]
-- !private ["s14StringProtocolP", "uppercased"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- !private ["Sy", "uppercased"]
+- ["So17UIBlurEffectStyleV", "prominent"]
+- ["s16TextOutputStreamP", "init"]
 - ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "uppercased"]
+- ["s20TextOutputStreamableP", "init"]
 - ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "uppercased"]
 - ["So29UIAccessibilityIdentificationP", "UIBlurEffect"]
@@ -456,7 +485,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "unifiedInit"]
 - !private ["So21UIAppearanceContainerP", "vibrancyView"]
 - ["So12UIBlurEffectC", "init"]
-- ["SC17UIBlurEffectStyleO", "prominent"]
 - !private ["So7UIColorC", "init"]
 - !private ["So7UIColorC", "white"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "font"]
@@ -557,6 +585,29 @@ depends-member:
 - !private ["So11UIFocusItemP", "title"]
 - !private ["So11UIFocusItemP", "unifiedInit"]
 - !private ["So11UIFocusItemP", "vibrancyView"]
+- ["So20UIFocusItemContainerP", "UIBlurEffect"]
+- ["So20UIFocusItemContainerP", "UIBlurEffectStyle"]
+- !private ["So20UIFocusItemContainerP", "UIColor"]
+- !private ["So20UIFocusItemContainerP", "UIFont"]
+- ["So20UIFocusItemContainerP", "UILabel"]
+- ["So20UIFocusItemContainerP", "UIVibrancyEffect"]
+- ["So20UIFocusItemContainerP", "UIVisualEffectView"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "addSubview"]
+- !private ["So20UIFocusItemContainerP", "backgroundColor"]
+- !private ["So20UIFocusItemContainerP", "bounds"]
+- !private ["So20UIFocusItemContainerP", "contentView"]
+- !private ["So20UIFocusItemContainerP", "font"]
+- !private ["So20UIFocusItemContainerP", "frame"]
+- ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "label"]
+- !private ["So20UIFocusItemContainerP", "layoutSubviews"]
+- !private ["So20UIFocusItemContainerP", "sizeToFit"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "textColor"]
+- !private ["So20UIFocusItemContainerP", "title"]
+- !private ["So20UIFocusItemContainerP", "unifiedInit"]
+- !private ["So20UIFocusItemContainerP", "vibrancyView"]
 - !private ["So6UIFontC", "Weight"]
 - !private ["So6UIFontC", "systemFont"]
 - !private ["So7UILabelC", "font"]
@@ -659,6 +710,29 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "title"]
 - !private ["So18UITraitEnvironmentP", "unifiedInit"]
 - !private ["So18UITraitEnvironmentP", "vibrancyView"]
+- ["So23UIUserActivityRestoringP", "UIBlurEffect"]
+- ["So23UIUserActivityRestoringP", "UIBlurEffectStyle"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
+- !private ["So23UIUserActivityRestoringP", "UIFont"]
+- ["So23UIUserActivityRestoringP", "UILabel"]
+- ["So23UIUserActivityRestoringP", "UIVibrancyEffect"]
+- ["So23UIUserActivityRestoringP", "UIVisualEffectView"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addSubview"]
+- !private ["So23UIUserActivityRestoringP", "backgroundColor"]
+- !private ["So23UIUserActivityRestoringP", "bounds"]
+- !private ["So23UIUserActivityRestoringP", "contentView"]
+- !private ["So23UIUserActivityRestoringP", "font"]
+- !private ["So23UIUserActivityRestoringP", "frame"]
+- ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "label"]
+- !private ["So23UIUserActivityRestoringP", "layoutSubviews"]
+- !private ["So23UIUserActivityRestoringP", "sizeToFit"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "textColor"]
+- !private ["So23UIUserActivityRestoringP", "title"]
+- !private ["So23UIUserActivityRestoringP", "unifiedInit"]
+- !private ["So23UIUserActivityRestoringP", "vibrancyView"]
 - ["So16UIVibrancyEffectC", "init"]
 - ["So6UIViewC", "CGRect"]
 - ["So6UIViewC", "NSCoder"]
@@ -690,7 +764,7 @@ depends-member:
 - !private ["So18UIVisualEffectViewC", "contentView"]
 - !private ["So18UIVisualEffectViewC", "frame"]
 - ["So18UIVisualEffectViewC", "init"]
-- !private ["So6UIFontC6WeightV", "thin"]
+- !private ["So12UIFontWeighta", "thin"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "UIBlurEffect"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "UIBlurEffectStyle"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "UIColor"]
@@ -715,17 +789,23 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "unifiedInit"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "vibrancyView"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "uppercased"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "uppercased"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "uppercased"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "uppercased"]
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "uppercased"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "thin"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "uppercased"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIBlurEffect"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIBlurEffectStyle"]
@@ -756,6 +836,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "origin"]
 - !private ["s21_ObjectiveCBridgeableP", "size"]
 - !private ["s21_ObjectiveCBridgeableP", "thin"]
@@ -764,30 +845,33 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "y"]
 - !private ["s20_SwiftNewtypeWrapperP", "thin"]
 - ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "uppercased"]
 - !private ["5UIKit01_A23NumericRawRepresentableP", "thin"]
+- !private ["So13CKRecordValueP", "uppercased"]
 depends-nominal:
-- "s23BidirectionalCollectionP"
+- "SK"
 - "So15CALayerDelegateP"
-- !private "SC7CGPointV"
-- !private "SC6CGRectV"
-- !private "SC6CGSizeV"
-- !private "So13CKRecordValueP"
+- !private "So7CGPointV"
+- !private "So6CGRectV"
+- !private "So6CGSizeV"
+- !private "8CloudKit24CKRecordValueConvertibleP"
+- "8CloudKit21CKRecordValueProtocolP"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
-- "s10CollectionP"
-- "s10ComparableP"
+- "Sl"
+- "SL"
 - "s28CustomDebugStringConvertibleP"
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- "s9DecodableP"
-- "s9EncodableP"
-- "s9EquatableP"
+- "Se"
+- "SE"
+- "SQ"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - "So8NSCodingP"
@@ -796,39 +880,41 @@ depends-nominal:
 - !private "So21NSItemProviderWritingP"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - "So14NSSecureCodingP"
 - !private "So8NSStringC"
-- "s26RangeReplaceableCollectionP"
-- "s16RawRepresentableP"
+- "Sm"
+- "SY"
 - "8Schedule0A6HeaderC"
-- "s8SequenceP"
+- "ST"
 - "SS"
-- "s14StringProtocolP"
+- "Sy"
+- "So17UIBlurEffectStyleV"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
 - "So12UIBlurEffectC"
-- "SC17UIBlurEffectStyleO"
 - !private "So7UIColorC"
 - "So30UIContentSizeCategoryAdjustingP"
 - "So17UICoordinateSpaceP"
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - !private "So6UIFontC"
 - "So7UILabelC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So16UIVibrancyEffectC"
 - "So6UIViewC"
 - "So14UIVisualEffectC"
 - "So18UIVisualEffectViewC"
-- !private "So6UIFontC6WeightV"
+- !private "So12UIFontWeighta"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
@@ -842,6 +928,7 @@ depends-nominal:
 - !private "s20_SwiftNewtypeWrapperP"
 - "s16_SwiftStringViewP"
 - !private "5UIKit01_A23NumericRawRepresentableP"
+- !private "So13CKRecordValueP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -860,18 +947,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "a1ea701fad1f040c191649b6eb3a7a50"

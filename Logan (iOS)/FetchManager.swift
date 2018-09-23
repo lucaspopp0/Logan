@@ -13,6 +13,7 @@ class FetchManager {
     var records: [CKRecord] = []
     var fetched: Bool = true
     private var fetching: Bool = false
+    private var cancelled: Bool = false
     
     private var queryResults: [CKRecord] = []
     private var database: CKDatabase?
@@ -24,23 +25,31 @@ class FetchManager {
         self.recordType = recordType
     }
     
-    func makeQuery(createdBy creator: CKReference, dataManager: DataManager) {
+    func makeQuery(createdBy creator: CKReference, dataManager: DataManager, errorHandler: ((_ error: Error) -> Void)? = nil) {
         if !fetching {
+            cancelled = false
             fetching = true
             queryResults = []
             
             database = dataManager.privateContainer.privateCloudDatabase
             queryCompletedBlock = { (results, error) in
-                self.fetched = true
-                
-                if let queryError = error {
-                    Console.shared.print("Error fetching records of type \(self.recordType): \(queryError.localizedDescription)")
-                    dataManager.fetchFailed = true
-                } else if let fetchedResults = results {
-                    self.records = fetchedResults
+                if !self.cancelled {
+                    self.fetched = true
+                    
+                    if let queryError = error {
+                        if let handleError = errorHandler {
+                            dataManager.fetchFailed = true
+                            handleError(queryError)
+                        } else {
+                            Console.shared.print("Error fetching records of type \(self.recordType): \(queryError.localizedDescription)")
+                            dataManager.fetchFailed = true
+                        }
+                    } else if let fetchedResults = results {
+                        self.records = fetchedResults
+                    }
+                    
+                    dataManager.attemptToCompileFetchedRecords()
                 }
-                
-                dataManager.attemptToCompileFetchedRecords()
                 
                 self.fetching = false
             }
@@ -54,6 +63,12 @@ class FetchManager {
             operation.qualityOfService = QualityOfService.userInitiated
             
             database?.add(operation)
+        }
+    }
+    
+    func cancelQuery() {
+        if fetching {
+            cancelled = true
         }
     }
     

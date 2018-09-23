@@ -15,6 +15,7 @@ depends-top-level:
 - !private "BooleanLiteralType"
 - "Extracurricular"
 - "ExtracurricularTableViewCell"
+- !private "FloatLiteralType"
 - !private "StringLiteralType"
 - "TernaryPrecedence"
 - !private "UIColor"
@@ -22,8 +23,9 @@ depends-top-level:
 - "UILabel"
 - "UITableViewCell"
 depends-member:
-- !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "isEmpty"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "isEmpty"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "UIColor"]
 - ["So15CALayerDelegateP", ""]
@@ -31,6 +33,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "colorValue"]
 - !private ["So15CALayerDelegateP", "configureCell"]
 - !private ["So15CALayerDelegateP", "extracurricular"]
+- !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "isHidden"]
 - !private ["So15CALayerDelegateP", "nameLabel"]
@@ -41,7 +44,11 @@ depends-member:
 - !private ["5Tasks9CKEnabledC", "color"]
 - !private ["5Tasks9CKEnabledC", "name"]
 - !private ["5Tasks9CKEnabledC", "nickname"]
-- !private ["So13CKRecordValueP", "isEmpty"]
+- !private ["8CloudKit24CKRecordValueConvertibleP", "isEmpty"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "isEmpty"]
 - !private ["So15CNKeyDescriptorP", "isEmpty"]
 - !private ["s7CVarArgP", "UIColor"]
 - ["s7CVarArgP", ""]
@@ -53,6 +60,7 @@ depends-member:
 - !private ["s7CVarArgP", "configureCell"]
 - !private ["s7CVarArgP", "extracurricular"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "isHidden"]
 - !private ["s7CVarArgP", "name"]
@@ -63,13 +71,15 @@ depends-member:
 - !private ["s7CVarArgP", "textColor"]
 - !private ["s7CVarArgP", "tintColor"]
 - !private ["s7CVarArgP", "withAlphaComponent"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "isEmpty"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "isEmpty"]
 - !private ["5Tasks10CommitmentP", "color"]
 - !private ["5Tasks10CommitmentP", "name"]
 - !private ["5Tasks10CommitmentP", "nickname"]
-- !private ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "isEmpty"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "black"]
@@ -78,6 +88,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "colorValue"]
 - !private ["s28CustomDebugStringConvertibleP", "configureCell"]
 - !private ["s28CustomDebugStringConvertibleP", "extracurricular"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
@@ -91,10 +102,15 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "withAlphaComponent"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "isHidden"]
+- !private ["s17CustomReflectableP", "text"]
+- !private ["s17CustomReflectableP", "textColor"]
 - !private ["s23CustomStringConvertibleP", "UIColor"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
@@ -104,6 +120,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "colorValue"]
 - !private ["s23CustomStringConvertibleP", "configureCell"]
 - !private ["s23CustomStringConvertibleP", "extracurricular"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
@@ -115,37 +132,52 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "textColor"]
 - !private ["s23CustomStringConvertibleP", "tintColor"]
 - !private ["s23CustomStringConvertibleP", "withAlphaComponent"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "isEmpty"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "isEmpty"]
-- !private ["s9EquatableP", "UIColor"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "black"]
-- !private ["s9EquatableP", "color"]
-- !private ["s9EquatableP", "colorSwatch"]
-- !private ["s9EquatableP", "colorValue"]
-- !private ["s9EquatableP", "configureCell"]
-- !private ["s9EquatableP", "extracurricular"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "isEmpty"]
-- !private ["s9EquatableP", "isHidden"]
-- !private ["s9EquatableP", "name"]
-- !private ["s9EquatableP", "nameLabel"]
-- !private ["s9EquatableP", "nickname"]
-- !private ["s9EquatableP", "nicknameLabel"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "textColor"]
-- !private ["s9EquatableP", "tintColor"]
-- !private ["s9EquatableP", "withAlphaComponent"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "isHidden"]
+- !private ["Se", "text"]
+- !private ["Se", "textColor"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "isHidden"]
+- !private ["SE", "text"]
+- !private ["SE", "textColor"]
+- !private ["SQ", "UIColor"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "black"]
+- !private ["SQ", "color"]
+- !private ["SQ", "colorSwatch"]
+- !private ["SQ", "colorValue"]
+- !private ["SQ", "configureCell"]
+- !private ["SQ", "extracurricular"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isEmpty"]
+- !private ["SQ", "isHidden"]
+- !private ["SQ", "name"]
+- !private ["SQ", "nameLabel"]
+- !private ["SQ", "nickname"]
+- !private ["SQ", "nicknameLabel"]
+- !private ["SQ", "text"]
+- !private ["SQ", "textColor"]
+- !private ["SQ", "tintColor"]
+- !private ["SQ", "withAlphaComponent"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s23ExpressibleByNilLiteralP", "isHidden"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
+- !private ["s23ExpressibleByNilLiteralP", "textColor"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
 - !private ["5Tasks15ExtracurricularC", "color"]
@@ -158,35 +190,37 @@ depends-member:
 - ["5Tasks28ExtracurricularTableViewCellC", "UILabel"]
 - ["5Tasks28ExtracurricularTableViewCellC", "colorSwatch"]
 - ["5Tasks28ExtracurricularTableViewCellC", "configureCell"]
-- ["5Tasks28ExtracurricularTableViewCellC", "deinit"]
 - ["5Tasks28ExtracurricularTableViewCellC", "extracurricular"]
 - ["5Tasks28ExtracurricularTableViewCellC", "init"]
 - ["5Tasks28ExtracurricularTableViewCellC", "nameLabel"]
 - ["5Tasks28ExtracurricularTableViewCellC", "nicknameLabel"]
 - !private ["5Tasks28ExtracurricularTableViewCellC", "tintColor"]
-- !private ["s8HashableP", "UIColor"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "black"]
-- !private ["s8HashableP", "color"]
-- !private ["s8HashableP", "colorSwatch"]
-- !private ["s8HashableP", "colorValue"]
-- !private ["s8HashableP", "configureCell"]
-- !private ["s8HashableP", "extracurricular"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "isEmpty"]
-- !private ["s8HashableP", "isHidden"]
-- !private ["s8HashableP", "name"]
-- !private ["s8HashableP", "nameLabel"]
-- !private ["s8HashableP", "nickname"]
-- !private ["s8HashableP", "nicknameLabel"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "textColor"]
-- !private ["s8HashableP", "tintColor"]
-- !private ["s8HashableP", "withAlphaComponent"]
+- !private ["SH", "UIColor"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "black"]
+- !private ["SH", "color"]
+- !private ["SH", "colorSwatch"]
+- !private ["SH", "colorValue"]
+- !private ["SH", "configureCell"]
+- !private ["SH", "extracurricular"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "isEmpty"]
+- !private ["SH", "isHidden"]
+- !private ["SH", "name"]
+- !private ["SH", "nameLabel"]
+- !private ["SH", "nickname"]
+- !private ["SH", "nicknameLabel"]
+- !private ["SH", "text"]
+- !private ["SH", "textColor"]
+- !private ["SH", "tintColor"]
+- !private ["SH", "withAlphaComponent"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "isEmpty"]
 - !private ["So8NSCodingP", "UIColor"]
@@ -196,6 +230,7 @@ depends-member:
 - !private ["So8NSCodingP", "colorValue"]
 - !private ["So8NSCodingP", "configureCell"]
 - !private ["So8NSCodingP", "extracurricular"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isEmpty"]
 - !private ["So8NSCodingP", "isHidden"]
@@ -226,6 +261,7 @@ depends-member:
 - ["So8NSObjectC", "configureCell"]
 - ["So8NSObjectC", "extracurricular"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isEmpty"]
 - !private ["So8NSObjectC", "isHidden"]
 - !private ["So8NSObjectC", "name"]
@@ -236,39 +272,49 @@ depends-member:
 - !private ["So8NSObjectC", "textColor"]
 - !private ["So8NSObjectC", "tintColor"]
 - !private ["So8NSObjectC", "withAlphaComponent"]
-- !private ["So16NSObjectProtocolP", "UIColor"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "black"]
-- !private ["So16NSObjectProtocolP", "color"]
-- !private ["So16NSObjectProtocolP", "colorSwatch"]
-- !private ["So16NSObjectProtocolP", "colorValue"]
-- !private ["So16NSObjectProtocolP", "configureCell"]
-- !private ["So16NSObjectProtocolP", "extracurricular"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "isEmpty"]
-- !private ["So16NSObjectProtocolP", "isHidden"]
-- !private ["So16NSObjectProtocolP", "name"]
-- !private ["So16NSObjectProtocolP", "nameLabel"]
-- !private ["So16NSObjectProtocolP", "nickname"]
-- !private ["So16NSObjectProtocolP", "nicknameLabel"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "textColor"]
-- !private ["So16NSObjectProtocolP", "tintColor"]
-- !private ["So16NSObjectProtocolP", "withAlphaComponent"]
+- !private ["So8NSObjectP", "UIColor"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "black"]
+- !private ["So8NSObjectP", "color"]
+- !private ["So8NSObjectP", "colorSwatch"]
+- !private ["So8NSObjectP", "colorValue"]
+- !private ["So8NSObjectP", "configureCell"]
+- !private ["So8NSObjectP", "extracurricular"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isEmpty"]
+- !private ["So8NSObjectP", "isHidden"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "nameLabel"]
+- !private ["So8NSObjectP", "nickname"]
+- !private ["So8NSObjectP", "nicknameLabel"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "textColor"]
+- !private ["So8NSObjectP", "tintColor"]
+- !private ["So8NSObjectP", "withAlphaComponent"]
 - !private ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "isEmpty"]
 - !private ["So14NSSecureCodingP", "withAlphaComponent"]
 - !private ["So8NSStringC", "isEmpty"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
-- !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "isEmpty"]
+- !private ["Sq", "isHidden"]
+- !private ["Sq", "text"]
+- !private ["Sq", "textColor"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "isEmpty"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "isEmpty"]
+- !private ["SS", "init"]
 - !private ["SS", "init"]
 - !private ["SS", "isEmpty"]
-- !private ["s14StringProtocolP", "init"]
-- !private ["s14StringProtocolP", "isEmpty"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "isEmpty"]
+- !private ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "isEmpty"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "isEmpty"]
 - !private ["So29UIAccessibilityIdentificationP", "UIColor"]
@@ -277,6 +323,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "colorValue"]
 - !private ["So29UIAccessibilityIdentificationP", "configureCell"]
 - !private ["So29UIAccessibilityIdentificationP", "extracurricular"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "isHidden"]
 - !private ["So29UIAccessibilityIdentificationP", "nameLabel"]
@@ -291,6 +338,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "configureCell"]
 - !private ["So12UIAppearanceP", "extracurricular"]
 - !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "isHidden"]
 - !private ["So12UIAppearanceP", "nameLabel"]
 - !private ["So12UIAppearanceP", "nicknameLabel"]
@@ -303,6 +351,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "colorValue"]
 - !private ["So21UIAppearanceContainerP", "configureCell"]
 - !private ["So21UIAppearanceContainerP", "extracurricular"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
 - !private ["So21UIAppearanceContainerP", "nameLabel"]
@@ -325,6 +374,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "configureCell"]
 - !private ["So17UICoordinateSpaceP", "extracurricular"]
 - !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "isHidden"]
 - !private ["So17UICoordinateSpaceP", "nameLabel"]
 - !private ["So17UICoordinateSpaceP", "nicknameLabel"]
@@ -337,6 +387,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "colorValue"]
 - !private ["So13UIDynamicItemP", "configureCell"]
 - !private ["So13UIDynamicItemP", "extracurricular"]
+- !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "isHidden"]
 - !private ["So13UIDynamicItemP", "nameLabel"]
@@ -351,6 +402,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "configureCell"]
 - !private ["So18UIFocusEnvironmentP", "extracurricular"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
 - !private ["So18UIFocusEnvironmentP", "nameLabel"]
 - !private ["So18UIFocusEnvironmentP", "nicknameLabel"]
@@ -364,17 +416,33 @@ depends-member:
 - !private ["So11UIFocusItemP", "configureCell"]
 - !private ["So11UIFocusItemP", "extracurricular"]
 - !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "isHidden"]
 - !private ["So11UIFocusItemP", "nameLabel"]
 - !private ["So11UIFocusItemP", "nicknameLabel"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "textColor"]
 - !private ["So11UIFocusItemP", "tintColor"]
+- !private ["So20UIFocusItemContainerP", "UIColor"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "colorSwatch"]
+- !private ["So20UIFocusItemContainerP", "colorValue"]
+- !private ["So20UIFocusItemContainerP", "configureCell"]
+- !private ["So20UIFocusItemContainerP", "extracurricular"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "isHidden"]
+- !private ["So20UIFocusItemContainerP", "nameLabel"]
+- !private ["So20UIFocusItemContainerP", "nicknameLabel"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "textColor"]
+- !private ["So20UIFocusItemContainerP", "tintColor"]
 - !private ["So27UIGestureRecognizerDelegateP", "UIColor"]
 - ["So27UIGestureRecognizerDelegateP", ""]
 - !private ["So27UIGestureRecognizerDelegateP", "colorSwatch"]
 - !private ["So27UIGestureRecognizerDelegateP", "configureCell"]
 - !private ["So27UIGestureRecognizerDelegateP", "extracurricular"]
+- !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "nameLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "nicknameLabel"]
@@ -388,6 +456,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "colorValue"]
 - !private ["So30UIPasteConfigurationSupportingP", "configureCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "extracurricular"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "nameLabel"]
@@ -404,6 +473,7 @@ depends-member:
 - ["So11UIResponderC", "configureCell"]
 - ["So11UIResponderC", "extracurricular"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isHidden"]
 - ["So11UIResponderC", "nameLabel"]
 - ["So11UIResponderC", "nicknameLabel"]
@@ -416,6 +486,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "colorValue"]
 - !private ["So30UIResponderStandardEditActionsP", "configureCell"]
 - !private ["So30UIResponderStandardEditActionsP", "extracurricular"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "nameLabel"]
@@ -432,6 +503,7 @@ depends-member:
 - ["So15UITableViewCellC", "configureCell"]
 - ["So15UITableViewCellC", "extracurricular"]
 - ["So15UITableViewCellC", "init"]
+- !private ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "nameLabel"]
 - ["So15UITableViewCellC", "nicknameLabel"]
 - !private ["So15UITableViewCellC", "tintColor"]
@@ -442,12 +514,27 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "configureCell"]
 - !private ["So18UITraitEnvironmentP", "extracurricular"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
 - !private ["So18UITraitEnvironmentP", "nameLabel"]
 - !private ["So18UITraitEnvironmentP", "nicknameLabel"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "textColor"]
 - !private ["So18UITraitEnvironmentP", "tintColor"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "colorSwatch"]
+- !private ["So23UIUserActivityRestoringP", "colorValue"]
+- !private ["So23UIUserActivityRestoringP", "configureCell"]
+- !private ["So23UIUserActivityRestoringP", "extracurricular"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "isHidden"]
+- !private ["So23UIUserActivityRestoringP", "nameLabel"]
+- !private ["So23UIUserActivityRestoringP", "nicknameLabel"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "textColor"]
+- !private ["So23UIUserActivityRestoringP", "tintColor"]
 - ["So6UIViewC", "Extracurricular"]
 - !private ["So6UIViewC", "UIColor"]
 - ["So6UIViewC", "UIColorSwatch"]
@@ -457,6 +544,7 @@ depends-member:
 - ["So6UIViewC", "configureCell"]
 - ["So6UIViewC", "extracurricular"]
 - ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "isHidden"]
 - ["So6UIViewC", "nameLabel"]
 - ["So6UIViewC", "nicknameLabel"]
@@ -470,6 +558,7 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "configureCell"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "extracurricular"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isHidden"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "nameLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "nicknameLabel"]
@@ -478,15 +567,20 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "tintColor"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "isEmpty"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "withAlphaComponent"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "isEmpty"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
@@ -498,6 +592,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "colorValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "configureCell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "extracurricular"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
@@ -511,34 +606,42 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "withAlphaComponent"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "isHidden"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s21_ObjectiveCBridgeableP", "textColor"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "isEmpty"]
+- !private ["So13CKRecordValueP", "isEmpty"]
 depends-nominal:
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
 - "So15CALayerDelegateP"
 - !private "5Tasks9CKEnabledC"
-- !private "So13CKRecordValueP"
+- !private "8CloudKit24CKRecordValueConvertibleP"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
+- !private "Sl"
 - !private "5Tasks10CommitmentP"
-- !private "s10ComparableP"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "5Tasks15ExtracurricularC"
 - "5Tasks28ExtracurricularTableViewCellC"
-- "s8HashableP"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
@@ -547,13 +650,14 @@ depends-nominal:
 - !private "So21NSItemProviderWritingP"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s8SequenceP"
+- !private "Sq"
+- !private "Sm"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
@@ -567,6 +671,7 @@ depends-nominal:
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - "So27UIGestureRecognizerDelegateP"
 - !private "So7UILabelC"
 - "So30UIPasteConfigurationSupportingP"
@@ -574,6 +679,7 @@ depends-nominal:
 - "So30UIResponderStandardEditActionsP"
 - "So15UITableViewCellC"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -587,6 +693,7 @@ depends-nominal:
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
+- !private "So13CKRecordValueP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
@@ -605,18 +712,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "11fcb0fed230cf60aa4c513c4366e88f"

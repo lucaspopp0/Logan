@@ -21,7 +21,9 @@ depends-top-level:
 - "CastingPrecedence"
 - "Date"
 - !private "Dictionary"
+- "FloatLiteralType"
 - "Int"
+- "IntegerLiteralType"
 - "Reminder"
 - "String"
 - "StringLiteralType"
@@ -37,7 +39,8 @@ depends-member:
 - !private ["11Logan__iOS_10BetterDateC", "dateValue"]
 - ["11Logan__iOS_10BetterDateC", "init"]
 - !private ["11Logan__iOS_10BetterDateC", "stringValue"]
-- ["s23BidirectionalCollectionP", "init"]
+- ["SK", "init"]
+- ["SK", "init"]
 - ["11Logan__iOS_9CKEnabledC", "Assignment"]
 - ["11Logan__iOS_9CKEnabledC", "BetterDate"]
 - ["11Logan__iOS_9CKEnabledC", "CKRecord"]
@@ -68,7 +71,11 @@ depends-member:
 - !private ["So8CKRecordC", "init"]
 - !private ["So8CKRecordC", "recordID"]
 - !private ["So8CKRecordC", "subscript"]
-- !private ["So10CKRecordIDC", "recordName"]
+- !private ["So23CKRecordKeyValueSettingP", "init"]
+- !private ["So23CKRecordKeyValueSettingP", "recordID"]
+- !private ["So23CKRecordKeyValueSettingP", "subscript"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
 - ["s7CVarArgP", "BetterDate"]
 - !private ["s7CVarArgP", "CKRecord"]
 - !private ["s7CVarArgP", "Calendar"]
@@ -86,6 +93,7 @@ depends-member:
 - !private ["s7CVarArgP", "default"]
 - !private ["s7CVarArgP", "identifier"]
 - ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "max"]
 - !private ["s7CVarArgP", "message"]
 - !private ["s7CVarArgP", "record"]
@@ -99,8 +107,10 @@ depends-member:
 - !private ["s7CVarArgP", "userInfo"]
 - !private ["10Foundation8CalendarV", "current"]
 - !private ["10Foundation8CalendarV", "dateComponents"]
-- ["s10CollectionP", "init"]
-- ["s10ComparableP", "init"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- ["SL", "init"]
+- ["SL", "init"]
 - !private ["10Foundation8CalendarV9ComponentO", "day"]
 - !private ["10Foundation8CalendarV9ComponentO", "hour"]
 - !private ["10Foundation8CalendarV9ComponentO", "minute"]
@@ -126,6 +136,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "identifier"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "max"]
 - !private ["s28CustomDebugStringConvertibleP", "message"]
 - !private ["s28CustomDebugStringConvertibleP", "record"]
@@ -138,9 +149,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "triggerDate"]
 - !private ["s28CustomDebugStringConvertibleP", "userInfo"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "current"]
 - !private ["s17CustomReflectableP", "dateComponents"]
 - ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "recordID"]
+- !private ["s17CustomReflectableP", "subscript"]
 - ["s23CustomStringConvertibleP", "BetterDate"]
 - !private ["s23CustomStringConvertibleP", "CKRecord"]
 - !private ["s23CustomStringConvertibleP", "Calendar"]
@@ -160,6 +175,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "default"]
 - !private ["s23CustomStringConvertibleP", "identifier"]
 - ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "max"]
 - !private ["s23CustomStringConvertibleP", "message"]
 - !private ["s23CustomStringConvertibleP", "record"]
@@ -172,88 +188,104 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "triggerDate"]
 - !private ["s23CustomStringConvertibleP", "userInfo"]
 - ["10Foundation4DateV", "init"]
-- !private ["s9DecodableP", "current"]
-- !private ["s9DecodableP", "dateComponents"]
-- ["s9DecodableP", "init"]
-- !private ["s9EncodableP", "current"]
-- !private ["s9EncodableP", "dateComponents"]
-- ["s9EncodableP", "init"]
-- ["s9EquatableP", "BetterDate"]
-- !private ["s9EquatableP", "CKRecord"]
-- !private ["s9EquatableP", "Calendar"]
-- ["s9EquatableP", "Date"]
-- !private ["s9EquatableP", "ID"]
-- !private ["s9EquatableP", "NEXT_SAVE_ID"]
-- !private ["s9EquatableP", "Reminder"]
-- !private ["s9EquatableP", "UNCalendarNotificationTrigger"]
-- !private ["s9EquatableP", "UNMutableNotificationContent"]
-- !private ["s9EquatableP", "UNNotificationRequest"]
-- !private ["s9EquatableP", "UNNotificationSound"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "assignment"]
-- !private ["s9EquatableP", "body"]
-- !private ["s9EquatableP", "current"]
-- !private ["s9EquatableP", "dateComponents"]
-- !private ["s9EquatableP", "day"]
-- !private ["s9EquatableP", "default"]
-- !private ["s9EquatableP", "hour"]
-- !private ["s9EquatableP", "identifier"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "max"]
-- !private ["s9EquatableP", "message"]
-- !private ["s9EquatableP", "minute"]
-- !private ["s9EquatableP", "month"]
-- !private ["s9EquatableP", "record"]
-- !private ["s9EquatableP", "recordID"]
-- !private ["s9EquatableP", "recordName"]
-- !private ["s9EquatableP", "second"]
-- !private ["s9EquatableP", "sound"]
-- !private ["s9EquatableP", "subscript"]
-- !private ["s9EquatableP", "task"]
-- !private ["s9EquatableP", "title"]
-- !private ["s9EquatableP", "triggerDate"]
-- !private ["s9EquatableP", "userInfo"]
-- !private ["s9EquatableP", "year"]
+- !private ["Se", "current"]
+- !private ["Se", "dateComponents"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["Se", "recordID"]
+- !private ["Se", "subscript"]
+- !private ["SE", "current"]
+- !private ["SE", "dateComponents"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SE", "recordID"]
+- !private ["SE", "subscript"]
+- ["SQ", "BetterDate"]
+- !private ["SQ", "CKRecord"]
+- !private ["SQ", "Calendar"]
+- ["SQ", "Date"]
+- !private ["SQ", "ID"]
+- !private ["SQ", "NEXT_SAVE_ID"]
+- !private ["SQ", "Reminder"]
+- !private ["SQ", "UNCalendarNotificationTrigger"]
+- !private ["SQ", "UNMutableNotificationContent"]
+- !private ["SQ", "UNNotificationRequest"]
+- !private ["SQ", "UNNotificationSound"]
+- ["SQ", ""]
+- !private ["SQ", "assignment"]
+- !private ["SQ", "body"]
+- !private ["SQ", "current"]
+- !private ["SQ", "dateComponents"]
+- !private ["SQ", "day"]
+- !private ["SQ", "default"]
+- !private ["SQ", "hour"]
+- !private ["SQ", "identifier"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "max"]
+- !private ["SQ", "message"]
+- !private ["SQ", "minute"]
+- !private ["SQ", "month"]
+- !private ["SQ", "record"]
+- !private ["SQ", "recordID"]
+- !private ["SQ", "recordName"]
+- !private ["SQ", "second"]
+- !private ["SQ", "sound"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "task"]
+- !private ["SQ", "title"]
+- !private ["SQ", "triggerDate"]
+- !private ["SQ", "userInfo"]
+- !private ["SQ", "year"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "recordID"]
+- !private ["s23ExpressibleByNilLiteralP", "subscript"]
+- ["s26ExpressibleByStringLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s8HashableP", "BetterDate"]
-- !private ["s8HashableP", "CKRecord"]
-- !private ["s8HashableP", "Calendar"]
-- ["s8HashableP", "Date"]
-- !private ["s8HashableP", "ID"]
-- !private ["s8HashableP", "NEXT_SAVE_ID"]
-- !private ["s8HashableP", "Reminder"]
-- !private ["s8HashableP", "UNCalendarNotificationTrigger"]
-- !private ["s8HashableP", "UNMutableNotificationContent"]
-- !private ["s8HashableP", "UNNotificationRequest"]
-- !private ["s8HashableP", "UNNotificationSound"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "assignment"]
-- !private ["s8HashableP", "body"]
-- !private ["s8HashableP", "current"]
-- !private ["s8HashableP", "dateComponents"]
-- !private ["s8HashableP", "day"]
-- !private ["s8HashableP", "default"]
-- !private ["s8HashableP", "hour"]
-- !private ["s8HashableP", "identifier"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "max"]
-- !private ["s8HashableP", "message"]
-- !private ["s8HashableP", "minute"]
-- !private ["s8HashableP", "month"]
-- !private ["s8HashableP", "record"]
-- !private ["s8HashableP", "recordID"]
-- !private ["s8HashableP", "recordName"]
-- !private ["s8HashableP", "second"]
-- !private ["s8HashableP", "sound"]
-- !private ["s8HashableP", "subscript"]
-- !private ["s8HashableP", "task"]
-- !private ["s8HashableP", "title"]
-- !private ["s8HashableP", "triggerDate"]
-- !private ["s8HashableP", "userInfo"]
-- !private ["s8HashableP", "year"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["SH", "BetterDate"]
+- !private ["SH", "CKRecord"]
+- !private ["SH", "Calendar"]
+- ["SH", "Date"]
+- !private ["SH", "ID"]
+- !private ["SH", "NEXT_SAVE_ID"]
+- !private ["SH", "Reminder"]
+- !private ["SH", "UNCalendarNotificationTrigger"]
+- !private ["SH", "UNMutableNotificationContent"]
+- !private ["SH", "UNNotificationRequest"]
+- !private ["SH", "UNNotificationSound"]
+- ["SH", ""]
+- !private ["SH", "assignment"]
+- !private ["SH", "body"]
+- !private ["SH", "current"]
+- !private ["SH", "dateComponents"]
+- !private ["SH", "day"]
+- !private ["SH", "default"]
+- !private ["SH", "hour"]
+- !private ["SH", "identifier"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "max"]
+- !private ["SH", "message"]
+- !private ["SH", "minute"]
+- !private ["SH", "month"]
+- !private ["SH", "record"]
+- !private ["SH", "recordID"]
+- !private ["SH", "recordName"]
+- !private ["SH", "second"]
+- !private ["SH", "sound"]
+- !private ["SH", "subscript"]
+- !private ["SH", "task"]
+- !private ["SH", "title"]
+- !private ["SH", "triggerDate"]
+- !private ["SH", "userInfo"]
+- !private ["SH", "year"]
+- !private ["So10CKRecordIDC", "recordName"]
 - ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
 - ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "body"]
 - !private ["So8NSCodingP", "default"]
@@ -311,34 +343,34 @@ depends-member:
 - !private ["So8NSObjectC", "title"]
 - ["So8NSObjectC", "triggerDate"]
 - !private ["So8NSObjectC", "userInfo"]
-- ["So16NSObjectProtocolP", "BetterDate"]
-- !private ["So16NSObjectProtocolP", "CKRecord"]
-- !private ["So16NSObjectProtocolP", "Calendar"]
-- ["So16NSObjectProtocolP", "Date"]
-- !private ["So16NSObjectProtocolP", "ID"]
-- !private ["So16NSObjectProtocolP", "NEXT_SAVE_ID"]
-- !private ["So16NSObjectProtocolP", "Reminder"]
-- !private ["So16NSObjectProtocolP", "UNCalendarNotificationTrigger"]
-- !private ["So16NSObjectProtocolP", "UNMutableNotificationContent"]
-- !private ["So16NSObjectProtocolP", "UNNotificationRequest"]
-- !private ["So16NSObjectProtocolP", "UNNotificationSound"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "assignment"]
-- !private ["So16NSObjectProtocolP", "body"]
-- !private ["So16NSObjectProtocolP", "default"]
-- !private ["So16NSObjectProtocolP", "identifier"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "max"]
-- !private ["So16NSObjectProtocolP", "message"]
-- !private ["So16NSObjectProtocolP", "record"]
-- !private ["So16NSObjectProtocolP", "recordID"]
-- !private ["So16NSObjectProtocolP", "recordName"]
-- !private ["So16NSObjectProtocolP", "sound"]
-- !private ["So16NSObjectProtocolP", "subscript"]
-- !private ["So16NSObjectProtocolP", "task"]
-- !private ["So16NSObjectProtocolP", "title"]
-- !private ["So16NSObjectProtocolP", "triggerDate"]
-- !private ["So16NSObjectProtocolP", "userInfo"]
+- ["So8NSObjectP", "BetterDate"]
+- !private ["So8NSObjectP", "CKRecord"]
+- !private ["So8NSObjectP", "Calendar"]
+- ["So8NSObjectP", "Date"]
+- !private ["So8NSObjectP", "ID"]
+- !private ["So8NSObjectP", "NEXT_SAVE_ID"]
+- !private ["So8NSObjectP", "Reminder"]
+- !private ["So8NSObjectP", "UNCalendarNotificationTrigger"]
+- !private ["So8NSObjectP", "UNMutableNotificationContent"]
+- !private ["So8NSObjectP", "UNNotificationRequest"]
+- !private ["So8NSObjectP", "UNNotificationSound"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "assignment"]
+- !private ["So8NSObjectP", "body"]
+- !private ["So8NSObjectP", "default"]
+- !private ["So8NSObjectP", "identifier"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "max"]
+- !private ["So8NSObjectP", "message"]
+- !private ["So8NSObjectP", "record"]
+- !private ["So8NSObjectP", "recordID"]
+- !private ["So8NSObjectP", "recordName"]
+- !private ["So8NSObjectP", "sound"]
+- !private ["So8NSObjectP", "subscript"]
+- !private ["So8NSObjectP", "task"]
+- !private ["So8NSObjectP", "title"]
+- !private ["So8NSObjectP", "triggerDate"]
+- !private ["So8NSObjectP", "userInfo"]
 - !private ["So14NSSecureCodingP", "body"]
 - !private ["So14NSSecureCodingP", "default"]
 - !private ["So14NSSecureCodingP", "init"]
@@ -348,7 +380,10 @@ depends-member:
 - !private ["So14NSSecureCodingP", "subscript"]
 - !private ["So14NSSecureCodingP", "title"]
 - !private ["So14NSSecureCodingP", "userInfo"]
-- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["Sq", "recordID"]
+- !private ["Sq", "subscript"]
+- ["Sm", "init"]
+- ["Sm", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "current"]
 - !private ["10Foundation20ReferenceConvertibleP", "dateComponents"]
 - ["10Foundation20ReferenceConvertibleP", "init"]
@@ -378,12 +413,19 @@ depends-member:
 - !private ["11Logan__iOS_8ReminderC", "record"]
 - ["11Logan__iOS_8ReminderC", "task"]
 - ["11Logan__iOS_8ReminderC", "triggerDate"]
-- ["s8SequenceP", "init"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["ST", "recordID"]
+- !private ["ST", "subscript"]
 - ["SS", "init"]
-- ["s14StringProtocolP", "init"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- ["Sy", "init"]
 - !private ["11Logan__iOS_4TaskC", "record"]
 - !private ["11Logan__iOS_4TaskC", "title"]
 - ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
 - ["s20TextOutputStreamableP", "init"]
 - !private ["So29UNCalendarNotificationTriggerC", "init"]
 - !private ["So28UNMutableNotificationContentC", "body"]
@@ -400,9 +442,14 @@ depends-member:
 - !private ["So19UNNotificationSoundC", "default"]
 - !private ["So21UNNotificationTriggerC", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "BetterDate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CKRecord"]
@@ -437,45 +484,53 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "current"]
 - !private ["s21_ObjectiveCBridgeableP", "dateComponents"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "recordID"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- ["s16_SwiftStringViewP", "init"]
 - ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "11Logan__iOS_10AssignmentC"
 - "11Logan__iOS_10BetterDateC"
-- "s23BidirectionalCollectionP"
+- "SK"
 - "11Logan__iOS_9CKEnabledC"
 - !private "So8CKRecordC"
-- !private "So10CKRecordIDC"
+- !private "So23CKRecordKeyValueSettingP"
+- "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "10Foundation8CalendarV"
-- "s10CollectionP"
-- "s10ComparableP"
+- "Sl"
+- "SL"
 - !private "10Foundation8CalendarV9ComponentO"
 - "s28CustomDebugStringConvertibleP"
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - "10Foundation4DateV"
-- "s9DecodableP"
-- "s9EncodableP"
-- "s9EquatableP"
+- "Se"
+- "SE"
+- "SQ"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
+- !private "So10CKRecordIDC"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
-- "s26RangeReplaceableCollectionP"
+- !private "Sq"
+- "Sm"
 - "10Foundation20ReferenceConvertibleP"
 - "11Logan__iOS_8ReminderC"
-- "s8SequenceP"
+- "ST"
 - "SS"
-- "s14StringProtocolP"
+- "Sy"
 - !private "11Logan__iOS_4TaskC"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
@@ -512,18 +567,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "7e99a88ece27b8694d37af88debb1783"

@@ -13,6 +13,8 @@ depends-top-level:
 - "AssignmentPrecedence"
 - !private "BetterDateFormatter"
 - !private "Date"
+- "FloatLiteralType"
+- "IntegerLiteralType"
 - "Reminder"
 - "ReminderTableViewCell"
 - "StringLiteralType"
@@ -24,7 +26,8 @@ depends-top-level:
 depends-member:
 - !private ["5Tasks10BetterDateC", "dateValue"]
 - !private ["5Tasks19BetterDateFormatterC", "autoFormatDate"]
-- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "BetterDateFormatter"]
 - !private ["So15CALayerDelegateP", "Date"]
@@ -36,16 +39,20 @@ depends-member:
 - !private ["So15CALayerDelegateP", "dateLabel"]
 - !private ["So15CALayerDelegateP", "frame"]
 - !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "messageLabel"]
 - !private ["So15CALayerDelegateP", "reminder"]
 - !private ["So15CALayerDelegateP", "reminderIcon"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "tintColor"]
-- !private ["SC6CGRectV", "size"]
-- !private ["SC6CGSizeV", "height"]
-- !private ["SC6CGSizeV", "width"]
+- !private ["So6CGRectV", "size"]
+- !private ["So6CGSizeV", "height"]
+- !private ["So6CGSizeV", "width"]
 - !private ["5Tasks9CKEnabledC", "message"]
 - !private ["5Tasks9CKEnabledC", "triggerDate"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["s7CVarArgP", "BetterDateFormatter"]
 - !private ["s7CVarArgP", "Date"]
 - !private ["s7CVarArgP", "UIColor"]
@@ -60,6 +67,7 @@ depends-member:
 - !private ["s7CVarArgP", "dateLabel"]
 - !private ["s7CVarArgP", "frame"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "message"]
 - !private ["s7CVarArgP", "messageLabel"]
 - !private ["s7CVarArgP", "reminder"]
@@ -68,8 +76,10 @@ depends-member:
 - !private ["s7CVarArgP", "tintColor"]
 - !private ["s7CVarArgP", "triggerDate"]
 - !private ["s7CVarArgP", "withAlphaComponent"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10ComparableP", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "BetterDateFormatter"]
 - !private ["s28CustomDebugStringConvertibleP", "Date"]
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
@@ -84,6 +94,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
 - !private ["s28CustomDebugStringConvertibleP", "height"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "message"]
 - !private ["s28CustomDebugStringConvertibleP", "messageLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "reminder"]
@@ -97,12 +108,15 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "height"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "size"]
 - !private ["s29CustomPlaygroundQuickLookableP", "width"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "height"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "size"]
+- !private ["s17CustomReflectableP", "text"]
 - !private ["s17CustomReflectableP", "width"]
 - !private ["s23CustomStringConvertibleP", "BetterDateFormatter"]
 - !private ["s23CustomStringConvertibleP", "Date"]
@@ -118,6 +132,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "dateLabel"]
 - !private ["s23CustomStringConvertibleP", "frame"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "message"]
 - !private ["s23CustomStringConvertibleP", "messageLabel"]
 - !private ["s23CustomStringConvertibleP", "reminder"]
@@ -127,71 +142,83 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "triggerDate"]
 - !private ["s23CustomStringConvertibleP", "withAlphaComponent"]
 - !private ["10Foundation4DateV", "init"]
-- !private ["So13DateFormatterC", "autoFormatDate"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "height"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "size"]
-- !private ["s9DecodableP", "width"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "height"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "size"]
-- !private ["s9EncodableP", "width"]
-- !private ["s9EquatableP", "BetterDateFormatter"]
-- !private ["s9EquatableP", "Date"]
-- !private ["s9EquatableP", "UIColor"]
-- !private ["s9EquatableP", "UIImageView"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "accessoryView"]
-- !private ["s9EquatableP", "autoFormatDate"]
-- !private ["s9EquatableP", "black"]
-- !private ["s9EquatableP", "blue500"]
-- !private ["s9EquatableP", "configureCell"]
-- !private ["s9EquatableP", "dateLabel"]
-- !private ["s9EquatableP", "frame"]
-- !private ["s9EquatableP", "height"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "message"]
-- !private ["s9EquatableP", "messageLabel"]
-- !private ["s9EquatableP", "reminder"]
-- !private ["s9EquatableP", "reminderIcon"]
-- !private ["s9EquatableP", "size"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "tintColor"]
-- !private ["s9EquatableP", "triggerDate"]
-- !private ["s9EquatableP", "width"]
-- !private ["s9EquatableP", "withAlphaComponent"]
+- !private ["So15NSDateFormatterC", "autoFormatDate"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "height"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "size"]
+- !private ["Se", "text"]
+- !private ["Se", "width"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "height"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "size"]
+- !private ["SE", "text"]
+- !private ["SE", "width"]
+- !private ["SQ", "BetterDateFormatter"]
+- !private ["SQ", "Date"]
+- !private ["SQ", "UIColor"]
+- !private ["SQ", "UIImageView"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "accessoryView"]
+- !private ["SQ", "autoFormatDate"]
+- !private ["SQ", "black"]
+- !private ["SQ", "blue500"]
+- !private ["SQ", "configureCell"]
+- !private ["SQ", "dateLabel"]
+- !private ["SQ", "frame"]
+- !private ["SQ", "height"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "message"]
+- !private ["SQ", "messageLabel"]
+- !private ["SQ", "reminder"]
+- !private ["SQ", "reminderIcon"]
+- !private ["SQ", "size"]
+- !private ["SQ", "text"]
+- !private ["SQ", "tintColor"]
+- !private ["SQ", "triggerDate"]
+- !private ["SQ", "width"]
+- !private ["SQ", "withAlphaComponent"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["So9FormatterC", "autoFormatDate"]
-- !private ["s8HashableP", "BetterDateFormatter"]
-- !private ["s8HashableP", "Date"]
-- !private ["s8HashableP", "UIColor"]
-- !private ["s8HashableP", "UIImageView"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "accessoryView"]
-- !private ["s8HashableP", "autoFormatDate"]
-- !private ["s8HashableP", "black"]
-- !private ["s8HashableP", "blue500"]
-- !private ["s8HashableP", "configureCell"]
-- !private ["s8HashableP", "dateLabel"]
-- !private ["s8HashableP", "frame"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "message"]
-- !private ["s8HashableP", "messageLabel"]
-- !private ["s8HashableP", "reminder"]
-- !private ["s8HashableP", "reminderIcon"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "tintColor"]
-- !private ["s8HashableP", "triggerDate"]
-- !private ["s8HashableP", "withAlphaComponent"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So11NSFormatterC", "autoFormatDate"]
+- !private ["SH", "BetterDateFormatter"]
+- !private ["SH", "Date"]
+- !private ["SH", "UIColor"]
+- !private ["SH", "UIImageView"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "accessoryView"]
+- !private ["SH", "autoFormatDate"]
+- !private ["SH", "black"]
+- !private ["SH", "blue500"]
+- !private ["SH", "configureCell"]
+- !private ["SH", "dateLabel"]
+- !private ["SH", "frame"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "message"]
+- !private ["SH", "messageLabel"]
+- !private ["SH", "reminder"]
+- !private ["SH", "reminderIcon"]
+- !private ["SH", "text"]
+- !private ["SH", "tintColor"]
+- !private ["SH", "triggerDate"]
+- !private ["SH", "withAlphaComponent"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "BetterDateFormatter"]
 - !private ["So8NSCodingP", "Date"]
@@ -205,6 +232,7 @@ depends-member:
 - !private ["So8NSCodingP", "configureCell"]
 - !private ["So8NSCodingP", "dateLabel"]
 - !private ["So8NSCodingP", "frame"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "messageLabel"]
 - !private ["So8NSCodingP", "reminder"]
@@ -236,6 +264,7 @@ depends-member:
 - ["So8NSObjectC", "dateLabel"]
 - !private ["So8NSObjectC", "frame"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "message"]
 - ["So8NSObjectC", "messageLabel"]
 - ["So8NSObjectC", "reminder"]
@@ -245,31 +274,34 @@ depends-member:
 - !private ["So8NSObjectC", "tintColor"]
 - !private ["So8NSObjectC", "triggerDate"]
 - !private ["So8NSObjectC", "withAlphaComponent"]
-- !private ["So16NSObjectProtocolP", "BetterDateFormatter"]
-- !private ["So16NSObjectProtocolP", "Date"]
-- !private ["So16NSObjectProtocolP", "UIColor"]
-- !private ["So16NSObjectProtocolP", "UIImageView"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "accessoryView"]
-- !private ["So16NSObjectProtocolP", "autoFormatDate"]
-- !private ["So16NSObjectProtocolP", "black"]
-- !private ["So16NSObjectProtocolP", "blue500"]
-- !private ["So16NSObjectProtocolP", "configureCell"]
-- !private ["So16NSObjectProtocolP", "dateLabel"]
-- !private ["So16NSObjectProtocolP", "frame"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "message"]
-- !private ["So16NSObjectProtocolP", "messageLabel"]
-- !private ["So16NSObjectProtocolP", "reminder"]
-- !private ["So16NSObjectProtocolP", "reminderIcon"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "tintColor"]
-- !private ["So16NSObjectProtocolP", "triggerDate"]
-- !private ["So16NSObjectProtocolP", "withAlphaComponent"]
+- !private ["So8NSObjectP", "BetterDateFormatter"]
+- !private ["So8NSObjectP", "Date"]
+- !private ["So8NSObjectP", "UIColor"]
+- !private ["So8NSObjectP", "UIImageView"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "accessoryView"]
+- !private ["So8NSObjectP", "autoFormatDate"]
+- !private ["So8NSObjectP", "black"]
+- !private ["So8NSObjectP", "blue500"]
+- !private ["So8NSObjectP", "configureCell"]
+- !private ["So8NSObjectP", "dateLabel"]
+- !private ["So8NSObjectP", "frame"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "message"]
+- !private ["So8NSObjectP", "messageLabel"]
+- !private ["So8NSObjectP", "reminder"]
+- !private ["So8NSObjectP", "reminderIcon"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "tintColor"]
+- !private ["So8NSObjectP", "triggerDate"]
+- !private ["So8NSObjectP", "withAlphaComponent"]
 - !private ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "blue500"]
 - !private ["So14NSSecureCodingP", "withAlphaComponent"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["Sq", "text"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["5Tasks8ReminderC", "message"]
 - !private ["5Tasks8ReminderC", "triggerDate"]
@@ -282,16 +314,20 @@ depends-member:
 - !private ["5Tasks21ReminderTableViewCellC", "accessoryView"]
 - ["5Tasks21ReminderTableViewCellC", "configureCell"]
 - ["5Tasks21ReminderTableViewCellC", "dateLabel"]
-- ["5Tasks21ReminderTableViewCellC", "deinit"]
 - ["5Tasks21ReminderTableViewCellC", "init"]
 - ["5Tasks21ReminderTableViewCellC", "messageLabel"]
 - ["5Tasks21ReminderTableViewCellC", "reminder"]
 - !private ["5Tasks21ReminderTableViewCellC", "reminderIcon"]
 - !private ["5Tasks21ReminderTableViewCellC", "reminderIcon.storage"]
-- !private ["s8SequenceP", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "frame"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
@@ -305,6 +341,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "configureCell"]
 - !private ["So29UIAccessibilityIdentificationP", "dateLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "frame"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "messageLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "reminder"]
@@ -321,6 +358,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "dateLabel"]
 - !private ["So12UIAppearanceP", "frame"]
 - !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "messageLabel"]
 - !private ["So12UIAppearanceP", "reminder"]
 - !private ["So12UIAppearanceP", "reminderIcon"]
@@ -335,6 +373,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "configureCell"]
 - !private ["So21UIAppearanceContainerP", "dateLabel"]
 - !private ["So21UIAppearanceContainerP", "frame"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "messageLabel"]
 - !private ["So21UIAppearanceContainerP", "reminder"]
@@ -355,6 +394,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "dateLabel"]
 - !private ["So17UICoordinateSpaceP", "frame"]
 - !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "messageLabel"]
 - !private ["So17UICoordinateSpaceP", "reminder"]
 - !private ["So17UICoordinateSpaceP", "reminderIcon"]
@@ -369,6 +409,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "configureCell"]
 - !private ["So13UIDynamicItemP", "dateLabel"]
 - !private ["So13UIDynamicItemP", "frame"]
+- !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "messageLabel"]
 - !private ["So13UIDynamicItemP", "reminder"]
@@ -385,6 +426,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "dateLabel"]
 - !private ["So18UIFocusEnvironmentP", "frame"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "messageLabel"]
 - !private ["So18UIFocusEnvironmentP", "reminder"]
 - !private ["So18UIFocusEnvironmentP", "reminderIcon"]
@@ -400,11 +442,28 @@ depends-member:
 - !private ["So11UIFocusItemP", "dateLabel"]
 - !private ["So11UIFocusItemP", "frame"]
 - !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "messageLabel"]
 - !private ["So11UIFocusItemP", "reminder"]
 - !private ["So11UIFocusItemP", "reminderIcon"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "tintColor"]
+- !private ["So20UIFocusItemContainerP", "BetterDateFormatter"]
+- !private ["So20UIFocusItemContainerP", "Date"]
+- !private ["So20UIFocusItemContainerP", "UIColor"]
+- !private ["So20UIFocusItemContainerP", "UIImageView"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "accessoryView"]
+- !private ["So20UIFocusItemContainerP", "configureCell"]
+- !private ["So20UIFocusItemContainerP", "dateLabel"]
+- !private ["So20UIFocusItemContainerP", "frame"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "messageLabel"]
+- !private ["So20UIFocusItemContainerP", "reminder"]
+- !private ["So20UIFocusItemContainerP", "reminderIcon"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "tintColor"]
 - !private ["So27UIGestureRecognizerDelegateP", "BetterDateFormatter"]
 - !private ["So27UIGestureRecognizerDelegateP", "Date"]
 - !private ["So27UIGestureRecognizerDelegateP", "UIColor"]
@@ -413,6 +472,7 @@ depends-member:
 - !private ["So27UIGestureRecognizerDelegateP", "accessoryView"]
 - !private ["So27UIGestureRecognizerDelegateP", "configureCell"]
 - !private ["So27UIGestureRecognizerDelegateP", "dateLabel"]
+- !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "messageLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "reminder"]
@@ -431,6 +491,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "dateLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "messageLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "reminder"]
 - !private ["So30UIPasteConfigurationSupportingP", "reminderIcon"]
@@ -447,6 +508,7 @@ depends-member:
 - ["So11UIResponderC", "dateLabel"]
 - !private ["So11UIResponderC", "frame"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "messageLabel"]
 - ["So11UIResponderC", "reminder"]
 - ["So11UIResponderC", "reminderIcon"]
@@ -462,6 +524,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "configureCell"]
 - !private ["So30UIResponderStandardEditActionsP", "dateLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "messageLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "reminder"]
@@ -479,6 +542,7 @@ depends-member:
 - ["So15UITableViewCellC", "configureCell"]
 - ["So15UITableViewCellC", "dateLabel"]
 - ["So15UITableViewCellC", "init"]
+- !private ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "messageLabel"]
 - ["So15UITableViewCellC", "reminder"]
 - ["So15UITableViewCellC", "reminderIcon"]
@@ -493,11 +557,28 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "dateLabel"]
 - !private ["So18UITraitEnvironmentP", "frame"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "messageLabel"]
 - !private ["So18UITraitEnvironmentP", "reminder"]
 - !private ["So18UITraitEnvironmentP", "reminderIcon"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "tintColor"]
+- !private ["So23UIUserActivityRestoringP", "BetterDateFormatter"]
+- !private ["So23UIUserActivityRestoringP", "Date"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
+- !private ["So23UIUserActivityRestoringP", "UIImageView"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "accessoryView"]
+- !private ["So23UIUserActivityRestoringP", "configureCell"]
+- !private ["So23UIUserActivityRestoringP", "dateLabel"]
+- !private ["So23UIUserActivityRestoringP", "frame"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "messageLabel"]
+- !private ["So23UIUserActivityRestoringP", "reminder"]
+- !private ["So23UIUserActivityRestoringP", "reminderIcon"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "tintColor"]
 - !private ["So6UIViewC", "BetterDateFormatter"]
 - !private ["So6UIViewC", "Date"]
 - ["So6UIViewC", "Reminder"]
@@ -509,6 +590,7 @@ depends-member:
 - ["So6UIViewC", "dateLabel"]
 - !private ["So6UIViewC", "frame"]
 - ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "init"]
 - ["So6UIViewC", "messageLabel"]
 - ["So6UIViewC", "reminder"]
 - ["So6UIViewC", "reminderIcon"]
@@ -525,6 +607,7 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dateLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "frame"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "messageLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reminder"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reminderIcon"]
@@ -532,12 +615,17 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "tintColor"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "blue500"]
 - !private ["s26_ExpressibleByColorLiteralP", "withAlphaComponent"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "BetterDateFormatter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
@@ -552,6 +640,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dateLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "message"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "messageLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reminder"]
@@ -563,36 +652,41 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "size"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
 - !private ["s21_ObjectiveCBridgeableP", "width"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "5Tasks10BetterDateC"
 - !private "5Tasks19BetterDateFormatterC"
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
 - "So15CALayerDelegateP"
-- !private "SC6CGRectV"
-- !private "SC6CGSizeV"
+- !private "So6CGRectV"
+- !private "So6CGSizeV"
 - !private "5Tasks9CKEnabledC"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
+- !private "Sl"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "10Foundation4DateV"
-- !private "So13DateFormatterC"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "So15NSDateFormatterC"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- !private "So9FormatterC"
-- "s8HashableP"
+- !private "So11NSFormatterC"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
@@ -600,15 +694,16 @@ depends-nominal:
 - !private "So21NSItemProviderReadingP"
 - !private "So21NSItemProviderWritingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
-- !private "s26RangeReplaceableCollectionP"
+- !private "Sq"
+- !private "Sm"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "5Tasks8ReminderC"
 - "5Tasks21ReminderTableViewCellC"
-- !private "s8SequenceP"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
@@ -621,6 +716,7 @@ depends-nominal:
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - "So27UIGestureRecognizerDelegateP"
 - !private "So11UIImageViewC"
 - !private "So7UILabelC"
@@ -629,6 +725,7 @@ depends-nominal:
 - "So30UIResponderStandardEditActionsP"
 - "So15UITableViewCellC"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -659,18 +756,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "f26f43c0f4f071674e4b01d889f4fa58"

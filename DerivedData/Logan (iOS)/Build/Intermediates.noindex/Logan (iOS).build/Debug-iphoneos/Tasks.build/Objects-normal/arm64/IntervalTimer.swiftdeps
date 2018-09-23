@@ -15,6 +15,8 @@ depends-top-level:
 - "BasicTimer"
 - "Bool"
 - "BooleanLiteralType"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "NSObject"
 - !private "StringLiteralType"
 - "TimeInterval"
@@ -34,6 +36,7 @@ depends-member:
 - ["5Tasks10BasicTimerC", "execute"]
 - ["5Tasks10BasicTimerC", "fire"]
 - ["5Tasks10BasicTimerC", "init"]
+- !private ["5Tasks10BasicTimerC", "init"]
 - ["5Tasks10BasicTimerC", "isOn"]
 - ["5Tasks10BasicTimerC", "reset"]
 - ["5Tasks10BasicTimerC", "timeInterval"]
@@ -43,6 +46,7 @@ depends-member:
 - !private ["s7CVarArgP", "begin"]
 - !private ["s7CVarArgP", "completionBlock"]
 - !private ["s7CVarArgP", "execute"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "invalidate"]
 - !private ["s7CVarArgP", "isOn"]
@@ -55,11 +59,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "completionBlock"]
 - !private ["s28CustomDebugStringConvertibleP", "execute"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "invalidate"]
 - !private ["s28CustomDebugStringConvertibleP", "isOn"]
 - !private ["s28CustomDebugStringConvertibleP", "scheduledTimer"]
 - !private ["s28CustomDebugStringConvertibleP", "timeInterval"]
 - !private ["s28CustomDebugStringConvertibleP", "timer"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s23CustomStringConvertibleP", "Timer"]
 - ["s23CustomStringConvertibleP", ""]
@@ -67,36 +73,42 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "completionBlock"]
 - !private ["s23CustomStringConvertibleP", "execute"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "invalidate"]
 - !private ["s23CustomStringConvertibleP", "isOn"]
 - !private ["s23CustomStringConvertibleP", "scheduledTimer"]
 - !private ["s23CustomStringConvertibleP", "timeInterval"]
 - !private ["s23CustomStringConvertibleP", "timer"]
-- !private ["s9EquatableP", "Timer"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "begin"]
-- !private ["s9EquatableP", "completionBlock"]
-- !private ["s9EquatableP", "execute"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "invalidate"]
-- !private ["s9EquatableP", "isOn"]
-- !private ["s9EquatableP", "scheduledTimer"]
-- !private ["s9EquatableP", "timeInterval"]
-- !private ["s9EquatableP", "timer"]
+- !private ["SQ", "Timer"]
+- ["SQ", ""]
+- !private ["SQ", "begin"]
+- !private ["SQ", "completionBlock"]
+- !private ["SQ", "execute"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "invalidate"]
+- !private ["SQ", "isOn"]
+- !private ["SQ", "scheduledTimer"]
+- !private ["SQ", "timeInterval"]
+- !private ["SQ", "timer"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "Timer"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "begin"]
-- !private ["s8HashableP", "completionBlock"]
-- !private ["s8HashableP", "execute"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "invalidate"]
-- !private ["s8HashableP", "isOn"]
-- !private ["s8HashableP", "scheduledTimer"]
-- !private ["s8HashableP", "timeInterval"]
-- !private ["s8HashableP", "timer"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "Timer"]
+- ["SH", ""]
+- !private ["SH", "begin"]
+- !private ["SH", "completionBlock"]
+- !private ["SH", "execute"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "invalidate"]
+- !private ["SH", "isOn"]
+- !private ["SH", "scheduledTimer"]
+- !private ["SH", "timeInterval"]
+- !private ["SH", "timer"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "TimeInterval"]
 - ["So8NSObjectC", "Timer"]
@@ -108,26 +120,29 @@ depends-member:
 - ["So8NSObjectC", "execute"]
 - ["So8NSObjectC", "fire"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "invalidate"]
 - ["So8NSObjectC", "isOn"]
 - ["So8NSObjectC", "reset"]
 - !private ["So8NSObjectC", "scheduledTimer"]
 - ["So8NSObjectC", "timeInterval"]
 - ["So8NSObjectC", "timer"]
-- !private ["So16NSObjectProtocolP", "Timer"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "begin"]
-- !private ["So16NSObjectProtocolP", "completionBlock"]
-- !private ["So16NSObjectProtocolP", "execute"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "invalidate"]
-- !private ["So16NSObjectProtocolP", "isOn"]
-- !private ["So16NSObjectProtocolP", "scheduledTimer"]
-- !private ["So16NSObjectProtocolP", "timeInterval"]
-- !private ["So16NSObjectProtocolP", "timer"]
+- !private ["So8NSObjectP", "Timer"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "begin"]
+- !private ["So8NSObjectP", "completionBlock"]
+- !private ["So8NSObjectP", "execute"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "invalidate"]
+- !private ["So8NSObjectP", "isOn"]
+- !private ["So8NSObjectP", "scheduledTimer"]
+- !private ["So8NSObjectP", "timeInterval"]
+- !private ["So8NSObjectP", "timer"]
 - !private ["s12StaticStringV", "init"]
-- !private ["So5TimerC", "invalidate"]
-- !private ["So5TimerC", "scheduledTimer"]
+- !private ["s12StaticStringV", "init"]
+- !private ["So7NSTimerC", "invalidate"]
+- !private ["So7NSTimerC", "scheduledTimer"]
 - !private ["5Tasks11UpdateTimerC", "Timer"]
 - ["5Tasks11UpdateTimerC", "begin"]
 - !private ["5Tasks11UpdateTimerC", "completionBlock"]
@@ -140,13 +155,17 @@ depends-member:
 - !private ["5Tasks11UpdateTimerC", "timeInterval"]
 - !private ["5Tasks11UpdateTimerC", "timer"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Timer"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "begin"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "completionBlock"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "execute"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "invalidate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isOn"]
@@ -159,15 +178,15 @@ depends-nominal:
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- "s9EquatableP"
+- "SQ"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "s12StaticStringV"
-- !private "So5TimerC"
+- !private "So7NSTimerC"
 - "5Tasks11UpdateTimerC"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
@@ -191,18 +210,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "53cc89308ef0784e9a93f9663949b4dd"

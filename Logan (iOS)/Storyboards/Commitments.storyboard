@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zdY-HK-b5y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zdY-HK-b5y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +13,13 @@
         <!--Commitments-->
         <scene sceneID="6CU-RF-aKb">
             <objects>
-                <tableViewController storyboardIdentifier="Commitments List" id="cWG-NT-utd" customClass="CommitmentsTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Commitments List" id="cWG-NT-utd" customClass="CommitmentsTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4TL-e1-e9D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Semester" rowHeight="67" id="C79-sY-9Mj" customClass="SemesterTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Semester" rowHeight="67" id="C79-sY-9Mj" customClass="SemesterTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C79-sY-9Mj" id="2MV-w5-9Ku">
@@ -53,7 +53,7 @@
                                     <segue destination="aSf-zx-2hV" kind="show" id="k6o-JD-uxA"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Extracurricular" rowHeight="67" id="cqG-RY-DO2" customClass="ExtracurricularTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Extracurricular" rowHeight="67" id="cqG-RY-DO2" customClass="ExtracurricularTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="95" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cqG-RY-DO2" id="lkO-2L-piS">
@@ -85,7 +85,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Commitments" id="hLg-IJ-GKp">
-                        <barButtonItem key="leftBarButtonItem" image="Settings" id="nSv-PS-99V"/>
+                        <barButtonItem key="leftBarButtonItem" image="Settings" id="nSv-PS-99V">
+                            <connections>
+                                <action selector="openSettings:" destination="cWG-NT-utd" id="wo8-hB-7oN"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pue-Ts-KAg">
                             <connections>
                                 <action selector="newCommitment:" destination="cWG-NT-utd" id="Yqd-nm-Vbk"/>
@@ -95,11 +99,22 @@
                     <connections>
                         <segue destination="zc1-kV-kwy" kind="presentation" identifier="New Semester" id="UC4-Y8-6xZ"/>
                         <segue destination="2Af-ut-VRO" kind="presentation" identifier="New Extracurricular" id="AVx-Jo-s6i"/>
+                        <segue destination="Sfu-ZI-nM2" kind="showDetail" identifier="Open Settings" id="wam-1i-nIJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9R-ad-qXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1917.5999999999999" y="163.26836581709148"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="B4Y-8v-4ZU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="Sfu-ZI-nM2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mgm-gZ-ouB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Iz-u5-03p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2561" y="-101"/>
         </scene>
         <!--Semester Detail-->
         <scene sceneID="dhx-9m-YG6">
@@ -120,7 +135,7 @@
         <!--Commitments-->
         <scene sceneID="B5w-zd-GEO">
             <objects>
-                <navigationController storyboardIdentifier="Initial Navigation Controller" id="zdY-HK-b5y" customClass="BetterNavigationController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Initial Navigation Controller" id="zdY-HK-b5y" customClass="BetterNavigationController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Commitments" image="Semesters" selectedImage="Semesters (Filled)" id="8SI-KM-r0R"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="h2l-pR-ehc">

@@ -27,6 +27,12 @@ class CommitmentsTableViewController: UITableViewController, DMListener {
         DataManager.shared.resumeAutoUpdate()
     }
     
+    @IBAction func openSettings(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Settings", bundle: Bundle.main)
+        let settingsController = storyboard.instantiateViewController(withIdentifier: "Settings Controller")
+        navigationController?.pushViewController(settingsController, animated: true)
+    }
+    
     @IBAction func syncWithCloud(_ sender: Any) {
         DataManager.shared.fetchDataFromCloud()
     }

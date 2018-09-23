@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nl4-I6-Lg1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nl4-I6-Lg1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,7 +15,7 @@
         <!--Tasks-->
         <scene sceneID="GIi-fZ-DyT">
             <objects>
-                <navigationController storyboardIdentifier="Initial Navigation Controller" id="Nl4-I6-Lg1" customClass="BetterNavigationController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Initial Navigation Controller" id="Nl4-I6-Lg1" customClass="BetterNavigationController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tasks" image="Tasks" id="yNC-ek-eZe"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="wdQ-Id-28Q">
@@ -33,7 +33,7 @@
         <!--Tasks-->
         <scene sceneID="fT5-Ag-5io">
             <objects>
-                <viewController storyboardIdentifier="Tasks List" id="Ecv-t8-IiZ" customClass="TasksViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Tasks List" id="Ecv-t8-IiZ" customClass="TasksViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CFb-R8-Sw4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,14 +42,14 @@
                                 <rect key="frame" x="0.0" y="40" width="375" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Task" rowHeight="134" id="dau-6W-Jqr" customClass="TaskTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Task" rowHeight="134" id="dau-6W-Jqr" customClass="TaskTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dau-6W-Jqr" id="QHf-Xv-8eO">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="133.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lv1-hJ-vrp" customClass="UICheckbox" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lv1-hJ-vrp" customClass="UICheckbox" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="55" width="24" height="24"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -90,7 +90,7 @@
                                                         <constraint firstItem="6MF-xg-lgP" firstAttribute="leading" secondItem="Hlc-ye-tdd" secondAttribute="leading" id="kzo-Et-IUH"/>
                                                     </constraints>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Sq-AH-Pwd" customClass="PriorityIndicator" customModule="iOS_Todo" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Sq-AH-Pwd" customClass="PriorityIndicator" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="6" y="61" width="3" height="13"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -155,11 +155,16 @@
                                     <constraint firstAttribute="trailing" secondItem="CSc-Vl-BWu" secondAttribute="trailing" constant="12" id="djl-Bj-d48"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lIS-eA-sBQ">
+                                <rect key="frame" x="177" y="291" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lIS-eA-sBQ" firstAttribute="centerY" secondItem="CFb-R8-Sw4" secondAttribute="centerY" id="3zF-NL-XKo"/>
                             <constraint firstItem="pAR-61-ppa" firstAttribute="leading" secondItem="1oo-od-kSK" secondAttribute="leading" id="GoD-rh-J2u"/>
                             <constraint firstItem="kpr-o9-iIP" firstAttribute="bottom" secondItem="1oo-od-kSK" secondAttribute="bottom" id="HWm-oa-jBN"/>
+                            <constraint firstItem="lIS-eA-sBQ" firstAttribute="centerX" secondItem="CFb-R8-Sw4" secondAttribute="centerX" id="ecW-8x-BBW"/>
                             <constraint firstItem="kpr-o9-iIP" firstAttribute="top" secondItem="pAR-61-ppa" secondAttribute="bottom" id="hEN-if-fhH"/>
                             <constraint firstItem="pAR-61-ppa" firstAttribute="top" secondItem="1oo-od-kSK" secondAttribute="top" id="nq2-vH-wQW"/>
                             <constraint firstItem="1oo-od-kSK" firstAttribute="trailing" secondItem="pAR-61-ppa" secondAttribute="trailing" id="nvX-ky-C4q"/>
@@ -184,69 +189,21 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="lIS-eA-sBQ" id="1d0-mm-v4W"/>
                         <outlet property="segmentedControl" destination="CSc-Vl-BWu" id="EHJ-xd-aXA"/>
                         <outlet property="syncButton" destination="ok7-Om-Vfw" id="i3a-KM-kVb"/>
                         <outlet property="tabBar" destination="pAR-61-ppa" id="7O3-p4-uUb"/>
                         <outlet property="tableView" destination="kpr-o9-iIP" id="lFu-bf-IYJ"/>
-                        <segue destination="XgH-nB-nvr" kind="show" identifier="Open Console" id="mdc-35-n8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqF-CS-d4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1917.5999999999999" y="-2254.7226386806597"/>
         </scene>
-        <!--Console-->
-        <scene sceneID="NTV-aU-dnD">
-            <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="XgH-nB-nvr" customClass="ConsoleViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7DX-jC-bh5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1T-Dm-Mc5" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="M1T-Dm-Mc5" firstAttribute="leading" secondItem="WzK-E2-rLf" secondAttribute="leading" id="1wA-4x-Bal"/>
-                            <constraint firstItem="WzK-E2-rLf" firstAttribute="trailing" secondItem="M1T-Dm-Mc5" secondAttribute="trailing" id="Wfe-J6-Ipb"/>
-                            <constraint firstItem="WzK-E2-rLf" firstAttribute="bottom" secondItem="M1T-Dm-Mc5" secondAttribute="bottom" id="p7n-w6-7x0"/>
-                            <constraint firstItem="M1T-Dm-Mc5" firstAttribute="top" secondItem="WzK-E2-rLf" secondAttribute="top" id="tfo-9q-Wnk"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="WzK-E2-rLf"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Console" id="QyY-Vv-Sy4"/>
-                    <connections>
-                        <outlet property="textView" destination="M1T-Dm-Mc5" id="DHb-qV-SQR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GE0-QW-SBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1918" y="-1357"/>
-        </scene>
         <!--Task-->
         <scene sceneID="BSU-0P-ekq">
             <objects>
-                <tableViewController storyboardIdentifier="Task Detail" title="Task" hidesBottomBarWhenPushed="YES" id="hZY-0y-OCz" customClass="TaskTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Task Detail" title="Task" hidesBottomBarWhenPushed="YES" id="hZY-0y-OCz" customClass="TaskTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="SKl-gN-d91">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,7 +216,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="98.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIo-N0-vg5" customClass="UICheckbox" customModule="iOS_Todo" customModuleProvider="target">
+                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIo-N0-vg5" customClass="UICheckbox" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="16" y="15" width="24" height="24"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -270,7 +227,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5e-gg-rfE">
                                             <rect key="frame" x="52" y="15" width="307" height="69"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zht-iv-2oP" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zht-iv-2oP" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="15.5" width="307" height="38"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -312,7 +269,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPV-ei-Y66" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPV-ei-Y66" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="52" y="15" width="307" height="41"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
@@ -347,7 +304,7 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="51" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Due Date" rowHeight="165" id="HOA-7X-lKh" customClass="TaskDueDatePickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Due Date" rowHeight="165" id="HOA-7X-lKh" customClass="TaskDueDatePickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="225.5" width="375" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HOA-7X-lKh" id="QmI-PW-Eui">
@@ -377,7 +334,7 @@
                                                 <action selector="dueDateTypeChanged:" destination="hZY-0y-OCz" eventType="valueChanged" id="YSp-NF-QZU"/>
                                             </connections>
                                         </segmentedControl>
-                                        <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKD-Zg-Sgy" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                        <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKD-Zg-Sgy" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="16" y="125.5" width="343" height="50"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -390,7 +347,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="JJR-Sg-bL0">
                                             <rect key="frame" x="16" y="89.5" width="343" height="28"/>
                                             <subviews>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOq-th-lAQ" customClass="RoundedButton" customModule="iOS_Todo" customModuleProvider="target">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOq-th-lAQ" customClass="RoundedButton" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="168.5" height="28"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -407,7 +364,7 @@
                                                         <action selector="makeDueToday" destination="hZY-0y-OCz" eventType="touchUpInside" id="ude-3o-SWU"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7b-Hj-VDM" customClass="RoundedButton" customModule="iOS_Todo" customModuleProvider="target">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7b-Hj-VDM" customClass="RoundedButton" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="174.5" y="0.0" width="168.5" height="28"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -459,7 +416,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kK8-wT-c4V" customClass="PriorityControl" customModule="iOS_Todo" customModuleProvider="target">
+                                        <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kK8-wT-c4V" customClass="PriorityControl" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="257" y="7.5" width="102" height="29"/>
                                             <segments>
                                                 <segment title="First"/>
@@ -516,7 +473,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Related Assignment" rowHeight="93" id="MKK-JH-NCH" customClass="AssignmentTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Related Assignment" rowHeight="93" id="MKK-JH-NCH" customClass="AssignmentTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="478.5" width="375" height="93"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKK-JH-NCH" id="iem-vK-9oY">
@@ -594,7 +551,7 @@
         <!--Better Navigation Controller-->
         <scene sceneID="qa5-eS-cBU">
             <objects>
-                <navigationController storyboardIdentifier="New Task Navigation Controller" id="9j6-pg-0t1" customClass="BetterNavigationController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="New Task Navigation Controller" id="9j6-pg-0t1" customClass="BetterNavigationController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="fCf-be-QQX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -611,7 +568,7 @@
         <!--Task-->
         <scene sceneID="Yye-7G-ZJ9">
             <objects>
-                <tableViewController storyboardIdentifier="New Task Detail" title="Task" id="D0y-S1-45p" customClass="NewTaskTableViewController" customModule="iOS_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="New Task Detail" title="Task" id="D0y-S1-45p" customClass="NewTaskTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="2JP-43-vMS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -624,7 +581,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="98.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-pX-KUV" customClass="UICheckbox" customModule="iOS_Todo" customModuleProvider="target">
+                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-pX-KUV" customClass="UICheckbox" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="16" y="15" width="24" height="24"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -635,7 +592,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWQ-hA-BwY">
                                             <rect key="frame" x="52" y="15" width="307" height="69"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Rc-Sf-ZEO" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Rc-Sf-ZEO" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="15.5" width="307" height="38"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -677,7 +634,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-IH-Jgj" customClass="BetterTextView" customModule="iOS_Todo" customModuleProvider="target">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" verticalHuggingPriority="1000" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" keyboardDismissMode="interactive" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-IH-Jgj" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="52" y="15" width="307" height="41"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="textColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
@@ -712,7 +669,7 @@
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="51" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Due Date" rowHeight="192" id="Zzh-Yo-no1" customClass="TaskDueDatePickerTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Due Date" rowHeight="192" id="Zzh-Yo-no1" customClass="TaskDueDatePickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="225.5" width="375" height="192"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zzh-Yo-no1" id="sd2-KF-2QV">
@@ -742,7 +699,7 @@
                                                 <action selector="dueDateTypeChanged:" destination="D0y-S1-45p" eventType="valueChanged" id="KGO-XT-rL1"/>
                                             </connections>
                                         </segmentedControl>
-                                        <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybe-UM-jkL" customClass="BetterDatePicker" customModule="iOS_Todo" customModuleProvider="target">
+                                        <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybe-UM-jkL" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="16" y="125.5" width="343" height="60"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -755,7 +712,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="UAc-ZB-MuO">
                                             <rect key="frame" x="16" y="89.5" width="343" height="28"/>
                                             <subviews>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkf-ec-aqD" customClass="RoundedButton" customModule="iOS_Todo" customModuleProvider="target">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkf-ec-aqD" customClass="RoundedButton" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="168.5" height="28"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -769,7 +726,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
-                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDo-x1-Jbd" customClass="RoundedButton" customModule="iOS_Todo" customModuleProvider="target">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDo-x1-Jbd" customClass="RoundedButton" customModule="Logan__iOS_" customModuleProvider="target">
                                                     <rect key="frame" x="174.5" y="0.0" width="168.5" height="28"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -817,7 +774,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6h3-yn-EML" customClass="PriorityControl" customModule="iOS_Todo" customModuleProvider="target">
+                                        <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6h3-yn-EML" customClass="PriorityControl" customModule="Logan__iOS_" customModuleProvider="target">
                                             <rect key="frame" x="257" y="7.5" width="102" height="29"/>
                                             <segments>
                                                 <segment title="First"/>
@@ -874,7 +831,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Related Assignment" rowHeight="93" id="H5g-xF-fsq" customClass="AssignmentTableViewCell" customModule="iOS_Todo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Related Assignment" rowHeight="93" id="H5g-xF-fsq" customClass="AssignmentTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="505.5" width="375" height="93"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H5g-xF-fsq" id="WRo-69-tSw">

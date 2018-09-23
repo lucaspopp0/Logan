@@ -39,7 +39,9 @@ depends-top-level:
 - "ClassPicker"
 - "Commitment"
 - !private "Course"
+- !private "FloatLiteralType"
 - !private "Int"
+- !private "IntegerLiteralType"
 - "NSObject"
 - "NSObjectProtocol"
 - !private "StringLiteralType"
@@ -65,7 +67,6 @@ depends-member:
 - ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "classPicker"]
 - ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "correspondingCommitment"]
 - ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "datePicker"]
-- ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "deinit"]
 - ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "delegate"]
 - ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "displayLabel"]
 - ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "fittingHeight"]
@@ -76,10 +77,12 @@ depends-member:
 - ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "segmentSelected"]
 - ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "segmentedControl"]
 - ["11Logan__iOS_30AssignmentDueDateTableViewCellC", "setSelected"]
+- !private ["11Logan__iOS_16BetterDatePickerC", "deinit"]
 - !private ["11Logan__iOS_16BetterDatePickerC", "frame"]
 - !private ["11Logan__iOS_16BetterDatePickerC", "isHidden"]
 - !private ["11Logan__iOS_16BetterDatePickerC", "sizeToFit"]
-- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "classPicker"]
@@ -88,6 +91,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "datePicker"]
 - !private ["So15CALayerDelegateP", "delegate"]
 - !private ["So15CALayerDelegateP", "frame"]
+- !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "insertSegment"]
 - !private ["So15CALayerDelegateP", "isHidden"]
@@ -103,8 +107,11 @@ depends-member:
 - !private ["So15CALayerDelegateP", "setSelected"]
 - !private ["So15CALayerDelegateP", "sizeToFit"]
 - !private ["So15CALayerDelegateP", "titleForSegment"]
-- !private ["SC6CGRectV", "maxY"]
-- !private ["SC6CGRectV", "minY"]
+- !private ["So6CGRectV", "maxY"]
+- !private ["So6CGRectV", "minY"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "classPicker"]
@@ -114,6 +121,7 @@ depends-member:
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "dueDateTypeChanged"]
 - !private ["s7CVarArgP", "frame"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "insertSegment"]
 - !private ["s7CVarArgP", "isHidden"]
@@ -134,8 +142,10 @@ depends-member:
 - !private ["11Logan__iOS_11ClassPickerC", "frame"]
 - !private ["11Logan__iOS_11ClassPickerC", "isHidden"]
 - !private ["11Logan__iOS_11ClassPickerC", "sizeToFit"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10ComparableP", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "classPicker"]
 - !private ["s28CustomDebugStringConvertibleP", "correspondingCommitment"]
@@ -144,6 +154,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "dueDateTypeChanged"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "insertSegment"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
@@ -163,12 +174,23 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "titleForSegment"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "maxY"]
 - !private ["s29CustomPlaygroundQuickLookableP", "minY"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "frame"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "insertSegment"]
+- !private ["s17CustomReflectableP", "isHidden"]
 - !private ["s17CustomReflectableP", "maxY"]
 - !private ["s17CustomReflectableP", "minY"]
+- !private ["s17CustomReflectableP", "numberOfSegments"]
+- !private ["s17CustomReflectableP", "removeSegment"]
+- !private ["s17CustomReflectableP", "selectedSegmentIndex"]
+- !private ["s17CustomReflectableP", "setEnabled"]
+- !private ["s17CustomReflectableP", "sizeToFit"]
+- !private ["s17CustomReflectableP", "titleForSegment"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "classPicker"]
@@ -178,6 +200,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "dueDateTypeChanged"]
 - !private ["s23CustomStringConvertibleP", "frame"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "insertSegment"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
@@ -193,70 +216,106 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "setSelected"]
 - !private ["s23CustomStringConvertibleP", "sizeToFit"]
 - !private ["s23CustomStringConvertibleP", "titleForSegment"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "maxY"]
-- !private ["s9DecodableP", "minY"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "maxY"]
-- !private ["s9EncodableP", "minY"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "classPicker"]
-- !private ["s9EquatableP", "correspondingCommitment"]
-- !private ["s9EquatableP", "course"]
-- !private ["s9EquatableP", "datePicker"]
-- !private ["s9EquatableP", "delegate"]
-- !private ["s9EquatableP", "dueDateTypeChanged"]
-- !private ["s9EquatableP", "frame"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "insertSegment"]
-- !private ["s9EquatableP", "isHidden"]
-- !private ["s9EquatableP", "label"]
-- !private ["s9EquatableP", "maxY"]
-- !private ["s9EquatableP", "minY"]
-- !private ["s9EquatableP", "numberOfSegments"]
-- !private ["s9EquatableP", "pickerContainer"]
-- !private ["s9EquatableP", "pickerOpen"]
-- !private ["s9EquatableP", "removeSegment"]
-- !private ["s9EquatableP", "segmentSelected"]
-- !private ["s9EquatableP", "segmentedControl"]
-- !private ["s9EquatableP", "selectedSegmentIndex"]
-- !private ["s9EquatableP", "setEnabled"]
-- !private ["s9EquatableP", "setSelected"]
-- !private ["s9EquatableP", "sizeToFit"]
-- !private ["s9EquatableP", "titleForSegment"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "frame"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "insertSegment"]
+- !private ["Se", "isHidden"]
+- !private ["Se", "maxY"]
+- !private ["Se", "minY"]
+- !private ["Se", "numberOfSegments"]
+- !private ["Se", "removeSegment"]
+- !private ["Se", "selectedSegmentIndex"]
+- !private ["Se", "setEnabled"]
+- !private ["Se", "sizeToFit"]
+- !private ["Se", "titleForSegment"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "frame"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "insertSegment"]
+- !private ["SE", "isHidden"]
+- !private ["SE", "maxY"]
+- !private ["SE", "minY"]
+- !private ["SE", "numberOfSegments"]
+- !private ["SE", "removeSegment"]
+- !private ["SE", "selectedSegmentIndex"]
+- !private ["SE", "setEnabled"]
+- !private ["SE", "sizeToFit"]
+- !private ["SE", "titleForSegment"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "classPicker"]
+- !private ["SQ", "correspondingCommitment"]
+- !private ["SQ", "course"]
+- !private ["SQ", "datePicker"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "dueDateTypeChanged"]
+- !private ["SQ", "frame"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "insertSegment"]
+- !private ["SQ", "isHidden"]
+- !private ["SQ", "label"]
+- !private ["SQ", "maxY"]
+- !private ["SQ", "minY"]
+- !private ["SQ", "numberOfSegments"]
+- !private ["SQ", "pickerContainer"]
+- !private ["SQ", "pickerOpen"]
+- !private ["SQ", "removeSegment"]
+- !private ["SQ", "segmentSelected"]
+- !private ["SQ", "segmentedControl"]
+- !private ["SQ", "selectedSegmentIndex"]
+- !private ["SQ", "setEnabled"]
+- !private ["SQ", "setSelected"]
+- !private ["SQ", "sizeToFit"]
+- !private ["SQ", "titleForSegment"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "frame"]
+- !private ["s23ExpressibleByNilLiteralP", "insertSegment"]
+- !private ["s23ExpressibleByNilLiteralP", "isHidden"]
+- !private ["s23ExpressibleByNilLiteralP", "numberOfSegments"]
+- !private ["s23ExpressibleByNilLiteralP", "removeSegment"]
+- !private ["s23ExpressibleByNilLiteralP", "selectedSegmentIndex"]
+- !private ["s23ExpressibleByNilLiteralP", "setEnabled"]
+- !private ["s23ExpressibleByNilLiteralP", "sizeToFit"]
+- !private ["s23ExpressibleByNilLiteralP", "titleForSegment"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "classPicker"]
-- !private ["s8HashableP", "correspondingCommitment"]
-- !private ["s8HashableP", "course"]
-- !private ["s8HashableP", "datePicker"]
-- !private ["s8HashableP", "delegate"]
-- !private ["s8HashableP", "dueDateTypeChanged"]
-- !private ["s8HashableP", "frame"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "insertSegment"]
-- !private ["s8HashableP", "isHidden"]
-- !private ["s8HashableP", "label"]
-- !private ["s8HashableP", "numberOfSegments"]
-- !private ["s8HashableP", "pickerContainer"]
-- !private ["s8HashableP", "pickerOpen"]
-- !private ["s8HashableP", "removeSegment"]
-- !private ["s8HashableP", "segmentSelected"]
-- !private ["s8HashableP", "segmentedControl"]
-- !private ["s8HashableP", "selectedSegmentIndex"]
-- !private ["s8HashableP", "setEnabled"]
-- !private ["s8HashableP", "setSelected"]
-- !private ["s8HashableP", "sizeToFit"]
-- !private ["s8HashableP", "titleForSegment"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "classPicker"]
+- !private ["SH", "correspondingCommitment"]
+- !private ["SH", "course"]
+- !private ["SH", "datePicker"]
+- !private ["SH", "delegate"]
+- !private ["SH", "dueDateTypeChanged"]
+- !private ["SH", "frame"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "insertSegment"]
+- !private ["SH", "isHidden"]
+- !private ["SH", "label"]
+- !private ["SH", "numberOfSegments"]
+- !private ["SH", "pickerContainer"]
+- !private ["SH", "pickerOpen"]
+- !private ["SH", "removeSegment"]
+- !private ["SH", "segmentSelected"]
+- !private ["SH", "segmentedControl"]
+- !private ["SH", "selectedSegmentIndex"]
+- !private ["SH", "setEnabled"]
+- !private ["SH", "setSelected"]
+- !private ["SH", "sizeToFit"]
+- !private ["SH", "titleForSegment"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "classPicker"]
@@ -265,6 +324,7 @@ depends-member:
 - !private ["So8NSCodingP", "datePicker"]
 - !private ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "frame"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "insertSegment"]
 - !private ["So8NSCodingP", "isHidden"]
@@ -302,6 +362,7 @@ depends-member:
 - ["So8NSObjectC", "fittingHeight"]
 - !private ["So8NSObjectC", "frame"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "insertSegment"]
 - !private ["So8NSObjectC", "isHidden"]
 - ["So8NSObjectC", "label"]
@@ -316,35 +377,51 @@ depends-member:
 - ["So8NSObjectC", "setSelected"]
 - !private ["So8NSObjectC", "sizeToFit"]
 - !private ["So8NSObjectC", "titleForSegment"]
-- ["So16NSObjectProtocolP", "AssignmentDueDateTableViewCell"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "classPicker"]
-- !private ["So16NSObjectProtocolP", "correspondingCommitment"]
-- !private ["So16NSObjectProtocolP", "course"]
-- !private ["So16NSObjectProtocolP", "datePicker"]
-- !private ["So16NSObjectProtocolP", "delegate"]
-- !private ["So16NSObjectProtocolP", "dueDateTypeChanged"]
-- !private ["So16NSObjectProtocolP", "frame"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "insertSegment"]
-- !private ["So16NSObjectProtocolP", "isHidden"]
-- !private ["So16NSObjectProtocolP", "label"]
-- !private ["So16NSObjectProtocolP", "numberOfSegments"]
-- !private ["So16NSObjectProtocolP", "pickerContainer"]
-- !private ["So16NSObjectProtocolP", "pickerOpen"]
-- !private ["So16NSObjectProtocolP", "removeSegment"]
-- !private ["So16NSObjectProtocolP", "segmentSelected"]
-- !private ["So16NSObjectProtocolP", "segmentedControl"]
-- !private ["So16NSObjectProtocolP", "selectedSegmentIndex"]
-- !private ["So16NSObjectProtocolP", "setEnabled"]
-- !private ["So16NSObjectProtocolP", "setSelected"]
-- !private ["So16NSObjectProtocolP", "sizeToFit"]
-- !private ["So16NSObjectProtocolP", "titleForSegment"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s8SequenceP", "init"]
+- ["So8NSObjectP", "AssignmentDueDateTableViewCell"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "classPicker"]
+- !private ["So8NSObjectP", "correspondingCommitment"]
+- !private ["So8NSObjectP", "course"]
+- !private ["So8NSObjectP", "datePicker"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "dueDateTypeChanged"]
+- !private ["So8NSObjectP", "frame"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "insertSegment"]
+- !private ["So8NSObjectP", "isHidden"]
+- !private ["So8NSObjectP", "label"]
+- !private ["So8NSObjectP", "numberOfSegments"]
+- !private ["So8NSObjectP", "pickerContainer"]
+- !private ["So8NSObjectP", "pickerOpen"]
+- !private ["So8NSObjectP", "removeSegment"]
+- !private ["So8NSObjectP", "segmentSelected"]
+- !private ["So8NSObjectP", "segmentedControl"]
+- !private ["So8NSObjectP", "selectedSegmentIndex"]
+- !private ["So8NSObjectP", "setEnabled"]
+- !private ["So8NSObjectP", "setSelected"]
+- !private ["So8NSObjectP", "sizeToFit"]
+- !private ["So8NSObjectP", "titleForSegment"]
+- !private ["Sq", "frame"]
+- !private ["Sq", "insertSegment"]
+- !private ["Sq", "isHidden"]
+- !private ["Sq", "numberOfSegments"]
+- !private ["Sq", "removeSegment"]
+- !private ["Sq", "selectedSegmentIndex"]
+- !private ["Sq", "setEnabled"]
+- !private ["Sq", "sizeToFit"]
+- !private ["Sq", "titleForSegment"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "classPicker"]
@@ -353,6 +430,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "datePicker"]
 - !private ["So29UIAccessibilityIdentificationP", "delegate"]
 - !private ["So29UIAccessibilityIdentificationP", "frame"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "insertSegment"]
 - !private ["So29UIAccessibilityIdentificationP", "isHidden"]
@@ -376,6 +454,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "delegate"]
 - !private ["So12UIAppearanceP", "frame"]
 - !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "insertSegment"]
 - !private ["So12UIAppearanceP", "isHidden"]
 - !private ["So12UIAppearanceP", "label"]
@@ -397,6 +476,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "datePicker"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "frame"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "insertSegment"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
@@ -431,6 +511,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "delegate"]
 - !private ["So17UICoordinateSpaceP", "frame"]
 - !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "insertSegment"]
 - !private ["So17UICoordinateSpaceP", "isHidden"]
 - !private ["So17UICoordinateSpaceP", "label"]
@@ -452,6 +533,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "datePicker"]
 - !private ["So13UIDynamicItemP", "delegate"]
 - !private ["So13UIDynamicItemP", "frame"]
+- !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "insertSegment"]
 - !private ["So13UIDynamicItemP", "isHidden"]
@@ -475,6 +557,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "frame"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "insertSegment"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
 - !private ["So18UIFocusEnvironmentP", "label"]
@@ -497,6 +580,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "delegate"]
 - !private ["So11UIFocusItemP", "frame"]
 - !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "insertSegment"]
 - !private ["So11UIFocusItemP", "isHidden"]
 - !private ["So11UIFocusItemP", "label"]
@@ -511,11 +595,35 @@ depends-member:
 - !private ["So11UIFocusItemP", "setSelected"]
 - !private ["So11UIFocusItemP", "sizeToFit"]
 - !private ["So11UIFocusItemP", "titleForSegment"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "classPicker"]
+- !private ["So20UIFocusItemContainerP", "correspondingCommitment"]
+- !private ["So20UIFocusItemContainerP", "course"]
+- !private ["So20UIFocusItemContainerP", "datePicker"]
+- !private ["So20UIFocusItemContainerP", "delegate"]
+- !private ["So20UIFocusItemContainerP", "frame"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "insertSegment"]
+- !private ["So20UIFocusItemContainerP", "isHidden"]
+- !private ["So20UIFocusItemContainerP", "label"]
+- !private ["So20UIFocusItemContainerP", "numberOfSegments"]
+- !private ["So20UIFocusItemContainerP", "pickerContainer"]
+- !private ["So20UIFocusItemContainerP", "pickerOpen"]
+- !private ["So20UIFocusItemContainerP", "removeSegment"]
+- !private ["So20UIFocusItemContainerP", "segmentSelected"]
+- !private ["So20UIFocusItemContainerP", "segmentedControl"]
+- !private ["So20UIFocusItemContainerP", "selectedSegmentIndex"]
+- !private ["So20UIFocusItemContainerP", "setEnabled"]
+- !private ["So20UIFocusItemContainerP", "setSelected"]
+- !private ["So20UIFocusItemContainerP", "sizeToFit"]
+- !private ["So20UIFocusItemContainerP", "titleForSegment"]
 - ["So27UIGestureRecognizerDelegateP", ""]
 - !private ["So27UIGestureRecognizerDelegateP", "classPicker"]
 - !private ["So27UIGestureRecognizerDelegateP", "correspondingCommitment"]
 - !private ["So27UIGestureRecognizerDelegateP", "datePicker"]
 - !private ["So27UIGestureRecognizerDelegateP", "delegate"]
+- !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "label"]
 - !private ["So27UIGestureRecognizerDelegateP", "pickerContainer"]
@@ -531,6 +639,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "datePicker"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "insertSegment"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
@@ -567,6 +676,7 @@ depends-member:
 - ["So11UIResponderC", "fittingHeight"]
 - !private ["So11UIResponderC", "frame"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "insertSegment"]
 - !private ["So11UIResponderC", "isHidden"]
 - ["So11UIResponderC", "label"]
@@ -588,6 +698,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "datePicker"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "insertSegment"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
@@ -638,6 +749,7 @@ depends-member:
 - ["So15UITableViewCellC", "displayLabel"]
 - ["So15UITableViewCellC", "fittingHeight"]
 - ["So15UITableViewCellC", "init"]
+- !private ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "label"]
 - ["So15UITableViewCellC", "pickerContainer"]
 - ["So15UITableViewCellC", "pickerOpen"]
@@ -651,6 +763,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "datePicker"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
 - !private ["So18UITraitEnvironmentP", "frame"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "insertSegment"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
@@ -666,6 +779,29 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "setSelected"]
 - !private ["So18UITraitEnvironmentP", "sizeToFit"]
 - !private ["So18UITraitEnvironmentP", "titleForSegment"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "classPicker"]
+- !private ["So23UIUserActivityRestoringP", "correspondingCommitment"]
+- !private ["So23UIUserActivityRestoringP", "course"]
+- !private ["So23UIUserActivityRestoringP", "datePicker"]
+- !private ["So23UIUserActivityRestoringP", "delegate"]
+- !private ["So23UIUserActivityRestoringP", "frame"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "insertSegment"]
+- !private ["So23UIUserActivityRestoringP", "isHidden"]
+- !private ["So23UIUserActivityRestoringP", "label"]
+- !private ["So23UIUserActivityRestoringP", "numberOfSegments"]
+- !private ["So23UIUserActivityRestoringP", "pickerContainer"]
+- !private ["So23UIUserActivityRestoringP", "pickerOpen"]
+- !private ["So23UIUserActivityRestoringP", "removeSegment"]
+- !private ["So23UIUserActivityRestoringP", "segmentSelected"]
+- !private ["So23UIUserActivityRestoringP", "segmentedControl"]
+- !private ["So23UIUserActivityRestoringP", "selectedSegmentIndex"]
+- !private ["So23UIUserActivityRestoringP", "setEnabled"]
+- !private ["So23UIUserActivityRestoringP", "setSelected"]
+- !private ["So23UIUserActivityRestoringP", "sizeToFit"]
+- !private ["So23UIUserActivityRestoringP", "titleForSegment"]
 - ["So6UIViewC", "AssignmentDueDatePickerDelegate"]
 - ["So6UIViewC", "BetterDatePicker"]
 - ["So6UIViewC", "Bool"]
@@ -687,6 +823,7 @@ depends-member:
 - ["So6UIViewC", "fittingHeight"]
 - !private ["So6UIViewC", "frame"]
 - ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "insertSegment"]
 - !private ["So6UIViewC", "isHidden"]
 - ["So6UIViewC", "label"]
@@ -709,6 +846,7 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "delegate"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "frame"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "insertSegment"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isHidden"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "label"]
@@ -725,9 +863,14 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "titleForSegment"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "classPicker"]
@@ -737,6 +880,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dueDateTypeChanged"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "insertSegment"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
@@ -753,43 +897,57 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sizeToFit"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleForSegment"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "frame"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "insertSegment"]
+- !private ["s21_ObjectiveCBridgeableP", "isHidden"]
 - !private ["s21_ObjectiveCBridgeableP", "maxY"]
 - !private ["s21_ObjectiveCBridgeableP", "minY"]
+- !private ["s21_ObjectiveCBridgeableP", "numberOfSegments"]
+- !private ["s21_ObjectiveCBridgeableP", "removeSegment"]
+- !private ["s21_ObjectiveCBridgeableP", "selectedSegmentIndex"]
+- !private ["s21_ObjectiveCBridgeableP", "setEnabled"]
+- !private ["s21_ObjectiveCBridgeableP", "sizeToFit"]
+- !private ["s21_ObjectiveCBridgeableP", "titleForSegment"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - "11Logan__iOS_31AssignmentDueDatePickerDelegateP"
 - "11Logan__iOS_30AssignmentDueDateTableViewCellC"
 - !private "11Logan__iOS_16BetterDatePickerC"
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
 - "So15CALayerDelegateP"
-- !private "SC6CGRectV"
+- !private "So6CGRectV"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "11Logan__iOS_11ClassPickerC"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
+- !private "Sl"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s8SequenceP"
+- "So8NSObjectP"
+- !private "Sq"
+- !private "Sm"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
@@ -801,6 +959,7 @@ depends-nominal:
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - "So27UIGestureRecognizerDelegateP"
 - !private "So7UILabelC"
 - "So30UIPasteConfigurationSupportingP"
@@ -811,6 +970,7 @@ depends-nominal:
 - !private "So11UIStackViewC"
 - "So15UITableViewCellC"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -840,18 +1000,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "97a9bf1f7f9ae365c243d150d7a942fc"

@@ -16,14 +16,19 @@ protocol ConsoleListener {
 
 class Console: NSObject {
     
+    struct OutputLine {
+        var text: String
+        var date: Date
+    }
+    
     static let shared: Console = Console()
     
     private var listeners: [ConsoleListener] = []
     
-    var lines: [String] = []
+    var lines: [OutputLine] = []
     
     func print(_ obj: Any?) {
-        lines.append("\(obj ?? "nil")")
+        lines.append(Console.OutputLine(text: "\(obj ?? "nil")", date: Date()))
         Swift.print(obj ?? "nil")
         
         DispatchQueue.main.async {

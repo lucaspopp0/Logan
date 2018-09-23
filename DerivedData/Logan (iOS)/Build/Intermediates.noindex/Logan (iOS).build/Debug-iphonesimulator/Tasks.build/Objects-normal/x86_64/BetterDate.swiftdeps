@@ -29,7 +29,9 @@ depends-top-level:
 - "ClockTime"
 - "Date"
 - !private "DateFormatter"
+- !private "FloatLiteralType"
 - "Int"
+- !private "IntegerLiteralType"
 - "String"
 - !private "StringLiteralType"
 - !private "||"
@@ -45,15 +47,19 @@ depends-member:
 - ["5Tasks10BetterDateC", "String"]
 - ["5Tasks10BetterDateC", "dateValue"]
 - ["5Tasks10BetterDateC", "day"]
-- ["5Tasks10BetterDateC", "deinit"]
 - ["5Tasks10BetterDateC", "init"]
 - ["5Tasks10BetterDateC", "stringValue"]
 - ["5Tasks10BetterDateC", "time"]
-- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "date"]
 - !private ["s7CVarArgP", "dateFormat"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "string"]
 - !private ["10Foundation8CalendarV", "Component"]
@@ -69,8 +75,10 @@ depends-member:
 - !private ["5Tasks9ClockTimeC", "hour"]
 - !private ["5Tasks9ClockTimeC", "init"]
 - !private ["5Tasks9ClockTimeC", "minute"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10ComparableP", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
 - !private ["10Foundation8CalendarV9ComponentO", "day"]
 - !private ["10Foundation8CalendarV9ComponentO", "hour"]
 - !private ["10Foundation8CalendarV9ComponentO", "minute"]
@@ -84,11 +92,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "day"]
 - !private ["s28CustomDebugStringConvertibleP", "hour"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "minute"]
 - !private ["s28CustomDebugStringConvertibleP", "month"]
 - !private ["s28CustomDebugStringConvertibleP", "string"]
 - !private ["s28CustomDebugStringConvertibleP", "year"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "Component"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
@@ -97,6 +107,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "dateComponents"]
 - !private ["s17CustomReflectableP", "day"]
 - !private ["s17CustomReflectableP", "hour"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "minute"]
 - !private ["s17CustomReflectableP", "month"]
@@ -110,6 +121,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "day"]
 - !private ["s23CustomStringConvertibleP", "hour"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "minute"]
 - !private ["s23CustomStringConvertibleP", "month"]
 - !private ["s23CustomStringConvertibleP", "string"]
@@ -120,70 +132,79 @@ depends-member:
 - !private ["10Foundation14DateComponentsV", "minute"]
 - !private ["10Foundation14DateComponentsV", "month"]
 - !private ["10Foundation14DateComponentsV", "year"]
-- !private ["So13DateFormatterC", "date"]
-- !private ["So13DateFormatterC", "dateFormat"]
-- !private ["So13DateFormatterC", "init"]
-- !private ["So13DateFormatterC", "string"]
-- !private ["s9DecodableP", "Component"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "autoupdatingCurrent"]
-- !private ["s9DecodableP", "date"]
-- !private ["s9DecodableP", "dateComponents"]
-- !private ["s9DecodableP", "day"]
-- !private ["s9DecodableP", "hour"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "minute"]
-- !private ["s9DecodableP", "month"]
-- !private ["s9DecodableP", "year"]
-- !private ["s9EncodableP", "Component"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "autoupdatingCurrent"]
-- !private ["s9EncodableP", "date"]
-- !private ["s9EncodableP", "dateComponents"]
-- !private ["s9EncodableP", "day"]
-- !private ["s9EncodableP", "hour"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "minute"]
-- !private ["s9EncodableP", "month"]
-- !private ["s9EncodableP", "year"]
-- !private ["s9EquatableP", "Component"]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "am"]
-- !private ["s9EquatableP", "autoupdatingCurrent"]
-- !private ["s9EquatableP", "date"]
-- !private ["s9EquatableP", "dateComponents"]
-- !private ["s9EquatableP", "dateFormat"]
-- !private ["s9EquatableP", "day"]
-- !private ["s9EquatableP", "hour"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "minute"]
-- !private ["s9EquatableP", "month"]
-- !private ["s9EquatableP", "string"]
-- !private ["s9EquatableP", "year"]
+- !private ["So15NSDateFormatterC", "date"]
+- !private ["So15NSDateFormatterC", "dateFormat"]
+- !private ["So15NSDateFormatterC", "init"]
+- !private ["So15NSDateFormatterC", "string"]
+- !private ["Se", "Component"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "autoupdatingCurrent"]
+- !private ["Se", "date"]
+- !private ["Se", "dateComponents"]
+- !private ["Se", "day"]
+- !private ["Se", "hour"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "minute"]
+- !private ["Se", "month"]
+- !private ["Se", "year"]
+- !private ["SE", "Component"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "autoupdatingCurrent"]
+- !private ["SE", "date"]
+- !private ["SE", "dateComponents"]
+- !private ["SE", "day"]
+- !private ["SE", "hour"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "minute"]
+- !private ["SE", "month"]
+- !private ["SE", "year"]
+- !private ["SQ", "Component"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "am"]
+- !private ["SQ", "autoupdatingCurrent"]
+- !private ["SQ", "date"]
+- !private ["SQ", "dateComponents"]
+- !private ["SQ", "dateFormat"]
+- !private ["SQ", "day"]
+- !private ["SQ", "hour"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "minute"]
+- !private ["SQ", "month"]
+- !private ["SQ", "string"]
+- !private ["SQ", "year"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["So9FormatterC", "date"]
-- !private ["So9FormatterC", "dateFormat"]
-- !private ["So9FormatterC", "init"]
-- !private ["So9FormatterC", "string"]
-- !private ["s8HashableP", "Component"]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "am"]
-- !private ["s8HashableP", "autoupdatingCurrent"]
-- !private ["s8HashableP", "date"]
-- !private ["s8HashableP", "dateComponents"]
-- !private ["s8HashableP", "dateFormat"]
-- !private ["s8HashableP", "day"]
-- !private ["s8HashableP", "hour"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "minute"]
-- !private ["s8HashableP", "month"]
-- !private ["s8HashableP", "string"]
-- !private ["s8HashableP", "year"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So11NSFormatterC", "date"]
+- !private ["So11NSFormatterC", "dateFormat"]
+- !private ["So11NSFormatterC", "init"]
+- !private ["So11NSFormatterC", "string"]
+- !private ["SH", "Component"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "am"]
+- !private ["SH", "autoupdatingCurrent"]
+- !private ["SH", "date"]
+- !private ["SH", "dateComponents"]
+- !private ["SH", "dateFormat"]
+- !private ["SH", "day"]
+- !private ["SH", "hour"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "minute"]
+- !private ["SH", "month"]
+- !private ["SH", "string"]
+- !private ["SH", "year"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "date"]
 - !private ["So8NSCodingP", "dateFormat"]
@@ -197,12 +218,13 @@ depends-member:
 - !private ["So8NSObjectC", "dateFormat"]
 - !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "string"]
-- !private ["So16NSObjectProtocolP", "date"]
-- !private ["So16NSObjectProtocolP", "dateFormat"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "string"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s16RawRepresentableP", "am"]
+- !private ["So8NSObjectP", "date"]
+- !private ["So8NSObjectP", "dateFormat"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "string"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["SY", "am"]
 - !private ["10Foundation20ReferenceConvertibleP", "Component"]
 - !private ["10Foundation20ReferenceConvertibleP", "autoupdatingCurrent"]
 - !private ["10Foundation20ReferenceConvertibleP", "date"]
@@ -213,16 +235,26 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "minute"]
 - !private ["10Foundation20ReferenceConvertibleP", "month"]
 - !private ["10Foundation20ReferenceConvertibleP", "year"]
-- !private ["s8SequenceP", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "date"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormat"]
@@ -245,21 +277,24 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "day"]
 - !private ["s21_ObjectiveCBridgeableP", "hour"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "minute"]
 - !private ["s21_ObjectiveCBridgeableP", "month"]
 - !private ["s21_ObjectiveCBridgeableP", "year"]
 - !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "5Tasks9ClockTimeC4AmPmO"
 - "5Tasks10BetterDateC"
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - !private "s7CVarArgP"
 - !private "10Foundation8CalendarV"
 - !private "5Tasks11CalendarDayC"
 - "5Tasks9ClockTimeC"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
+- !private "Sl"
+- !private "SL"
 - !private "10Foundation8CalendarV9ComponentO"
 - !private "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
@@ -267,28 +302,28 @@ depends-nominal:
 - !private "s23CustomStringConvertibleP"
 - !private "10Foundation4DateV"
 - !private "10Foundation14DateComponentsV"
-- !private "So13DateFormatterC"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- !private "s9EquatableP"
+- !private "So15NSDateFormatterC"
+- !private "Se"
+- !private "SE"
+- !private "SQ"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- !private "So9FormatterC"
-- !private "s8HashableP"
+- !private "So11NSFormatterC"
+- !private "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So8NSObjectC"
-- !private "So16NSObjectProtocolP"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s16RawRepresentableP"
+- !private "So8NSObjectP"
+- !private "Sm"
+- !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
-- !private "s8SequenceP"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -319,18 +354,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "2af9eaeb6ee04fedc3589743c8d031aa"

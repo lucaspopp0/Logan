@@ -118,11 +118,11 @@ class ExtracurricularTableViewController: UITableViewController, UITextViewDeleg
                 let event = extracurricular.events[indexPath.row]
                 
                 if event is SingleEvent, let cell = tableView.dequeueReusableCell(withIdentifier: "Single Event", for: indexPath) as? SingleEventTableViewCell {
-                    cell.event = event as! SingleEvent
+                    cell.event = event as? SingleEvent
                     
                     return cell
                 } else if event is RepeatingEvent, let cell = tableView.dequeueReusableCell(withIdentifier: "Repeating Event", for: indexPath) as? RepeatingEventTableViewCell {
-                    cell.event = event as! RepeatingEvent
+                    cell.event = event as? RepeatingEvent
                     
                     return cell
                 }

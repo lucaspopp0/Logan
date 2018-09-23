@@ -33,13 +33,19 @@ depends-top-level:
 - "Void"
 depends-member:
 - !private ["Sa", "append"]
+- !private ["s13ArrayProtocolP", "append"]
 - !private ["5Tasks10AssignmentC", "reminders"]
-- !private ["s23BidirectionalCollectionP", "append"]
-- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["SK", "append"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["5Tasks9CKEnabledC", "identifier"]
 - !private ["5Tasks9CKEnabledC", "notificationRequest"]
 - !private ["5Tasks9CKEnabledC", "reminders"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "append"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["s7CVarArgP", "Console"]
 - !private ["s7CVarArgP", "DataManager"]
 - !private ["s7CVarArgP", "DispatchQueue"]
@@ -66,6 +72,7 @@ depends-member:
 - !private ["s7CVarArgP", "getNotificationSettings"]
 - !private ["s7CVarArgP", "identifier"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "main"]
 - !private ["s7CVarArgP", "notification"]
 - !private ["s7CVarArgP", "notificationRequest"]
@@ -81,10 +88,12 @@ depends-member:
 - !private ["s7CVarArgP", "title"]
 - !private ["s7CVarArgP", "userInfo"]
 - ["s7CVarArgP", "userNotificationCenter"]
-- !private ["s10CollectionP", "append"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "subscript"]
-- !private ["s10ComparableP", "init"]
+- !private ["Sl", "append"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
 - !private ["5Tasks7ConsoleC", "print"]
 - !private ["5Tasks7ConsoleC", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "Console"]
@@ -112,6 +121,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "getNotificationSettings"]
 - !private ["s28CustomDebugStringConvertibleP", "identifier"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "notification"]
 - !private ["s28CustomDebugStringConvertibleP", "notificationRequest"]
@@ -129,8 +139,10 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "userNotificationCenter"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "Console"]
@@ -159,6 +171,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "getNotificationSettings"]
 - !private ["s23CustomStringConvertibleP", "identifier"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "main"]
 - !private ["s23CustomStringConvertibleP", "notification"]
 - !private ["s23CustomStringConvertibleP", "notificationRequest"]
@@ -176,64 +189,67 @@ depends-member:
 - ["s23CustomStringConvertibleP", "userNotificationCenter"]
 - !private ["5Tasks11DataManagerC", "assignments"]
 - !private ["5Tasks11DataManagerC", "shared"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "append"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "subscript"]
-- !private ["s10DictionaryV", "subscript"]
-- !private ["So14DispatchObjectC", "async"]
-- !private ["So14DispatchObjectC", "main"]
-- !private ["So13DispatchQueueC", "async"]
-- !private ["So13DispatchQueueC", "main"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "append"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "subscript"]
-- !private ["s9EquatableP", "Console"]
-- !private ["s9EquatableP", "DataManager"]
-- !private ["s9EquatableP", "DispatchQueue"]
-- ["s9EquatableP", "NotificationManager"]
-- !private ["s9EquatableP", "Swift"]
-- !private ["s9EquatableP", "UNAuthorizationStatus"]
-- !private ["s9EquatableP", "UNNotificationDefaultActionIdentifier"]
-- !private ["s9EquatableP", "UNNotificationPresentationOptions"]
-- !private ["s9EquatableP", "UNUserNotificationCenter"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "actionIdentifier"]
-- !private ["s9EquatableP", "add"]
-- !private ["s9EquatableP", "addNotificationForReminder"]
-- !private ["s9EquatableP", "addNotificationsForReminders"]
-- !private ["s9EquatableP", "alert"]
-- !private ["s9EquatableP", "append"]
-- !private ["s9EquatableP", "assignments"]
-- !private ["s9EquatableP", "async"]
-- !private ["s9EquatableP", "authorizationStatus"]
-- !private ["s9EquatableP", "authorized"]
-- !private ["s9EquatableP", "badge"]
-- !private ["s9EquatableP", "body"]
-- !private ["s9EquatableP", "cancelAllNotifications"]
-- !private ["s9EquatableP", "content"]
-- !private ["s9EquatableP", "current"]
-- !private ["s9EquatableP", "getNotificationSettings"]
-- !private ["s9EquatableP", "identifier"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "main"]
-- !private ["s9EquatableP", "notification"]
-- !private ["s9EquatableP", "notificationRequest"]
-- !private ["s9EquatableP", "print"]
-- !private ["s9EquatableP", "reminders"]
-- !private ["s9EquatableP", "removeAllPendingNotificationRequests"]
-- !private ["s9EquatableP", "removePendingNotificationRequests"]
-- !private ["s9EquatableP", "request"]
-- !private ["s9EquatableP", "requestAuthorization"]
-- !private ["s9EquatableP", "scheduleNotificationRequest"]
-- !private ["s9EquatableP", "shared"]
-- !private ["s9EquatableP", "sound"]
-- !private ["s9EquatableP", "subscript"]
-- !private ["s9EquatableP", "title"]
-- !private ["s9EquatableP", "userInfo"]
-- ["s9EquatableP", "userNotificationCenter"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "append"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "subscript"]
+- !private ["SD", "subscript"]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "append"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "Console"]
+- !private ["SQ", "DataManager"]
+- !private ["SQ", "DispatchQueue"]
+- ["SQ", "NotificationManager"]
+- !private ["SQ", "Swift"]
+- !private ["SQ", "UNAuthorizationStatus"]
+- !private ["SQ", "UNNotificationDefaultActionIdentifier"]
+- !private ["SQ", "UNNotificationPresentationOptions"]
+- !private ["SQ", "UNUserNotificationCenter"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "actionIdentifier"]
+- !private ["SQ", "add"]
+- !private ["SQ", "addNotificationForReminder"]
+- !private ["SQ", "addNotificationsForReminders"]
+- !private ["SQ", "alert"]
+- !private ["SQ", "append"]
+- !private ["SQ", "assignments"]
+- !private ["SQ", "async"]
+- !private ["SQ", "authorizationStatus"]
+- !private ["SQ", "authorized"]
+- !private ["SQ", "badge"]
+- !private ["SQ", "body"]
+- !private ["SQ", "cancelAllNotifications"]
+- !private ["SQ", "content"]
+- !private ["SQ", "current"]
+- !private ["SQ", "getNotificationSettings"]
+- !private ["SQ", "identifier"]
+- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "main"]
+- !private ["SQ", "notification"]
+- !private ["SQ", "notificationRequest"]
+- !private ["SQ", "print"]
+- !private ["SQ", "reminders"]
+- !private ["SQ", "removeAllPendingNotificationRequests"]
+- !private ["SQ", "removePendingNotificationRequests"]
+- !private ["SQ", "request"]
+- !private ["SQ", "requestAuthorization"]
+- !private ["SQ", "scheduleNotificationRequest"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "sound"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "title"]
+- !private ["SQ", "userInfo"]
+- ["SQ", "userNotificationCenter"]
 - !private ["s5ErrorP", "localizedDescription"]
 - !private ["s25ExpressibleByArrayLiteralP", "alert"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
@@ -242,52 +258,60 @@ depends-member:
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "Console"]
-- !private ["s8HashableP", "DataManager"]
-- !private ["s8HashableP", "DispatchQueue"]
-- ["s8HashableP", "NotificationManager"]
-- !private ["s8HashableP", "Swift"]
-- !private ["s8HashableP", "UNAuthorizationStatus"]
-- !private ["s8HashableP", "UNNotificationDefaultActionIdentifier"]
-- !private ["s8HashableP", "UNNotificationPresentationOptions"]
-- !private ["s8HashableP", "UNUserNotificationCenter"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "actionIdentifier"]
-- !private ["s8HashableP", "add"]
-- !private ["s8HashableP", "addNotificationForReminder"]
-- !private ["s8HashableP", "addNotificationsForReminders"]
-- !private ["s8HashableP", "assignments"]
-- !private ["s8HashableP", "async"]
-- !private ["s8HashableP", "authorizationStatus"]
-- !private ["s8HashableP", "authorized"]
-- !private ["s8HashableP", "body"]
-- !private ["s8HashableP", "cancelAllNotifications"]
-- !private ["s8HashableP", "content"]
-- !private ["s8HashableP", "current"]
-- !private ["s8HashableP", "getNotificationSettings"]
-- !private ["s8HashableP", "identifier"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "main"]
-- !private ["s8HashableP", "notification"]
-- !private ["s8HashableP", "notificationRequest"]
-- !private ["s8HashableP", "print"]
-- !private ["s8HashableP", "reminders"]
-- !private ["s8HashableP", "removeAllPendingNotificationRequests"]
-- !private ["s8HashableP", "removePendingNotificationRequests"]
-- !private ["s8HashableP", "request"]
-- !private ["s8HashableP", "requestAuthorization"]
-- !private ["s8HashableP", "scheduleNotificationRequest"]
-- !private ["s8HashableP", "shared"]
-- !private ["s8HashableP", "title"]
-- !private ["s8HashableP", "userInfo"]
-- ["s8HashableP", "userNotificationCenter"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "Console"]
+- !private ["SH", "DataManager"]
+- !private ["SH", "DispatchQueue"]
+- ["SH", "NotificationManager"]
+- !private ["SH", "Swift"]
+- !private ["SH", "UNAuthorizationStatus"]
+- !private ["SH", "UNNotificationDefaultActionIdentifier"]
+- !private ["SH", "UNNotificationPresentationOptions"]
+- !private ["SH", "UNUserNotificationCenter"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "actionIdentifier"]
+- !private ["SH", "add"]
+- !private ["SH", "addNotificationForReminder"]
+- !private ["SH", "addNotificationsForReminders"]
+- !private ["SH", "append"]
+- !private ["SH", "assignments"]
+- !private ["SH", "async"]
+- !private ["SH", "authorizationStatus"]
+- !private ["SH", "authorized"]
+- !private ["SH", "body"]
+- !private ["SH", "cancelAllNotifications"]
+- !private ["SH", "content"]
+- !private ["SH", "current"]
+- !private ["SH", "getNotificationSettings"]
+- !private ["SH", "identifier"]
+- ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "main"]
+- !private ["SH", "notification"]
+- !private ["SH", "notificationRequest"]
+- !private ["SH", "print"]
+- !private ["SH", "reminders"]
+- !private ["SH", "removeAllPendingNotificationRequests"]
+- !private ["SH", "removePendingNotificationRequests"]
+- !private ["SH", "request"]
+- !private ["SH", "requestAuthorization"]
+- !private ["SH", "scheduleNotificationRequest"]
+- !private ["SH", "shared"]
+- !private ["SH", "subscript"]
+- !private ["SH", "title"]
+- !private ["SH", "userInfo"]
+- ["SH", "userNotificationCenter"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["s17MutableCollectionP", "append"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
 - !private ["So8NSCodingP", "actionIdentifier"]
 - !private ["So8NSCodingP", "authorizationStatus"]
 - !private ["So8NSCodingP", "body"]
@@ -341,6 +365,7 @@ depends-member:
 - !private ["So8NSObjectC", "getNotificationSettings"]
 - !private ["So8NSObjectC", "identifier"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "main"]
 - !private ["So8NSObjectC", "notification"]
 - !private ["So8NSObjectC", "notificationRequest"]
@@ -356,44 +381,45 @@ depends-member:
 - !private ["So8NSObjectC", "title"]
 - !private ["So8NSObjectC", "userInfo"]
 - ["So8NSObjectC", "userNotificationCenter"]
-- !private ["So16NSObjectProtocolP", "Console"]
-- !private ["So16NSObjectProtocolP", "DataManager"]
-- !private ["So16NSObjectProtocolP", "DispatchQueue"]
-- ["So16NSObjectProtocolP", "NotificationManager"]
-- !private ["So16NSObjectProtocolP", "Swift"]
-- !private ["So16NSObjectProtocolP", "UNAuthorizationStatus"]
-- !private ["So16NSObjectProtocolP", "UNNotificationDefaultActionIdentifier"]
-- !private ["So16NSObjectProtocolP", "UNNotificationPresentationOptions"]
-- !private ["So16NSObjectProtocolP", "UNUserNotificationCenter"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "actionIdentifier"]
-- !private ["So16NSObjectProtocolP", "add"]
-- !private ["So16NSObjectProtocolP", "addNotificationForReminder"]
-- !private ["So16NSObjectProtocolP", "addNotificationsForReminders"]
-- !private ["So16NSObjectProtocolP", "assignments"]
-- !private ["So16NSObjectProtocolP", "async"]
-- !private ["So16NSObjectProtocolP", "authorizationStatus"]
-- !private ["So16NSObjectProtocolP", "body"]
-- !private ["So16NSObjectProtocolP", "cancelAllNotifications"]
-- !private ["So16NSObjectProtocolP", "content"]
-- !private ["So16NSObjectProtocolP", "current"]
-- !private ["So16NSObjectProtocolP", "getNotificationSettings"]
-- !private ["So16NSObjectProtocolP", "identifier"]
-- ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "main"]
-- !private ["So16NSObjectProtocolP", "notification"]
-- !private ["So16NSObjectProtocolP", "notificationRequest"]
-- !private ["So16NSObjectProtocolP", "print"]
-- !private ["So16NSObjectProtocolP", "reminders"]
-- !private ["So16NSObjectProtocolP", "removeAllPendingNotificationRequests"]
-- !private ["So16NSObjectProtocolP", "removePendingNotificationRequests"]
-- !private ["So16NSObjectProtocolP", "request"]
-- !private ["So16NSObjectProtocolP", "requestAuthorization"]
-- !private ["So16NSObjectProtocolP", "scheduleNotificationRequest"]
-- !private ["So16NSObjectProtocolP", "shared"]
-- !private ["So16NSObjectProtocolP", "title"]
-- !private ["So16NSObjectProtocolP", "userInfo"]
-- ["So16NSObjectProtocolP", "userNotificationCenter"]
+- !private ["So8NSObjectP", "Console"]
+- !private ["So8NSObjectP", "DataManager"]
+- !private ["So8NSObjectP", "DispatchQueue"]
+- ["So8NSObjectP", "NotificationManager"]
+- !private ["So8NSObjectP", "Swift"]
+- !private ["So8NSObjectP", "UNAuthorizationStatus"]
+- !private ["So8NSObjectP", "UNNotificationDefaultActionIdentifier"]
+- !private ["So8NSObjectP", "UNNotificationPresentationOptions"]
+- !private ["So8NSObjectP", "UNUserNotificationCenter"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "actionIdentifier"]
+- !private ["So8NSObjectP", "add"]
+- !private ["So8NSObjectP", "addNotificationForReminder"]
+- !private ["So8NSObjectP", "addNotificationsForReminders"]
+- !private ["So8NSObjectP", "assignments"]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "authorizationStatus"]
+- !private ["So8NSObjectP", "body"]
+- !private ["So8NSObjectP", "cancelAllNotifications"]
+- !private ["So8NSObjectP", "content"]
+- !private ["So8NSObjectP", "current"]
+- !private ["So8NSObjectP", "getNotificationSettings"]
+- !private ["So8NSObjectP", "identifier"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "notification"]
+- !private ["So8NSObjectP", "notificationRequest"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "reminders"]
+- !private ["So8NSObjectP", "removeAllPendingNotificationRequests"]
+- !private ["So8NSObjectP", "removePendingNotificationRequests"]
+- !private ["So8NSObjectP", "request"]
+- !private ["So8NSObjectP", "requestAuthorization"]
+- !private ["So8NSObjectP", "scheduleNotificationRequest"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "title"]
+- !private ["So8NSObjectP", "userInfo"]
+- ["So8NSObjectP", "userNotificationCenter"]
 - !private ["So14NSSecureCodingP", "actionIdentifier"]
 - !private ["So14NSSecureCodingP", "authorizationStatus"]
 - !private ["So14NSSecureCodingP", "body"]
@@ -436,35 +462,41 @@ depends-member:
 - !private ["s9OptionSetP", "alert"]
 - !private ["s9OptionSetP", "badge"]
 - !private ["s9OptionSetP", "sound"]
-- !private ["s22RandomAccessCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s16RawRepresentableP", "alert"]
-- !private ["s16RawRepresentableP", "authorized"]
-- !private ["s16RawRepresentableP", "badge"]
-- !private ["s16RawRepresentableP", "sound"]
+- !private ["Sk", "append"]
+- !private ["Sm", "append"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["SY", "alert"]
+- !private ["SY", "authorized"]
+- !private ["SY", "badge"]
+- !private ["SY", "sound"]
 - !private ["5Tasks8ReminderC", "identifier"]
 - !private ["5Tasks8ReminderC", "notificationRequest"]
-- !private ["s8SequenceP", "append"]
-- !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "subscript"]
+- !private ["ST", "append"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "subscript"]
 - !private ["s10SetAlgebraP", "alert"]
 - !private ["s10SetAlgebraP", "badge"]
 - !private ["s10SetAlgebraP", "sound"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
-- !private ["SC22UNAuthorizationOptionsV", "alert"]
-- !private ["SC22UNAuthorizationOptionsV", "badge"]
-- !private ["SC22UNAuthorizationOptionsV", "sound"]
-- !private ["SC21UNAuthorizationStatusO", "authorized"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So22UNAuthorizationOptionsV", "alert"]
+- !private ["So22UNAuthorizationOptionsV", "badge"]
+- !private ["So22UNAuthorizationOptionsV", "sound"]
+- !private ["So21UNAuthorizationStatusV", "authorized"]
 - !private ["So14UNNotificationC", "request"]
 - !private ["So21UNNotificationContentC", "body"]
 - !private ["So21UNNotificationContentC", "title"]
 - !private ["So21UNNotificationContentC", "userInfo"]
-- !private ["SC33UNNotificationPresentationOptionsV", "alert"]
-- !private ["SC33UNNotificationPresentationOptionsV", "sound"]
+- !private ["So33UNNotificationPresentationOptionsV", "alert"]
+- !private ["So33UNNotificationPresentationOptionsV", "sound"]
 - !private ["So21UNNotificationRequestC", "content"]
 - !private ["So22UNNotificationResponseC", "actionIdentifier"]
 - !private ["So22UNNotificationResponseC", "notification"]
@@ -492,14 +524,20 @@ depends-member:
 - !private ["So32UNUserNotificationCenterDelegateP", "requestAuthorization"]
 - !private ["So32UNUserNotificationCenterDelegateP", "scheduleNotificationRequest"]
 - ["So32UNUserNotificationCenterDelegateP", "userNotificationCenter"]
-- !private ["s14_ArrayProtocolP", "append"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Console"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
@@ -524,6 +562,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "getNotificationSettings"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "notification"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "notificationRequest"]
@@ -541,29 +580,33 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "Sa"
+- !private "s13ArrayProtocolP"
 - !private "5Tasks10AssignmentC"
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
 - !private "5Tasks9CKEnabledC"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
+- !private "Sl"
+- !private "SL"
 - !private "5Tasks7ConsoleC"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "5Tasks11DataManagerC"
-- !private "s9DecodableP"
-- !private "s10DictionaryV"
-- !private "So14DispatchObjectC"
-- !private "So13DispatchQueueC"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SD"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "SE"
+- "SQ"
 - !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
@@ -571,40 +614,39 @@ depends-nominal:
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - "5Tasks19NotificationManagerC"
 - !private "So9OS_objectC"
 - !private "s9OptionSetP"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s16RawRepresentableP"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
 - !private "5Tasks8ReminderC"
-- !private "s8SequenceP"
+- !private "ST"
 - !private "s10SetAlgebraP"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
-- !private "SC22UNAuthorizationOptionsV"
-- !private "SC21UNAuthorizationStatusO"
+- !private "So22UNAuthorizationOptionsV"
+- !private "So21UNAuthorizationStatusV"
 - !private "So14UNNotificationC"
 - !private "So21UNNotificationContentC"
-- !private "SC33UNNotificationPresentationOptionsV"
+- !private "So33UNNotificationPresentationOptionsV"
 - !private "So21UNNotificationRequestC"
 - !private "So22UNNotificationResponseC"
 - !private "So22UNNotificationSettingsC"
 - !private "So24UNUserNotificationCenterC"
 - "So32UNUserNotificationCenterDelegateP"
-- !private "s14_ArrayProtocolP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
@@ -612,6 +654,7 @@ depends-nominal:
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
@@ -633,18 +676,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "66170e0633cdbad567942a91880e0087"

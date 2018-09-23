@@ -130,7 +130,18 @@ extension String {
     }
     
     func substring(from: Int, to: Int) -> String {
-        return String(self[index(startIndex, offsetBy: from) ..< index(startIndex, offsetBy: to)])
+        var f = from
+        var t = to
+        
+        if from < 0 {
+            f = length + from
+        }
+        
+        if to < 0 {
+            t = length + t
+        }
+        
+        return String(self[index(startIndex, offsetBy: f) ..< index(startIndex, offsetBy: t)])
     }
     
     func substring(from: Int) -> String {

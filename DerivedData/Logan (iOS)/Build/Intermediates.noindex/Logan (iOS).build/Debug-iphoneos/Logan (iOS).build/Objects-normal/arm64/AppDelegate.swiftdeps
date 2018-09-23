@@ -23,6 +23,8 @@ depends-top-level:
 - "DMListener"
 - "DMLoadingEventType"
 - !private "DataManager"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "NewAssignmentTableViewController"
 - "NewTaskTableViewController"
 - !private "NotificationManager"
@@ -89,17 +91,24 @@ depends-member:
 - ["11Logan__iOS_11AppDelegateC", "newTaskViewController"]
 - ["11Logan__iOS_11AppDelegateC", "window"]
 - !private ["Sa", "last"]
+- !private ["s13ArrayProtocolP", "last"]
 - !private ["11Logan__iOS_31AssignmentDueDatePickerDelegateP", "navigationController"]
 - !private ["11Logan__iOS_31AssignmentDueDatePickerDelegateP", "tableView"]
 - !private ["11Logan__iOS_26BetterNavigationControllerC", "topViewController"]
-- !private ["s23BidirectionalCollectionP", "components"]
-- !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "last"]
+- !private ["SK", "components"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "last"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["So6BundleC", "main"]
+- !private ["So8NSBundleC", "main"]
 - !private ["So15CALayerDelegateP", "isUserInteractionEnabled"]
 - !private ["So15CALayerDelegateP", "rootViewController"]
-- !private ["So13CKRecordValueP", "components"]
+- !private ["8CloudKit24CKRecordValueConvertibleP", "components"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "components"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "last"]
 - !private ["So15CNKeyDescriptorP", "components"]
 - !private ["s7CVarArgP", "Bundle"]
 - !private ["s7CVarArgP", "DMLoadingEventType"]
@@ -138,6 +147,7 @@ depends-member:
 - ["s7CVarArgP", "handleLoadingEvent"]
 - !private ["s7CVarArgP", "handleShortcut"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "instantiateViewController"]
 - !private ["s7CVarArgP", "isUserInteractionEnabled"]
 - !private ["s7CVarArgP", "last"]
@@ -160,14 +170,16 @@ depends-member:
 - !private ["s7CVarArgP", "type"]
 - !private ["s7CVarArgP", "viewControllers"]
 - ["s7CVarArgP", "window"]
-- !private ["s10CollectionP", "components"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "last"]
-- !private ["s10CollectionP", "subscript"]
+- !private ["Sl", "components"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "last"]
+- !private ["Sl", "subscript"]
 - !private ["11Logan__iOS_24CommitmentPickerDelegateP", "navigationController"]
 - !private ["11Logan__iOS_24CommitmentPickerDelegateP", "tableView"]
-- !private ["s10ComparableP", "components"]
-- !private ["s10ComparableP", "init"]
+- !private ["SL", "components"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "Bundle"]
 - !private ["s28CustomDebugStringConvertibleP", "DMLoadingEventType"]
 - !private ["s28CustomDebugStringConvertibleP", "DataManager"]
@@ -204,6 +216,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "handleLoadingEvent"]
 - !private ["s28CustomDebugStringConvertibleP", "handleShortcut"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "instantiateViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "isUserInteractionEnabled"]
 - !private ["s28CustomDebugStringConvertibleP", "last"]
@@ -230,10 +243,13 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "components"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "scheme"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "components"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isUserInteractionEnabled"]
 - !private ["s17CustomReflectableP", "last"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "Bundle"]
@@ -272,6 +288,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "fetchDataFromCloud"]
 - ["s23CustomStringConvertibleP", "handleLoadingEvent"]
 - !private ["s23CustomStringConvertibleP", "handleShortcut"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "instantiateViewController"]
 - !private ["s23CustomStringConvertibleP", "isUserInteractionEnabled"]
@@ -333,162 +350,177 @@ depends-member:
 - !private ["11Logan__iOS_11DataManagerC", "fetchDataFromCloud"]
 - !private ["11Logan__iOS_11DataManagerC", "loadData"]
 - !private ["11Logan__iOS_11DataManagerC", "shared"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "components"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "last"]
-- !private ["s9DecodableP", "scheme"]
-- !private ["s9DecodableP", "subscript"]
-- !private ["s10DictionaryV", "subscript"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "components"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "last"]
-- !private ["s9EncodableP", "scheme"]
-- !private ["s9EncodableP", "subscript"]
-- !private ["s9EquatableP", "Bundle"]
-- !private ["s9EquatableP", "DMLoadingEventType"]
-- !private ["s9EquatableP", "DataManager"]
-- !private ["s9EquatableP", "NotificationManager"]
-- !private ["s9EquatableP", "UIAlertAction"]
-- !private ["s9EquatableP", "UIAlertActionStyle"]
-- !private ["s9EquatableP", "UIAlertController"]
-- !private ["s9EquatableP", "UIAlertControllerStyle"]
-- !private ["s9EquatableP", "UIApplicationLaunchOptionsKey"]
-- !private ["s9EquatableP", "UIStoryboard"]
-- !private ["s9EquatableP", "UNUserNotificationCenter"]
-- !private ["s9EquatableP", "UserDefaults"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "addAction"]
-- !private ["s9EquatableP", "addListener"]
-- !private ["s9EquatableP", "alert"]
-- ["s9EquatableP", "application"]
-- ["s9EquatableP", "applicationDidBecomeActive"]
-- ["s9EquatableP", "applicationDidEnterBackground"]
-- ["s9EquatableP", "applicationDidFinishLaunching"]
-- ["s9EquatableP", "applicationDidReceiveMemoryWarning"]
-- ["s9EquatableP", "applicationProtectedDataDidBecomeAvailable"]
-- ["s9EquatableP", "applicationProtectedDataWillBecomeUnavailable"]
-- ["s9EquatableP", "applicationShouldRequestHealthAuthorization"]
-- ["s9EquatableP", "applicationSignificantTimeChange"]
-- ["s9EquatableP", "applicationWillEnterForeground"]
-- ["s9EquatableP", "applicationWillResignActive"]
-- ["s9EquatableP", "applicationWillTerminate"]
-- !private ["s9EquatableP", "components"]
-- !private ["s9EquatableP", "confirmAuthorization"]
-- !private ["s9EquatableP", "current"]
-- !private ["s9EquatableP", "default"]
-- !private ["s9EquatableP", "delegate"]
-- !private ["s9EquatableP", "dismiss"]
-- !private ["s9EquatableP", "end"]
-- !private ["s9EquatableP", "error"]
-- !private ["s9EquatableP", "fetchDataFromCloud"]
-- ["s9EquatableP", "handleLoadingEvent"]
-- !private ["s9EquatableP", "handleShortcut"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "instantiateViewController"]
-- !private ["s9EquatableP", "isUserInteractionEnabled"]
-- !private ["s9EquatableP", "last"]
-- !private ["s9EquatableP", "loadData"]
-- !private ["s9EquatableP", "loadViewIfNeeded"]
-- !private ["s9EquatableP", "main"]
-- !private ["s9EquatableP", "navigationController"]
-- !private ["s9EquatableP", "newAssignmentViewController"]
-- !private ["s9EquatableP", "newTaskViewController"]
-- !private ["s9EquatableP", "present"]
-- !private ["s9EquatableP", "rootViewController"]
-- !private ["s9EquatableP", "scheme"]
-- !private ["s9EquatableP", "selectedIndex"]
-- !private ["s9EquatableP", "set"]
-- !private ["s9EquatableP", "shared"]
-- !private ["s9EquatableP", "shortcutItem"]
-- !private ["s9EquatableP", "standard"]
-- !private ["s9EquatableP", "subscript"]
-- !private ["s9EquatableP", "synchronize"]
-- !private ["s9EquatableP", "tableView"]
-- !private ["s9EquatableP", "topViewController"]
-- !private ["s9EquatableP", "type"]
-- !private ["s9EquatableP", "viewControllers"]
-- ["s9EquatableP", "window"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "components"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "isUserInteractionEnabled"]
+- !private ["Se", "last"]
+- !private ["Se", "scheme"]
+- !private ["Se", "subscript"]
+- !private ["SD", "subscript"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "components"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "isUserInteractionEnabled"]
+- !private ["SE", "last"]
+- !private ["SE", "scheme"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "Bundle"]
+- !private ["SQ", "DMLoadingEventType"]
+- !private ["SQ", "DataManager"]
+- !private ["SQ", "NotificationManager"]
+- !private ["SQ", "UIAlertAction"]
+- !private ["SQ", "UIAlertActionStyle"]
+- !private ["SQ", "UIAlertController"]
+- !private ["SQ", "UIAlertControllerStyle"]
+- !private ["SQ", "UIApplicationLaunchOptionsKey"]
+- !private ["SQ", "UIStoryboard"]
+- !private ["SQ", "UNUserNotificationCenter"]
+- !private ["SQ", "UserDefaults"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "addAction"]
+- !private ["SQ", "addListener"]
+- !private ["SQ", "alert"]
+- ["SQ", "application"]
+- ["SQ", "applicationDidBecomeActive"]
+- ["SQ", "applicationDidEnterBackground"]
+- ["SQ", "applicationDidFinishLaunching"]
+- ["SQ", "applicationDidReceiveMemoryWarning"]
+- ["SQ", "applicationProtectedDataDidBecomeAvailable"]
+- ["SQ", "applicationProtectedDataWillBecomeUnavailable"]
+- ["SQ", "applicationShouldRequestHealthAuthorization"]
+- ["SQ", "applicationSignificantTimeChange"]
+- ["SQ", "applicationWillEnterForeground"]
+- ["SQ", "applicationWillResignActive"]
+- ["SQ", "applicationWillTerminate"]
+- !private ["SQ", "components"]
+- !private ["SQ", "confirmAuthorization"]
+- !private ["SQ", "current"]
+- !private ["SQ", "default"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "dismiss"]
+- !private ["SQ", "end"]
+- !private ["SQ", "error"]
+- !private ["SQ", "fetchDataFromCloud"]
+- ["SQ", "handleLoadingEvent"]
+- !private ["SQ", "handleShortcut"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "instantiateViewController"]
+- !private ["SQ", "isUserInteractionEnabled"]
+- !private ["SQ", "last"]
+- !private ["SQ", "loadData"]
+- !private ["SQ", "loadViewIfNeeded"]
+- !private ["SQ", "main"]
+- !private ["SQ", "navigationController"]
+- !private ["SQ", "newAssignmentViewController"]
+- !private ["SQ", "newTaskViewController"]
+- !private ["SQ", "present"]
+- !private ["SQ", "rootViewController"]
+- !private ["SQ", "scheme"]
+- !private ["SQ", "selectedIndex"]
+- !private ["SQ", "set"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "shortcutItem"]
+- !private ["SQ", "standard"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "synchronize"]
+- !private ["SQ", "tableView"]
+- !private ["SQ", "topViewController"]
+- !private ["SQ", "type"]
+- !private ["SQ", "viewControllers"]
+- ["SQ", "window"]
 - !private ["s25ExpressibleByArrayLiteralP", "last"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "components"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "isUserInteractionEnabled"]
 - !private ["s26ExpressibleByStringLiteralP", "components"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "components"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "Bundle"]
-- !private ["s8HashableP", "DMLoadingEventType"]
-- !private ["s8HashableP", "DataManager"]
-- !private ["s8HashableP", "NotificationManager"]
-- !private ["s8HashableP", "UIAlertAction"]
-- !private ["s8HashableP", "UIAlertActionStyle"]
-- !private ["s8HashableP", "UIAlertController"]
-- !private ["s8HashableP", "UIAlertControllerStyle"]
-- !private ["s8HashableP", "UIApplicationLaunchOptionsKey"]
-- !private ["s8HashableP", "UIStoryboard"]
-- !private ["s8HashableP", "UNUserNotificationCenter"]
-- !private ["s8HashableP", "UserDefaults"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "addAction"]
-- !private ["s8HashableP", "addListener"]
-- !private ["s8HashableP", "alert"]
-- ["s8HashableP", "application"]
-- ["s8HashableP", "applicationDidBecomeActive"]
-- ["s8HashableP", "applicationDidEnterBackground"]
-- ["s8HashableP", "applicationDidFinishLaunching"]
-- ["s8HashableP", "applicationDidReceiveMemoryWarning"]
-- ["s8HashableP", "applicationProtectedDataDidBecomeAvailable"]
-- ["s8HashableP", "applicationProtectedDataWillBecomeUnavailable"]
-- ["s8HashableP", "applicationShouldRequestHealthAuthorization"]
-- ["s8HashableP", "applicationSignificantTimeChange"]
-- ["s8HashableP", "applicationWillEnterForeground"]
-- ["s8HashableP", "applicationWillResignActive"]
-- ["s8HashableP", "applicationWillTerminate"]
-- !private ["s8HashableP", "components"]
-- !private ["s8HashableP", "confirmAuthorization"]
-- !private ["s8HashableP", "current"]
-- !private ["s8HashableP", "default"]
-- !private ["s8HashableP", "delegate"]
-- !private ["s8HashableP", "dismiss"]
-- !private ["s8HashableP", "end"]
-- !private ["s8HashableP", "error"]
-- !private ["s8HashableP", "fetchDataFromCloud"]
-- ["s8HashableP", "handleLoadingEvent"]
-- !private ["s8HashableP", "handleShortcut"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "instantiateViewController"]
-- !private ["s8HashableP", "isUserInteractionEnabled"]
-- !private ["s8HashableP", "loadData"]
-- !private ["s8HashableP", "loadViewIfNeeded"]
-- !private ["s8HashableP", "main"]
-- !private ["s8HashableP", "navigationController"]
-- !private ["s8HashableP", "newAssignmentViewController"]
-- !private ["s8HashableP", "newTaskViewController"]
-- !private ["s8HashableP", "present"]
-- !private ["s8HashableP", "rootViewController"]
-- !private ["s8HashableP", "scheme"]
-- !private ["s8HashableP", "selectedIndex"]
-- !private ["s8HashableP", "set"]
-- !private ["s8HashableP", "shared"]
-- !private ["s8HashableP", "shortcutItem"]
-- !private ["s8HashableP", "standard"]
-- !private ["s8HashableP", "synchronize"]
-- !private ["s8HashableP", "tableView"]
-- !private ["s8HashableP", "topViewController"]
-- !private ["s8HashableP", "type"]
-- !private ["s8HashableP", "viewControllers"]
-- ["s8HashableP", "window"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "Bundle"]
+- !private ["SH", "DMLoadingEventType"]
+- !private ["SH", "DataManager"]
+- !private ["SH", "NotificationManager"]
+- !private ["SH", "UIAlertAction"]
+- !private ["SH", "UIAlertActionStyle"]
+- !private ["SH", "UIAlertController"]
+- !private ["SH", "UIAlertControllerStyle"]
+- !private ["SH", "UIApplicationLaunchOptionsKey"]
+- !private ["SH", "UIStoryboard"]
+- !private ["SH", "UNUserNotificationCenter"]
+- !private ["SH", "UserDefaults"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "addAction"]
+- !private ["SH", "addListener"]
+- !private ["SH", "alert"]
+- ["SH", "application"]
+- ["SH", "applicationDidBecomeActive"]
+- ["SH", "applicationDidEnterBackground"]
+- ["SH", "applicationDidFinishLaunching"]
+- ["SH", "applicationDidReceiveMemoryWarning"]
+- ["SH", "applicationProtectedDataDidBecomeAvailable"]
+- ["SH", "applicationProtectedDataWillBecomeUnavailable"]
+- ["SH", "applicationShouldRequestHealthAuthorization"]
+- ["SH", "applicationSignificantTimeChange"]
+- ["SH", "applicationWillEnterForeground"]
+- ["SH", "applicationWillResignActive"]
+- ["SH", "applicationWillTerminate"]
+- !private ["SH", "components"]
+- !private ["SH", "confirmAuthorization"]
+- !private ["SH", "current"]
+- !private ["SH", "default"]
+- !private ["SH", "delegate"]
+- !private ["SH", "dismiss"]
+- !private ["SH", "end"]
+- !private ["SH", "error"]
+- !private ["SH", "fetchDataFromCloud"]
+- ["SH", "handleLoadingEvent"]
+- !private ["SH", "handleShortcut"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "instantiateViewController"]
+- !private ["SH", "isUserInteractionEnabled"]
+- !private ["SH", "last"]
+- !private ["SH", "loadData"]
+- !private ["SH", "loadViewIfNeeded"]
+- !private ["SH", "main"]
+- !private ["SH", "navigationController"]
+- !private ["SH", "newAssignmentViewController"]
+- !private ["SH", "newTaskViewController"]
+- !private ["SH", "present"]
+- !private ["SH", "rootViewController"]
+- !private ["SH", "scheme"]
+- !private ["SH", "selectedIndex"]
+- !private ["SH", "set"]
+- !private ["SH", "shared"]
+- !private ["SH", "shortcutItem"]
+- !private ["SH", "standard"]
+- !private ["SH", "subscript"]
+- !private ["SH", "synchronize"]
+- !private ["SH", "tableView"]
+- !private ["SH", "topViewController"]
+- !private ["SH", "type"]
+- !private ["SH", "viewControllers"]
+- ["SH", "window"]
+- !private ["So29UIApplicationLaunchOptionsKeya", "shortcutItem"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "components"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "components"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["s17MutableCollectionP", "last"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "last"]
 - !private ["So8NSCodingP", "addAction"]
 - !private ["So8NSCodingP", "components"]
 - !private ["So8NSCodingP", "dismiss"]
@@ -565,6 +597,7 @@ depends-member:
 - ["So8NSObjectC", "handleLoadingEvent"]
 - ["So8NSObjectC", "handleShortcut"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "instantiateViewController"]
 - !private ["So8NSObjectC", "isUserInteractionEnabled"]
 - !private ["So8NSObjectC", "loadData"]
@@ -585,62 +618,63 @@ depends-member:
 - !private ["So8NSObjectC", "type"]
 - !private ["So8NSObjectC", "viewControllers"]
 - ["So8NSObjectC", "window"]
-- !private ["So16NSObjectProtocolP", "Bundle"]
-- !private ["So16NSObjectProtocolP", "DMLoadingEventType"]
-- !private ["So16NSObjectProtocolP", "DataManager"]
-- !private ["So16NSObjectProtocolP", "NotificationManager"]
-- !private ["So16NSObjectProtocolP", "UIAlertAction"]
-- !private ["So16NSObjectProtocolP", "UIAlertActionStyle"]
-- !private ["So16NSObjectProtocolP", "UIAlertController"]
-- !private ["So16NSObjectProtocolP", "UIAlertControllerStyle"]
-- !private ["So16NSObjectProtocolP", "UIApplicationLaunchOptionsKey"]
-- !private ["So16NSObjectProtocolP", "UIStoryboard"]
-- !private ["So16NSObjectProtocolP", "UNUserNotificationCenter"]
-- !private ["So16NSObjectProtocolP", "UserDefaults"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "addAction"]
-- !private ["So16NSObjectProtocolP", "addListener"]
-- ["So16NSObjectProtocolP", "application"]
-- ["So16NSObjectProtocolP", "applicationDidBecomeActive"]
-- ["So16NSObjectProtocolP", "applicationDidEnterBackground"]
-- ["So16NSObjectProtocolP", "applicationDidFinishLaunching"]
-- ["So16NSObjectProtocolP", "applicationDidReceiveMemoryWarning"]
-- ["So16NSObjectProtocolP", "applicationProtectedDataDidBecomeAvailable"]
-- ["So16NSObjectProtocolP", "applicationProtectedDataWillBecomeUnavailable"]
-- ["So16NSObjectProtocolP", "applicationShouldRequestHealthAuthorization"]
-- ["So16NSObjectProtocolP", "applicationSignificantTimeChange"]
-- ["So16NSObjectProtocolP", "applicationWillEnterForeground"]
-- ["So16NSObjectProtocolP", "applicationWillResignActive"]
-- ["So16NSObjectProtocolP", "applicationWillTerminate"]
-- !private ["So16NSObjectProtocolP", "components"]
-- !private ["So16NSObjectProtocolP", "confirmAuthorization"]
-- !private ["So16NSObjectProtocolP", "current"]
-- !private ["So16NSObjectProtocolP", "delegate"]
-- !private ["So16NSObjectProtocolP", "dismiss"]
-- !private ["So16NSObjectProtocolP", "fetchDataFromCloud"]
-- ["So16NSObjectProtocolP", "handleLoadingEvent"]
-- !private ["So16NSObjectProtocolP", "handleShortcut"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "instantiateViewController"]
-- !private ["So16NSObjectProtocolP", "isUserInteractionEnabled"]
-- !private ["So16NSObjectProtocolP", "loadData"]
-- !private ["So16NSObjectProtocolP", "loadViewIfNeeded"]
-- !private ["So16NSObjectProtocolP", "main"]
-- !private ["So16NSObjectProtocolP", "navigationController"]
-- !private ["So16NSObjectProtocolP", "newAssignmentViewController"]
-- !private ["So16NSObjectProtocolP", "newTaskViewController"]
-- !private ["So16NSObjectProtocolP", "present"]
-- !private ["So16NSObjectProtocolP", "rootViewController"]
-- !private ["So16NSObjectProtocolP", "selectedIndex"]
-- !private ["So16NSObjectProtocolP", "set"]
-- !private ["So16NSObjectProtocolP", "shared"]
-- !private ["So16NSObjectProtocolP", "standard"]
-- !private ["So16NSObjectProtocolP", "synchronize"]
-- !private ["So16NSObjectProtocolP", "tableView"]
-- !private ["So16NSObjectProtocolP", "topViewController"]
-- !private ["So16NSObjectProtocolP", "type"]
-- !private ["So16NSObjectProtocolP", "viewControllers"]
-- ["So16NSObjectProtocolP", "window"]
+- !private ["So8NSObjectP", "Bundle"]
+- !private ["So8NSObjectP", "DMLoadingEventType"]
+- !private ["So8NSObjectP", "DataManager"]
+- !private ["So8NSObjectP", "NotificationManager"]
+- !private ["So8NSObjectP", "UIAlertAction"]
+- !private ["So8NSObjectP", "UIAlertActionStyle"]
+- !private ["So8NSObjectP", "UIAlertController"]
+- !private ["So8NSObjectP", "UIAlertControllerStyle"]
+- !private ["So8NSObjectP", "UIApplicationLaunchOptionsKey"]
+- !private ["So8NSObjectP", "UIStoryboard"]
+- !private ["So8NSObjectP", "UNUserNotificationCenter"]
+- !private ["So8NSObjectP", "UserDefaults"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addAction"]
+- !private ["So8NSObjectP", "addListener"]
+- ["So8NSObjectP", "application"]
+- ["So8NSObjectP", "applicationDidBecomeActive"]
+- ["So8NSObjectP", "applicationDidEnterBackground"]
+- ["So8NSObjectP", "applicationDidFinishLaunching"]
+- ["So8NSObjectP", "applicationDidReceiveMemoryWarning"]
+- ["So8NSObjectP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So8NSObjectP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So8NSObjectP", "applicationShouldRequestHealthAuthorization"]
+- ["So8NSObjectP", "applicationSignificantTimeChange"]
+- ["So8NSObjectP", "applicationWillEnterForeground"]
+- ["So8NSObjectP", "applicationWillResignActive"]
+- ["So8NSObjectP", "applicationWillTerminate"]
+- !private ["So8NSObjectP", "components"]
+- !private ["So8NSObjectP", "confirmAuthorization"]
+- !private ["So8NSObjectP", "current"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "fetchDataFromCloud"]
+- ["So8NSObjectP", "handleLoadingEvent"]
+- !private ["So8NSObjectP", "handleShortcut"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "instantiateViewController"]
+- !private ["So8NSObjectP", "isUserInteractionEnabled"]
+- !private ["So8NSObjectP", "loadData"]
+- !private ["So8NSObjectP", "loadViewIfNeeded"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "navigationController"]
+- !private ["So8NSObjectP", "newAssignmentViewController"]
+- !private ["So8NSObjectP", "newTaskViewController"]
+- !private ["So8NSObjectP", "present"]
+- !private ["So8NSObjectP", "rootViewController"]
+- !private ["So8NSObjectP", "selectedIndex"]
+- !private ["So8NSObjectP", "set"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "standard"]
+- !private ["So8NSObjectP", "synchronize"]
+- !private ["So8NSObjectP", "tableView"]
+- !private ["So8NSObjectP", "topViewController"]
+- !private ["So8NSObjectP", "type"]
+- !private ["So8NSObjectP", "viewControllers"]
+- ["So8NSObjectP", "window"]
 - !private ["So14NSSecureCodingP", "components"]
 - !private ["So8NSStringC", "components"]
 - !private ["11Logan__iOS_32NewAssignmentTableViewControllerC", "deinit"]
@@ -652,35 +686,42 @@ depends-member:
 - !private ["11Logan__iOS_19NotificationManagerC", "confirmAuthorization"]
 - !private ["11Logan__iOS_19NotificationManagerC", "deinit"]
 - !private ["11Logan__iOS_19NotificationManagerC", "shared"]
-- !private ["s22RandomAccessCollectionP", "last"]
-- !private ["s26RangeReplaceableCollectionP", "components"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "last"]
-- !private ["s16RawRepresentableP", "alert"]
-- !private ["s16RawRepresentableP", "default"]
-- !private ["s16RawRepresentableP", "end"]
-- !private ["s16RawRepresentableP", "error"]
-- !private ["s16RawRepresentableP", "shortcutItem"]
+- !private ["Sq", "isUserInteractionEnabled"]
+- !private ["Sk", "last"]
+- !private ["Sm", "components"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "last"]
+- !private ["SY", "alert"]
+- !private ["SY", "default"]
+- !private ["SY", "end"]
+- !private ["SY", "error"]
+- !private ["SY", "shortcutItem"]
 - !private ["10Foundation20ReferenceConvertibleP", "scheme"]
-- !private ["s8SequenceP", "components"]
-- !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "last"]
-- !private ["s8SequenceP", "subscript"]
+- !private ["ST", "components"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "last"]
+- !private ["ST", "subscript"]
 - !private ["SS", "components"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "components"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "components"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["So22UIAlertControllerStyleV", "alert"]
+- !private ["So18UIAlertActionStyleV", "default"]
 - !private ["s16TextOutputStreamP", "components"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "components"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "isUserInteractionEnabled"]
 - !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
 - !private ["So13UIAlertActionC", "init"]
-- !private ["SC18UIAlertActionStyleO", "default"]
 - !private ["So17UIAlertControllerC", "addAction"]
 - !private ["So17UIAlertControllerC", "init"]
-- !private ["SC22UIAlertControllerStyleO", "alert"]
 - !private ["So12UIAppearanceP", "isUserInteractionEnabled"]
 - !private ["So12UIAppearanceP", "rootViewController"]
 - !private ["So21UIAppearanceContainerP", "addAction"]
@@ -725,7 +766,6 @@ depends-member:
 - !private ["So21UIApplicationDelegateP", "newAssignmentViewController"]
 - !private ["So21UIApplicationDelegateP", "newTaskViewController"]
 - ["So21UIApplicationDelegateP", "window"]
-- !private ["SC29UIApplicationLaunchOptionsKeyV", "shortcutItem"]
 - !private ["So25UIApplicationShortcutItemC", "type"]
 - !private ["So18UIContentContainerP", "addAction"]
 - !private ["So18UIContentContainerP", "dismiss"]
@@ -756,6 +796,9 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "viewControllers"]
 - !private ["So11UIFocusItemP", "isUserInteractionEnabled"]
 - !private ["So11UIFocusItemP", "rootViewController"]
+- !private ["So20UIFocusItemContainerP", "isUserInteractionEnabled"]
+- !private ["So20UIFocusItemContainerP", "rootViewController"]
+- !private ["So30UIFocusItemScrollableContainerP", "isUserInteractionEnabled"]
 - !private ["So22UINavigationControllerC", "dismiss"]
 - !private ["So22UINavigationControllerC", "topViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "Bundle"]
@@ -787,6 +830,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - ["So30UIPasteConfigurationSupportingP", "handleLoadingEvent"]
 - !private ["So30UIPasteConfigurationSupportingP", "handleShortcut"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isUserInteractionEnabled"]
 - !private ["So30UIPasteConfigurationSupportingP", "loadViewIfNeeded"]
@@ -841,6 +885,7 @@ depends-member:
 - ["So11UIResponderC", "handleLoadingEvent"]
 - ["So11UIResponderC", "handleShortcut"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isUserInteractionEnabled"]
 - !private ["So11UIResponderC", "loadViewIfNeeded"]
 - !private ["So11UIResponderC", "navigationController"]
@@ -882,6 +927,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "dismiss"]
 - ["So30UIResponderStandardEditActionsP", "handleLoadingEvent"]
 - !private ["So30UIResponderStandardEditActionsP", "handleShortcut"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isUserInteractionEnabled"]
 - !private ["So30UIResponderStandardEditActionsP", "loadViewIfNeeded"]
@@ -938,6 +984,49 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "tableView"]
 - !private ["So18UITraitEnvironmentP", "topViewController"]
 - !private ["So18UITraitEnvironmentP", "viewControllers"]
+- !private ["So23UIUserActivityRestoringP", "Bundle"]
+- !private ["So23UIUserActivityRestoringP", "DMLoadingEventType"]
+- !private ["So23UIUserActivityRestoringP", "DataManager"]
+- !private ["So23UIUserActivityRestoringP", "NotificationManager"]
+- !private ["So23UIUserActivityRestoringP", "UIAlertAction"]
+- !private ["So23UIUserActivityRestoringP", "UIAlertActionStyle"]
+- !private ["So23UIUserActivityRestoringP", "UIAlertController"]
+- !private ["So23UIUserActivityRestoringP", "UIAlertControllerStyle"]
+- !private ["So23UIUserActivityRestoringP", "UIApplicationLaunchOptionsKey"]
+- !private ["So23UIUserActivityRestoringP", "UIStoryboard"]
+- !private ["So23UIUserActivityRestoringP", "UNUserNotificationCenter"]
+- !private ["So23UIUserActivityRestoringP", "UserDefaults"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addAction"]
+- ["So23UIUserActivityRestoringP", "application"]
+- ["So23UIUserActivityRestoringP", "applicationDidBecomeActive"]
+- ["So23UIUserActivityRestoringP", "applicationDidEnterBackground"]
+- ["So23UIUserActivityRestoringP", "applicationDidFinishLaunching"]
+- ["So23UIUserActivityRestoringP", "applicationDidReceiveMemoryWarning"]
+- ["So23UIUserActivityRestoringP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So23UIUserActivityRestoringP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So23UIUserActivityRestoringP", "applicationShouldRequestHealthAuthorization"]
+- ["So23UIUserActivityRestoringP", "applicationSignificantTimeChange"]
+- ["So23UIUserActivityRestoringP", "applicationWillEnterForeground"]
+- ["So23UIUserActivityRestoringP", "applicationWillResignActive"]
+- ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
+- ["So23UIUserActivityRestoringP", "handleLoadingEvent"]
+- !private ["So23UIUserActivityRestoringP", "handleShortcut"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "isUserInteractionEnabled"]
+- !private ["So23UIUserActivityRestoringP", "loadViewIfNeeded"]
+- !private ["So23UIUserActivityRestoringP", "navigationController"]
+- !private ["So23UIUserActivityRestoringP", "newAssignmentViewController"]
+- !private ["So23UIUserActivityRestoringP", "newTaskViewController"]
+- !private ["So23UIUserActivityRestoringP", "present"]
+- !private ["So23UIUserActivityRestoringP", "rootViewController"]
+- !private ["So23UIUserActivityRestoringP", "selectedIndex"]
+- !private ["So23UIUserActivityRestoringP", "tableView"]
+- !private ["So23UIUserActivityRestoringP", "topViewController"]
+- !private ["So23UIUserActivityRestoringP", "viewControllers"]
+- ["So23UIUserActivityRestoringP", "window"]
 - !private ["So6UIViewC", "isUserInteractionEnabled"]
 - !private ["So6UIViewC", "rootViewController"]
 - !private ["So16UIViewControllerC", "addAction"]
@@ -956,26 +1045,33 @@ depends-member:
 - !private ["So32UNUserNotificationCenterDelegateP", "confirmAuthorization"]
 - !private ["So32UNUserNotificationCenterDelegateP", "shared"]
 - !private ["10Foundation3URLV", "scheme"]
-- !private ["So12UserDefaultsC", "set"]
-- !private ["So12UserDefaultsC", "standard"]
-- !private ["So12UserDefaultsC", "synchronize"]
-- !private ["s14_ArrayProtocolP", "last"]
+- !private ["So14NSUserDefaultsC", "set"]
+- !private ["So14NSUserDefaultsC", "standard"]
+- !private ["So14NSUserDefaultsC", "synchronize"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isUserInteractionEnabled"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
 - !private ["s24_DestructorSafeContainerP", "last"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "components"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "components"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "components"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "components"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "scheme"]
 - !private ["s33_ExpressibleByStringInterpolationP", "components"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "components"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "last"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "shortcutItem"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Bundle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DMLoadingEventType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DataManager"]
@@ -1012,6 +1108,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "handleLoadingEvent"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleShortcut"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "instantiateViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isUserInteractionEnabled"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "loadData"]
@@ -1035,6 +1132,8 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "components"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isUserInteractionEnabled"]
 - !private ["s21_ObjectiveCBridgeableP", "last"]
 - !private ["s21_ObjectiveCBridgeableP", "scheme"]
 - !private ["s21_ObjectiveCBridgeableP", "shortcutItem"]
@@ -1042,21 +1141,25 @@ depends-member:
 - !private ["s20_SwiftNewtypeWrapperP", "shortcutItem"]
 - !private ["s16_SwiftStringViewP", "components"]
 - !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["So13CKRecordValueP", "components"]
 depends-nominal:
 - "11Logan__iOS_11AppDelegateC"
 - !private "Sa"
+- !private "s13ArrayProtocolP"
 - !private "11Logan__iOS_31AssignmentDueDatePickerDelegateP"
 - !private "11Logan__iOS_26BetterNavigationControllerC"
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
-- !private "So6BundleC"
+- !private "So8NSBundleC"
 - !private "So15CALayerDelegateP"
-- !private "So13CKRecordValueP"
+- !private "8CloudKit24CKRecordValueConvertibleP"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
+- !private "Sl"
 - !private "11Logan__iOS_24CommitmentPickerDelegateP"
-- !private "s10ComparableP"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
@@ -1064,20 +1167,22 @@ depends-nominal:
 - "11Logan__iOS_10DMListenerP"
 - !private "11Logan__iOS_18DMLoadingEventTypeO"
 - !private "11Logan__iOS_11DataManagerC"
-- !private "s9DecodableP"
-- !private "s10DictionaryV"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SD"
+- !private "SE"
+- "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
+- !private "So29UIApplicationLaunchOptionsKeya"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So26NSExtensionRequestHandlingP"
@@ -1085,30 +1190,30 @@ depends-nominal:
 - !private "So21NSItemProviderWritingP"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - !private "11Logan__iOS_32NewAssignmentTableViewControllerC"
 - !private "11Logan__iOS_26NewTaskTableViewControllerC"
 - !private "11Logan__iOS_19NotificationManagerC"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s16RawRepresentableP"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
-- !private "s8SequenceP"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
+- !private "So22UIAlertControllerStyleV"
+- !private "So18UIAlertActionStyleV"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So13UIAlertActionC"
-- !private "SC18UIAlertActionStyleO"
 - !private "So17UIAlertControllerC"
-- !private "SC22UIAlertControllerStyleO"
 - !private "So12UIAppearanceP"
 - !private "So21UIAppearanceContainerP"
 - "So21UIApplicationDelegateP"
-- !private "SC29UIApplicationLaunchOptionsKeyV"
 - !private "So25UIApplicationShortcutItemC"
 - !private "So18UIContentContainerP"
 - !private "So17UICoordinateSpaceP"
@@ -1116,6 +1221,8 @@ depends-nominal:
 - !private "So13UIDynamicItemP"
 - !private "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
 - !private "So22UINavigationControllerC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
@@ -1133,14 +1240,14 @@ depends-nominal:
 - !private "So19UITableViewDelegateP"
 - !private "So18UITextViewDelegateP"
 - !private "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - !private "So16UIViewControllerC"
 - !private "So8UIWindowC"
 - !private "So24UNUserNotificationCenterC"
 - !private "So32UNUserNotificationCenterDelegateP"
 - !private "10Foundation3URLV"
-- !private "So12UserDefaultsC"
-- !private "s14_ArrayProtocolP"
+- !private "So14NSUserDefaultsC"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -1155,6 +1262,7 @@ depends-nominal:
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s20_SwiftNewtypeWrapperP"
 - !private "s16_SwiftStringViewP"
+- !private "So13CKRecordValueP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
@@ -1173,18 +1281,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "2dc43351f1d9902afa37e345a8be1b74"

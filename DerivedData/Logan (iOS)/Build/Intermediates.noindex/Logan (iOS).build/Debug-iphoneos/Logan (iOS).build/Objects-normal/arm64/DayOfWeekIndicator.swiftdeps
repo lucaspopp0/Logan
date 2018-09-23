@@ -22,6 +22,8 @@ depends-top-level:
 - "CGSize"
 - "DayOfWeek"
 - "DayOfWeekIndicator"
+- "FloatLiteralType"
+- "IntegerLiteralType"
 - "NSCoder"
 - !private "StringLiteralType"
 - "TernaryPrecedence"
@@ -36,14 +38,20 @@ depends-member:
 - !private ["Sa", "contains"]
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "contains"]
+- !private ["s13ArrayProtocolP", "count"]
+- !private ["s13ArrayProtocolP", "intrinsicContentSize"]
+- !private ["s13ArrayProtocolP", "subscript"]
+- !private ["s13ArrayProtocolP", "textColor"]
 - !private ["s10ArraySliceV", "intrinsicContentSize"]
 - !private ["s10ArraySliceV", "textColor"]
-- !private ["s23BidirectionalCollectionP", "contains"]
-- !private ["s23BidirectionalCollectionP", "count"]
-- !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "intrinsicContentSize"]
-- !private ["s23BidirectionalCollectionP", "subscript"]
-- !private ["s23BidirectionalCollectionP", "textColor"]
+- !private ["SK", "contains"]
+- !private ["SK", "count"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "intrinsicContentSize"]
+- !private ["SK", "subscript"]
+- !private ["SK", "textColor"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "CGSize"]
 - !private ["So15CALayerDelegateP", "DayOfWeek"]
@@ -70,13 +78,19 @@ depends-member:
 - !private ["So15CALayerDelegateP", "tintColor"]
 - !private ["So15CALayerDelegateP", "unifiedInit"]
 - !private ["So15CALayerDelegateP", "zip"]
-- !private ["SC7CGPointV", "x"]
-- !private ["SC7CGPointV", "y"]
-- !private ["SC6CGRectV", "origin"]
-- !private ["SC6CGRectV", "size"]
-- !private ["SC6CGSizeV", "height"]
-- !private ["SC6CGSizeV", "width"]
-- !private ["SC6CGSizeV", "zero"]
+- !private ["So7CGPointV", "x"]
+- !private ["So7CGPointV", "y"]
+- !private ["So6CGRectV", "origin"]
+- !private ["So6CGRectV", "size"]
+- !private ["So6CGSizeV", "height"]
+- !private ["So6CGSizeV", "width"]
+- !private ["So6CGSizeV", "zero"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "contains"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "subscript"]
 - !private ["s7CVarArgP", "CGSize"]
 - !private ["s7CVarArgP", "DayOfWeek"]
 - !private ["s7CVarArgP", "UIColor"]
@@ -93,6 +107,7 @@ depends-member:
 - !private ["s7CVarArgP", "font"]
 - !private ["s7CVarArgP", "frame"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "intrinsicContentSize"]
 - !private ["s7CVarArgP", "invalidateIntrinsicContentSize"]
 - !private ["s7CVarArgP", "labelSpacing"]
@@ -110,14 +125,16 @@ depends-member:
 - !private ["s7CVarArgP", "unifiedInit"]
 - !private ["s7CVarArgP", "withAlphaComponent"]
 - !private ["s7CVarArgP", "zip"]
-- !private ["s10CollectionP", "contains"]
-- !private ["s10CollectionP", "count"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "intrinsicContentSize"]
-- !private ["s10CollectionP", "subscript"]
-- !private ["s10CollectionP", "textColor"]
-- !private ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "semibold"]
+- !private ["Sl", "contains"]
+- !private ["Sl", "count"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "intrinsicContentSize"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "textColor"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "semibold"]
 - !private ["s28CustomDebugStringConvertibleP", "CGSize"]
 - !private ["s28CustomDebugStringConvertibleP", "DayOfWeek"]
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
@@ -134,6 +151,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
 - !private ["s28CustomDebugStringConvertibleP", "height"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "intrinsicContentSize"]
 - !private ["s28CustomDebugStringConvertibleP", "invalidateIntrinsicContentSize"]
 - !private ["s28CustomDebugStringConvertibleP", "labelSpacing"]
@@ -160,6 +178,7 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "height"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "origin"]
 - !private ["s29CustomPlaygroundQuickLookableP", "size"]
 - !private ["s29CustomPlaygroundQuickLookableP", "width"]
@@ -170,6 +189,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "contains"]
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "height"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "intrinsicContentSize"]
 - !private ["s17CustomReflectableP", "origin"]
@@ -196,6 +216,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "font"]
 - !private ["s23CustomStringConvertibleP", "frame"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "intrinsicContentSize"]
 - !private ["s23CustomStringConvertibleP", "invalidateIntrinsicContentSize"]
 - !private ["s23CustomStringConvertibleP", "labelSpacing"]
@@ -225,7 +246,6 @@ depends-member:
 - ["11Logan__iOS_18DayOfWeekIndicatorC", "UILabel"]
 - !private ["11Logan__iOS_18DayOfWeekIndicatorC", "addSubview"]
 - ["11Logan__iOS_18DayOfWeekIndicatorC", "daysOfWeek"]
-- ["11Logan__iOS_18DayOfWeekIndicatorC", "deinit"]
 - ["11Logan__iOS_18DayOfWeekIndicatorC", "init"]
 - ["11Logan__iOS_18DayOfWeekIndicatorC", "intrinsicContentSize"]
 - !private ["11Logan__iOS_18DayOfWeekIndicatorC", "invalidateIntrinsicContentSize"]
@@ -238,71 +258,74 @@ depends-member:
 - !private ["11Logan__iOS_18DayOfWeekIndicatorC", "tintColor"]
 - !private ["11Logan__iOS_18DayOfWeekIndicatorC", "unifiedInit"]
 - !private ["11Logan__iOS_18DayOfWeekIndicatorC", "zip"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "contains"]
-- !private ["s9DecodableP", "count"]
-- !private ["s9DecodableP", "height"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "origin"]
-- !private ["s9DecodableP", "size"]
-- !private ["s9DecodableP", "subscript"]
-- !private ["s9DecodableP", "width"]
-- !private ["s9DecodableP", "x"]
-- !private ["s9DecodableP", "y"]
-- !private ["s9DecodableP", "zero"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "contains"]
-- !private ["s9EncodableP", "count"]
-- !private ["s9EncodableP", "height"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "origin"]
-- !private ["s9EncodableP", "size"]
-- !private ["s9EncodableP", "subscript"]
-- !private ["s9EncodableP", "width"]
-- !private ["s9EncodableP", "x"]
-- !private ["s9EncodableP", "y"]
-- !private ["s9EncodableP", "zero"]
-- !private ["s9EquatableP", "CGSize"]
-- !private ["s9EquatableP", "DayOfWeek"]
-- !private ["s9EquatableP", "UIColor"]
-- !private ["s9EquatableP", "UIFont"]
-- ["s9EquatableP", "UILabel"]
-- !private ["s9EquatableP", "Weight"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "addSubview"]
-- !private ["s9EquatableP", "black"]
-- !private ["s9EquatableP", "contains"]
-- !private ["s9EquatableP", "count"]
-- !private ["s9EquatableP", "daysOfWeek"]
-- !private ["s9EquatableP", "font"]
-- !private ["s9EquatableP", "frame"]
-- !private ["s9EquatableP", "height"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "intrinsicContentSize"]
-- !private ["s9EquatableP", "invalidateIntrinsicContentSize"]
-- !private ["s9EquatableP", "labelSpacing"]
-- !private ["s9EquatableP", "labels"]
-- !private ["s9EquatableP", "layoutSubviews"]
-- !private ["s9EquatableP", "max"]
-- !private ["s9EquatableP", "organize"]
-- !private ["s9EquatableP", "origin"]
-- !private ["s9EquatableP", "prepareForInterfaceBuilder"]
-- !private ["s9EquatableP", "semibold"]
-- !private ["s9EquatableP", "size"]
-- !private ["s9EquatableP", "sizeToFit"]
-- !private ["s9EquatableP", "subscript"]
-- !private ["s9EquatableP", "systemFont"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "textColor"]
-- !private ["s9EquatableP", "tintColor"]
-- !private ["s9EquatableP", "unifiedInit"]
-- !private ["s9EquatableP", "width"]
-- !private ["s9EquatableP", "withAlphaComponent"]
-- !private ["s9EquatableP", "x"]
-- !private ["s9EquatableP", "y"]
-- !private ["s9EquatableP", "zero"]
-- !private ["s9EquatableP", "zip"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "contains"]
+- !private ["Se", "count"]
+- !private ["Se", "height"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "origin"]
+- !private ["Se", "size"]
+- !private ["Se", "subscript"]
+- !private ["Se", "width"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- !private ["Se", "zero"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "contains"]
+- !private ["SE", "count"]
+- !private ["SE", "height"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "origin"]
+- !private ["SE", "size"]
+- !private ["SE", "subscript"]
+- !private ["SE", "width"]
+- !private ["SE", "x"]
+- !private ["SE", "y"]
+- !private ["SE", "zero"]
+- !private ["SQ", "CGSize"]
+- !private ["SQ", "DayOfWeek"]
+- !private ["SQ", "UIColor"]
+- !private ["SQ", "UIFont"]
+- ["SQ", "UILabel"]
+- !private ["SQ", "Weight"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "addSubview"]
+- !private ["SQ", "black"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "count"]
+- !private ["SQ", "daysOfWeek"]
+- !private ["SQ", "font"]
+- !private ["SQ", "frame"]
+- !private ["SQ", "height"]
+- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "intrinsicContentSize"]
+- !private ["SQ", "invalidateIntrinsicContentSize"]
+- !private ["SQ", "labelSpacing"]
+- !private ["SQ", "labels"]
+- !private ["SQ", "layoutSubviews"]
+- !private ["SQ", "max"]
+- !private ["SQ", "organize"]
+- !private ["SQ", "origin"]
+- !private ["SQ", "prepareForInterfaceBuilder"]
+- !private ["SQ", "semibold"]
+- !private ["SQ", "size"]
+- !private ["SQ", "sizeToFit"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "systemFont"]
+- !private ["SQ", "text"]
+- !private ["SQ", "textColor"]
+- !private ["SQ", "tintColor"]
+- !private ["SQ", "unifiedInit"]
+- !private ["SQ", "width"]
+- !private ["SQ", "withAlphaComponent"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- !private ["SQ", "zero"]
+- !private ["SQ", "zip"]
 - !private ["s25ExpressibleByArrayLiteralP", "contains"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "intrinsicContentSize"]
@@ -310,47 +333,56 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "textColor"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "CGSize"]
-- !private ["s8HashableP", "DayOfWeek"]
-- !private ["s8HashableP", "UIColor"]
-- !private ["s8HashableP", "UIFont"]
-- ["s8HashableP", "UILabel"]
-- !private ["s8HashableP", "Weight"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "addSubview"]
-- !private ["s8HashableP", "black"]
-- !private ["s8HashableP", "daysOfWeek"]
-- !private ["s8HashableP", "font"]
-- !private ["s8HashableP", "frame"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "intrinsicContentSize"]
-- !private ["s8HashableP", "invalidateIntrinsicContentSize"]
-- !private ["s8HashableP", "labelSpacing"]
-- !private ["s8HashableP", "labels"]
-- !private ["s8HashableP", "layoutSubviews"]
-- !private ["s8HashableP", "max"]
-- !private ["s8HashableP", "organize"]
-- !private ["s8HashableP", "prepareForInterfaceBuilder"]
-- !private ["s8HashableP", "semibold"]
-- !private ["s8HashableP", "sizeToFit"]
-- !private ["s8HashableP", "systemFont"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "textColor"]
-- !private ["s8HashableP", "tintColor"]
-- !private ["s8HashableP", "unifiedInit"]
-- !private ["s8HashableP", "withAlphaComponent"]
-- !private ["s8HashableP", "zip"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "CGSize"]
+- !private ["SH", "DayOfWeek"]
+- !private ["SH", "UIColor"]
+- !private ["SH", "UIFont"]
+- ["SH", "UILabel"]
+- !private ["SH", "Weight"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "addSubview"]
+- !private ["SH", "black"]
+- !private ["SH", "contains"]
+- !private ["SH", "count"]
+- !private ["SH", "daysOfWeek"]
+- !private ["SH", "font"]
+- !private ["SH", "frame"]
+- ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "intrinsicContentSize"]
+- !private ["SH", "invalidateIntrinsicContentSize"]
+- !private ["SH", "labelSpacing"]
+- !private ["SH", "labels"]
+- !private ["SH", "layoutSubviews"]
+- !private ["SH", "max"]
+- !private ["SH", "organize"]
+- !private ["SH", "prepareForInterfaceBuilder"]
+- !private ["SH", "semibold"]
+- !private ["SH", "sizeToFit"]
+- !private ["SH", "subscript"]
+- !private ["SH", "systemFont"]
+- !private ["SH", "text"]
+- !private ["SH", "textColor"]
+- !private ["SH", "tintColor"]
+- !private ["SH", "unifiedInit"]
+- !private ["SH", "withAlphaComponent"]
+- !private ["SH", "zip"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["s17MutableCollectionP", "contains"]
-- !private ["s17MutableCollectionP", "count"]
-- !private ["s17MutableCollectionP", "intrinsicContentSize"]
-- !private ["s17MutableCollectionP", "subscript"]
-- !private ["s17MutableCollectionP", "textColor"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "contains"]
+- !private ["SM", "count"]
+- !private ["SM", "intrinsicContentSize"]
+- !private ["SM", "subscript"]
+- !private ["SM", "textColor"]
 - !private ["So8NSCodingP", "CGSize"]
 - !private ["So8NSCodingP", "DayOfWeek"]
 - !private ["So8NSCodingP", "UIColor"]
@@ -417,59 +449,65 @@ depends-member:
 - ["So8NSObjectC", "unifiedInit"]
 - !private ["So8NSObjectC", "withAlphaComponent"]
 - !private ["So8NSObjectC", "zip"]
-- !private ["So16NSObjectProtocolP", "CGSize"]
-- !private ["So16NSObjectProtocolP", "DayOfWeek"]
-- !private ["So16NSObjectProtocolP", "UIColor"]
-- !private ["So16NSObjectProtocolP", "UIFont"]
-- ["So16NSObjectProtocolP", "UILabel"]
-- !private ["So16NSObjectProtocolP", "Weight"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "addSubview"]
-- !private ["So16NSObjectProtocolP", "black"]
-- !private ["So16NSObjectProtocolP", "daysOfWeek"]
-- !private ["So16NSObjectProtocolP", "font"]
-- !private ["So16NSObjectProtocolP", "frame"]
-- ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "intrinsicContentSize"]
-- !private ["So16NSObjectProtocolP", "invalidateIntrinsicContentSize"]
-- !private ["So16NSObjectProtocolP", "labelSpacing"]
-- !private ["So16NSObjectProtocolP", "labels"]
-- !private ["So16NSObjectProtocolP", "layoutSubviews"]
-- !private ["So16NSObjectProtocolP", "max"]
-- !private ["So16NSObjectProtocolP", "organize"]
-- !private ["So16NSObjectProtocolP", "prepareForInterfaceBuilder"]
-- !private ["So16NSObjectProtocolP", "sizeToFit"]
-- !private ["So16NSObjectProtocolP", "systemFont"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "textColor"]
-- !private ["So16NSObjectProtocolP", "tintColor"]
-- !private ["So16NSObjectProtocolP", "unifiedInit"]
-- !private ["So16NSObjectProtocolP", "withAlphaComponent"]
-- !private ["So16NSObjectProtocolP", "zip"]
+- !private ["So8NSObjectP", "CGSize"]
+- !private ["So8NSObjectP", "DayOfWeek"]
+- !private ["So8NSObjectP", "UIColor"]
+- !private ["So8NSObjectP", "UIFont"]
+- ["So8NSObjectP", "UILabel"]
+- !private ["So8NSObjectP", "Weight"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addSubview"]
+- !private ["So8NSObjectP", "black"]
+- !private ["So8NSObjectP", "daysOfWeek"]
+- !private ["So8NSObjectP", "font"]
+- !private ["So8NSObjectP", "frame"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "intrinsicContentSize"]
+- !private ["So8NSObjectP", "invalidateIntrinsicContentSize"]
+- !private ["So8NSObjectP", "labelSpacing"]
+- !private ["So8NSObjectP", "labels"]
+- !private ["So8NSObjectP", "layoutSubviews"]
+- !private ["So8NSObjectP", "max"]
+- !private ["So8NSObjectP", "organize"]
+- !private ["So8NSObjectP", "prepareForInterfaceBuilder"]
+- !private ["So8NSObjectP", "sizeToFit"]
+- !private ["So8NSObjectP", "systemFont"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "textColor"]
+- !private ["So8NSObjectP", "tintColor"]
+- !private ["So8NSObjectP", "unifiedInit"]
+- !private ["So8NSObjectP", "withAlphaComponent"]
+- !private ["So8NSObjectP", "zip"]
 - !private ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "withAlphaComponent"]
-- !private ["s22RandomAccessCollectionP", "contains"]
-- !private ["s22RandomAccessCollectionP", "count"]
-- !private ["s22RandomAccessCollectionP", "intrinsicContentSize"]
-- !private ["s22RandomAccessCollectionP", "subscript"]
-- !private ["s22RandomAccessCollectionP", "textColor"]
-- !private ["s26RangeReplaceableCollectionP", "contains"]
-- !private ["s26RangeReplaceableCollectionP", "count"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "intrinsicContentSize"]
-- !private ["s26RangeReplaceableCollectionP", "subscript"]
-- !private ["s26RangeReplaceableCollectionP", "textColor"]
-- !private ["s16RawRepresentableP", "init"]
-- !private ["s16RawRepresentableP", "semibold"]
-- !private ["s8SequenceP", "contains"]
-- !private ["s8SequenceP", "count"]
-- !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "intrinsicContentSize"]
-- !private ["s8SequenceP", "subscript"]
-- !private ["s8SequenceP", "textColor"]
+- !private ["Sk", "contains"]
+- !private ["Sk", "count"]
+- !private ["Sk", "intrinsicContentSize"]
+- !private ["Sk", "subscript"]
+- !private ["Sk", "textColor"]
+- !private ["Sm", "contains"]
+- !private ["Sm", "count"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "intrinsicContentSize"]
+- !private ["Sm", "subscript"]
+- !private ["Sm", "textColor"]
+- !private ["SY", "init"]
+- !private ["SY", "semibold"]
+- !private ["ST", "contains"]
+- !private ["ST", "count"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "intrinsicContentSize"]
+- !private ["ST", "subscript"]
+- !private ["ST", "textColor"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "CGSize"]
 - !private ["So29UIAccessibilityIdentificationP", "DayOfWeek"]
@@ -655,6 +693,31 @@ depends-member:
 - !private ["So11UIFocusItemP", "tintColor"]
 - !private ["So11UIFocusItemP", "unifiedInit"]
 - !private ["So11UIFocusItemP", "zip"]
+- !private ["So20UIFocusItemContainerP", "CGSize"]
+- !private ["So20UIFocusItemContainerP", "DayOfWeek"]
+- !private ["So20UIFocusItemContainerP", "UIColor"]
+- !private ["So20UIFocusItemContainerP", "UIFont"]
+- ["So20UIFocusItemContainerP", "UILabel"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "addSubview"]
+- !private ["So20UIFocusItemContainerP", "daysOfWeek"]
+- !private ["So20UIFocusItemContainerP", "font"]
+- !private ["So20UIFocusItemContainerP", "frame"]
+- ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "intrinsicContentSize"]
+- !private ["So20UIFocusItemContainerP", "invalidateIntrinsicContentSize"]
+- !private ["So20UIFocusItemContainerP", "labelSpacing"]
+- !private ["So20UIFocusItemContainerP", "labels"]
+- !private ["So20UIFocusItemContainerP", "layoutSubviews"]
+- !private ["So20UIFocusItemContainerP", "max"]
+- !private ["So20UIFocusItemContainerP", "organize"]
+- !private ["So20UIFocusItemContainerP", "prepareForInterfaceBuilder"]
+- !private ["So20UIFocusItemContainerP", "sizeToFit"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "textColor"]
+- !private ["So20UIFocusItemContainerP", "tintColor"]
+- !private ["So20UIFocusItemContainerP", "unifiedInit"]
+- !private ["So20UIFocusItemContainerP", "zip"]
 - !private ["So6UIFontC", "Weight"]
 - !private ["So6UIFontC", "systemFont"]
 - !private ["So7UILabelC", "font"]
@@ -766,6 +829,31 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "tintColor"]
 - !private ["So18UITraitEnvironmentP", "unifiedInit"]
 - !private ["So18UITraitEnvironmentP", "zip"]
+- !private ["So23UIUserActivityRestoringP", "CGSize"]
+- !private ["So23UIUserActivityRestoringP", "DayOfWeek"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
+- !private ["So23UIUserActivityRestoringP", "UIFont"]
+- ["So23UIUserActivityRestoringP", "UILabel"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addSubview"]
+- !private ["So23UIUserActivityRestoringP", "daysOfWeek"]
+- !private ["So23UIUserActivityRestoringP", "font"]
+- !private ["So23UIUserActivityRestoringP", "frame"]
+- ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "intrinsicContentSize"]
+- !private ["So23UIUserActivityRestoringP", "invalidateIntrinsicContentSize"]
+- !private ["So23UIUserActivityRestoringP", "labelSpacing"]
+- !private ["So23UIUserActivityRestoringP", "labels"]
+- !private ["So23UIUserActivityRestoringP", "layoutSubviews"]
+- !private ["So23UIUserActivityRestoringP", "max"]
+- !private ["So23UIUserActivityRestoringP", "organize"]
+- !private ["So23UIUserActivityRestoringP", "prepareForInterfaceBuilder"]
+- !private ["So23UIUserActivityRestoringP", "sizeToFit"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "textColor"]
+- !private ["So23UIUserActivityRestoringP", "tintColor"]
+- !private ["So23UIUserActivityRestoringP", "unifiedInit"]
+- !private ["So23UIUserActivityRestoringP", "zip"]
 - ["So6UIViewC", "CGFloat"]
 - ["So6UIViewC", "CGRect"]
 - ["So6UIViewC", "CGSize"]
@@ -794,12 +882,7 @@ depends-member:
 - !private ["So6UIViewC", "tintColor"]
 - ["So6UIViewC", "unifiedInit"]
 - !private ["So6UIViewC", "zip"]
-- !private ["So6UIFontC6WeightV", "semibold"]
-- !private ["s14_ArrayProtocolP", "contains"]
-- !private ["s14_ArrayProtocolP", "count"]
-- !private ["s14_ArrayProtocolP", "intrinsicContentSize"]
-- !private ["s14_ArrayProtocolP", "subscript"]
-- !private ["s14_ArrayProtocolP", "textColor"]
+- !private ["So12UIFontWeighta", "semibold"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CGSize"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "DayOfWeek"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "UIColor"]
@@ -832,12 +915,21 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "textColor"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "withAlphaComponent"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "semibold"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGSize"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DayOfWeek"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
@@ -872,6 +964,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "origin"]
 - !private ["s21_ObjectiveCBridgeableP", "semibold"]
 - !private ["s21_ObjectiveCBridgeableP", "size"]
@@ -882,50 +975,53 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "zero"]
 - !private ["s20_SwiftNewtypeWrapperP", "semibold"]
 - !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["5UIKit01_A23NumericRawRepresentableP", "semibold"]
 depends-nominal:
 - !private "Sa"
+- !private "s13ArrayProtocolP"
 - !private "s10ArraySliceV"
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
 - "So15CALayerDelegateP"
-- !private "SC7CGPointV"
-- !private "SC6CGRectV"
-- !private "SC6CGSizeV"
+- !private "So7CGPointV"
+- !private "So6CGRectV"
+- !private "So6CGSizeV"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
+- !private "Sl"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "11Logan__iOS_9DayOfWeekO"
 - "11Logan__iOS_18DayOfWeekIndicatorC"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So21NSItemProviderReadingP"
 - !private "So21NSItemProviderWritingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s16RawRepresentableP"
-- !private "s8SequenceP"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
@@ -937,15 +1033,16 @@ depends-nominal:
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - !private "So6UIFontC"
 - "So7UILabelC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
-- !private "So6UIFontC6WeightV"
-- !private "s14_ArrayProtocolP"
+- !private "So12UIFontWeighta"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -955,6 +1052,7 @@ depends-nominal:
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s20_SwiftNewtypeWrapperP"
@@ -978,18 +1076,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "64a7b19197b9d276db9875361d68e785"

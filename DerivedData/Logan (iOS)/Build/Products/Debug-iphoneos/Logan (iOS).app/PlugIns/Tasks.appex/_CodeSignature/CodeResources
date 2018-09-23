@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		eCOg5iBYvtxkK3j5WMQoGis6aao=
+		dSIMRxLog+s/FdY+seqgoEDthbg=
 		</data>
 		<key>Base.lproj/TasksWidgetInterface.storyboardc/Info.plist</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Base.lproj/TasksWidgetInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<data>
-		cGVUawziBmAoGDwKMmikc5kAuGE=
+		d+DG8S0zeXdCr9CFqeejmxiGFrU=
 		</data>
 		<key>Base.lproj/TasksWidgetInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<data>
-		ziACplFpglszVJp06RWNHWpd104=
+		pGfLEGTx6AqH9LyJnLNqXraPLF0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fyHF0G5fWPnGpL0OmJDo3+9eGPE=
+		PoY5obFzlVzQk5Ysw5kaxbjF6xI=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -33,21 +33,13 @@
 	<dict>
 		<key>Assets.car</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			eCOg5iBYvtxkK3j5WMQoGis6aao=
-			</data>
 			<key>hash2</key>
 			<data>
-			a14lwI3UAX/oJom0p7wZMPa6lc97OS4UHiJZR7MAwBI=
+			OI6M3mF3kk8Cl2hba3ePL1/xdB+RCJkGWvfXmEFe5fU=
 			</data>
 		</dict>
 		<key>Base.lproj/TasksWidgetInterface.storyboardc/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			0MIPa0qiDjReRwwobTsnJ01z+l0=
-			</data>
 			<key>hash2</key>
 			<data>
 			sOic6ugSKWwGvBSX5ZyYEUE+pFecCWW0YXAo5CNbmCQ=
@@ -55,32 +47,20 @@
 		</dict>
 		<key>Base.lproj/TasksWidgetInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cGVUawziBmAoGDwKMmikc5kAuGE=
-			</data>
 			<key>hash2</key>
 			<data>
-			ybOBFJf6GQaaNs/Yqwh4UKKJSFioGVk/Tik1SctAn3E=
+			wVwMTRw4Xtvq+DhPaMQll3mbmH78rosMBdml2ykx4eY=
 			</data>
 		</dict>
 		<key>Base.lproj/TasksWidgetInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ziACplFpglszVJp06RWNHWpd104=
-			</data>
 			<key>hash2</key>
 			<data>
-			xNQwWnE9tJX1f9IIPgnk0nCT2/ib8RXqSg6bVL6/pwM=
+			KR+btC/BoSGjt1Wd7BPQG2dN9SLKmLBc4iF1pxMGG4E=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			dS9KCxc1IaUKh103qEqIGvjSNJs=
-			</data>
 			<key>hash2</key>
 			<data>
 			mJD7ykY0Mq4wF+919bw9lvQS5srM/iexUrviwwhePJ4=

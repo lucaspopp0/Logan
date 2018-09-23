@@ -13,15 +13,19 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var syncButton: UIBarButtonItem!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tabBar: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    private var longPressRecognizer: UILongPressGestureRecognizer!
+    private var viewIsVisible: Bool = false
     
     var dataSections: [(sectionName: String, tasks: [Task])] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.alpha = 0
+        activityIndicator.startAnimating()
         
         InterfaceManager.shared.tasksController = self
         DataManager.shared.addListener(self)
@@ -36,38 +40,25 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tabBar.backgroundColor = UIColor.teal500
         
-        longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.openConsole(_:)))
-        longPressRecognizer.minimumPressDuration = 0.8
-        
         registerForPreviewing(with: self, sourceView: tableView)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if let syncButtonView = syncButton.value(forKey: "view") as? UIView {
-            if !(syncButtonView.gestureRecognizers?.contains(longPressRecognizer) ?? false) {
-                syncButtonView.addGestureRecognizer(longPressRecognizer)
-            }
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewIsVisible = true
         updateData()
         tableView.reloadData()
         
         DataManager.shared.resumeAutoUpdate()
     }
     
-    @IBAction func syncWithCloud(_ sender: Any) {
-        DataManager.shared.fetchDataFromCloud()
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewIsVisible = false
     }
     
-    @objc private func openConsole(_ sender: UIGestureRecognizer) {
-        if sender.state == UIGestureRecognizerState.began {
-            performSegue(withIdentifier: "Open Console", sender: self)
-        }
+    @IBAction func syncWithCloud(_ sender: Any) {
+        DataManager.shared.fetchDataFromCloud()
     }
     
     @IBAction func segmentPressed(_ sender: Any) {
@@ -153,9 +144,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
             for task in tasksToSort {
                 if let completionDate = task.completionDate?.dateValue {
-                    addTask(task, toSectionWithName: BetterDateFormatter.autoFormatDate(completionDate))
+                    addTask(task, toSectionWithName: "Completed " + BetterDateFormatter.autoFormatDate(completionDate, forSentence: true))
                 } else {
-                    addTask(task, toSectionWithName: "Some Point")
+                    addTask(task, toSectionWithName: "Completed at some point")
                 }
             }
         }
@@ -265,15 +256,20 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let task = dataSections[indexPath.section].tasks[indexPath.row]
         
-        if task.dueDate.intValue == DueDate.specificDayIntValue {
-            let procrastinateAction = UIContextualAction(style: UIContextualAction.Style.normal, title: "Push back\na day", handler: { (action, sourceView, completionHandler) in
+        if case let DueDate.specificDay(specificDay) = task.dueDate {
+            var overdue: Bool = false
+            
+            if Date.daysBetween(Date(), and: specificDay.dateValue!) < 0 {
+                overdue = true
+            }
+            
+            let procrastinateAction = UIContextualAction(style: UIContextualAction.Style.normal, title: (overdue ? "Move to\ntoday" : "Push back\na day"), handler: { (action, sourceView, completionHandler) in
                 var newDueDate: DueDate?
                 
-                switch task.dueDate {
-                case .specificDay(let day):
-                    newDueDate = DueDate.specificDay(day: CalendarDay(date: day.dateValue!.addingTimeInterval(24 * 60 * 60)))
-                    break
-                default: break
+                if overdue {
+                    newDueDate = DueDate.specificDay(day: CalendarDay(date: Date()))
+                } else {
+                    newDueDate = DueDate.specificDay(day: CalendarDay(date: specificDay.dateValue!.addingTimeInterval(24 * 60 * 60)))
                 }
                 
                 if newDueDate != nil {
@@ -382,8 +378,31 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             tableView.reloadData()
             
             syncButton.image = #imageLiteral(resourceName: "Cloud Sync")
+            
+            if tableView.alpha == 0 {
+                if viewIsVisible {
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.activityIndicator.alpha = 0
+                    }) { (completed) in
+                        if completed {
+                            self.activityIndicator.stopAnimating()
+                            UIView.animate(withDuration: 0.2, animations: {
+                                self.tableView.alpha = 1
+                            })
+                        }
+                    }
+                } else {
+                    activityIndicator.alpha = 0
+                    tableView.alpha = 1
+                }
+            }
         } else if eventType == DMLoadingEventType.error {
             syncButton.image = #imageLiteral(resourceName: "Cloud Error")
+            
+            let alert = UIAlertController(title: "iCloud Error", message: "Could not connect to iCloud. Please check your connection and try again.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+            
+            present(alert, animated: true, completion: nil)
         }
     }
     

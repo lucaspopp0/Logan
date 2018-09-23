@@ -36,7 +36,9 @@ depends-top-level:
 - !private "DataManager"
 - !private "Date"
 - "Exam"
+- !private "FloatLiteralType"
 - "IndexPath"
+- !private "IntegerLiteralType"
 - "NewExamTableViewController"
 - !private "PickerTableViewCell"
 - !private "StringLiteralType"
@@ -49,13 +51,15 @@ depends-top-level:
 - !private "||"
 depends-member:
 - !private ["Sa", "append"]
+- !private ["s13ArrayProtocolP", "append"]
 - !private ["11Logan__iOS_19BetterDateFormatterC", "autoFormatDate"]
 - !private ["11Logan__iOS_19BetterDateFormatterC", "autoFormatTime"]
 - !private ["11Logan__iOS_16BetterDatePickerC", "calendarDay"]
 - !private ["11Logan__iOS_16BetterDatePickerC", "dateValue"]
-- !private ["s23BidirectionalCollectionP", "append"]
-- !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "section"]
+- !private ["SK", "append"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "section"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "becomeFirstResponder"]
 - !private ["So15CALayerDelegateP", "beginUpdates"]
@@ -76,6 +80,10 @@ depends-member:
 - !private ["11Logan__iOS_9CKEnabledC", "record"]
 - !private ["11Logan__iOS_9CKEnabledC", "startTime"]
 - !private ["11Logan__iOS_9CKEnabledC", "title"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "append"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["s7CVarArgP", "BetterDateFormatter"]
 - !private ["s7CVarArgP", "CalendarDay"]
 - !private ["s7CVarArgP", "ClockTime"]
@@ -107,6 +115,7 @@ depends-member:
 - !private ["s7CVarArgP", "exams"]
 - !private ["s7CVarArgP", "fittingHeight"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "introduce"]
 - !private ["s7CVarArgP", "isEqual"]
 - !private ["s7CVarArgP", "location"]
@@ -127,13 +136,15 @@ depends-member:
 - !private ["11Logan__iOS_11CalendarDayC", "init"]
 - !private ["11Logan__iOS_9ClockTimeC", "dateValue"]
 - !private ["11Logan__iOS_9ClockTimeC", "init"]
-- !private ["s10CollectionP", "append"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "section"]
+- !private ["Sl", "append"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "section"]
 - !private ["11Logan__iOS_10CommitmentP", "exams"]
 - !private ["11Logan__iOS_10CommitmentP", "record"]
-- !private ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "section"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "section"]
 - !private ["11Logan__iOS_6CourseC", "exams"]
 - !private ["11Logan__iOS_6CourseC", "record"]
 - !private ["s28CustomDebugStringConvertibleP", "BetterDateFormatter"]
@@ -166,6 +177,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "exams"]
 - !private ["s28CustomDebugStringConvertibleP", "fittingHeight"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "introduce"]
 - !private ["s28CustomDebugStringConvertibleP", "isEqual"]
 - !private ["s28CustomDebugStringConvertibleP", "location"]
@@ -186,10 +198,20 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "viewWillAppear"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "becomeFirstResponder"]
+- !private ["s17CustomReflectableP", "calendarDay"]
+- !private ["s17CustomReflectableP", "date"]
+- !private ["s17CustomReflectableP", "dateValue"]
+- !private ["s17CustomReflectableP", "endEditing"]
+- !private ["s17CustomReflectableP", "exams"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "record"]
 - !private ["s17CustomReflectableP", "section"]
+- !private ["s17CustomReflectableP", "text"]
 - !private ["s23CustomStringConvertibleP", "BetterDateFormatter"]
 - !private ["s23CustomStringConvertibleP", "CalendarDay"]
 - !private ["s23CustomStringConvertibleP", "ClockTime"]
@@ -221,6 +243,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "exams"]
 - !private ["s23CustomStringConvertibleP", "fittingHeight"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "introduce"]
 - !private ["s23CustomStringConvertibleP", "isEqual"]
 - !private ["s23CustomStringConvertibleP", "location"]
@@ -243,65 +266,84 @@ depends-member:
 - !private ["11Logan__iOS_11DataManagerC", "shared"]
 - !private ["11Logan__iOS_11DataManagerC", "update"]
 - !private ["10Foundation4DateV", "init"]
-- !private ["So13DateFormatterC", "autoFormatDate"]
-- !private ["So13DateFormatterC", "autoFormatTime"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "append"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "section"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "append"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "section"]
-- !private ["s9EquatableP", "BetterDateFormatter"]
-- !private ["s9EquatableP", "CalendarDay"]
-- !private ["s9EquatableP", "ClockTime"]
-- !private ["s9EquatableP", "DataManager"]
-- !private ["s9EquatableP", "Date"]
-- ["s9EquatableP", "Exam"]
-- !private ["s9EquatableP", "UITableViewAutomaticDimension"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "alreadyOpened"]
-- !private ["s9EquatableP", "append"]
-- !private ["s9EquatableP", "autoFormatDate"]
-- !private ["s9EquatableP", "autoFormatTime"]
-- !private ["s9EquatableP", "becomeFirstResponder"]
-- !private ["s9EquatableP", "beginUpdates"]
-- !private ["s9EquatableP", "calendarDay"]
-- !private ["s9EquatableP", "cellForRow"]
-- !private ["s9EquatableP", "correspondingCourse"]
-- !private ["s9EquatableP", "date"]
-- !private ["s9EquatableP", "dateLabel"]
-- !private ["s9EquatableP", "datePicker"]
-- !private ["s9EquatableP", "dateValue"]
-- !private ["s9EquatableP", "dismiss"]
-- !private ["s9EquatableP", "endEditing"]
-- !private ["s9EquatableP", "endTime"]
-- !private ["s9EquatableP", "endTimeLabel"]
-- !private ["s9EquatableP", "endTimePicker"]
-- !private ["s9EquatableP", "endUpdates"]
-- !private ["s9EquatableP", "exams"]
-- !private ["s9EquatableP", "fittingHeight"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "introduce"]
-- !private ["s9EquatableP", "isEqual"]
-- !private ["s9EquatableP", "location"]
-- !private ["s9EquatableP", "locationField"]
-- !private ["s9EquatableP", "navigationController"]
-- !private ["s9EquatableP", "newExam"]
-- !private ["s9EquatableP", "record"]
-- !private ["s9EquatableP", "section"]
-- !private ["s9EquatableP", "shared"]
-- !private ["s9EquatableP", "startTime"]
-- !private ["s9EquatableP", "startTimeLabel"]
-- !private ["s9EquatableP", "startTimePicker"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "title"]
-- !private ["s9EquatableP", "titleField"]
-- !private ["s9EquatableP", "update"]
-- !private ["s9EquatableP", "view"]
-- !private ["s9EquatableP", "viewWillAppear"]
+- !private ["So15NSDateFormatterC", "autoFormatDate"]
+- !private ["So15NSDateFormatterC", "autoFormatTime"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "append"]
+- !private ["Se", "becomeFirstResponder"]
+- !private ["Se", "calendarDay"]
+- !private ["Se", "date"]
+- !private ["Se", "dateValue"]
+- !private ["Se", "endEditing"]
+- !private ["Se", "exams"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "record"]
+- !private ["Se", "section"]
+- !private ["Se", "text"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "append"]
+- !private ["SE", "becomeFirstResponder"]
+- !private ["SE", "calendarDay"]
+- !private ["SE", "date"]
+- !private ["SE", "dateValue"]
+- !private ["SE", "endEditing"]
+- !private ["SE", "exams"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "record"]
+- !private ["SE", "section"]
+- !private ["SE", "text"]
+- !private ["SQ", "BetterDateFormatter"]
+- !private ["SQ", "CalendarDay"]
+- !private ["SQ", "ClockTime"]
+- !private ["SQ", "DataManager"]
+- !private ["SQ", "Date"]
+- ["SQ", "Exam"]
+- !private ["SQ", "UITableViewAutomaticDimension"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "alreadyOpened"]
+- !private ["SQ", "append"]
+- !private ["SQ", "autoFormatDate"]
+- !private ["SQ", "autoFormatTime"]
+- !private ["SQ", "becomeFirstResponder"]
+- !private ["SQ", "beginUpdates"]
+- !private ["SQ", "calendarDay"]
+- !private ["SQ", "cellForRow"]
+- !private ["SQ", "correspondingCourse"]
+- !private ["SQ", "date"]
+- !private ["SQ", "dateLabel"]
+- !private ["SQ", "datePicker"]
+- !private ["SQ", "dateValue"]
+- !private ["SQ", "dismiss"]
+- !private ["SQ", "endEditing"]
+- !private ["SQ", "endTime"]
+- !private ["SQ", "endTimeLabel"]
+- !private ["SQ", "endTimePicker"]
+- !private ["SQ", "endUpdates"]
+- !private ["SQ", "exams"]
+- !private ["SQ", "fittingHeight"]
+- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "introduce"]
+- !private ["SQ", "isEqual"]
+- !private ["SQ", "location"]
+- !private ["SQ", "locationField"]
+- !private ["SQ", "navigationController"]
+- !private ["SQ", "newExam"]
+- !private ["SQ", "record"]
+- !private ["SQ", "section"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "startTime"]
+- !private ["SQ", "startTimeLabel"]
+- !private ["SQ", "startTimePicker"]
+- !private ["SQ", "text"]
+- !private ["SQ", "title"]
+- !private ["SQ", "titleField"]
+- !private ["SQ", "update"]
+- !private ["SQ", "view"]
+- !private ["SQ", "viewWillAppear"]
 - !private ["11Logan__iOS_4ExamC", "date"]
 - !private ["11Logan__iOS_4ExamC", "endTime"]
 - ["11Logan__iOS_4ExamC", "init"]
@@ -313,64 +355,79 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "section"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "becomeFirstResponder"]
+- !private ["s23ExpressibleByNilLiteralP", "calendarDay"]
+- !private ["s23ExpressibleByNilLiteralP", "date"]
+- !private ["s23ExpressibleByNilLiteralP", "dateValue"]
+- !private ["s23ExpressibleByNilLiteralP", "endEditing"]
+- !private ["s23ExpressibleByNilLiteralP", "exams"]
+- !private ["s23ExpressibleByNilLiteralP", "record"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["So9FormatterC", "autoFormatDate"]
-- !private ["So9FormatterC", "autoFormatTime"]
-- !private ["s8HashableP", "BetterDateFormatter"]
-- !private ["s8HashableP", "CalendarDay"]
-- !private ["s8HashableP", "ClockTime"]
-- !private ["s8HashableP", "DataManager"]
-- !private ["s8HashableP", "Date"]
-- ["s8HashableP", "Exam"]
-- !private ["s8HashableP", "UITableViewAutomaticDimension"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "alreadyOpened"]
-- !private ["s8HashableP", "autoFormatDate"]
-- !private ["s8HashableP", "autoFormatTime"]
-- !private ["s8HashableP", "becomeFirstResponder"]
-- !private ["s8HashableP", "beginUpdates"]
-- !private ["s8HashableP", "calendarDay"]
-- !private ["s8HashableP", "cellForRow"]
-- !private ["s8HashableP", "correspondingCourse"]
-- !private ["s8HashableP", "date"]
-- !private ["s8HashableP", "dateLabel"]
-- !private ["s8HashableP", "datePicker"]
-- !private ["s8HashableP", "dateValue"]
-- !private ["s8HashableP", "dismiss"]
-- !private ["s8HashableP", "endEditing"]
-- !private ["s8HashableP", "endTime"]
-- !private ["s8HashableP", "endTimeLabel"]
-- !private ["s8HashableP", "endTimePicker"]
-- !private ["s8HashableP", "endUpdates"]
-- !private ["s8HashableP", "exams"]
-- !private ["s8HashableP", "fittingHeight"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "introduce"]
-- !private ["s8HashableP", "isEqual"]
-- !private ["s8HashableP", "location"]
-- !private ["s8HashableP", "locationField"]
-- !private ["s8HashableP", "navigationController"]
-- !private ["s8HashableP", "newExam"]
-- !private ["s8HashableP", "record"]
-- !private ["s8HashableP", "section"]
-- !private ["s8HashableP", "shared"]
-- !private ["s8HashableP", "startTime"]
-- !private ["s8HashableP", "startTimeLabel"]
-- !private ["s8HashableP", "startTimePicker"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "title"]
-- !private ["s8HashableP", "titleField"]
-- !private ["s8HashableP", "update"]
-- !private ["s8HashableP", "view"]
-- !private ["s8HashableP", "viewWillAppear"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So11NSFormatterC", "autoFormatDate"]
+- !private ["So11NSFormatterC", "autoFormatTime"]
+- !private ["SH", "BetterDateFormatter"]
+- !private ["SH", "CalendarDay"]
+- !private ["SH", "ClockTime"]
+- !private ["SH", "DataManager"]
+- !private ["SH", "Date"]
+- ["SH", "Exam"]
+- !private ["SH", "UITableViewAutomaticDimension"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "alreadyOpened"]
+- !private ["SH", "append"]
+- !private ["SH", "autoFormatDate"]
+- !private ["SH", "autoFormatTime"]
+- !private ["SH", "becomeFirstResponder"]
+- !private ["SH", "beginUpdates"]
+- !private ["SH", "calendarDay"]
+- !private ["SH", "cellForRow"]
+- !private ["SH", "correspondingCourse"]
+- !private ["SH", "date"]
+- !private ["SH", "dateLabel"]
+- !private ["SH", "datePicker"]
+- !private ["SH", "dateValue"]
+- !private ["SH", "dismiss"]
+- !private ["SH", "endEditing"]
+- !private ["SH", "endTime"]
+- !private ["SH", "endTimeLabel"]
+- !private ["SH", "endTimePicker"]
+- !private ["SH", "endUpdates"]
+- !private ["SH", "exams"]
+- !private ["SH", "fittingHeight"]
+- ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "introduce"]
+- !private ["SH", "isEqual"]
+- !private ["SH", "location"]
+- !private ["SH", "locationField"]
+- !private ["SH", "navigationController"]
+- !private ["SH", "newExam"]
+- !private ["SH", "record"]
+- !private ["SH", "section"]
+- !private ["SH", "shared"]
+- !private ["SH", "startTime"]
+- !private ["SH", "startTimeLabel"]
+- !private ["SH", "startTimePicker"]
+- !private ["SH", "text"]
+- !private ["SH", "title"]
+- !private ["SH", "titleField"]
+- !private ["SH", "update"]
+- !private ["SH", "view"]
+- !private ["SH", "viewWillAppear"]
 - !private ["10Foundation9IndexPathV", "section"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["s17MutableCollectionP", "append"]
-- !private ["s17MutableCollectionP", "section"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
+- !private ["SM", "section"]
 - !private ["So8NSCodingP", "BetterDateFormatter"]
 - !private ["So8NSCodingP", "CalendarDay"]
 - !private ["So8NSCodingP", "ClockTime"]
@@ -397,6 +454,7 @@ depends-member:
 - !private ["So8NSCodingP", "endTimePicker"]
 - !private ["So8NSCodingP", "endUpdates"]
 - !private ["So8NSCodingP", "fittingHeight"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isEqual"]
 - !private ["So8NSCodingP", "locationField"]
@@ -425,6 +483,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - !private ["So26NSExtensionRequestHandlingP", "endTimeLabel"]
 - !private ["So26NSExtensionRequestHandlingP", "endTimePicker"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "locationField"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
@@ -475,6 +534,7 @@ depends-member:
 - !private ["So8NSObjectC", "exams"]
 - !private ["So8NSObjectC", "fittingHeight"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "introduce"]
 - !private ["So8NSObjectC", "isEqual"]
 - !private ["So8NSObjectC", "location"]
@@ -493,52 +553,53 @@ depends-member:
 - !private ["So8NSObjectC", "update"]
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewWillAppear"]
-- !private ["So16NSObjectProtocolP", "BetterDateFormatter"]
-- !private ["So16NSObjectProtocolP", "CalendarDay"]
-- !private ["So16NSObjectProtocolP", "ClockTime"]
-- !private ["So16NSObjectProtocolP", "DataManager"]
-- !private ["So16NSObjectProtocolP", "Date"]
-- ["So16NSObjectProtocolP", "Exam"]
-- !private ["So16NSObjectProtocolP", "UITableViewAutomaticDimension"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "alreadyOpened"]
-- !private ["So16NSObjectProtocolP", "autoFormatDate"]
-- !private ["So16NSObjectProtocolP", "autoFormatTime"]
-- !private ["So16NSObjectProtocolP", "becomeFirstResponder"]
-- !private ["So16NSObjectProtocolP", "beginUpdates"]
-- !private ["So16NSObjectProtocolP", "calendarDay"]
-- !private ["So16NSObjectProtocolP", "cellForRow"]
-- !private ["So16NSObjectProtocolP", "correspondingCourse"]
-- !private ["So16NSObjectProtocolP", "date"]
-- !private ["So16NSObjectProtocolP", "dateLabel"]
-- !private ["So16NSObjectProtocolP", "datePicker"]
-- !private ["So16NSObjectProtocolP", "dateValue"]
-- !private ["So16NSObjectProtocolP", "dismiss"]
-- !private ["So16NSObjectProtocolP", "endEditing"]
-- !private ["So16NSObjectProtocolP", "endTime"]
-- !private ["So16NSObjectProtocolP", "endTimeLabel"]
-- !private ["So16NSObjectProtocolP", "endTimePicker"]
-- !private ["So16NSObjectProtocolP", "endUpdates"]
-- !private ["So16NSObjectProtocolP", "exams"]
-- !private ["So16NSObjectProtocolP", "fittingHeight"]
-- ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "introduce"]
-- !private ["So16NSObjectProtocolP", "isEqual"]
-- !private ["So16NSObjectProtocolP", "location"]
-- !private ["So16NSObjectProtocolP", "locationField"]
-- !private ["So16NSObjectProtocolP", "navigationController"]
-- !private ["So16NSObjectProtocolP", "newExam"]
-- !private ["So16NSObjectProtocolP", "record"]
-- !private ["So16NSObjectProtocolP", "shared"]
-- !private ["So16NSObjectProtocolP", "startTime"]
-- !private ["So16NSObjectProtocolP", "startTimeLabel"]
-- !private ["So16NSObjectProtocolP", "startTimePicker"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "title"]
-- !private ["So16NSObjectProtocolP", "titleField"]
-- !private ["So16NSObjectProtocolP", "update"]
-- !private ["So16NSObjectProtocolP", "view"]
-- !private ["So16NSObjectProtocolP", "viewWillAppear"]
+- !private ["So8NSObjectP", "BetterDateFormatter"]
+- !private ["So8NSObjectP", "CalendarDay"]
+- !private ["So8NSObjectP", "ClockTime"]
+- !private ["So8NSObjectP", "DataManager"]
+- !private ["So8NSObjectP", "Date"]
+- ["So8NSObjectP", "Exam"]
+- !private ["So8NSObjectP", "UITableViewAutomaticDimension"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "alreadyOpened"]
+- !private ["So8NSObjectP", "autoFormatDate"]
+- !private ["So8NSObjectP", "autoFormatTime"]
+- !private ["So8NSObjectP", "becomeFirstResponder"]
+- !private ["So8NSObjectP", "beginUpdates"]
+- !private ["So8NSObjectP", "calendarDay"]
+- !private ["So8NSObjectP", "cellForRow"]
+- !private ["So8NSObjectP", "correspondingCourse"]
+- !private ["So8NSObjectP", "date"]
+- !private ["So8NSObjectP", "dateLabel"]
+- !private ["So8NSObjectP", "datePicker"]
+- !private ["So8NSObjectP", "dateValue"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "endEditing"]
+- !private ["So8NSObjectP", "endTime"]
+- !private ["So8NSObjectP", "endTimeLabel"]
+- !private ["So8NSObjectP", "endTimePicker"]
+- !private ["So8NSObjectP", "endUpdates"]
+- !private ["So8NSObjectP", "exams"]
+- !private ["So8NSObjectP", "fittingHeight"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "introduce"]
+- !private ["So8NSObjectP", "isEqual"]
+- !private ["So8NSObjectP", "location"]
+- !private ["So8NSObjectP", "locationField"]
+- !private ["So8NSObjectP", "navigationController"]
+- !private ["So8NSObjectP", "newExam"]
+- !private ["So8NSObjectP", "record"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "startTime"]
+- !private ["So8NSObjectP", "startTimeLabel"]
+- !private ["So8NSObjectP", "startTimePicker"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "title"]
+- !private ["So8NSObjectP", "titleField"]
+- !private ["So8NSObjectP", "update"]
+- !private ["So8NSObjectP", "view"]
+- !private ["So8NSObjectP", "viewWillAppear"]
 - !private ["11Logan__iOS_26NewExamTableViewControllerC", "BetterDateFormatter"]
 - ["11Logan__iOS_26NewExamTableViewControllerC", "BetterDatePicker"]
 - ["11Logan__iOS_26NewExamTableViewControllerC", "Bool"]
@@ -562,7 +623,6 @@ depends-member:
 - ["11Logan__iOS_26NewExamTableViewControllerC", "dateLabel"]
 - ["11Logan__iOS_26NewExamTableViewControllerC", "datePicker"]
 - ["11Logan__iOS_26NewExamTableViewControllerC", "dateUpdated"]
-- ["11Logan__iOS_26NewExamTableViewControllerC", "deinit"]
 - ["11Logan__iOS_26NewExamTableViewControllerC", "done"]
 - ["11Logan__iOS_26NewExamTableViewControllerC", "endTimeLabel"]
 - ["11Logan__iOS_26NewExamTableViewControllerC", "endTimePicker"]
@@ -576,19 +636,33 @@ depends-member:
 - ["11Logan__iOS_26NewExamTableViewControllerC", "titleField"]
 - !private ["11Logan__iOS_26NewExamTableViewControllerC", "view"]
 - ["11Logan__iOS_26NewExamTableViewControllerC", "viewWillAppear"]
+- !private ["Sq", "becomeFirstResponder"]
+- !private ["Sq", "calendarDay"]
+- !private ["Sq", "date"]
+- !private ["Sq", "dateValue"]
+- !private ["Sq", "endEditing"]
+- !private ["Sq", "exams"]
+- !private ["Sq", "record"]
+- !private ["Sq", "text"]
 - !private ["11Logan__iOS_19PickerTableViewCellC", "fittingHeight"]
-- !private ["s22RandomAccessCollectionP", "append"]
-- !private ["s22RandomAccessCollectionP", "section"]
-- !private ["s26RangeReplaceableCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["Sk", "append"]
+- !private ["Sk", "section"]
+- !private ["Sm", "append"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "section"]
-- !private ["s8SequenceP", "append"]
-- !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "section"]
+- !private ["ST", "append"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "section"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "becomeFirstResponder"]
 - !private ["So29UIAccessibilityIdentificationP", "beginUpdates"]
@@ -637,6 +711,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "endUpdates"]
 - !private ["So21UIAppearanceContainerP", "fittingHeight"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "isEqual"]
 - !private ["So21UIAppearanceContainerP", "locationField"]
 - !private ["So21UIAppearanceContainerP", "navigationController"]
@@ -662,6 +737,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "dismiss"]
 - !private ["So18UIContentContainerP", "endTimeLabel"]
 - !private ["So18UIContentContainerP", "endTimePicker"]
+- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "locationField"]
 - !private ["So18UIContentContainerP", "navigationController"]
@@ -731,6 +807,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "endUpdates"]
 - !private ["So18UIFocusEnvironmentP", "fittingHeight"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "isEqual"]
 - !private ["So18UIFocusEnvironmentP", "locationField"]
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
@@ -752,6 +829,20 @@ depends-member:
 - !private ["So11UIFocusItemP", "fittingHeight"]
 - !private ["So11UIFocusItemP", "isEqual"]
 - !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", "becomeFirstResponder"]
+- !private ["So20UIFocusItemContainerP", "beginUpdates"]
+- !private ["So20UIFocusItemContainerP", "calendarDay"]
+- !private ["So20UIFocusItemContainerP", "cellForRow"]
+- !private ["So20UIFocusItemContainerP", "date"]
+- !private ["So20UIFocusItemContainerP", "dateValue"]
+- !private ["So20UIFocusItemContainerP", "endEditing"]
+- !private ["So20UIFocusItemContainerP", "endUpdates"]
+- !private ["So20UIFocusItemContainerP", "fittingHeight"]
+- !private ["So20UIFocusItemContainerP", "isEqual"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So30UIFocusItemScrollableContainerP", "beginUpdates"]
+- !private ["So30UIFocusItemScrollableContainerP", "cellForRow"]
+- !private ["So30UIFocusItemScrollableContainerP", "endUpdates"]
 - !private ["So27UIGestureRecognizerDelegateP", "fittingHeight"]
 - !private ["So10UIKeyInputP", "becomeFirstResponder"]
 - !private ["So10UIKeyInputP", "text"]
@@ -781,6 +872,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "endTimePicker"]
 - !private ["So30UIPasteConfigurationSupportingP", "endUpdates"]
 - !private ["So30UIPasteConfigurationSupportingP", "fittingHeight"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isEqual"]
 - !private ["So30UIPasteConfigurationSupportingP", "locationField"]
@@ -829,6 +921,7 @@ depends-member:
 - !private ["So11UIResponderC", "endUpdates"]
 - !private ["So11UIResponderC", "fittingHeight"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isEqual"]
 - ["So11UIResponderC", "locationField"]
 - !private ["So11UIResponderC", "navigationController"]
@@ -865,6 +958,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "endUpdates"]
 - !private ["So30UIResponderStandardEditActionsP", "fittingHeight"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isEqual"]
 - !private ["So30UIResponderStandardEditActionsP", "locationField"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationController"]
@@ -893,6 +987,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "endTimeLabel"]
 - !private ["So20UIScrollViewDelegateP", "endTimePicker"]
 - !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "locationField"]
 - !private ["So20UIScrollViewDelegateP", "navigationController"]
 - !private ["So20UIScrollViewDelegateP", "newExam"]
@@ -919,6 +1014,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "dismiss"]
 - !private ["So16UIStateRestoringP", "endTimeLabel"]
 - !private ["So16UIStateRestoringP", "endTimePicker"]
+- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "locationField"]
 - !private ["So16UIStateRestoringP", "navigationController"]
@@ -960,6 +1056,7 @@ depends-member:
 - ["So21UITableViewControllerC", "endTimeLabel"]
 - ["So21UITableViewControllerC", "endTimePicker"]
 - ["So21UITableViewControllerC", "init"]
+- !private ["So21UITableViewControllerC", "init"]
 - ["So21UITableViewControllerC", "locationField"]
 - !private ["So21UITableViewControllerC", "navigationController"]
 - ["So21UITableViewControllerC", "newExam"]
@@ -984,6 +1081,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "endTimeLabel"]
 - !private ["So21UITableViewDataSourceP", "endTimePicker"]
 - !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So21UITableViewDataSourceP", "locationField"]
 - !private ["So21UITableViewDataSourceP", "navigationController"]
 - !private ["So21UITableViewDataSourceP", "newExam"]
@@ -1006,6 +1104,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "datePicker"]
 - !private ["So19UITableViewDelegateP", "endTimeLabel"]
 - !private ["So19UITableViewDelegateP", "endTimePicker"]
+- !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "locationField"]
 - !private ["So19UITableViewDelegateP", "navigationController"]
@@ -1052,6 +1151,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "endUpdates"]
 - !private ["So18UITraitEnvironmentP", "fittingHeight"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "isEqual"]
 - !private ["So18UITraitEnvironmentP", "locationField"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
@@ -1062,6 +1162,42 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "titleField"]
 - !private ["So18UITraitEnvironmentP", "view"]
 - !private ["So18UITraitEnvironmentP", "viewWillAppear"]
+- !private ["So23UIUserActivityRestoringP", "BetterDateFormatter"]
+- !private ["So23UIUserActivityRestoringP", "CalendarDay"]
+- !private ["So23UIUserActivityRestoringP", "ClockTime"]
+- !private ["So23UIUserActivityRestoringP", "DataManager"]
+- !private ["So23UIUserActivityRestoringP", "Date"]
+- ["So23UIUserActivityRestoringP", "Exam"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewAutomaticDimension"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "alreadyOpened"]
+- !private ["So23UIUserActivityRestoringP", "becomeFirstResponder"]
+- !private ["So23UIUserActivityRestoringP", "beginUpdates"]
+- !private ["So23UIUserActivityRestoringP", "calendarDay"]
+- !private ["So23UIUserActivityRestoringP", "cellForRow"]
+- !private ["So23UIUserActivityRestoringP", "correspondingCourse"]
+- !private ["So23UIUserActivityRestoringP", "date"]
+- !private ["So23UIUserActivityRestoringP", "dateLabel"]
+- !private ["So23UIUserActivityRestoringP", "datePicker"]
+- !private ["So23UIUserActivityRestoringP", "dateValue"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
+- !private ["So23UIUserActivityRestoringP", "endEditing"]
+- !private ["So23UIUserActivityRestoringP", "endTimeLabel"]
+- !private ["So23UIUserActivityRestoringP", "endTimePicker"]
+- !private ["So23UIUserActivityRestoringP", "endUpdates"]
+- !private ["So23UIUserActivityRestoringP", "fittingHeight"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "isEqual"]
+- !private ["So23UIUserActivityRestoringP", "locationField"]
+- !private ["So23UIUserActivityRestoringP", "navigationController"]
+- !private ["So23UIUserActivityRestoringP", "newExam"]
+- !private ["So23UIUserActivityRestoringP", "startTimeLabel"]
+- !private ["So23UIUserActivityRestoringP", "startTimePicker"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "titleField"]
+- !private ["So23UIUserActivityRestoringP", "view"]
+- !private ["So23UIUserActivityRestoringP", "viewWillAppear"]
 - !private ["So6UIViewC", "becomeFirstResponder"]
 - !private ["So6UIViewC", "beginUpdates"]
 - !private ["So6UIViewC", "calendarDay"]
@@ -1101,6 +1237,7 @@ depends-member:
 - ["So16UIViewControllerC", "endTimeLabel"]
 - ["So16UIViewControllerC", "endTimePicker"]
 - ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "locationField"]
 - !private ["So16UIViewControllerC", "navigationController"]
 - ["So16UIViewControllerC", "newExam"]
@@ -1110,7 +1247,6 @@ depends-member:
 - ["So16UIViewControllerC", "titleField"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewWillAppear"]
-- !private ["s14_ArrayProtocolP", "append"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "becomeFirstResponder"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "beginUpdates"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "calendarDay"]
@@ -1125,10 +1261,16 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "BetterDateFormatter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CalendarDay"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ClockTime"]
@@ -1158,6 +1300,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "exams"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fittingHeight"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "introduce"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isEqual"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "location"]
@@ -1177,23 +1320,35 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewWillAppear"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "becomeFirstResponder"]
+- !private ["s21_ObjectiveCBridgeableP", "calendarDay"]
+- !private ["s21_ObjectiveCBridgeableP", "date"]
+- !private ["s21_ObjectiveCBridgeableP", "dateValue"]
+- !private ["s21_ObjectiveCBridgeableP", "endEditing"]
+- !private ["s21_ObjectiveCBridgeableP", "exams"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "record"]
 - !private ["s21_ObjectiveCBridgeableP", "section"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "Sa"
+- !private "s13ArrayProtocolP"
 - !private "11Logan__iOS_19BetterDateFormatterC"
 - !private "11Logan__iOS_16BetterDatePickerC"
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
 - !private "So15CALayerDelegateP"
 - "11Logan__iOS_9CKEnabledC"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "11Logan__iOS_11CalendarDayC"
 - !private "11Logan__iOS_9ClockTimeC"
-- !private "s10CollectionP"
+- !private "Sl"
 - !private "11Logan__iOS_10CommitmentP"
-- !private "s10ComparableP"
+- !private "SL"
 - !private "11Logan__iOS_6CourseC"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
@@ -1201,35 +1356,37 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - !private "11Logan__iOS_11DataManagerC"
 - !private "10Foundation4DateV"
-- !private "So13DateFormatterC"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "So15NSDateFormatterC"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - "11Logan__iOS_4ExamC"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- !private "So9FormatterC"
-- "s8HashableP"
+- !private "So11NSFormatterC"
+- "SH"
 - !private "10Foundation9IndexPathV"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - "11Logan__iOS_26NewExamTableViewControllerC"
+- !private "Sq"
 - !private "11Logan__iOS_19PickerTableViewCellC"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
+- !private "Sk"
+- !private "Sm"
 - !private "10Foundation20ReferenceConvertibleP"
-- !private "s8SequenceP"
+- !private "ST"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
@@ -1244,6 +1401,8 @@ depends-nominal:
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
 - !private "So27UIGestureRecognizerDelegateP"
 - !private "So10UIKeyInputP"
 - !private "So7UILabelC"
@@ -1267,9 +1426,9 @@ depends-nominal:
 - !private "So17UITextInputTraitsP"
 - !private "So34UITextPasteConfigurationSupportingP"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "s14_ArrayProtocolP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -1278,6 +1437,7 @@ depends-nominal:
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
@@ -1299,18 +1459,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "e6acc85e43dc8ed68f458d24be5efb9a"

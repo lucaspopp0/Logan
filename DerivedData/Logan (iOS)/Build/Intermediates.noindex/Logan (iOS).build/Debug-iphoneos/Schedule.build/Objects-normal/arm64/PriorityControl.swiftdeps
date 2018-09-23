@@ -14,6 +14,8 @@ depends-top-level:
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
 - "CGRect"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "NSCoder"
 - "Priority"
 - "PriorityControl"
@@ -21,7 +23,8 @@ depends-top-level:
 - !private "UIControlEvents"
 - "UISegmentedControl"
 depends-member:
-- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "Priority"]
 - !private ["So15CALayerDelegateP", "UIControlEvents"]
@@ -35,11 +38,15 @@ depends-member:
 - !private ["So15CALayerDelegateP", "tintColor"]
 - !private ["So15CALayerDelegateP", "unifiedInit"]
 - !private ["So15CALayerDelegateP", "updateTint"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["s7CVarArgP", "Priority"]
 - !private ["s7CVarArgP", "UIControlEvents"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "addTarget"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "insertSegment"]
 - !private ["s7CVarArgP", "priority"]
@@ -48,12 +55,15 @@ depends-member:
 - !private ["s7CVarArgP", "tintColor"]
 - !private ["s7CVarArgP", "unifiedInit"]
 - !private ["s7CVarArgP", "updateTint"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10ComparableP", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "Priority"]
 - !private ["s28CustomDebugStringConvertibleP", "UIControlEvents"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addTarget"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "insertSegment"]
 - !private ["s28CustomDebugStringConvertibleP", "priority"]
@@ -64,13 +74,16 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "updateTint"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s23CustomStringConvertibleP", "Priority"]
 - !private ["s23CustomStringConvertibleP", "UIControlEvents"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "addTarget"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "insertSegment"]
 - !private ["s23CustomStringConvertibleP", "priority"]
@@ -79,48 +92,58 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "tintColor"]
 - !private ["s23CustomStringConvertibleP", "unifiedInit"]
 - !private ["s23CustomStringConvertibleP", "updateTint"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EquatableP", "Priority"]
-- !private ["s9EquatableP", "UIControlEvents"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "addTarget"]
-- !private ["s9EquatableP", "color"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "insertSegment"]
-- !private ["s9EquatableP", "priority"]
-- !private ["s9EquatableP", "rawValue"]
-- !private ["s9EquatableP", "removeAllSegments"]
-- !private ["s9EquatableP", "selectedSegmentIndex"]
-- !private ["s9EquatableP", "tintColor"]
-- !private ["s9EquatableP", "unifiedInit"]
-- !private ["s9EquatableP", "updateTint"]
-- !private ["s9EquatableP", "valueChanged"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SQ", "Priority"]
+- !private ["SQ", "UIControlEvents"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "addTarget"]
+- !private ["SQ", "color"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "insertSegment"]
+- !private ["SQ", "priority"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "removeAllSegments"]
+- !private ["SQ", "selectedSegmentIndex"]
+- !private ["SQ", "tintColor"]
+- !private ["SQ", "unifiedInit"]
+- !private ["SQ", "updateTint"]
+- !private ["SQ", "valueChanged"]
+- !private ["So15UIControlEventsV", "valueChanged"]
 - !private ["s25ExpressibleByArrayLiteralP", "valueChanged"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "Priority"]
-- !private ["s8HashableP", "UIControlEvents"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "addTarget"]
-- !private ["s8HashableP", "color"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "insertSegment"]
-- !private ["s8HashableP", "priority"]
-- !private ["s8HashableP", "rawValue"]
-- !private ["s8HashableP", "removeAllSegments"]
-- !private ["s8HashableP", "selectedSegmentIndex"]
-- !private ["s8HashableP", "tintColor"]
-- !private ["s8HashableP", "unifiedInit"]
-- !private ["s8HashableP", "updateTint"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "Priority"]
+- !private ["SH", "UIControlEvents"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "addTarget"]
+- !private ["SH", "color"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "insertSegment"]
+- !private ["SH", "priority"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "removeAllSegments"]
+- !private ["SH", "selectedSegmentIndex"]
+- !private ["SH", "tintColor"]
+- !private ["SH", "unifiedInit"]
+- !private ["SH", "updateTint"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "Priority"]
 - !private ["So8NSCodingP", "UIControlEvents"]
@@ -147,18 +170,18 @@ depends-member:
 - !private ["So8NSObjectC", "tintColor"]
 - ["So8NSObjectC", "unifiedInit"]
 - ["So8NSObjectC", "updateTint"]
-- !private ["So16NSObjectProtocolP", "Priority"]
-- !private ["So16NSObjectProtocolP", "UIControlEvents"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "addTarget"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "insertSegment"]
-- !private ["So16NSObjectProtocolP", "priority"]
-- !private ["So16NSObjectProtocolP", "removeAllSegments"]
-- !private ["So16NSObjectProtocolP", "selectedSegmentIndex"]
-- !private ["So16NSObjectProtocolP", "tintColor"]
-- !private ["So16NSObjectProtocolP", "unifiedInit"]
-- !private ["So16NSObjectProtocolP", "updateTint"]
+- !private ["So8NSObjectP", "Priority"]
+- !private ["So8NSObjectP", "UIControlEvents"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addTarget"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "insertSegment"]
+- !private ["So8NSObjectP", "priority"]
+- !private ["So8NSObjectP", "removeAllSegments"]
+- !private ["So8NSObjectP", "selectedSegmentIndex"]
+- !private ["So8NSObjectP", "tintColor"]
+- !private ["So8NSObjectP", "unifiedInit"]
+- !private ["So8NSObjectP", "updateTint"]
 - !private ["s9OptionSetP", "valueChanged"]
 - !private ["8Schedule8PriorityO", "color"]
 - !private ["8Schedule8PriorityO", "deinit"]
@@ -169,7 +192,6 @@ depends-member:
 - ["8Schedule15PriorityControlC", "Priority"]
 - !private ["8Schedule15PriorityControlC", "UIControlEvents"]
 - !private ["8Schedule15PriorityControlC", "addTarget"]
-- ["8Schedule15PriorityControlC", "deinit"]
 - ["8Schedule15PriorityControlC", "init"]
 - !private ["8Schedule15PriorityControlC", "insertSegment"]
 - ["8Schedule15PriorityControlC", "priority"]
@@ -178,16 +200,22 @@ depends-member:
 - !private ["8Schedule15PriorityControlC", "tintColor"]
 - !private ["8Schedule15PriorityControlC", "unifiedInit"]
 - !private ["8Schedule15PriorityControlC", "updateTint"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s16RawRepresentableP", "color"]
-- !private ["s16RawRepresentableP", "init"]
-- !private ["s16RawRepresentableP", "rawValue"]
-- !private ["s16RawRepresentableP", "valueChanged"]
-- !private ["s8SequenceP", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["SY", "color"]
+- !private ["SY", "init"]
+- !private ["SY", "rawValue"]
+- !private ["SY", "valueChanged"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
 - !private ["s10SetAlgebraP", "valueChanged"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
 - !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "Priority"]
 - !private ["So29UIAccessibilityIdentificationP", "UIControlEvents"]
@@ -238,7 +266,6 @@ depends-member:
 - !private ["So9UIControlC", "tintColor"]
 - ["So9UIControlC", "unifiedInit"]
 - ["So9UIControlC", "updateTint"]
-- !private ["SC15UIControlEventsV", "valueChanged"]
 - !private ["So17UICoordinateSpaceP", "Priority"]
 - !private ["So17UICoordinateSpaceP", "UIControlEvents"]
 - ["So17UICoordinateSpaceP", ""]
@@ -287,6 +314,18 @@ depends-member:
 - !private ["So11UIFocusItemP", "tintColor"]
 - !private ["So11UIFocusItemP", "unifiedInit"]
 - !private ["So11UIFocusItemP", "updateTint"]
+- !private ["So20UIFocusItemContainerP", "Priority"]
+- !private ["So20UIFocusItemContainerP", "UIControlEvents"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "addTarget"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "insertSegment"]
+- !private ["So20UIFocusItemContainerP", "priority"]
+- !private ["So20UIFocusItemContainerP", "removeAllSegments"]
+- !private ["So20UIFocusItemContainerP", "selectedSegmentIndex"]
+- !private ["So20UIFocusItemContainerP", "tintColor"]
+- !private ["So20UIFocusItemContainerP", "unifiedInit"]
+- !private ["So20UIFocusItemContainerP", "updateTint"]
 - !private ["So30UIPasteConfigurationSupportingP", "Priority"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIControlEvents"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -362,6 +401,18 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "tintColor"]
 - !private ["So18UITraitEnvironmentP", "unifiedInit"]
 - !private ["So18UITraitEnvironmentP", "updateTint"]
+- !private ["So23UIUserActivityRestoringP", "Priority"]
+- !private ["So23UIUserActivityRestoringP", "UIControlEvents"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addTarget"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "insertSegment"]
+- !private ["So23UIUserActivityRestoringP", "priority"]
+- !private ["So23UIUserActivityRestoringP", "removeAllSegments"]
+- !private ["So23UIUserActivityRestoringP", "selectedSegmentIndex"]
+- !private ["So23UIUserActivityRestoringP", "tintColor"]
+- !private ["So23UIUserActivityRestoringP", "unifiedInit"]
+- !private ["So23UIUserActivityRestoringP", "updateTint"]
 - ["So6UIViewC", "CGRect"]
 - ["So6UIViewC", "NSCoder"]
 - ["So6UIViewC", "Priority"]
@@ -389,9 +440,14 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "updateTint"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Priority"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIControlEvents"]
@@ -407,58 +463,63 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateTint"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
 - "So15CALayerDelegateP"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
+- !private "Sl"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "s9OptionSetP"
 - !private "8Schedule8PriorityO"
 - "8Schedule15PriorityControlC"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s16RawRepresentableP"
-- !private "s8SequenceP"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
 - !private "s10SetAlgebraP"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
 - "So9UIControlC"
-- !private "SC15UIControlEventsV"
 - "So17UICoordinateSpaceP"
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So18UISegmentedControlC"
 - "So35UISpringLoadedInteractionSupportingP"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -488,18 +549,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "2f2415de49296fa2539bae980b38e759"

@@ -17,6 +17,8 @@ depends-top-level:
 - !private "CGFloat"
 - !private "CGRect"
 - "Class"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - !private "ScheduleHeader"
 - !private "ScheduleListSeparator"
 - "ScheduleListView"
@@ -28,14 +30,20 @@ depends-member:
 - !private ["Sa", "count"]
 - !private ["Sa", "removeFirst"]
 - !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "append"]
+- !private ["s13ArrayProtocolP", "classes"]
+- !private ["s13ArrayProtocolP", "count"]
+- !private ["s13ArrayProtocolP", "removeFirst"]
+- !private ["s13ArrayProtocolP", "subscript"]
+- !private ["s13ArrayProtocolP", "title"]
 - !private ["s10ArraySliceV", "classes"]
 - !private ["s10ArraySliceV", "title"]
-- !private ["s23BidirectionalCollectionP", "append"]
-- !private ["s23BidirectionalCollectionP", "classes"]
-- !private ["s23BidirectionalCollectionP", "count"]
-- !private ["s23BidirectionalCollectionP", "removeFirst"]
-- !private ["s23BidirectionalCollectionP", "subscript"]
-- !private ["s23BidirectionalCollectionP", "title"]
+- !private ["SK", "append"]
+- !private ["SK", "classes"]
+- !private ["SK", "count"]
+- !private ["SK", "removeFirst"]
+- !private ["SK", "subscript"]
+- !private ["SK", "title"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "CGRect"]
 - !private ["So15CALayerDelegateP", "ScheduleHeader"]
@@ -48,18 +56,24 @@ depends-member:
 - !private ["So15CALayerDelegateP", "configure"]
 - !private ["So15CALayerDelegateP", "frame"]
 - !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "removeFromSuperview"]
 - !private ["So15CALayerDelegateP", "sections"]
 - !private ["So15CALayerDelegateP", "sizeToFit"]
 - !private ["So15CALayerDelegateP", "title"]
 - !private ["So15CALayerDelegateP", "views"]
-- !private ["SC7CGPointV", "x"]
-- !private ["SC7CGPointV", "y"]
-- !private ["SC6CGRectV", "init"]
-- !private ["SC6CGRectV", "origin"]
-- !private ["SC6CGRectV", "size"]
-- !private ["SC6CGSizeV", "height"]
-- !private ["SC6CGSizeV", "width"]
+- !private ["So7CGPointV", "x"]
+- !private ["So7CGPointV", "y"]
+- !private ["So6CGRectV", "init"]
+- !private ["So6CGRectV", "origin"]
+- !private ["So6CGRectV", "size"]
+- !private ["So6CGSizeV", "height"]
+- !private ["So6CGSizeV", "width"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "append"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "removeFirst"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "subscript"]
 - !private ["s7CVarArgP", "CGRect"]
 - !private ["s7CVarArgP", "ScheduleHeader"]
 - !private ["s7CVarArgP", "ScheduleListSeparator"]
@@ -74,6 +88,7 @@ depends-member:
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "frame"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "removeFirst"]
 - !private ["s7CVarArgP", "removeFromSuperview"]
 - !private ["s7CVarArgP", "sections"]
@@ -81,12 +96,12 @@ depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "title"]
 - !private ["s7CVarArgP", "views"]
-- !private ["s10CollectionP", "append"]
-- !private ["s10CollectionP", "classes"]
-- !private ["s10CollectionP", "count"]
-- !private ["s10CollectionP", "removeFirst"]
-- !private ["s10CollectionP", "subscript"]
-- !private ["s10CollectionP", "title"]
+- !private ["Sl", "append"]
+- !private ["Sl", "classes"]
+- !private ["Sl", "count"]
+- !private ["Sl", "removeFirst"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "title"]
 - !private ["s28CustomDebugStringConvertibleP", "CGRect"]
 - !private ["s28CustomDebugStringConvertibleP", "ScheduleHeader"]
 - !private ["s28CustomDebugStringConvertibleP", "ScheduleListSeparator"]
@@ -101,6 +116,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
 - !private ["s28CustomDebugStringConvertibleP", "height"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "origin"]
 - !private ["s28CustomDebugStringConvertibleP", "removeFirst"]
@@ -151,6 +167,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "frame"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "removeFirst"]
 - !private ["s23CustomStringConvertibleP", "removeFromSuperview"]
 - !private ["s23CustomStringConvertibleP", "sections"]
@@ -158,58 +175,59 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "title"]
 - !private ["s23CustomStringConvertibleP", "views"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "append"]
-- !private ["s9DecodableP", "count"]
-- !private ["s9DecodableP", "height"]
-- !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "origin"]
-- !private ["s9DecodableP", "removeFirst"]
-- !private ["s9DecodableP", "size"]
-- !private ["s9DecodableP", "subscript"]
-- !private ["s9DecodableP", "width"]
-- !private ["s9DecodableP", "x"]
-- !private ["s9DecodableP", "y"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "append"]
-- !private ["s9EncodableP", "count"]
-- !private ["s9EncodableP", "height"]
-- !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "origin"]
-- !private ["s9EncodableP", "removeFirst"]
-- !private ["s9EncodableP", "size"]
-- !private ["s9EncodableP", "subscript"]
-- !private ["s9EncodableP", "width"]
-- !private ["s9EncodableP", "x"]
-- !private ["s9EncodableP", "y"]
-- !private ["s9EquatableP", "CGRect"]
-- !private ["s9EquatableP", "ScheduleHeader"]
-- !private ["s9EquatableP", "ScheduleListSeparator"]
-- !private ["s9EquatableP", "ScheduleView"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "addSubview"]
-- !private ["s9EquatableP", "append"]
-- !private ["s9EquatableP", "arrangeViews"]
-- !private ["s9EquatableP", "classToDisplay"]
-- !private ["s9EquatableP", "classes"]
-- !private ["s9EquatableP", "configure"]
-- !private ["s9EquatableP", "count"]
-- !private ["s9EquatableP", "frame"]
-- !private ["s9EquatableP", "height"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "origin"]
-- !private ["s9EquatableP", "removeFirst"]
-- !private ["s9EquatableP", "removeFromSuperview"]
-- !private ["s9EquatableP", "sections"]
-- !private ["s9EquatableP", "size"]
-- !private ["s9EquatableP", "sizeToFit"]
-- !private ["s9EquatableP", "subscript"]
-- !private ["s9EquatableP", "title"]
-- !private ["s9EquatableP", "views"]
-- !private ["s9EquatableP", "width"]
-- !private ["s9EquatableP", "x"]
-- !private ["s9EquatableP", "y"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- !private ["Se", "height"]
+- !private ["Se", "init"]
+- !private ["Se", "origin"]
+- !private ["Se", "removeFirst"]
+- !private ["Se", "size"]
+- !private ["Se", "subscript"]
+- !private ["Se", "width"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- !private ["SE", "height"]
+- !private ["SE", "init"]
+- !private ["SE", "origin"]
+- !private ["SE", "removeFirst"]
+- !private ["SE", "size"]
+- !private ["SE", "subscript"]
+- !private ["SE", "width"]
+- !private ["SE", "x"]
+- !private ["SE", "y"]
+- !private ["SQ", "CGRect"]
+- !private ["SQ", "ScheduleHeader"]
+- !private ["SQ", "ScheduleListSeparator"]
+- !private ["SQ", "ScheduleView"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "addSubview"]
+- !private ["SQ", "append"]
+- !private ["SQ", "arrangeViews"]
+- !private ["SQ", "classToDisplay"]
+- !private ["SQ", "classes"]
+- !private ["SQ", "configure"]
+- !private ["SQ", "count"]
+- !private ["SQ", "frame"]
+- !private ["SQ", "height"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "origin"]
+- !private ["SQ", "removeFirst"]
+- !private ["SQ", "removeFromSuperview"]
+- !private ["SQ", "sections"]
+- !private ["SQ", "size"]
+- !private ["SQ", "sizeToFit"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "title"]
+- !private ["SQ", "views"]
+- !private ["SQ", "width"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "classes"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
@@ -217,30 +235,36 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "title"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "CGRect"]
-- !private ["s8HashableP", "ScheduleHeader"]
-- !private ["s8HashableP", "ScheduleListSeparator"]
-- !private ["s8HashableP", "ScheduleView"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "addSubview"]
-- !private ["s8HashableP", "arrangeViews"]
-- !private ["s8HashableP", "classToDisplay"]
-- !private ["s8HashableP", "configure"]
-- !private ["s8HashableP", "frame"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "removeFromSuperview"]
-- !private ["s8HashableP", "sections"]
-- !private ["s8HashableP", "sizeToFit"]
-- !private ["s8HashableP", "title"]
-- !private ["s8HashableP", "views"]
+- !private ["SH", "CGRect"]
+- !private ["SH", "ScheduleHeader"]
+- !private ["SH", "ScheduleListSeparator"]
+- !private ["SH", "ScheduleView"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "addSubview"]
+- !private ["SH", "append"]
+- !private ["SH", "arrangeViews"]
+- !private ["SH", "classToDisplay"]
+- !private ["SH", "classes"]
+- !private ["SH", "configure"]
+- !private ["SH", "count"]
+- !private ["SH", "frame"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "removeFirst"]
+- !private ["SH", "removeFromSuperview"]
+- !private ["SH", "sections"]
+- !private ["SH", "sizeToFit"]
+- !private ["SH", "subscript"]
+- !private ["SH", "title"]
+- !private ["SH", "views"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s17MutableCollectionP", "append"]
-- !private ["s17MutableCollectionP", "classes"]
-- !private ["s17MutableCollectionP", "count"]
-- !private ["s17MutableCollectionP", "removeFirst"]
-- !private ["s17MutableCollectionP", "subscript"]
-- !private ["s17MutableCollectionP", "title"]
+- !private ["SM", "append"]
+- !private ["SM", "classes"]
+- !private ["SM", "count"]
+- !private ["SM", "removeFirst"]
+- !private ["SM", "subscript"]
+- !private ["SM", "title"]
 - !private ["So8NSCodingP", "CGRect"]
 - !private ["So8NSCodingP", "ScheduleHeader"]
 - !private ["So8NSCodingP", "ScheduleListSeparator"]
@@ -251,6 +275,7 @@ depends-member:
 - !private ["So8NSCodingP", "classToDisplay"]
 - !private ["So8NSCodingP", "configure"]
 - !private ["So8NSCodingP", "frame"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "removeFromSuperview"]
 - !private ["So8NSCodingP", "sections"]
@@ -271,42 +296,46 @@ depends-member:
 - !private ["So8NSObjectC", "configure"]
 - !private ["So8NSObjectC", "frame"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "reloadData"]
 - !private ["So8NSObjectC", "removeFromSuperview"]
 - ["So8NSObjectC", "sections"]
 - ["So8NSObjectC", "sizeToFit"]
 - !private ["So8NSObjectC", "title"]
 - ["So8NSObjectC", "views"]
-- !private ["So16NSObjectProtocolP", "CGRect"]
-- !private ["So16NSObjectProtocolP", "ScheduleHeader"]
-- !private ["So16NSObjectProtocolP", "ScheduleListSeparator"]
-- !private ["So16NSObjectProtocolP", "ScheduleView"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "addSubview"]
-- !private ["So16NSObjectProtocolP", "arrangeViews"]
-- !private ["So16NSObjectProtocolP", "classToDisplay"]
-- !private ["So16NSObjectProtocolP", "configure"]
-- !private ["So16NSObjectProtocolP", "frame"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "removeFromSuperview"]
-- !private ["So16NSObjectProtocolP", "sections"]
-- !private ["So16NSObjectProtocolP", "sizeToFit"]
-- !private ["So16NSObjectProtocolP", "title"]
-- !private ["So16NSObjectProtocolP", "views"]
-- !private ["s22RandomAccessCollectionP", "append"]
-- !private ["s22RandomAccessCollectionP", "classes"]
-- !private ["s22RandomAccessCollectionP", "count"]
-- !private ["s22RandomAccessCollectionP", "removeFirst"]
-- !private ["s22RandomAccessCollectionP", "subscript"]
-- !private ["s22RandomAccessCollectionP", "title"]
-- !private ["s26RangeReplaceableCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "classes"]
-- !private ["s26RangeReplaceableCollectionP", "count"]
-- !private ["s26RangeReplaceableCollectionP", "removeFirst"]
-- !private ["s26RangeReplaceableCollectionP", "subscript"]
-- !private ["s26RangeReplaceableCollectionP", "title"]
+- !private ["So8NSObjectP", "CGRect"]
+- !private ["So8NSObjectP", "ScheduleHeader"]
+- !private ["So8NSObjectP", "ScheduleListSeparator"]
+- !private ["So8NSObjectP", "ScheduleView"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addSubview"]
+- !private ["So8NSObjectP", "arrangeViews"]
+- !private ["So8NSObjectP", "classToDisplay"]
+- !private ["So8NSObjectP", "configure"]
+- !private ["So8NSObjectP", "frame"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "removeFromSuperview"]
+- !private ["So8NSObjectP", "sections"]
+- !private ["So8NSObjectP", "sizeToFit"]
+- !private ["So8NSObjectP", "title"]
+- !private ["So8NSObjectP", "views"]
+- !private ["Sk", "append"]
+- !private ["Sk", "classes"]
+- !private ["Sk", "count"]
+- !private ["Sk", "removeFirst"]
+- !private ["Sk", "subscript"]
+- !private ["Sk", "title"]
+- !private ["Sm", "append"]
+- !private ["Sm", "classes"]
+- !private ["Sm", "count"]
+- !private ["Sm", "removeFirst"]
+- !private ["Sm", "subscript"]
+- !private ["Sm", "title"]
+- !private ["8Schedule0A6HeaderC", "deinit"]
 - !private ["8Schedule0A6HeaderC", "init"]
 - !private ["8Schedule0A6HeaderC", "title"]
+- !private ["8Schedule0A13ListSeparatorC", "deinit"]
 - !private ["8Schedule0A13ListSeparatorC", "init"]
 - !private ["8Schedule0A8ListViewC", "CGFloat"]
 - !private ["8Schedule0A8ListViewC", "CGRect"]
@@ -318,7 +347,7 @@ depends-member:
 - ["8Schedule0A8ListViewC", "UIView"]
 - !private ["8Schedule0A8ListViewC", "addSubview"]
 - ["8Schedule0A8ListViewC", "arrangeViews"]
-- ["8Schedule0A8ListViewC", "deinit"]
+- !private ["8Schedule0A8ListViewC", "deinit"]
 - !private ["8Schedule0A8ListViewC", "frame"]
 - ["8Schedule0A8ListViewC", "init"]
 - ["8Schedule0A8ListViewC", "reloadData"]
@@ -327,13 +356,14 @@ depends-member:
 - ["8Schedule0A8ListViewC", "views"]
 - !private ["8Schedule0A4ViewC", "classToDisplay"]
 - !private ["8Schedule0A4ViewC", "configure"]
+- !private ["8Schedule0A4ViewC", "deinit"]
 - !private ["8Schedule0A4ViewC", "init"]
-- !private ["s8SequenceP", "append"]
-- !private ["s8SequenceP", "classes"]
-- !private ["s8SequenceP", "count"]
-- !private ["s8SequenceP", "removeFirst"]
-- !private ["s8SequenceP", "subscript"]
-- !private ["s8SequenceP", "title"]
+- !private ["ST", "append"]
+- !private ["ST", "classes"]
+- !private ["ST", "count"]
+- !private ["ST", "removeFirst"]
+- !private ["ST", "subscript"]
+- !private ["ST", "title"]
 - !private ["So29UIAccessibilityIdentificationP", "CGRect"]
 - !private ["So29UIAccessibilityIdentificationP", "ScheduleHeader"]
 - !private ["So29UIAccessibilityIdentificationP", "ScheduleListSeparator"]
@@ -344,6 +374,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "classToDisplay"]
 - !private ["So29UIAccessibilityIdentificationP", "configure"]
 - !private ["So29UIAccessibilityIdentificationP", "frame"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "removeFromSuperview"]
 - !private ["So29UIAccessibilityIdentificationP", "sections"]
@@ -361,6 +392,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "configure"]
 - !private ["So12UIAppearanceP", "frame"]
 - !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "removeFromSuperview"]
 - !private ["So12UIAppearanceP", "sections"]
 - !private ["So12UIAppearanceP", "sizeToFit"]
@@ -376,6 +408,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "classToDisplay"]
 - !private ["So21UIAppearanceContainerP", "configure"]
 - !private ["So21UIAppearanceContainerP", "frame"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "removeFromSuperview"]
 - !private ["So21UIAppearanceContainerP", "sections"]
@@ -393,6 +426,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "configure"]
 - !private ["So17UICoordinateSpaceP", "frame"]
 - !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "removeFromSuperview"]
 - !private ["So17UICoordinateSpaceP", "sections"]
 - !private ["So17UICoordinateSpaceP", "sizeToFit"]
@@ -408,6 +442,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "classToDisplay"]
 - !private ["So13UIDynamicItemP", "configure"]
 - !private ["So13UIDynamicItemP", "frame"]
+- !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "removeFromSuperview"]
 - !private ["So13UIDynamicItemP", "sections"]
@@ -425,6 +460,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "configure"]
 - !private ["So18UIFocusEnvironmentP", "frame"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "removeFromSuperview"]
 - !private ["So18UIFocusEnvironmentP", "sections"]
 - !private ["So18UIFocusEnvironmentP", "sizeToFit"]
@@ -441,11 +477,29 @@ depends-member:
 - !private ["So11UIFocusItemP", "configure"]
 - !private ["So11UIFocusItemP", "frame"]
 - !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "removeFromSuperview"]
 - !private ["So11UIFocusItemP", "sections"]
 - !private ["So11UIFocusItemP", "sizeToFit"]
 - !private ["So11UIFocusItemP", "title"]
 - !private ["So11UIFocusItemP", "views"]
+- !private ["So20UIFocusItemContainerP", "CGRect"]
+- !private ["So20UIFocusItemContainerP", "ScheduleHeader"]
+- !private ["So20UIFocusItemContainerP", "ScheduleListSeparator"]
+- !private ["So20UIFocusItemContainerP", "ScheduleView"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "addSubview"]
+- !private ["So20UIFocusItemContainerP", "arrangeViews"]
+- !private ["So20UIFocusItemContainerP", "classToDisplay"]
+- !private ["So20UIFocusItemContainerP", "configure"]
+- !private ["So20UIFocusItemContainerP", "frame"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "removeFromSuperview"]
+- !private ["So20UIFocusItemContainerP", "sections"]
+- !private ["So20UIFocusItemContainerP", "sizeToFit"]
+- !private ["So20UIFocusItemContainerP", "title"]
+- !private ["So20UIFocusItemContainerP", "views"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGRect"]
 - !private ["So30UIPasteConfigurationSupportingP", "ScheduleHeader"]
 - !private ["So30UIPasteConfigurationSupportingP", "ScheduleListSeparator"]
@@ -456,6 +510,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "classToDisplay"]
 - !private ["So30UIPasteConfigurationSupportingP", "configure"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "removeFromSuperview"]
 - !private ["So30UIPasteConfigurationSupportingP", "sections"]
@@ -476,6 +531,7 @@ depends-member:
 - !private ["So11UIResponderC", "configure"]
 - !private ["So11UIResponderC", "frame"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "reloadData"]
 - !private ["So11UIResponderC", "removeFromSuperview"]
 - ["So11UIResponderC", "sections"]
@@ -493,6 +549,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "configure"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "removeFromSuperview"]
 - !private ["So30UIResponderStandardEditActionsP", "sections"]
 - !private ["So30UIResponderStandardEditActionsP", "sizeToFit"]
@@ -509,11 +566,29 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "configure"]
 - !private ["So18UITraitEnvironmentP", "frame"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "removeFromSuperview"]
 - !private ["So18UITraitEnvironmentP", "sections"]
 - !private ["So18UITraitEnvironmentP", "sizeToFit"]
 - !private ["So18UITraitEnvironmentP", "title"]
 - !private ["So18UITraitEnvironmentP", "views"]
+- !private ["So23UIUserActivityRestoringP", "CGRect"]
+- !private ["So23UIUserActivityRestoringP", "ScheduleHeader"]
+- !private ["So23UIUserActivityRestoringP", "ScheduleListSeparator"]
+- !private ["So23UIUserActivityRestoringP", "ScheduleView"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addSubview"]
+- !private ["So23UIUserActivityRestoringP", "arrangeViews"]
+- !private ["So23UIUserActivityRestoringP", "classToDisplay"]
+- !private ["So23UIUserActivityRestoringP", "configure"]
+- !private ["So23UIUserActivityRestoringP", "frame"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "removeFromSuperview"]
+- !private ["So23UIUserActivityRestoringP", "sections"]
+- !private ["So23UIUserActivityRestoringP", "sizeToFit"]
+- !private ["So23UIUserActivityRestoringP", "title"]
+- !private ["So23UIUserActivityRestoringP", "views"]
 - !private ["So6UIViewC", "CGFloat"]
 - !private ["So6UIViewC", "CGRect"]
 - ["So6UIViewC", "Class"]
@@ -529,18 +604,13 @@ depends-member:
 - !private ["So6UIViewC", "configure"]
 - !private ["So6UIViewC", "frame"]
 - ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "init"]
 - ["So6UIViewC", "reloadData"]
 - !private ["So6UIViewC", "removeFromSuperview"]
 - ["So6UIViewC", "sections"]
 - ["So6UIViewC", "sizeToFit"]
 - !private ["So6UIViewC", "title"]
 - ["So6UIViewC", "views"]
-- !private ["s14_ArrayProtocolP", "append"]
-- !private ["s14_ArrayProtocolP", "classes"]
-- !private ["s14_ArrayProtocolP", "count"]
-- !private ["s14_ArrayProtocolP", "removeFirst"]
-- !private ["s14_ArrayProtocolP", "subscript"]
-- !private ["s14_ArrayProtocolP", "title"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CGRect"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "ScheduleHeader"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "ScheduleListSeparator"]
@@ -551,6 +621,7 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "classToDisplay"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "configure"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "frame"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "removeFromSuperview"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "sections"]
@@ -564,6 +635,10 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "title"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeFirst"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGRect"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ScheduleHeader"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ScheduleListSeparator"]
@@ -574,6 +649,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "classToDisplay"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "configure"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeFromSuperview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sections"]
@@ -594,37 +670,39 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "y"]
 depends-nominal:
 - !private "Sa"
+- !private "s13ArrayProtocolP"
 - !private "s10ArraySliceV"
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - !private "Sb"
 - "So15CALayerDelegateP"
-- !private "SC7CGPointV"
-- !private "SC6CGRectV"
-- !private "SC6CGSizeV"
+- !private "So7CGPointV"
+- !private "So6CGRectV"
+- !private "So6CGSizeV"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
+- !private "Sl"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
-- "s8HashableP"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - "So8NSCodingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
+- "So8NSObjectP"
+- !private "Sk"
+- !private "Sm"
 - !private "8Schedule0A6HeaderC"
 - !private "8Schedule0A13ListSeparatorC"
 - "8Schedule0A8ListViewC"
 - !private "8Schedule0A4ViewC"
-- !private "s8SequenceP"
+- !private "ST"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -632,15 +710,17 @@ depends-nominal:
 - "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - "So6UIViewC"
-- !private "s14_ArrayProtocolP"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 depends-dynamic-lookup:
@@ -661,18 +741,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "81150c892f100bb4756cbec447ea6dba"

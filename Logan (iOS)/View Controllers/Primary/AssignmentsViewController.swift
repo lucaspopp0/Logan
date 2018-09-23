@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DMListener {
+class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate, DMListener {
     
     @IBOutlet weak var syncButton: UIBarButtonItem!
     
@@ -25,6 +25,8 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
         DataManager.shared.addListener(self)
         
         tabBar.backgroundColor = UIColor.teal500
+        
+        registerForPreviewing(with: self, sourceView: tableView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -334,6 +336,35 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
                     tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
                 }
             }
+        }
+    }
+    
+    // MARK: - UIViewControllerPreviewingDelegate
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        if let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath), let previewController = UIStoryboard(name: "Previews", bundle: Bundle.main).instantiateViewController(withIdentifier: "Assignment Preview") as? AssignmentPreviewViewController {
+            previewController.loadViewIfNeeded()
+            
+            previewController.assignment = dataSections[indexPath.section].assignments[indexPath.row]
+            previewController.configure()
+            
+            previewController.preferredContentSize.height = previewController.taskList.frame.origin.y
+            
+            previewingContext.sourceRect = cell.frame
+            
+            return previewController
+        }
+        
+        return nil
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        if let assignmentPreview = viewControllerToCommit as? AssignmentPreviewViewController, let assignmentDetail = storyboard?.instantiateViewController(withIdentifier: "Assignment Detail") as? AssignmentTableViewController {
+            assignmentDetail.assignment = assignmentPreview.assignment
+            
+            DataManager.shared.pauseAutoUpdate()
+            
+            navigationController?.pushViewController(assignmentDetail, animated: false)
         }
     }
     

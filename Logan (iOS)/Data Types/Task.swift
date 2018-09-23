@@ -76,6 +76,16 @@ class Task: CKEnabled {
         }
     }
     
+    var isOverdue: Bool {
+        get {
+            if case let DueDate.specificDay(day) = dueDate {
+                return Date.daysBetween(Date(), and: day.dateValue!) < 0
+            }
+            
+            return false
+        }
+    }
+    
     var priority: Priority = Priority.normal {
         didSet {
             record["priority"] = priority.rawValue as CKRecordValue

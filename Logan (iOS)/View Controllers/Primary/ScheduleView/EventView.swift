@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit
 
 class EventView: UIView {
     
@@ -29,8 +30,24 @@ class EventView: UIView {
         }
     }
     
+    var calendarEvent: EKEvent? = nil {
+        didSet {
+            if let evt = calendarEvent {
+                title = evt.title
+                subtitle = evt.notes ?? ""
+                location = evt.location ?? ""
+                startTime = ClockTime(date: evt.startDate)
+                endTime = ClockTime(date: evt.endDate)
+                tintColor = UIColor(cgColor: evt.calendar.cgColor)
+            }
+            
+            layoutSubviews()
+        }
+    }
+    
     private let accent = UIView()
     private let stackView = UIStackView()
+    private let substacks: [UIStackView] = [UIStackView(), UIStackView()]
     private let timeLabel = UILabel()
     private let titleLabel = UILabel()
     private let subtitleLabel = UILabel()
@@ -104,20 +121,29 @@ class EventView: UIView {
         
         stackView.axis = UILayoutConstraintAxis.vertical
         stackView.spacing = 0
-        stackView.alignment = UIStackViewAlignment.leading
+        stackView.alignment = UIStackViewAlignment.fill
         stackView.distribution = UIStackViewDistribution.equalSpacing
         
-        stackView.addArrangedSubview(timeLabel)
-        stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(subtitleLabel)
-        stackView.addArrangedSubview(locationLabel)
+        for substack in substacks {
+            substack.axis = UILayoutConstraintAxis.horizontal
+            substack.spacing = 4
+            substack.alignment = UIStackViewAlignment.firstBaseline
+            substack.distribution = UIStackViewDistribution.equalSpacing
+            stackView.addArrangedSubview(substack)
+        }
+        
+        substacks[0].addArrangedSubview(titleLabel)
+        substacks[0].addArrangedSubview(timeLabel)
+        
+        substacks[1].addArrangedSubview(subtitleLabel)
+        substacks[1].addArrangedSubview(locationLabel)
         
         stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         timeLabel.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.regular)
         titleLabel.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.bold)
         subtitleLabel.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.regular)
-        locationLabel.font = UIFont.systemFont(ofSize: 11, weight: UIFont.Weight.regular)
+        locationLabel.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
         
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -150,18 +176,13 @@ class EventView: UIView {
         subtitleLabel.frame.size = subtitleLabel.sizeThatFits(bounds.size)
         locationLabel.frame.size = locationLabel.sizeThatFits(bounds.size)
         
-        var stackViewHeight: CGFloat = timeLabel.frame.size.height + titleLabel.frame.size.height
-        
-        if !subtitleLabel.isHidden {
-            stackViewHeight += subtitleLabel.frame.size.height
-        }
-        
-        if !locationLabel.isHidden {
-            stackViewHeight += locationLabel.frame.size.height
-        }
-        
         stackView.frame.size.width = bounds.size.width - 16
-        stackView.frame.size.height = stackViewHeight
+        
+        for substack in substacks {
+            substack.frame.size.height = substack.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        }
+        
+        stackView.frame.size.height = stackView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
         stackView.frame.origin.x = 8
         stackView.frame.origin.y = 6
     }

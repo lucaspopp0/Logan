@@ -10,6 +10,7 @@ depends-top-level:
 - !private "!"
 - !private "!="
 - !private "+"
+- !private "<"
 - !private "=="
 - !private "??"
 - "Assignment"
@@ -28,7 +29,9 @@ depends-top-level:
 - !private "DataManager"
 - !private "Date"
 - "DueDate"
+- "FloatLiteralType"
 - "Int"
+- "IntegerLiteralType"
 - "Priority"
 - "String"
 - "StringLiteralType"
@@ -41,8 +44,9 @@ depends-member:
 - !private ["11Logan__iOS_10AssignmentC", "record"]
 - !private ["11Logan__iOS_10BetterDateC", "init"]
 - !private ["11Logan__iOS_10BetterDateC", "stringValue"]
-- ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "isEmpty"]
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["SK", "isEmpty"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["11Logan__iOS_9CKEnabledC", "Assignment"]
 - !private ["11Logan__iOS_9CKEnabledC", "BetterDate"]
@@ -70,6 +74,7 @@ depends-member:
 - !private ["11Logan__iOS_9CKEnabledC", "courses"]
 - ["11Logan__iOS_9CKEnabledC", "dueDate"]
 - ["11Logan__iOS_9CKEnabledC", "init"]
+- ["11Logan__iOS_9CKEnabledC", "isOverdue"]
 - !private ["11Logan__iOS_9CKEnabledC", "max"]
 - ["11Logan__iOS_9CKEnabledC", "priority"]
 - !private ["11Logan__iOS_9CKEnabledC", "record"]
@@ -81,13 +86,18 @@ depends-member:
 - !private ["So8CKRecordC", "modificationDate"]
 - !private ["So8CKRecordC", "recordID"]
 - !private ["So8CKRecordC", "subscript"]
-- !private ["So10CKRecordIDC", "isEqual"]
-- !private ["So13CKRecordValueP", "init"]
-- !private ["So13CKRecordValueP", "isEmpty"]
-- !private ["So13CKRecordValueP", "recordID"]
-- !private ["So11CKReferenceC", "init"]
-- !private ["So11CKReferenceC", "recordID"]
-- !private ["SC17CKReferenceActionO", "none"]
+- !private ["So23CKRecordKeyValueSettingP", "init"]
+- !private ["So23CKRecordKeyValueSettingP", "modificationDate"]
+- !private ["So23CKRecordKeyValueSettingP", "recordID"]
+- !private ["So23CKRecordKeyValueSettingP", "subscript"]
+- !private ["8CloudKit24CKRecordValueConvertibleP", "isEmpty"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "daysBetween"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "isEmpty"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "recordID"]
+- !private ["So17CKReferenceActionV", "none"]
 - !private ["So15CNKeyDescriptorP", "isEmpty"]
 - !private ["s7CVarArgP", "BetterDate"]
 - !private ["s7CVarArgP", "CKRecord"]
@@ -111,6 +121,7 @@ depends-member:
 - !private ["s7CVarArgP", "dueDate"]
 - !private ["s7CVarArgP", "extracurriculars"]
 - ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "isEqual"]
 - !private ["s7CVarArgP", "max"]
@@ -124,13 +135,17 @@ depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "title"]
 - !private ["s7CVarArgP", "userDescription"]
+- !private ["11Logan__iOS_11CalendarDayC", "dateValue"]
 - !private ["11Logan__iOS_11CalendarDayC", "init"]
 - !private ["11Logan__iOS_11CalendarDayC", "stringValue"]
-- ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "isEmpty"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- !private ["Sl", "isEmpty"]
 - !private ["11Logan__iOS_10CommitmentP", "record"]
-- ["s10ComparableP", "init"]
-- !private ["s10ComparableP", "isEmpty"]
+- !private ["SL", "daysBetween"]
+- ["SL", "init"]
+- ["SL", "init"]
+- !private ["SL", "isEmpty"]
 - !private ["11Logan__iOS_6CourseC", "deinit"]
 - !private ["11Logan__iOS_6CourseC", "record"]
 - !private ["s28CustomDebugStringConvertibleP", "BetterDate"]
@@ -151,8 +166,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "completed"]
 - !private ["s28CustomDebugStringConvertibleP", "completionDate"]
 - !private ["s28CustomDebugStringConvertibleP", "courses"]
+- !private ["s28CustomDebugStringConvertibleP", "daysBetween"]
 - !private ["s28CustomDebugStringConvertibleP", "dueDate"]
 - !private ["s28CustomDebugStringConvertibleP", "extracurriculars"]
+- ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "isEqual"]
@@ -168,11 +185,17 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s28CustomDebugStringConvertibleP", "userDescription"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "daysBetween"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "daysBetween"]
+- ["s17CustomReflectableP", "init"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "recordID"]
+- !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "BetterDate"]
 - !private ["s23CustomStringConvertibleP", "CKRecord"]
 - !private ["s23CustomStringConvertibleP", "CKReference"]
@@ -192,8 +215,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "completed"]
 - !private ["s23CustomStringConvertibleP", "completionDate"]
 - !private ["s23CustomStringConvertibleP", "courses"]
+- !private ["s23CustomStringConvertibleP", "daysBetween"]
 - !private ["s23CustomStringConvertibleP", "dueDate"]
 - !private ["s23CustomStringConvertibleP", "extracurriculars"]
+- ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "isEqual"]
@@ -212,106 +237,127 @@ depends-member:
 - !private ["11Logan__iOS_11DataManagerC", "extracurriculars"]
 - !private ["11Logan__iOS_11DataManagerC", "semesters"]
 - !private ["11Logan__iOS_11DataManagerC", "shared"]
+- !private ["10Foundation4DateV", "daysBetween"]
 - !private ["10Foundation4DateV", "init"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "isEmpty"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "daysBetween"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "recordID"]
+- !private ["Se", "subscript"]
 - !private ["11Logan__iOS_7DueDateO", "asap"]
 - ["11Logan__iOS_7DueDateO", "eventually"]
 - !private ["11Logan__iOS_7DueDateO", "intValue"]
 - ["11Logan__iOS_7DueDateO", "specificDay"]
 - ["11Logan__iOS_7DueDateO", "specificDeadline"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "isEmpty"]
-- !private ["s9EquatableP", "BetterDate"]
-- !private ["s9EquatableP", "CKRecord"]
-- !private ["s9EquatableP", "CKReference"]
-- !private ["s9EquatableP", "CKReferenceAction"]
-- !private ["s9EquatableP", "CalendarDay"]
-- !private ["s9EquatableP", "DataManager"]
-- !private ["s9EquatableP", "Date"]
-- ["s9EquatableP", "DueDate"]
-- !private ["s9EquatableP", "ID"]
-- !private ["s9EquatableP", "NEXT_SAVE_ID"]
-- ["s9EquatableP", "Priority"]
-- !private ["s9EquatableP", "Task"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "assignments"]
-- !private ["s9EquatableP", "commitment"]
-- !private ["s9EquatableP", "completed"]
-- !private ["s9EquatableP", "completionDate"]
-- !private ["s9EquatableP", "courses"]
-- !private ["s9EquatableP", "dueDate"]
-- !private ["s9EquatableP", "extracurriculars"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "isEmpty"]
-- !private ["s9EquatableP", "isEqual"]
-- !private ["s9EquatableP", "max"]
-- !private ["s9EquatableP", "modificationDate"]
-- !private ["s9EquatableP", "none"]
-- ["s9EquatableP", "normal"]
-- !private ["s9EquatableP", "priority"]
-- !private ["s9EquatableP", "rawValue"]
-- !private ["s9EquatableP", "record"]
-- !private ["s9EquatableP", "recordID"]
-- !private ["s9EquatableP", "relatedAssignment"]
-- !private ["s9EquatableP", "semesters"]
-- !private ["s9EquatableP", "shared"]
-- !private ["s9EquatableP", "subscript"]
-- !private ["s9EquatableP", "title"]
-- !private ["s9EquatableP", "userDescription"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "daysBetween"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "recordID"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "BetterDate"]
+- !private ["SQ", "CKRecord"]
+- !private ["SQ", "CKReference"]
+- !private ["SQ", "CKReferenceAction"]
+- !private ["SQ", "CalendarDay"]
+- !private ["SQ", "DataManager"]
+- !private ["SQ", "Date"]
+- ["SQ", "DueDate"]
+- !private ["SQ", "ID"]
+- !private ["SQ", "NEXT_SAVE_ID"]
+- ["SQ", "Priority"]
+- !private ["SQ", "Task"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "assignments"]
+- !private ["SQ", "commitment"]
+- !private ["SQ", "completed"]
+- !private ["SQ", "completionDate"]
+- !private ["SQ", "courses"]
+- !private ["SQ", "daysBetween"]
+- !private ["SQ", "dueDate"]
+- !private ["SQ", "extracurriculars"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "isEmpty"]
+- !private ["SQ", "isEqual"]
+- !private ["SQ", "max"]
+- !private ["SQ", "modificationDate"]
+- !private ["SQ", "none"]
+- ["SQ", "normal"]
+- !private ["SQ", "priority"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "record"]
+- !private ["SQ", "recordID"]
+- !private ["SQ", "relatedAssignment"]
+- !private ["SQ", "semesters"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "title"]
+- !private ["SQ", "userDescription"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s23ExpressibleByNilLiteralP", "recordID"]
+- !private ["s23ExpressibleByNilLiteralP", "subscript"]
+- ["s26ExpressibleByStringLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
 - !private ["11Logan__iOS_15ExtracurricularC", "deinit"]
 - !private ["11Logan__iOS_15ExtracurricularC", "record"]
-- !private ["s8HashableP", "BetterDate"]
-- !private ["s8HashableP", "CKRecord"]
-- !private ["s8HashableP", "CKReference"]
-- !private ["s8HashableP", "CKReferenceAction"]
-- !private ["s8HashableP", "CalendarDay"]
-- !private ["s8HashableP", "DataManager"]
-- !private ["s8HashableP", "Date"]
-- ["s8HashableP", "DueDate"]
-- !private ["s8HashableP", "ID"]
-- !private ["s8HashableP", "NEXT_SAVE_ID"]
-- ["s8HashableP", "Priority"]
-- !private ["s8HashableP", "Task"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "assignments"]
-- !private ["s8HashableP", "commitment"]
-- !private ["s8HashableP", "completed"]
-- !private ["s8HashableP", "completionDate"]
-- !private ["s8HashableP", "courses"]
-- !private ["s8HashableP", "dueDate"]
-- !private ["s8HashableP", "extracurriculars"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "isEmpty"]
-- !private ["s8HashableP", "isEqual"]
-- !private ["s8HashableP", "max"]
-- !private ["s8HashableP", "modificationDate"]
-- !private ["s8HashableP", "none"]
-- ["s8HashableP", "normal"]
-- !private ["s8HashableP", "priority"]
-- !private ["s8HashableP", "rawValue"]
-- !private ["s8HashableP", "record"]
-- !private ["s8HashableP", "recordID"]
-- !private ["s8HashableP", "relatedAssignment"]
-- !private ["s8HashableP", "semesters"]
-- !private ["s8HashableP", "shared"]
-- !private ["s8HashableP", "subscript"]
-- !private ["s8HashableP", "title"]
-- !private ["s8HashableP", "userDescription"]
+- !private ["SH", "BetterDate"]
+- !private ["SH", "CKRecord"]
+- !private ["SH", "CKReference"]
+- !private ["SH", "CKReferenceAction"]
+- !private ["SH", "CalendarDay"]
+- !private ["SH", "DataManager"]
+- !private ["SH", "Date"]
+- ["SH", "DueDate"]
+- !private ["SH", "ID"]
+- !private ["SH", "NEXT_SAVE_ID"]
+- ["SH", "Priority"]
+- !private ["SH", "Task"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "assignments"]
+- !private ["SH", "commitment"]
+- !private ["SH", "completed"]
+- !private ["SH", "completionDate"]
+- !private ["SH", "courses"]
+- !private ["SH", "daysBetween"]
+- !private ["SH", "dueDate"]
+- !private ["SH", "extracurriculars"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "isEmpty"]
+- !private ["SH", "isEqual"]
+- !private ["SH", "max"]
+- !private ["SH", "modificationDate"]
+- !private ["SH", "none"]
+- ["SH", "normal"]
+- !private ["SH", "priority"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "record"]
+- !private ["SH", "recordID"]
+- !private ["SH", "relatedAssignment"]
+- !private ["SH", "semesters"]
+- !private ["SH", "shared"]
+- !private ["SH", "subscript"]
+- !private ["SH", "title"]
+- !private ["SH", "userDescription"]
+- !private ["So10CKRecordIDC", "isEqual"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- ["s10MirrorPathP", "init"]
 - ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "isEmpty"]
 - !private ["So8NSCodingP", "init"]
@@ -358,6 +404,7 @@ depends-member:
 - !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isEmpty"]
 - !private ["So8NSObjectC", "isEqual"]
+- ["So8NSObjectC", "isOverdue"]
 - !private ["So8NSObjectC", "max"]
 - !private ["So8NSObjectC", "modificationDate"]
 - ["So8NSObjectC", "priority"]
@@ -370,40 +417,40 @@ depends-member:
 - ["So8NSObjectC", "tags"]
 - ["So8NSObjectC", "title"]
 - ["So8NSObjectC", "userDescription"]
-- !private ["So16NSObjectProtocolP", "BetterDate"]
-- !private ["So16NSObjectProtocolP", "CKRecord"]
-- !private ["So16NSObjectProtocolP", "CKReference"]
-- !private ["So16NSObjectProtocolP", "CKReferenceAction"]
-- !private ["So16NSObjectProtocolP", "CalendarDay"]
-- !private ["So16NSObjectProtocolP", "DataManager"]
-- !private ["So16NSObjectProtocolP", "Date"]
-- ["So16NSObjectProtocolP", "DueDate"]
-- !private ["So16NSObjectProtocolP", "ID"]
-- !private ["So16NSObjectProtocolP", "NEXT_SAVE_ID"]
-- ["So16NSObjectProtocolP", "Priority"]
-- !private ["So16NSObjectProtocolP", "Task"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "assignments"]
-- !private ["So16NSObjectProtocolP", "commitment"]
-- !private ["So16NSObjectProtocolP", "completed"]
-- !private ["So16NSObjectProtocolP", "completionDate"]
-- !private ["So16NSObjectProtocolP", "courses"]
-- !private ["So16NSObjectProtocolP", "dueDate"]
-- !private ["So16NSObjectProtocolP", "extracurriculars"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "isEmpty"]
-- !private ["So16NSObjectProtocolP", "isEqual"]
-- !private ["So16NSObjectProtocolP", "max"]
-- !private ["So16NSObjectProtocolP", "modificationDate"]
-- !private ["So16NSObjectProtocolP", "priority"]
-- !private ["So16NSObjectProtocolP", "record"]
-- !private ["So16NSObjectProtocolP", "recordID"]
-- !private ["So16NSObjectProtocolP", "relatedAssignment"]
-- !private ["So16NSObjectProtocolP", "semesters"]
-- !private ["So16NSObjectProtocolP", "shared"]
-- !private ["So16NSObjectProtocolP", "subscript"]
-- !private ["So16NSObjectProtocolP", "title"]
-- !private ["So16NSObjectProtocolP", "userDescription"]
+- !private ["So8NSObjectP", "BetterDate"]
+- !private ["So8NSObjectP", "CKRecord"]
+- !private ["So8NSObjectP", "CKReference"]
+- !private ["So8NSObjectP", "CKReferenceAction"]
+- !private ["So8NSObjectP", "CalendarDay"]
+- !private ["So8NSObjectP", "DataManager"]
+- !private ["So8NSObjectP", "Date"]
+- ["So8NSObjectP", "DueDate"]
+- !private ["So8NSObjectP", "ID"]
+- !private ["So8NSObjectP", "NEXT_SAVE_ID"]
+- ["So8NSObjectP", "Priority"]
+- !private ["So8NSObjectP", "Task"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "assignments"]
+- !private ["So8NSObjectP", "commitment"]
+- !private ["So8NSObjectP", "completed"]
+- !private ["So8NSObjectP", "completionDate"]
+- !private ["So8NSObjectP", "courses"]
+- !private ["So8NSObjectP", "dueDate"]
+- !private ["So8NSObjectP", "extracurriculars"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isEmpty"]
+- !private ["So8NSObjectP", "isEqual"]
+- !private ["So8NSObjectP", "max"]
+- !private ["So8NSObjectP", "modificationDate"]
+- !private ["So8NSObjectP", "priority"]
+- !private ["So8NSObjectP", "record"]
+- !private ["So8NSObjectP", "recordID"]
+- !private ["So8NSObjectP", "relatedAssignment"]
+- !private ["So8NSObjectP", "semesters"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "subscript"]
+- !private ["So8NSObjectP", "title"]
+- !private ["So8NSObjectP", "userDescription"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "isEmpty"]
 - !private ["So14NSSecureCodingP", "isEqual"]
@@ -411,24 +458,36 @@ depends-member:
 - !private ["So14NSSecureCodingP", "recordID"]
 - !private ["So14NSSecureCodingP", "subscript"]
 - !private ["So8NSStringC", "isEmpty"]
+- !private ["Sq", "recordID"]
+- !private ["Sq", "subscript"]
 - !private ["11Logan__iOS_8PriorityO", "deinit"]
 - !private ["11Logan__iOS_8PriorityO", "init"]
 - ["11Logan__iOS_8PriorityO", "normal"]
 - !private ["11Logan__iOS_8PriorityO", "rawValue"]
-- ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
-- !private ["s16RawRepresentableP", "init"]
-- !private ["s16RawRepresentableP", "none"]
-- ["s16RawRepresentableP", "normal"]
-- !private ["s16RawRepresentableP", "rawValue"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["Sm", "isEmpty"]
+- !private ["SY", "init"]
+- !private ["SY", "none"]
+- ["SY", "normal"]
+- !private ["SY", "rawValue"]
+- !private ["So11CKReferenceC", "init"]
+- !private ["So11CKReferenceC", "recordID"]
+- !private ["10Foundation20ReferenceConvertibleP", "daysBetween"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["11Logan__iOS_8SemesterC", "courses"]
-- ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "isEmpty"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["ST", "isEmpty"]
+- !private ["ST", "modificationDate"]
+- !private ["ST", "recordID"]
+- !private ["ST", "subscript"]
+- ["SS", "init"]
 - ["SS", "init"]
 - !private ["SS", "isEmpty"]
-- ["s14StringProtocolP", "init"]
-- !private ["s14StringProtocolP", "isEmpty"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- !private ["Sy", "isEmpty"]
 - ["11Logan__iOS_4TaskC", "Assignment"]
 - !private ["11Logan__iOS_4TaskC", "BetterDate"]
 - ["11Logan__iOS_4TaskC", "Bool"]
@@ -454,6 +513,7 @@ depends-member:
 - ["11Logan__iOS_4TaskC", "deinit"]
 - ["11Logan__iOS_4TaskC", "dueDate"]
 - ["11Logan__iOS_4TaskC", "init"]
+- ["11Logan__iOS_4TaskC", "isOverdue"]
 - !private ["11Logan__iOS_4TaskC", "max"]
 - ["11Logan__iOS_4TaskC", "priority"]
 - !private ["11Logan__iOS_4TaskC", "record"]
@@ -462,18 +522,25 @@ depends-member:
 - ["11Logan__iOS_4TaskC", "title"]
 - ["11Logan__iOS_4TaskC", "userDescription"]
 - ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "isEmpty"]
+- ["s20TextOutputStreamableP", "init"]
 - ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "isEmpty"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "isEmpty"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "isEmpty"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
@@ -512,27 +579,35 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userDescription"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "daysBetween"]
+- ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "recordID"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- ["s16_SwiftStringViewP", "init"]
 - ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "isEmpty"]
+- !private ["So13CKRecordValueP", "init"]
+- !private ["So13CKRecordValueP", "isEmpty"]
+- !private ["So13CKRecordValueP", "recordID"]
 depends-nominal:
 - !private "11Logan__iOS_10AssignmentC"
 - !private "11Logan__iOS_10BetterDateC"
-- "s23BidirectionalCollectionP"
+- "SK"
 - !private "Sb"
 - "11Logan__iOS_9CKEnabledC"
 - !private "So8CKRecordC"
-- !private "So10CKRecordIDC"
-- !private "So13CKRecordValueP"
-- !private "So11CKReferenceC"
-- !private "SC17CKReferenceActionO"
+- !private "So23CKRecordKeyValueSettingP"
+- !private "8CloudKit24CKRecordValueConvertibleP"
+- "8CloudKit21CKRecordValueProtocolP"
+- !private "So17CKReferenceActionV"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
 - !private "11Logan__iOS_11CalendarDayC"
-- "s10CollectionP"
+- "Sl"
 - !private "11Logan__iOS_10CommitmentP"
-- "s10ComparableP"
+- "SL"
 - !private "11Logan__iOS_6CourseC"
 - "s28CustomDebugStringConvertibleP"
 - "s29CustomPlaygroundQuickLookableP"
@@ -540,16 +615,18 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - !private "11Logan__iOS_11DataManagerC"
 - !private "10Foundation4DateV"
-- "s9DecodableP"
+- "Se"
 - "11Logan__iOS_7DueDateO"
-- "s9EncodableP"
-- "s9EquatableP"
+- "SE"
+- "SQ"
 - !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "11Logan__iOS_15ExtracurricularC"
-- "s8HashableP"
+- "SH"
+- !private "So10CKRecordIDC"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - !private "So8NSCodingP"
@@ -558,17 +635,19 @@ depends-nominal:
 - !private "So21NSItemProviderWritingP"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
+- !private "Sq"
 - "11Logan__iOS_8PriorityO"
-- "s26RangeReplaceableCollectionP"
-- "s16RawRepresentableP"
+- "Sm"
+- "SY"
+- !private "So11CKReferenceC"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "11Logan__iOS_8SemesterC"
-- "s8SequenceP"
+- "ST"
 - "SS"
-- "s14StringProtocolP"
+- "Sy"
 - "11Logan__iOS_4TaskC"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
@@ -582,6 +661,7 @@ depends-nominal:
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
 - "s16_SwiftStringViewP"
+- !private "So13CKRecordValueP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
@@ -600,18 +680,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "edda17c1fe81561ecc3a99af8d8d7415"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "f68a70be9bfac7aae3c419dc7d162057"

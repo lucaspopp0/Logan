@@ -20,8 +20,10 @@ depends-top-level:
 - "DayOfWeek"
 - "DayOfWeekPickerDelegate"
 - "DayOfWeekPickerTableViewController"
+- !private "FloatLiteralType"
 - "IndexPath"
 - "Int"
+- !private "IntegerLiteralType"
 - "TernaryPrecedence"
 - "UITableView"
 - "UITableViewCell"
@@ -31,17 +33,24 @@ depends-top-level:
 - "UITableViewController"
 - !private "UITableViewRowAnimation"
 depends-member:
+- !private ["So28UITableViewCellAccessoryTypeV", "checkmark"]
+- !private ["So28UITableViewCellAccessoryTypeV", "none"]
 - !private ["Sa", "append"]
 - !private ["Sa", "contains"]
 - !private ["Sa", "index"]
 - !private ["Sa", "remove"]
 - !private ["Sa", "sort"]
-- !private ["s23BidirectionalCollectionP", "append"]
-- !private ["s23BidirectionalCollectionP", "contains"]
-- !private ["s23BidirectionalCollectionP", "index"]
-- !private ["s23BidirectionalCollectionP", "remove"]
-- !private ["s23BidirectionalCollectionP", "row"]
-- !private ["s23BidirectionalCollectionP", "sort"]
+- !private ["s13ArrayProtocolP", "append"]
+- !private ["s13ArrayProtocolP", "contains"]
+- !private ["s13ArrayProtocolP", "index"]
+- !private ["s13ArrayProtocolP", "remove"]
+- !private ["s13ArrayProtocolP", "sort"]
+- !private ["SK", "append"]
+- !private ["SK", "contains"]
+- !private ["SK", "index"]
+- !private ["SK", "remove"]
+- !private ["SK", "row"]
+- !private ["SK", "sort"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "accessoryType"]
 - !private ["So15CALayerDelegateP", "init"]
@@ -49,6 +58,12 @@ depends-member:
 - !private ["So15CALayerDelegateP", "selectionStyle"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "textLabel"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "_getBuiltinLogicValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "append"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "contains"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "index"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "remove"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "sort"]
 - !private ["s7CVarArgP", "DayOfWeek"]
 - !private ["s7CVarArgP", "UITableViewCell"]
 - !private ["s7CVarArgP", "UITableViewCellAccessoryType"]
@@ -64,19 +79,21 @@ depends-member:
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "index"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "reloadRows"]
 - !private ["s7CVarArgP", "remove"]
 - !private ["s7CVarArgP", "selectionStyle"]
 - !private ["s7CVarArgP", "sort"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "textLabel"]
-- !private ["s10CollectionP", "append"]
-- !private ["s10CollectionP", "contains"]
-- !private ["s10CollectionP", "index"]
-- !private ["s10CollectionP", "remove"]
-- !private ["s10CollectionP", "row"]
-- !private ["s10CollectionP", "sort"]
-- !private ["s10ComparableP", "row"]
+- !private ["So20UITableViewCellStyleV", "default"]
+- !private ["Sl", "append"]
+- !private ["Sl", "contains"]
+- !private ["Sl", "index"]
+- !private ["Sl", "remove"]
+- !private ["Sl", "row"]
+- !private ["Sl", "sort"]
+- !private ["SL", "row"]
 - !private ["s28CustomDebugStringConvertibleP", "DayOfWeek"]
 - !private ["s28CustomDebugStringConvertibleP", "UITableViewCell"]
 - !private ["s28CustomDebugStringConvertibleP", "UITableViewCellAccessoryType"]
@@ -90,6 +107,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "daysOfWeek"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "index"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "reloadRows"]
 - !private ["s28CustomDebugStringConvertibleP", "remove"]
@@ -121,6 +139,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "index"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "reloadRows"]
 - !private ["s23CustomStringConvertibleP", "remove"]
 - !private ["s23CustomStringConvertibleP", "row"]
@@ -147,53 +166,53 @@ depends-member:
 - !private ["11Logan__iOS_34DayOfWeekPickerTableViewControllerC", "UITableViewCellStyle"]
 - !private ["11Logan__iOS_34DayOfWeekPickerTableViewControllerC", "UITableViewRowAnimation"]
 - ["11Logan__iOS_34DayOfWeekPickerTableViewControllerC", "daysOfWeek"]
-- ["11Logan__iOS_34DayOfWeekPickerTableViewControllerC", "deinit"]
 - ["11Logan__iOS_34DayOfWeekPickerTableViewControllerC", "delegate"]
 - ["11Logan__iOS_34DayOfWeekPickerTableViewControllerC", "init"]
 - ["11Logan__iOS_34DayOfWeekPickerTableViewControllerC", "numberOfSections"]
 - ["11Logan__iOS_34DayOfWeekPickerTableViewControllerC", "tableView"]
-- !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "append"]
-- !private ["s9DecodableP", "contains"]
-- !private ["s9DecodableP", "index"]
-- !private ["s9DecodableP", "remove"]
-- !private ["s9DecodableP", "row"]
-- !private ["s9DecodableP", "sort"]
-- !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "append"]
-- !private ["s9EncodableP", "contains"]
-- !private ["s9EncodableP", "index"]
-- !private ["s9EncodableP", "remove"]
-- !private ["s9EncodableP", "row"]
-- !private ["s9EncodableP", "sort"]
-- !private ["s9EquatableP", "DayOfWeek"]
-- !private ["s9EquatableP", "UITableViewCell"]
-- !private ["s9EquatableP", "UITableViewCellAccessoryType"]
-- !private ["s9EquatableP", "UITableViewCellSelectionStyle"]
-- !private ["s9EquatableP", "UITableViewCellStyle"]
-- !private ["s9EquatableP", "UITableViewRowAnimation"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "_getBuiltinLogicValue"]
-- !private ["s9EquatableP", "accessoryType"]
-- !private ["s9EquatableP", "append"]
-- !private ["s9EquatableP", "automatic"]
-- !private ["s9EquatableP", "checkmark"]
-- !private ["s9EquatableP", "contains"]
-- !private ["s9EquatableP", "daysOfWeek"]
-- !private ["s9EquatableP", "default"]
-- !private ["s9EquatableP", "delegate"]
-- !private ["s9EquatableP", "index"]
-- !private ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "longName"]
-- !private ["s9EquatableP", "none"]
-- !private ["s9EquatableP", "rawValue"]
-- !private ["s9EquatableP", "reloadRows"]
-- !private ["s9EquatableP", "remove"]
-- !private ["s9EquatableP", "row"]
-- !private ["s9EquatableP", "selectionStyle"]
-- !private ["s9EquatableP", "sort"]
-- !private ["s9EquatableP", "text"]
-- !private ["s9EquatableP", "textLabel"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "append"]
+- !private ["Se", "contains"]
+- !private ["Se", "index"]
+- !private ["Se", "remove"]
+- !private ["Se", "row"]
+- !private ["Se", "sort"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "append"]
+- !private ["SE", "contains"]
+- !private ["SE", "index"]
+- !private ["SE", "remove"]
+- !private ["SE", "row"]
+- !private ["SE", "sort"]
+- !private ["SQ", "DayOfWeek"]
+- !private ["SQ", "UITableViewCell"]
+- !private ["SQ", "UITableViewCellAccessoryType"]
+- !private ["SQ", "UITableViewCellSelectionStyle"]
+- !private ["SQ", "UITableViewCellStyle"]
+- !private ["SQ", "UITableViewRowAnimation"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "accessoryType"]
+- !private ["SQ", "append"]
+- !private ["SQ", "automatic"]
+- !private ["SQ", "checkmark"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "daysOfWeek"]
+- !private ["SQ", "default"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "index"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "longName"]
+- !private ["SQ", "none"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "reloadRows"]
+- !private ["SQ", "remove"]
+- !private ["SQ", "row"]
+- !private ["SQ", "selectionStyle"]
+- !private ["SQ", "sort"]
+- !private ["SQ", "text"]
+- !private ["SQ", "textLabel"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "contains"]
 - !private ["s25ExpressibleByArrayLiteralP", "index"]
@@ -201,37 +220,43 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
 - !private ["s25ExpressibleByArrayLiteralP", "sort"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "DayOfWeek"]
-- !private ["s8HashableP", "UITableViewCell"]
-- !private ["s8HashableP", "UITableViewCellAccessoryType"]
-- !private ["s8HashableP", "UITableViewCellSelectionStyle"]
-- !private ["s8HashableP", "UITableViewCellStyle"]
-- !private ["s8HashableP", "UITableViewRowAnimation"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "_getBuiltinLogicValue"]
-- !private ["s8HashableP", "accessoryType"]
-- !private ["s8HashableP", "automatic"]
-- !private ["s8HashableP", "checkmark"]
-- !private ["s8HashableP", "daysOfWeek"]
-- !private ["s8HashableP", "default"]
-- !private ["s8HashableP", "delegate"]
-- !private ["s8HashableP", "init"]
-- !private ["s8HashableP", "longName"]
-- !private ["s8HashableP", "none"]
-- !private ["s8HashableP", "rawValue"]
-- !private ["s8HashableP", "reloadRows"]
-- !private ["s8HashableP", "row"]
-- !private ["s8HashableP", "selectionStyle"]
-- !private ["s8HashableP", "text"]
-- !private ["s8HashableP", "textLabel"]
+- !private ["SH", "DayOfWeek"]
+- !private ["SH", "UITableViewCell"]
+- !private ["SH", "UITableViewCellAccessoryType"]
+- !private ["SH", "UITableViewCellSelectionStyle"]
+- !private ["SH", "UITableViewCellStyle"]
+- !private ["SH", "UITableViewRowAnimation"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "accessoryType"]
+- !private ["SH", "append"]
+- !private ["SH", "automatic"]
+- !private ["SH", "checkmark"]
+- !private ["SH", "contains"]
+- !private ["SH", "daysOfWeek"]
+- !private ["SH", "default"]
+- !private ["SH", "delegate"]
+- !private ["SH", "index"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "longName"]
+- !private ["SH", "none"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "reloadRows"]
+- !private ["SH", "remove"]
+- !private ["SH", "row"]
+- !private ["SH", "selectionStyle"]
+- !private ["SH", "sort"]
+- !private ["SH", "text"]
+- !private ["SH", "textLabel"]
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s17MutableCollectionP", "append"]
-- !private ["s17MutableCollectionP", "contains"]
-- !private ["s17MutableCollectionP", "index"]
-- !private ["s17MutableCollectionP", "remove"]
-- !private ["s17MutableCollectionP", "row"]
-- !private ["s17MutableCollectionP", "sort"]
+- !private ["SM", "append"]
+- !private ["SM", "contains"]
+- !private ["SM", "index"]
+- !private ["SM", "remove"]
+- !private ["SM", "row"]
+- !private ["SM", "sort"]
 - !private ["So8NSCodingP", "DayOfWeek"]
 - !private ["So8NSCodingP", "UITableViewCell"]
 - !private ["So8NSCodingP", "UITableViewCellAccessoryType"]
@@ -242,6 +267,7 @@ depends-member:
 - !private ["So8NSCodingP", "accessoryType"]
 - !private ["So8NSCodingP", "daysOfWeek"]
 - !private ["So8NSCodingP", "delegate"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "reloadRows"]
 - !private ["So8NSCodingP", "selectionStyle"]
@@ -256,6 +282,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "daysOfWeek"]
 - !private ["So26NSExtensionRequestHandlingP", "delegate"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - ["So8NSObjectC", "AnyObject"]
 - !private ["So8NSObjectC", "Bool"]
@@ -273,52 +300,56 @@ depends-member:
 - ["So8NSObjectC", "daysOfWeek"]
 - ["So8NSObjectC", "delegate"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "numberOfSections"]
 - !private ["So8NSObjectC", "reloadRows"]
 - !private ["So8NSObjectC", "selectionStyle"]
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textLabel"]
-- !private ["So16NSObjectProtocolP", "DayOfWeek"]
-- !private ["So16NSObjectProtocolP", "UITableViewCell"]
-- !private ["So16NSObjectProtocolP", "UITableViewCellAccessoryType"]
-- !private ["So16NSObjectProtocolP", "UITableViewCellSelectionStyle"]
-- !private ["So16NSObjectProtocolP", "UITableViewCellStyle"]
-- !private ["So16NSObjectProtocolP", "UITableViewRowAnimation"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "accessoryType"]
-- !private ["So16NSObjectProtocolP", "daysOfWeek"]
-- !private ["So16NSObjectProtocolP", "delegate"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "reloadRows"]
-- !private ["So16NSObjectProtocolP", "selectionStyle"]
-- !private ["So16NSObjectProtocolP", "text"]
-- !private ["So16NSObjectProtocolP", "textLabel"]
-- !private ["s22RandomAccessCollectionP", "append"]
-- !private ["s22RandomAccessCollectionP", "contains"]
-- !private ["s22RandomAccessCollectionP", "index"]
-- !private ["s22RandomAccessCollectionP", "remove"]
-- !private ["s22RandomAccessCollectionP", "row"]
-- !private ["s22RandomAccessCollectionP", "sort"]
-- !private ["s26RangeReplaceableCollectionP", "append"]
-- !private ["s26RangeReplaceableCollectionP", "contains"]
-- !private ["s26RangeReplaceableCollectionP", "index"]
-- !private ["s26RangeReplaceableCollectionP", "remove"]
-- !private ["s26RangeReplaceableCollectionP", "sort"]
-- !private ["s16RawRepresentableP", "automatic"]
-- !private ["s16RawRepresentableP", "checkmark"]
-- !private ["s16RawRepresentableP", "default"]
-- !private ["s16RawRepresentableP", "init"]
-- !private ["s16RawRepresentableP", "longName"]
-- !private ["s16RawRepresentableP", "none"]
-- !private ["s16RawRepresentableP", "rawValue"]
+- !private ["So8NSObjectP", "DayOfWeek"]
+- !private ["So8NSObjectP", "UITableViewCell"]
+- !private ["So8NSObjectP", "UITableViewCellAccessoryType"]
+- !private ["So8NSObjectP", "UITableViewCellSelectionStyle"]
+- !private ["So8NSObjectP", "UITableViewCellStyle"]
+- !private ["So8NSObjectP", "UITableViewRowAnimation"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "accessoryType"]
+- !private ["So8NSObjectP", "daysOfWeek"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "reloadRows"]
+- !private ["So8NSObjectP", "selectionStyle"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "textLabel"]
+- !private ["Sk", "append"]
+- !private ["Sk", "contains"]
+- !private ["Sk", "index"]
+- !private ["Sk", "remove"]
+- !private ["Sk", "row"]
+- !private ["Sk", "sort"]
+- !private ["Sm", "append"]
+- !private ["Sm", "contains"]
+- !private ["Sm", "index"]
+- !private ["Sm", "remove"]
+- !private ["Sm", "sort"]
+- !private ["SY", "automatic"]
+- !private ["SY", "checkmark"]
+- !private ["SY", "default"]
+- !private ["SY", "init"]
+- !private ["SY", "longName"]
+- !private ["SY", "none"]
+- !private ["SY", "rawValue"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
-- !private ["s8SequenceP", "append"]
-- !private ["s8SequenceP", "contains"]
-- !private ["s8SequenceP", "index"]
-- !private ["s8SequenceP", "remove"]
-- !private ["s8SequenceP", "row"]
-- !private ["s8SequenceP", "sort"]
+- !private ["So23UITableViewRowAnimationV", "automatic"]
+- !private ["So29UITableViewCellSelectionStyleV", "none"]
+- !private ["ST", "append"]
+- !private ["ST", "contains"]
+- !private ["ST", "index"]
+- !private ["ST", "remove"]
+- !private ["ST", "row"]
+- !private ["ST", "sort"]
 - !private ["So29UIAccessibilityIdentificationP", "accessoryType"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "reloadRows"]
@@ -342,6 +373,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "daysOfWeek"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "reloadRows"]
 - !private ["So21UIAppearanceContainerP", "selectionStyle"]
 - !private ["So21UIAppearanceContainerP", "text"]
@@ -355,6 +387,7 @@ depends-member:
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "daysOfWeek"]
 - !private ["So18UIContentContainerP", "delegate"]
+- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So17UICoordinateSpaceP", "accessoryType"]
@@ -381,6 +414,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "daysOfWeek"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "reloadRows"]
 - !private ["So18UIFocusEnvironmentP", "selectionStyle"]
 - !private ["So18UIFocusEnvironmentP", "text"]
@@ -391,6 +425,13 @@ depends-member:
 - !private ["So11UIFocusItemP", "selectionStyle"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "textLabel"]
+- !private ["So20UIFocusItemContainerP", "accessoryType"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "reloadRows"]
+- !private ["So20UIFocusItemContainerP", "selectionStyle"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "textLabel"]
+- !private ["So30UIFocusItemScrollableContainerP", "reloadRows"]
 - !private ["So27UIGestureRecognizerDelegateP", "accessoryType"]
 - !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "selectionStyle"]
@@ -406,6 +447,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "accessoryType"]
 - !private ["So30UIPasteConfigurationSupportingP", "daysOfWeek"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "reloadRows"]
 - !private ["So30UIPasteConfigurationSupportingP", "selectionStyle"]
@@ -427,6 +469,7 @@ depends-member:
 - ["So11UIResponderC", "daysOfWeek"]
 - ["So11UIResponderC", "delegate"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "numberOfSections"]
 - !private ["So11UIResponderC", "reloadRows"]
 - !private ["So11UIResponderC", "selectionStyle"]
@@ -444,6 +487,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "daysOfWeek"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "reloadRows"]
 - !private ["So30UIResponderStandardEditActionsP", "selectionStyle"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
@@ -459,6 +503,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "daysOfWeek"]
 - !private ["So20UIScrollViewDelegateP", "delegate"]
 - !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "reloadRows"]
 - !private ["So16UIStateRestoringP", "DayOfWeek"]
 - !private ["So16UIStateRestoringP", "UITableViewCell"]
@@ -470,15 +515,12 @@ depends-member:
 - !private ["So16UIStateRestoringP", "daysOfWeek"]
 - !private ["So16UIStateRestoringP", "delegate"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "init"]
 - !private ["So11UITableViewC", "reloadRows"]
 - !private ["So15UITableViewCellC", "accessoryType"]
 - !private ["So15UITableViewCellC", "init"]
 - !private ["So15UITableViewCellC", "selectionStyle"]
 - !private ["So15UITableViewCellC", "textLabel"]
-- !private ["SC28UITableViewCellAccessoryTypeO", "checkmark"]
-- !private ["SC28UITableViewCellAccessoryTypeO", "none"]
-- !private ["SC29UITableViewCellSelectionStyleO", "none"]
-- !private ["SC20UITableViewCellStyleO", "default"]
 - ["So21UITableViewControllerC", "AnyObject"]
 - !private ["So21UITableViewControllerC", "Bool"]
 - ["So21UITableViewControllerC", "DayOfWeek"]
@@ -495,6 +537,7 @@ depends-member:
 - ["So21UITableViewControllerC", "daysOfWeek"]
 - ["So21UITableViewControllerC", "delegate"]
 - ["So21UITableViewControllerC", "init"]
+- !private ["So21UITableViewControllerC", "init"]
 - ["So21UITableViewControllerC", "numberOfSections"]
 - ["So21UITableViewControllerC", "tableView"]
 - !private ["So21UITableViewDataSourceP", "DayOfWeek"]
@@ -507,6 +550,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "daysOfWeek"]
 - !private ["So21UITableViewDataSourceP", "delegate"]
 - !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So19UITableViewDelegateP", "DayOfWeek"]
 - !private ["So19UITableViewDelegateP", "UITableViewCell"]
 - !private ["So19UITableViewDelegateP", "UITableViewCellAccessoryType"]
@@ -517,7 +561,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "daysOfWeek"]
 - !private ["So19UITableViewDelegateP", "delegate"]
 - !private ["So19UITableViewDelegateP", "init"]
-- !private ["SC23UITableViewRowAnimationO", "automatic"]
+- !private ["So19UITableViewDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "DayOfWeek"]
 - !private ["So18UITraitEnvironmentP", "UITableViewCell"]
 - !private ["So18UITraitEnvironmentP", "UITableViewCellAccessoryType"]
@@ -529,10 +573,27 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "daysOfWeek"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "reloadRows"]
 - !private ["So18UITraitEnvironmentP", "selectionStyle"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "textLabel"]
+- !private ["So23UIUserActivityRestoringP", "DayOfWeek"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewCell"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewCellAccessoryType"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewCellSelectionStyle"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewCellStyle"]
+- !private ["So23UIUserActivityRestoringP", "UITableViewRowAnimation"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "accessoryType"]
+- !private ["So23UIUserActivityRestoringP", "daysOfWeek"]
+- !private ["So23UIUserActivityRestoringP", "delegate"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "reloadRows"]
+- !private ["So23UIUserActivityRestoringP", "selectionStyle"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "textLabel"]
 - !private ["So6UIViewC", "accessoryType"]
 - !private ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "reloadRows"]
@@ -554,13 +615,9 @@ depends-member:
 - ["So16UIViewControllerC", "daysOfWeek"]
 - ["So16UIViewControllerC", "delegate"]
 - ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "numberOfSections"]
 - ["So16UIViewControllerC", "tableView"]
-- !private ["s14_ArrayProtocolP", "append"]
-- !private ["s14_ArrayProtocolP", "contains"]
-- !private ["s14_ArrayProtocolP", "index"]
-- !private ["s14_ArrayProtocolP", "remove"]
-- !private ["s14_ArrayProtocolP", "sort"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "accessoryType"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadRows"]
@@ -573,6 +630,11 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "remove"]
 - !private ["s24_DestructorSafeContainerP", "sort"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "index"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "remove"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "sort"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DayOfWeek"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITableViewCell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITableViewCellAccessoryType"]
@@ -583,6 +645,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "accessoryType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "daysOfWeek"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadRows"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "selectionStyle"]
@@ -596,13 +659,17 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "row"]
 - !private ["s21_ObjectiveCBridgeableP", "sort"]
 depends-nominal:
+- !private "So28UITableViewCellAccessoryTypeV"
 - !private "Sa"
-- !private "s23BidirectionalCollectionP"
+- !private "s13ArrayProtocolP"
+- !private "SK"
 - !private "Sb"
 - !private "So15CALayerDelegateP"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
+- !private "So20UITableViewCellStyleV"
+- !private "Sl"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
@@ -610,24 +677,26 @@ depends-nominal:
 - !private "11Logan__iOS_9DayOfWeekO"
 - "11Logan__iOS_23DayOfWeekPickerDelegateP"
 - "11Logan__iOS_34DayOfWeekPickerTableViewControllerC"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
-- "s9EquatableP"
+- !private "Se"
+- !private "SE"
+- "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
-- "s8HashableP"
+- "SH"
 - !private "10Foundation9IndexPathV"
 - !private "s25LosslessStringConvertibleP"
-- !private "s17MutableCollectionP"
+- !private "SM"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
-- !private "s22RandomAccessCollectionP"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s16RawRepresentableP"
+- "So8NSObjectP"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
-- !private "s8SequenceP"
+- !private "So23UITableViewRowAnimationV"
+- !private "So29UITableViewCellSelectionStyleV"
+- !private "ST"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -638,6 +707,8 @@ depends-nominal:
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
 - !private "So27UIGestureRecognizerDelegateP"
 - !private "So7UILabelC"
 - "So30UIPasteConfigurationSupportingP"
@@ -649,20 +720,17 @@ depends-nominal:
 - "So16UIStateRestoringP"
 - !private "So11UITableViewC"
 - !private "So15UITableViewCellC"
-- !private "SC28UITableViewCellAccessoryTypeO"
-- !private "SC29UITableViewCellSelectionStyleO"
-- !private "SC20UITableViewCellStyleO"
 - "So21UITableViewControllerC"
 - "So21UITableViewDataSourceP"
 - "So19UITableViewDelegateP"
-- !private "SC23UITableViewRowAnimationO"
 - "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "s14_ArrayProtocolP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 depends-dynamic-lookup:
@@ -683,18 +751,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "d70246bbf6b9b977b39c2d38ef69c8e0"

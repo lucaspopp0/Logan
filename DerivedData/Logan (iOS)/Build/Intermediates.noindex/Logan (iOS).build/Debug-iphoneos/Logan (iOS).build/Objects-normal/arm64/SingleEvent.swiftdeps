@@ -16,13 +16,16 @@ depends-top-level:
 - !private "ClockTime"
 - "Date"
 - "Event"
+- !private "FloatLiteralType"
 - !private "Int"
+- !private "IntegerLiteralType"
 - "SingleEvent"
 - !private "String"
 - !private "StringLiteralType"
 - !private "max"
 depends-member:
-- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
 - ["11Logan__iOS_9CKEnabledC", "CKRecord"]
 - !private ["11Logan__iOS_9CKEnabledC", "CKRecordValue"]
 - ["11Logan__iOS_9CKEnabledC", "CalendarDay"]
@@ -43,6 +46,10 @@ depends-member:
 - !private ["11Logan__iOS_9CKEnabledC", "startTime"]
 - !private ["So8CKRecordC", "init"]
 - !private ["So8CKRecordC", "subscript"]
+- !private ["So23CKRecordKeyValueSettingP", "init"]
+- !private ["So23CKRecordKeyValueSettingP", "subscript"]
+- ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["s7CVarArgP", "CKRecord"]
 - ["s7CVarArgP", "CalendarDay"]
 - !private ["s7CVarArgP", "ClockTime"]
@@ -54,6 +61,7 @@ depends-member:
 - !private ["s7CVarArgP", "date"]
 - !private ["s7CVarArgP", "endTime"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "location"]
 - !private ["s7CVarArgP", "max"]
 - !private ["s7CVarArgP", "name"]
@@ -63,8 +71,10 @@ depends-member:
 - ["11Logan__iOS_11CalendarDayC", "init"]
 - !private ["11Logan__iOS_11CalendarDayC", "stringValue"]
 - !private ["11Logan__iOS_9ClockTimeC", "init"]
-- !private ["s10CollectionP", "init"]
-- ["s10ComparableP", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- ["SL", "init"]
+- !private ["SL", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "CKRecord"]
 - ["s28CustomDebugStringConvertibleP", "CalendarDay"]
 - !private ["s28CustomDebugStringConvertibleP", "ClockTime"]
@@ -76,6 +86,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "date"]
 - !private ["s28CustomDebugStringConvertibleP", "endTime"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "location"]
 - !private ["s28CustomDebugStringConvertibleP", "max"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
@@ -83,7 +94,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "startTime"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "CKRecord"]
 - ["s23CustomStringConvertibleP", "CalendarDay"]
 - !private ["s23CustomStringConvertibleP", "ClockTime"]
@@ -95,6 +109,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "date"]
 - !private ["s23CustomStringConvertibleP", "endTime"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "location"]
 - !private ["s23CustomStringConvertibleP", "max"]
 - !private ["s23CustomStringConvertibleP", "name"]
@@ -102,25 +117,30 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "startTime"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - ["10Foundation4DateV", "init"]
-- ["s9DecodableP", "init"]
-- ["s9EncodableP", "init"]
-- !private ["s9EquatableP", "CKRecord"]
-- ["s9EquatableP", "CalendarDay"]
-- !private ["s9EquatableP", "ClockTime"]
-- ["s9EquatableP", "Date"]
-- !private ["s9EquatableP", "Event"]
-- !private ["s9EquatableP", "ID"]
-- !private ["s9EquatableP", "NEXT_SAVE_ID"]
-- ["s9EquatableP", ""]
-- !private ["s9EquatableP", "date"]
-- !private ["s9EquatableP", "endTime"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "location"]
-- !private ["s9EquatableP", "max"]
-- !private ["s9EquatableP", "name"]
-- !private ["s9EquatableP", "record"]
-- !private ["s9EquatableP", "startTime"]
-- !private ["s9EquatableP", "subscript"]
+- ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "subscript"]
+- ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "CKRecord"]
+- ["SQ", "CalendarDay"]
+- !private ["SQ", "ClockTime"]
+- ["SQ", "Date"]
+- !private ["SQ", "Event"]
+- !private ["SQ", "ID"]
+- !private ["SQ", "NEXT_SAVE_ID"]
+- ["SQ", ""]
+- !private ["SQ", "date"]
+- !private ["SQ", "endTime"]
+- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "location"]
+- !private ["SQ", "max"]
+- !private ["SQ", "name"]
+- !private ["SQ", "record"]
+- !private ["SQ", "startTime"]
+- !private ["SQ", "subscript"]
 - ["11Logan__iOS_5EventC", "CKRecord"]
 - !private ["11Logan__iOS_5EventC", "CKRecordValue"]
 - ["11Logan__iOS_5EventC", "CalendarDay"]
@@ -141,26 +161,33 @@ depends-member:
 - !private ["11Logan__iOS_5EventC", "record"]
 - !private ["11Logan__iOS_5EventC", "startTime"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "subscript"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "CKRecord"]
-- ["s8HashableP", "CalendarDay"]
-- !private ["s8HashableP", "ClockTime"]
-- ["s8HashableP", "Date"]
-- !private ["s8HashableP", "Event"]
-- !private ["s8HashableP", "ID"]
-- !private ["s8HashableP", "NEXT_SAVE_ID"]
-- ["s8HashableP", ""]
-- !private ["s8HashableP", "date"]
-- !private ["s8HashableP", "endTime"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "location"]
-- !private ["s8HashableP", "max"]
-- !private ["s8HashableP", "name"]
-- !private ["s8HashableP", "record"]
-- !private ["s8HashableP", "startTime"]
-- !private ["s8HashableP", "subscript"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "CKRecord"]
+- ["SH", "CalendarDay"]
+- !private ["SH", "ClockTime"]
+- ["SH", "Date"]
+- !private ["SH", "Event"]
+- !private ["SH", "ID"]
+- !private ["SH", "NEXT_SAVE_ID"]
+- ["SH", ""]
+- !private ["SH", "date"]
+- !private ["SH", "endTime"]
+- ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "location"]
+- !private ["SH", "max"]
+- !private ["SH", "name"]
+- !private ["SH", "record"]
+- !private ["SH", "startTime"]
+- !private ["SH", "subscript"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "subscript"]
@@ -185,28 +212,32 @@ depends-member:
 - !private ["So8NSObjectC", "record"]
 - !private ["So8NSObjectC", "startTime"]
 - !private ["So8NSObjectC", "subscript"]
-- !private ["So16NSObjectProtocolP", "CKRecord"]
-- ["So16NSObjectProtocolP", "CalendarDay"]
-- !private ["So16NSObjectProtocolP", "ClockTime"]
-- ["So16NSObjectProtocolP", "Date"]
-- !private ["So16NSObjectProtocolP", "Event"]
-- !private ["So16NSObjectProtocolP", "ID"]
-- !private ["So16NSObjectProtocolP", "NEXT_SAVE_ID"]
-- ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "date"]
-- !private ["So16NSObjectProtocolP", "endTime"]
-- !private ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "location"]
-- !private ["So16NSObjectProtocolP", "max"]
-- !private ["So16NSObjectProtocolP", "name"]
-- !private ["So16NSObjectProtocolP", "record"]
-- !private ["So16NSObjectProtocolP", "startTime"]
-- !private ["So16NSObjectProtocolP", "subscript"]
+- !private ["So8NSObjectP", "CKRecord"]
+- ["So8NSObjectP", "CalendarDay"]
+- !private ["So8NSObjectP", "ClockTime"]
+- ["So8NSObjectP", "Date"]
+- !private ["So8NSObjectP", "Event"]
+- !private ["So8NSObjectP", "ID"]
+- !private ["So8NSObjectP", "NEXT_SAVE_ID"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "date"]
+- !private ["So8NSObjectP", "endTime"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "location"]
+- !private ["So8NSObjectP", "max"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "record"]
+- !private ["So8NSObjectP", "startTime"]
+- !private ["So8NSObjectP", "subscript"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "subscript"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["Sq", "subscript"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
 - ["10Foundation20ReferenceConvertibleP", "init"]
-- !private ["s8SequenceP", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "subscript"]
 - ["11Logan__iOS_11SingleEventC", "CKRecord"]
 - !private ["11Logan__iOS_11SingleEventC", "CKRecordValue"]
 - ["11Logan__iOS_11SingleEventC", "CalendarDay"]
@@ -217,7 +248,6 @@ depends-member:
 - !private ["11Logan__iOS_11SingleEventC", "Int"]
 - !private ["11Logan__iOS_11SingleEventC", "String"]
 - ["11Logan__iOS_11SingleEventC", "date"]
-- ["11Logan__iOS_11SingleEventC", "deinit"]
 - !private ["11Logan__iOS_11SingleEventC", "endTime"]
 - ["11Logan__iOS_11SingleEventC", "init"]
 - !private ["11Logan__iOS_11SingleEventC", "location"]
@@ -226,13 +256,22 @@ depends-member:
 - !private ["11Logan__iOS_11SingleEventC", "record"]
 - !private ["11Logan__iOS_11SingleEventC", "startTime"]
 - !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CKRecord"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "CalendarDay"]
@@ -252,42 +291,49 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "startTime"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
-- !private "s23BidirectionalCollectionP"
+- !private "SK"
 - "11Logan__iOS_9CKEnabledC"
 - !private "So8CKRecordC"
+- !private "So23CKRecordKeyValueSettingP"
+- "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - "11Logan__iOS_11CalendarDayC"
 - !private "11Logan__iOS_9ClockTimeC"
-- !private "s10CollectionP"
-- "s10ComparableP"
+- !private "Sl"
+- "SL"
 - "s28CustomDebugStringConvertibleP"
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - "10Foundation4DateV"
-- "s9DecodableP"
-- "s9EncodableP"
-- "s9EquatableP"
+- "Se"
+- "SE"
+- "SQ"
 - "11Logan__iOS_5EventC"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
-- "s8HashableP"
+- "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - "So8NSObjectC"
-- "So16NSObjectProtocolP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
-- !private "s26RangeReplaceableCollectionP"
+- !private "Sq"
+- !private "Sm"
 - "10Foundation20ReferenceConvertibleP"
-- !private "s8SequenceP"
+- !private "ST"
 - "11Logan__iOS_11SingleEventC"
 - !private "SS"
-- !private "s14StringProtocolP"
+- !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
@@ -316,18 +362,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "c05530adfca6698a480bf4b1e772c663"

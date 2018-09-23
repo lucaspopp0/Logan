@@ -8,20 +8,50 @@
 
 import UIKit
 
-class OverviewViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DMListener {
+class OverviewViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DMListener, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var tabBar: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var scheduleViewer: ScheduleScrollView!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var datePickerBar: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var datePickerButton: UIButton!
+    @IBOutlet weak var datePicker: BetterDatePicker!
+    @IBOutlet weak var datePickerHeightConstraint: NSLayoutConstraint!
+    internal var datePickerOpen: Bool = false
+    
+    var leftSwipeRecognizer: UISwipeGestureRecognizer!
+    var rightSwipeRecognizer: UISwipeGestureRecognizer!
+    
     var dataSections: [(title: String, things: [CKEnabled])] = []
+    
+    var alreadyOpened: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        leftSwipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(OverviewViewController.handleSwipe(_:)))
+        rightSwipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(OverviewViewController.handleSwipe(_:)))
+        
+        leftSwipeRecognizer.direction = UISwipeGestureRecognizerDirection.left
+        rightSwipeRecognizer.direction = UISwipeGestureRecognizerDirection.right
+        
+        leftSwipeRecognizer.delegate = self
+        rightSwipeRecognizer.delegate = self
+        
+        view.addGestureRecognizer(leftSwipeRecognizer)
+        view.addGestureRecognizer(rightSwipeRecognizer)
+        
         DataManager.shared.addListener(self)
         tabBar.backgroundColor = UIColor.teal500
+        datePickerHeightConstraint.constant = dateLabel.frame.maxY + dateLabel.frame.minY
+        view.layoutIfNeeded()
+        
+        datePicker.style = BetterDatePicker.Style.light
+        
+        toggleSegment(segmentedControl)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,13 +59,53 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
         updateData()
         scheduleViewer.reloadData()
         tableView.reloadData()
+        
+        dateLabel.text = BetterDateFormatter.autoFormatDate(datePicker.dateValue)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !alreadyOpened {
+            scheduleViewer.scrollToNow()
+        }
+        
+        alreadyOpened = true
+    }
+    
+    @IBAction func toggleDatePicker(_ sender: Any?) {
+        if datePickerOpen {
+            UIView.animate(withDuration: 0.2) {
+                self.datePickerHeightConstraint.constant = self.dateLabel.frame.maxY + self.dateLabel.frame.minY
+                self.view.layoutIfNeeded()
+            }
+            
+            datePickerButton.setTitle("Go to…", for: UIControlState.normal)
+        } else {
+            UIView.animate(withDuration: 0.2) {
+                self.datePickerHeightConstraint.constant = self.datePicker.frame.maxY + self.dateLabel.frame.minY
+                self.view.layoutIfNeeded()
+            }
+            
+            datePickerButton.setTitle("Done", for: UIControlState.normal)
+        }
+        
+        datePickerOpen = !datePickerOpen
+    }
+    
+    @IBAction func dateChanged(_ sender: Any) {
+        dateLabel.text = BetterDateFormatter.autoFormatDate(datePicker.dateValue)
+        scheduleViewer.scheduleView.day = datePicker.calendarDay
+        scheduleViewer.reloadData()
     }
     
     @IBAction func toggleSegment(_ sender: UISegmentedControl) {
         if segmentedControl.selectedSegmentIndex == 0 {
+            datePickerBar.isHidden = false
             scheduleViewer.isHidden = false
             tableView.isHidden = true
         } else {
+            datePickerBar.isHidden = true
             scheduleViewer.isHidden = true
             tableView.isHidden = false
         }
@@ -92,6 +162,30 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
         if assignments.count > 0 {
             dataSections.append((title: "Assignments due this week", things: assignments))
         }
+    }
+    
+    @objc func handleSwipe(_ recognizer: UIGestureRecognizer) {
+        if let swipeRecognizer = recognizer as? UISwipeGestureRecognizer, swipeRecognizer.state == UIGestureRecognizerState.ended {
+            if swipeRecognizer.direction == UISwipeGestureRecognizerDirection.left {
+                datePicker.calendarDay = CalendarDay(date: Date(timeInterval:  (24 * 60 * 60), since: datePicker.dateValue))
+                
+                dateChanged(datePicker)
+            } else if swipeRecognizer.direction == UISwipeGestureRecognizerDirection.right {
+                datePicker.calendarDay = CalendarDay(date: Date(timeInterval: -(24 * 60 * 60), since: datePicker.dateValue))
+                
+                dateChanged(datePicker)
+            }
+        }
+    }
+    
+    // MARK: - UIGestureRecognizerDelegate
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        return true
     }
     
     // MARK: - DMListener
