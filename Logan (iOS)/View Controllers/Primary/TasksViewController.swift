@@ -116,7 +116,15 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         if day == CalendarDay(date: today) {
                             addTask(task, toSectionWithName: "Today")
                         } else if days < 0 {
-                            addTask(task, toSectionWithName: "Overdue")
+                            if days == -1 {
+                                if Date().hour <= 6 {
+                                    addTask(task, toSectionWithName: "Tonight")
+                                } else {
+                                    addTask(task, toSectionWithName: "Yesterday")
+                                }
+                            } else {
+                                addTask(task, toSectionWithName: "Overdue")
+                            }
                         } else if days == 1 {
                             addTask(task, toSectionWithName: "Tomorrow")
                         } else if today.weekOfYear == deadline.weekOfYear {

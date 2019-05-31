@@ -84,12 +84,6 @@ class DataManager: NSObject {
     var assignments: [Assignment] = []
     var tasks: [Task] = []
     
-    var apiSemesters: [APISemester] = []
-    var apiTags: [APITag] = []
-    var apiAssessments: [APIAssessment] = []
-    var apiAssignments: [APIAssignment] = []
-    var apiTasks: [APITask] = []
-    
     private var nextFileNumber: Int = 0
     var filePairings: [(number: Int, name: String)] = []
     
@@ -116,6 +110,9 @@ class DataManager: NSObject {
     }
     
     var fetchFailed: Bool = false
+    private(set) var isRetrying: Bool = false
+    
+    private var retryTimer: Timer?
     
     private var allDataFetched: Bool {
         get {
@@ -524,18 +521,16 @@ class DataManager: NSObject {
             return
         }
         
-        API.shared.fetchData { (completed, errors) in
-            if errors.count == 0 {
-                self.apiSemesters = API.shared.semesters
-                self.apiTags = API.shared.tags
-                self.apiAssessments = API.shared.assessments
-                self.apiAssignments = API.shared.assignments
-                self.apiTasks = API.shared.tasks
-            }
+        if recordsToProcess.count > 0 {
+            return
         }
         
         currentCloudStatus = DMCloudConnectionStatus.fetching
         sendEventToListeners(DMLoadingEventType.start)
+        
+        if isRetrying {
+            return
+        }
         
         updateTimer.reset()
         
@@ -562,6 +557,12 @@ class DataManager: NSObject {
                             if let cloudError = error as? CKError {
                                 if cloudError.errorCode == 3 {
                                     Console.shared.print("CKError 3: Network error.")
+                                } else if cloudError.code == CKError.Code.requestRateLimited {
+                                    Console.shared.print("Request rate limited.")
+                                    
+                                    if let retryAfter = cloudError.userInfo[CKErrorRetryAfterKey] as? TimeInterval {
+                                        self.retryFetch(in: retryAfter)
+                                    }
                                 } else {
                                     Console.shared.print(cloudError.localizedDescription)
                                 }
@@ -654,6 +655,18 @@ class DataManager: NSObject {
                 sendEventToListeners(DMLoadingEventType.end)
             }
         }
+    }
+    
+    func retryFetch(in timeout: TimeInterval) {
+        isRetrying = true
+        sendEventToListeners(DMLoadingEventType.start)
+        
+        retryTimer?.invalidate()
+        retryTimer = Timer(fire: Date(timeIntervalSinceNow: timeout), interval: 0, repeats: false, block: { (timer) in
+            self.isRetrying = false
+            self.fetchDataFromCloud()
+            timer.invalidate()
+        })
     }
     
     // MARK: - iCloud wrapper

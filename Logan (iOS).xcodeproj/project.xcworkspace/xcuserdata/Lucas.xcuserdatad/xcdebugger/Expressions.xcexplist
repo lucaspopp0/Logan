@@ -3,6 +3,28 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "BetterDatePicker.updateMonth():BetterDatePicker.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "CalendarDay(date: stepperDate)">
+            </PersistentString>
+            <PersistentString
+               value = "DayOfWeek.forDate(stepperDate)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ScheduleView.reloadData():ScheduleView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "potentialClass.title">
+            </PersistentString>
+            <PersistentString
+               value = "course.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "TaskTableViewCell.configureCell():TaskTableViewCell.swift">
          <PersistentStrings>
             <PersistentString
@@ -21,17 +43,6 @@
             </PersistentString>
             <PersistentString
                value = "commitment.name">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ScheduleView.reloadData():ScheduleView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "potentialClass.title">
-            </PersistentString>
-            <PersistentString
-               value = "course.name">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

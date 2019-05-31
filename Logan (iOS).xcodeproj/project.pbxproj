@@ -12,9 +12,6 @@
 		A0120BCA2142BE0C00E04BA2 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0120BC92142BE0C00E04BA2 /* TaskList.swift */; };
 		A0120BCC2142BEC400E04BA2 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0120BCB2142BEC400E04BA2 /* TaskView.swift */; };
 		A0120BCE2142BEDA00E04BA2 /* TaskListSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0120BCD2142BEDA00E04BA2 /* TaskListSeparator.swift */; };
-		A0137F7821488EB1002F489E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0137F7721488EB1002F489E /* API.swift */; };
-		A0137F792148919D002F489E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0137F7721488EB1002F489E /* API.swift */; };
-		A0137F7A2148919D002F489E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0137F7721488EB1002F489E /* API.swift */; };
 		A0283EF420041B4800CE2843 /* TaskDueDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0283EF320041B4800CE2843 /* TaskDueDatePickerTableViewCell.swift */; };
 		A0283EF820042B3100CE2843 /* PriorityControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0283EF720042B3100CE2843 /* PriorityControl.swift */; };
 		A0283EFC200458BD00CE2843 /* CoursePickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0283EFB200458BD00CE2843 /* CoursePickerTableViewController.swift */; };
@@ -58,9 +55,6 @@
 		A04A93DF205347C50027D1B6 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A93DE205347C50027D1B6 /* InitialViewController.swift */; };
 		A04A93E220534B390027D1B6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A93E120534B390027D1B6 /* WelcomeViewController.swift */; };
 		A04FD4F8206C344B001B6F9A /* OverviewExamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04FD4F7206C344B001B6F9A /* OverviewExamTableViewCell.swift */; };
-		A0582686214C4BF500CD964A /* API-Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0582685214C4BF500CD964A /* API-Objects.swift */; };
-		A0582687214C503400CD964A /* API-Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0582685214C4BF500CD964A /* API-Objects.swift */; };
-		A0582688214C503500CD964A /* API-Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0582685214C4BF500CD964A /* API-Objects.swift */; };
 		A0588561202E8211003F5B6D /* AssignmentTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0588560202E8211003F5B6D /* AssignmentTaskTableViewCell.swift */; };
 		A05FED7E20264D3100086091 /* PriorityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FED7B20264C0D00086091 /* PriorityIndicator.swift */; };
 		A05FED8120264F9B00086091 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22FEF20009C6400E32CC2 /* DataManager.swift */; };
@@ -205,7 +199,6 @@
 		A0CFCB272060B63D00D025D5 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CFCB262060B63D00D025D5 /* RowView.swift */; };
 		A0CFCB282060B87300D025D5 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CFCB262060B63D00D025D5 /* RowView.swift */; };
 		A0CFCB292060B87300D025D5 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CFCB262060B63D00D025D5 /* RowView.swift */; };
-		A0D796E8214EE9BF00DFF4B9 /* APISettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D796E7214EE9BF00DFF4B9 /* APISettingsTableViewController.swift */; };
 		A0DD4BDB200E631E008441FC /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD4BDA200E631E008441FC /* ScheduleTableViewController.swift */; };
 		A0E4F9AF2001CC42007E2399 /* SemesterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E4F9AE2001CC42007E2399 /* SemesterTableViewController.swift */; };
 		A0E4F9B22001CE5D007E2399 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E4F9B12001CE5D007E2399 /* CourseTableViewCell.swift */; };
@@ -274,7 +267,6 @@
 		A0120BC92142BE0C00E04BA2 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		A0120BCB2142BEC400E04BA2 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		A0120BCD2142BEDA00E04BA2 /* TaskListSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListSeparator.swift; sourceTree = "<group>"; };
-		A0137F7721488EB1002F489E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A0283EF320041B4800CE2843 /* TaskDueDatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDueDatePickerTableViewCell.swift; sourceTree = "<group>"; };
 		A0283EF720042B3100CE2843 /* PriorityControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityControl.swift; sourceTree = "<group>"; };
 		A0283EFB200458BD00CE2843 /* CoursePickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePickerTableViewController.swift; sourceTree = "<group>"; };
@@ -316,7 +308,6 @@
 		A04A93DE205347C50027D1B6 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		A04A93E120534B390027D1B6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A04FD4F7206C344B001B6F9A /* OverviewExamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewExamTableViewCell.swift; sourceTree = "<group>"; };
-		A0582685214C4BF500CD964A /* API-Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API-Objects.swift"; sourceTree = "<group>"; };
 		A0588560202E8211003F5B6D /* AssignmentTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTaskTableViewCell.swift; sourceTree = "<group>"; };
 		A05FED7B20264C0D00086091 /* PriorityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityIndicator.swift; sourceTree = "<group>"; };
 		A05FEDA1202654F900086091 /* Tasks.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Tasks.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -382,7 +373,6 @@
 		A0C42E26205AF2EE0049BD1A /* ScheduleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleHeader.swift; sourceTree = "<group>"; };
 		A0CCD7482138F2CC0028D3A7 /* CalendarsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarsTableViewController.swift; sourceTree = "<group>"; };
 		A0CFCB262060B63D00D025D5 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
-		A0D796E7214EE9BF00DFF4B9 /* APISettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISettingsTableViewController.swift; sourceTree = "<group>"; };
 		A0DD4BDA200E631E008441FC /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		A0E4F9AE2001CC42007E2399 /* SemesterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterTableViewController.swift; sourceTree = "<group>"; };
 		A0E4F9B12001CE5D007E2399 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
@@ -560,7 +550,6 @@
 				A0456ECD2103F0A500A249C2 /* SettingsTableViewController.swift */,
 				A0CCD7482138F2CC0028D3A7 /* CalendarsTableViewController.swift */,
 				A04A7C9D210932480042B86A /* ConsoleTableViewController.swift */,
-				A0D796E7214EE9BF00DFF4B9 /* APISettingsTableViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -687,8 +676,6 @@
 				A0F22FA51FFEDE9800E32CC2 /* AppDelegate.swift */,
 				A02B34162006E711008344E1 /* InterfaceManager.swift */,
 				A0C42E1C20587C490049BD1A /* NotificationManager.swift */,
-				A0137F7721488EB1002F489E /* API.swift */,
-				A0582685214C4BF500CD964A /* API-Objects.swift */,
 				A0F22FEF20009C6400E32CC2 /* DataManager.swift */,
 				A094A811203F727C00B0814D /* FetchManager.swift */,
 				A0868ED3202A0FFE00F99AB1 /* Console.swift */,
@@ -973,7 +960,6 @@
 			files = (
 				A05FEDCB2026575F00086091 /* DataManager.swift in Sources */,
 				A05FEDCA2026575C00086091 /* IntervalTimer.swift in Sources */,
-				A0582688214C503500CD964A /* API-Objects.swift in Sources */,
 				A0A98E722054C6EF00E9470F /* Commitment.swift in Sources */,
 				A093A3C920560E50006FD393 /* TaskListView.swift in Sources */,
 				A065BF6E2054AFCA009BC92A /* SingleEvent.swift in Sources */,
@@ -1018,7 +1004,6 @@
 				A0C42E1F205882F90049BD1A /* NotificationManager.swift in Sources */,
 				A065BF6B2054AFCA009BC92A /* Extracurricular.swift in Sources */,
 				A0868ED8202A17F900F99AB1 /* Console.swift in Sources */,
-				A0137F792148919D002F489E /* API.swift in Sources */,
 				A094A80E203F6C4A00B0814D /* ReminderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1061,7 +1046,6 @@
 				A05FED9020264FB200086091 /* Semester.swift in Sources */,
 				A065BF6A2054AFC9009BC92A /* SingleEvent.swift in Sources */,
 				A0C42E21205AEE470049BD1A /* ScheduleView.swift in Sources */,
-				A0137F7A2148919D002F489E /* API.swift in Sources */,
 				A05FED8A20264FA300086091 /* UIColorPicker.swift in Sources */,
 				A05FED8920264FA300086091 /* UIColorSwatch.swift in Sources */,
 				A05FED9920264FB700086091 /* CalendarDay.swift in Sources */,
@@ -1072,7 +1056,6 @@
 				A05FED8D20264FA300086091 /* PriorityIndicator.swift in Sources */,
 				A05FED8520264F9E00086091 /* BetterNavigationController.swift in Sources */,
 				A05FED9420264FB200086091 /* Task.swift in Sources */,
-				A0582687214C503400CD964A /* API-Objects.swift in Sources */,
 				A094A813203F72AF00B0814D /* FetchManager.swift in Sources */,
 				A05FED8120264F9B00086091 /* DataManager.swift in Sources */,
 			);
@@ -1095,7 +1078,6 @@
 				A0E4F9AF2001CC42007E2399 /* SemesterTableViewController.swift in Sources */,
 				A065BF642054AE60009BC92A /* RepeatingEvent.swift in Sources */,
 				A093A3D1205731A4006FD393 /* NewRepeatingEventTableViewController.swift in Sources */,
-				A0582686214C4BF500CD964A /* API-Objects.swift in Sources */,
 				A04A93DF205347C50027D1B6 /* InitialViewController.swift in Sources */,
 				A0F230002000ADDE00E32CC2 /* SemestersTableViewController.swift in Sources */,
 				A04A20E9203743A5001752FB /* ExamTableViewController.swift in Sources */,
@@ -1109,7 +1091,6 @@
 				A04A20E320373605001752FB /* DayOfWeekIndicator.swift in Sources */,
 				A0C42E1D20587C490049BD1A /* NotificationManager.swift in Sources */,
 				A0120BCE2142BEDA00E04BA2 /* TaskListSeparator.swift in Sources */,
-				A0137F7821488EB1002F489E /* API.swift in Sources */,
 				A067B80220539E0D00FD8DDA /* WelcomeSemesterViewController.swift in Sources */,
 				A02B3425200832F5008344E1 /* NewCourseTableViewController.swift in Sources */,
 				A0F22FEB20009B2700E32CC2 /* ClockTime.swift in Sources */,
@@ -1187,7 +1168,6 @@
 				A0CFCB272060B63D00D025D5 /* RowView.swift in Sources */,
 				A05FED7E20264D3100086091 /* PriorityIndicator.swift in Sources */,
 				A0F22FE420009B2700E32CC2 /* CKEnabled.swift in Sources */,
-				A0D796E8214EE9BF00DFF4B9 /* APISettingsTableViewController.swift in Sources */,
 				A065BF622054AC1E009BC92A /* Event.swift in Sources */,
 				A0E4F9B22001CE5D007E2399 /* CourseTableViewCell.swift in Sources */,
 			);
@@ -1248,12 +1228,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Tasks/Tasks.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = Tasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1264,12 +1246,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Tasks/Tasks.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = Tasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1425,12 +1409,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Logan (iOS)/Logan (iOS).entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = "Logan (iOS)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1442,12 +1428,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Logan (iOS)/Logan (iOS).entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = "Logan (iOS)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

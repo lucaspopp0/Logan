@@ -26,7 +26,7 @@ class SettingsTableViewController: UITableViewController {
         if section == 0 {
             return 1
         } else {
-            return 2
+            return 1
         }
     }
 
@@ -39,8 +39,6 @@ class SettingsTableViewController: UITableViewController {
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
                 cell.textLabel?.text = "View Logs"
-            } else if indexPath.row == 1 {
-                cell.textLabel?.text = "API Info"
             }
         }
 
@@ -75,8 +73,6 @@ class SettingsTableViewController: UITableViewController {
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
                 performSegue(withIdentifier: "View Logs", sender: self)
-            } else if indexPath.row == 1 {
-                performSegue(withIdentifier: "API Info", sender: self)
             }
         }
     }
