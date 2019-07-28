@@ -9,28 +9,28 @@
 import UIKit
 import NotificationCenter
 
-class TodayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DMListener {
+class TodayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DataManagerListener {
     
     @IBOutlet weak var tabBar: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tasksSegmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    var scheduleSections: [(sectionName: String, items: [NSObject])] = []
-    var assignmentSections: [(sectionName: String, items: [NSObject])] = []
-    var taskSections: [(sectionName: String, items: [NSObject])] = []
+    var scheduleData: TableData<NSObject> = TableData<NSObject>()
+    var assignmentData: TableData<NSObject> = TableData<NSObject>()
+    var taskData: TableData<NSObject> = TableData<NSObject>()
     
-    var dataSections: [(sectionName: String, items: [NSObject])] {
+    var data: TableData<NSObject> {
         get {
             switch segmentedControl.selectedSegmentIndex {
             case 0:
-                return scheduleSections
+                return scheduleData
             case 1:
-                return assignmentSections
+                return assignmentData
             case 2:
-                return taskSections
+                return taskData
             default:
-                return []
+                return TableData<NSObject>()
             }
         }
     }
@@ -83,18 +83,7 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func updateData() {
         if segmentedControl.selectedSegmentIndex == 0 {
-            scheduleSections = []
-            
-            func addClass(_ classToAdd: Class, toSection section: String) {
-                for i in 0 ..< dataSections.count {
-                    if scheduleSections[i].sectionName == section {
-                        scheduleSections[i].items.append(classToAdd)
-                        return
-                    }
-                }
-                
-                scheduleSections.append((sectionName: section, items: [classToAdd]))
-            }
+            scheduleData.clear()
             
             if let currentSemester = DataManager.shared.currentSemester {
                 let today = CalendarDay(date: Date())
@@ -118,17 +107,17 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                 for scheduleClass in allClasses {
                     if scheduleClass.startDate <= today && scheduleClass.endDate >= today && scheduleClass.daysOfWeek.contains(currentDayOfWeek) {
                         if scheduleClass.endTime <= now {
-                            addClass(scheduleClass, toSection: "Past")
+                            scheduleData.add(item: scheduleClass, section: "Past")
                         } else if scheduleClass.startTime >= now {
-                            addClass(scheduleClass, toSection: "Upcoming")
+                            scheduleData.add(item: scheduleClass, section: "Upcoming")
                         } else if scheduleClass.startTime <= now && scheduleClass.endTime >= now {
-                            addClass(scheduleClass, toSection: "Current")
+                            scheduleData.add(item: scheduleClass, section: "Current")
                         }
                     }
                 }
             }
         } else if segmentedControl.selectedSegmentIndex == 1 {
-            assignmentSections = []
+            assignmentData.clear()
             
             var assignmentsToSort: [Assignment] = []
             
@@ -164,31 +153,15 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                 }
             }
             
-            func addAssignment(_ assignment: Assignment, toSectionWithName sectionName: String) {
-                var found: Bool = false
-                
-                for i in 0 ..< assignmentSections.count {
-                    if assignmentSections[i].sectionName == sectionName {
-                        assignmentSections[i].items.append(assignment)
-                        found = true
-                        break
-                    }
-                }
-                
-                if !found {
-                    assignmentSections.append((sectionName: sectionName, items: [assignment]))
-                }
-            }
-            
             for assignment in assignmentsToSort {
                 switch assignment.dueDate {
                     
                 case .asap:
-                    addAssignment(assignment, toSectionWithName: "ASAP")
+                    assignmentData.add(item: assignment, section: "ASAP")
                     break
                     
                 case .eventually:
-                    addAssignment(assignment, toSectionWithName: "Eventually")
+                    assignmentData.add(item: assignment, section: "Eventually")
                     break
                     
                 case .specificDeadline(let deadline):
@@ -197,13 +170,13 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                         let days = Date.daysBetween(today, and: dayDate)
                         
                         if deadline.day == CalendarDay(date: today) {
-                            addAssignment(assignment, toSectionWithName: "Today")
+                            assignmentData.add(item: assignment, section: "Today")
                         } else if days < 0 {
-                            addAssignment(assignment, toSectionWithName: "Overdue")
+                            assignmentData.add(item: assignment, section: "Overdue")
                         } else if days == 1 {
-                            addAssignment(assignment, toSectionWithName: "Tomorrow")
+                            assignmentData.add(item: assignment, section: "Tomorrow")
                         } else if today.weekOfYear == dayDate.weekOfYear {
-                            addAssignment(assignment, toSectionWithName: DayOfWeek.forDate(dayDate).longName())
+                            assignmentData.add(item: assignment, section: DayOfWeek.forDate(dayDate).longName())
                         } else {
                             let formatter = BetterDateFormatter()
                             
@@ -213,10 +186,10 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                                 formatter.dateFormat = "EEEE, MMMM dnn"
                             }
                             
-                            addAssignment(assignment, toSectionWithName: formatter.string(from: dayDate))
+                            assignmentData.add(item: assignment, section: formatter.string(from: dayDate))
                         }
                     } else {
-                        addAssignment(assignment, toSectionWithName: "Eventually")
+                        assignmentData.add(item: assignment, section: "Eventually")
                     }
                     break
                     
@@ -226,7 +199,7 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                 }
             }
         } else if segmentedControl.selectedSegmentIndex == 2 {
-            taskSections = []
+            taskData.clear()
             
             var tasksToSort: [Task] = []
             
@@ -259,32 +232,16 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                 }
             }
             
-            tasksToSort.sort(by: DataManager.shared.initialSortAlgorithm(showingCompletedTasks: false))
-            
-            func addTask(_ task: Task, toSectionWithName sectionName: String) {
-                var found: Bool = false
-                
-                for i in 0 ..< dataSections.count {
-                    if taskSections[i].sectionName == sectionName {
-                        taskSections[i].items.append(task)
-                        found = true
-                        break
-                    }
-                }
-                
-                if !found {
-                    taskSections.append((sectionName: sectionName, items: [task]))
-                }
-            }
+            tasksToSort.sort(by: Sorting.initialSortIncompleteTasks(_:_:))
             
             for task in tasksToSort {
                 switch task.dueDate {
                 case .asap:
-                    addTask(task, toSectionWithName: "ASAP")
+                    taskData.add(item: task, section: "ASAP")
                     break
                     
                 case .eventually:
-                    addTask(task, toSectionWithName: "Eventually")
+                    taskData.add(item: task, section: "Eventually")
                     break
                     
                 case .specificDay(let day):
@@ -293,13 +250,13 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                         let days = Date.daysBetween(today, and: deadline)
                         
                         if day == CalendarDay(date: today) {
-                            addTask(task, toSectionWithName: "Today")
+                            taskData.add(item: task, section: "Today")
                         } else if days < 0 {
-                            addTask(task, toSectionWithName: "Overdue")
+                            taskData.add(item: task, section: "Overdue")
                         } else if days == 1 {
-                            addTask(task, toSectionWithName: "Tomorrow")
+                            taskData.add(item: task, section: "Tomorrow")
                         } else if today.weekOfYear == deadline.weekOfYear {
-                            addTask(task, toSectionWithName: DayOfWeek.forDate(deadline).longName())
+                            taskData.add(item: task, section: DayOfWeek.forDate(deadline).longName())
                         } else {
                             let formatter = BetterDateFormatter()
                             
@@ -309,10 +266,10 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                                 formatter.dateFormat = "EEEE, MMMM dnn"
                             }
                             
-                            addTask(task, toSectionWithName: formatter.string(from: deadline))
+                            taskData.add(item: task, section: formatter.string(from: deadline))
                         }
                     } else {
-                        addTask(task, toSectionWithName: "Eventually")
+                        taskData.add(item: task, section: "Eventually")
                     }
                     break
                     
@@ -321,9 +278,9 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                 }
             }
             
-            for i in 0 ..< dataSections.count {
-                if taskSections[i].sectionName == "Overdue" {
-                    taskSections[i].items = (taskSections[i].items as! [Task]).sorted(by: { (task1, task2) -> Bool in
+            for section in data.sections {
+                if section.title == "Overdue" {
+                    section.items = (section.items as! [Task]).sorted(by: { (task1, task2) -> Bool in
                         switch task1.dueDate {
                         case .specificDay(let day1):
                             switch task2.dueDate {
@@ -340,21 +297,21 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                     })
                 }
                 
-                taskSections[i].items = (taskSections[i].items as! [Task]).sorted(by: DataManager.shared.sectionSortAlgorithm(showingCompletedTasks: false))
+                section.items = (section.items as! [Task]).sorted(by: Sorting.sectionSortAlgorithm(showingCompletedTasks: false))
             }
         }
     }
     
-    // MARK: - DMListener
+    // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DMLoadingEventType) {
-        if eventType == DMLoadingEventType.start {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+        if eventType == .start {
             if let leftNavigationButton = navigationItem.leftBarButtonItem {
                 if leftNavigationButton.title != nil && leftNavigationButton.title! == "Sync" {
                     leftNavigationButton.isEnabled = false
                 }
             }
-        } else if eventType == DMLoadingEventType.end {
+        } else if eventType == .end {
             updateData()
             tableView.reloadData()
             
@@ -369,15 +326,15 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     // MARK: - Table view delegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSections.count
+        return data.sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSections[section].items.count
+        return data.sections[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = dataSections[indexPath.section].items[indexPath.row]
+        let item = data.sections[indexPath.section].items[indexPath.row]
         
         if let scheduleClass = item as? Class {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "Class", for: indexPath) as? ScheduleTableViewCell {
@@ -407,7 +364,7 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if segmentedControl.selectedSegmentIndex == 0 || segmentedControl.selectedSegmentIndex == 1 {
-            return dataSections[section].sectionName
+            return data.sections[section].title
         }
         
         return nil

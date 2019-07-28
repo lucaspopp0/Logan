@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ScheduleTableViewController: UITableViewController, DMListener {
+class ScheduleTableViewController: UITableViewController, DataManagerListener {
     
-    private var dataSections: [(title: String, classes: [Class])] = []
+    private var data: TableData<Class> = TableData<Class>()
     
     private var updateTimer: UpdateTimer!
     
@@ -35,18 +35,7 @@ class ScheduleTableViewController: UITableViewController, DMListener {
     }
     
     func updateData() {
-        dataSections = []
-        
-        func addClass(_ classToAdd: Class, toSection section: String) {
-            for i in 0 ..< dataSections.count {
-                if dataSections[i].title == section {
-                    dataSections[i].classes.append(classToAdd)
-                    return
-                }
-            }
-            
-            dataSections.append((title: section, classes: [classToAdd]))
-        }
+        data.clear()
         
         if let currentSemester = DataManager.shared.currentSemester {
             let today = CalendarDay(date: Date())
@@ -70,27 +59,27 @@ class ScheduleTableViewController: UITableViewController, DMListener {
             for scheduleClass in allClasses {
                 if scheduleClass.startDate <= today && scheduleClass.endDate >= today && scheduleClass.daysOfWeek.contains(currentDayOfWeek) {
                     if scheduleClass.endTime <= now {
-                        addClass(scheduleClass, toSection: "Past")
+                        data.add(item: scheduleClass, section: "Past")
                     } else if scheduleClass.startTime >= now {
-                        addClass(scheduleClass, toSection: "Upcoming")
+                        data.add(item: scheduleClass, section: "Upcoming")
                     } else if scheduleClass.startTime <= now && scheduleClass.endTime >= now {
-                        addClass(scheduleClass, toSection: "Current")
+                        data.add(item: scheduleClass, section: "Current")
                     }
                 }
             }
         }
     }
     
-    // MARK: - DMListener
+    // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DMLoadingEventType) {
-        if eventType == DMLoadingEventType.start {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+        if eventType == DataManager.LoadingEventType.start {
             if let leftNavigationButton = navigationItem.leftBarButtonItem {
                 if leftNavigationButton.title != nil && leftNavigationButton.title! == "Sync" {
                     leftNavigationButton.isEnabled = false
                 }
             }
-        } else if eventType == DMLoadingEventType.end {
+        } else if eventType == DataManager.LoadingEventType.end {
             updateData()
             tableView.reloadData()
             
@@ -105,20 +94,20 @@ class ScheduleTableViewController: UITableViewController, DMListener {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSections.count
+        return data.sections.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dataSections[section].title
+        return data.sections[section].title
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSections[section].classes.count
+        return data.sections[section].items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Class", for: indexPath) as? ScheduleTableViewCell {
-            cell.classToDisplay = dataSections[indexPath.section].classes[indexPath.row]
+            cell.classToDisplay = data.sections[indexPath.section].items[indexPath.row]
             cell.configureCell()
             
             return cell

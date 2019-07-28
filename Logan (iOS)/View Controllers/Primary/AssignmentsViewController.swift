@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate, DMListener {
+class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate, DataManagerListener {
     
     @IBOutlet weak var syncButton: UIBarButtonItem!
     
@@ -16,7 +16,13 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    var dataSections: [(sectionName: String, day: CalendarDay?, assignments: [Assignment])] = []
+    private var isShowingPastAssignments: Bool {
+        get {
+            return segmentedControl.selectedSegmentIndex == 1
+        }
+    }
+    
+    let data: TableData<Assignment> = TableData<Assignment>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +53,73 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.reloadData()
     }
     
-    func updateData() {
-        dataSections = []
+    private func groupNameForAssignment(_ assignment: Assignment) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M/d/yyyy"
         
-        var showsPastAssignments: Bool = (segmentedControl.selectedSegmentIndex == 1)
+        switch assignment.dueDate {
+        case .asap:
+            return "ASAP"
+            
+        case .eventually:
+            return "Eventually"
+            
+        case .specificDeadline(let deadline):
+            if let dayDate = deadline.day.dateValue {
+                if !isShowingPastAssignments && deadline.day < CalendarDay.today {
+                    return "Overdue"
+                } else {
+                    return formatter.string(from: dayDate)
+                }
+            } else {
+                return "Eventually"
+            }
+            
+        default:
+            return ""
+        }
+    }
+    
+    private func titleForGroup(_ groupName: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M/d/yyyy"
+        
+        if let groupDate = formatter.date(from: groupName) {
+            if isShowingPastAssignments {
+                return BetterDateFormatter.autoFormatDate(groupDate)
+            } else {
+                let today = Date()
+                let days = Date.daysBetween(today, and: groupDate)
+                
+                if days == 0 {
+                    return "Today"
+                } else if days < 0 {
+                    return "Overdue"
+                } else if days == 1 {
+                    return "Tomorrow"
+                } else if today.weekOfYear == groupDate.weekOfYear {
+                    return DayOfWeek.forDate(groupDate).longName()
+                } else {
+                    let betterFormatter = BetterDateFormatter()
+                    
+                    if today.year != groupDate.year {
+                        betterFormatter.dateFormat = "EEEE, MMMM dnn, yyyy"
+                    } else {
+                        betterFormatter.dateFormat = "EEEE, MMMM dnn"
+                    }
+                    
+                    return betterFormatter.string(from: groupDate)
+                }
+            }
+        } else {
+            return groupName
+        }
+        
+        return groupName
+    }
+    
+    func updateData() {
+        data.clear()
         
         var assignmentsToSort: [Assignment] = []
         
@@ -59,7 +128,7 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
             if assignment.dueDate.intValue == DueDate.asapIntValue || assignment.dueDate.intValue == DueDate.eventuallyIntValue {
                 assignmentsToSort.append(assignment)
             } else if case .specificDeadline(let deadline) = assignment.dueDate {
-                if (showsPastAssignments && deadline.day < today) || (!showsPastAssignments && today <= deadline.day) {
+                if (isShowingPastAssignments && deadline.day < today) || (!isShowingPastAssignments && today <= deadline.day) {
                     assignmentsToSort.append(assignment)
                 }
             }
@@ -78,7 +147,6 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
                 default:
                     return true
                 }
-                break
                 
             case .specificDeadline(let deadline1):
                 switch assignment2.dueDate {
@@ -87,7 +155,7 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
                     return false
                     
                 case .specificDeadline(let deadline2):
-                    if showsPastAssignments {
+                    if isShowingPastAssignments {
                         return deadline1 > deadline2
                     } else {
                         return deadline1 < deadline2
@@ -107,106 +175,15 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
             }
         }
         
-        func addAssignment(_ assignment: Assignment, toSectionWithName sectionName: String) {
-            var found: Bool = false
-            
-            for i in 0 ..< dataSections.count {
-                if dataSections[i].sectionName == sectionName {
-                    dataSections[i].assignments.append(assignment)
-                    found = true
-                    break
-                }
-            }
-            
-            if !found {
-                var day: CalendarDay?
-                
-                if case .specificDeadline(let deadline) = assignment.dueDate {
-                    day = deadline.day
-                }
-                
-                dataSections.append((sectionName: sectionName, day: day, assignments: [assignment]))
-            }
-        }
-        
-        if !showsPastAssignments {
-            for assignment in assignmentsToSort {
-                switch assignment.dueDate {
-                    
-                case .asap:
-                    addAssignment(assignment, toSectionWithName: "ASAP")
-                    break
-                    
-                case .eventually:
-                    addAssignment(assignment, toSectionWithName: "Eventually")
-                    break
-                    
-                case .specificDeadline(let deadline):
-                    if let dayDate = deadline.day.dateValue {
-                        let today = Date()
-                        let days = Date.daysBetween(today, and: dayDate)
-                        
-                        if deadline.day == CalendarDay(date: today) {
-                            addAssignment(assignment, toSectionWithName: "Today")
-                        } else if days < 0 {
-                            addAssignment(assignment, toSectionWithName: "Overdue")
-                        } else if days == 1 {
-                            addAssignment(assignment, toSectionWithName: "Tomorrow")
-                        } else if today.weekOfYear == dayDate.weekOfYear {
-                            addAssignment(assignment, toSectionWithName: DayOfWeek.forDate(dayDate).longName())
-                        } else {
-                            let formatter = BetterDateFormatter()
-                            
-                            if today.year != dayDate.year {
-                                formatter.dateFormat = "EEEE, MMMM dnn, yyyy"
-                            } else {
-                                formatter.dateFormat = "EEEE, MMMM dnn"
-                            }
-                            
-                            addAssignment(assignment, toSectionWithName: formatter.string(from: dayDate))
-                        }
-                    } else {
-                        addAssignment(assignment, toSectionWithName: "Eventually")
-                    }
-                    break
-                    
-                default:
-                    break
-                    
-                }
-            }
-        } else {
-            for assignment in assignmentsToSort {
-                switch assignment.dueDate {
-                    
-                case .asap:
-                    addAssignment(assignment, toSectionWithName: "ASAP")
-                    break
-                    
-                case .eventually:
-                    addAssignment(assignment, toSectionWithName: "Eventually")
-                    break
-                    
-                case .specificDeadline(let deadline):
-                    if let dayDate = deadline.day.dateValue {
-                        addAssignment(assignment, toSectionWithName: BetterDateFormatter.autoFormatDate(dayDate))
-                    } else {
-                        addAssignment(assignment, toSectionWithName: "Eventually")
-                    }
-                    break
-                    
-                default:
-                    break
-                    
-                }
-            }
+        for assignment in assignmentsToSort {
+            data.add(item: assignment, section: groupNameForAssignment(assignment))
         }
     }
     
-    // MARK: - DMListener
+    // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DMLoadingEventType) {
-        if eventType == DMLoadingEventType.end {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+        if eventType == DataManager.LoadingEventType.end {
             updateData()
             tableView.reloadData()
         }
@@ -215,15 +192,15 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK: - Table view delegate/datasource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSections.count
+        return data.sections.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dataSections[section].sectionName
+        return titleForGroup(data.sections[section].title)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSections[section].assignments.count
+        return data.sections[section].items.count
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -244,16 +221,19 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
         titleLabel.sizeToFit()
         titleLabel.frame.origin = CGPoint(x: 15, y: 4)
         
-        if dataSections[section].day != nil {
-            let formatter = DateFormatter()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M/d/yyyy"
+        
+        if let date = formatter.date(from: data.sections[section].title) {
+            let day = CalendarDay(date: date)
             
-            if dataSections[section].day!.year == CalendarDay(date: Date()).year {
+            if day.year == CalendarDay.today.year {
                 formatter.dateFormat = "M/d"
             } else {
                 formatter.dateFormat = "M/d/yy"
             }
             
-            dateLabel.text = formatter.string(from: dataSections[section].day!.dateValue!)
+            dateLabel.text = formatter.string(from: date)
             
             container.addSubview(dateLabel)
             
@@ -269,7 +249,7 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Assignment", for: indexPath) as? AssignmentTableViewCell {
-            cell.assignment = dataSections[indexPath.section].assignments[indexPath.row]
+            cell.assignment = data.sections[indexPath.section].items[indexPath.row]
             cell.configureCell()
             
             return cell
@@ -288,7 +268,7 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
-            let assignmentToDelete = dataSections[indexPath.section].assignments[indexPath.row]
+            let assignmentToDelete = data.sections[indexPath.section].items[indexPath.row]
             let tasksToDelete = DataManager.shared.tasksFor(assignmentToDelete)
             
             if tasksToDelete.count > 0 {
@@ -302,14 +282,14 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
                         }
                     }
                     
-                    self.dataSections[indexPath.section].assignments.remove(at: indexPath.row)
+                    self.data.sections[indexPath.section].items.remove(at: indexPath.row)
                     if let assignmentIndex = DataManager.shared.assignments.index(of: assignmentToDelete) {
                         DataManager.shared.delete(assignmentToDelete.record)
                         DataManager.shared.assignments.remove(at: assignmentIndex)
                     }
                     
-                    if self.dataSections[indexPath.section].assignments.count == 0 {
-                        self.dataSections.remove(at: indexPath.section)
+                    if self.data.sections[indexPath.section].items.count == 0 {
+                        self.data.sections.remove(at: indexPath.section)
                         tableView.deleteSections(IndexSet(integer: indexPath.section), with: UITableViewRowAnimation.automatic)
                     } else {
                         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
@@ -323,14 +303,14 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
                     }
                 }
                 
-                dataSections[indexPath.section].assignments.remove(at: indexPath.row)
+                data.sections[indexPath.section].items.remove(at: indexPath.row)
                 if let assignmentIndex = DataManager.shared.assignments.index(of: assignmentToDelete) {
                     DataManager.shared.delete(assignmentToDelete.record)
                     DataManager.shared.assignments.remove(at: assignmentIndex)
                 }
                 
-                if dataSections[indexPath.section].assignments.count == 0 {
-                    dataSections.remove(at: indexPath.section)
+                if data.sections[indexPath.section].items.count == 0 {
+                    data.sections.remove(at: indexPath.section)
                     tableView.deleteSections(IndexSet(integer: indexPath.section), with: UITableViewRowAnimation.automatic)
                 } else {
                     tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
@@ -345,7 +325,7 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
         if let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath), let previewController = UIStoryboard(name: "Previews", bundle: Bundle.main).instantiateViewController(withIdentifier: "Assignment Preview") as? AssignmentPreviewViewController {
             previewController.loadViewIfNeeded()
             
-            previewController.assignment = dataSections[indexPath.section].assignments[indexPath.row]
+            previewController.assignment = data.sections[indexPath.section].items[indexPath.row]
             previewController.configure()
             
             previewController.preferredContentSize.height = previewController.taskList.frame.origin.y
@@ -374,7 +354,7 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let assignmentController = segue.destination as? AssignmentTableViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                assignmentController.assignment = dataSections[selectedIndexPath.section].assignments[selectedIndexPath.row]
+                assignmentController.assignment = data.sections[selectedIndexPath.section].items[selectedIndexPath.row]
             }
             
             DataManager.shared.pauseAutoUpdate()

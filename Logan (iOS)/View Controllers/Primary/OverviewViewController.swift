@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OverviewViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DMListener, UIGestureRecognizerDelegate {
+class OverviewViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DataManagerListener, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var tabBar: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -25,7 +25,7 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
     var leftSwipeRecognizer: UISwipeGestureRecognizer!
     var rightSwipeRecognizer: UISwipeGestureRecognizer!
     
-    var dataSections: [(title: String, things: [CKEnabled])] = []
+    var data: TableData<CKEnabled> = TableData<CKEnabled>()
     
     var alreadyOpened: Bool = false
     
@@ -112,7 +112,7 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func updateData() {
-        dataSections = []
+        data.clear()
         
         let today = CalendarDay(date: Date())
         let thirtyDays = CalendarDay(date: Date(timeIntervalSinceNow: 30 * 24 * 60 * 60))
@@ -134,7 +134,7 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         if exams.count > 0 {
-            dataSections.append((title: "Exams in the next 30 days", things: exams))
+            data.addSection(TableData<CKEnabled>.Section(title: "Exams in the next 30 days", items: exams))
         }
         
         var assignments: [Assignment] = []
@@ -160,7 +160,7 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         if assignments.count > 0 {
-            dataSections.append((title: "Assignments due this week", things: assignments))
+            data.addSection(TableData<CKEnabled>.Section(title: "Assignments due this week", items: assignments))
         }
     }
     
@@ -188,9 +188,9 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
         return true
     }
     
-    // MARK: - DMListener
+    // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DMLoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
         if eventType == .end {
             updateData()
             scheduleViewer.reloadData()
@@ -201,24 +201,24 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Table view
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSections.count
+        return data.sections.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dataSections[section].title
+        return data.sections[section].title
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSections[section].things.count
+        return data.sections[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let exam = dataSections[indexPath.section].things[indexPath.row] as? Exam, let cell = tableView.dequeueReusableCell(withIdentifier: "Exam", for: indexPath) as? OverviewExamTableViewCell {
+        if let exam = data.sections[indexPath.section].items[indexPath.row] as? Exam, let cell = tableView.dequeueReusableCell(withIdentifier: "Exam", for: indexPath) as? OverviewExamTableViewCell {
             cell.exam = exam
             cell.configureCell()
             
             return cell
-        } else if let assignment = dataSections[indexPath.section].things[indexPath.row] as? Assignment, let cell = tableView.dequeueReusableCell(withIdentifier: "Assignment", for: indexPath) as? AssignmentTableViewCell {
+        } else if let assignment = data.sections[indexPath.section].items[indexPath.row] as? Assignment, let cell = tableView.dequeueReusableCell(withIdentifier: "Assignment", for: indexPath) as? AssignmentTableViewCell {
             cell.assignment = assignment
             cell.configureCell()
             

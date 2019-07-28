@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate, DMListener {
+class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate, DataManagerListener {
     
     @IBOutlet weak var syncButton: UIBarButtonItem!
     
@@ -19,7 +19,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     private var viewIsVisible: Bool = false
     
-    var dataSections: [(sectionName: String, tasks: [Task])] = []
+    var data: TableData<Task> = TableData<Task>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +30,11 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         InterfaceManager.shared.tasksController = self
         DataManager.shared.addListener(self)
         
-        if DataManager.shared.currentCloudStatus == DMCloudConnectionStatus.fetching {
+        if DataManager.shared.currentCloudStatus == DataManager.ConnectionStatus.fetching {
             syncButton.image = #imageLiteral(resourceName: "Cloud Progress")
-        } else if DataManager.shared.currentCloudStatus == DMCloudConnectionStatus.ready {
+        } else if DataManager.shared.currentCloudStatus == DataManager.ConnectionStatus.ready {
             syncButton.image = #imageLiteral(resourceName: "Cloud Sync")
-        } else if DataManager.shared.currentCloudStatus == DMCloudConnectionStatus.error {
+        } else if DataManager.shared.currentCloudStatus == DataManager.ConnectionStatus.error {
             syncButton.image = #imageLiteral(resourceName: "Cloud Error")
         }
         
@@ -67,7 +67,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func updateData() {
-        dataSections = []
+        data.clear()
         
         var showsCompletedTasks: Bool = (segmentedControl.selectedSegmentIndex == 1)
         
@@ -79,33 +79,17 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
         
-        tasksToSort.sort(by: DataManager.shared.initialSortAlgorithm(showingCompletedTasks: showsCompletedTasks))
-        
-        func addTask(_ task: Task, toSectionWithName sectionName: String) {
-            var found: Bool = false
-            
-            for i in 0 ..< dataSections.count {
-                if dataSections[i].sectionName == sectionName {
-                    dataSections[i].tasks.append(task)
-                    found = true
-                    break
-                }
-            }
-            
-            if !found {
-                dataSections.append((sectionName: sectionName, tasks: [task]))
-            }
-        }
+        tasksToSort.sort(by: Sorting.initialSortAlgorithm(showingCompletedTasks: showsCompletedTasks))
         
         if !showsCompletedTasks {
             for task in tasksToSort {
                 switch task.dueDate {
                 case .asap:
-                    addTask(task, toSectionWithName: "ASAP")
+                    data.add(item: task, section: "ASAP")
                     break
                     
                 case .eventually:
-                    addTask(task, toSectionWithName: "Eventually")
+                    data.add(item: task, section: "Eventually")
                     break
                     
                 case .specificDay(let day):
@@ -114,21 +98,21 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         let days = Date.daysBetween(today, and: deadline)
                         
                         if day == CalendarDay(date: today) {
-                            addTask(task, toSectionWithName: "Today")
+                            data.add(item: task, section: "Today")
                         } else if days < 0 {
                             if days == -1 {
                                 if Date().hour <= 6 {
-                                    addTask(task, toSectionWithName: "Tonight")
+                                    data.add(item: task, section: "Tonight")
                                 } else {
-                                    addTask(task, toSectionWithName: "Yesterday")
+                                    data.add(item: task, section: "Yesterday")
                                 }
                             } else {
-                                addTask(task, toSectionWithName: "Overdue")
+                                data.add(item: task, section: "Overdue")
                             }
                         } else if days == 1 {
-                            addTask(task, toSectionWithName: "Tomorrow")
+                            data.add(item: task, section: "Tomorrow")
                         } else if today.weekOfYear == deadline.weekOfYear {
-                            addTask(task, toSectionWithName: DayOfWeek.forDate(deadline).longName())
+                            data.add(item: task, section: DayOfWeek.forDate(deadline).longName())
                         } else {
                             let formatter = BetterDateFormatter()
                             
@@ -138,10 +122,10 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                 formatter.dateFormat = "EEEE, MMMM dnn"
                             }
                             
-                            addTask(task, toSectionWithName: formatter.string(from: deadline))
+                            data.add(item: task, section: formatter.string(from: deadline))
                         }
                     } else {
-                        addTask(task, toSectionWithName: "Eventually")
+                        data.add(item: task, section: "Eventually")
                     }
                     break
                     
@@ -152,16 +136,16 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
             for task in tasksToSort {
                 if let completionDate = task.completionDate?.dateValue {
-                    addTask(task, toSectionWithName: "Completed " + BetterDateFormatter.autoFormatDate(completionDate, forSentence: true))
+                    data.add(item: task, section: "Completed " + BetterDateFormatter.autoFormatDate(completionDate, forSentence: true))
                 } else {
-                    addTask(task, toSectionWithName: "Completed at some point")
+                    data.add(item: task, section: "Completed at some point")
                 }
             }
         }
         
-        for i in 0 ..< dataSections.count {
-            if dataSections[i].sectionName == "Overdue" {
-                dataSections[i].tasks = dataSections[i].tasks.sorted(by: { (task1, task2) -> Bool in
+        for section in data.sections {
+            if section.title == "Overdue" {
+                section.items.sort { (task1, task2) -> Bool in
                     switch task1.dueDate {
                     case .specificDay(let day1):
                         switch task2.dueDate {
@@ -175,10 +159,10 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     default:
                         return true
                     }
-                })
+                }
             }
             
-            dataSections[i].tasks = dataSections[i].tasks.sorted(by: DataManager.shared.sectionSortAlgorithm(showingCompletedTasks: showsCompletedTasks))
+            section.items.sort(by: Sorting.sectionSortAlgorithm(showingCompletedTasks: showsCompletedTasks))
         }
     }
     
@@ -188,7 +172,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath), let previewController = UIStoryboard(name: "Previews", bundle: Bundle.main).instantiateViewController(withIdentifier: "Task Preview") as? TaskPreviewViewController {
             previewController.loadViewIfNeeded()
             
-            previewController.task = dataSections[indexPath.section].tasks[indexPath.row]
+            previewController.task = data.sections[indexPath.section].items[indexPath.row]
             previewController.configure()
             previewController.view.layoutSubviews()
             
@@ -215,25 +199,25 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSections.count
+        return data.sections.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dataSections[section].sectionName
+        return data.sections[section].title
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSections[section].tasks.count
+        return data.sections[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath) as? TaskTableViewCell {
-            cell.task = dataSections[indexPath.section].tasks[indexPath.row]
+            cell.task = data.sections[indexPath.section].items[indexPath.row]
             cell.configureCell()
             
             var shouldDisplayPriority: Bool = true
             for i in 0 ..< indexPath.row {
-                if dataSections[indexPath.section].tasks[i].priority == cell.task!.priority {
+                if data.sections[indexPath.section].items[i].priority == cell.task!.priority {
                     shouldDisplayPriority = false
                     break
                 }
@@ -262,7 +246,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let task = dataSections[indexPath.section].tasks[indexPath.row]
+        let task = data.sections[indexPath.section].items[indexPath.row]
         
         if case let DueDate.specificDay(specificDay) = task.dueDate {
             var overdue: Bool = false
@@ -289,12 +273,12 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 var previousSectionName: String!
                 var numberOfRowsInPreviousSection: Int = 0
                 
-                for section in 0 ..< self.dataSections.count {
-                    for row in 0 ..< self.dataSections[section].tasks.count {
-                        if self.dataSections[section].tasks[row].isEqual(task) {
+                for section in 0 ..< self.data.sections.count {
+                    for row in 0 ..< self.data.sections[section].items.count {
+                        if self.data.sections[section].items[row].isEqual(task) {
                             previousIndexPath = IndexPath(row: row, section: section)
-                            previousSectionName = self.dataSections[section].sectionName
-                            numberOfRowsInPreviousSection = self.dataSections[section].tasks.count
+                            previousSectionName = self.data.sections[section].title
+                            numberOfRowsInPreviousSection = self.data.sections[section].items.count
                             break
                         }
                     }
@@ -306,14 +290,13 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 self.updateData()
                 
-                for section in 0 ..< self.dataSections.count {
-                    for row in 0 ..< self.dataSections[section].tasks.count {
-                        if self.dataSections[section].tasks[row].isEqual(task) {
-                            
-                            let newSection = self.dataSections[section]
+                for section in 0 ..< self.data.sections.count {
+                    for row in 0 ..< self.data.sections[section].items.count {
+                        if self.data.sections[section].items[row].isEqual(task) {
+                            let newSection = self.data.sections[section]
                             let newIndexPath = IndexPath(row: row, section: section)
-                            let newSectionName = newSection.sectionName
-                            let numberOfRowsInNewSection = newSection.tasks.count
+                            let newSectionName = newSection.title
+                            let numberOfRowsInNewSection = newSection.items.count
                             
                             if newSectionName == previousSectionName {
                                 self.tableView.moveRow(at: indexPath, to: IndexPath(row: row, section: section))
@@ -352,16 +335,16 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let task = dataSections[indexPath.section].tasks[indexPath.row]
+        let task = data.sections[indexPath.section].items[indexPath.row]
         
         let deleteAction = UIContextualAction(style: UIContextualAction.Style.destructive, title: "Delete") { (action, sourceView, completionHandler) in
             if let taskIndex = DataManager.shared.tasks.index(of: task) {
-                self.dataSections[indexPath.section].tasks.remove(at: indexPath.row)
+                self.data.sections[indexPath.section].items.remove(at: indexPath.row)
                 DataManager.shared.delete(task.record)
                 DataManager.shared.tasks.remove(at: taskIndex)
                 
-                if self.dataSections[indexPath.section].tasks.count == 0 {
-                    self.dataSections.remove(at: indexPath.section)
+                if self.data.sections[indexPath.section].items.count == 0 {
+                    self.data.sections.remove(at: indexPath.section)
                     self.tableView.deleteSections(IndexSet(integer: indexPath.section), with: UITableViewRowAnimation.automatic)
                 } else {
                     self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
@@ -376,12 +359,12 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 
-    // MARK: - DMListener
+    // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DMLoadingEventType) {
-        if eventType == DMLoadingEventType.start {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+        if eventType == DataManager.LoadingEventType.start {
             syncButton.image = #imageLiteral(resourceName: "Cloud Progress")
-        } else if eventType == DMLoadingEventType.end {
+        } else if eventType == DataManager.LoadingEventType.end {
             updateData()
             tableView.reloadData()
             
@@ -404,7 +387,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     tableView.alpha = 1
                 }
             }
-        } else if eventType == DMLoadingEventType.error {
+        } else if eventType == DataManager.LoadingEventType.error {
             syncButton.image = #imageLiteral(resourceName: "Cloud Error")
             
             let alert = UIAlertController(title: "iCloud Error", message: "Could not connect to iCloud. Please check your connection and try again.", preferredStyle: UIAlertControllerStyle.alert)
@@ -420,7 +403,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let taskController = segue.destination as? TaskTableViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                taskController.task = dataSections[selectedIndexPath.section].tasks[selectedIndexPath.row]
+                taskController.task = data.sections[selectedIndexPath.section].items[selectedIndexPath.row]
             }
             
             DataManager.shared.pauseAutoUpdate()

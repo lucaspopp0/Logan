@@ -12,7 +12,7 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
     
     var assignment: Assignment! {
         didSet {
-            assignmentTasks = DataManager.shared.tasksFor(assignment).sorted(by: DataManager.shared.sortTasksForAssignment(_:_:))
+            assignmentTasks = DataManager.shared.tasksFor(assignment).sorted(by: Sorting.sortTasksForAssignment(_:_:))
         }
     }
     
@@ -29,7 +29,7 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        assignmentTasks = DataManager.shared.tasksFor(assignment).sorted(by: DataManager.shared.sortTasksForAssignment(_:_:))
+        assignmentTasks = DataManager.shared.tasksFor(assignment).sorted(by: Sorting.sortTasksForAssignment(_:_:))
         tableView.reloadSections([2, 3], with: UITableViewRowAnimation.none)
     }
     
