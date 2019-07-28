@@ -105,7 +105,7 @@ class Task: CKEnabled {
     
     var tags: [String] = []
     
-    override init(record: CKRecord) {
+    init(record: CKRecord, assignments: [Assignment]? = nil, semesters: [Semester]? = nil, extracurriculars: [Extracurricular]? = nil) {
         super.init(record: record)
         
         if let title = record["title"] as? String, let userDescription = record["userDescription"] as? String, let intCompleted = record["completed"] as? Int, let dueDateType = record["dueDateType"] as? Int, let rawPriority = record["priority"] as? Int, let id = record["id"] as? Int {
@@ -153,7 +153,7 @@ class Task: CKEnabled {
             
             if let commitmentReference = record["commitment"] as? CKReference {
                 var commitmentFound: Bool = false
-                for semester in DataManager.shared.semesters {
+                for semester in semesters ?? DataManager.shared.semesters {
                     for course in semester.courses {
                         if commitmentReference.recordID.isEqual(course.record.recordID) {
                             commitment = course
@@ -169,7 +169,7 @@ class Task: CKEnabled {
                 }
                 
                 if !commitmentFound {
-                    for extracurricular in DataManager.shared.extracurriculars {
+                    for extracurricular in extracurriculars ?? DataManager.shared.extracurriculars {
                         if commitmentReference.recordID.isEqual(extracurricular.record.recordID) {
                             commitment = extracurricular
                             break
@@ -179,7 +179,7 @@ class Task: CKEnabled {
             }
             
             if let relatedAssignmentReference = record["relatedAssignment"] as? CKReference {
-                for assignment in DataManager.shared.assignments {
+                for assignment in assignments ?? DataManager.shared.assignments {
                     if assignment.record.recordID.isEqual(relatedAssignmentReference.recordID) {
                         relatedAssignment = assignment
                         break

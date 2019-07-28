@@ -10,18 +10,18 @@ import UIKit
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, DMListener {
+class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener {
     
     var window: UIWindow?
     var newTaskViewController: NewTaskTableViewController?
     var newAssignmentViewController: NewAssignmentTableViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        DataManager.shared.loadData()
-        DataManager.shared.addListener(self)
-        
         UNUserNotificationCenter.current().delegate = NotificationManager.shared
         NotificationManager.shared.confirmAuthorization()
+        
+        DataManager.shared.addListener(self)
+        DataManager.shared.attemptInitialDataFetch()
         
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             handleShortcut(shortcutItem)
@@ -87,13 +87,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DMListener {
         DataManager.shared.fetchDataFromCloud()
     }
     
-    // MARK: - DMListener
+    // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DMLoadingEventType) {
-        if eventType == DMLoadingEventType.end {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+        if eventType == .end {
             newTaskViewController?.tableView.isUserInteractionEnabled = true
             newAssignmentViewController?.tableView.isUserInteractionEnabled = true
-        } else if eventType == DMLoadingEventType.error {
+        } else if eventType == .error {
             newTaskViewController?.navigationController?.dismiss(animated: true, completion: nil)
             newAssignmentViewController?.navigationController?.dismiss(animated: true, completion: nil)
             

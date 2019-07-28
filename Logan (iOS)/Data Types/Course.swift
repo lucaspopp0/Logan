@@ -90,8 +90,6 @@ class Course: CKEnabled, Commitment {
         }
     }
     
-    var files: [File] = []
-    
     init(record: CKRecord, classes: [Class], exams: [Exam]) {
         super.init(record: record)
         

@@ -9,7 +9,7 @@
 import UIKit
 import NotificationCenter
 
-class TasksWidgetViewController: UIViewController, NCWidgetProviding, RowViewDelegate, DMListener {
+class TasksWidgetViewController: UIViewController, NCWidgetProviding, RowViewDelegate, DataManagerListener {
     
     private enum TaskCategory: Int {
         case asap = 0
@@ -128,7 +128,7 @@ class TasksWidgetViewController: UIViewController, NCWidgetProviding, RowViewDel
             }
         }
         
-        tasksToSort.sort(by: DataManager.shared.initialSortAlgorithm(showingCompletedTasks: false))
+        tasksToSort.sort(by: Sorting.initialSortAlgorithm(showingCompletedTasks: false))
         
         for task in tasksToSort {
             switch task.dueDate {
@@ -170,10 +170,10 @@ class TasksWidgetViewController: UIViewController, NCWidgetProviding, RowViewDel
             return true
         }
         
-        asapTasks.sort(by: DataManager.shared.sectionSortIncompleteTasks(_:_:))
-        overdueTasks.sort(by: DataManager.shared.sectionSortIncompleteTasks(_:_:))
-        todaysTasks.sort(by: DataManager.shared.sectionSortIncompleteTasks(_:_:))
-        eventuallyTasks.sort(by: DataManager.shared.sectionSortIncompleteTasks(_:_:))
+        asapTasks.sort(by: Sorting.sectionSortIncompleteTasks(_:_:))
+        overdueTasks.sort(by: Sorting.sectionSortIncompleteTasks(_:_:))
+        todaysTasks.sort(by: Sorting.sectionSortIncompleteTasks(_:_:))
+        eventuallyTasks.sort(by: Sorting.sectionSortIncompleteTasks(_:_:))
         
         var titleOfSelectedSegment: String = "N"
         
@@ -254,10 +254,10 @@ class TasksWidgetViewController: UIViewController, NCWidgetProviding, RowViewDel
         return UIView()
     }
     
-    // MARK: - DMListener
+    // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DMLoadingEventType) {
-        if eventType == DMLoadingEventType.end {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+        if eventType == DataManager.LoadingEventType.end {
             updateData()
             updatePreferredContentSize()
         }

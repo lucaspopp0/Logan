@@ -68,9 +68,7 @@ class Assignment: CKEnabled {
         }
     }
     
-    var files: [File] = []
-    
-    init(record: CKRecord, reminders: [Reminder]) {
+    init(record: CKRecord, reminders: [Reminder], semesters: [Semester]? = nil, extracurriculars: [Extracurricular]? = nil) {
         super.init(record: record)
         
         if let title = record["title"] as? String, let userDescription = record["userDescription"] as? String, let dueDateType = record["dueDateType"] as? Int, let id = record["id"] as? Int {
@@ -120,7 +118,7 @@ class Assignment: CKEnabled {
             
             if let commitmentReference = record["commitment"] as? CKReference {
                 var commitmentFound: Bool = false
-                for semester in DataManager.shared.semesters {
+                for semester in semesters ?? DataManager.shared.semesters {
                     for course in semester.courses {
                         if commitmentReference.recordID.isEqual(course.record.recordID) {
                             self.commitment = course
@@ -136,7 +134,7 @@ class Assignment: CKEnabled {
                 }
                 
                 if !commitmentFound {
-                    for extracurricular in DataManager.shared.extracurriculars {
+                    for extracurricular in extracurriculars ?? DataManager.shared.extracurriculars {
                         if commitmentReference.recordID.isEqual(extracurricular.record.recordID) {
                             self.commitment = extracurricular
                             break

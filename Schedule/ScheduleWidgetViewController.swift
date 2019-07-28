@@ -9,7 +9,7 @@
 import UIKit
 import NotificationCenter
 
-class ScheduleWidgetViewController: UIViewController, DMListener, NCWidgetProviding {
+class ScheduleWidgetViewController: UIViewController, DataManagerListener, NCWidgetProviding {
     
     private var updateTimer: UpdateTimer!
     
@@ -185,7 +185,6 @@ class ScheduleWidgetViewController: UIViewController, DMListener, NCWidgetProvid
                     currentClassTitleLabel.text = thisClass.title
                     
                     let today = Date()
-                    let now = ClockTime(date: today)
                     
                     let timeRemaining = Int(thisClass.endTime.fixedToDate(today, overridingSeconds: true).timeIntervalSince(today))
                     let minutesRemaining = Int(floor(Double(timeRemaining) / 60.0))
@@ -228,7 +227,6 @@ class ScheduleWidgetViewController: UIViewController, DMListener, NCWidgetProvid
                         currentClassTitleLabel.text = upcomingClass.title
                         
                         let today = Date()
-                        let now = ClockTime(date: today)
                         
                         let timeRemaining = Int(upcomingClass.startTime.fixedToDate(today, overridingSeconds: true).timeIntervalSince(today))
                         var minutesRemaining = Int(floor(Double(timeRemaining) / 60))
@@ -299,9 +297,9 @@ class ScheduleWidgetViewController: UIViewController, DMListener, NCWidgetProvid
         }
     }
     
-    // MARK: DMListener
+    // MARK: DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DMLoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
         if eventType == .end {
             updateCurrentClass()
             updateData()

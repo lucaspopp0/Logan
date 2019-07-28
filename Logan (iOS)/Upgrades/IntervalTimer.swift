@@ -42,11 +42,6 @@ class BasicTimer: NSObject {
 
 class UpdateTimer: BasicTimer {
     
-    override func begin(_ userInfo: Any? = nil) {
-        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(self.execute(_:)), userInfo: userInfo, repeats: true)
-        isOn = true
-    }
-    
     func fire(_ userInfo: Any? = nil) {
         completionBlock(userInfo)
         timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(self.execute(_:)), userInfo: userInfo, repeats: true)
