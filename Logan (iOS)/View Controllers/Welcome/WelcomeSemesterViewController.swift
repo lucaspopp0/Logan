@@ -26,7 +26,7 @@ class WelcomeSemesterViewController: UIViewController, UIPageViewControllerDeleg
     
     override var prefersStatusBarHidden: Bool {
         get {
-            return true
+            return false
         }
     }
     

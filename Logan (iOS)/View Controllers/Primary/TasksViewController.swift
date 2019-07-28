@@ -19,7 +19,22 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     private var viewIsVisible: Bool = false
     
-    var data: TableData<Task> = TableData<Task>()
+    private var isShowingCompletedTasks: Bool {
+        get {
+            return segmentedControl.selectedSegmentIndex == 1
+        }
+    }
+    
+    private var dataForIncompleteTasks: AsyncTableData<Task> = AsyncTableData<Task>()
+    private var dataForCompleteTasks: AsyncTableData<Task> = AsyncTableData<Task>()
+    private var backgroundSortOperation: DispatchWorkItem?
+    
+    private var data: AsyncTableData<Task> {
+        get {
+            if isShowingCompletedTasks { return dataForCompleteTasks }
+            else { return dataForIncompleteTasks }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,34 +77,63 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func segmentPressed(_ sender: Any) {
-        updateData()
+        sortDataIfNecessary()
         tableView.reloadData()
     }
     
     func updateData() {
-        data.clear()
+        dataForIncompleteTasks.isComplete = false
+        dataForCompleteTasks.isComplete = false
         
-        var showsCompletedTasks: Bool = (segmentedControl.selectedSegmentIndex == 1)
+        sortDataIfNecessary()
+    }
+    
+    func sortDataIfNecessary() {
+        let activeData = isShowingCompletedTasks ? dataForCompleteTasks : dataForIncompleteTasks
+        let inactiveData = isShowingCompletedTasks ? dataForIncompleteTasks : dataForCompleteTasks
         
-        var tasksToSort: [Task] = []
-        
-        for task in DataManager.shared.tasks {
-            if task.completed == showsCompletedTasks {
-                tasksToSort.append(task)
-            }
+        if !activeData.isComplete {
+            backgroundSortOperation?.cancel()
+            
+            self.sortData(activeData, showCompletedTasks: self.isShowingCompletedTasks)
         }
         
-        tasksToSort.sort(by: Sorting.initialSortAlgorithm(showingCompletedTasks: showsCompletedTasks))
+        if !inactiveData.isComplete {
+            backgroundSortOperation = DispatchWorkItem(block: {
+                self.sortData(inactiveData, showCompletedTasks: !self.isShowingCompletedTasks)
+            })
+            
+            DispatchQueue.main.async(execute: backgroundSortOperation!)
+        }
+    }
+    
+    private func sortData(_ dataToSort: AsyncTableData<Task>, showCompletedTasks: Bool) {
+        dataToSort.isComplete = false
+        dataToSort.clear()
         
-        if !showsCompletedTasks {
+        var tasksToSort = DataManager.shared.tasks.filter { (task) -> Bool in
+            return task.completed == showCompletedTasks
+        }
+        
+        tasksToSort.sort(by: Sorting.initialSortAlgorithm(showingCompletedTasks: showCompletedTasks))
+        
+        if showCompletedTasks {
+            for task in tasksToSort {
+                if let completionDate = task.completionDate?.dateValue {
+                    dataToSort.add(item: task, section: "Completed " + BetterDateFormatter.autoFormatDate(completionDate, forSentence: true))
+                } else {
+                    dataToSort.add(item: task, section: "Completed at some point")
+                }
+            }
+        } else {
             for task in tasksToSort {
                 switch task.dueDate {
                 case .asap:
-                    data.add(item: task, section: "ASAP")
+                    dataToSort.add(item: task, section: "ASAP")
                     break
                     
                 case .eventually:
-                    data.add(item: task, section: "Eventually")
+                    dataToSort.add(item: task, section: "Eventually")
                     break
                     
                 case .specificDay(let day):
@@ -98,21 +142,21 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         let days = Date.daysBetween(today, and: deadline)
                         
                         if day == CalendarDay(date: today) {
-                            data.add(item: task, section: "Today")
+                            dataToSort.add(item: task, section: "Today")
                         } else if days < 0 {
                             if days == -1 {
                                 if Date().hour <= 6 {
-                                    data.add(item: task, section: "Tonight")
+                                    dataToSort.add(item: task, section: "Tonight")
                                 } else {
-                                    data.add(item: task, section: "Yesterday")
+                                    dataToSort.add(item: task, section: "Yesterday")
                                 }
                             } else {
-                                data.add(item: task, section: "Overdue")
+                                dataToSort.add(item: task, section: "Overdue")
                             }
                         } else if days == 1 {
-                            data.add(item: task, section: "Tomorrow")
+                            dataToSort.add(item: task, section: "Tomorrow")
                         } else if today.weekOfYear == deadline.weekOfYear {
-                            data.add(item: task, section: DayOfWeek.forDate(deadline).longName())
+                            dataToSort.add(item: task, section: DayOfWeek.forDate(deadline).longName())
                         } else {
                             let formatter = BetterDateFormatter()
                             
@@ -122,10 +166,10 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                 formatter.dateFormat = "EEEE, MMMM dnn"
                             }
                             
-                            data.add(item: task, section: formatter.string(from: deadline))
+                            dataToSort.add(item: task, section: formatter.string(from: deadline))
                         }
                     } else {
-                        data.add(item: task, section: "Eventually")
+                        dataToSort.add(item: task, section: "Eventually")
                     }
                     break
                     
@@ -133,37 +177,31 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     break
                 }
             }
-        } else {
-            for task in tasksToSort {
-                if let completionDate = task.completionDate?.dateValue {
-                    data.add(item: task, section: "Completed " + BetterDateFormatter.autoFormatDate(completionDate, forSentence: true))
-                } else {
-                    data.add(item: task, section: "Completed at some point")
-                }
-            }
-        }
-        
-        for section in data.sections {
-            if section.title == "Overdue" {
-                section.items.sort { (task1, task2) -> Bool in
-                    switch task1.dueDate {
-                    case .specificDay(let day1):
-                        switch task2.dueDate {
-                        case .specificDay(let day2):
-                            return day1 > day2
+            
+            for section in dataToSort.sections {
+                if section.title == "Overdue" {
+                    section.items.sort { (task1, task2) -> Bool in
+                        switch task1.dueDate {
+                        case .specificDay(let day1):
+                            switch task2.dueDate {
+                            case .specificDay(let day2):
+                                return day1 > day2
+                                
+                            default:
+                                return true
+                            }
                             
                         default:
                             return true
                         }
-                        
-                    default:
-                        return true
                     }
                 }
+                
+                section.items.sort(by: Sorting.sectionSortAlgorithm(showingCompletedTasks: isShowingCompletedTasks))
             }
-            
-            section.items.sort(by: Sorting.sectionSortAlgorithm(showingCompletedTasks: showsCompletedTasks))
         }
+        
+        dataToSort.isComplete = true
     }
     
     // MARK: - UIViewControllerPreviewingDelegate

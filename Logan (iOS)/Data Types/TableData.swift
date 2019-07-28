@@ -44,3 +44,7 @@ class TableData <T:NSObject> {
     }
     
 }
+
+class AsyncTableData<T:NSObject>: TableData<T> {
+    var isComplete: Bool = true
+}
