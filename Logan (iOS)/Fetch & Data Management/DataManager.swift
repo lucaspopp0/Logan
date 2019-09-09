@@ -14,7 +14,7 @@ import UIKit.UIColor
 // A protocol to be implemented that allows subscribing to the loading events of a particular data manager
 protocol DataManagerListener: AnyObject {
     
-    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType)
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType, error: Error?)
     
 }
 
@@ -142,7 +142,7 @@ class DataManager: NSObject {
             self.sendEventToListeners(.end)
         }, failureCallback: { (error) in
             self.currentCloudStatus = .error
-            self.sendEventToListeners(.error)
+            self.sendEventToListeners(.error, error: error)
             
             if let cloudError = error as? CKError {
                 if cloudError.errorCode == 3 {
@@ -205,10 +205,10 @@ class DataManager: NSObject {
         listeners.append(listener)
     }
     
-    private func sendEventToListeners(_ eventType: LoadingEventType) {
+    private func sendEventToListeners(_ eventType: LoadingEventType, error: Error? = nil) {
         DispatchQueue.main.async {
             for listener in self.listeners {
-                listener.handleLoadingEvent(eventType)
+                listener.handleLoadingEvent(eventType, error: error)
             }
         }
     }
@@ -250,7 +250,7 @@ class DataManager: NSObject {
                     
                 default:
                     self.currentCloudStatus = .error
-                    self.sendEventToListeners(.error)
+                    self.sendEventToListeners(.error, error: accountError)
                     break
                     
                 }

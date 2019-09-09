@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit.CKError
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate, DataManagerListener {
     
@@ -399,7 +400,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType, error: Error?) {
         if eventType == DataManager.LoadingEventType.start {
             syncButton.image = #imageLiteral(resourceName: "Cloud Progress")
         } else if eventType == DataManager.LoadingEventType.end {
@@ -428,7 +429,17 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else if eventType == DataManager.LoadingEventType.error {
             syncButton.image = #imageLiteral(resourceName: "Cloud Error")
             
-            let alert = UIAlertController(title: "iCloud Error", message: "Could not connect to iCloud. Please check your connection and try again.", preferredStyle: UIAlertControllerStyle.alert)
+            var alert: UIAlertController!
+            if let cloudError = error as? CKError {
+                let readableDescription = cloudError.localizedDescription.substring(to: cloudError.localizedDescription.indexOf("(CKErrorDomain"))
+                
+                alert = UIAlertController(title: "CKError Code \(cloudError.errorCode)", message: readableDescription, preferredStyle: UIAlertControllerStyle.alert)
+            } else if error != nil {
+                alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+            } else {
+                alert = UIAlertController(title: "Error", message: "Could not connect to iCloud. Please check your connection and try again.", preferredStyle: UIAlertControllerStyle.alert)
+            }
+            
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
             
             present(alert, animated: true, completion: nil)

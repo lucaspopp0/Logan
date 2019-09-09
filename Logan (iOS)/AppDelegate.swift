@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener {
     
     // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType, error: Error?) {
         if eventType == .end {
             newTaskViewController?.tableView.isUserInteractionEnabled = true
             newAssignmentViewController?.tableView.isUserInteractionEnabled = true

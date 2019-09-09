@@ -190,7 +190,7 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType, error: Error?) {
         if eventType == .end {
             updateData()
             scheduleViewer.reloadData()

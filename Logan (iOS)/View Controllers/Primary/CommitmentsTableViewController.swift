@@ -76,7 +76,7 @@ class CommitmentsTableViewController: UITableViewController, DataManagerListener
     
     // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType, error: Error?) {
         if eventType == DataManager.LoadingEventType.end {
             updateData()
             tableView.reloadData()

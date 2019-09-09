@@ -304,7 +304,7 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType, error: Error?) {
         if eventType == .start {
             if let leftNavigationButton = navigationItem.leftBarButtonItem {
                 if leftNavigationButton.title != nil && leftNavigationButton.title! == "Sync" {

@@ -72,7 +72,7 @@ class ScheduleTableViewController: UITableViewController, DataManagerListener {
     
     // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType, error: Error?) {
         if eventType == DataManager.LoadingEventType.start {
             if let leftNavigationButton = navigationItem.leftBarButtonItem {
                 if leftNavigationButton.title != nil && leftNavigationButton.title! == "Sync" {

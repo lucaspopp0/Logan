@@ -129,6 +129,16 @@ extension String {
         }
     }
     
+    func indexOf(_ substr: String) -> Int {
+        for i in 0 ..< length {
+            if self.substring(start: i, length: substr.length) == substr {
+                return i
+            }
+        }
+        
+        return -1
+    }
+    
     func substring(from: Int, to: Int) -> String {
         var f = from
         var t = to

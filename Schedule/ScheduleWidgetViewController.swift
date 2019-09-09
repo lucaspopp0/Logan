@@ -299,7 +299,7 @@ class ScheduleWidgetViewController: UIViewController, DataManagerListener, NCWid
     
     // MARK: DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType, error: Error?) {
         if eventType == .end {
             updateCurrentClass()
             updateData()

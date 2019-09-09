@@ -256,7 +256,7 @@ class TasksWidgetViewController: UIViewController, NCWidgetProviding, RowViewDel
     
     // MARK: - DataManagerListener
     
-    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType) {
+    func handleLoadingEvent(_ eventType: DataManager.LoadingEventType, error: Error?) {
         if eventType == DataManager.LoadingEventType.end {
             updateData()
             updatePreferredContentSize()
