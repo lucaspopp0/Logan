@@ -11,4 +11,4 @@ I started this project because I have used a digital planner to keep track of my
 - **[Tasks](https://github.com/lucaspopp0/to-do/tree/master/Tasks):** Widget that provides quick access to the user's tasks for the day
 
 ### Screenshots
-![Screenshots](https://github.com/lucaspopp0/to-do/blob/master/Screenshots/Screenshots.png)
+![Screenshots](https://github.com/lucaspopp0/Logan/blob/master/Screenshots/Screenshots.png)
