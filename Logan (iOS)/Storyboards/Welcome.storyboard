@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fWC-OR-sFb">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fWC-OR-sFb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +11,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="fRh-Kn-gbE">
             <objects>
-                <viewController id="fWC-OR-sFb" customClass="WelcomeViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="fWC-OR-sFb" customClass="WelcomeViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NWK-ou-O7q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +54,7 @@
         <!--View Controller-->
         <scene sceneID="yVd-ls-el9">
             <objects>
-                <viewController storyboardIdentifier="Welcome 1" id="C1B-8h-7PT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome 1" modalPresentationStyle="fullScreen" id="C1B-8h-7PT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pvr-KU-DgK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,28 +102,28 @@
         <!--View Controller-->
         <scene sceneID="4sc-Kl-wcQ">
             <objects>
-                <viewController storyboardIdentifier="Welcome 2" id="XXu-Mg-jIP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome 2" modalPresentationStyle="fullScreen" id="XXu-Mg-jIP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CWq-34-kL5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOU-VA-E4c">
-                                <rect key="frame" x="32" y="76" width="350" height="167"/>
+                                <rect key="frame" x="32" y="76" width="350" height="168.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How it works" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkF-N0-Tdx">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I organize everything using three basic categories:" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44z-WP-2j9">
-                                        <rect key="frame" x="0.0" y="48" width="350" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="350" height="42.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-AJ-5qc">
-                                        <rect key="frame" x="0.0" y="102.5" width="350" height="64.5"/>
+                                        <rect key="frame" x="0.0" y="104" width="350" height="64.5"/>
                                         <string key="text">• Commitments
 • Assignments
 • Tasks</string>
@@ -164,40 +162,40 @@
         <!--View Controller-->
         <scene sceneID="1OB-sk-5AY">
             <objects>
-                <viewController storyboardIdentifier="Commitments" id="ZXI-sE-JtT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Commitments" modalPresentationStyle="fullScreen" id="ZXI-sE-JtT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3fp-7S-ZxA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEc-dA-ekj">
-                                <rect key="frame" x="32" y="76" width="350" height="252"/>
+                                <rect key="frame" x="32" y="76" width="350" height="254"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commitments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xq-NE-c4N">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Commitments can be any commitment for which you do work. Commitments can be classes, jobs, organizations, etc." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jb-Ij-cSu">
-                                        <rect key="frame" x="0.0" y="47.5" width="350" height="64.5"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="350" height="64.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Commitments are used to help you categorize everything you have to do." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NR-wK-CJc">
-                                        <rect key="frame" x="0.0" y="124" width="350" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="126" width="350" height="42.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Ex:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNY-0V-4x0">
-                                        <rect key="frame" x="0.0" y="182.5" width="23" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="184.5" width="23" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Qjr-RE-VTp">
-                                        <rect key="frame" x="31" y="182.5" width="319" height="69.5"/>
+                                        <rect key="frame" x="31" y="184.5" width="319" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Delta Tau Delta&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-tc-Qo0">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
@@ -255,34 +253,34 @@
         <!--View Controller-->
         <scene sceneID="zew-Qv-FYR">
             <objects>
-                <viewController storyboardIdentifier="Assignments" id="cTh-hX-UP2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Assignments" modalPresentationStyle="fullScreen" id="cTh-hX-UP2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RMB-Sa-pzh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McJ-Fw-Fax">
-                                <rect key="frame" x="32" y="76" width="350" height="151"/>
+                                <rect key="frame" x="32" y="76" width="350" height="153"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiy-eG-Ps5">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Assignments are used to keep track of your major assigned work. " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODa-rm-Dhx">
-                                        <rect key="frame" x="0.0" y="47.5" width="350" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="350" height="42.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Ex:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzZ-G3-xYh">
-                                        <rect key="frame" x="0.0" y="106" width="23" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="108" width="23" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vZL-tz-DIz">
-                                        <rect key="frame" x="31" y="106" width="319" height="45"/>
+                                        <rect key="frame" x="31" y="108" width="319" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Paper 1&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTb-zz-Xpu">
                                                 <rect key="frame" x="0.0" y="0.0" width="70.5" height="20.5"/>
@@ -331,35 +329,35 @@
         <!--View Controller-->
         <scene sceneID="GJK-y9-XUc">
             <objects>
-                <viewController storyboardIdentifier="Tasks" id="JhL-et-XvY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Tasks" modalPresentationStyle="fullScreen" id="JhL-et-XvY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nMH-X4-U1f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcq-Kv-jMT">
-                                <rect key="frame" x="32" y="76" width="350" height="241.5"/>
+                                <rect key="frame" x="32" y="76" width="350" height="243.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3c-id-Rld">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3r-3k-GNV">
-                                        <rect key="frame" x="0.0" y="47.5" width="350" height="108.5"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="350" height="108.5"/>
                                         <string key="text">Tasks are the individual things you want to do. Tasks can be related to a specific commitment or assignment if applicable, and can be made due on a specific date, ASAP, or when you have free time.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Ex:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q88-KR-snl">
-                                        <rect key="frame" x="0.0" y="172" width="23" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="174" width="23" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hds-Fm-aBq">
-                                        <rect key="frame" x="31" y="172" width="319" height="69.5"/>
+                                        <rect key="frame" x="31" y="174" width="319" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Buy groceries&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fss-kL-shK">
                                                 <rect key="frame" x="0.0" y="0.0" width="119.5" height="20.5"/>
@@ -414,28 +412,28 @@
         <!--View Controller-->
         <scene sceneID="Ioz-XR-6st">
             <objects>
-                <viewController storyboardIdentifier="Get Started" id="sQX-sG-rfi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Get Started" modalPresentationStyle="fullScreen" id="sQX-sG-rfi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gKE-y8-4Xq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-iy-8i6">
-                                <rect key="frame" x="43" y="389.5" width="328" height="117.5"/>
+                                <rect key="frame" x="43" y="388.5" width="328" height="119"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Ready to start adding some commitments?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE1-Lx-bCN">
-                                        <rect key="frame" x="0.0" y="48" width="328" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="328" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Started!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jte-Zm-oNC">
-                                        <rect key="frame" x="0.0" y="0.0" width="328" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="328" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-aC-P4K">
-                                        <rect key="frame" x="125" y="84.5" width="78" height="33"/>
+                                        <rect key="frame" x="125" y="86" width="78" height="33"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <state key="normal" title="Let's do it">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -476,11 +474,11 @@
             <objects>
                 <viewController id="W01-3R-NBI" customClass="WelcomeSemesterViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rXa-0k-SSh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFE-Fu-9BO">
-                                <rect key="frame" x="356" y="54" width="38" height="33"/>
+                                <rect key="frame" x="356" y="10" width="38" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -488,17 +486,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Semester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWk-A5-taf">
-                                <rect key="frame" x="144" y="60" width="126.5" height="20.5"/>
+                                <rect key="frame" x="144" y="16" width="126.5" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-aO-0BC">
-                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="414" height="749"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToJ-yg-Esg">
-                                <rect key="frame" x="20" y="54" width="34" height="33"/>
+                                <rect key="frame" x="20" y="10" width="34" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Skip"/>
                                 <connections>
@@ -546,7 +544,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Spring 2018" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1M-UI-cUa">
-                                <rect key="frame" x="20" y="88.5" width="374" height="32"/>
+                                <rect key="frame" x="20" y="88.5" width="374" height="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
@@ -591,14 +589,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBm-1v-YHS" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
-                                <rect key="frame" x="20" y="132.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="134.5" width="374" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" placeholder="YES" id="wvn-jA-UVd"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-J9-Q1q">
-                                <rect key="frame" x="332.5" y="77" width="61.5" height="31.5"/>
+                                <rect key="frame" x="327.5" y="77" width="66.5" height="33.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -636,14 +634,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dx2-x5-uFj" customClass="BetterDatePicker" customModule="Logan__iOS_" customModuleProvider="target">
-                                <rect key="frame" x="20" y="132.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="134.5" width="374" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" placeholder="YES" id="Xrs-v8-BDk"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3I-aO-GMv">
-                                <rect key="frame" x="332.5" y="77" width="61.5" height="31.5"/>
+                                <rect key="frame" x="327.5" y="77" width="66.5" height="33.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -669,28 +667,28 @@
         <!--Welcome Permissions View Controller-->
         <scene sceneID="uSJ-c8-Erx">
             <objects>
-                <viewController storyboardIdentifier="Permissions" id="38Z-2Z-G8o" customClass="WelcomePermissionsViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Permissions" modalPresentationStyle="fullScreen" id="38Z-2Z-G8o" customClass="WelcomePermissionsViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bdt-4f-O2b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgE-N3-UbB">
-                                <rect key="frame" x="32" y="76" width="350" height="347"/>
+                                <rect key="frame" x="32" y="76" width="350" height="353.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Permissions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPX-aw-9PS">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="For now, I store all data using iCloud. In order to use this app, you will need to enable iCloud Drive." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcc-7s-Kdx">
-                                        <rect key="frame" x="0.0" y="84" width="350" height="64.5"/>
+                                        <rect key="frame" x="0.0" y="88" width="350" height="64.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vz-sC-uA0">
-                                        <rect key="frame" x="0.0" y="164.5" width="155" height="21"/>
+                                        <rect key="frame" x="0.0" y="168.5" width="155" height="21"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.10000000000000001" maxX="0.0" maxY="0.10000000000000001"/>
                                         <state key="normal" title="Enable iCloud Drive">
@@ -701,19 +699,19 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCn-h7-Q6G">
-                                        <rect key="frame" x="0.0" y="209.5" width="111" height="24"/>
+                                        <rect key="frame" x="0.0" y="213.5" width="121" height="26.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="I need permission to send you reminders. The only notifications you'll ever get are the ones you schedule yourself." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hz-Dw-rhV">
-                                        <rect key="frame" x="0.0" y="245.5" width="350" height="64.5"/>
+                                        <rect key="frame" x="0.0" y="252" width="350" height="64.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCS-fA-VNF">
-                                        <rect key="frame" x="0.0" y="326" width="160" height="21"/>
+                                        <rect key="frame" x="0.0" y="332.5" width="160" height="21"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.10000000000000001" maxX="0.0" maxY="0.10000000000000001"/>
                                         <state key="normal" title="Enable Notifications">
@@ -724,7 +722,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iCloud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqz-hZ-Ctp">
-                                        <rect key="frame" x="0.0" y="48" width="57" height="24"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="62" height="26.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -761,6 +759,7 @@
                         <viewLayoutGuide key="safeArea" id="SUx-H8-L7e"/>
                     </view>
                     <connections>
+                        <outlet property="googleSignInButton" destination="nBw-Fh-Hbo" id="19J-ix-6cG"/>
                         <outlet property="iCloudButton" destination="0Vz-sC-uA0" id="bkd-Bf-Ppu"/>
                         <outlet property="notificationsButton" destination="sCS-fA-VNF" id="S8M-KC-8Rg"/>
                     </connections>

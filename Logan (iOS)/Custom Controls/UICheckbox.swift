@@ -72,6 +72,7 @@ import UIKit
         didSet {
             centerCircle.fillColor = tintColor.cgColor
             shapeLayer.strokeColor = tintColor.cgColor
+            textLabel.textColor = tintColor
         }
     }
     

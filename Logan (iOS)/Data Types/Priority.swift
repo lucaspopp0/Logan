@@ -26,7 +26,11 @@ enum Priority: Int {
                 return UIColor(red: 1.0, green: 0.5961, blue: 0.0, alpha: 1)
                 
             case .normal:
-                return UIColor.black
+                if #available(iOS 13.0, *) {
+                    return UIColor.white
+                } else {
+                    return UIColor.black
+                }
                 
             case .low:
                 return UIColor(red: 0.2471, green: 0.3176, blue: 0.7098, alpha: 1)

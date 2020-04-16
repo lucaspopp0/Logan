@@ -25,7 +25,7 @@ class ScheduleHeader: UIView {
         addSubview(vibrancyView)
         vibrancyView.frame = bounds
         
-        label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.thin)
+        label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.bold)
         label.textColor = UIColor.white
         vibrancyView.contentView.addSubview(label)
     }

@@ -17,7 +17,12 @@ class PriorityControl: UISegmentedControl {
         
         set {
             selectedSegmentIndex = 3 - newValue.rawValue
-            tintColor = newValue.color
+            
+            if #available(iOS 13.0, *) {
+                selectedSegmentTintColor = newValue.color
+            } else {
+                tintColor = newValue.color
+            }
         }
     }
 
@@ -53,7 +58,11 @@ class PriorityControl: UISegmentedControl {
     }
     
     @objc private func updateTint() {
-        tintColor = priority.color
+        if #available(iOS 13.0, *) {
+            selectedSegmentTintColor = priority.color
+        } else {
+            tintColor = priority.color
+        }
     }
     
 }
