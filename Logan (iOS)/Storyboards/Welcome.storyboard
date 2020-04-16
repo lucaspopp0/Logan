@@ -749,6 +749,11 @@
                                     <constraint firstItem="0Vz-sC-uA0" firstAttribute="leading" secondItem="BgE-N3-UbB" secondAttribute="leading" id="zHX-AR-Odx"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBw-Fh-Hbo" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="449" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.58823531870000001" blue="0.53333336109999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

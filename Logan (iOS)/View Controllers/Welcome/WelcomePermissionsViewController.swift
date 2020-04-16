@@ -9,14 +9,19 @@
 import UIKit
 import UserNotifications
 import CloudKit
+import GoogleSignIn
 
 class WelcomePermissionsViewController: UIViewController {
+    
+    @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
     @IBOutlet weak var iCloudButton: UIButton!
     @IBOutlet weak var notificationsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         
         iCloudButton.setTitle("Set Up iCloud Drive", for: UIControlState.normal)
         iCloudButton.setTitle("iCloud Drive Already Configured", for: UIControlState.disabled)
@@ -27,6 +32,8 @@ class WelcomePermissionsViewController: UIViewController {
         iCloudButton.setTitleColor(UIColor.black.withAlphaComponent(0.3), for: UIControlState.disabled)
         notificationsButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         notificationsButton.setTitleColor(UIColor.black.withAlphaComponent(0.3), for: UIControlState.disabled)
+        
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
         CKContainer.default().accountStatus { (accountStatus, accountStatusError) in
             DispatchQueue.main.async {
@@ -148,6 +155,10 @@ class WelcomePermissionsViewController: UIViewController {
         }))
         
         present(preRequestAlert, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapSignOut(_ sender: AnyObject) {
+        GIDSignIn.sharedInstance()?.signOut()
     }
     
 }

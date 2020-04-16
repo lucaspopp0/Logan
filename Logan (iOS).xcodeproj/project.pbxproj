@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF62CE43DCE39D542B574FC /* Pods_Tasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A93BB6C27F11324EDA225B /* Pods_Tasks.framework */; };
+		94A06C03B82711EAAC9B4192 /* Pods_Schedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E475C1F42710771A809C8BF /* Pods_Schedule.framework */; };
 		A00FA7792061623400A02299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F22FAE1FFEDE9800E32CC2 /* Assets.xcassets */; };
 		A00FA77A2061623400A02299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F22FAE1FFEDE9800E32CC2 /* Assets.xcassets */; };
 		A0120BCA2142BE0C00E04BA2 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0120BC92142BE0C00E04BA2 /* TaskList.swift */; };
@@ -230,6 +232,7 @@
 		A0F84F26207564F4008AE42B /* TaskPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F84F25207564F4008AE42B /* TaskPreviewViewController.swift */; };
 		A0F84F2A2075652E008AE42B /* Previews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F84F292075652E008AE42B /* Previews.storyboard */; };
 		A0FC30DF2033B38D00D2C8C5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC30DE2033B38D00D2C8C5 /* TodayViewController.swift */; };
+		D37CD2E7B922B915645D4C77 /* Pods_Logan__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F710934112990F0BA6C317 /* Pods_Logan__iOS_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +268,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04BD95887ECA2CDDE96E13FB /* Pods-Logan (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logan (iOS).release.xcconfig"; path = "Target Support Files/Pods-Logan (iOS)/Pods-Logan (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		05A2E80890049340B5EBCC77 /* Pods-Schedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Schedule.release.xcconfig"; path = "Target Support Files/Pods-Schedule/Pods-Schedule.release.xcconfig"; sourceTree = "<group>"; };
+		15A93BB6C27F11324EDA225B /* Pods_Tasks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tasks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25D22AA82B8CDB07A7EA7E7D /* Pods-Schedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Schedule.debug.xcconfig"; path = "Target Support Files/Pods-Schedule/Pods-Schedule.debug.xcconfig"; sourceTree = "<group>"; };
+		9E475C1F42710771A809C8BF /* Pods_Schedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Schedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0120BC92142BE0C00E04BA2 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		A0120BCB2142BEC400E04BA2 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		A0120BCD2142BEDA00E04BA2 /* TaskListSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListSeparator.swift; sourceTree = "<group>"; };
@@ -408,6 +416,10 @@
 		A0F84F25207564F4008AE42B /* TaskPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPreviewViewController.swift; sourceTree = "<group>"; };
 		A0F84F292075652E008AE42B /* Previews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Previews.storyboard; sourceTree = "<group>"; };
 		A0FC30DE2033B38D00D2C8C5 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		AD3756BE5176C2F195FF4D56 /* Pods-Tasks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks.release.xcconfig"; path = "Target Support Files/Pods-Tasks/Pods-Tasks.release.xcconfig"; sourceTree = "<group>"; };
+		C5F710934112990F0BA6C317 /* Pods_Logan__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logan__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0BC585A5A9EB05F22EED54 /* Pods-Tasks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks.debug.xcconfig"; path = "Target Support Files/Pods-Tasks/Pods-Tasks.debug.xcconfig"; sourceTree = "<group>"; };
+		D86FDE400E5CB09B5C3723EC /* Pods-Logan (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logan (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Logan (iOS)/Pods-Logan (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +429,7 @@
 			files = (
 				A05FEDA2202654F900086091 /* NotificationCenter.framework in Frameworks */,
 				A05FEDCD202659F000086091 /* CloudKit.framework in Frameworks */,
+				0AF62CE43DCE39D542B574FC /* Pods_Tasks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +439,7 @@
 			files = (
 				A06412A320214FB70034BC24 /* NotificationCenter.framework in Frameworks */,
 				A06412F9202152CD0034BC24 /* CloudKit.framework in Frameworks */,
+				94A06C03B82711EAAC9B4192 /* Pods_Schedule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,12 +448,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0F22FF62000A2F000E32CC2 /* CloudKit.framework in Frameworks */,
+				D37CD2E7B922B915645D4C77 /* Pods_Logan__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EC245307FDADC03B0D68900 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D86FDE400E5CB09B5C3723EC /* Pods-Logan (iOS).debug.xcconfig */,
+				04BD95887ECA2CDDE96E13FB /* Pods-Logan (iOS).release.xcconfig */,
+				25D22AA82B8CDB07A7EA7E7D /* Pods-Schedule.debug.xcconfig */,
+				05A2E80890049340B5EBCC77 /* Pods-Schedule.release.xcconfig */,
+				CE0BC585A5A9EB05F22EED54 /* Pods-Tasks.debug.xcconfig */,
+				AD3756BE5176C2F195FF4D56 /* Pods-Tasks.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A0120BC82142BDDB00E04BA2 /* Task List */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +695,7 @@
 				A05FEDA3202654F900086091 /* Tasks */,
 				A0F22FA31FFEDE9800E32CC2 /* Products */,
 				A0F22FF42000A2F000E32CC2 /* Frameworks */,
+				2EC245307FDADC03B0D68900 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -708,6 +737,9 @@
 			children = (
 				A0F22FF52000A2F000E32CC2 /* CloudKit.framework */,
 				A0930C9520214E5F002D95A4 /* NotificationCenter.framework */,
+				C5F710934112990F0BA6C317 /* Pods_Logan__iOS_.framework */,
+				9E475C1F42710771A809C8BF /* Pods_Schedule.framework */,
+				15A93BB6C27F11324EDA225B /* Pods_Tasks.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -796,6 +828,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A05FEDAD202654F900086091 /* Build configuration list for PBXNativeTarget "Tasks" */;
 			buildPhases = (
+				EAC59B0D10FA6A439CEE0827 /* [CP] Check Pods Manifest.lock */,
 				A05FED9D202654F900086091 /* Sources */,
 				A05FED9E202654F900086091 /* Frameworks */,
 				A05FED9F202654F900086091 /* Resources */,
@@ -813,6 +846,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A06412B020214FB70034BC24 /* Build configuration list for PBXNativeTarget "Schedule" */;
 			buildPhases = (
+				5AA116070AA41E882646D4DF /* [CP] Check Pods Manifest.lock */,
 				A064129E20214FB70034BC24 /* Sources */,
 				A064129F20214FB70034BC24 /* Frameworks */,
 				A06412A020214FB70034BC24 /* Resources */,
@@ -830,10 +864,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0F22FB61FFEDE9800E32CC2 /* Build configuration list for PBXNativeTarget "Logan (iOS)" */;
 			buildPhases = (
+				B132990748B54D3E8D8D139E /* [CP] Check Pods Manifest.lock */,
 				A0F22F9E1FFEDE9800E32CC2 /* Sources */,
 				A0F22F9F1FFEDE9800E32CC2 /* Frameworks */,
 				A0F22FA01FFEDE9800E32CC2 /* Resources */,
 				A0930CA420214E60002D95A4 /* Embed App Extensions */,
+				E8063A0E3C60A5C0A301A7B4 /* [CP] Embed Pods Frameworks */,
+				71DAC6A9893F5EC88E15FFFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -963,6 +1000,115 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AA116070AA41E882646D4DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Schedule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71DAC6A9893F5EC88E15FFFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Logan (iOS)/Pods-Logan (iOS)-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Logan (iOS)/Pods-Logan (iOS)-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B132990748B54D3E8D8D139E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Logan (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8063A0E3C60A5C0A301A7B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Logan (iOS)/Pods-Logan (iOS)-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Logan (iOS)/Pods-Logan (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC59B0D10FA6A439CEE0827 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tasks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A05FED9D202654F900086091 /* Sources */ = {
@@ -1238,6 +1384,7 @@
 /* Begin XCBuildConfiguration section */
 		A05FEDAE202654F900086091 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0BC585A5A9EB05F22EED54 /* Pods-Tasks.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Tasks/Tasks.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1256,6 +1403,7 @@
 		};
 		A05FEDAF202654F900086091 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD3756BE5176C2F195FF4D56 /* Pods-Tasks.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Tasks/Tasks.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1274,6 +1422,7 @@
 		};
 		A06412AE20214FB70034BC24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25D22AA82B8CDB07A7EA7E7D /* Pods-Schedule.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Schedule/Schedule.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1290,6 +1439,7 @@
 		};
 		A06412AF20214FB70034BC24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05A2E80890049340B5EBCC77 /* Pods-Schedule.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Schedule/Schedule.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1417,6 +1567,7 @@
 		};
 		A0F22FB71FFEDE9800E32CC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D86FDE400E5CB09B5C3723EC /* Pods-Logan (iOS).debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1425,6 +1576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = "Logan (iOS)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1436,6 +1588,7 @@
 		};
 		A0F22FB81FFEDE9800E32CC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04BD95887ECA2CDDE96E13FB /* Pods-Logan (iOS).release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1444,6 +1597,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = "Logan (iOS)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";

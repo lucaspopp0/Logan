@@ -8,15 +8,19 @@
 
 import UIKit
 import UserNotifications
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener {
+class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener, GIDSignInDelegate {
     
     var window: UIWindow?
     var newTaskViewController: NewTaskTableViewController?
     var newAssignmentViewController: NewAssignmentTableViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        GIDSignIn.sharedInstance()?.clientID = "261132618985-tc7m4hmblqvdtpbsij92b32o0m0r8pln.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance()?.delegate = self
+        
         UNUserNotificationCenter.current().delegate = NotificationManager.shared
         NotificationManager.shared.confirmAuthorization()
         
@@ -37,8 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        if url.scheme == "logan" {
-            
+        if url.scheme == "logan" {}
+        else {
+            return GIDSignIn.sharedInstance()?.handle(url) ?? true
         }
         
         return true
@@ -102,6 +107,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener {
             
             window?.rootViewController?.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    // MARK: - Google Sign-In
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+                print("The user has not signed in before or they have since signed out.")
+            } else {
+                print("\(error.localizedDescription)")
+            }
+            
+            return
+        }
+        
+        guard let idToken = user.authentication.idToken else {
+            print("Google Sign-In Error: Missing id token")
+            return
+        }
+        
+        let url = URL(string: "http://logan-backend.us-west-2.elasticbeanstalk.com/auth")!
+        let body = try? JSONSerialization.data(withJSONObject: [ "idToken": idToken ])
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("ios", forHTTPHeaderField: "Client-Type")
+        request.httpMethod = "POST"
+        request.httpBody = body
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                if let bearer: String = responseJSON["bearer"] as? String {
+                    print("Bearer token obtained from backend")
+                } else {
+                    print("No bearer token. Response:")
+                    print(responseJSON)
+                }
+            }
+        }
+        
+        task.resume()
+        
+//        async function establishAuth(idToken) {
+//            if (process.env.NODE_ENV == 'production') {
+//                const { bearer } = await execute('post', '/auth', { idToken }, true);
+//                BEARER = bearer;
+//            } else {
+//                BEARER = 'DEV lmp122@case.edu';
+//            }
+//        }
+        
+        print("Signed in as \(user.profile.name!)!")
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Sign out
     }
 
 }
