@@ -10,7 +10,7 @@ import UIKit
 
 class ClassTableViewCell: UITableViewCell {
     
-    var classToDisplay: Class? {
+    var classToDisplay: Section? {
         didSet {
             configureCell()
         }

@@ -11,7 +11,7 @@ import UIKit
 class NewClassTableViewController: UITableViewController, DayOfWeekPickerDelegate {
     
     var correspondingCourse: Course!
-    var newClass: Class = Class()
+    var newClass: Section = Section()
     
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var locationField: UITextField!

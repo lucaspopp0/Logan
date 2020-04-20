@@ -9,62 +9,14 @@
 import UIKit
 import CloudKit
 
-class Course: CKEnabled, Commitment {
+class Course: BEObject, Commitment {
     
-    static var NEXT_SAVE_ID: Int = 0
-    var ID: Int = 0 {
-        didSet {
-            record["id"] = ID as CKRecordValue
-        }
-    }
-    
-    var name: String = "" {
-        didSet {
-            record["name"] = name as CKRecordValue
-        }
-    }
-    
-    var nickname: String = "" {
-        didSet {
-            record["nickname"] = nickname as CKRecordValue
-        }
-    }
-    
-    var descriptor: String = "" {
-        didSet {
-            record["descriptor"] = descriptor as CKRecordValue
-        }
-    }
-    
-    var color: UIColor = UIColor.black {
-        didSet {
-            record["color"] = color.hexString as CKRecordValue
-        }
-    }
-    
-    var classes: [Class] = [] {
-        didSet {
-            var references: [CKReference] = []
-            
-            for courseClass in classes {
-                references.append(CKReference(record: courseClass.record, action: CKReferenceAction.none))
-            }
-            
-            record["classes"] = references as CKRecordValue
-        }
-    }
-    
-    var exams: [Exam] = [] {
-        didSet {
-            var references: [CKReference] = []
-            
-            for exam in exams {
-                references.append(CKReference(record: exam.record, action: CKReferenceAction.none))
-            }
-            
-            record["exams"] = references as CKRecordValue
-        }
-    }
+    var name: String
+    var nickname: String
+    var descriptor: String
+    var color: UIColor
+    var sid: String
+    var sections: [Section] = []
     
     var formalName: String {
         get {
@@ -90,7 +42,24 @@ class Course: CKEnabled, Commitment {
         }
     }
     
-    init(record: CKRecord, classes: [Class], exams: [Exam]) {
+    init(id: String, name: String, nickname: String = "", descriptor: String = "", color: UIColor, sid: String) {
+        self.id = id
+        self.name = name
+        self.nickname = nickname
+        self.descriptor = descriptor
+        self.color = color
+        self.sid = sid
+    }
+    
+    init?(blob: Blob) {
+        guard let cid = blob["cid"] as? String, let name = blob["name"] as? String, let colorString = blob["color"] as? String, let sid = blob["sid"] as? String else { return nil }
+        
+        self.id = cid
+        self.sid = sid
+        self.name = name
+    }
+    
+    init(record: CKRecord, classes: [Section], exams: [Exam]) {
         super.init(record: record)
         
         if let name = record["name"] as? String, let descriptor = record["descriptor"] as? String, let hexColor = record["color"] as? String, let id = record["id"] as? Int {

@@ -52,6 +52,8 @@ class DataManager: NSObject {
     
     private var updateTimer: UpdateTimer!
     
+    var currentUser: User?
+    
     var currentSemester: Semester?
     var currentCourse: Course? {
         get {

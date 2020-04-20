@@ -130,7 +130,7 @@ class FetchManager {
                 return Extracurricular(record: record, events: events)
             }
             
-            let classes: [Class] = classFetcher.records.map(Class.init(record:))
+            let classes: [Section] = classFetcher.records.map(Section.init(record:))
             let exams: [Exam] = examFetcher.records.map(Exam.init(record:))
             
             let courses: [Course] = courseFetcher.records.map { (record) -> Course in

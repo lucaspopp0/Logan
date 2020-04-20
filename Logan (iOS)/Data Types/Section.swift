@@ -8,7 +8,7 @@
 
 import CloudKit
 
-class Class: CKEnabled {
+class Section: CKEnabled {
     
     static var NEXT_SAVE_ID: Int = 0
     var ID: Int = 0 {
@@ -105,7 +105,7 @@ class Class: CKEnabled {
             }
         }
         
-        Class.NEXT_SAVE_ID = max(self.ID + 1, Class.NEXT_SAVE_ID)
+        Section.NEXT_SAVE_ID = max(self.ID + 1, Section.NEXT_SAVE_ID)
     }
     
     init() {
@@ -113,7 +113,7 @@ class Class: CKEnabled {
         tempRecord["title"] = "" as CKRecordValue
         tempRecord["weeklyRepeat"] = 1 as CKRecordValue
         tempRecord["daysOfWeek"] = [Int]() as CKRecordValue
-        tempRecord["id"] = Class.NEXT_SAVE_ID as CKRecordValue
+        tempRecord["id"] = Section.NEXT_SAVE_ID as CKRecordValue
         tempRecord["startDate"] = "" as CKRecordValue
         tempRecord["endDate"] = "" as CKRecordValue
         tempRecord["startTime"] = "" as CKRecordValue

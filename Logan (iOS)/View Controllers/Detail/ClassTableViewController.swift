@@ -10,7 +10,7 @@ import UIKit
 
 class ClassTableViewController: UITableViewController, DayOfWeekPickerDelegate {
     
-    var classToDisplay: Class!
+    var classToDisplay: Section!
     
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var locationField: UITextField!

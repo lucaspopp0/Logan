@@ -55,11 +55,18 @@ class SignInManager: NSObject, GIDSignInDelegate {
                     
                     API.shared.getSemesters { (semesters) in
                         guard let semesters = semesters else {
-                            print("Empty data")
-                            return
+                            return print("Empty data")
                         }
                         
                         print(semesters)
+                    }
+                    
+                    API.shared.getCourses { (courses) in
+                        guard let courses = courses else {
+                            return print("Empty data")
+                        }
+                        
+                        print(courses)
                     }
                 } else {
                     API.shared.createUser(name: user.profile.name, email: user.profile.email) { (success) in

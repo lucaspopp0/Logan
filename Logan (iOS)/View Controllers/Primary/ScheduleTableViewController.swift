@@ -10,7 +10,7 @@ import UIKit
 
 class ScheduleTableViewController: UITableViewController, DataManagerListener {
     
-    private var data: TableData<Class> = TableData<Class>()
+    private var data: TableData<Section> = TableData<Class>()
     
     private var updateTimer: UpdateTimer!
     
@@ -42,7 +42,7 @@ class ScheduleTableViewController: UITableViewController, DataManagerListener {
             let now = ClockTime(date: Date())
             let currentDayOfWeek = DayOfWeek.forDate(Date())
             
-            var allClasses: [Class] = []
+            var allClasses: [Section] = []
             
             for course in currentSemester.courses {
                 for courseClass in course.classes {

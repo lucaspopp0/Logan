@@ -10,7 +10,7 @@ import UIKit
 
 class ClassView: EventView {
     
-    var classToDisplay: Class? {
+    var classToDisplay: Section? {
         didSet {
             if let ctd = classToDisplay {
                 title = ctd.course.longerName

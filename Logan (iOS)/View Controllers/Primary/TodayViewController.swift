@@ -90,7 +90,7 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
                 let now = ClockTime(date: Date())
                 let currentDayOfWeek = DayOfWeek.forDate(Date())
                 
-                var allClasses: [Class] = []
+                var allClasses: [Section] = []
                 
                 for course in currentSemester.courses {
                     for courseClass in course.classes {
@@ -336,7 +336,7 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = data.sections[indexPath.section].items[indexPath.row]
         
-        if let scheduleClass = item as? Class {
+        if let scheduleClass = item as? Section {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "Class", for: indexPath) as? ScheduleTableViewCell {
                 cell.classToDisplay = scheduleClass
                 cell.configureCell()

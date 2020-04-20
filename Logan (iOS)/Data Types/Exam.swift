@@ -79,7 +79,7 @@ class Exam: CKEnabled {
     init() {
         let tempRecord = CKRecord(recordType: "Exam")
         tempRecord["title"] = "" as CKRecordValue
-        tempRecord["id"] = Class.NEXT_SAVE_ID as CKRecordValue
+        tempRecord["id"] = Section.NEXT_SAVE_ID as CKRecordValue
         tempRecord["date"] = "" as CKRecordValue
         tempRecord["startTime"] = "" as CKRecordValue
         tempRecord["endTime"] = "" as CKRecordValue

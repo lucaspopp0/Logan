@@ -136,7 +136,7 @@ class ScheduleView: UIView {
             eventViews.removeFirst().removeFromSuperview()
         }
         
-        var classesToDisplay: [Class] = []
+        var classesToDisplay: [Section] = []
         var eventsToDisplay: [Event] = []
         let calendarEventsToDisplay: [EKEvent] = DataManager.shared.events(for: day)
         

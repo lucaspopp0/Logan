@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias Blob = [String: Any]
+
 class API: NSObject {
     
     enum HTTPMethod: String {
@@ -96,120 +98,121 @@ class API: NSObject {
         }
     }
     
-    func establishAuth(_ idToken: String, _ completion: @escaping (Bool, Bool) -> Void) {
+    private func basicGet<T>(endpoint: String, _ completion: @escaping (T?) -> Void) {
+        guard let task = httpTask(method: .GET, path: endpoint, { (request, data, httpResponse, error) in
+            if let error = error {
+                self.perror(request, error.localizedDescription)
+                return completion(nil)
+            }
+            
+            guard let data = data else {
+                self.perror(request, "No response data")
+                return completion(nil)
+            }
+            
+            if let response = (try? JSONSerialization.jsonObject(with: data, options: [])) as? T {
+                return completion(response)
+            } else {
+                self.perror(request, "Improper response format")
+                return completion(nil)
+            }
+        }) else {
+            return completion(nil)
+        }
+        
+        task.resume()
+    }
+    
+    func establishAuth(_ idToken: String, _ completion: @escaping (Bool, User?) -> Void) {
         guard let body = try? JSONSerialization.data(withJSONObject: ["idToken": idToken]) else {
-            completion(false, false)
-            return
+            print("Error serializing JSON for auth handshake")
+            return completion(false, nil)
         }
         
         guard let task = httpTask(method: .POST, path: "/auth", body: body, ignoreAuth: true, { (request, data, httpResponse, error) in
             if let error = error {
-                return self.perror(request, error.localizedDescription)
+                self.perror(request, error.localizedDescription)
+                return completion(false, nil)
             }
             
             guard let data = data else {
-                return self.perror(request, "Empty response")
+                self.perror(request, "Empty response")
+                return completion(false, nil)
             }
             
-            if let response = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: Any], let bearer = response["bearer"] as? String {
+            if let response = (try? JSONSerialization.jsonObject(with: data, options: [])) as? Blob, let bearer = response["bearer"] as? String {
                 print("Fetched bearer. Auth established with backend")
                 let authedConfig = self.makeBasicConfig()
                 authedConfig.httpAdditionalHeaders!["Authorization"] = "Bearer \(bearer)"
                 self.authedSession = URLSession(configuration: authedConfig)
                 self.authEstablished = true
                 
-                completion(true, (response["exists"] as? Bool) ?? false)
+                if let userBlob = response["user"] as? Blob, let user = User(blob: userBlob) {
+                    completion(true, user)
+                } else {
+                    completion(true, nil)
+                }
             } else {
                 print(String(data: data, encoding: .utf8) ?? "Unable to fetch bearer token. Reason unknown.")
-                completion(false, false)
+                completion(false, nil)
             }
         }) else {
-            return completion(false, false)
+            return completion(false, nil)
         }
         
         print("Attempting to fetch bearer token")
         task.resume()
     }
     
-    func createUser(name: String, email: String, _ completion: @escaping (Bool) -> Void) {
+    func createUser(name: String, email: String, _ completion: @escaping (Bool, User?) -> Void) {
         guard let body = try? JSONSerialization.data(withJSONObject: ["name": name, "email": email]) else {
-            completion(false)
-            return
+            print("Error serializing JSON for new user")
+            return completion(false, nil)
         }
         
         guard let task = httpTask(method: .POST, path: "/users", body: body, ignoreAuth: true, { (request, data, response, error) in
             if let error = error {
                 self.perror(request, error.localizedDescription)
-                return completion(false)
+                return completion(false, nil)
             }
             
             guard let data = data else {
                 self.perror(request, "Empty response")
-                return completion(false)
+                return completion(false, nil)
             }
             
-            if let _ = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: Any] {
+            if let userBlob = (try? JSONSerialization.jsonObject(with: data, options: [])) as? Blob, let user = User(blob: userBlob) {
                 print("New user created")
-                return completion(true)
+                return completion(true, user)
             } else {
                 self.perror(request, "Error creating new user: \(String(data: data, encoding: .utf8) ?? "Reason unknown")")
-                return completion(false)
+                return completion(false, nil)
             }
         }) else {
-            return completion(false)
+            return completion(false, nil)
         }
         
         task.resume()
     }
     
-    func getSemesters(_ completion: @escaping ([[String: Any]]?) -> Void) {
-        guard let task = httpTask(method: .GET, path: "/semesters", { (request, data, httpResponse, error) in
-            if let error = error {
-                self.perror(request, error.localizedDescription)
-                return completion(nil)
-            }
-            
-            guard let data = data else {
-                self.perror(request, "Empty response")
-                return completion(nil)
-            }
-            
-            if let response = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [[String: Any]] {
-                return completion(response)
-            } else {
-                self.perror(request, "Bad response format")
-                return completion(nil)
-            }
-        }) else {
-            return completion(nil)
-        }
-        
-        task.resume()
+    func getSemesters(_ completion: @escaping ([Blob]?) -> Void) {
+        basicGet(endpoint: "/semesters", completion)
     }
     
-    func getCourses(_ completion: @escaping ([String: [[String: Any]]]?) -> Void) {
-        guard let task = httpTask(method: .GET, path: "/courses", { (request, data, httpResponse, error) in
-            if let error = error {
-                self.perror(request, error.localizedDescription)
-                return completion(nil)
-            }
-            
-            guard let data = data else {
-                self.perror(request, "Empty response")
-                return completion(nil)
-            }
-            
-            if let response = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: [[String: Any]]] {
-                return completion(response)
-            } else {
-                self.perror(request, "Bad response format")
-                return completion(nil)
-            }
-        }) else {
-            return completion(nil)
-        }
-        
-        task.resume()
+    func getCourses(_ completion: @escaping ([String: [Blob]]?) -> Void) {
+        basicGet(endpoint: "/courses", completion)
+    }
+    
+    func getSections(_ completion: @escaping ([String: [Blob]]?) -> Void) {
+        basicGet(endpoint: "/sections", completion)
+    }
+    
+    func getAssignments(_ completion: @escaping ([Blob]?) -> Void) {
+        basicGet(endpoint: "/assignments", completion)
+    }
+    
+    func getTasks(_ completion: @escaping ([Blob]?) -> Void) {
+        basicGet(endpoint: "/tasks", completion)
     }
     
 }

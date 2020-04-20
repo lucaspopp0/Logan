@@ -7,99 +7,44 @@
 //
 
 import Foundation
-import CloudKit
 
-class Semester: CKEnabled {
+class Semester: BEObject {
     
-    static var NEXT_SAVE_ID: Int = 0
-    var ID: Int = 0 {
-        didSet {
-            record["id"] = ID as CKRecordValue
-        }
+    var name: String
+    var startDate: CalendarDay
+    var endDate: CalendarDay
+    
+    var courses: [Course] = []
+    
+    init(id: String, name: String, startDate: CalendarDay, endDate: CalendarDay) {
+        self.id = id
+        self.name = name
+        self.startDate = startDate
+        self.endDate = endDate
     }
     
-    var name: String = "" {
-        didSet {
-            record["name"] = name as CKRecordValue
-        }
-    }
-    
-    var startDate: CalendarDay = CalendarDay(date: Date()) {
-        didSet {
-            record["startDate"] = startDate.stringValue as CKRecordValue
-        }
-    }
-    
-    var endDate: CalendarDay = CalendarDay(date: Date()) {
-        didSet {
-            record["endDate"] = endDate.stringValue as CKRecordValue
-        }
-    }
-    
-    var courses: [Course] = [] {
-        didSet {
-            var references: [CKReference] = []
-            
-            for course in courses {
-                references.append(CKReference(record: course.record, action: CKReferenceAction.none))
-            }
-            
-            record["courses"] = references as CKRecordValue
-        }
-    }
-    
-    init(record: CKRecord, courses: [Course]) {
-        super.init(record: record)
+    init?(blob: Blob) {
+        guard let sid = blob["sid"] as? String, let name = blob["name"] as? String, let startDate = blob["startDate"] as? String, let endDate = blob["endDate"] as? String else { return nil }
         
-        if let name = record["name"] as? String, let startString = record["startDate"] as? String, let endString = record["endDate"] as? String, let id = record["id"] as? Int {
-            self.name = name
-            self.ID = id
-            
-            if let startDate = CalendarDay(string: startString), let endDate = CalendarDay(string: endString) {
-                self.startDate = startDate
-                self.endDate = endDate
-            }
-            
-            if let courseReferences = record["courses"] as? [CKReference] {
-                for reference in courseReferences {
-                    for course in courses {
-                        if reference.recordID.isEqual(course.record.recordID) {
-                            self.courses.append(course)
-                            break
-                        }
-                    }
-                }
-            }
-            
-            Semester.NEXT_SAVE_ID = max(self.ID + 1, Semester.NEXT_SAVE_ID)
-        }
+        self.id = sid
+        self.name = name
+    
+        guard let startDay = CalendarDay(string: startDate), let endDay = CalendarDay(string: endDate) else { return nil }
+        self.startDate = startDay
+        self.endDate = endDay
     }
     
-    convenience init(name: String, startDate: CalendarDay, endDate: CalendarDay) {
-        let tempRecord = CKRecord(recordType: "Semester")
-        tempRecord["name"] = name as CKRecordValue
-        tempRecord["startDate"] = startDate.stringValue as CKRecordValue
-        tempRecord["endDate"] = endDate.stringValue as CKRecordValue
-        tempRecord["id"] = Semester.NEXT_SAVE_ID as CKRecordValue
+    override func jsonBlob() -> Blob {
+        var blob = ["sid": id,
+                    "name": name,
+                    "startDate": startDate.stringValue,
+                    "endDate": endDate.stringValue]
         
-        self.init(record: tempRecord, courses: [])
-    }
-    
-    func getValueForStorage() -> Any {
-        var dict: [String: Any] = ["Name" : name,
-                                   "Start Date" : startDate.dateValue ?? Date(),
-                                   "End Date" : endDate.dateValue ?? Date(),
-                                   "ID" : ID]
-        
-        var storableCourses: [Any] = []
-        
-        for course in courses {
-            storableCourses.append(course.getValueForStorage())
+        if let user = DataManager.shared.currentUser {
+            blob["uid"] = user.id
         }
         
-        dict["Courses"] = storableCourses
-        
-        return dict
+        return blob
     }
     
 }
