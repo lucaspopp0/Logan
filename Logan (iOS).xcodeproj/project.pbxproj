@@ -59,7 +59,6 @@
 		A04FD4F8206C344B001B6F9A /* OverviewExamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04FD4F7206C344B001B6F9A /* OverviewExamTableViewCell.swift */; };
 		A0588561202E8211003F5B6D /* AssignmentTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0588560202E8211003F5B6D /* AssignmentTaskTableViewCell.swift */; };
 		A05FED7E20264D3100086091 /* PriorityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FED7B20264C0D00086091 /* PriorityIndicator.swift */; };
-		A05FED8120264F9B00086091 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22FEF20009C6400E32CC2 /* DataManager.swift */; };
 		A05FED8220264F9E00086091 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22FF120009ED300E32CC2 /* Extensions.swift */; };
 		A05FED8320264F9E00086091 /* BetterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0919A48200359750065796C /* BetterTextView.swift */; };
 		A05FED8420264F9E00086091 /* BetterDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E4F9B32001D7C3007E2399 /* BetterDateFormatter.swift */; };
@@ -115,7 +114,6 @@
 		A05FEDC82026575C00086091 /* BetterNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0919A402002BE650065796C /* BetterNavigationController.swift */; };
 		A05FEDC92026575C00086091 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079E6802021210F00FC5761 /* RoundedButton.swift */; };
 		A05FEDCA2026575C00086091 /* IntervalTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03133A72020DA77008E96A9 /* IntervalTimer.swift */; };
-		A05FEDCB2026575F00086091 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22FEF20009C6400E32CC2 /* DataManager.swift */; };
 		A05FEDCD202659F000086091 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F22FF52000A2F000E32CC2 /* CloudKit.framework */; };
 		A05FEDCF202662D600086091 /* Widget Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FEDCE202662D600086091 /* Widget Checkbox.swift */; };
 		A05FEDD02026631700086091 /* UICheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0919A4420034C7E0065796C /* UICheckbox.swift */; };
@@ -150,6 +148,7 @@
 		A0919A472003568A0065796C /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0919A462003568A0065796C /* TaskTableViewController.swift */; };
 		A0919A49200359750065796C /* BetterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0919A48200359750065796C /* BetterTextView.swift */; };
 		A0919A4B200367640065796C /* BetterDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0919A4A200367640065796C /* BetterDatePicker.swift */; };
+		A09271462447E795005C9D6C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09271452447E795005C9D6C /* API.swift */; };
 		A093A3C720560943006FD393 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3C620560943006FD393 /* TaskView.swift */; };
 		A093A3C920560E50006FD393 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3C820560E50006FD393 /* TaskListView.swift */; };
 		A093A3CB20571A3F006FD393 /* ShowMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3CA20571A3F006FD393 /* ShowMoreView.swift */; };
@@ -178,6 +177,9 @@
 		A0A98E722054C6EF00E9470F /* Commitment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB241F2054C635005BDEBC /* Commitment.swift */; };
 		A0A98E742054C84000E9470F /* ExtracurricularTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A98E732054C84000E9470F /* ExtracurricularTableViewController.swift */; };
 		A0A98E772054F01900E9470F /* CommitmentPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A98E762054F01900E9470F /* CommitmentPickerTableViewController.swift */; };
+		A0AA09452448F265004E4ED6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22FEF20009C6400E32CC2 /* DataManager.swift */; };
+		A0AA09462448F266004E4ED6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22FEF20009C6400E32CC2 /* DataManager.swift */; };
+		A0AA09482448F333004E4ED6 /* SignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA09472448F333004E4ED6 /* SignInManager.swift */; };
 		A0AB24142054BA7C005BDEBC /* CommitmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB24132054BA7C005BDEBC /* CommitmentsTableViewController.swift */; };
 		A0AB24162054BDCE005BDEBC /* NewExtracirricularTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB24152054BDCE005BDEBC /* NewExtracirricularTableViewController.swift */; };
 		A0AB24182054BFF0005BDEBC /* SemesterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB24172054BFF0005BDEBC /* SemesterTableViewCell.swift */; };
@@ -346,6 +348,7 @@
 		A0919A462003568A0065796C /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		A0919A48200359750065796C /* BetterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterTextView.swift; sourceTree = "<group>"; };
 		A0919A4A200367640065796C /* BetterDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterDatePicker.swift; sourceTree = "<group>"; };
+		A09271452447E795005C9D6C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A0930C9520214E5F002D95A4 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A093A3C620560943006FD393 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		A093A3C820560E50006FD393 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
@@ -369,6 +372,7 @@
 		A0A80A9E2033B0C700F45B6F /* Today.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
 		A0A98E732054C84000E9470F /* ExtracurricularTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtracurricularTableViewController.swift; sourceTree = "<group>"; };
 		A0A98E762054F01900E9470F /* CommitmentPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitmentPickerTableViewController.swift; sourceTree = "<group>"; };
+		A0AA09472448F333004E4ED6 /* SignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInManager.swift; sourceTree = "<group>"; };
 		A0AB24132054BA7C005BDEBC /* CommitmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitmentsTableViewController.swift; sourceTree = "<group>"; };
 		A0AB24152054BDCE005BDEBC /* NewExtracirricularTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExtracirricularTableViewController.swift; sourceTree = "<group>"; };
 		A0AB24172054BFF0005BDEBC /* SemesterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterTableViewCell.swift; sourceTree = "<group>"; };
@@ -658,6 +662,8 @@
 			isa = PBXGroup;
 			children = (
 				A0F22FEF20009C6400E32CC2 /* DataManager.swift */,
+				A0AA09472448F333004E4ED6 /* SignInManager.swift */,
+				A09271452447E795005C9D6C /* API.swift */,
 				A094A811203F727C00B0814D /* FetchManager.swift */,
 			);
 			path = "Fetch & Data Management";
@@ -1115,11 +1121,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A05FEDCB2026575F00086091 /* DataManager.swift in Sources */,
 				A05FEDCA2026575C00086091 /* IntervalTimer.swift in Sources */,
 				A0A98E722054C6EF00E9470F /* Commitment.swift in Sources */,
 				A093A3C920560E50006FD393 /* TaskListView.swift in Sources */,
 				A065BF6E2054AFCA009BC92A /* SingleEvent.swift in Sources */,
+				A0AA09462448F266004E4ED6 /* DataManager.swift in Sources */,
 				A05FEDC72026575C00086091 /* BetterDateFormatter.swift in Sources */,
 				A05FEDC52026575C00086091 /* Extensions.swift in Sources */,
 				A093A3CB20571A3F006FD393 /* ShowMoreView.swift in Sources */,
@@ -1174,6 +1180,7 @@
 				A05FED9120264FB200086091 /* Course.swift in Sources */,
 				A0868ED7202A17F900F99AB1 /* Console.swift in Sources */,
 				A0AB24192054C010005BDEBC /* SemesterTableViewCell.swift in Sources */,
+				A0AA09452448F265004E4ED6 /* DataManager.swift in Sources */,
 				A05FED8420264F9E00086091 /* BetterDateFormatter.swift in Sources */,
 				A06412A620214FB70034BC24 /* ScheduleWidgetViewController.swift in Sources */,
 				A05FED8320264F9E00086091 /* BetterTextView.swift in Sources */,
@@ -1214,7 +1221,6 @@
 				A05FED8520264F9E00086091 /* BetterNavigationController.swift in Sources */,
 				A05FED9420264FB200086091 /* Task.swift in Sources */,
 				A094A813203F72AF00B0814D /* FetchManager.swift in Sources */,
-				A05FED8120264F9B00086091 /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1291,8 +1297,10 @@
 				A0283EF420041B4800CE2843 /* TaskDueDatePickerTableViewCell.swift in Sources */,
 				A093A3CF20573091006FD393 /* NewSingleEventTableViewController.swift in Sources */,
 				A0283EF820042B3100CE2843 /* PriorityControl.swift in Sources */,
+				A0AA09482448F333004E4ED6 /* SignInManager.swift in Sources */,
 				A0A98E772054F01900E9470F /* CommitmentPickerTableViewController.swift in Sources */,
 				A02B341F200726DA008344E1 /* DayOfWeekPickerTableViewController.swift in Sources */,
+				A09271462447E795005C9D6C /* API.swift in Sources */,
 				A04A20E720374271001752FB /* NewExamTableViewController.swift in Sources */,
 				A0919A4B200367640065796C /* BetterDatePicker.swift in Sources */,
 				A0F22FE520009B2700E32CC2 /* CalendarDay.swift in Sources */,

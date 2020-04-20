@@ -7,38 +7,73 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-class SettingsTableViewController: UITableViewController {
+class SettingsTableViewController: UITableViewController, SignInListener {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "Settings"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        SignInManager.shared.addListener(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        SignInManager.shared.removeListener(self)
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+            if SignInManager.shared.currentUser != nil {
+                return 2
+            } else {
+                return 1
+            }
         } else {
             return 1
         }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Basic Cell", for: indexPath)
-
-        if indexPath.section == 0 && indexPath.row == 0 {
-            cell.textLabel?.text = "Calendars"
-            cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-        } else if indexPath.section == 1 {
-            if indexPath.row == 0 {
-                cell.textLabel?.text = "View Logs"
+        var cell: UITableViewCell!
+        
+        if indexPath.section == 0 {
+            if let user = SignInManager.shared.currentUser {
+                if indexPath.row == 0 {
+                    cell = tableView.dequeueReusableCell(withIdentifier: "Google User", for: indexPath)
+                    cell.textLabel?.text = user.profile.name
+                    cell.detailTextLabel?.text = user.profile.email
+                } else if indexPath.row == 1 {
+                    cell = tableView.dequeueReusableCell(withIdentifier: "Basic Button", for: indexPath)
+                    cell.textLabel?.text = "Sign out"
+                    cell.textLabel?.textColor = UIColor.red500
+                }
+            } else {
+                cell = tableView.dequeueReusableCell(withIdentifier: "Basic Button", for: indexPath)
+                
+                cell.textLabel?.text = "Sign in"
+            }
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "Basic Cell", for: indexPath)
+            
+            if indexPath.section == 1 && indexPath.row == 0 {
+                cell.textLabel?.text = "Calendars"
+                cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+            } else if indexPath.section == 2 {
+                if indexPath.row == 0 {
+                    cell.textLabel?.text = "View Logs"
+                }
             }
         }
 
@@ -46,11 +81,14 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 1 {
+        switch section {
+        case 0:
+            return "Google Account"
+        case 2:
             return "Developer"
+        default:
+            return nil
         }
-        
-        return nil
     }
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
@@ -62,19 +100,41 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-        if section == 0, let footer = view as? UITableViewHeaderFooterView {
+        if section == tableView.numberOfSections - 1, let footer = view as? UITableViewHeaderFooterView {
             footer.textLabel?.textAlignment = NSTextAlignment.center
         }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 && indexPath.row == 0 {
+        if indexPath.section == 0 {
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            if SignInManager.shared.currentUser != nil {
+                if indexPath.row == 1 {
+                    GIDSignIn.sharedInstance()?.presentingViewController = self
+                    GIDSignIn.sharedInstance()?.signOut()
+                }
+            } else if indexPath.row == 0 {
+                GIDSignIn.sharedInstance()?.presentingViewController = self
+                GIDSignIn.sharedInstance()?.signIn()
+            }
+        } else if indexPath.section == 1 && indexPath.row == 0 {
             performSegue(withIdentifier: "Edit Calendars", sender: self)
-        } else if indexPath.section == 1 {
+        } else if indexPath.section == 2 {
             if indexPath.row == 0 {
                 performSegue(withIdentifier: "View Logs", sender: self)
             }
         }
+    }
+    
+    // MARK: - SignInListener
+    
+    func signedIn() {
+        tableView.reloadSections([0], with: UITableViewRowAnimation.automatic)
+    }
+    
+    func signedOut() {
+        tableView.reloadSections([0], with: UITableViewRowAnimation.automatic)
     }
 
 }
