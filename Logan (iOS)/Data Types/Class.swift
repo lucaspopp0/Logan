@@ -77,6 +77,18 @@ class Class: CKEnabled {
         }
     }
     
+    var start: String {
+        get {
+            return BetterDate(day: startDate, time: startTime).stringValue
+        }
+    }
+    
+    var end: String {
+        get {
+            return BetterDate(day: endDate, time: endTime).stringValue
+        }
+    }
+    
     override init(record: CKRecord) {
         super.init(record: record)
         

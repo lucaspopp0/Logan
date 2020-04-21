@@ -56,7 +56,7 @@ class BetterDate {
     
     var stringValue: String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "M/d/yyyy h:mm a"
+        formatter.dateFormat = "M/d/yyyy, HH:mm"
         
         if dateValue != nil {
             return formatter.string(from: dateValue!)

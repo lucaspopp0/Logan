@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener {
@@ -20,8 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener {
         UNUserNotificationCenter.current().delegate = NotificationManager.shared
         NotificationManager.shared.confirmAuthorization()
         
+        GIDSignIn.sharedInstance()?.clientID = "261132618985-tc7m4hmblqvdtpbsij92b32o0m0r8pln.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance()?.delegate = SignInManager.shared
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        
         DataManager.shared.addListener(self)
         DataManager.shared.attemptInitialDataFetch()
+        DataManager.shared.addListener(SignInManager.shared)
         
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             handleShortcut(shortcutItem)
