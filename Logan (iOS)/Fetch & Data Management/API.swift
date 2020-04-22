@@ -167,22 +167,111 @@ class API: NSObject {
         task.resume()
     }
     
+    func cleanUser(_ completion: @escaping (Bool) -> Void) {
+        guard let task = httpTask(method: .POST, path: "/users/clean", { (request, data, httpResponse, error) in
+            if let error = error {
+                self.perror(request, error.localizedDescription)
+                return completion(false)
+            }
+            
+            completion(true)
+        }) else {
+            return completion(false)
+        }
+        
+        task.resume()
+    }
+    
+    private func completion(_ prog: Float, _ total: Float) -> String {
+        let perc = floor(prog / total * 1000.0) / 10.0
+        
+        if perc < 10.0 {
+            return "  \(perc)%"
+        } else if perc > 99.9 {
+            return "\(perc)%"
+        } else {
+            return " \(perc)%"
+        }
+    }
+    
+    private func prog(i: Float, total: Float, prefix: String, name: String) {
+        print("\(completion(i, total)) | \(prefix): \(name) sent")
+    }
+    
     func transmitData() {
-        var semestersMap: [Int: String] = [Int: String]()
-        var coursesMap: [Int: String] = [Int: String]()
-        var assignmentsMap: [Int: String] = [Int: String]()
+        var cleanFlag = false
+        var failFlag = false
+        cleanUser { (success) in
+            if success {
+                cleanFlag = true
+                print("User cleaned")
+            } else {
+                print("Unable to clean user. Will not transmit data")
+                failFlag = true
+                cleanFlag = true
+            }
+        }
+        
+        while !cleanFlag {}
+        if failFlag { return }
+        
+        let deadlineCutoff = CalendarDay(month: 9, day: 1, year: 2018)!
+        
+        var semestersMap: [String: String] = [String: String]()
+        var coursesMap: [String: String] = [String: String]()
+        var assignmentsMap: [String: String] = [String: String]()
         
         var allSemesters: [Semester] = []
         var allAssignments: [Assignment] = []
         var allTasks: [Task] = []
         
-        allSemesters.append(contentsOf: DataManager.shared.semesters)
-        allAssignments.append(contentsOf: DataManager.shared.assignments)
-        allTasks.append(contentsOf: DataManager.shared.tasks)
+        allSemesters.append(contentsOf: DataManager.shared.semesters.filter({ (semester) -> Bool in
+            return semester.endDate >= deadlineCutoff
+        }))
+        
+        allAssignments.append(contentsOf: DataManager.shared.assignments.filter({ (assignment) -> Bool in
+            switch assignment.dueDate {
+            case .specificDeadline(let deadline):
+                return deadline.day >= deadlineCutoff
+            case .specificDay(let day):
+                return day >= deadlineCutoff
+            default:
+                return true
+            }
+        }))
+        
+        allTasks.append(contentsOf: DataManager.shared.tasks.filter({ (task) -> Bool in
+            switch task.dueDate {
+            case .specificDeadline(let deadline):
+                return deadline.day >= deadlineCutoff
+            case .specificDay(let day):
+                return day >= deadlineCutoff
+            default:
+                return true
+            }
+        }))
+        
+        var totalSemesters: Int = allSemesters.count
+        var totalCourses: Int = 0
+        var totalSections: Int = 0
+        var totalAssignments: Int = allAssignments.count
+        var totalTasks: Int = allTasks.count
+        
+        for semester in allSemesters {
+            totalCourses += semester.courses.count
+            
+            for course in semester.courses {
+                totalSections += course.classes.count
+            }
+        }
+        
+        var totalCount: Float = Float(totalSections + totalCourses + totalSections + totalAssignments + totalTasks)
+        var i: Float = 0.0
 
         var semesterFlag: Bool = true
         while semesterFlag && !allSemesters.isEmpty {
             let nextSemester = allSemesters.removeFirst()
+            i += 1
 
             let semesterJson: Blob = ["name": nextSemester.name,
                                       "startDate": nextSemester.startDate.stringValue,
@@ -209,7 +298,7 @@ class API: NSObject {
                 }
                 
                 if let response = (try? JSONSerialization.jsonObject(with: data, options: [])) as? Blob, let sid = response["sid"] as? String {
-                    semestersMap[nextSemester.ID] = sid
+                    semestersMap["\(nextSemester.ID)\(nextSemester.name)"] = sid
                     semesterId = sid
                     semesterFlag = true
                 } else {
@@ -226,7 +315,7 @@ class API: NSObject {
             
             while !semesterFlag {}
             
-            print("SEM: \(nextSemester.name) sent")
+            prog(i: i, total: totalCount, prefix: "SEM", name: nextSemester.name)
             
             guard let sid = semesterId else { continue }
             
@@ -236,6 +325,7 @@ class API: NSObject {
             
             while courseFlag && !courses.isEmpty {
                 let nextCourse = courses.removeFirst()
+                i += 1
                 
                 var courseJson: Blob = ["sid": sid,
                                         "name": nextCourse.name,
@@ -270,7 +360,7 @@ class API: NSObject {
                     }
                     
                     if let response = (try? JSONSerialization.jsonObject(with: data, options: [])) as? Blob, let cid = response["cid"] as? String {
-                        coursesMap[nextCourse.ID] = cid
+                        coursesMap["\(nextCourse.ID)\(nextCourse.name)"] = cid
                         courseId = cid
                         courseFlag = true
                     } else {
@@ -287,7 +377,7 @@ class API: NSObject {
                 
                 while !courseFlag {}
                 
-                print("CRS: \(nextCourse.name) sent")
+                prog(i: i, total: totalCount, prefix: "CRS", name: nextCourse.name)
                 
                 guard let cid = courseId else { continue }
                 
@@ -297,6 +387,7 @@ class API: NSObject {
                 
                 while sectionFlag && !sections.isEmpty {
                     let nextSection = sections.removeFirst()
+                    i += 1
                     
                     var secJson: Blob = ["cid": cid,
                                          "name": nextSection.title,
@@ -358,7 +449,7 @@ class API: NSObject {
                     
                     while !sectionFlag {}
                     
-                    print("SEC: \(nextSection.title) sent")
+                    prog(i: i, total: totalCount, prefix: "SEC", name: nextSection.title)
                 }
             }
         }
@@ -370,6 +461,7 @@ class API: NSObject {
         var assignmentFlag = true
         while assignmentFlag && !allAssignments.isEmpty {
             let next = allAssignments.removeFirst()
+            i += 1
             
             if next.title.isEmpty { continue }
             
@@ -396,7 +488,7 @@ class API: NSObject {
                 json["description"] = next.userDescription
             }
             
-            if let course = next.commitment as? Course, let cid = coursesMap[course.ID] {
+            if let course = next.commitment as? Course, let cid = coursesMap["\(course.ID)\(course.name)"] {
                 json["commitmentId"] = cid
             }
             
@@ -421,7 +513,7 @@ class API: NSObject {
                 }
                 
                 if let response = (try? JSONSerialization.jsonObject(with: data, options: [])) as? Blob, let aid = response["aid"] as? String {
-                    assignmentsMap[next.ID] = aid
+                    assignmentsMap["\(next.ID)\(next.title)"] = aid
                     assignmentId = aid
                     assignmentFlag = true
                 } else {
@@ -437,7 +529,7 @@ class API: NSObject {
             task.resume()
             
             while !assignmentFlag {}
-            print("ASS: \(next.title) sent")
+            prog(i: i, total: totalCount, prefix: "ASS", name: next.title)
         }
         
         print("-----------------------")
@@ -447,6 +539,7 @@ class API: NSObject {
         var taskFlag = true
         while taskFlag && !allTasks.isEmpty {
             let next = allTasks.removeFirst()
+            i += 1
             
             if next.title.isEmpty { continue }
             
@@ -475,11 +568,11 @@ class API: NSObject {
                 json["description"] = next.userDescription
             }
             
-            if let assignment = next.relatedAssignment, let aid = assignmentsMap[assignment.ID] {
+            if let assignment = next.relatedAssignment, let aid = assignmentsMap["\(assignment.ID)\(assignment.title)"] {
                 json["relatedAid"] = aid
             }
             
-            if let course = next.commitment as? Course, let cid = coursesMap[course.ID] {
+            if let course = next.commitment as? Course, let cid = coursesMap["\(course.ID)\(course.name)"] {
                 json["commitmentId"] = cid
             }
             
@@ -521,7 +614,7 @@ class API: NSObject {
             task.resume()
             
             while !taskFlag {}
-            print("TSK: \(next.title) sent")
+            prog(i: i, total: totalCount, prefix: "TSK", name: next.title)
         }
         
         print("+------+")
