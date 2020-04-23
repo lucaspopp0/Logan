@@ -48,7 +48,7 @@ func >= (_ left: CalendarDay, _ right: CalendarDay) -> Bool {
     return false
 }
 
-class CalendarDay {
+class CalendarDay: DatetimeValue {
     
     var month: Int
     var day: Int
@@ -72,18 +72,7 @@ class CalendarDay {
         }
     }
     
-    var stringValue: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "M/d/yyyy"
-        
-        if dateValue != nil {
-            return formatter.string(from: dateValue!)
-        } else {
-            return formatter.string(from: Date())
-        }
-    }
-    
-    init(date: Date) {
+    required init(date: Date) {
         let calendar = Calendar.autoupdatingCurrent
         let components = calendar.dateComponents([Calendar.Component.month, Calendar.Component.day, Calendar.Component.year], from: date)
         month = components.month!
@@ -107,15 +96,20 @@ class CalendarDay {
         }
     }
     
-    convenience init?(string: String) {
+    required init?(stringValue dateString: String, format formatString: String) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "M/d/yyyy"
-        
-        if let date = formatter.date(from: string) {
-            self.init(date: date)
-        } else {
-            return nil
-        }
+        formatter.dateFormat = formatString
+        guard let formattedDate = formatter.date(from: dateString) else { return nil }
+        month = Calendar.autoupdatingCurrent.component(.month, from: formattedDate)
+        day = Calendar.autoupdatingCurrent.component(.day, from: formattedDate)
+        year = Calendar.autoupdatingCurrent.component(.year, from: formattedDate)
+    }
+    
+    func format(_ formatString: String) -> String! {
+        let formatter = DateFormatter()
+        formatter.dateFormat = formatString
+        guard let dateValue = dateValue else { return nil }
+        return formatter.string(from: dateValue)
     }
     
 }

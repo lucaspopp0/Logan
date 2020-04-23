@@ -12,6 +12,10 @@ typealias Blob = [String: Any]
 
 class API: NSObject {
     
+    static let DB_DATE_FORMAT = "M/d/yyyy"
+    static let DB_TIME_FORMAT = "HH:mm"
+    static let DB_DATETIME_FORMAT = "M/d/yyyy, HH:mm"
+    
     enum HTTPMethod: String {
         case GET = "GET"
         case POST = "POST"

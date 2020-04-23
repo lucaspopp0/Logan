@@ -73,4 +73,15 @@ enum DayOfWeek: Int {
         return [DayOfWeek.sunday, DayOfWeek.monday, DayOfWeek.tuesday, DayOfWeek.wednesday, DayOfWeek.thursday, DayOfWeek.friday, DayOfWeek.saturday]
     }
     
+    static func arrayFromString(_ str: String) -> [DayOfWeek]? {
+        var days: [DayOfWeek] = []
+        
+        for char in str {
+            guard let d = Int("\(char)"), let dow = DayOfWeek(rawValue: d) else { return nil }
+            days.append(dow)
+        }
+        
+        return days
+    }
+    
 }

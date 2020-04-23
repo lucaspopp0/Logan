@@ -28,12 +28,12 @@ func >= (_ left: BetterDate, _ right: BetterDate) -> Bool {
     return left.day > right.day || (left.day == right.day && left.time >= right.time)
 }
 
-class BetterDate {
-    
+class BetterDate: DatetimeValue {
+        
     var day: CalendarDay
     var time: ClockTime
     
-    var dateValue: Date? {
+    var dateValue: Date! {
         get {
             let calendar = Calendar.autoupdatingCurrent
             var components = calendar.dateComponents([Calendar.Component.month, Calendar.Component.day, Calendar.Component.year, Calendar.Component.hour, Calendar.Component.minute], from: Date())
@@ -54,18 +54,7 @@ class BetterDate {
         }
     }
     
-    var stringValue: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "M/d/yyyy h:mm a"
-        
-        if dateValue != nil {
-            return formatter.string(from: dateValue!)
-        } else {
-            return formatter.string(from: Date())
-        }
-    }
-    
-    init(date: Date) {
+    required init(date: Date) {
         day = CalendarDay(date: date)
         time = ClockTime(date: date)
     }
@@ -75,24 +64,19 @@ class BetterDate {
         self.time = time
     }
     
-    init?(month: Int, day: Int, year: Int, hour: Int, minute: Int, ampm: ClockTime.AmPm) {
-        if let calendarDay = CalendarDay(month: month, day: day, year: year), let clockTime = ClockTime(hour: hour, minute: minute, ampm: ampm) {
-            self.day = calendarDay
-            self.time = clockTime
-        } else {
-            return nil
-        }
+    required init?(stringValue dateString: String, format formatString: String) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = formatString
+        guard let formattedDate = formatter.date(from: dateString) else { return nil }
+        day = CalendarDay(date: formattedDate)
+        time = ClockTime(date: formattedDate)
     }
     
-    convenience init?(string: String) {
+    func format(_ formatString: String) -> String! {
         let formatter = DateFormatter()
-        formatter.dateFormat = "M/d/yyyy h:m a"
-        
-        if let date = formatter.date(from: string) {
-            self.init(date: date)
-        } else {
-            return nil
-        }
+        formatter.dateFormat = formatString
+        guard let dateValue = dateValue else { return nil }
+        return formatter.string(from: dateValue)
     }
     
 }

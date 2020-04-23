@@ -10,35 +10,25 @@ import Foundation
 
 enum DueDate {
     
-    static let eventuallyIntValue: Int = 0
-    static let asapIntValue: Int = 1
-    static let beforeClassIntValue: Int = 2
-    static let specificDayIntValue: Int = 3
-    static let specificDeadlineIntValue: Int = 4
-    
     case eventually
     case asap
     case beforeClass(course: Course, onDate: CalendarDay)
     case specificDay(day: CalendarDay)
     case specificDeadline(deadline: BetterDate)
     
-    var intValue: Int {
+    var dbValue: String! {
         get {
             switch self {
             case .eventually:
-                return 0
-                
+                return "eventually"
             case .asap:
-                return 1
-                
-            case .beforeClass(_, _):
-                return 2
-                
-            case .specificDay(_):
-                return 3
-                
-            case .specificDeadline(_):
-                return 4
+                return "asap"
+            case .specificDay(let day):
+                return day.format(API.DB_DATE_FORMAT)
+            case .specificDeadline(let deadline):
+                return deadline.format(API.DB_DATETIME_FORMAT)
+            default:
+                return nil
             }
         }
     }
