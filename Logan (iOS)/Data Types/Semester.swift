@@ -23,20 +23,19 @@ class Semester: BEObject {
         self.endDate = endDate
     }
     
-    init?(blob: Blob) {
+    override init?(blob: Blob) {
         guard let sid = blob["sid"] as? String,
             let name = blob["name"] as? String,
             let startDate = blob["startDate"] as? String,
             let endDate = blob["endDate"] as? String
             else { return nil }
         
-        self.id = sid
-        self.name = name
-        
         guard let startDay = CalendarDay(stringValue: startDate, format: API.DB_DATE_FORMAT),
             let endDay = CalendarDay(stringValue: endDate, format: API.DB_DATE_FORMAT)
             else { return nil }
-        
+            
+        self.id = sid
+        self.name = name
         self.startDate = startDay
         self.endDate = endDay
     }

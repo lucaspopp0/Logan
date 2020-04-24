@@ -69,8 +69,8 @@ class Section: BEObject {
         blob["start"] = BetterDate(day: startDate, time: startTime).format(API.DB_DATETIME_FORMAT)
         blob["end"] = BetterDate(day: endDate, time: endTime).format(API.DB_DATETIME_FORMAT)
         
-        if let location = location { blob["location"] = location }
-        if let weeklyRepeat = weeklyRepeat { blob["weeklyRepeat"] = weeklyRepeat }
+        if location != nil { blob["location"] = location! }
+        if weeklyRepeat != nil { blob["weeklyRepeat"] = weeklyRepeat! }
         
         return blob
     }
