@@ -17,7 +17,13 @@ class BEObject: NSObject {
     }
     
     func jsonBlob() -> Blob {
-        return Blob()
+        var blob = Blob()
+        
+        if let uid = DataManager.shared.currentUser?.id {
+            blob["uid"] = uid
+        }
+        
+        return blob
     }
     
 }

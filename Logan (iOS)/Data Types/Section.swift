@@ -6,144 +6,71 @@
 //  Copyright © 2017 Lucas Popp. All rights reserved.
 //
 
-import CloudKit
+import Foundation
 
-class Section: CKEnabled {
+class Section: BEObject {
     
-    static var NEXT_SAVE_ID: Int = 0
-    var ID: Int = 0 {
-        didSet {
-            record["id"] = ID as CKRecordValue
-        }
-    }
+    var name: String
+    var startDate: CalendarDay
+    var startTime: ClockTime
+    var endDate: CalendarDay
+    var endTime: ClockTime
+    var daysOfWeek: [DayOfWeek]!
     
-    var title: String = "" {
-        didSet {
-            record["title"] = title as CKRecordValue
-        }
-    }
+    var location: String?
+    var weeklyRepeat: Int?
     
     var course: Course!
     
-    var location: String? {
-        didSet {
-            if location != nil {
-                record["location"] = location! as CKRecordValue
-            } else {
-                record["location"] = nil
-            }
-        }
+    init(id: String, name: String, startDate: CalendarDay, startTime: ClockTime, endDate: CalendarDay, endTime: ClockTime, daysOfWeek: [DayOfWeek], location: String?, weeklyRepeat: Int?, course: Course) {
+        self.id = id
+        self.name = name
+        self.startDate = startDate
+        self.startTime = startTime
+        self.endDate = endDate
+        self.endTime = endTime
+        self.daysOfWeek = daysOfWeek
+        self.location = location
+        self.weeklyRepeat = weeklyRepeat
+        self.course = course
     }
     
-    var weeklyRepeat: Int = 1 {
-        didSet {
-            record["weeklyRepeat"] = weeklyRepeat as CKRecordValue
-        }
-    }
-    
-    var daysOfWeek: [DayOfWeek] = [] {
-        didSet {
-            var raw: [Int] = []
-            
-            for day in daysOfWeek {
-                raw.append(day.rawValue)
-            }
-            
-            record["daysOfWeek"] = raw as CKRecordValue
-        }
-    }
-    
-    var startDate: CalendarDay = CalendarDay(date: Date()) {
-        didSet {
-            record["startDate"] = startDate.stringValue as CKRecordValue
-        }
-    }
-    
-    var endDate: CalendarDay = CalendarDay(date: Date()) {
-        didSet {
-            record["endDate"] = endDate.stringValue as CKRecordValue
-        }
-    }
-    
-    var startTime: ClockTime = ClockTime(date: Date()) {
-        didSet {
-            record["startTime"] = startTime.stringValue as CKRecordValue
-        }
-    }
-    
-    var endTime: ClockTime = ClockTime(date: Date()) {
-        didSet {
-            record["endTime"] = endTime.stringValue as CKRecordValue
-        }
-    }
-    
-    override init(record: CKRecord) {
-        super.init(record: record)
+    init?(blob: Blob) {
+        guard let secid = blob["secid"] as? String,
+            let name = blob["name"] as? String,
+            let startString = blob["start"] as? String,
+            let endString = blob["end"] as? String
+            else { return nil }
         
-        if let title = record["title"] as? String, let weeklyRepeat = record["weeklyRepeat"] as? Int, let daysOfWeek = record["daysOfWeek"] as? [Int], let id = record["id"] as? Int,
-            let startDateString = record["startDate"] as? String, let endDateString = record["endDate"] as? String, let startTimeString = record["startTime"] as? String, let endTimeString = record["endTime"] as? String {
-            
-            self.title = title
-            self.ID = id
-            self.weeklyRepeat = weeklyRepeat
-            
-            if let location = record["location"] as? String {
-                self.location = location
-            }
-            
-            if let startDate = CalendarDay(string: startDateString), let endDate = CalendarDay(string: endDateString), let startTime = ClockTime(string: startTimeString), let endTime = ClockTime(string: endTimeString) {
-                self.startDate = startDate
-                self.endDate = endDate
-                self.startTime = startTime
-                self.endTime = endTime
-            }
-            
-            for raw in daysOfWeek {
-                if let day = DayOfWeek(rawValue: raw) {
-                    self.daysOfWeek.append(day)
-                }
-            }
-        }
+        self.id = secid
+        self.name = name
+        self.location = blob["location"] as? String
+        self.weeklyRepeat = blob["weeklyRepeat"] as? Int
         
-        Section.NEXT_SAVE_ID = max(self.ID + 1, Section.NEXT_SAVE_ID)
+        guard let start = BetterDate(stringValue: startString, format: API.DB_DATETIME_FORMAT),
+            let end = BetterDate(stringValue: endString, format: API.DB_DATETIME_FORMAT)
+            else { return nil }
+        
+        startDate = start.day
+        startTime = start.time
+        endDate = end.day
+        endTime = end.time
+        
+        if let dowString = blob["daysOfWeek"] as? String, let daysOfWeek = DayOfWeek.arrayFromString(dowString) {
+            self.daysOfWeek = daysOfWeek
+        }
     }
     
-    init() {
-        let tempRecord = CKRecord(recordType: "Class")
-        tempRecord["title"] = "" as CKRecordValue
-        tempRecord["weeklyRepeat"] = 1 as CKRecordValue
-        tempRecord["daysOfWeek"] = [Int]() as CKRecordValue
-        tempRecord["id"] = Section.NEXT_SAVE_ID as CKRecordValue
-        tempRecord["startDate"] = "" as CKRecordValue
-        tempRecord["endDate"] = "" as CKRecordValue
-        tempRecord["startTime"] = "" as CKRecordValue
-        tempRecord["endTime"] = "" as CKRecordValue
+    override func jsonBlob() -> Blob {
+        var blob = super.jsonBlob()
+        blob["secid"] = id
+        blob["cid"] = course.id
+        blob["name"] = name
+        blob["start"] = BetterDate(day: startDate, time: startTime).format(API.DB_DATETIME_FORMAT)
+        blob["end"] = BetterDate(day: endDate, time: endTime).format(API.DB_DATETIME_FORMAT)
         
-        super.init(record: tempRecord)
-    }
-    
-    func getValueForStorage() -> Any {
-        var dict: [String: Any] = ["Title" : title,
-                                   "Repeat" : weeklyRepeat,
-                                   "Start Date" : startDate.dateValue ?? Date(),
-                                   "Start Time" : startTime.dateValue ?? Date(),
-                                   "End Date" : endDate.dateValue ?? Date(),
-                                   "End Time" : endTime.dateValue ?? Date(),
-                                   "ID" : ID]
-        
-        if location != nil {
-            dict["Location"] = location!
-        }
-        
-        var dotw: [Int] = []
-        
-        for day in daysOfWeek {
-            dotw.append(day.rawValue)
-        }
-        
-        dict["Days of Week"] = dotw
-        
-        return dict
+        if let location = location { blob["location"] = location }
+        if let weeklyRepeat = weeklyRepeat { blob["weeklyRepeat"] = weeklyRepeat }
     }
     
 }

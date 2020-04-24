@@ -40,7 +40,7 @@ class DataManager: NSObject {
     
     private var listeners: [DataManagerListener] = []
     
-    var currentCloudStatus: ConnectionStatus = .ready
+    var currentConnectionStatus: ConnectionStatus = .ready
     
     var isSavingData: Bool {
         get {
@@ -63,9 +63,9 @@ class DataManager: NSObject {
             
             for semester in semesters {
                 for course in semester.courses {
-                    for courseClass in course.classes {
-                        if courseClass.startDate <= today && courseClass.endDate >= today && courseClass.daysOfWeek.contains(currentWeekDay) {
-                            if courseClass.startTime <= now && courseClass.endTime >= now {
+                    for section in course.sections {
+                        if section.startDate <= today && section.endDate >= today && section.daysOfWeek.contains(currentWeekDay) {
+                            if section.startTime <= now && section.endTime >= now {
                                 return course
                             }
                         }
@@ -78,18 +78,11 @@ class DataManager: NSObject {
     }
     
     var semesters: [Semester] = []
-    var extracurriculars: [Extracurricular] = []
     var assignments: [Assignment] = []
     var tasks: [Task] = []
     
     // iCloud Sync Variables
     private let shouldGenerateFakeData: Bool = false
-    
-    private var fetchManager: FetchManager!
-    
-    let defaultContainer = CKContainer.default()
-    let privateContainer = CKContainer(identifier: "iCloud.com.ppopsacul.TodoContainer")
-    
     var fetchFailed: Bool = false
     
     // TODO: manager.dataCompiled?
@@ -131,33 +124,33 @@ class DataManager: NSObject {
         // MARK: - EventKit stuff
         checkCalendarAuthorization()
         
-        fetchManager = FetchManager(dataManager: self, compilationCallback: { (semesters, extracurriculars, assignments, tasks) in
-            self.semesters = semesters
-            self.extracurriculars = extracurriculars
-            self.assignments = assignments
-            self.tasks = tasks
-            
-            NotificationManager.shared.scheduleAllReminders()
-            
-            self.determineCurrentSemester()
-            self.currentCloudStatus = .ready
-            self.sendEventToListeners(.end)
-        }, failureCallback: { (error) in
-            self.currentCloudStatus = .error
-            self.sendEventToListeners(.error, error: error)
-            
-            if let cloudError = error as? CKError {
-                if cloudError.errorCode == 3 {
-                    Console.shared.print("CKError 3: Network error.")
-                } else if cloudError.code == CKError.Code.requestRateLimited {
-                    Console.shared.print("Request rate limited. Max retries reached.")
-                } else {
-                    Console.shared.print(cloudError.localizedDescription)
-                }
-            } else {
-                Console.shared.print(error.localizedDescription)
-            }
-        })
+//        fetchManager = FetchManager(dataManager: self, compilationCallback: { (semesters, extracurriculars, assignments, tasks) in
+//            self.semesters = semesters
+//            self.extracurriculars = extracurriculars
+//            self.assignments = assignments
+//            self.tasks = tasks
+//
+//            NotificationManager.shared.scheduleAllReminders()
+//
+//            self.determineCurrentSemester()
+//            self.currentCloudStatus = .ready
+//            self.sendEventToListeners(.end)
+//        }, failureCallback: { (error) in
+//            self.currentCloudStatus = .error
+//            self.sendEventToListeners(.error, error: error)
+//
+//            if let cloudError = error as? CKError {
+//                if cloudError.errorCode == 3 {
+//                    Console.shared.print("CKError 3: Network error.")
+//                } else if cloudError.code == CKError.Code.requestRateLimited {
+//                    Console.shared.print("Request rate limited. Max retries reached.")
+//                } else {
+//                    Console.shared.print(cloudError.localizedDescription)
+//                }
+//            } else {
+//                Console.shared.print(error.localizedDescription)
+//            }
+//        })
         
         updateTimer = UpdateTimer(timeInterval: 60, completionBlock: { (info) in
             self.fetchDataFromCloud()
@@ -251,7 +244,7 @@ class DataManager: NSObject {
                     break
                     
                 default:
-                    self.currentCloudStatus = .error
+                    self.currentConnectionStatus = .error
                     self.sendEventToListeners(.error, error: accountError)
                     break
                     
@@ -261,50 +254,50 @@ class DataManager: NSObject {
     }
     
     private func generateFakeData() {
-        let sem = Semester(name: "Spring 2018", startDate: CalendarDay(date: Date()), endDate: CalendarDay(date: Date()))
-        let course1 = Course()
-        course1.name = "Principles of Chemistry for Engineners"
-        course1.nickname = "Chemistry"
-        course1.color = UIColor.lightGreen500
-        
-        let course2 = Course()
-        course2.name = "Physics and Frontiers II"
-        course2.nickname = "Physics"
-        course2.color = UIColor.indigo500
-        
-        sem.courses.append(course1)
-        sem.courses.append(course2)
-        
-        semesters.append(sem)
-        
-        let newAssignment = Assignment()
-        newAssignment.title = "A12"
-        newAssignment.dueDate = DueDate.specificDeadline(deadline: BetterDate(day: CalendarDay(date: Date(timeIntervalSinceNow: 7 * 24 * 60 * 60)), time: ClockTime(hour: 5, minute: 0, ampm: ClockTime.AmPm.pm)!))
-        newAssignment.commitment = course1
-        
-        assignments.append(newAssignment)
-        
-        let newTask = Task()
-        newTask.title = "Work on ALEKS"
-        newTask.priority = Priority.high
-        newTask.relatedAssignment = newAssignment
-        
-        let physicsTask = Task()
-        physicsTask.title = "Homework"
-        physicsTask.commitment = course2
-        physicsTask.priority = Priority.normal
-        
-        tasks.append(newTask)
-        tasks.append(physicsTask)
-        
-        let taskWithNoCourse = Task()
-        taskWithNoCourse.title = "Blah blah blah"
-        taskWithNoCourse.userDescription = "TurnItIn at 11:59PM!"
-        tasks.append(taskWithNoCourse)
+//        let sem = Semester(name: "Spring 2018", startDate: CalendarDay(date: Date()), endDate: CalendarDay(date: Date()))
+//        let course1 = Course()
+//        course1.name = "Principles of Chemistry for Engineners"
+//        course1.nickname = "Chemistry"
+//        course1.color = UIColor.lightGreen500
+//
+//        let course2 = Course()
+//        course2.name = "Physics and Frontiers II"
+//        course2.nickname = "Physics"
+//        course2.color = UIColor.indigo500
+//
+//        sem.courses.append(course1)
+//        sem.courses.append(course2)
+//
+//        semesters.append(sem)
+//
+//        let newAssignment = Assignment()
+//        newAssignment.title = "A12"
+//        newAssignment.dueDate = DueDate.specificDeadline(deadline: BetterDate(day: CalendarDay(date: Date(timeIntervalSinceNow: 7 * 24 * 60 * 60)), time: ClockTime(hour: 5, minute: 0, ampm: ClockTime.AmPm.pm)!))
+//        newAssignment.commitment = course1
+//
+//        assignments.append(newAssignment)
+//
+//        let newTask = Task()
+//        newTask.title = "Work on ALEKS"
+//        newTask.priority = Priority.high
+//        newTask.relatedAssignment = newAssignment
+//
+//        let physicsTask = Task()
+//        physicsTask.title = "Homework"
+//        physicsTask.commitment = course2
+//        physicsTask.priority = Priority.normal
+//
+//        tasks.append(newTask)
+//        tasks.append(physicsTask)
+//
+//        let taskWithNoCourse = Task()
+//        taskWithNoCourse.title = "Blah blah blah"
+//        taskWithNoCourse.userDescription = "TurnItIn at 11:59PM!"
+//        tasks.append(taskWithNoCourse)
     }
     
     @objc func fetchDataFromCloud() {
-        if currentCloudStatus == .fetching || isSavingData { return }
+        if currentConnectionStatus == .fetching || isSavingData { return }
         
         if UIDevice.current.isSimulator && shouldGenerateFakeData {
             updateTimer.reset()
@@ -312,7 +305,7 @@ class DataManager: NSObject {
             return
         }
         
-        currentCloudStatus = .fetching
+        currentConnectionStatus = .fetching
         sendEventToListeners(.start)
         
         updateTimer.reset()

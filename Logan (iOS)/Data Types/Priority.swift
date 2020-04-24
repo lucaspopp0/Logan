@@ -11,10 +11,11 @@ import UIKit.UIColor
 
 enum Priority: Int {
     
-    case low = 0
-    case normal = 1
-    case high = 2
-    case reallyHigh = 3
+    case reallyLow = -2
+    case low = -1
+    case normal = 0
+    case high = 1
+    case reallyHigh = 2
     
     var color: UIColor {
         get {
@@ -34,6 +35,10 @@ enum Priority: Int {
                 
             case .low:
                 return UIColor(red: 0.2471, green: 0.3176, blue: 0.7098, alpha: 1)
+                    
+            case .reallyLow:
+                // TODO: Make different from low later
+                return UIColor(red: 0.2471, green: 0.3176, blue: 0.7098, alpha: 1)
             }
         }
     }
@@ -51,6 +56,10 @@ enum Priority: Int {
                 return UIColor.black.withAlphaComponent(0.5)
                 
             case .low:
+                return UIColor(red: 0.2471, green: 0.3176, blue: 0.7098, alpha: 1)
+                    
+            case .reallyLow:
+                // TODO: Make different from low later
                 return UIColor(red: 0.2471, green: 0.3176, blue: 0.7098, alpha: 1)
             }
         }

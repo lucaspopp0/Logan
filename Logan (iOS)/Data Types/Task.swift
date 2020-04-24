@@ -9,7 +9,7 @@
 import Foundation
 import CloudKit
 
-class Task: CKEnabled {
+class Task: BEObject {
     
     static var NEXT_SAVE_ID: Int = 0
     var ID: Int = 0 {

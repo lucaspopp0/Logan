@@ -24,25 +24,29 @@ class Semester: BEObject {
     }
     
     init?(blob: Blob) {
-        guard let sid = blob["sid"] as? String, let name = blob["name"] as? String, let startDate = blob["startDate"] as? String, let endDate = blob["endDate"] as? String else { return nil }
+        guard let sid = blob["sid"] as? String,
+            let name = blob["name"] as? String,
+            let startDate = blob["startDate"] as? String,
+            let endDate = blob["endDate"] as? String
+            else { return nil }
         
         self.id = sid
         self.name = name
-    
-        guard let startDay = CalendarDay(string: startDate), let endDay = CalendarDay(string: endDate) else { return nil }
+        
+        guard let startDay = CalendarDay(stringValue: startDate, format: API.DB_DATE_FORMAT),
+            let endDay = CalendarDay(stringValue: endDate, format: API.DB_DATE_FORMAT)
+            else { return nil }
+        
         self.startDate = startDay
         self.endDate = endDay
     }
     
     override func jsonBlob() -> Blob {
-        var blob = ["sid": id,
-                    "name": name,
-                    "startDate": startDate.stringValue,
-                    "endDate": endDate.stringValue]
-        
-        if let user = DataManager.shared.currentUser {
-            blob["uid"] = user.id
-        }
+        var blob = super.jsonBlob()
+        blob["sid"] = id
+        blob["name"] = name
+        blob["startDate"] = startDate.format(API.DB_DATE_FORMAT)
+        blob["endDate"] = endDate.format(API.DB_DATE_FORMAT)
         
         return blob
     }
