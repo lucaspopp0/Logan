@@ -15,14 +15,14 @@ class Section: BEObject {
     var startTime: ClockTime
     var endDate: CalendarDay
     var endTime: ClockTime
-    var daysOfWeek: [DayOfWeek]!
+    var daysOfWeek: [DayOfWeek]
+    var weeklyRepeat: Int
     
     var location: String?
-    var weeklyRepeat: Int?
     
     var course: Course!
     
-    init(id: String, name: String, startDate: CalendarDay, startTime: ClockTime, endDate: CalendarDay, endTime: ClockTime, daysOfWeek: [DayOfWeek], location: String?, weeklyRepeat: Int?, course: Course) {
+    init(id: String, name: String, startDate: CalendarDay, startTime: ClockTime, endDate: CalendarDay, endTime: ClockTime, daysOfWeek: [DayOfWeek], location: String?, weeklyRepeat: Int, course: Course) {
         self.id = id
         self.name = name
         self.startDate = startDate
@@ -35,30 +35,29 @@ class Section: BEObject {
         self.course = course
     }
     
-    init?(blob: Blob) {
+    override init?(blob: Blob) {
         guard let secid = blob["secid"] as? String,
             let name = blob["name"] as? String,
             let startString = blob["start"] as? String,
-            let endString = blob["end"] as? String
+            let endString = blob["end"] as? String,
+            let weeklyRepeat = blob["weeklyRepeat"] as? Int,
+            let dowString = blob["daysOfWeek"] as? String
             else { return nil }
-        
-        self.id = secid
-        self.name = name
-        self.location = blob["location"] as? String
-        self.weeklyRepeat = blob["weeklyRepeat"] as? Int
         
         guard let start = BetterDate(stringValue: startString, format: API.DB_DATETIME_FORMAT),
-            let end = BetterDate(stringValue: endString, format: API.DB_DATETIME_FORMAT)
+            let end = BetterDate(stringValue: endString, format: API.DB_DATETIME_FORMAT),
+            let daysOfWeek = DayOfWeek.arrayFromString(dowString)
             else { return nil }
-        
-        startDate = start.day
-        startTime = start.time
-        endDate = end.day
-        endTime = end.time
-        
-        if let dowString = blob["daysOfWeek"] as? String, let daysOfWeek = DayOfWeek.arrayFromString(dowString) {
-            self.daysOfWeek = daysOfWeek
-        }
+            
+        self.id = secid
+        self.name = name
+        self.weeklyRepeat = weeklyRepeat
+        self.location = blob["location"] as? String
+        self.startDate = start.day
+        self.startTime = start.time
+        self.endDate = end.day
+        self.endTime = end.time
+        self.daysOfWeek = daysOfWeek
     }
     
     override func jsonBlob() -> Blob {
@@ -68,9 +67,10 @@ class Section: BEObject {
         blob["name"] = name
         blob["start"] = BetterDate(day: startDate, time: startTime).format(API.DB_DATETIME_FORMAT)
         blob["end"] = BetterDate(day: endDate, time: endTime).format(API.DB_DATETIME_FORMAT)
+        blob["daysOfWeek"] = daysOfWeek.map { $0.rawValue }
+        blob["weeklyRepeat"] = weeklyRepeat
         
         if location != nil { blob["location"] = location! }
-        if weeklyRepeat != nil { blob["weeklyRepeat"] = weeklyRepeat! }
         
         return blob
     }
