@@ -25,7 +25,7 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
     var leftSwipeRecognizer: UISwipeGestureRecognizer!
     var rightSwipeRecognizer: UISwipeGestureRecognizer!
     
-    var data: TableData<CKEnabled> = TableData<CKEnabled>()
+    var data: TableData<BEObject> = TableData<BEObject>()
     
     var alreadyOpened: Bool = false
     
@@ -114,28 +114,7 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
     func updateData() {
         data.clear()
         
-        let today = CalendarDay(date: Date())
-        let thirtyDays = CalendarDay(date: Date(timeIntervalSinceNow: 30 * 24 * 60 * 60))
-        
-        var exams: [Exam] = []
-        
-        for semester in DataManager.shared.semesters {
-            for course in semester.courses {
-                for exam in course.exams {
-                    if exam.date >= today && exam.date <= thirtyDays {
-                        exams.append(exam)
-                    }
-                }
-            }
-        }
-        
-        exams.sort { (e1, e2) -> Bool in
-            return e1.date <= e2.date
-        }
-        
-        if exams.count > 0 {
-            data.addSection(TableData<CKEnabled>.Section(title: "Exams in the next 30 days", items: exams))
-        }
+        let today = CalendarDay.today
         
         var assignments: [Assignment] = []
         
@@ -160,7 +139,7 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         if assignments.count > 0 {
-            data.addSection(TableData<CKEnabled>.Section(title: "Assignments due this week", items: assignments))
+            data.addSection(TableData<BEObject>.Section(title: "Assignments due this week", items: assignments))
         }
     }
     
@@ -213,12 +192,7 @@ class OverviewViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let exam = data.sections[indexPath.section].items[indexPath.row] as? Exam, let cell = tableView.dequeueReusableCell(withIdentifier: "Exam", for: indexPath) as? OverviewExamTableViewCell {
-            cell.exam = exam
-            cell.configureCell()
-            
-            return cell
-        } else if let assignment = data.sections[indexPath.section].items[indexPath.row] as? Assignment, let cell = tableView.dequeueReusableCell(withIdentifier: "Assignment", for: indexPath) as? AssignmentTableViewCell {
+        if let assignment = data.sections[indexPath.section].items[indexPath.row] as? Assignment, let cell = tableView.dequeueReusableCell(withIdentifier: "Assignment", for: indexPath) as? AssignmentTableViewCell {
             cell.assignment = assignment
             cell.configureCell()
             

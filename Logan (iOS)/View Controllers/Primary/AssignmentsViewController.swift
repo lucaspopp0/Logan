@@ -125,7 +125,7 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let today = CalendarDay(date: Date())
         for assignment in DataManager.shared.assignments {
-            if assignment.dueDate.intValue == DueDate.asapIntValue || assignment.dueDate.intValue == DueDate.eventuallyIntValue {
+            if assignment.dueDate.dbValue == "asap" || assignment.dueDate.dbValue == "eventually" {
                 assignmentsToSort.append(assignment)
             } else if case .specificDeadline(let deadline) = assignment.dueDate {
                 if (isShowingPastAssignments && deadline.day < today) || (!isShowingPastAssignments && today <= deadline.day) {

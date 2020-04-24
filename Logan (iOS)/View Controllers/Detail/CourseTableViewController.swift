@@ -69,16 +69,14 @@ class CourseTableViewController: UITableViewController, UITextViewDelegate {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 3
         } else if section == 1 {
-            return 1 + course.classes.count
-        } else if section == 2 {
-            return 1 + course.exams.count
+            return 1 + course.sections.count
         }
         
         return 0
@@ -124,26 +122,13 @@ class CourseTableViewController: UITableViewController, UITextViewDelegate {
                 return cell
             }
         } else if indexPath.section == 1 {
-            if indexPath.row == course.classes.count {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Add Class", for: indexPath)
+            if indexPath.row == course.sections.count {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Add Section", for: indexPath)
                 cell.textLabel?.textColor = course.color
                 return cell
             } else {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "Class", for: indexPath) as? ClassTableViewCell {
-                    cell.classToDisplay = course.classes[indexPath.row]
-                    cell.configureCell()
-                    
-                    return cell
-                }
-            }
-        } else if indexPath.section == 2 {
-            if indexPath.row == course.exams.count {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Add Exam", for: indexPath)
-                cell.textLabel?.textColor = course.color
-                return cell
-            } else {
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "Exam", for: indexPath) as? ExamTableViewCell {
-                    cell.exam = course.exams[indexPath.row]
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "Section", for: indexPath) as? SectionTableViewCell {
+                    cell.sectionToDisplay = course.sections[indexPath.row]
                     cell.configureCell()
                     
                     return cell
@@ -182,8 +167,6 @@ class CourseTableViewController: UITableViewController, UITextViewDelegate {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 1 {
             return "Classes"
-        } else if section == 2 {
-            return "Exams"
         }
         
         return nil
@@ -199,8 +182,8 @@ class CourseTableViewController: UITableViewController, UITextViewDelegate {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            DataManager.shared.delete(course.classes[indexPath.row].record)
-            course.classes.remove(at: indexPath.row)
+            DataManager.shared.delete(course.sections[indexPath.row].record)
+            course.sections.remove(at: indexPath.row)
             
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
@@ -209,24 +192,15 @@ class CourseTableViewController: UITableViewController, UITextViewDelegate {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let classController = segue.destination as? ClassTableViewController {
+        if let sectionController = segue.destination as? SectionTableViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                if selectedIndexPath.section == 1 && selectedIndexPath.row < course.classes.count {
-                    classController.classToDisplay = course.classes[selectedIndexPath.row]
-                }
-            }
-        } else if let examController = segue.destination as? ExamTableViewController {
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                if selectedIndexPath.section == 2 && selectedIndexPath.row < course.exams.count {
-                    examController.exam = course.exams[selectedIndexPath.row]
+                if selectedIndexPath.section == 1 && selectedIndexPath.row < course.sections.count {
+                    sectionController.sectionToDisplay = course.sections[selectedIndexPath.row]
                 }
             }
         } else if let navigationController = segue.destination as? BetterNavigationController {
-            if let newClassController = navigationController.topViewController as? NewClassTableViewController {
-                newClassController.correspondingCourse = course
-                navigationController.barColor = course.color
-            } else if let newExamController = navigationController.topViewController as? NewExamTableViewController {
-                newExamController.correspondingCourse = course
+            if let newSectionController = navigationController.topViewController as? NewSectionTableViewController {
+                newSectionController.correspondingCourse = course
                 navigationController.barColor = course.color
             }
         }

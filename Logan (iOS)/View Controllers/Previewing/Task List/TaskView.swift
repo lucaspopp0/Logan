@@ -59,20 +59,16 @@ class TaskView: UIView {
         
         priorityIndicator.priority = task.priority
         
-        titleLabel.text = (task.title.isEmpty ? "Untitled" : task.title)
+        titleLabel.text = task.title
         
-        if task.userDescription.isEmpty {
+        if task.userDescription == nil {
             descriptionLabel.isHidden = true
         } else {
             descriptionLabel.isHidden = false
             descriptionLabel.text = task.userDescription
         }
         
-        if let commitment = task.relatedAssignment?.commitment ?? task.commitment {
-            checkbox.tintColor = commitment.color
-        } else {
-            checkbox.tintColor = UICheckbox.defaultBorderColor
-        }
+        checkbox.tintColor = task.associatedCourse?.color ?? UICheckbox.defaultBorderColor
         
         if checkbox.isOn {
             dueDateLabel.isHidden = true

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskTableViewController: UITableViewController, UITextViewDelegate, CommitmentPickerDelegate {
+class TaskTableViewController: UITableViewController, UITextViewDelegate, CoursePickerDelegate {
     
     var task: Task!
     
@@ -85,52 +85,38 @@ class TaskTableViewController: UITableViewController, UITextViewDelegate, Commit
     }
     
     @IBAction func makeDueNextConvenientDate() {
-        var nextClassFound: Bool = false
+        var nextConvenientDate: Date = Date().addingTimeInterval(24 * 60 * 60)
         
-        // TO DO: Add support for Extracurriculars
-        if let course = task.commitment as? Course, course.classes.count > 0 {
-            var runnerDate = Date().addingTimeInterval(24 * 60 * 60)
-            var lastClassDate: CalendarDay = CalendarDay(date: runnerDate)
+        let now = Date()
+        let today = CalendarDay(date: now)
+        if let course = task.course, course.sections.count > 0 {
+            var latestSectionDate: CalendarDay?
             
-            for courseClass in course.classes {
-                if lastClassDate < courseClass.endDate {
-                    lastClassDate = courseClass.endDate
-                }
-            }
-            
-            var earliestDateFound: CalendarDay?
-            
-            var runnerDay = CalendarDay(date: runnerDate)
-            while runnerDay <= lastClassDate {
-                for courseClass in course.classes {
-                    if courseClass.startDate <= runnerDay && runnerDay <= courseClass.endDate && courseClass.daysOfWeek.contains(DayOfWeek.forDate(runnerDate)) {
-                        if earliestDateFound == nil {
-                            earliestDateFound = runnerDay
-                        }
+            for section in course.sections {
+                if today < section.endDate {
+                    if latestSectionDate == nil || latestSectionDate! < section.endDate {
+                        latestSectionDate = section.endDate
                     }
                 }
-                
-                if earliestDateFound != nil {
-                    nextClassFound = true
-                    break
-                }
-                
-                runnerDate = runnerDate.addingTimeInterval(24 * 60 * 60)
-                runnerDay = CalendarDay(date: runnerDate)
             }
             
-            if let nextClassDate = earliestDateFound {
-                specificDueDatePicker.calendarDay = CalendarDay(date: nextClassDate.dateValue!.addingTimeInterval(-24 * 60 * 60))
-                task.dueDate = DueDate.specificDay(day: specificDueDatePicker.calendarDay)
-                updateDueDateText()
+            if let latestValidDay = latestSectionDate {
+                var runnerDate = now
+                
+                while CalendarDay(date: runnerDate) < latestValidDay {
+                    runnerDate = runnerDate.addingTimeInterval(24 * 60 * 60)
+                    
+                    if (course.sections.contains { $0.occursOnDay(runnerDate) }) {
+                        nextConvenientDate = runnerDate
+                        break
+                    }
+                }
             }
         }
         
-        if !nextClassFound {
-            specificDueDatePicker.calendarDay = CalendarDay(date: Date().addingTimeInterval(24 * 60 * 60))
-            task.dueDate = DueDate.specificDay(day: specificDueDatePicker.calendarDay)
-            updateDueDateText()
-        }
+        specificDueDatePicker.calendarDay = CalendarDay(date: nextConvenientDate)
+        task.dueDate = DueDate.specificDay(day: specificDueDatePicker.calendarDay)
+        updateDueDateText()
     }
     
     @IBAction func priorityChanged(_ sender: UISegmentedControl) {
@@ -182,7 +168,7 @@ class TaskTableViewController: UITableViewController, UITextViewDelegate, Commit
                     self.checkbox = checkbox
                     checkbox.isOn = task.completed
                     checkbox.priority = task.priority
-                    checkbox.tintColor = (task.relatedAssignment?.commitment ?? task.commitment)?.color ?? UICheckbox.defaultBorderColor
+                    checkbox.tintColor = task.associatedCourse?.color ?? UICheckbox.defaultBorderColor
                 }
                 
                 if let textView = cell.viewWithTag(2) as? UITextView {
@@ -209,7 +195,7 @@ class TaskTableViewController: UITableViewController, UITextViewDelegate, Commit
                     nextConvenientDateButton = cell.nextConvenientDateButton
                     specificDueDatePicker = cell.datePicker
                     
-                    if task.commitment == nil {
+                    if task.course == nil {
                         nextConvenientDateButton.setTitle("Tomorrow", for: UIControlState.normal)
                     } else {
                         nextConvenientDateButton.setTitle("Before next class", for: UIControlState.normal)
@@ -258,8 +244,8 @@ class TaskTableViewController: UITableViewController, UITextViewDelegate, Commit
                 if let label = cell.viewWithTag(1) as? UILabel {
                     commitmentLabel = label
                     
-                    commitmentLabel.text = (task.relatedAssignment?.commitment ?? task.commitment ?? nil)?.longerName ?? "None"
-                    commitmentLabel.textColor = (task.relatedAssignment?.commitment ?? task.commitment ?? nil)?.color ?? UIColor.black.withAlphaComponent(0.5)
+                    commitmentLabel.text = task.associatedCourse?.longerName ?? "None"
+                    commitmentLabel.textColor = task.associatedCourse?.color ?? UIColor.black.withAlphaComponent(0.5)
                 }
                 
                 return cell
@@ -312,7 +298,7 @@ class TaskTableViewController: UITableViewController, UITextViewDelegate, Commit
             }
         } else if indexPath.section == 1 && indexPath.row == 2 {
             if task.relatedAssignment == nil {
-                self.performSegue(withIdentifier: "Open Commitment Picker", sender: self)
+                self.performSegue(withIdentifier: "Open Course Picker", sender: self)
             }
             
             tableView.deselectRow(at: indexPath, animated: true)
@@ -321,15 +307,13 @@ class TaskTableViewController: UITableViewController, UITextViewDelegate, Commit
     
     // MARK: - Commitment picker delegate
     
-    func selectedCommitment(_ commitment: Commitment?, in picker: CommitmentPickerTableViewController) {
-        guard let commitment = commitment as? (Commitment & CKEnabled)? else { return }
+    func selectedCourse(_ course: Course?, in picker: CoursePickerTableViewController) {
+        task.course = course
+        checkbox.tintColor = task.associatedCourse?.color ?? UICheckbox.defaultBorderColor
+        commitmentLabel.text = task.associatedCourse?.longerName ?? "None"
+        commitmentLabel.textColor = task.associatedCourse?.color ?? UIColor.black.withAlphaComponent(0.5)
         
-        task.commitment = commitment
-        checkbox.tintColor = (task.relatedAssignment?.commitment ?? task.commitment)?.color ?? UICheckbox.defaultBorderColor
-        commitmentLabel.text = (task.relatedAssignment?.commitment ?? task.commitment)?.longerName ?? "None"
-        commitmentLabel.textColor = (task.relatedAssignment?.commitment ?? task.commitment)?.color ?? UIColor.black.withAlphaComponent(0.5)
-        
-        if commitment == nil {
+        if task.associatedCourse == nil {
             nextConvenientDateButton.setTitle("Tomorrow", for: UIControlState.normal)
         } else {
             nextConvenientDateButton.setTitle("Before next class", for: UIControlState.normal)
@@ -340,11 +324,10 @@ class TaskTableViewController: UITableViewController, UITextViewDelegate, Commit
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let commitmentPicker = segue.destination as? CommitmentPickerTableViewController {
-            commitmentPicker.commitment = task.commitment
-            commitmentPicker.delegate = self
-            commitmentPicker.updateData()
-            commitmentPicker.tableView.reloadData()
+        if let coursePicker = segue.destination as? CoursePickerTableViewController {
+            coursePicker.course = task.course
+            coursePicker.delegate = self
+            coursePicker.tableView.reloadData()
         } else if let assignmentController = segue.destination as? AssignmentTableViewController {
             assignmentController.assignment = task.relatedAssignment
             assignmentController.title = "Related Assignment"

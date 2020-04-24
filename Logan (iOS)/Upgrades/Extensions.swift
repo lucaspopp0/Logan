@@ -193,45 +193,45 @@ extension Date {
         return calendar.date(from: dateComponents)!
     }
     
-    var hour: Int {
+    var hour: Int! {
         get {
-            return Calendar(identifier: Calendar.Identifier.gregorian).dateComponents([Calendar.Component.hour], from: self).hour!
+            return Calendar.autoupdatingCurrent.component(.hour, from: self)
         }
     }
     
-    var minute: Int {
+    var minute: Int! {
         get {
-            return Calendar(identifier: Calendar.Identifier.gregorian).dateComponents([Calendar.Component.minute], from: self).minute!
+            return Calendar.autoupdatingCurrent.component(.minute, from: self)
         }
     }
     
-    var weekday: Int {
+    var weekday: Int! {
         get {
-            return Calendar(identifier: Calendar.Identifier.gregorian).dateComponents([Calendar.Component.weekday], from: self).weekday!
+            return Calendar.autoupdatingCurrent.component(.weekday, from: self)
         }
     }
     
-    var weekOfYear: Int {
+    var weekOfYear: Int! {
         get {
-            return Calendar(identifier: Calendar.Identifier.gregorian).dateComponents([Calendar.Component.weekOfYear], from: self).weekOfYear!
+            return Calendar.autoupdatingCurrent.component(.weekOfYear, from: self)
         }
     }
     
-    var day: Int {
+    var day: Int! {
         get {
-            return Calendar(identifier: Calendar.Identifier.gregorian).dateComponents([Calendar.Component.day], from: self).day!
+            return Calendar.autoupdatingCurrent.component(.day, from: self)
         }
     }
     
-    var month: Int {
+    var month: Int! {
         get {
-            return Calendar(identifier: Calendar.Identifier.gregorian).dateComponents([Calendar.Component.month], from: self).month!
+            return Calendar.autoupdatingCurrent.component(.month, from: self)
         }
     }
     
-    var year: Int {
+    var year: Int! {
         get {
-            return Calendar(identifier: Calendar.Identifier.gregorian).dateComponents([Calendar.Component.year], from: self).year!
+            return Calendar.autoupdatingCurrent.component(.year, from: self)
         }
     }
     

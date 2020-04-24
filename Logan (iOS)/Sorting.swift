@@ -79,12 +79,12 @@ class Sorting {
             return task1.priority.rawValue > task2.priority.rawValue
         }
         
-        if task1.commitment != nil && task2.commitment == nil {
+        if task1.course != nil && task2.course == nil {
             return true
-        } else if task1.commitment == nil && task2.commitment != nil {
+        } else if task1.course == nil && task2.course != nil {
             return false
-        } else if task1.commitment != nil && task2.commitment != nil && !task1.commitment!.isEqual(task2.commitment!) {
-            return task1.commitment!.name < task2.commitment!.name
+        } else if task1.course != nil && task2.course != nil && !task1.course!.isEqual(task2.course!) {
+            return task1.course!.name < task2.course!.name
         }
         
         if task1.relatedAssignment != nil && task2.relatedAssignment == nil {
@@ -93,10 +93,6 @@ class Sorting {
             return false
         } else if task1.relatedAssignment != nil && task2.relatedAssignment != nil && !task1.relatedAssignment!.isEqual(task2.relatedAssignment!) {
             return task1.relatedAssignment!.title < task2.relatedAssignment!.title
-        }
-        
-        if let creationDate1 = task1.record.creationDate, let creationDate2 = task2.record.creationDate {
-            return creationDate1 < creationDate2
         }
         
         return task1.title < task2.title
@@ -107,12 +103,12 @@ class Sorting {
             return task1.priority.rawValue > task2.priority.rawValue
         }
         
-        if task1.commitment != nil && task2.commitment == nil {
+        if task1.course != nil && task2.course == nil {
             return true
-        } else if task2.commitment == nil && task2.commitment != nil {
+        } else if task2.course == nil && task2.course != nil {
             return false
-        } else if task1.commitment != nil && task2.commitment != nil && !task1.commitment!.isEqual(task2.commitment!) {
-            return task1.commitment!.name < task2.commitment!.name
+        } else if task1.course != nil && task2.course != nil && !task1.course!.isEqual(task2.course!) {
+            return task1.course!.name < task2.course!.name
         }
         
         if task1.relatedAssignment != nil && task2.relatedAssignment == nil {
@@ -121,10 +117,6 @@ class Sorting {
             return false
         } else if task1.relatedAssignment != nil && task2.relatedAssignment != nil && !task1.relatedAssignment!.isEqual(task2.relatedAssignment!) {
             return task1.relatedAssignment!.title < task2.relatedAssignment!.title
-        }
-        
-        if let creationDate1 = task1.record.creationDate, let creationDate2 = task2.record.creationDate {
-            return creationDate1 > creationDate2
         }
         
         return task1.title < task2.title
@@ -179,12 +171,12 @@ class Sorting {
             return task1.priority.rawValue > task2.priority.rawValue
         }
         
-        if task1.commitment != nil && task2.commitment == nil {
+        if task1.course != nil && task2.course == nil {
             return true
-        } else if task2.commitment == nil && task2.commitment != nil {
+        } else if task2.course == nil && task2.course != nil {
             return false
-        } else if task1.commitment != nil && task2.commitment != nil && !task1.commitment!.isEqual(task2.commitment!) {
-            return task1.commitment!.name < task2.commitment!.name
+        } else if task1.course != nil && task2.course != nil && !task1.course!.isEqual(task2.course!) {
+            return task1.course!.name < task2.course!.name
         }
         
         if task1.relatedAssignment != nil && task2.relatedAssignment == nil {
@@ -193,10 +185,6 @@ class Sorting {
             return false
         } else if task1.relatedAssignment != nil && task2.relatedAssignment != nil && !task1.relatedAssignment!.isEqual(task2.relatedAssignment!) {
             return task1.relatedAssignment!.title < task2.relatedAssignment!.title
-        }
-        
-        if let creationDate1 = task1.record.creationDate, let creationDate2 = task2.record.creationDate {
-            return creationDate1 < creationDate2
         }
         
         return task1.title < task2.title

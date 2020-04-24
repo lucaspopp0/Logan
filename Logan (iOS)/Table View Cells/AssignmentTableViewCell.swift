@@ -27,15 +27,13 @@ class AssignmentTableViewCell: UITableViewCell {
         
         titleLabel.text = (title.isEmpty ? "Untitled Assignment" : title)
         
-        if courseLabel != nil {
-            let commitmentName = (shortenCourseText ? assignment?.commitment?.shorterName : assignment?.commitment?.longerName) ?? ""
-            
-            if commitmentName.isEmpty {
-                courseLabel!.isHidden = true
+        if let courseLabel = courseLabel {
+            if let course = assignment?.course {
+                courseLabel.isHidden = false
+                courseLabel.text = shortenCourseText ? course.shorterName : course.longerName
+                courseLabel.textColor = course.color
             } else {
-                courseLabel!.isHidden = false
-                courseLabel!.text = commitmentName
-                courseLabel!.textColor = assignment!.commitment!.color
+                courseLabel.isHidden = true
             }
         }
         

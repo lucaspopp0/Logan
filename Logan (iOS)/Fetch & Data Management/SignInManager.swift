@@ -48,10 +48,10 @@ class SignInManager: NSObject, GIDSignInDelegate {
             return
         }
         
-        API.shared.establishAuth(idToken) { (success, userExists) in
+        API.shared.establishAuth(idToken) { (success, backendUser) in
             if success {
-                if userExists {
-                    // Fetch data
+                if let backendUser = backendUser {
+                    DataManager.shared.currentUser = backendUser
                     
                     API.shared.getSemesters { (semesters) in
                         guard let semesters = semesters else {
@@ -69,7 +69,9 @@ class SignInManager: NSObject, GIDSignInDelegate {
                         print(courses)
                     }
                 } else {
-                    API.shared.createUser(name: user.profile.name, email: user.profile.email) { (success) in
+                    API.shared.createUser(name: user.profile.name, email: user.profile.email) { (success, newBackendUser) in
+                        DataManager.shared.currentUser = newBackendUser
+                        
                         if success {
                             print("New user successfully created")
                         } else {

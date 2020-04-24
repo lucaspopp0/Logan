@@ -45,7 +45,7 @@ class Course: BEObject {
         self.semester = semester
     }
     
-    init?(blob: Blob) {
+    override init?(blob: Blob) {
         guard let cid = blob["cid"] as? String,
             let name = blob["name"] as? String,
             let colorString = blob["color"] as? String

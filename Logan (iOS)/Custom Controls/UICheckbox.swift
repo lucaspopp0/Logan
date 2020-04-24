@@ -38,6 +38,7 @@ import UIKit
     
     var priority: Priority = Priority.normal {
         didSet {
+            // TODO: Update this
             switch priority {
                 
             case .reallyHigh:
@@ -54,10 +55,15 @@ import UIKit
                 shapeLayer.lineWidth = 1
                 textLabel.text = "!"
                 break
-                
+                    
             case .low:
                 shapeLayer.lineWidth = 1
                 textLabel.text = ""
+                break
+                
+            case .reallyLow:
+                shapeLayer.lineWidth = 1
+                textLabel.text = "RL"
                 break
             }
             

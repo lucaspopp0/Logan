@@ -10,7 +10,7 @@ import UIKit
 
 class ScheduleTableViewController: UITableViewController, DataManagerListener {
     
-    private var data: TableData<Section> = TableData<Class>()
+    private var data: TableData<Section> = TableData<Section>()
     
     private var updateTimer: UpdateTimer!
     
@@ -42,28 +42,28 @@ class ScheduleTableViewController: UITableViewController, DataManagerListener {
             let now = ClockTime(date: Date())
             let currentDayOfWeek = DayOfWeek.forDate(Date())
             
-            var allClasses: [Section] = []
+            var allSections: [Section] = []
             
             for course in currentSemester.courses {
-                for courseClass in course.classes {
-                    if courseClass.startDate <= today && courseClass.endDate >= today && courseClass.daysOfWeek.contains(currentDayOfWeek) {
-                        allClasses.append(courseClass)
+                for section in course.sections {
+                    if section.startDate <= today && section.endDate >= today && section.daysOfWeek.contains(currentDayOfWeek) {
+                        allSections.append(section)
                     }
                 }
             }
             
-            allClasses.sort(by: { (c1, c2) -> Bool in
-                return c1.endTime < c2.startTime
+            allSections.sort(by: { (s1, s2) -> Bool in
+                return s1.endTime < s2.startTime
             })
             
-            for scheduleClass in allClasses {
-                if scheduleClass.startDate <= today && scheduleClass.endDate >= today && scheduleClass.daysOfWeek.contains(currentDayOfWeek) {
-                    if scheduleClass.endTime <= now {
-                        data.add(item: scheduleClass, section: "Past")
-                    } else if scheduleClass.startTime >= now {
-                        data.add(item: scheduleClass, section: "Upcoming")
-                    } else if scheduleClass.startTime <= now && scheduleClass.endTime >= now {
-                        data.add(item: scheduleClass, section: "Current")
+            for section in allSections {
+                if section.startDate <= today && section.endDate >= today && section.daysOfWeek.contains(currentDayOfWeek) {
+                    if section.endTime <= now {
+                        data.add(item: section, section: "Past")
+                    } else if section.startTime >= now {
+                        data.add(item: section, section: "Upcoming")
+                    } else if section.startTime <= now && section.endTime >= now {
+                        data.add(item: section, section: "Current")
                     }
                 }
             }
@@ -107,7 +107,7 @@ class ScheduleTableViewController: UITableViewController, DataManagerListener {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Class", for: indexPath) as? ScheduleTableViewCell {
-            cell.classToDisplay = data.sections[indexPath.section].items[indexPath.row]
+            cell.sectionToDisplay = data.sections[indexPath.section].items[indexPath.row]
             cell.configureCell()
             
             return cell

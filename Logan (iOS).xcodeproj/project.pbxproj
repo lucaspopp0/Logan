@@ -28,7 +28,7 @@
 		A02B34132006E16B008344E1 /* Assignments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A02B34122006E16B008344E1 /* Assignments.storyboard */; };
 		A02B34152006E278008344E1 /* Commitments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A02B34142006E278008344E1 /* Commitments.storyboard */; };
 		A02B34172006E711008344E1 /* InterfaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B34162006E711008344E1 /* InterfaceManager.swift */; };
-		A02B341A20072538008344E1 /* ClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B341920072538008344E1 /* ClassTableViewController.swift */; };
+		A02B341A20072538008344E1 /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B341920072538008344E1 /* SectionTableViewController.swift */; };
 		A02B341F200726DA008344E1 /* DayOfWeekPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B341E200726DA008344E1 /* DayOfWeekPickerTableViewController.swift */; };
 		A02B342120082007008344E1 /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B342020082007008344E1 /* PickerTableViewCell.swift */; };
 		A02B342320082B5D008344E1 /* NewSemesterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02B342220082B5D008344E1 /* NewSemesterTableViewController.swift */; };
@@ -36,7 +36,7 @@
 		A03133A82020DA77008E96A9 /* IntervalTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03133A72020DA77008E96A9 /* IntervalTimer.swift */; };
 		A039A6B9205C6EF200A7EA87 /* Overview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A039A6B8205C6EF200A7EA87 /* Overview.storyboard */; };
 		A039A6BE205C6FF700A7EA87 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039A6BD205C6FF700A7EA87 /* EventView.swift */; };
-		A039A6C0205C72A700A7EA87 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039A6BF205C72A700A7EA87 /* ClassView.swift */; };
+		A039A6C0205C72A700A7EA87 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039A6BF205C72A700A7EA87 /* SectionView.swift */; };
 		A039A6C2205C72D400A7EA87 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039A6C1205C72D400A7EA87 /* ScheduleView.swift */; };
 		A03A2369205CAE02001EBC0D /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A2368205CAE02001EBC0D /* OverviewViewController.swift */; };
 		A03A236B205CAEA9001EBC0D /* ScheduleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A236A205CAEA9001EBC0D /* ScheduleScrollView.swift */; };
@@ -44,18 +44,14 @@
 		A03F0D1D244E24ED0018BCBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F0D1C244E24ED0018BCBC /* User.swift */; };
 		A0456ECB2103F01400A249C2 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0456ECA2103F01400A249C2 /* Settings.storyboard */; };
 		A0456ECE2103F0A500A249C2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0456ECD2103F0A500A249C2 /* SettingsTableViewController.swift */; };
-		A04A20E120373452001752FB /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20E020373452001752FB /* ClassTableViewCell.swift */; };
+		A04A20E120373452001752FB /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20E020373452001752FB /* SectionTableViewCell.swift */; };
 		A04A20E320373605001752FB /* DayOfWeekIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20E220373605001752FB /* DayOfWeekIndicator.swift */; };
-		A04A20E520373A91001752FB /* ExamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20E420373A91001752FB /* ExamTableViewCell.swift */; };
-		A04A20E720374271001752FB /* NewExamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20E620374271001752FB /* NewExamTableViewController.swift */; };
-		A04A20E9203743A5001752FB /* ExamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20E8203743A5001752FB /* ExamTableViewController.swift */; };
 		A04A20EB2037493D001752FB /* ClassPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20EA2037493D001752FB /* ClassPicker.swift */; };
 		A04A7C9C210931F50042B86A /* ConsoleOutputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A7C9B210931F50042B86A /* ConsoleOutputTableViewCell.swift */; };
 		A04A7C9E210932480042B86A /* ConsoleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A7C9D210932480042B86A /* ConsoleTableViewController.swift */; };
 		A04A93BB205346510027D1B6 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04A93BA205346510027D1B6 /* Welcome.storyboard */; };
 		A04A93DF205347C50027D1B6 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A93DE205347C50027D1B6 /* InitialViewController.swift */; };
 		A04A93E220534B390027D1B6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A93E120534B390027D1B6 /* WelcomeViewController.swift */; };
-		A04FD4F8206C344B001B6F9A /* OverviewExamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04FD4F7206C344B001B6F9A /* OverviewExamTableViewCell.swift */; };
 		A0588561202E8211003F5B6D /* AssignmentTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0588560202E8211003F5B6D /* AssignmentTaskTableViewCell.swift */; };
 		A05F66C7244FD6660032B9C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09271452447E795005C9D6C /* API.swift */; };
 		A05F66C8244FD6670032B9C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09271452447E795005C9D6C /* API.swift */; };
@@ -137,43 +133,21 @@
 		A093A3C920560E50006FD393 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3C820560E50006FD393 /* TaskListView.swift */; };
 		A093A3CB20571A3F006FD393 /* ShowMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3CA20571A3F006FD393 /* ShowMoreView.swift */; };
 		A093A3CD20572282006FD393 /* TaskListSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3CC20572282006FD393 /* TaskListSeparator.swift */; };
-		A093A3CF20573091006FD393 /* NewSingleEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3CE20573091006FD393 /* NewSingleEventTableViewController.swift */; };
-		A093A3D1205731A4006FD393 /* NewRepeatingEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3D0205731A4006FD393 /* NewRepeatingEventTableViewController.swift */; };
 		A093A3D4205732CE006FD393 /* Academic Commitments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A093A3D3205732CE006FD393 /* Academic Commitments.storyboard */; };
 		A093A3D6205732D9006FD393 /* Extracurricular Commitments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A093A3D5205732D9006FD393 /* Extracurricular Commitments.storyboard */; };
-		A093A3D92057371C006FD393 /* NewEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3D82057371C006FD393 /* NewEventTableViewController.swift */; };
-		A093A3DB205747CD006FD393 /* SingleEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3DA205747CD006FD393 /* SingleEventTableViewCell.swift */; };
-		A093A3DD20574826006FD393 /* RepeatingEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3DC20574826006FD393 /* RepeatingEventTableViewCell.swift */; };
-		A093A3E0205750B4006FD393 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3DF205750B4006FD393 /* EventTableViewController.swift */; };
-		A093A3E2205751A2006FD393 /* SingleEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3E1205751A2006FD393 /* SingleEventTableViewController.swift */; };
-		A093A3E4205751B7006FD393 /* RepeatingEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093A3E3205751B7006FD393 /* RepeatingEventTableViewController.swift */; };
-		A094A80C203F6BDB00B0814D /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A80B203F6BDB00B0814D /* ReminderTableViewCell.swift */; };
-		A094A80D203F6C4900B0814D /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A80B203F6BDB00B0814D /* ReminderTableViewCell.swift */; };
-		A094A80E203F6C4A00B0814D /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A80B203F6BDB00B0814D /* ReminderTableViewCell.swift */; };
-		A094A810203F6E1800B0814D /* NewReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A80F203F6E1800B0814D /* NewReminderTableViewController.swift */; };
 		A094A812203F727C00B0814D /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A811203F727C00B0814D /* FetchManager.swift */; };
 		A094A813203F72AF00B0814D /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A811203F727C00B0814D /* FetchManager.swift */; };
 		A094A814203F72AF00B0814D /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A811203F727C00B0814D /* FetchManager.swift */; };
-		A0A27DB5200BED1E008E81A7 /* NewClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A27DB4200BED1E008E81A7 /* NewClassTableViewController.swift */; };
+		A0A27DB5200BED1E008E81A7 /* NewSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A27DB4200BED1E008E81A7 /* NewSectionTableViewController.swift */; };
 		A0A27DB7200C1ADC008E81A7 /* AssignmentDueDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A27DB6200C1ADC008E81A7 /* AssignmentDueDateTableViewCell.swift */; };
-		A0A80A9F2033B0C700F45B6F /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A80A9E2033B0C700F45B6F /* Today.storyboard */; };
-		A0A98E742054C84000E9470F /* ExtracurricularTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A98E732054C84000E9470F /* ExtracurricularTableViewController.swift */; };
-		A0A98E772054F01900E9470F /* CommitmentPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A98E762054F01900E9470F /* CommitmentPickerTableViewController.swift */; };
 		A0AA09452448F265004E4ED6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22FEF20009C6400E32CC2 /* DataManager.swift */; };
 		A0AA09462448F266004E4ED6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22FEF20009C6400E32CC2 /* DataManager.swift */; };
 		A0AA09482448F333004E4ED6 /* SignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA09472448F333004E4ED6 /* SignInManager.swift */; };
 		A0AB24142054BA7C005BDEBC /* CommitmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB24132054BA7C005BDEBC /* CommitmentsTableViewController.swift */; };
-		A0AB24162054BDCE005BDEBC /* NewExtracirricularTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB24152054BDCE005BDEBC /* NewExtracirricularTableViewController.swift */; };
 		A0AB24182054BFF0005BDEBC /* SemesterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB24172054BFF0005BDEBC /* SemesterTableViewCell.swift */; };
 		A0AB24192054C010005BDEBC /* SemesterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB24172054BFF0005BDEBC /* SemesterTableViewCell.swift */; };
 		A0AB241A2054C010005BDEBC /* SemesterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB24172054BFF0005BDEBC /* SemesterTableViewCell.swift */; };
-		A0AB241C2054C0CF005BDEBC /* ExtracurricularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB241B2054C0CF005BDEBC /* ExtracurricularTableViewCell.swift */; };
-		A0AB241D2054C0D2005BDEBC /* ExtracurricularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB241B2054C0CF005BDEBC /* ExtracurricularTableViewCell.swift */; };
-		A0AB241E2054C0D2005BDEBC /* ExtracurricularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB241B2054C0CF005BDEBC /* ExtracurricularTableViewCell.swift */; };
 		A0BDA23D210FA11500F50A0E /* AssignmentPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDA23C210FA11500F50A0E /* AssignmentPreviewViewController.swift */; };
-		A0C42E1D20587C490049BD1A /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C42E1C20587C490049BD1A /* NotificationManager.swift */; };
-		A0C42E1E205882F80049BD1A /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C42E1C20587C490049BD1A /* NotificationManager.swift */; };
-		A0C42E1F205882F90049BD1A /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C42E1C20587C490049BD1A /* NotificationManager.swift */; };
 		A0C42E21205AEE470049BD1A /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C42E20205AEE470049BD1A /* ScheduleView.swift */; };
 		A0C42E23205AF2D30049BD1A /* ScheduleListSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C42E22205AF2D30049BD1A /* ScheduleListSeparator.swift */; };
 		A0C42E25205AF2E20049BD1A /* ScheduleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C42E24205AF2E20049BD1A /* ScheduleListView.swift */; };
@@ -212,7 +186,6 @@
 		A0F230042000B2A300E32CC2 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F230032000B2A300E32CC2 /* TasksViewController.swift */; };
 		A0F84F26207564F4008AE42B /* TaskPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F84F25207564F4008AE42B /* TaskPreviewViewController.swift */; };
 		A0F84F2A2075652E008AE42B /* Previews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F84F292075652E008AE42B /* Previews.storyboard */; };
-		A0FC30DF2033B38D00D2C8C5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC30DE2033B38D00D2C8C5 /* TodayViewController.swift */; };
 		D37CD2E7B922B915645D4C77 /* Pods_Logan__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F710934112990F0BA6C317 /* Pods_Logan__iOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -252,7 +225,7 @@
 		A02B34122006E16B008344E1 /* Assignments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Assignments.storyboard; sourceTree = "<group>"; };
 		A02B34142006E278008344E1 /* Commitments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Commitments.storyboard; sourceTree = "<group>"; };
 		A02B34162006E711008344E1 /* InterfaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceManager.swift; sourceTree = "<group>"; };
-		A02B341920072538008344E1 /* ClassTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewController.swift; sourceTree = "<group>"; };
+		A02B341920072538008344E1 /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 		A02B341E200726DA008344E1 /* DayOfWeekPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeekPickerTableViewController.swift; sourceTree = "<group>"; };
 		A02B342020082007008344E1 /* PickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
 		A02B342220082B5D008344E1 /* NewSemesterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSemesterTableViewController.swift; sourceTree = "<group>"; };
@@ -260,7 +233,7 @@
 		A03133A72020DA77008E96A9 /* IntervalTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTimer.swift; sourceTree = "<group>"; };
 		A039A6B8205C6EF200A7EA87 /* Overview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overview.storyboard; sourceTree = "<group>"; };
 		A039A6BD205C6FF700A7EA87 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
-		A039A6BF205C72A700A7EA87 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
+		A039A6BF205C72A700A7EA87 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		A039A6C1205C72D400A7EA87 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		A03A2368205CAE02001EBC0D /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		A03A236A205CAEA9001EBC0D /* ScheduleScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScrollView.swift; sourceTree = "<group>"; };
@@ -268,18 +241,14 @@
 		A03F0D1C244E24ED0018BCBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A0456ECA2103F01400A249C2 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A0456ECD2103F0A500A249C2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		A04A20E020373452001752FB /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
+		A04A20E020373452001752FB /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
 		A04A20E220373605001752FB /* DayOfWeekIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeekIndicator.swift; sourceTree = "<group>"; };
-		A04A20E420373A91001752FB /* ExamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTableViewCell.swift; sourceTree = "<group>"; };
-		A04A20E620374271001752FB /* NewExamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExamTableViewController.swift; sourceTree = "<group>"; };
-		A04A20E8203743A5001752FB /* ExamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTableViewController.swift; sourceTree = "<group>"; };
 		A04A20EA2037493D001752FB /* ClassPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPicker.swift; sourceTree = "<group>"; };
 		A04A7C9B210931F50042B86A /* ConsoleOutputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleOutputTableViewCell.swift; sourceTree = "<group>"; };
 		A04A7C9D210932480042B86A /* ConsoleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleTableViewController.swift; sourceTree = "<group>"; };
 		A04A93BA205346510027D1B6 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		A04A93DE205347C50027D1B6 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		A04A93E120534B390027D1B6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		A04FD4F7206C344B001B6F9A /* OverviewExamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewExamTableViewCell.swift; sourceTree = "<group>"; };
 		A0588560202E8211003F5B6D /* AssignmentTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTaskTableViewCell.swift; sourceTree = "<group>"; };
 		A05F66C9244FE52D0032B9C6 /* DatetimeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatetimeValue.swift; sourceTree = "<group>"; };
 		A05FED7B20264C0D00086091 /* PriorityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityIndicator.swift; sourceTree = "<group>"; };
@@ -312,31 +281,15 @@
 		A093A3C820560E50006FD393 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		A093A3CA20571A3F006FD393 /* ShowMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreView.swift; sourceTree = "<group>"; };
 		A093A3CC20572282006FD393 /* TaskListSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListSeparator.swift; sourceTree = "<group>"; };
-		A093A3CE20573091006FD393 /* NewSingleEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSingleEventTableViewController.swift; sourceTree = "<group>"; };
-		A093A3D0205731A4006FD393 /* NewRepeatingEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRepeatingEventTableViewController.swift; sourceTree = "<group>"; };
 		A093A3D3205732CE006FD393 /* Academic Commitments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Academic Commitments.storyboard"; sourceTree = "<group>"; };
 		A093A3D5205732D9006FD393 /* Extracurricular Commitments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Extracurricular Commitments.storyboard"; sourceTree = "<group>"; };
-		A093A3D82057371C006FD393 /* NewEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventTableViewController.swift; sourceTree = "<group>"; };
-		A093A3DA205747CD006FD393 /* SingleEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventTableViewCell.swift; sourceTree = "<group>"; };
-		A093A3DC20574826006FD393 /* RepeatingEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatingEventTableViewCell.swift; sourceTree = "<group>"; };
-		A093A3DF205750B4006FD393 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
-		A093A3E1205751A2006FD393 /* SingleEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventTableViewController.swift; sourceTree = "<group>"; };
-		A093A3E3205751B7006FD393 /* RepeatingEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatingEventTableViewController.swift; sourceTree = "<group>"; };
-		A094A80B203F6BDB00B0814D /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
-		A094A80F203F6E1800B0814D /* NewReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderTableViewController.swift; sourceTree = "<group>"; };
 		A094A811203F727C00B0814D /* FetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
-		A0A27DB4200BED1E008E81A7 /* NewClassTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClassTableViewController.swift; sourceTree = "<group>"; };
+		A0A27DB4200BED1E008E81A7 /* NewSectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSectionTableViewController.swift; sourceTree = "<group>"; };
 		A0A27DB6200C1ADC008E81A7 /* AssignmentDueDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentDueDateTableViewCell.swift; sourceTree = "<group>"; };
-		A0A80A9E2033B0C700F45B6F /* Today.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
-		A0A98E732054C84000E9470F /* ExtracurricularTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtracurricularTableViewController.swift; sourceTree = "<group>"; };
-		A0A98E762054F01900E9470F /* CommitmentPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitmentPickerTableViewController.swift; sourceTree = "<group>"; };
 		A0AA09472448F333004E4ED6 /* SignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInManager.swift; sourceTree = "<group>"; };
 		A0AB24132054BA7C005BDEBC /* CommitmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitmentsTableViewController.swift; sourceTree = "<group>"; };
-		A0AB24152054BDCE005BDEBC /* NewExtracirricularTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExtracirricularTableViewController.swift; sourceTree = "<group>"; };
 		A0AB24172054BFF0005BDEBC /* SemesterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterTableViewCell.swift; sourceTree = "<group>"; };
-		A0AB241B2054C0CF005BDEBC /* ExtracurricularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtracurricularTableViewCell.swift; sourceTree = "<group>"; };
 		A0BDA23C210FA11500F50A0E /* AssignmentPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentPreviewViewController.swift; sourceTree = "<group>"; };
-		A0C42E1C20587C490049BD1A /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		A0C42E20205AEE470049BD1A /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		A0C42E22205AF2D30049BD1A /* ScheduleListSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListSeparator.swift; sourceTree = "<group>"; };
 		A0C42E24205AF2E20049BD1A /* ScheduleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListView.swift; sourceTree = "<group>"; };
@@ -374,7 +327,6 @@
 		A0F230032000B2A300E32CC2 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		A0F84F25207564F4008AE42B /* TaskPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPreviewViewController.swift; sourceTree = "<group>"; };
 		A0F84F292075652E008AE42B /* Previews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Previews.storyboard; sourceTree = "<group>"; };
-		A0FC30DE2033B38D00D2C8C5 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		AD3756BE5176C2F195FF4D56 /* Pods-Tasks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks.release.xcconfig"; path = "Target Support Files/Pods-Tasks/Pods-Tasks.release.xcconfig"; sourceTree = "<group>"; };
 		C5F710934112990F0BA6C317 /* Pods_Logan__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logan__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0BC585A5A9EB05F22EED54 /* Pods-Tasks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks.debug.xcconfig"; path = "Target Support Files/Pods-Tasks/Pods-Tasks.debug.xcconfig"; sourceTree = "<group>"; };
@@ -440,7 +392,6 @@
 		A02B340A2006DD43008344E1 /* Primary */ = {
 			isa = PBXGroup;
 			children = (
-				A0FC30DE2033B38D00D2C8C5 /* TodayViewController.swift */,
 				A0DD4BDA200E631E008441FC /* ScheduleTableViewController.swift */,
 				A03A2368205CAE02001EBC0D /* OverviewViewController.swift */,
 				A039A6BC205C6FEA00A7EA87 /* ScheduleView */,
@@ -455,12 +406,9 @@
 		A02B340B2006DD4F008344E1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				A0A98E732054C84000E9470F /* ExtracurricularTableViewController.swift */,
-				A093A3DE2057509D006FD393 /* Events */,
 				A0E4F9AE2001CC42007E2399 /* SemesterTableViewController.swift */,
 				A0283F032004C24F00CE2843 /* CourseTableViewController.swift */,
-				A02B341920072538008344E1 /* ClassTableViewController.swift */,
-				A04A20E8203743A5001752FB /* ExamTableViewController.swift */,
+				A02B341920072538008344E1 /* SectionTableViewController.swift */,
 				A0283F012004670700CE2843 /* AssignmentTableViewController.swift */,
 				A0919A462003568A0065796C /* TaskTableViewController.swift */,
 			);
@@ -470,15 +418,11 @@
 		A02B340C2006DD5E008344E1 /* Creation */ = {
 			isa = PBXGroup;
 			children = (
-				A0AB24152054BDCE005BDEBC /* NewExtracirricularTableViewController.swift */,
-				A093A3D72057370F006FD393 /* New Event */,
 				A02B342220082B5D008344E1 /* NewSemesterTableViewController.swift */,
 				A02B3424200832F5008344E1 /* NewCourseTableViewController.swift */,
-				A0A27DB4200BED1E008E81A7 /* NewClassTableViewController.swift */,
-				A04A20E620374271001752FB /* NewExamTableViewController.swift */,
+				A0A27DB4200BED1E008E81A7 /* NewSectionTableViewController.swift */,
 				A02B340D2006DD70008344E1 /* NewAssignmentTableViewController.swift */,
 				A0283F0D2005B1B400CE2843 /* NewTaskTableViewController.swift */,
-				A094A80F203F6E1800B0814D /* NewReminderTableViewController.swift */,
 			);
 			path = Creation;
 			sourceTree = "<group>";
@@ -489,7 +433,6 @@
 				A04A93BA205346510027D1B6 /* Welcome.storyboard */,
 				A0F22FAB1FFEDE9800E32CC2 /* Main.storyboard */,
 				A039A6B8205C6EF200A7EA87 /* Overview.storyboard */,
-				A0A80A9E2033B0C700F45B6F /* Today.storyboard */,
 				A02B34102006E047008344E1 /* Tasks.storyboard */,
 				A02B34122006E16B008344E1 /* Assignments.storyboard */,
 				A02B34142006E278008344E1 /* Commitments.storyboard */,
@@ -517,7 +460,6 @@
 			isa = PBXGroup;
 			children = (
 				A0283EFB200458BD00CE2843 /* CoursePickerTableViewController.swift */,
-				A0A98E762054F01900E9470F /* CommitmentPickerTableViewController.swift */,
 				A02B341E200726DA008344E1 /* DayOfWeekPickerTableViewController.swift */,
 			);
 			path = Pickers;
@@ -527,7 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				A039A6BD205C6FF700A7EA87 /* EventView.swift */,
-				A039A6BF205C72A700A7EA87 /* ClassView.swift */,
+				A039A6BF205C72A700A7EA87 /* SectionView.swift */,
 				A039A6C1205C72D400A7EA87 /* ScheduleView.swift */,
 				A03A236A205CAEA9001EBC0D /* ScheduleScrollView.swift */,
 			);
@@ -594,26 +536,6 @@
 			path = Commitments;
 			sourceTree = "<group>";
 		};
-		A093A3D72057370F006FD393 /* New Event */ = {
-			isa = PBXGroup;
-			children = (
-				A093A3D82057371C006FD393 /* NewEventTableViewController.swift */,
-				A093A3CE20573091006FD393 /* NewSingleEventTableViewController.swift */,
-				A093A3D0205731A4006FD393 /* NewRepeatingEventTableViewController.swift */,
-			);
-			path = "New Event";
-			sourceTree = "<group>";
-		};
-		A093A3DE2057509D006FD393 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				A093A3DF205750B4006FD393 /* EventTableViewController.swift */,
-				A093A3E1205751A2006FD393 /* SingleEventTableViewController.swift */,
-				A093A3E3205751B7006FD393 /* RepeatingEventTableViewController.swift */,
-			);
-			path = Events;
-			sourceTree = "<group>";
-		};
 		A0CED85422EE303D007AA21B /* Fetch & Data Management */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,12 +551,8 @@
 			isa = PBXGroup;
 			children = (
 				A0AB24172054BFF0005BDEBC /* SemesterTableViewCell.swift */,
-				A0AB241B2054C0CF005BDEBC /* ExtracurricularTableViewCell.swift */,
-				A093A3DA205747CD006FD393 /* SingleEventTableViewCell.swift */,
-				A093A3DC20574826006FD393 /* RepeatingEventTableViewCell.swift */,
 				A0E4F9B12001CE5D007E2399 /* CourseTableViewCell.swift */,
-				A04A20E020373452001752FB /* ClassTableViewCell.swift */,
-				A04A20E420373A91001752FB /* ExamTableViewCell.swift */,
+				A04A20E020373452001752FB /* SectionTableViewCell.swift */,
 				A0283EFD2004605B00CE2843 /* AssignmentTableViewCell.swift */,
 				A0588560202E8211003F5B6D /* AssignmentTaskTableViewCell.swift */,
 				A0919A4220034C3E0065796C /* TaskTableViewCell.swift */,
@@ -642,8 +560,6 @@
 				A0283EF320041B4800CE2843 /* TaskDueDatePickerTableViewCell.swift */,
 				A02B342020082007008344E1 /* PickerTableViewCell.swift */,
 				A08D763F200E94C700801A3F /* ScheduleTableViewCell.swift */,
-				A094A80B203F6BDB00B0814D /* ReminderTableViewCell.swift */,
-				A04FD4F7206C344B001B6F9A /* OverviewExamTableViewCell.swift */,
 				A04A7C9B210931F50042B86A /* ConsoleOutputTableViewCell.swift */,
 			);
 			path = "Table View Cells";
@@ -677,7 +593,6 @@
 				A0F22FF32000A2EE00E32CC2 /* Logan (iOS).entitlements */,
 				A0F22FA51FFEDE9800E32CC2 /* AppDelegate.swift */,
 				A02B34162006E711008344E1 /* InterfaceManager.swift */,
-				A0C42E1C20587C490049BD1A /* NotificationManager.swift */,
 				A0CED85422EE303D007AA21B /* Fetch & Data Management */,
 				A0CED84A22ECCD03007AA21B /* Sorting.swift */,
 				A0868ED3202A0FFE00F99AB1 /* Console.swift */,
@@ -946,7 +861,6 @@
 				A093A3D4205732CE006FD393 /* Academic Commitments.storyboard in Resources */,
 				A0F84F2A2075652E008AE42B /* Previews.storyboard in Resources */,
 				A093A3D6205732D9006FD393 /* Extracurricular Commitments.storyboard in Resources */,
-				A0A80A9F2033B0C700F45B6F /* Today.storyboard in Resources */,
 				A039A6B9205C6EF200A7EA87 /* Overview.storyboard in Resources */,
 				A0456ECB2103F01400A249C2 /* Settings.storyboard in Resources */,
 				A0F22FAD1FFEDE9800E32CC2 /* Main.storyboard in Resources */,
@@ -1105,10 +1019,7 @@
 				A0AB241A2054C010005BDEBC /* SemesterTableViewCell.swift in Sources */,
 				A05FEDC02026575900086091 /* UIColorSwatch.swift in Sources */,
 				A05FEDC42026575900086091 /* PriorityIndicator.swift in Sources */,
-				A0AB241E2054C0D2005BDEBC /* ExtracurricularTableViewCell.swift in Sources */,
-				A0C42E1F205882F90049BD1A /* NotificationManager.swift in Sources */,
 				A0868ED8202A17F900F99AB1 /* Console.swift in Sources */,
-				A094A80E203F6C4A00B0814D /* ReminderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1132,7 +1043,6 @@
 				A05FED8220264F9E00086091 /* Extensions.swift in Sources */,
 				A05FED9320264FB200086091 /* Assignment.swift in Sources */,
 				A05FED8820264FA300086091 /* UICheckbox.swift in Sources */,
-				A0C42E1E205882F80049BD1A /* NotificationManager.swift in Sources */,
 				A0C42E27205AF2EE0049BD1A /* ScheduleHeader.swift in Sources */,
 				A05FED9720264FB200086091 /* Priority.swift in Sources */,
 				A05FED8720264F9E00086091 /* IntervalTimer.swift in Sources */,
@@ -1148,9 +1058,7 @@
 				A05FED8A20264FA300086091 /* UIColorPicker.swift in Sources */,
 				A05FED8920264FA300086091 /* UIColorSwatch.swift in Sources */,
 				A05FED9920264FB700086091 /* CalendarDay.swift in Sources */,
-				A0AB241D2054C0D2005BDEBC /* ExtracurricularTableViewCell.swift in Sources */,
 				A05FED8E20264FAD00086091 /* ScheduleTableViewCell.swift in Sources */,
-				A094A80D203F6C4900B0814D /* ReminderTableViewCell.swift in Sources */,
 				A05FED8D20264FA300086091 /* PriorityIndicator.swift in Sources */,
 				A05FED8520264F9E00086091 /* BetterNavigationController.swift in Sources */,
 				A05FED9420264FB200086091 /* Task.swift in Sources */,
@@ -1167,24 +1075,18 @@
 				A0DD4BDB200E631E008441FC /* ScheduleTableViewController.swift in Sources */,
 				A0283F0E2005B1B400CE2843 /* NewTaskTableViewController.swift in Sources */,
 				A02B340E2006DD70008344E1 /* NewAssignmentTableViewController.swift in Sources */,
-				A094A810203F6E1800B0814D /* NewReminderTableViewController.swift in Sources */,
 				A0120BCC2142BEC400E04BA2 /* TaskView.swift in Sources */,
 				A03A2369205CAE02001EBC0D /* OverviewViewController.swift in Sources */,
 				A0CED85322ECD3EB007AA21B /* TableData.swift in Sources */,
 				A0F22FEE20009B2700E32CC2 /* Assignment.swift in Sources */,
 				A0E4F9AF2001CC42007E2399 /* SemesterTableViewController.swift in Sources */,
-				A093A3D1205731A4006FD393 /* NewRepeatingEventTableViewController.swift in Sources */,
 				A04A93DF205347C50027D1B6 /* InitialViewController.swift in Sources */,
 				A0F230002000ADDE00E32CC2 /* SemestersTableViewController.swift in Sources */,
-				A04A20E9203743A5001752FB /* ExamTableViewController.swift in Sources */,
 				A03133A82020DA77008E96A9 /* IntervalTimer.swift in Sources */,
-				A093A3E4205751B7006FD393 /* RepeatingEventTableViewController.swift in Sources */,
 				A0F22FE720009B2700E32CC2 /* DueDate.swift in Sources */,
 				A0919A3F2001DBCA0065796C /* AssignmentsViewController.swift in Sources */,
 				A039A6BE205C6FF700A7EA87 /* EventView.swift in Sources */,
-				A0A98E742054C84000E9470F /* ExtracurricularTableViewController.swift in Sources */,
 				A04A20E320373605001752FB /* DayOfWeekIndicator.swift in Sources */,
-				A0C42E1D20587C490049BD1A /* NotificationManager.swift in Sources */,
 				A0120BCE2142BEDA00E04BA2 /* TaskListSeparator.swift in Sources */,
 				A05F66CA244FE52D0032B9C6 /* DatetimeValue.swift in Sources */,
 				A067B80220539E0D00FD8DDA /* WelcomeSemesterViewController.swift in Sources */,
@@ -1192,7 +1094,6 @@
 				A0F22FEB20009B2700E32CC2 /* ClockTime.swift in Sources */,
 				A0F84F26207564F4008AE42B /* TaskPreviewViewController.swift in Sources */,
 				A0AB24142054BA7C005BDEBC /* CommitmentsTableViewController.swift in Sources */,
-				A093A3DB205747CD006FD393 /* SingleEventTableViewCell.swift in Sources */,
 				A094A812203F727C00B0814D /* FetchManager.swift in Sources */,
 				A0919A472003568A0065796C /* TaskTableViewController.swift in Sources */,
 				A0F22FE120009B2700E32CC2 /* Course.swift in Sources */,
@@ -1205,7 +1106,6 @@
 				A0F22FE220009B2700E32CC2 /* BetterDate.swift in Sources */,
 				A0A27DB7200C1ADC008E81A7 /* AssignmentDueDateTableViewCell.swift in Sources */,
 				A0F22FE820009B2700E32CC2 /* Task.swift in Sources */,
-				A093A3DD20574826006FD393 /* RepeatingEventTableViewCell.swift in Sources */,
 				A0283F022004670700CE2843 /* AssignmentTableViewController.swift in Sources */,
 				A0919A412002BE650065796C /* BetterNavigationController.swift in Sources */,
 				A03F0D1B244E1FB50018BCBC /* BEObject.swift in Sources */,
@@ -1213,10 +1113,8 @@
 				A0120BCA2142BE0C00E04BA2 /* TaskList.swift in Sources */,
 				A0F22FF220009ED300E32CC2 /* Extensions.swift in Sources */,
 				A0919A4520034C7E0065796C /* UICheckbox.swift in Sources */,
-				A04FD4F8206C344B001B6F9A /* OverviewExamTableViewCell.swift in Sources */,
 				A0CED84B22ECCD03007AA21B /* Sorting.swift in Sources */,
-				A093A3E0205750B4006FD393 /* EventTableViewController.swift in Sources */,
-				A039A6C0205C72A700A7EA87 /* ClassView.swift in Sources */,
+				A039A6C0205C72A700A7EA87 /* SectionView.swift in Sources */,
 				A0AB24182054BFF0005BDEBC /* SemesterTableViewCell.swift in Sources */,
 				A0283F0C20057CCF00CE2843 /* UIColorPicker.swift in Sources */,
 				A0283F08200576A100CE2843 /* UIColorSwatch.swift in Sources */,
@@ -1225,43 +1123,33 @@
 				A079E6812021210F00FC5761 /* RoundedButton.swift in Sources */,
 				A0BDA23D210FA11500F50A0E /* AssignmentPreviewViewController.swift in Sources */,
 				A0283EF420041B4800CE2843 /* TaskDueDatePickerTableViewCell.swift in Sources */,
-				A093A3CF20573091006FD393 /* NewSingleEventTableViewController.swift in Sources */,
 				A0283EF820042B3100CE2843 /* PriorityControl.swift in Sources */,
 				A0AA09482448F333004E4ED6 /* SignInManager.swift in Sources */,
-				A0A98E772054F01900E9470F /* CommitmentPickerTableViewController.swift in Sources */,
 				A02B341F200726DA008344E1 /* DayOfWeekPickerTableViewController.swift in Sources */,
 				A09271462447E795005C9D6C /* API.swift in Sources */,
-				A04A20E720374271001752FB /* NewExamTableViewController.swift in Sources */,
 				A0919A4B200367640065796C /* BetterDatePicker.swift in Sources */,
 				A0F22FE520009B2700E32CC2 /* CalendarDay.swift in Sources */,
 				A0F22FA61FFEDE9800E32CC2 /* AppDelegate.swift in Sources */,
-				A02B341A20072538008344E1 /* ClassTableViewController.swift in Sources */,
+				A02B341A20072538008344E1 /* SectionTableViewController.swift in Sources */,
 				A0CCD7492138F2CC0028D3A7 /* CalendarsTableViewController.swift in Sources */,
-				A0AB241C2054C0CF005BDEBC /* ExtracurricularTableViewCell.swift in Sources */,
-				A093A3E2205751A2006FD393 /* SingleEventTableViewController.swift in Sources */,
 				A0283EFC200458BD00CE2843 /* CoursePickerTableViewController.swift in Sources */,
-				A0FC30DF2033B38D00D2C8C5 /* TodayViewController.swift in Sources */,
 				A03A236B205CAEA9001EBC0D /* ScheduleScrollView.swift in Sources */,
 				A02B34172006E711008344E1 /* InterfaceManager.swift in Sources */,
-				A0A27DB5200BED1E008E81A7 /* NewClassTableViewController.swift in Sources */,
+				A0A27DB5200BED1E008E81A7 /* NewSectionTableViewController.swift in Sources */,
 				A02B342320082B5D008344E1 /* NewSemesterTableViewController.swift in Sources */,
 				A0283F042004C24F00CE2843 /* CourseTableViewController.swift in Sources */,
 				A0456ECE2103F0A500A249C2 /* SettingsTableViewController.swift in Sources */,
-				A04A20E520373A91001752FB /* ExamTableViewCell.swift in Sources */,
 				A02B342120082007008344E1 /* PickerTableViewCell.swift in Sources */,
 				A04A7C9E210932480042B86A /* ConsoleTableViewController.swift in Sources */,
-				A094A80C203F6BDB00B0814D /* ReminderTableViewCell.swift in Sources */,
 				A0919A4320034C3E0065796C /* TaskTableViewCell.swift in Sources */,
-				A04A20E120373452001752FB /* ClassTableViewCell.swift in Sources */,
+				A04A20E120373452001752FB /* SectionTableViewCell.swift in Sources */,
 				A0F22FE920009B2700E32CC2 /* DayOfWeek.swift in Sources */,
 				A0F230042000B2A300E32CC2 /* TasksViewController.swift in Sources */,
 				A03F0D1D244E24ED0018BCBC /* User.swift in Sources */,
 				A0F22FED20009B2700E32CC2 /* Section.swift in Sources */,
 				A0E4F9B42001D7C3007E2399 /* BetterDateFormatter.swift in Sources */,
-				A0AB24162054BDCE005BDEBC /* NewExtracirricularTableViewController.swift in Sources */,
 				A04A7C9C210931F50042B86A /* ConsoleOutputTableViewCell.swift in Sources */,
 				A0F22FEA20009B2700E32CC2 /* Priority.swift in Sources */,
-				A093A3D92057371C006FD393 /* NewEventTableViewController.swift in Sources */,
 				A0CFCB272060B63D00D025D5 /* RowView.swift in Sources */,
 				A05FED7E20264D3100086091 /* PriorityIndicator.swift in Sources */,
 				A0E4F9B22001CE5D007E2399 /* CourseTableViewCell.swift in Sources */,

@@ -20,11 +20,11 @@ class SemestersTableViewController: UITableViewController, DataManagerListener {
         InterfaceManager.shared.semestersController = self
         DataManager.shared.addListener(self)
         
-        if DataManager.shared.currentCloudStatus == DataManager.ConnectionStatus.fetching {
+        if DataManager.shared.currentConnectionStatus == DataManager.ConnectionStatus.fetching {
             syncButton.image = #imageLiteral(resourceName: "Cloud Progress")
-        } else if DataManager.shared.currentCloudStatus == DataManager.ConnectionStatus.ready {
+        } else if DataManager.shared.currentConnectionStatus == DataManager.ConnectionStatus.ready {
             syncButton.image = #imageLiteral(resourceName: "Cloud Sync")
-        } else if DataManager.shared.currentCloudStatus == DataManager.ConnectionStatus.error {
+        } else if DataManager.shared.currentConnectionStatus == DataManager.ConnectionStatus.error {
             syncButton.image = #imageLiteral(resourceName: "Cloud Error")
         }
     }

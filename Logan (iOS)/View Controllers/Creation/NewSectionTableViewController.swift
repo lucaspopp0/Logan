@@ -8,12 +8,12 @@
 
 import UIKit
 
-class NewClassTableViewController: UITableViewController, DayOfWeekPickerDelegate {
+class NewSectionTableViewController: UITableViewController, DayOfWeekPickerDelegate {
     
     var correspondingCourse: Course!
-    var newClass: Section = Section()
+    var newSection: Section = Section()
     
-    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var locationField: UITextField!
     
     @IBOutlet weak var startDateLabel: UILabel!
@@ -38,35 +38,35 @@ class NewClassTableViewController: UITableViewController, DayOfWeekPickerDelegat
         super.viewWillAppear(animated)
         
         if !alreadyOpened {
-            titleField.becomeFirstResponder()
+            nameField.becomeFirstResponder()
             
             for semester in DataManager.shared.semesters {
                 if semester.courses.contains(correspondingCourse) {
-                    newClass.startDate = semester.startDate
-                    newClass.endDate = semester.endDate
+                    newSection.startDate = semester.startDate
+                    newSection.endDate = semester.endDate
                     
-                    newClass.startTime = ClockTime(date: Date())
-                    newClass.endTime = ClockTime(date: Date())
+                    newSection.startTime = ClockTime(date: Date())
+                    newSection.endTime = ClockTime(date: Date())
                     break
                 }
             }
             
-            startDatePicker.calendarDay = newClass.startDate
-            startDateLabel.text = BetterDateFormatter.autoFormatDate(newClass.startDate.dateValue!)
-            endDatePicker.calendarDay = newClass.endDate
-            endDateLabel.text = BetterDateFormatter.autoFormatDate(newClass.endDate.dateValue!)
+            startDatePicker.calendarDay = newSection.startDate
+            startDateLabel.text = BetterDateFormatter.autoFormatDate(newSection.startDate.dateValue!)
+            endDatePicker.calendarDay = newSection.endDate
+            endDateLabel.text = BetterDateFormatter.autoFormatDate(newSection.endDate.dateValue!)
             
-            startTimePicker.date = newClass.startTime.dateValue!
+            startTimePicker.date = newSection.startTime.dateValue!
             startTimeLabel.text = BetterDateFormatter.autoFormatTime(startTimePicker.date)
-            endTimePicker.date = newClass.endTime.dateValue!
+            endTimePicker.date = newSection.endTime.dateValue!
             endTimeLabel.text = BetterDateFormatter.autoFormatTime(endTimePicker.date)
             
-            weeklyRepeatLabel.text = "\(newClass.weeklyRepeat) week(s)"
-            weeklyRepeatStepper.value = Double(newClass.weeklyRepeat)
+            weeklyRepeatLabel.text = "\(newSection.weeklyRepeat) week(s)"
+            weeklyRepeatStepper.value = Double(newSection.weeklyRepeat)
             
             var daysOfWeekString: [String] = []
             
-            for day in newClass.daysOfWeek.sorted(by: { (day1, day2) -> Bool in
+            for day in newSection.daysOfWeek.sorted(by: { (day1, day2) -> Bool in
                 return day1.rawValue < day2.rawValue
             }) {
                 daysOfWeekString.append(day.shortName())
@@ -84,12 +84,12 @@ class NewClassTableViewController: UITableViewController, DayOfWeekPickerDelegat
     }
     
     @IBAction func done(_ sender: Any) {
-        newClass.title = titleField.text ?? ""
-        newClass.location = locationField.text
+        newSection.name = nameField.text ?? ""
+        newSection.location = locationField.text
         
-        correspondingCourse.classes.append(newClass)
+        correspondingCourse.sections.append(newSection)
         
-        DataManager.shared.introduce(newClass.record)
+        DataManager.shared.introduce(newSection.record)
         DataManager.shared.update(correspondingCourse.record)
         
         view.endEditing(true)
@@ -100,26 +100,26 @@ class NewClassTableViewController: UITableViewController, DayOfWeekPickerDelegat
         if let datePicker = sender as? BetterDatePicker {
             if datePicker.isEqual(startDatePicker) {
                 startDateLabel.text = BetterDateFormatter.autoFormatDate(startDatePicker.dateValue)
-                newClass.startDate = startDatePicker.calendarDay
+                newSection.startDate = startDatePicker.calendarDay
             } else if datePicker.isEqual(endDatePicker) {
                 endDateLabel.text = BetterDateFormatter.autoFormatDate(endDatePicker.dateValue)
-                newClass.endDate = endDatePicker.calendarDay
+                newSection.endDate = endDatePicker.calendarDay
             }
         } else if let timePicker = sender as? UIDatePicker {
             if timePicker.isEqual(startTimePicker) {
                 startTimeLabel.text = BetterDateFormatter.autoFormatTime(startTimePicker.date)
-                newClass.startTime = ClockTime(date: startTimePicker.date)
+                newSection.startTime = ClockTime(date: startTimePicker.date)
             } else if timePicker.isEqual(endTimePicker) {
                 endTimeLabel.text = BetterDateFormatter.autoFormatTime(endTimePicker.date)
-                newClass.endTime = ClockTime(date: endTimePicker.date)
+                newSection.endTime = ClockTime(date: endTimePicker.date)
             }
         }
     }
     
     @IBAction func weeklyRepeatStepped(_ stepper: UIStepper) {
-        newClass.weeklyRepeat = Int(stepper.value)
-        weeklyRepeatLabel.text = "\(newClass.weeklyRepeat) week(s)"
-        weeklyRepeatStepper.value = Double(newClass.weeklyRepeat)
+        newSection.weeklyRepeat = Int(stepper.value)
+        weeklyRepeatLabel.text = "\(newSection.weeklyRepeat) week(s)"
+        weeklyRepeatStepper.value = Double(newSection.weeklyRepeat)
     }
     
     // MARK: - Table view data source
@@ -142,13 +142,13 @@ class NewClassTableViewController: UITableViewController, DayOfWeekPickerDelegat
     // MARK: - Day of week picker delegate
     
     func daysOfWeekSelected(_ daysOfWeek: [DayOfWeek]) {
-        newClass.daysOfWeek = daysOfWeek.sorted(by: { (day1, day2) -> Bool in
+        newSection.daysOfWeek = daysOfWeek.sorted(by: { (day1, day2) -> Bool in
             return day1.rawValue < day2.rawValue
         })
         
         var daysOfWeekString: [String] = []
         
-        for day in newClass.daysOfWeek {
+        for day in newSection.daysOfWeek {
             daysOfWeekString.append(day.shortName())
         }
         
@@ -160,7 +160,7 @@ class NewClassTableViewController: UITableViewController, DayOfWeekPickerDelegat
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let picker = segue.destination as? DayOfWeekPickerTableViewController {
-            picker.daysOfWeek = newClass.daysOfWeek
+            picker.daysOfWeek = newSection.daysOfWeek
             picker.delegate = self
             picker.tableView.reloadData()
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AssignmentTableViewController: UITableViewController, UITextViewDelegate, AssignmentDueDatePickerDelegate, CommitmentPickerDelegate {
+class AssignmentTableViewController: UITableViewController, UITextViewDelegate, AssignmentDueDatePickerDelegate, CoursePickerDelegate {
     
     var assignment: Assignment! {
         didSet {
@@ -25,7 +25,7 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
     private var dueDateTypeControl: UISegmentedControl!
     private var specificDueDatePicker: BetterDatePicker!
     
-    private var commitmentLabel: UILabel!
+    private var courseLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -103,17 +103,17 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
         tableView.endUpdates()
     }
     
-    // MARK: - Commitment Picker Delegate
+    // MARK: - Course Picker Delegate
     
-    func selectedCommitment(_ commitment: Commitment?, in picker: CommitmentPickerTableViewController) {
-        assignment.commitment = commitment as? (Commitment & CKEnabled)
-        commitmentLabel.text = assignment.commitment?.name ?? "None"
+    func selectedCourse(_ course: Course?, in picker: CoursePickerTableViewController) {
+        assignment.course = course
+        courseLabel.text = assignment.course?.name ?? "None"
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,8 +123,6 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
             return 2
         } else if section == 2 {
             return assignmentTasks.count + 1
-        } else if section == 3 {
-            return assignment.reminders.count + 1
         }
         
         return 0
@@ -156,8 +154,6 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "Due Date", for: indexPath) as? AssignmentDueDateTableViewCell {
                     dueDateLabel = cell.displayLabel
                     
-                    cell.correspondingCommitment = assignment.commitment
-                    
                     dueDateTypeControl = cell.segmentedControl
                     specificDueDatePicker = cell.datePicker
                     
@@ -180,12 +176,12 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
                     return cell
                 }
             } else if indexPath.row == 1 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Commitment", for: indexPath)
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Course", for: indexPath)
                 
                 if let label = cell.viewWithTag(1) as? UILabel {
-                    commitmentLabel = label
-                    commitmentLabel.text = assignment.commitment?.longerName ?? "None"
-                    commitmentLabel.textColor = assignment.commitment?.color ?? UIColor.black.withAlphaComponent(0.5)
+                    courseLabel = label
+                    courseLabel.text = assignment.course?.longerName ?? "None"
+                    courseLabel.textColor = assignment.course?.color ?? UIColor.black.withAlphaComponent(0.5)
                 }
                 
                 return cell
@@ -197,17 +193,6 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
                 return cell
             } else if let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath) as? AssignmentTaskTableViewCell {
                 cell.task = assignmentTasks[indexPath.row]
-                cell.configureCell()
-                
-                return cell
-            }
-        } else if indexPath.section == 3 {
-            if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Add Reminder", for: indexPath)
-                cell.textLabel?.textColor = UIColor.teal500
-                return cell
-            } else if let cell = tableView.dequeueReusableCell(withIdentifier: "Reminder", for: indexPath) as? ReminderTableViewCell {
-                cell.reminder = assignment.reminders[indexPath.row]
                 cell.configureCell()
                 
                 return cell
@@ -230,8 +215,6 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 2 {
             return "Tasks"
-        } else if section == 3 {
-            return "Reminders"
         }
         
         return nil
@@ -255,7 +238,7 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        if (indexPath.section == 2 || indexPath.section == 3) && indexPath.row < tableView.numberOfRows(inSection: indexPath.section) - 1 {
+        if indexPath.section == 2 && indexPath.row < tableView.numberOfRows(inSection: indexPath.section) - 1 {
             return true
         } else {
             return false
@@ -275,11 +258,6 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
                 assignmentTasks = DataManager.shared.tasksFor(assignment)
                 
                 tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-            } else if indexPath.section == 3 {
-                DataManager.shared.delete(assignment.reminders[indexPath.row].record)
-                assignment.reminders.remove(at: indexPath.row)
-                
-                tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
             }
         }
     }
@@ -293,16 +271,13 @@ class AssignmentTableViewController: UITableViewController, UITextViewDelegate, 
                     taskController.task = cell.task
                 }
             }
-        } else if let commitmentPicker = segue.destination as? CommitmentPickerTableViewController {
-            commitmentPicker.commitment = assignment.commitment
-            commitmentPicker.delegate = self
-            commitmentPicker.updateData()
-            commitmentPicker.tableView.reloadData()
+        } else if let coursePicker = segue.destination as? CoursePickerTableViewController {
+            coursePicker.course = assignment.course
+            coursePicker.delegate = self
+            coursePicker.tableView.reloadData()
         } else if let navigationController = segue.destination as? BetterNavigationController {
             if let newTaskController = navigationController.topViewController as? NewTaskTableViewController {
                 newTaskController.task.relatedAssignment = assignment
-            } else if let newReminderController = navigationController.topViewController as? NewReminderTableViewController {
-                newReminderController.reminder.assignment = assignment
             }
         }
     }

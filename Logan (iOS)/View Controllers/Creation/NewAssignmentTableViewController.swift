@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewAssignmentTableViewController: UITableViewController, UITextViewDelegate, AssignmentDueDatePickerDelegate, CommitmentPickerDelegate {
+class NewAssignmentTableViewController: UITableViewController, UITextViewDelegate, AssignmentDueDatePickerDelegate, CoursePickerDelegate {
 
     let assignment: Assignment = Assignment()
     var correspondingTask: Task?
@@ -21,7 +21,7 @@ class NewAssignmentTableViewController: UITableViewController, UITextViewDelegat
     private var specificDueDatePicker: BetterDatePicker!
     private var classPicker: ClassPicker!
     
-    private var commitmentLabel: UILabel!
+    private var courseLabel: UILabel!
     
     private var alreadyLoaded: Bool = false
     
@@ -220,16 +220,10 @@ class NewAssignmentTableViewController: UITableViewController, UITextViewDelegat
     
     // MARK: - Commitment picker delegate
     
-    func selectedCommitment(_ commitment: Commitment?, in picker: CommitmentPickerTableViewController) {
-        guard let commitment = commitment as? (Commitment & CKEnabled)? else { return }
-        
-        assignment.commitment = commitment
-        commitmentLabel.text = assignment.commitment?.longerName ?? "None"
-        commitmentLabel.textColor = assignment.commitment?.color ?? UIColor.black.withAlphaComponent(0.5)
-        
-        if let picker = tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as? AssignmentDueDateTableViewCell {
-            picker.correspondingCommitment = commitment
-        }
+    func selectedCourse(_ course: Course?, in picker: CoursePickerTableViewController) {
+        assignment.course = course
+        courseLabel.text = assignment.course?.longerName ?? "None"
+        courseLabel.textColor = assignment.course?.color ?? UIColor.black.withAlphaComponent(0.5)
     }
     
     // MARK: - Table view data source
@@ -286,8 +280,6 @@ class NewAssignmentTableViewController: UITableViewController, UITextViewDelegat
                     dueDateLabel = cell.displayLabel
                     updateDueDateText()
                     
-                    cell.correspondingCommitment = assignment.commitment
-                    
                     dueDateTypeControl = cell.segmentedControl
 
                     switch assignment.dueDate {
@@ -323,8 +315,8 @@ class NewAssignmentTableViewController: UITableViewController, UITextViewDelegat
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Commitment", for: indexPath)
                 
                 if let label = cell.viewWithTag(1) as? UILabel {
-                    commitmentLabel = label
-                    commitmentLabel.text = assignment.commitment?.name ?? "None"
+                    courseLabel = label
+                    courseLabel.text = assignment.course?.name ?? "None"
                 }
                 
                 return cell
@@ -442,11 +434,10 @@ class NewAssignmentTableViewController: UITableViewController, UITextViewDelegat
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let commitmentPicker = segue.destination as? CommitmentPickerTableViewController {
-            commitmentPicker.commitment = assignment.commitment
-            commitmentPicker.delegate = self
-            commitmentPicker.updateData()
-            commitmentPicker.tableView.reloadData()
+        if let coursePicker = segue.destination as? CoursePickerTableViewController {
+            coursePicker.course = assignment.course
+            coursePicker.delegate = self
+            coursePicker.tableView.reloadData()
         }
     }
 

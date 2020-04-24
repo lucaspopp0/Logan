@@ -20,6 +20,12 @@ class Task: BEObject {
     var course: Course?
     var relatedAssignment: Assignment?
     
+    var associatedCourse: Course? {
+        get {
+            return relatedAssignment?.course ?? course
+        }
+    }
+    
     var isOverdue: Bool {
         get {
             if case let DueDate.specificDay(day) = dueDate {

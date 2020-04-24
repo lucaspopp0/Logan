@@ -38,11 +38,7 @@ class AssignmentTaskTableViewCell: UITableViewCell {
         
         titleLabel.text = (task.title.isEmpty ? "Untitled" : task.title)
         
-        if let taskCommitment = task.relatedAssignment?.commitment {
-            checkbox.tintColor = taskCommitment.color
-        } else {
-            checkbox.tintColor = UICheckbox.defaultBorderColor
-        }
+        checkbox.tintColor = task.relatedAssignment?.course?.color ?? UICheckbox.defaultBorderColor
         
         if checkbox.isOn {
             dueDateLabel?.isHidden = true

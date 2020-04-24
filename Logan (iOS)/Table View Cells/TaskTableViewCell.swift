@@ -37,41 +37,36 @@ class TaskTableViewCell: UITableViewCell {
         
         titleLabel.text = (task.title.isEmpty ? "Untitled" : task.title)
         
-        if task.userDescription.isEmpty {
-            descriptionLabel?.isHidden = true
-        } else {
+        if let taskDescription = task.userDescription, !taskDescription.isEmpty {
             descriptionLabel?.isHidden = false
             descriptionLabel?.text = task.userDescription
+        } else {
+            descriptionLabel?.isHidden = true
         }
         
-        if let commitment = task.relatedAssignment?.commitment ?? task.commitment {
-            checkbox.tintColor = commitment.color
-        } else {
-            checkbox.tintColor = UICheckbox.defaultBorderColor
-        }
+        checkbox.tintColor = task.associatedCourse?.color ?? UICheckbox.defaultBorderColor
         
         if sourceLabel != nil {
-            let commitment = task.relatedAssignment?.commitment ?? task.commitment ?? nil
-            let commitmentName = (shortenCourseText ? commitment?.shorterName : commitment?.longerName) ?? ""
+            let courseName = (shortenCourseText ? task.associatedCourse?.shorterName : task.associatedCourse?.longerName) ?? ""
             let assignmentName = task.relatedAssignment?.title ?? ""
             
-            if commitmentName.isEmpty && assignmentName.isEmpty {
+            if courseName.isEmpty && assignmentName.isEmpty {
                 sourceLabel?.isHidden = true
             } else {
                 sourceLabel?.isHidden = false
                 
-                if !commitmentName.isEmpty && !assignmentName.isEmpty {
+                if !courseName.isEmpty && !assignmentName.isEmpty {
                     let attrStr = NSMutableAttributedString()
-                    attrStr.append(NSAttributedString(string: commitmentName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold),
-                                                                                           NSAttributedStringKey.foregroundColor : commitment!.color]))
+                    attrStr.append(NSAttributedString(string: courseName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold),
+                                                                                       NSAttributedStringKey.foregroundColor : task.associatedCourse!.color]))
                     attrStr.append(NSAttributedString(string: "\u{2009}/\u{2009}\(assignmentName)", attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14),
                                                                                                                  NSAttributedStringKey.foregroundColor : UIColor(white: 0, alpha: 0.5)]))
                     
                     sourceLabel?.attributedText = attrStr
-                } else if !commitmentName.isEmpty && assignmentName.isEmpty {
-                    sourceLabel?.attributedText = NSAttributedString(string: commitmentName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold),
-                                                                                                          NSAttributedStringKey.foregroundColor : commitment!.color])
-                } else if commitmentName.isEmpty && !assignmentName.isEmpty {
+                } else if !courseName.isEmpty && assignmentName.isEmpty {
+                    sourceLabel?.attributedText = NSAttributedString(string: courseName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold),
+                                                                                                      NSAttributedStringKey.foregroundColor : task.associatedCourse!.color])
+                } else if courseName.isEmpty && !assignmentName.isEmpty {
                     sourceLabel?.attributedText = NSAttributedString(string: assignmentName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14),
                                                                                                           NSAttributedStringKey.foregroundColor : UIColor(white: 0, alpha: 0.5)])
                 }

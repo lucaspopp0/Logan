@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewTaskTableViewController: UITableViewController, UITextViewDelegate, CommitmentPickerDelegate {
+class NewTaskTableViewController: UITableViewController, UITextViewDelegate, CoursePickerDelegate {
 
     let task: Task = Task()
     
@@ -303,7 +303,7 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Com
     
     // MARK: - Commitment picker delegate
     
-    func selectedCommitment(_ commitment: Commitment?, in picker: CommitmentPickerTableViewController) {
+    func selectedCommitment(_ commitment: Commitment?, in picker: CoursePickerTableViewController) {
         guard let commitment = commitment as? (Commitment & CKEnabled)? else { return }
         
         task.commitment = commitment
@@ -321,7 +321,7 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Com
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let commitmentPicker = segue.destination as? CommitmentPickerTableViewController {
+        if let commitmentPicker = segue.destination as? CoursePickerTableViewController {
             commitmentPicker.commitment = task.commitment
             commitmentPicker.delegate = self
             commitmentPicker.updateData()

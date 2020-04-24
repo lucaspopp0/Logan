@@ -75,4 +75,18 @@ class Section: BEObject {
         return blob
     }
     
+    func occursOnDay(_ date: Date) -> Bool {
+        let day = CalendarDay(date: date)
+        
+        guard startDate <= day && day <= endDate
+            else { return false }
+        
+        guard let weekDay = date.weekday, let dayOfWeek = DayOfWeek(rawValue: weekDay), daysOfWeek.contains(dayOfWeek)
+            else { return false }
+        
+        let weeksSinceStart = Int(floor(Double((day.dateValue!.timeIntervalSince1970 - startDate.dateValue!.timeIntervalSince1970)) / (7 * 24 * 60 * 60)))
+        
+        return weeksSinceStart % weeklyRepeat == 0
+    }
+    
 }

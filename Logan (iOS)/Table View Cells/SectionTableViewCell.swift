@@ -8,22 +8,22 @@
 
 import UIKit
 
-class ClassTableViewCell: UITableViewCell {
+class SectionTableViewCell: UITableViewCell {
     
-    var classToDisplay: Section? {
+    var sectionToDisplay: Section? {
         didSet {
             configureCell()
         }
     }
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dayOfWeekIndicator: DayOfWeekIndicator!
     
     func configureCell() {
-        guard let classToDisplay = classToDisplay else { return }
+        guard let sectionToDisplay = sectionToDisplay else { return }
         
-        titleLabel.text = classToDisplay.title
-        dayOfWeekIndicator.daysOfWeek = classToDisplay.daysOfWeek
+        nameLabel.text = sectionToDisplay.name
+        dayOfWeekIndicator.daysOfWeek = sectionToDisplay.daysOfWeek
     }
     
 }

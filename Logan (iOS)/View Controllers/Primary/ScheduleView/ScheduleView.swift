@@ -186,8 +186,8 @@ class ScheduleView: UIView {
         }
         
         for ctd in classesToDisplay {
-            let classView = ClassView()
-            classView.classToDisplay = ctd
+            let classView = SectionView()
+            classView.sectionToDisplay = ctd
             classView.frame.size.width = frame.size.width - 12
             classView.frame.origin.x = 6
             classView.frame.size.height = (roundedHourHeight / 60) * (CGFloat(ClockTime.secondsBetween(ctd.startTime, and: ctd.endTime)) / 60) - 2

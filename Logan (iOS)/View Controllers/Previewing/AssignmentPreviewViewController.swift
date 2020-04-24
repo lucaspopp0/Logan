@@ -24,7 +24,7 @@ class AssignmentPreviewViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var commitmentLabel: UILabel!
+    @IBOutlet weak var courseLabel: UILabel!
     
     @IBOutlet weak var titleView: BetterTextView!
     @IBOutlet weak var descriptionView: BetterTextView!
@@ -52,15 +52,12 @@ class AssignmentPreviewViewController: UIViewController {
         
         let bodyFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
         
-        let commitmentName = assignment.commitment?.longerName ?? ""
-        
-        if commitmentName.isEmpty {
-            commitmentLabel.isHidden = true
+        if let course = assignment.course {
+            courseLabel.isHidden = false
+            courseLabel.attributedText = NSAttributedString(string: course.longerName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold),
+                                                                                                    NSAttributedStringKey.foregroundColor : course.color])
         } else {
-            commitmentLabel.isHidden = false
-            
-            commitmentLabel.attributedText = NSAttributedString(string: commitmentName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold),
-                                                                                                     NSAttributedStringKey.foregroundColor : assignment.commitment!.color])
+            courseLabel.isHidden = true
         }
         
         switch assignment.dueDate {

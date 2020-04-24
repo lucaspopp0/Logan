@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ClassView: EventView {
+class SectionView: EventView {
     
-    var classToDisplay: Section? {
+    var sectionToDisplay: Section? {
         didSet {
-            if let ctd = classToDisplay {
+            if let ctd = sectionToDisplay {
                 title = ctd.course.longerName
-                subtitle = ctd.title
+                subtitle = ctd.name
                 location = ctd.location ?? ""
                 startTime = ctd.startTime
                 endTime = ctd.endTime

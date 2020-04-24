@@ -26,10 +26,7 @@ class CourseTableViewCell: UITableViewCell {
         tintColor = course.color
         
         if descriptorLabel != nil {
-            let name = course.name
-            let descriptor = course.descriptor
-            
-            nameLabel.text = (name.isEmpty ? "Untitled Course" : name)
+            nameLabel.text = course.name
             
             if colorSwatch == nil {
                 descriptorLabel!.textColor = course.color
@@ -37,14 +34,9 @@ class CourseTableViewCell: UITableViewCell {
                 descriptorLabel!.textColor = UIColor.black.withAlphaComponent(0.5)
                 colorSwatch!.colorValue = course.color
             }
-            
-            if descriptor.isEmpty {
-                descriptorLabel!.isHidden = true
-                descriptorLabel!.text = descriptor
-            } else {
-                descriptorLabel!.isHidden = false
-                descriptorLabel!.text = descriptor
-            }
+
+            descriptorLabel!.text = course.descriptor
+            descriptorLabel!.isHidden = course.descriptor == nil || course.descriptor!.isEmpty
         } else {
             nameLabel.text = course.longerName
             nameLabel.textColor = course.color

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +38,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="299" height="40"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nck-oh-CKx" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1" width="299" height="39"/>
+                                                        <rect key="frame" x="0.0" y="0.5" width="299" height="39"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -157,7 +153,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6f-6L-MxV" customClass="BetterTextView" customModule="Logan__iOS_" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1" width="327" height="39"/>
+                                                        <rect key="frame" x="0.0" y="0.5" width="327" height="39"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -248,7 +244,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="300"/>
                     <connections>
-                        <outlet property="commitmentLabel" destination="CVn-fY-KbP" id="iXX-yL-QOP"/>
+                        <outlet property="courseLabel" destination="CVn-fY-KbP" id="iXX-yL-QOP"/>
                         <outlet property="descriptionView" destination="Gf2-tn-A3F" id="S7I-cJ-4to"/>
                         <outlet property="dueDateLabel" destination="Wbv-pH-pYM" id="cGW-OA-kea"/>
                         <outlet property="separatorConstraint" destination="wFd-Eo-bpf" id="Ld7-TQ-MFw"/>

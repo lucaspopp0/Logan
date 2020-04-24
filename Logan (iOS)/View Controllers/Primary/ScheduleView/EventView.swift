@@ -11,25 +11,6 @@ import EventKit
 
 class EventView: UIView {
     
-    var event: Event? = nil {
-        didSet {
-            if let evt = event {
-                title = evt.extracurricular.shorterName
-                subtitle = evt.name
-                location = evt.location ?? ""
-                startTime = evt.startTime
-                endTime = evt.endTime
-                tintColor = evt.extracurricular.color
-            } else {
-                title = ""
-                subtitle = ""
-                location = ""
-            }
-            
-            layoutSubviews()
-        }
-    }
-    
     var calendarEvent: EKEvent? = nil {
         didSet {
             if let evt = calendarEvent {
@@ -101,10 +82,9 @@ class EventView: UIView {
             backgroundColor = tintColor.withAlphaComponent(0.5)
             accent.backgroundColor = tintColor
             
-            timeLabel.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
-            titleLabel.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
-            subtitleLabel.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
-            locationLabel.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
+            for label in [timeLabel, titleLabel, subtitleLabel, locationLabel] {
+                label.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
+            }
         }
     }
     
@@ -148,10 +128,9 @@ class EventView: UIView {
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         
-        timeLabel.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
-        titleLabel.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
-        subtitleLabel.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
-        locationLabel.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
+        for label in [timeLabel, titleLabel, subtitleLabel, locationLabel] {
+            label.textColor = tintColor.blendedWith(percent: 0.4, of: UIColor.black)
+        }
     }
     
     override init(frame: CGRect) {

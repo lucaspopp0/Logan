@@ -10,8 +10,6 @@ import UIKit
 
 class NewSemesterTableViewController: UITableViewController {
     
-    let ssemester = Semester(
-    
     let semester = Semester(name: "", startDate: CalendarDay(date: Date()), endDate: CalendarDay(date: Date()))
 
     @IBOutlet weak var nameField: UITextField!

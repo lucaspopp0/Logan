@@ -31,24 +31,19 @@ class FetchManager {
     private(set) var isRetrying: Bool = false
     private var retryTimer: Timer?
     
-    private var extracurricularFetcher: Fetcher!
-    private var repeatingEventFetcher: Fetcher!
-    private var singleEventFetcher: Fetcher!
     private var semesterFetcher: Fetcher!
     private var courseFetcher: Fetcher!
-    private var classFetcher: Fetcher!
-    private var examFetcher: Fetcher!
+    private var sectionFetcher: Fetcher!
     private var assignmentFetcher: Fetcher!
     private var taskFetcher: Fetcher!
-    private var reminderFetcher: Fetcher!
     
     private var fetchers: [Fetcher] {
         get {
-            return [extracurricularFetcher, repeatingEventFetcher, singleEventFetcher, semesterFetcher, courseFetcher, classFetcher, examFetcher, assignmentFetcher, taskFetcher, reminderFetcher]
+            return semesterFetcher, courseFetcher, sectionFetcher, assignmentFetcher, taskFetcher]
         }
     }
     
-    private var compilationCallback: (([Semester], [Extracurricular], [Assignment], [Task]) -> Void)
+    private var compilationCallback: (([Semester], [Assignment], [Task]) -> Void)
     private var failureCallback: ((Error) -> Void)
     
     var state: FetcherState {
@@ -71,22 +66,17 @@ class FetchManager {
         }
     }
     
-    init(dataManager: DataManager, compilationCallback: @escaping (([Semester], [Extracurricular], [Assignment], [Task]) -> Void), failureCallback: @escaping ((Error) -> Void)) {
+    init(dataManager: DataManager, compilationCallback: @escaping (([Semester], [Assignment], [Task]) -> Void), failureCallback: @escaping ((Error) -> Void)) {
         self.dataManager = dataManager
         
         self.compilationCallback = compilationCallback
         self.failureCallback = failureCallback
         
-        extracurricularFetcher = Fetcher(recordType: "Extracurricular", manager: self)
-        repeatingEventFetcher = Fetcher(recordType: "RepeatingEvent", manager: self)
-        singleEventFetcher = Fetcher(recordType: "SingleEvent", manager: self)
         semesterFetcher = Fetcher(recordType: "Semester", manager: self)
         courseFetcher = Fetcher(recordType: "Course", manager: self)
-        classFetcher = Fetcher(recordType: "Class", manager: self)
-        examFetcher = Fetcher(recordType: "Exam", manager: self)
+        sectionFetcher = Fetcher(recordType: "Class", manager: self)
         assignmentFetcher = Fetcher(recordType: "Assignment", manager: self)
         taskFetcher = Fetcher(recordType: "Task", manager: self)
-        reminderFetcher = Fetcher(recordType: "Reminder", manager: self)
     }
     
     func makeQueries(createdBy creator: CKReference) {
@@ -123,25 +113,15 @@ class FetchManager {
         if state == .done {
             Console.shared.print("Finished fetching data. Compiling records.")
             
-            var events: [Event] = singleEventFetcher.records.map(SingleEvent.init(record:))
-            events.append(contentsOf: repeatingEventFetcher.records.map(RepeatingEvent.init(record:)))
-            
-            let extracurriculars: [Extracurricular] = extracurricularFetcher.records.map { (record) -> Extracurricular in
-                return Extracurricular(record: record, events: events)
-            }
-            
-            let classes: [Section] = classFetcher.records.map(Section.init(record:))
-            let exams: [Exam] = examFetcher.records.map(Exam.init(record:))
+            let sections: [Section] = sectionFetcher.records.map(Section.init(record:))
             
             let courses: [Course] = courseFetcher.records.map { (record) -> Course in
-                return Course(record: record, classes: classes, exams: exams)
+                return Course(record: record, classes: sections, exams: exams)
             }
             
             var semesters: [Semester] = semesterFetcher.records.map { (record) -> Semester in
                 return Semester(record: record, courses: courses)
             }
-            
-            let reminders: [Reminder] = reminderFetcher.records.map(Reminder.init(record:))
             
             let assignments: [Assignment] = assignmentFetcher.records.map { (record) -> Assignment in
                 return Assignment(record: record, reminders: reminders, semesters: semesters, extracurriculars: extracurriculars)
@@ -155,7 +135,7 @@ class FetchManager {
                 return semester1.endDate > semester2.endDate
             }
             
-            compilationCallback(semesters, extracurriculars, assignments, tasks)
+            compilationCallback(semesters, assignments, tasks)
         }
     }
     
