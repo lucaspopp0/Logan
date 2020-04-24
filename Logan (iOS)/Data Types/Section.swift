@@ -71,6 +71,8 @@ class Section: BEObject {
         
         if let location = location { blob["location"] = location }
         if let weeklyRepeat = weeklyRepeat { blob["weeklyRepeat"] = weeklyRepeat }
+        
+        return blob
     }
     
 }

@@ -33,4 +33,23 @@ enum DueDate {
         }
     }
     
+    static func fromString(_ stringValue: String) -> DueDate? {
+        switch stringValue {
+        case "eventually":
+            return .eventually
+        case "asap":
+            return .asap
+        default:
+            break
+        }
+        
+        if let dueDate = CalendarDay(stringValue: stringValue, format: API.DB_DATE_FORMAT) {
+            return .specificDay(day: dueDate)
+        } else if let dueDate = BetterDate(stringValue: stringValue, format: API.DB_DATETIME_FORMAT) {
+            return .specificDeadline(deadline: dueDate)
+        }
+        
+        return nil
+    }
+    
 }

@@ -16,6 +16,10 @@ class BEObject: NSObject {
         self.id = id
     }
     
+    init?(blob: Blob) {
+        return nil
+    }
+    
     func jsonBlob() -> Blob {
         var blob = Blob()
         

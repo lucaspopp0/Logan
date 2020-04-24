@@ -19,12 +19,15 @@ class User: BEObject {
         self.email = email
     }
     
-    convenience init?(blob: Blob) {
-        guard let id = blob["id"] as? String, let name = blob["name"] as? String, let email = blob["email"] as? String else {
-            return nil
-        }
+    override init?(blob: Blob) {
+        guard let id = blob["id"] as? String,
+            let name = blob["name"] as? String,
+            let email = blob["email"] as? String
+            else { return nil }
         
-        self.init(id: id, name: name, email: email)
+        self.id = id
+        self.name = name
+        self.email = email
     }
     
     override func jsonBlob() -> Blob {
