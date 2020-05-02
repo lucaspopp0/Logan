@@ -22,9 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener {
         GIDSignIn.sharedInstance()?.delegate = SignInManager.shared
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
-        UNUserNotificationCenter.current().delegate = NotificationManager.shared
-        NotificationManager.shared.confirmAuthorization()
-        
         DataManager.shared.addListener(self)
         DataManager.shared.attemptInitialDataFetch()
         
@@ -90,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DataManagerListener {
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        DataManager.shared.fetchDataFromCloud()
+        DataManager.shared.fetchData()
     }
     
     // MARK: - DataManagerListener

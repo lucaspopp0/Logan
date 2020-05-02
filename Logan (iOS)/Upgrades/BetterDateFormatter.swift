@@ -165,7 +165,7 @@ class BetterDateFormatter: DateFormatter {
     }
     
     override func string(from date: Date) -> String {
-        let day = date.day
+        let day = date.day!
         super.dateFormat = super.dateFormat.replacingOccurrences(of: "nn", with: "__")
         super.dateFormat = super.dateFormat.replacingOccurrences(of: "NN", with: "--")
         let dateString = super.string(from: date)

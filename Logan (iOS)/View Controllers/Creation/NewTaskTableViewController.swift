@@ -21,7 +21,7 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Cou
     private var dueDateTypeControl: UISegmentedControl!
     private var specificDueDatePicker: BetterDatePicker!
     
-    private var commitmentLabel: UILabel!
+    private var courseLabel: UILabel!
     
     private var priorityControl: PriorityControl!
     
@@ -189,7 +189,7 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Cou
                     nextConvenientDateButton = cell.nextConvenientDateButton
                     specificDueDatePicker = cell.datePicker
                     
-                    if task.commitment == nil {
+                    if task.associatedCourse == nil {
                         nextConvenientDateButton.setTitle("Tomorrow", for: UIControlState.normal)
                     } else {
                         nextConvenientDateButton.setTitle("Before next class", for: UIControlState.normal)
@@ -228,7 +228,7 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Cou
                 
                 return cell
             } else if indexPath.row == 2 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Commitment", for: indexPath)
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Course", for: indexPath)
                 
                 if task.relatedAssignment != nil {
                     cell.accessoryType = UITableViewCellAccessoryType.none
@@ -236,12 +236,9 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Cou
                 }
                 
                 if let label = cell.viewWithTag(1) as? UILabel {
-                    commitmentLabel = label
-                    
-                    let commitment = task.relatedAssignment?.commitment ?? task.commitment ?? nil
-                    
-                    commitmentLabel.text = commitment?.longerName ?? "None"
-                    commitmentLabel.textColor = commitment?.color ?? UIColor.black.withAlphaComponent(0.5)
+                    courseLabel = label
+                    courseLabel.text = task.associatedCourse?.longerName ?? "None"
+                    courseLabel.textColor = task.associatedCourse?.color ?? UIColor.black.withAlphaComponent(0.5)
                 }
                 
                 return cell
@@ -294,23 +291,21 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Cou
             }
         } else if indexPath.section == 1 && indexPath.row == 2 {
             if task.relatedAssignment == nil {
-                self.performSegue(withIdentifier: "Open Commitment Picker", sender: self)
+                self.performSegue(withIdentifier: "Open Course Picker", sender: self)
             }
             
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
-    // MARK: - Commitment picker delegate
+    // MARK: - Course picker delegate
     
-    func selectedCommitment(_ commitment: Commitment?, in picker: CoursePickerTableViewController) {
-        guard let commitment = commitment as? (Commitment & CKEnabled)? else { return }
+    func selectedCourse(_ course: Course?, in picker: CoursePickerTableViewController) {
+        task.course = course
+        courseLabel.text = course?.longerName ?? "None"
+        courseLabel.textColor = course?.color ?? UIColor.black.withAlphaComponent(0.5)
         
-        task.commitment = commitment
-        commitmentLabel.text = (task.relatedAssignment?.commitment ?? task.commitment)?.longerName ?? "None"
-        commitmentLabel.textColor = (task.relatedAssignment?.commitment ?? task.commitment)?.color ?? UIColor.black.withAlphaComponent(0.5)
-        
-        if commitment == nil {
+        if course == nil {
             nextConvenientDateButton.setTitle("Tomorrow", for: UIControlState.normal)
         } else {
             nextConvenientDateButton.setTitle("Before next class", for: UIControlState.normal)
@@ -321,11 +316,10 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Cou
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let commitmentPicker = segue.destination as? CoursePickerTableViewController {
-            commitmentPicker.commitment = task.commitment
-            commitmentPicker.delegate = self
-            commitmentPicker.updateData()
-            commitmentPicker.tableView.reloadData()
+        if let coursePicker = segue.destination as? CoursePickerTableViewController {
+            coursePicker.course = task.course
+            coursePicker.delegate = self
+            coursePicker.tableView.reloadData()
         } else if let assignmentController = segue.destination as? AssignmentTableViewController {
             assignmentController.assignment = task.relatedAssignment
             assignmentController.title = "Related Assignment"

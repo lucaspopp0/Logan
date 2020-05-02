@@ -45,7 +45,7 @@ class AssignmentsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func syncWithCloud(_ sender: Any) {
-        DataManager.shared.fetchDataFromCloud()
+        DataManager.shared.fetchData()
     }
     
     @IBAction func segmentPressed(_ sender: Any) {

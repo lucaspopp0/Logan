@@ -10,7 +10,7 @@ import UIKit
 
 class CommitmentsTableViewController: UITableViewController, DataManagerListener {
     
-    private let data: TableData<CKEnabled> = TableData<CKEnabled>()
+    private let data: TableData<BEObject> = TableData<BEObject>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,16 +34,13 @@ class CommitmentsTableViewController: UITableViewController, DataManagerListener
     }
     
     @IBAction func syncWithCloud(_ sender: Any) {
-        DataManager.shared.fetchDataFromCloud()
+        DataManager.shared.fetchData()
     }
     
-    @IBAction func newCommitment(_ sender: Any?) {
+    @IBAction func newSemester(_ sender: Any?) {
         let sheet = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         sheet.addAction(UIAlertAction(title: "New Semester", style: UIAlertActionStyle.default, handler: { (_) in
             self.performSegue(withIdentifier: "New Semester", sender: self)
-        }))
-        sheet.addAction(UIAlertAction(title: "New Extracurricular", style: UIAlertActionStyle.default, handler: { (_) in
-            self.performSegue(withIdentifier: "New Extracurricular", sender: self)
         }))
         sheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
         
@@ -52,10 +49,6 @@ class CommitmentsTableViewController: UITableViewController, DataManagerListener
     
     func updateData() {
         data.clear()
-        
-        if DataManager.shared.extracurriculars.count > 0 {
-            data.addSection(TableData<CKEnabled>.Section(title: "Extracurricular", items: DataManager.shared.extracurriculars))
-        }
         
         for semester in DataManager.shared.semesters {
             if semester.endDate < CalendarDay(date: Date()) {
@@ -67,7 +60,7 @@ class CommitmentsTableViewController: UITableViewController, DataManagerListener
             }
         }
         
-        let titleOrder = ["Current Academic", "Extracurricular", "Upcoming Academic", "Past Academic"]
+        let titleOrder = ["Current Academic", "Upcoming Academic", "Past Academic"]
         
         data.sections.sort { (section1, section2) -> Bool in
             return titleOrder.index(of: section1.title)! < titleOrder.index(of: section2.title)!
@@ -107,11 +100,6 @@ class CommitmentsTableViewController: UITableViewController, DataManagerListener
             cell.configureCell()
             
             return cell
-        } else if let extracurricular = data.sections[indexPath.section].items[indexPath.row] as? Extracurricular, let cell = tableView.dequeueReusableCell(withIdentifier: "Extracurricular", for: indexPath) as? ExtracurricularTableViewCell {
-            cell.extracurricular = extracurricular
-            cell.configureCell()
-            
-            return cell
         }
         
         return UITableViewCell()
@@ -123,10 +111,6 @@ class CommitmentsTableViewController: UITableViewController, DataManagerListener
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let semesterController = segue.destination as? SemesterTableViewController, let selectedIndexPath = tableView.indexPathForSelectedRow, let semester = data.sections[selectedIndexPath.section].items[selectedIndexPath.row] as? Semester {
             semesterController.semester = semester
-            
-            DataManager.shared.pauseAutoUpdate()
-        } else if let extracurricularController = segue.destination as? ExtracurricularTableViewController, let selectedIndexPath = tableView.indexPathForSelectedRow, let extracurricular = data.sections[selectedIndexPath.section].items[selectedIndexPath.row] as? Extracurricular {
-            extracurricularController.extracurricular = extracurricular
             
             DataManager.shared.pauseAutoUpdate()
         }

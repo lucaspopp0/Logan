@@ -12,7 +12,7 @@ class SectionTableViewController: UITableViewController, DayOfWeekPickerDelegate
     
     var sectionToDisplay: Section!
     
-    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var locationField: UITextField!
     
     @IBOutlet weak var weeklyRepeatLabel: UILabel!
@@ -34,7 +34,7 @@ class SectionTableViewController: UITableViewController, DayOfWeekPickerDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        titleField.text = classToDisplay.title
+        nameField.text = sectionToDisplay.name
         locationField.text = sectionToDisplay.location
         
         startDatePicker.calendarDay = sectionToDisplay.startDate
@@ -64,11 +64,11 @@ class SectionTableViewController: UITableViewController, DayOfWeekPickerDelegate
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        DataManager.shared.update(classToDisplay.record)
+        DataManager.shared.update(sectionToDisplay.record)
     }
     
-    @IBAction func titleUpdated(_ sender: Any) {
-        classToDisplay.title = titleField.text ?? ""
+    @IBAction func nameUpdated(_ sender: Any) {
+        sectionToDisplay.name = nameField.text ?? ""
     }
     
     @IBAction func locationUpdated(_ sender: Any) {

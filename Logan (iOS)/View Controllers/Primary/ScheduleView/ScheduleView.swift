@@ -136,8 +136,7 @@ class ScheduleView: UIView {
             eventViews.removeFirst().removeFromSuperview()
         }
         
-        var classesToDisplay: [Section] = []
-        var eventsToDisplay: [Event] = []
+        var sectionsToDisplay: [Section] = []
         let calendarEventsToDisplay: [EKEvent] = DataManager.shared.events(for: day)
         
         let date = day.dateValue!
@@ -145,16 +144,16 @@ class ScheduleView: UIView {
         
         for semester in DataManager.shared.semesters {
             for course in semester.courses {
-                for potentialClass in course.classes {
-                    if potentialClass.startDate <= day && potentialClass.endDate >= day {
-                        if potentialClass.daysOfWeek.contains(dayOfWeek) {
-                            if potentialClass.weeklyRepeat > 1 {
-                                let weeksPassed = Calendar.autoupdatingCurrent.dateComponents([Calendar.Component.weekOfYear], from: potentialClass.startDate.dateValue!, to: date).weekOfYear!
-                                if weeksPassed % potentialClass.weeklyRepeat == 0 {
-                                    classesToDisplay.append(potentialClass)
+                for potentialSection in course.sections {
+                    if potentialSection.startDate <= day && potentialSection.endDate >= day {
+                        if potentialSection.daysOfWeek.contains(dayOfWeek) {
+                            if potentialSection.weeklyRepeat > 1 {
+                                let weeksPassed = Calendar.autoupdatingCurrent.dateComponents([Calendar.Component.weekOfYear], from: potentialSection.startDate.dateValue!, to: date).weekOfYear!
+                                if weeksPassed % potentialSection.weeklyRepeat == 0 {
+                                    sectionsToDisplay.append(potentialSection)
                                 }
                             } else {
-                                classesToDisplay.append(potentialClass)
+                                sectionsToDisplay.append(potentialSection)
                             }
                         }
                     }
@@ -162,30 +161,7 @@ class ScheduleView: UIView {
             }
         }
         
-        for extracurricular in DataManager.shared.extracurriculars {
-            for event in extracurricular.events {
-                if let repeatingEvent = event as? RepeatingEvent {
-                    if repeatingEvent.startDate <= day && repeatingEvent.endDate >= day {
-                        if repeatingEvent.daysOfWeek.contains(dayOfWeek) {
-                            if repeatingEvent.weeklyRepeat > 1 {
-                                let weeksPassed = Calendar.autoupdatingCurrent.dateComponents([Calendar.Component.weekOfYear], from: repeatingEvent.startDate.dateValue!, to: date).weekOfYear!
-                                if weeksPassed % repeatingEvent.weeklyRepeat == 0 {
-                                    eventsToDisplay.append(repeatingEvent)
-                                }
-                            } else {
-                                eventsToDisplay.append(repeatingEvent)
-                            }
-                        }
-                    }
-                } else if let singleEvent = event as? SingleEvent {
-                    if singleEvent.date == day {
-                        eventsToDisplay.append(singleEvent)
-                    }
-                }
-            }
-        }
-        
-        for ctd in classesToDisplay {
+        for ctd in sectionsToDisplay {
             let classView = SectionView()
             classView.sectionToDisplay = ctd
             classView.frame.size.width = frame.size.width - 12
@@ -196,19 +172,6 @@ class ScheduleView: UIView {
             
             eventViews.append(classView)
             addSubview(classView)
-        }
-        
-        for event in eventsToDisplay {
-            let eventView = EventView()
-            eventView.event = event
-            eventView.frame.size.width = frame.size.width - 12
-            eventView.frame.origin.x = 6
-            eventView.frame.size.height = (roundedHourHeight / 60) * (CGFloat(ClockTime.secondsBetween(event.startTime, and: event.endTime)) / 60) - 2
-            eventView.frame.origin.y = (roundedHourHeight / 60) * (CGFloat(ClockTime.secondsBetween(dayStart, and: event.startTime) ) / 60) + 1
-            eventView.dayOfWeek = dayOfWeek
-            
-            eventViews.append(eventView)
-            addSubview(eventView)
         }
         
         for event in calendarEventsToDisplay {

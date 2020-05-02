@@ -37,7 +37,7 @@ class SemestersTableViewController: UITableViewController, DataManagerListener {
     }
     
     @IBAction func syncWithCloud(_ sender: Any) {
-        DataManager.shared.fetchDataFromCloud()
+        DataManager.shared.fetchData()
     }
     
     func updateData() {

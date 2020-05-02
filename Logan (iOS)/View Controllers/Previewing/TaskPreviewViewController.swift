@@ -18,7 +18,7 @@ class TaskPreviewViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var commitmentLabel: UILabel!
+    @IBOutlet weak var courseLabel: UILabel!
     
     @IBOutlet weak var checkbox: UICheckbox!
     @IBOutlet weak var titleView: BetterTextView!
@@ -40,7 +40,7 @@ class TaskPreviewViewController: UIViewController {
     func configure() {
         checkbox.isOn = task.completed
         checkbox.priority = task.priority
-        checkbox.tintColor = (task.relatedAssignment?.commitment ?? task.commitment)?.color ?? UICheckbox.defaultBorderColor
+        checkbox.tintColor = task.associatedCourse?.color ?? UICheckbox.defaultBorderColor
         
         titleView.text = task.title
         descriptionView.text = task.userDescription
@@ -52,30 +52,39 @@ class TaskPreviewViewController: UIViewController {
         
         let bodyFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
         
-        let commitment = task.relatedAssignment?.commitment ?? task.commitment ?? nil
-        let commitmentName = commitment?.longerName ?? ""
-        let assignmentName = task.relatedAssignment?.title ?? ""
-        
-        if commitmentName.isEmpty && assignmentName.isEmpty {
-            commitmentLabel.isHidden = true
+        if task.associatedCourse == nil && task.relatedAssignment == nil {
+            courseLabel.isHidden = true
         } else {
-            commitmentLabel.isHidden = false
+            courseLabel.isHidden = false
+            var courseString: NSAttributedString?
+            var assignmentString: NSAttributedString?
             
-            if !commitmentName.isEmpty && !assignmentName.isEmpty {
-                let attrStr = NSMutableAttributedString()
-                attrStr.append(NSAttributedString(string: commitmentName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold),
-                                                                                       NSAttributedStringKey.foregroundColor : commitment!.color]))
-                attrStr.append(NSAttributedString(string: "\u{2009}/\u{2009}\(assignmentName)", attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15),
-                                                                                                             NSAttributedStringKey.foregroundColor : UIColor(white: 0, alpha: 0.5)]))
-                
-                commitmentLabel.attributedText = attrStr
-            } else if !commitmentName.isEmpty && assignmentName.isEmpty {
-                commitmentLabel.attributedText = NSAttributedString(string: commitmentName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold),
-                                                                                                         NSAttributedStringKey.foregroundColor : commitment!.color])
-            } else if commitmentName.isEmpty && !assignmentName.isEmpty {
-                commitmentLabel.attributedText = NSAttributedString(string: assignmentName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15),
-                                                                                                         NSAttributedStringKey.foregroundColor : UIColor(white: 0, alpha: 0.5)])
+            if let course = task.associatedCourse {
+                courseString = NSAttributedString(string: course.name, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold),
+                                                                                    NSAttributedStringKey.foregroundColor: course.color])
             }
+            
+            if let assignment = task.relatedAssignment {
+                assignmentString = NSAttributedString(string: assignment.title, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15),
+                                                                                             NSAttributedStringKey.foregroundColor: UIColor(white: 0, alpha: 0.5)])
+            }
+            
+            let str = NSMutableAttributedString()
+            
+            if let courseString = courseString {
+                str.append(courseString)
+            }
+            
+            if courseString != nil && assignmentString != nil {
+                str.append(NSAttributedString(string: "\u{2009}/\u{2009}", attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15),
+                                                                                        NSAttributedStringKey.foregroundColor : UIColor(white: 0, alpha: 0.5)]))
+            }
+            
+            if let assignmentString = assignmentString {
+                str.append(assignmentString)
+            }
+            
+            courseLabel.attributedText = str
         }
         
         switch task.dueDate {
@@ -104,24 +113,27 @@ class TaskPreviewViewController: UIViewController {
             break
         }
         
+        var priorityString = ""
         switch task.priority {
+        case .reallyLow:
+            priorityString = "Really low"
+            break
         case .low:
-            attributedPriority = NSAttributedString(string: "Low", attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: bodyFont.pointSize),
-                                                                                NSAttributedStringKey.foregroundColor : task.priority.textColor])
+            priorityString = "Low"
             break
         case .normal:
-            attributedPriority = NSAttributedString(string: "Normal", attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: bodyFont.pointSize),
-                                                                                   NSAttributedStringKey.foregroundColor : task.priority.textColor])
+            priorityString = "Normal"
             break
         case .high:
-            attributedPriority = NSAttributedString(string: "High", attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: bodyFont.pointSize),
-                                                                                 NSAttributedStringKey.foregroundColor : task.priority.textColor])
+            priorityString = "High"
             break
         case .reallyHigh:
-            attributedPriority = NSAttributedString(string: "Really high", attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: bodyFont.pointSize),
-                                                                                        NSAttributedStringKey.foregroundColor : task.priority.textColor])
+            priorityString = "Really high"
             break
         }
+        
+        priorityLabel.attributedText = NSAttributedString(string: priorityString, attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: bodyFont.pointSize),
+                                                                                               NSAttributedStringKey.foregroundColor : task.priority.textColor])
         
         let mutableDueDate = NSMutableAttributedString(string: "Do: ", attributes: [NSAttributedStringKey.font : bodyFont,
                                                                                     NSAttributedStringKey.foregroundColor : UIColor.black.withAlphaComponent(0.5)])

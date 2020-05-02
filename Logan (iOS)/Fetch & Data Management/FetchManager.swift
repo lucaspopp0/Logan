@@ -39,7 +39,7 @@ class FetchManager {
     
     private var fetchers: [Fetcher] {
         get {
-            return semesterFetcher, courseFetcher, sectionFetcher, assignmentFetcher, taskFetcher]
+            return [semesterFetcher, courseFetcher, sectionFetcher, assignmentFetcher, taskFetcher]
         }
     }
     

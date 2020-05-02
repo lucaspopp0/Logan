@@ -66,7 +66,7 @@ class TasksWidgetViewController: UIViewController, NCWidgetProviding, RowViewDel
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        DataManager.shared.fetchDataFromCloud()
+        DataManager.shared.fetchData()
         
         completionHandler(NCUpdateResult.newData)
     }

@@ -118,7 +118,7 @@
                     <size key="freeformSize" width="375" height="300"/>
                     <connections>
                         <outlet property="checkbox" destination="eqs-XJ-c9N" id="D1s-br-VVR"/>
-                        <outlet property="commitmentLabel" destination="Zh0-IS-WYp" id="5l2-Wm-8uf"/>
+                        <outlet property="courseLabel" destination="Zh0-IS-WYp" id="5l2-Wm-8uf"/>
                         <outlet property="descriptionView" destination="ccT-Vz-gJ4" id="wGH-dy-RJv"/>
                         <outlet property="dueDateLabel" destination="esM-d9-SZX" id="RJz-pG-cYk"/>
                         <outlet property="priorityLabel" destination="tzv-QR-iJ7" id="7AY-hn-FWG"/>

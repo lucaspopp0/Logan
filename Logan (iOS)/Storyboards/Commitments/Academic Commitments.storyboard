@@ -9,20 +9,20 @@
         <scene sceneID="DVi-gh-khx">
             <objects>
                 <tableViewController storyboardIdentifier="Semester Detail" title="Semester" hidesBottomBarWhenPushed="YES" id="1kt-VS-kif" customClass="SemesterTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="eJw-5Y-43L">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="eJw-5Y-43L">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Name" id="yyy-to-Kfa">
-                                <rect key="frame" x="0.0" y="55.5" width="600" height="58.5"/>
+                                <rect key="frame" x="0.0" y="55.5" width="600" height="59.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yyy-to-Kfa" id="LJ9-q4-fZ9">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="58.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKi-8m-Zkm">
-                                            <rect key="frame" x="20" y="12" width="560" height="34.5"/>
+                                            <rect key="frame" x="20" y="12" width="560" height="35.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             <connections>
@@ -39,7 +39,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Boundary" rowHeight="157" id="qCu-sl-obP" customClass="PickerTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="600" height="157"/>
+                                <rect key="frame" x="0.0" y="115" width="600" height="157"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qCu-sl-obP" id="Ah2-81-UKl">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="157"/>
@@ -85,7 +85,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Course" rowHeight="67" id="iwr-pW-Los" customClass="CourseTableViewCell" customModule="Logan__iOS_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="271" width="600" height="67"/>
+                                <rect key="frame" x="0.0" y="272" width="600" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iwr-pW-Los" id="oDW-Md-9NF">
                                     <rect key="frame" x="0.0" y="0.0" width="569" height="67"/>
@@ -134,7 +134,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Course" textLabel="aqU-WY-SPV" style="IBUITableViewCellStyleDefault" id="lcr-Os-kNL">
-                                <rect key="frame" x="0.0" y="338" width="600" height="43.5"/>
+                                <rect key="frame" x="0.0" y="339" width="600" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lcr-Os-kNL" id="DNJ-nZ-PBJ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -154,7 +154,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Delete Semester" textLabel="e8D-LL-hdU" style="IBUITableViewCellStyleDefault" id="avB-J6-XgQ">
-                                <rect key="frame" x="0.0" y="381.5" width="600" height="43.5"/>
+                                <rect key="frame" x="0.0" y="382.5" width="600" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="avB-J6-XgQ" id="Wtv-eI-Cjp">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -204,7 +204,7 @@
         <scene sceneID="8qy-LB-CUr">
             <objects>
                 <tableViewController storyboardIdentifier="Course Detail" title="Course" id="7Kx-m2-hwT" customClass="CourseTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="da2-ya-ikg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="da2-ya-ikg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -491,8 +491,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
-                                                        <action selector="titleUpdated:" destination="luV-qa-uYZ" eventType="valueChanged" id="8Gq-rw-7hZ"/>
-                                                        <action selector="titleUpdated:" destination="luV-qa-uYZ" eventType="editingChanged" id="ZZ8-7Q-ueH"/>
+                                                        <action selector="nameUpdated:" destination="luV-qa-uYZ" eventType="valueChanged" id="8Gq-rw-7hZ"/>
+                                                        <action selector="nameUpdated:" destination="luV-qa-uYZ" eventType="editingChanged" id="ZZ8-7Q-ueH"/>
                                                         <outlet property="delegate" destination="luV-qa-uYZ" id="YRz-J9-XHj"/>
                                                     </connections>
                                                 </textField>
@@ -805,11 +805,11 @@
                         <outlet property="endTimeLabel" destination="5j0-Ic-DpR" id="HzW-cz-Muj"/>
                         <outlet property="endTimePicker" destination="q3o-xO-BWs" id="YwQ-rO-3T5"/>
                         <outlet property="locationField" destination="FA1-xk-TFr" id="sHZ-JE-cQt"/>
+                        <outlet property="nameField" destination="9ci-NN-myK" id="8hd-rI-8yz"/>
                         <outlet property="startDateLabel" destination="jV4-pL-Woe" id="TtS-QV-llG"/>
                         <outlet property="startDatePicker" destination="Osq-Dl-ZOa" id="S6w-t7-9oz"/>
                         <outlet property="startTimeLabel" destination="kPu-qq-6OF" id="Mfx-l5-yb7"/>
                         <outlet property="startTimePicker" destination="61J-ep-Mjt" id="d8i-WH-xG6"/>
-                        <outlet property="titleField" destination="9ci-NN-myK" id="8hd-rI-8yz"/>
                         <outlet property="weeklyRepeatLabel" destination="Sz2-re-A6z" id="PVG-fj-ouX"/>
                         <outlet property="weeklyRepeatStepper" destination="hQk-ss-vYT" id="LtC-UN-4kI"/>
                     </connections>
@@ -848,7 +848,7 @@
         <scene sceneID="Sn8-q6-Szh">
             <objects>
                 <tableViewController storyboardIdentifier="New Semester Detail" title="New Semester" id="Ji7-cI-lB5" customClass="NewSemesterTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="aIJ-kv-WCl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="aIJ-kv-WCl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1553,7 +1553,7 @@
         <scene sceneID="rjA-fe-JDo">
             <objects>
                 <tableViewController id="Hqv-Xu-kgq" customClass="ExamTableViewController" customModule="Logan__iOS_" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="JeI-Ph-b7r">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="JeI-Ph-b7r">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

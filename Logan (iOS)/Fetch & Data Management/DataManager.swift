@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CloudKit
 import EventKit
 import UIKit.UIColor
 
@@ -124,36 +123,36 @@ class DataManager: NSObject {
         // MARK: - EventKit stuff
         checkCalendarAuthorization()
         
-//        fetchManager = FetchManager(dataManager: self, compilationCallback: { (semesters, extracurriculars, assignments, tasks) in
-//            self.semesters = semesters
-//            self.extracurriculars = extracurriculars
-//            self.assignments = assignments
-//            self.tasks = tasks
-//
-//            NotificationManager.shared.scheduleAllReminders()
-//
-//            self.determineCurrentSemester()
-//            self.currentCloudStatus = .ready
-//            self.sendEventToListeners(.end)
-//        }, failureCallback: { (error) in
-//            self.currentCloudStatus = .error
-//            self.sendEventToListeners(.error, error: error)
-//
-//            if let cloudError = error as? CKError {
-//                if cloudError.errorCode == 3 {
-//                    Console.shared.print("CKError 3: Network error.")
-//                } else if cloudError.code == CKError.Code.requestRateLimited {
-//                    Console.shared.print("Request rate limited. Max retries reached.")
-//                } else {
-//                    Console.shared.print(cloudError.localizedDescription)
-//                }
-//            } else {
-//                Console.shared.print(error.localizedDescription)
-//            }
-//        })
+        fetchManager = FetchManager(dataManager: self, compilationCallback: { (semesters, extracurriculars, assignments, tasks) in
+            self.semesters = semesters
+            self.extracurriculars = extracurriculars
+            self.assignments = assignments
+            self.tasks = tasks
+
+            NotificationManager.shared.scheduleAllReminders()
+
+            self.determineCurrentSemester()
+            self.currentCloudStatus = .ready
+            self.sendEventToListeners(.end)
+        }, failureCallback: { (error) in
+            self.currentCloudStatus = .error
+            self.sendEventToListeners(.error, error: error)
+
+            if let cloudError = error as? CKError {
+                if cloudError.errorCode == 3 {
+                    Console.shared.print("CKError 3: Network error.")
+                } else if cloudError.code == CKError.Code.requestRateLimited {
+                    Console.shared.print("Request rate limited. Max retries reached.")
+                } else {
+                    Console.shared.print(cloudError.localizedDescription)
+                }
+            } else {
+                Console.shared.print(error.localizedDescription)
+            }
+        })
         
         updateTimer = UpdateTimer(timeInterval: 60, completionBlock: { (info) in
-            self.fetchDataFromCloud()
+            self.fetchData()
         })
     }
     
@@ -296,7 +295,7 @@ class DataManager: NSObject {
 //        tasks.append(taskWithNoCourse)
     }
     
-    @objc func fetchDataFromCloud() {
+    @objc func fetchData() {
         if currentConnectionStatus == .fetching || isSavingData { return }
         
         if UIDevice.current.isSimulator && shouldGenerateFakeData {
