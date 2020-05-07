@@ -8,6 +8,7 @@
 
 import Foundation
 import EventKit
+import CloudKit
 import UIKit.UIColor
 
 // A protocol to be implemented that allows subscribing to the loading events of a particular data manager
@@ -311,6 +312,61 @@ class DataManager: NSObject {
         
         dataCompiled = false
         fetchFailed = false
+        
+        var semesters: [Semester] = []
+        
+        // Fetch semesters and all that first
+        API.shared.getSemesters { (beSemesters) in
+            guard let beSemesters = beSemesters else { return print("Error fetching semesters") }
+            
+            API.shared.getCourses { (beCourseMap) in
+                guard let beCourseMap = beCourseMap else { return print("Error fetching courses") }
+                
+                API.shared.getSections { (beSectionMap) in
+                    guard let beSectionMap = beSectionMap else { return print("Error fetching sections") }
+                    
+                    // Loop through semester blobs
+                    for semesterBlob in beSemesters {
+                        guard let semester = Semester(blob: semesterBlob) else {
+                            print("Error parsing semester")
+                            continue
+                        }
+                        
+                        semesters.append(semester)
+                        
+                        // Loop through all SIDs
+                        for sid in beCourseMap.keys {
+                            if sid == semester.id {
+                                // If match, loop through all course blobs
+                                for courseBlob in beCourseMap[sid]! {
+                                    guard let course = Course(blob: courseBlob) else {
+                                        print("Error parsing course")
+                                        continue
+                                    }
+                                    
+                                    semester.courses.append(course)
+                                    course.semester = semester
+                                    
+                                    for cid in beSectionMap.keys {
+                                        if cid == course.id {
+                                            for sectionBlob in beSectionMap[cid]! {
+                                                guard let section = Section(blob: sectionBlob) else {
+                                                    print("Error parsing section")
+                                                    continue
+                                                }
+                                                
+                                                course.sections.append(section)
+                                                section.course = course
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         
         Console.shared.print("Fetching data from iCloud.")
         privateContainer.fetchUserRecordID(completionHandler: { (userRecordID, userRecordError) in
