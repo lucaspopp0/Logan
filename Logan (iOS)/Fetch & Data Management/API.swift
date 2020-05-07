@@ -103,9 +103,9 @@ class API: NSObject {
     }
     
     private func basicGet<T>(endpoint: String, _ completion: @escaping (T?) -> Void) {
-        guard let task = httpTask(method: .GET, path: endpoint, { (request, data, httpResponse, error) in
-            if let error = error {
-                self.perror(request, error.localizedDescription)
+        guard let task = httpTask(method: .GET, path: endpoint, { (request, data, httpResponse, responseError) in
+            if let responseError = responseError {
+                self.perror(request, responseError.localizedDescription)
                 return completion(nil)
             }
             
@@ -114,14 +114,96 @@ class API: NSObject {
                 return completion(nil)
             }
             
-            if let response = (try? JSONSerialization.jsonObject(with: data, options: [])) as? T {
-                return completion(response)
-            } else {
-                self.perror(request, "Improper response format")
+            do {
+                if let response = (try JSONSerialization.jsonObject(with: data, options: [])) as? T {
+                    return completion(response)
+                } else {
+                    self.perror(request, "Bad response format")
+                    return completion(nil)
+                }
+            } catch {
+                self.perror(request, "Bad response format: \(error.localizedDescription)")
                 return completion(nil)
             }
         }) else {
             return completion(nil)
+        }
+        
+        task.resume()
+    }
+    
+    private func basicSend<T: BEObject>(method: HTTPMethod, _ item: T, endpoint: String, requiredKey: String?, _ completion: @escaping (Bool, Blob?) -> Void) {
+        var body: Data!
+        
+        do {
+            body = try JSONSerialization.data(withJSONObject: item.jsonBlob())
+        } catch {
+            print("JSON serialization error: \(error.localizedDescription)")
+            return completion(false, nil)
+        }
+        
+        guard let task = httpTask(method: method, path: endpoint, body: body, { (requestData, responseData, urlResponse, requestError) in
+            if let requestError = requestError {
+                self.perror(requestData, requestError.localizedDescription)
+                return completion(false, nil)
+            }
+            
+            guard let data = responseData else {
+                self.perror(requestData, "No response data")
+                return completion(false, nil)
+            }
+            
+            do {
+                if let response = (try JSONSerialization.jsonObject(with: data, options: [])) as? Blob {
+                    if requiredKey == nil || response[requiredKey!] as? String != nil {
+                        return completion(true, response)
+                    } else {
+                        self.perror(requestData, "Response missing required key \(requiredKey!)")
+                        return completion(false, response)
+                    }
+                } else {
+                    self.perror(requestData, "Could not convert response to blob")
+                    return completion(false, nil)
+                }
+            } catch {
+                self.perror(requestData, "Bad response format: \(error.localizedDescription)")
+                return completion(false, nil)
+            }
+        }) else {
+            return completion(false, nil)
+        }
+        
+        task.resume()
+    }
+    
+    private func basicPost<T: BEObject>(_ item: T, endpoint: String, requiredKey: String?, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicSend(method: .POST, item, endpoint: endpoint, requiredKey: requiredKey, completion)
+    }
+    
+    private func basicPut<T: BEObject>(_ item: T, endpoint: String, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicSend(method: .PUT, item, endpoint: endpoint, requiredKey: nil, completion)
+    }
+    
+    private func basicDelete<T: BEObject>(_ item: T, endpoint: String, _ completion: @escaping (Bool) -> Void) {
+        var body: Data!
+        
+        do {
+            body = try JSONSerialization.data(withJSONObject: item.jsonBlob())
+        } catch {
+            print("JSON serialization error: \(error.localizedDescription)")
+            return completion(false)
+        }
+        
+        guard let task = httpTask(method: .DELETE, path: endpoint, body: body, { (requestData, responseData, urlResponse, requestError) in
+            if let requestError = requestError {
+                self.perror(requestData, requestError.localizedDescription)
+                return completion(false)
+            }
+            
+            // TODO: Should we be checking if responseData deserializes to an empty string here?
+            return completion(true)
+        }) else {
+            return completion(false)
         }
         
         task.resume()
@@ -199,24 +281,89 @@ class API: NSObject {
         task.resume()
     }
     
+    // MARK: Semessters
     func getSemesters(_ completion: @escaping ([Blob]?) -> Void) {
         basicGet(endpoint: "/semesters", completion)
     }
     
+    func addSemester(_ semester: Semester, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPost(semester, endpoint: "/semesters", requiredKey: "sid", completion)
+    }
+    
+    func updateSemester(_ semester: Semester, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPut(semester, endpoint: "/semesters", completion)
+    }
+    
+    func deleteSemester(_ semester: Semester, _ completion: @escaping (Bool) -> Void) {
+        basicDelete(semester, endpoint: "/semesters", completion)
+    }
+    
+    // MARK: Courses
     func getCourses(_ completion: @escaping ([String: [Blob]]?) -> Void) {
         basicGet(endpoint: "/courses", completion)
     }
     
+    func addCourse(_ course: Course, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPost(course, endpoint: "/courses", requiredKey: "cid", completion)
+    }
+    
+    func updateCourse(_ course: Course, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPut(course, endpoint: "/courses", completion)
+    }
+    
+    func deleteCourse(_ course: Course, _ completion: @escaping (Bool) -> Void) {
+        basicDelete(course, endpoint: "/courses", completion)
+    }
+    
+    // MARK: Sections
     func getSections(_ completion: @escaping ([String: [Blob]]?) -> Void) {
         basicGet(endpoint: "/sections", completion)
     }
     
+    func addSection(_ section: Section, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPost(section, endpoint: "/sections", requiredKey: "secid", completion)
+    }
+    
+    func updateSection(_ section: Section, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPut(section, endpoint: "/sections", completion)
+    }
+    
+    func deleteSection(_ section: Section, _ completion: @escaping (Bool) -> Void) {
+        basicDelete(section, endpoint: "/sections", completion)
+    }
+    
+    // MARK: Assignments
     func getAssignments(_ completion: @escaping ([Blob]?) -> Void) {
         basicGet(endpoint: "/assignments", completion)
     }
     
+    func addAssignment(_ assignment: Assignment, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPost(assignment, endpoint: "/assignments", requiredKey: "aid", completion)
+    }
+    
+    func updateAssignment(_ assignment: Assignment, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPut(assignment, endpoint: "/assignments", completion)
+    }
+    
+    func deleteAssignment(_ assignment: Assignment, _ completion: @escaping (Bool) -> Void) {
+        basicDelete(assignment, endpoint: "/assignments", completion)
+    }
+    
+    // MARK: Tasks
     func getTasks(_ completion: @escaping ([Blob]?) -> Void) {
         basicGet(endpoint: "/tasks", completion)
+    }
+    
+    func addTask(_ task: Task, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPost(task, endpoint: "/tasks", requiredKey: "tid", completion)
+    }
+    
+    func updateTask(_ task: Task, _ completion: @escaping (Bool, Blob?) -> Void) {
+        basicPut(task, endpoint: "/tasks", completion)
+    }
+    
+    func deleteTask(_ task: Task, _ completion: @escaping (Bool) -> Void) {
+        basicDelete(task, endpoint: "/tasks", completion)
     }
     
 }

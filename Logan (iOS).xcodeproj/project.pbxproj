@@ -46,7 +46,6 @@
 		A0456ECE2103F0A500A249C2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0456ECD2103F0A500A249C2 /* SettingsTableViewController.swift */; };
 		A04A20E120373452001752FB /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20E020373452001752FB /* SectionTableViewCell.swift */; };
 		A04A20E320373605001752FB /* DayOfWeekIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20E220373605001752FB /* DayOfWeekIndicator.swift */; };
-		A04A20EB2037493D001752FB /* ClassPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A20EA2037493D001752FB /* ClassPicker.swift */; };
 		A04A7C9C210931F50042B86A /* ConsoleOutputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A7C9B210931F50042B86A /* ConsoleOutputTableViewCell.swift */; };
 		A04A7C9E210932480042B86A /* ConsoleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A7C9D210932480042B86A /* ConsoleTableViewController.swift */; };
 		A04A93BB205346510027D1B6 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04A93BA205346510027D1B6 /* Welcome.storyboard */; };
@@ -138,6 +137,7 @@
 		A094A812203F727C00B0814D /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A811203F727C00B0814D /* FetchManager.swift */; };
 		A094A813203F72AF00B0814D /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A811203F727C00B0814D /* FetchManager.swift */; };
 		A094A814203F72AF00B0814D /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094A811203F727C00B0814D /* FetchManager.swift */; };
+		A09EFBE32464AAC60068C21C /* CreationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EFBE22464AAC60068C21C /* CreationController.swift */; };
 		A0A27DB5200BED1E008E81A7 /* NewSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A27DB4200BED1E008E81A7 /* NewSectionTableViewController.swift */; };
 		A0A27DB7200C1ADC008E81A7 /* AssignmentDueDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A27DB6200C1ADC008E81A7 /* AssignmentDueDateTableViewCell.swift */; };
 		A0AA09452448F265004E4ED6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22FEF20009C6400E32CC2 /* DataManager.swift */; };
@@ -243,7 +243,6 @@
 		A0456ECD2103F0A500A249C2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		A04A20E020373452001752FB /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
 		A04A20E220373605001752FB /* DayOfWeekIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeekIndicator.swift; sourceTree = "<group>"; };
-		A04A20EA2037493D001752FB /* ClassPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPicker.swift; sourceTree = "<group>"; };
 		A04A7C9B210931F50042B86A /* ConsoleOutputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleOutputTableViewCell.swift; sourceTree = "<group>"; };
 		A04A7C9D210932480042B86A /* ConsoleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleTableViewController.swift; sourceTree = "<group>"; };
 		A04A93BA205346510027D1B6 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
@@ -284,6 +283,7 @@
 		A093A3D3205732CE006FD393 /* Academic Commitments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Academic Commitments.storyboard"; sourceTree = "<group>"; };
 		A093A3D5205732D9006FD393 /* Extracurricular Commitments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Extracurricular Commitments.storyboard"; sourceTree = "<group>"; };
 		A094A811203F727C00B0814D /* FetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
+		A09EFBE22464AAC60068C21C /* CreationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationController.swift; sourceTree = "<group>"; };
 		A0A27DB4200BED1E008E81A7 /* NewSectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSectionTableViewController.swift; sourceTree = "<group>"; };
 		A0A27DB6200C1ADC008E81A7 /* AssignmentDueDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentDueDateTableViewCell.swift; sourceTree = "<group>"; };
 		A0AA09472448F333004E4ED6 /* SignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInManager.swift; sourceTree = "<group>"; };
@@ -418,6 +418,7 @@
 		A02B340C2006DD5E008344E1 /* Creation */ = {
 			isa = PBXGroup;
 			children = (
+				A09EFBE22464AAC60068C21C /* CreationController.swift */,
 				A02B342220082B5D008344E1 /* NewSemesterTableViewController.swift */,
 				A02B3424200832F5008344E1 /* NewCourseTableViewController.swift */,
 				A0A27DB4200BED1E008E81A7 /* NewSectionTableViewController.swift */,
@@ -674,7 +675,6 @@
 				A0283F07200576A100CE2843 /* UIColorSwatch.swift */,
 				A0283F0B20057CCF00CE2843 /* UIColorPicker.swift */,
 				A0919A4A200367640065796C /* BetterDatePicker.swift */,
-				A04A20EA2037493D001752FB /* ClassPicker.swift */,
 				A0283EF720042B3100CE2843 /* PriorityControl.swift */,
 				A05FED7B20264C0D00086091 /* PriorityIndicator.swift */,
 				A04A20E220373605001752FB /* DayOfWeekIndicator.swift */,
@@ -1070,7 +1070,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A04A20EB2037493D001752FB /* ClassPicker.swift in Sources */,
 				A04A93E220534B390027D1B6 /* WelcomeViewController.swift in Sources */,
 				A0DD4BDB200E631E008441FC /* ScheduleTableViewController.swift in Sources */,
 				A0283F0E2005B1B400CE2843 /* NewTaskTableViewController.swift in Sources */,
@@ -1082,6 +1081,7 @@
 				A0E4F9AF2001CC42007E2399 /* SemesterTableViewController.swift in Sources */,
 				A04A93DF205347C50027D1B6 /* InitialViewController.swift in Sources */,
 				A0F230002000ADDE00E32CC2 /* SemestersTableViewController.swift in Sources */,
+				A09EFBE32464AAC60068C21C /* CreationController.swift in Sources */,
 				A03133A82020DA77008E96A9 /* IntervalTimer.swift in Sources */,
 				A0F22FE720009B2700E32CC2 /* DueDate.swift in Sources */,
 				A0919A3F2001DBCA0065796C /* AssignmentsViewController.swift in Sources */,
@@ -1203,6 +1203,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = Tasks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1222,6 +1223,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = Tasks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1240,6 +1242,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = Schedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS.Schedule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1257,6 +1260,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = Schedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS.Schedule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1388,7 +1392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = "Logan (iOS)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1409,7 +1413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HH8Y725ZS;
 				INFOPLIST_FILE = "Logan (iOS)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ppopsacul.Logan-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
