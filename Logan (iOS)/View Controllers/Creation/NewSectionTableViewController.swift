@@ -8,10 +8,10 @@
 
 import UIKit
 
-class NewSectionTableViewController: UITableViewController, DayOfWeekPickerDelegate {
+class NewSectionTableViewController: CreationController, DayOfWeekPickerDelegate {
     
     var correspondingCourse: Course!
-    var newSection: Section = Section()
+    var newSection: Section!
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var locationField: UITextField!
@@ -32,24 +32,22 @@ class NewSectionTableViewController: UITableViewController, DayOfWeekPickerDeleg
     @IBOutlet weak var weeklyRepeatStepper: UIStepper!
     @IBOutlet weak var daysOfWeekLabel: UILabel!
     
-    private var alreadyOpened: Bool = false
+    func setupInitialData() {
+        let startDate = CalendarDay(date: correspondingCourse.semester.startDate.dateValue!)
+        let endDate = CalendarDay(date: correspondingCourse.semester.endDate.dateValue!)
+        let startTime = ClockTime.now
+        let endTime = ClockTime.now
+        
+        newSection = Section(id: "newsection", name: "", startDate: startDate, startTime: startTime, endDate: endDate, endTime: endTime, daysOfWeek: [], location: nil, weeklyRepeat: 1, course: correspondingCourse)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if !alreadyOpened {
-            nameField.becomeFirstResponder()
+            alreadyOpened = true
             
-            for semester in DataManager.shared.semesters {
-                if semester.courses.contains(correspondingCourse) {
-                    newSection.startDate = semester.startDate
-                    newSection.endDate = semester.endDate
-                    
-                    newSection.startTime = ClockTime(date: Date())
-                    newSection.endTime = ClockTime(date: Date())
-                    break
-                }
-            }
+            nameField.becomeFirstResponder()
             
             startDatePicker.calendarDay = newSection.startDate
             startDateLabel.text = BetterDateFormatter.autoFormatDate(newSection.startDate.dateValue!)
@@ -73,27 +71,35 @@ class NewSectionTableViewController: UITableViewController, DayOfWeekPickerDeleg
             }
             
             daysOfWeekLabel.text = daysOfWeekString.joined(separator: "/")
-            
-            alreadyOpened = true
         }
     }
     
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction override func done(_ sender: Any) {
+        super.done(sender)
+        
         view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func done(_ sender: Any) {
+        nameField.isEnabled = false
+        locationField.isEnabled = false
+        startDatePicker.isEnabled = false
+        endDatePicker.isEnabled = false
+        startTimePicker.isEnabled = false
+        endTimePicker.isEnabled = false
+        weeklyRepeatStepper.isEnabled = false
+        
         newSection.name = nameField.text ?? ""
         newSection.location = locationField.text
         
-        correspondingCourse.sections.append(newSection)
-        
-        DataManager.shared.introduce(newSection.record)
-        DataManager.shared.update(correspondingCourse.record)
-        
-        view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
+        API.shared.addSection(newSection) { (success, blob) in
+            if success {
+                self.newSection.id = blob!["secid"] as! String
+                self.correspondingCourse.sections.append(self.newSection)
+            } else {
+                print("Error creating section")
+                // TODO: Alert user of error
+            }
+            
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func dateUpdated(_ sender: Any) {

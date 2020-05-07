@@ -8,9 +8,9 @@
 
 import UIKit
 
-class NewTaskTableViewController: UITableViewController, UITextViewDelegate, CoursePickerDelegate {
+class NewTaskTableViewController: CreationController, UITextViewDelegate, CoursePickerDelegate {
 
-    let task: Task = Task()
+    let task = Task(id: "newtask", title: "")!
     
     private var checkbox: UICheckbox!
     private var titleView: UITextView!
@@ -25,22 +25,31 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Cou
     
     private var priorityControl: PriorityControl!
     
-    private var alreadyLoaded: Bool = false
-    
-    @IBAction func cancel(_ sender: Any) {
-        view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func done(_ sender: Any) {
-        DataManager.shared.tasks.append(task)
-        DataManager.shared.introduce(task.record)
-        
-        InterfaceManager.shared.tasksController.updateData()
-        InterfaceManager.shared.tasksController.tableView.reloadData()
+    @IBAction override func done(_ sender: Any) {
+        super.done(sender)
         
         view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
+        checkbox.isEnabled = false
+        titleView.isEditable = false
+        descriptionView.isEditable = false
+        nextConvenientDateButton.isEnabled = false
+        dueDateTypeControl.isEnabled = false
+        specificDueDatePicker.isEnabled = false
+        priorityControl.isEnabled = false
+        
+        API.shared.addTask(task) { (success, blob) in
+            if success {
+                self.task.id = blob!["tid"] as! String
+                DataManager.shared.tasks.append(self.task)
+                InterfaceManager.shared.tasksController.updateData()
+                InterfaceManager.shared.tasksController.tableView.reloadData()
+            } else {
+                print("Error creating new task")
+                // TODO: Inform user
+            }
+            
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     private func updateDueDateText() {
@@ -164,8 +173,8 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Cou
                     titleView = textView
                     titleView.text = task.title
                     
-                    if !alreadyLoaded {
-                        alreadyLoaded = true
+                    if !alreadyOpened {
+                        alreadyOpened = true
                         titleView.becomeFirstResponder()
                     }
                 }
@@ -279,6 +288,8 @@ class NewTaskTableViewController: UITableViewController, UITextViewDelegate, Cou
         if indexPath.section != 0 {
             tableView.endEditing(true)
         }
+        
+        if isSending { return }
         
         if indexPath.section == 1 && indexPath.row == 0 {
             tableView.beginUpdates()

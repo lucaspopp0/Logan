@@ -8,15 +8,19 @@
 
 import UIKit
 
-class NewCourseTableViewController: UITableViewController {
+class NewCourseTableViewController: CreationController {
 
     var correspondingSemester: Semester!
-    var course: Course = Course()
+    var course: Course!
     
     @IBOutlet weak var nameView: UITextView!
     @IBOutlet weak var nicknameView: UITextView!
     @IBOutlet weak var descriptorField: UITextField!
     @IBOutlet weak var colorPicker: UIColorPicker!
+    
+    func setupInitialData() {
+        course = Course(id: "newcourse", name: "", color: UIColor.black, semester: correspondingSemester!)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,38 +29,50 @@ class NewCourseTableViewController: UITableViewController {
         colorPicker.colorValue = course.color
     }
     
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction override func done(_ sender: Any) {
+        super.done(sender)
+        
         view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func done(_ sender: Any) {
+        nameView.isEditable = false
+        nicknameView.isEditable = false
+        descriptorField.isEnabled = false
+        colorPicker.isEnabled = false
+        
         course.name = nameView.text
         course.nickname = nicknameView.text
         course.descriptor = descriptorField.text ?? ""
         
-        correspondingSemester.courses.append(course)
-        
-        DataManager.shared.introduce(course.record)
-        DataManager.shared.update(correspondingSemester.record)
+        API.shared.addCourse(course) { (success, blob) in
+            if success {
+                self.course.id = blob!["cid"] as! String
+                self.correspondingSemester.courses.append(self.course)
+            } else {
+                print("Error adding course")
+                // TODO: Alert user
+            }
+            
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
         
         view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.barTintColor = course.color
-        nameView.becomeFirstResponder()
+        
+        if !alreadyOpened {
+            alreadyOpened = true
+            
+            nameView.becomeFirstResponder()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         navigationController?.navigationBar.barTintColor = UIColor.teal500
-        
-        DataManager.shared.update(course.record)
     }
     
     @IBAction func colorPicked(_ sender: UIColorPicker) {

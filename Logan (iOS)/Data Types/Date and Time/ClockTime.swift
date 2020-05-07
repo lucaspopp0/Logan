@@ -74,6 +74,10 @@ class ClockTime: DatetimeValue {
         }
     }
     
+    static var now: ClockTime {
+        return ClockTime(date: Date())
+    }
+    
     required init(date: Date) {
         let calendar = Calendar.autoupdatingCurrent
         let components = calendar.dateComponents([Calendar.Component.hour, Calendar.Component.minute], from: date)

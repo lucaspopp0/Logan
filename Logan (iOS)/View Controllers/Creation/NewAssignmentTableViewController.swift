@@ -8,9 +8,9 @@
 
 import UIKit
 
-class NewAssignmentTableViewController: UITableViewController, UITextViewDelegate, AssignmentDueDatePickerDelegate, CoursePickerDelegate {
+class NewAssignmentTableViewController: CreationController, UITextViewDelegate, AssignmentDueDatePickerDelegate, CoursePickerDelegate {
 
-    let assignment: Assignment = Assignment()
+    let assignment: Assignment = Assignment(id: "newassignment", title: "", dueDate: DueDate.specificDay(day: CalendarDay.today), userDescription: nil, course: nil)
     var correspondingTask: Task?
     
     private var titleView: UITextView!
@@ -30,31 +30,57 @@ class NewAssignmentTableViewController: UITableViewController, UITextViewDelegat
     private var taskDueDatePicker: BetterDatePicker?
     private var taskPriorityPicker: PriorityControl?
     
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction override func done(_ sender: Any) {
+        super.done(sender)
+        
         view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func done(_ sender: Any) {
+        titleView.isEditable = false
+        descriptionView.isEditable = false
+        automaticallyAddSwitch.isEnabled = false
+        dueDateTypeControl.isEnabled = false
+        taskDueDateTypeControl?.isEnabled = false
+        taskDueDatePicker?.isEnabled = false
+        taskPriorityPicker?.isEnabled = false
+        
         assignment.title = titleView.text
         assignment.userDescription = descriptionView.text
         
-        DataManager.shared.assignments.append(assignment)
-        DataManager.shared.introduce(assignment.record)
-        
-        if correspondingTask != nil {
-            correspondingTask?.title = titleView.text
-            correspondingTask?.userDescription = assignment.userDescription
-            
-            DataManager.shared.tasks.append(correspondingTask!)
-            DataManager.shared.introduce(correspondingTask!.record)
+        if let correspondingTask = correspondingTask {
+            correspondingTask.title = titleView.text
+            correspondingTask.userDescription = assignment.userDescription
         }
         
-        InterfaceManager.shared.assignmentsController.updateData()
-        InterfaceManager.shared.assignmentsController.tableView.reloadData()
-        
-        view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
+        API.shared.addAssignment(assignment) { (success, blob) in
+            if success {
+                self.assignment.id = blob!["aid"] as! String
+                DataManager.shared.assignments.append(self.assignment)
+                
+                if self.correspondingTask != nil {
+                    API.shared.addTask(self.correspondingTask!) { (success2, blob2) in
+                        if success2 {
+                            self.correspondingTask!.id = blob2!["tid"] as! String
+                            DataManager.shared.tasks.append(self.correspondingTask!)
+                            
+                            InterfaceManager.shared.assignmentsController.updateData()
+                            InterfaceManager.shared.assignmentsController.tableView.reloadData()
+                            
+                            self.navigationController?.dismiss(animated: true, completion: nil)
+                        } else {
+                            // TODO: Report error
+                            print("Error adding corresponding task")
+                        }
+                    }
+                } else {
+                    InterfaceManager.shared.assignmentsController.updateData()
+                    InterfaceManager.shared.assignmentsController.tableView.reloadData()
+                    
+                    self.navigationController?.dismiss(animated: true, completion: nil)
+                }
+            } else {
+                // TODO: Report error
+                print("Error adding assignment")
+            }
+        }
     }
     
     private func updateDueDateText() {
@@ -140,28 +166,40 @@ class NewAssignmentTableViewController: UITableViewController, UITextViewDelegat
     
     @IBAction func correspondingTaskToggled(_ sender: UISwitch) {
         if sender.isOn {
-            correspondingTask = Task()
-            correspondingTask?.relatedAssignment = assignment
+            guard let newTask = Task(id: "newassignmenttask", title: "", relatedAssignment: assignment) else {
+                // Alert the user that there was an error creating the corresponding task
+                let alert = UIAlertController(title: "Internal Error", message: "Sorry, there was an error creating the corresponding task for this assignment", preferredStyle: UIAlertControllerStyle.alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+                    // Turn the switch back off
+                    sender.setOn(false, animated: true)
+                }))
+                
+                self.present(alert, animated: true, completion: nil)
+                
+                return
+            }
             
             switch assignment.dueDate {
                 
             case .asap:
-                correspondingTask?.dueDate = DueDate.asap
+                newTask.dueDate = DueDate.asap
                 break
                 
             case .eventually:
-                correspondingTask?.dueDate = DueDate.eventually
+                newTask.dueDate = DueDate.eventually
                 break
                 
             case .specificDeadline(let deadline):
                 if let date = deadline.dateValue {
-                    correspondingTask?.dueDate = DueDate.specificDay(day: CalendarDay(date: date.addingTimeInterval(-24 * 60 * 60)))
+                    newTask.dueDate = DueDate.specificDay(day: CalendarDay(date: date.addingTimeInterval(-24 * 60 * 60)))
                 }
                 break
                 
             default: break
             }
             
+            correspondingTask = newTask
             tableView.insertRows(at: [IndexPath(row: 1, section: 2), IndexPath(row: 2, section: 2)], with: UITableViewRowAnimation.automatic)
         } else {
             correspondingTask = nil
@@ -388,6 +426,8 @@ class NewAssignmentTableViewController: UITableViewController, UITextViewDelegat
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isSending { return }
+        
         if indexPath.section != 0 {
             tableView.endEditing(true)
         }

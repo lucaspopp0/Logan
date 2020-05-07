@@ -10,7 +10,7 @@ import UIKit
 
 class WelcomeSemesterViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
-    let semester = Semester(name: "", startDate: CalendarDay(date: Date()), endDate: CalendarDay(date: Date()))
+    let semester = Semester(id: "firstsemester", name: "", startDate: CalendarDay(date: Date()), endDate: CalendarDay(date: Date()))
     
     @IBOutlet weak var pageViewContainer: UIView!
     @IBOutlet weak var nextButton: UIButton!
@@ -86,10 +86,14 @@ class WelcomeSemesterViewController: UIViewController, UIPageViewControllerDeleg
     
     @IBAction func next(_ sender: Any?) {
         if presentationIndex(for: pageController) == 2 {
-            DataManager.shared.semesters.append(semester)
-            DataManager.shared.introduce(semester.record)
-            
-            performSegue(withIdentifier: "Show Main Interface", sender: self)
+            API.shared.addSemester(semester) { (success, blob) in
+                if success {
+                    DataManager.shared.semesters.append(self.semester)
+                    self.performSegue(withIdentifier: "Show Main Interface", sender: self)
+                } else {
+                    // TODO: Inform user
+                }
+            }
         } else if let currentController = pageController.viewControllers?.first, let index = pages.index(of: currentController), index + 1 < pages.count {
             pageController.setViewControllers([pages[index + 1]], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
             

@@ -8,9 +8,9 @@
 
 import UIKit
 
-class NewSemesterTableViewController: UITableViewController {
+class NewSemesterTableViewController: CreationController {
     
-    let semester = Semester(name: "", startDate: CalendarDay(date: Date()), endDate: CalendarDay(date: Date()))
+    let semester = Semester(id: "newsemester", name: "", startDate: CalendarDay(date: Date()), endDate: CalendarDay(date: Date()))
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var startLabel: UILabel!
@@ -20,25 +20,38 @@ class NewSemesterTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        startLabel.text = BetterDateFormatter.autoFormatDate(startPicker.dateValue)
-        endLabel.text = BetterDateFormatter.autoFormatDate(endPicker.dateValue)
         
-        nameField.becomeFirstResponder()
+        if !alreadyOpened {
+            alreadyOpened = true
+            
+            startLabel.text = BetterDateFormatter.autoFormatDate(startPicker.dateValue)
+            endLabel.text = BetterDateFormatter.autoFormatDate(endPicker.dateValue)
+            
+            nameField.becomeFirstResponder()
+        }
     }
     
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction override func done(_ sender: Any) {
+        super.done(sender)
+        
         view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func done(_ sender: Any) {
+        nameField.isEnabled = false
+        startPicker.isEnabled = false
+        endPicker.isEnabled = false
+        
         semester.name = nameField.text ?? ""
         
-        DataManager.shared.semesters.append(semester)
-        DataManager.shared.introduce(semester.record)
-        
-        view.endEditing(true)
-        navigationController?.dismiss(animated: true, completion: nil)
+        API.shared.addSemester(semester) { (success, blob) in
+            if success {
+                self.semester.id = blob!["sid"] as! String
+                DataManager.shared.semesters.append(self.semester)
+            } else {
+                // TODO: Alert user of error
+                print("Error creating semester")
+            }
+            
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
