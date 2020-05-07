@@ -19,7 +19,6 @@ class NewAssignmentTableViewController: UITableViewController, UITextViewDelegat
     private var dueDateLabel: UILabel!
     private var dueDateTypeControl: UISegmentedControl!
     private var specificDueDatePicker: BetterDatePicker!
-    private var classPicker: ClassPicker!
     
     private var courseLabel: UILabel!
     
