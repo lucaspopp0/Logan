@@ -10,6 +10,8 @@ import Foundation
 
 class Section: BEObject {
     
+    override var idKey: String { return "secid" }
+    
     var name: String
     var startDate: CalendarDay
     var startTime: ClockTime

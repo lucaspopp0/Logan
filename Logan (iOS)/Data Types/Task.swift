@@ -10,6 +10,8 @@ import Foundation
 
 class Task: BEObject {
     
+    override var idKey: String { return "tid" }
+    
     var title: String
     var dueDate: DueDate
     var completed: Bool
@@ -36,7 +38,7 @@ class Task: BEObject {
         }
     }
     
-    init?(id: String, title: String, dueDate: DueDate, completed: Bool, priority: Priority, description: String?, completionDate: CalendarDay?, course: Course?, relatedAssignment: Assignment?) {
+    init?(id: String, title: String = "", dueDate: DueDate = DueDate.specificDay(day: CalendarDay.today), completed: Bool = false, priority: Priority = Priority.normal, description: String? = nil, completionDate: CalendarDay? = nil, course: Course? = nil, relatedAssignment: Assignment? = nil) {
         if completed && completionDate == nil { return nil }
         
         self.id = id

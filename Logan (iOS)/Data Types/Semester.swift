@@ -10,6 +10,8 @@ import Foundation
 
 class Semester: BEObject {
     
+    override var idKey: String { return "sid" }
+    
     var name: String
     var startDate: CalendarDay
     var endDate: CalendarDay

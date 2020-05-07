@@ -11,6 +11,9 @@ import Foundation
 class BEObject: NSObject {
     
     var id: String
+    var idKey: String {
+        return "id"
+    }
     
     init(id: String) {
         self.id = id
@@ -26,6 +29,18 @@ class BEObject: NSObject {
         if let uid = DataManager.shared.currentUser?.id {
             blob["uid"] = uid
         }
+        
+        return blob
+    }
+    
+    func jsonDeleteBlob() -> Blob {
+        var blob = Blob()
+        
+        if let uid = DataManager.shared.currentUser?.id {
+            blob["uid"] = uid
+        }
+        
+        blob[idKey] = id
         
         return blob
     }

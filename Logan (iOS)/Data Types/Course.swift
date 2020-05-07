@@ -11,6 +11,8 @@ import UIKit
 
 class Course: BEObject {
     
+    override var idKey: String { return "cid" }
+    
     var name: String
     var nickname: String?
     var descriptor: String?
@@ -68,6 +70,12 @@ class Course: BEObject {
         if nickname != nil { blob["nickname"] = nickname! }
         if descriptor != nil { blob["descriptor"] = descriptor! }
         
+        return blob
+    }
+    
+    override func jsonDeleteBlob() -> Blob {
+        var blob = super.jsonDeleteBlob()
+        blob["cid"] = id
         return blob
     }
     

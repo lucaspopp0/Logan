@@ -10,6 +10,8 @@ import Foundation
 
 class Assignment: BEObject {
     
+    override var idKey: String { return "aid" }
+    
     var title: String
     var dueDate: DueDate
     var userDescription: String?
